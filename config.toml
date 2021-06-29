@@ -1,6 +1,6 @@
 # hugo server --minify --themesDir ... --baseURL=http://0.0.0.0:1313/theme/hugo-book/
 
-baseURL = "http://monitor.hpc.umanitoba.ca/doc"
+baseURL = "http://um-grex.github.io/grex-docs"
 languageCode = "en-us"
 title = "Unofficial Grex User Guide"
 theme="book"
