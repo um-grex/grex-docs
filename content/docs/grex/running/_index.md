@@ -17,18 +17,16 @@ Unlike original Grex under Moab which was flat, the current Grex that has contri
 
 Currently, the following partitions are available on Grex:
 
-- **skylake**  : the new 40-core, CascadeLake compute nodes, 384 Gb/node (set as the default partition) **NEW**
-- **compute**  : the original SSE4.2 12-core Grex nodes, RAM 48Gb/node (no longer set as the default partition)
-- **bigmem**   : the original SSE4.2 12-core Grex nodes, RAM 94GB/node
+- **skylake**  : new 52-core, CascadeLake Refresh compute nodes, 96 Gb/node (set as the default partition) **NEW**
+- **largemem**  : new 40-core, CascadeLake compute nodes, 384 Gb/node  **NEW**
+- **compute**  : original SSE4.2 12-core Grex nodes, RAM 48Gb/node (no longer set as the default partition) and the original SSE4.2 12-core Grex nodes, RAM 94GB/node ( no longer configured as a separate "bigmem" partition).
 - **gpu**      : two GPU V100/32GB AVX512 nodes, RAM 192GB/node **NEW**
-- **davis**    : four of CPU AVX nodes contributed by Prof. R. Davis (Department of Chemistry)
 - **stamps**   : three 4xGPU v100/16GB AVX512 nodes contributed by Prof. R. Stamps (Department of Physics and Astronomy)
 - **livi**     : a HGX-2 16xGPU V100/32GB, NVSwitch server contributed by Prof. L. Livi (Department of Computer Science)
-- **davis-b**  : Preemptible partition for general use of the above nodes contributed by Prof. R. Davis.
 - **stamps-b** : Preemptible partition for general use of the above nodes contributed by Prof. R. Stamps.
 - **livi-b**   : Preemptible partition for general use of the above nodes contributed by Prof. L. Livi.
 
-The former four partitions (**skyake**, **compute** and **bigmem** and **gpu**) are generally accessible. The next three are open only to the contributor's groups.
+The former four partitions (**skyake**, **compute** and **largemem** and **gpu**) are generally accessible. The next three are open only to the contributor's groups.
 
 On the contributed partitions, the owner's group has preferencial access. However, users belonging to other groups can submit jobs to one of the preemptible partitions (ending with **\-b**) to run on the contributed hardware as long as it is unused, on the condition that their jobs can be preempted (that is, killed) should owners jobs need the hardware.
 There is a minimum runtime guaranteed to preemptible jobs, which is as of now 1 hour. The maximum walltime for the preemptible partition is set per partition (and can be seen in the output of the _sinfo_ command).
