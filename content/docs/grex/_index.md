@@ -7,18 +7,37 @@ bookToc: true
 
 # Grex
 
-Grex is a legacy system, first put in production in early 2011 as part of [Westgrid](https://www.westgrid.ca/) consortium.
+Grex is an UManitoba High Performance Computing (HPC) system, first put in production in early 2011 as part of [Westgrid](https://www.westgrid.ca/) consortium.
 
-The orihginal Grex is an SGI Altrix machine, with 312 compute nodes (Xeon 5560, 12 CPU cores ad 48 GB of RAM per node) and QDR 40 Gb/s Infiniband network.
+### A Very Quick Start guide
 
-It was primarily intended for applications that can take advantage of non-blocking low latency InfiniBand networks and (back then) larger memory per compute node. 
+1. Create an account on [CCDB](https://ccdb.computecanada.ca/register). You will need and institutional Email ad
+dress. If you are a sponsored user, you'd want to ask your PI for his _CCRI_ code.
+2. After the CCDB account is approved, login to CCDB and apply for Westgrid Consortium account. Follow direction
+s on _portal.westgrid.ca_ to create Grex account.
+3. Wait for half a day. Install an SSH client, and SFTP client for your operating system.
+4. Connect to grex.westgrid.ca with SSH using your username/password from step 2.
+5. Make a sample job script, call it _sleep.job_ . The job script is a text file that has a special syntax to be
+ recognized by SLURM. You can use the editor _nano_ , or any other right on Grex SSH prompt (vim, emacs, pico, .
+..); you can also create the script file on your machine and upload to Grex using your SFTP client.
+  {{< highlight bash >}}
+   #!/bin/bash
+   #SBATCH --ntasks=1 --cpus-per-task=1
+   #SBATCH --time=00:01 --mem-per-cpu=100mb
+   echo "Hello world! will sleep for 10 seconds"
+   time sleep 10
+   echo "all done"
+  {{< / highlight >}}
+6. Submit the script using sbatch command, to the _compute_ partition
 
-In 2017, a new Seagate **Storage Building Blocks** based Lustre filesystem of **418 TB** of useful space was added to Grex.
+ ```sbatch --partition=compute sleep.job```
 
-There are now several researcher-contributed nodes (CPU and GPU) to Grex.
+7. Wait until the job finishes; you can monitor queue's state with the 'sq' command. When the job finishes, slur
+m-NNNN.out should be in the job directory.
+8. Download the output slurm-NNNN.out from grex.westgrid.ca  to your local machine using your SFTP client.
+9. Congratulations, you have just ran your fist HPC-style batch job. This is the general workflow, more or less;
+ you'd just want to substitute the _sleep_ command to something useful, like _your-code.x your-input.dat_ .
 
-Since being defunded by Westgrid (on April 2, 2018), Grex is now available only to the users affiliated with University of Manitoba and their collaborators.
+# More information on this website
 
-"Grex" is a Latin name for "herd" (or may be "flock"?). The names of the Grex login nodes (bison, tatanka, aurochs, wisent) also refer to various kinds of bovine animals.
-
-
+Check out Getting Account, Moving Data and Running jobs for general information. Software pages might have information specific to running particular software items.

@@ -4,23 +4,19 @@ title: "Batch jobs"
 weight: 1
 ---
 
-# Batch jobs
+# Batch jobs 
 
-There are several good reasons for adopting batch mode for running jobs on any HPC facility. Traditional HPC continues using the mainframes tradition: despite an HPC system being a cluster of several compute nodes joined by an interconnect, the users' view of the system is that of a unity, a single large machine. A subset of the available resources of the HPC machine is provided to the users batch jobs. 
+HPC systems usually are "clusters" of many compute nodes, which are joined by an interconnect, and under control of a resource management software. From the users' point of view, the HPC system is a unity, a single large machine rather than a network of individual computers. Most of the time, HPC systems are used in batch mode: users would submit so called "jobs" to a "batch queue".  A subset of the available resources of the HPC machine is allocated to each of the users batch jobs, and they run without any need for user intervention as soon as the resources become available.
 
-The resource placements, usage monitoring and accounting are done via a special software, the HPC scheduler. This is an often under-appreciated automation that makes usage efficient and saves a lot of work on part of the user. However, using HPC is hard in a sense that users have to make effort in order to figure out what are the available resources on an HPC cluster and what is the efficient way of requesting them for their jobs to optimize time to soluition.
+The job placement, usage monitoring and job accounting are done via a special software, the HPC scheduler. This is an often under-appreciated automation that makes usage efficient and saves a lot of work on part of the user. However, using HPC is hard in a sense that users have to make effort in order to figure out what are the available resources on an HPC cluster, and what is the efficient way of requesting the resoures for their jobs. Asking for too many resources might be wasteful both in preventing others of using them and in making for a longer queuing time.
 
-Resources (tractable resources in SLURM speak) are CPU time, memory, and GPU time. Generic resources can be software licenses, etc. Requesting resources is done via command line options to job submission commands **sbatch** and **salloc**, or via special comment lines (starting with #SBATCH) in job scripts. There are also options to control job placement such as partitions and QOSs.
+The resources ("tractable resources" in SLURM speak) are CPU time, memory, and GPU time. Generic resources can be software licenses, etc. Requesting resources is done via command line options to job submission commands **sbatch** and **salloc**, or via special comment lines (starting with #SBATCH) in job scripts. There are also options to control job placement such as partitions.
 
 There are default values for the resources which are taken when you do not specify the resource limit. Note that the default values are, as a rule, quite small: **3 hours** of walltime, **256mb** of memory per CPU. In most of the cases it is better to have an explicit request of an appropriate resource limit rather than using the default.
 
-Asking for too many resources might be wasteful both in preventing others of using them and in making a longer queuing time. We ask our users to be fair and considerate and do not allow for deliberate waste (running serial jobs on more than one core).
+ We ask our users to be fair and considerate and do not allow for deliberate waste of resources (such as running serial jobs on more than one CPU core, or running CPU-only calculations on GPU nodes).
 
-There are certain scheduling policies in place to prevent the cluster from being swamped by a single user. See below: 
-
-In particular, the MAXPS / GrpRunMins limit disfavours asking for many CPU cores for long walltimes.
-
-Notes and examples on typical kinds of jobs, resources they need and the syntax of requesting them in SLURM are listed below:
+There are certain scheduling policies in place to prevent the cluster from being swamped by a single user. In particular, the MAXPS / GrpRunMins limit disfavours asking for many CPU cores for long walltimes, a MaxCPU limits restricts number of CPU cores used, and there are limits on number of user's jobs in the system and number of array job elements, as described below.
 
 ## Batch job policies
 
@@ -32,9 +28,9 @@ The following policies are implemented on Grex:
 - The maximum number of processor-minutes for all currently running jobs of a group without a RAC is 4M.
 - The maximum number of jobs that a user may have queued to run is 4000. The maximum size of an array job is 2000.
 - Users without a RAC award are allowed to simultaneously use up to 400 CPU cores per accounting group.
-- There are limits on number of GPUs that can be used on contributed hardware. TODO
+- There are limits on number of GPUs that can be used on contributed hardware (1 GPU per job).
 
-## Batch jobs use cases
+## Typical Batch job cases
 
 Any batch job is submitted with **sbatch** command. Batch jobs are usually shell (BASH, etc.) scripts wrapping around the invocation of a code. The comments on top of the script that start with _#SBATCH_ are interpreted by the SLURM scheduler as options for resource requests:
 
@@ -44,12 +40,12 @@ Any batch job is submitted with **sbatch** command. Batch jobs are usually shell
  * _-\-cpus-per-task=_ : specifies number of threads per task.
  * _-\-mem-per-cpu=_  : specifies memory per task (or thread?)
  * _-\-mem=_ : specifies memory per node 
- * _-\-gpus=_ : specifies number of GPUs per job. There are also _-\-gpus-per-XXX_ and _-\-XXX-per-gpu_
+ * _-\-gpus=_ : specifies number of GPUs per job. There are also _-\-gpus-per-XXX_ and _-\-XXX-per-gpu_ resource specs.
  * _-\-time-_ : specifies walltime in format DD-hh:mm
- * _-\-qos=_  : specifies a QOS by its name
- * _-\-partition=_ : specifies a partiton by its name.
+ * _-\-qos=_  : specifies a QOS by its name (Not to be used on Grex!)
+ * _-\-partition=_ : specifies a partiton by its name (very much used on Grex!)
 
-Assuming the name of myfile.slurm (the name or the extension does not matter, it can can be afile.job, otherjob.sh, etc.), a job is submitted with the command:
+Assuming the name of _myfile.slurm_ (the name or the extension does not matter, it can can be called _afile.job_, _otherjob.sh_, etc.), a job is submitted with the command:
 
 ```sbatch myfile.slurm``` 
 
@@ -57,7 +53,7 @@ Refer to the official SLURM [documentation](https://slurm.schedmd.com/documentat
 
 ## Serial Jobs
 
-The simplest kind of job is a serial job when one compute process runs in a sequential fashion. Naturally, this job can utilize only a sigle CPU core: large parallel supercomputers do not parallelize binary codes automatically. So the resources can be wall time and memory. SLURM has two ways of specifying the later: memory per cpu core (_-\-mem-per-cpu=_) and total memory per node (_-\-mem=_). It is more logical to use per-core memory always; except in case of the whole-node jobs when special value -\-mem=0 gives all the available memory per each node. If you have used Torque before, _-\-mem-per-cpu_ is the same as _pmem_.
+The simplest kind of job is a serial job when one compute process runs in a sequential fashion. Naturally, such job can utilize only a single CPU core: even large parallel supercomputers as a rule do not parallelize binary codes automatically. So the CPU request for a serial job is always 1, which is the default;  the other resources can be wall time and memory. SLURM has two ways of specifying the later: memory per cpu core (_-\-mem-per-cpu=_) and total memory per node (_-\-mem=_). It is more logical to use per-core memory always; except in case of the whole-node jobs when special value -\-mem=0 gives all the available memory for the allocated node. An example script is provided below.
 
 {{< highlight bash >}}
 #!/bin/bash
@@ -78,27 +74,24 @@ echo "Starting run at: `date`"
 echo "Job finished with exit code $? at: `date`"
 {{< /highlight >}}
 
-An important special case of serial jobs is high-throughput computing: jobs are serial because they are too short to parallelize them, however there are many such jobs per research project. The case of embarassingly parallel computations like some of the Monte Carlo simulations are often High Throughput Computing (HTC). 
+An important special case of serial jobs is high-throughput computing: jobs are serial because they are too short to parallelize them, however there are very many such jobs per research project. The case of embarassingly parallel computations like some of the Monte Carlo simulations are often High Throughput Computing (HTC). 
 
 - Serial jobs that have regularely named inputs and run more than a few minutes each best be specified as Array Jobs (see below).
-- Serial jobs that are great in numbers and run less than a few minutes each better be joined into a task farm running within a single larger job using tools like GLOST, GNU Parallel or a workflow engine like QDO.
+- Serial jobs that are great in numbers, and run less than a few minutes each, better be joined into a task farm running within a single larger job using tools like GLOST, GNU Parallel or a workflow engine like QDO.
 
 An example of GLOST job is under MPI jobs below.
 
 ## SMP / threaded / Single Node jobs
 
-Another kind of jobis are threaded jobs or single-node parallel jobs. Often Symmetric Multiprocessing jobs, but not necessary as many kinds of concurency/parallelism exist and can be employed.
+A next kind of job is multithreaded, shared memory or or single-node parallel jobs. Often these jobs are for Symmetric Multiprocessing (SMP) codes that can use more than one CPU on a given node to speed up the calculations. However, SMP/multithreaded jobs rely on some form of interprocess communication (shared memory, etc.) that limits them to the CPU cores within just a single server. They cannot scale across multiple compute nodes. Examples are OpenMP, pthreads, Java codes, etc. Gaussian and PSI4 are SMP codes; threaded BLAS/LAPACK routines from MKL (inside NumPY) can utilize multiple threads, etc.
 
-Popular examples are OpenMP, pthreads, Java codes, etc. Gaussian and PSI4 are SMP codes; threaded BLAS/LAPACK routines from MKL (inside NumPY) can utilize threads etc.
-
-These jobs run concurrently and can utilize multiple CPU cores to give better computation speeds. Often these use some form of shared memory as an inter-process communication which limit them to use of the cpu cores within a single server/compute node.
-
-Thus from the point of the job script and resources request, two parameters are important:
+Thus, from the point of view of the SMP/threaded jobs resources request, the above considerations are important:
  
-- asking always only a single node but several CPU cores on it per job.
-- configuring the code to use exactly the number of CPU cores allocated to the job to prevent waste or congestion of the resources.
+- asking always only a single compute node (_-\-nodes=1 -\-ntasks=1_) node
+- asking for several CPU cores on it per job, up to the maximum number of CPU cores per node.
+- making sure that the code would use exactly the number of CPU cores allocated to the job, to prevent waste or congestion of the resources.
 
-In SLURM (unlike the old Torque) it makes difference whether you ask for 'parallel tasks' or 'threads (-\-cpus-per-task)' ; threads should not be isolated from each other!
+In SLURM, it makes a difference whether you ask for 'parallel tasks (-\-ntasks)' or 'threads (-\-cpus-per-task)' ; the threads should not be isolated from each other (because they might need to use shared memory!) but the tasks are isolated to each own "cgroup". 
  
 An enviromental variable **$SLURM_CPUS_PER_TASK** is set in the job, so you can set an appropriate parameter of your code to the same value.
 
@@ -112,12 +105,12 @@ For MKL it is _MKL_NUM_THREADS_, for Julia -\- JULIA_NUM_THREADS , for Java -Xfi
 
 #SBATCH --time=0-8:00:00
 #SBATCH --mem=0
-#SBATCH --nodes=1
+#SBATCH --nodes=1 --partition=compute
 #SBATCH --ntask-per-node=1
 #SBATCH --cpus-per-task=12
 #SBATCH --job-name="OMP-Job-Test"
 
-# An example of an OpenMP threaded job that takes a whole Grex node for 8 hours. 
+# An example of an OpenMP threaded job that takes a whole "old" Grex node for 8 hours. 
 
 export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
 
@@ -128,19 +121,19 @@ echo "Starting run at: `date`"
 echo "Job finished with exit code $? at: `date`"
 {{< /highlight >}}
 
-Note that the above example request whole node's memory with _-\-mem=0_ because the node is allocated for it fully because of the CPUs anyways.
+Note that the above example request whole node's memory with _-\-mem=0_ because the node is allocated  to the job fully due to all the CPUs anyways.
 
-It is easier to use _-\-mem_ for SMP jobs because the memory is shared between threads (i.e., the memory amount used does not change with the number of threads).
+It is easier to use the _-\-mem_ syntax for SMP jobs because typically the memory is  shared between threads (i.e., the amount of memory  used does not change with the number of SMP threads). Note, however, that the memory request should be reasonably "efficient" if possible. 
 
 ## GPU jobs
 
 The GPU jobs would usually be similar to SMP/threaded jobs, with the following differences:
-* The GPU jobs should run on the nodes that have GPU hardware, which means you'd want always to specify __--partition=gpu__ or __--partition=stamps-b__ . 
-* SLURM on Grex uses so called "GTRES" plugin for scheduling GPU jobs, which means that a request in the formof __--gpus=N__ or __--gpus-per-node=N__ or __--gpus-per-task=N__ is required. Note that both partitions have up to four GPU per node, so asking more than 4 GPUs per node, or per task, is nonsensical.
+* The GPU jobs should run on the nodes that have GPU hardware, which means you'd want always to specify __--partition=gpu__ or __--partition=stamps-b__ or **livi_b**. 
+* SLURM on Grex uses so called "GTRES" plugin for scheduling GPU jobs, which means that the request syntax in the form __--gpus=N__ or __--gpus-per-node=N__ or __--gpus-per-task=N__ is used. 
 
-How many GPUs to ask? Grex at the moment does not have GPU-direct MPI enabled, which means that most of the jobs would be single-node. The GPU nodes in either __gpu__ (two nodes there, 32GB V100s) or __stamps-b__ (three nodes, 16GB V100s) partition have 4 V100 GPUs, 32 Intel 52xx CPUs and 192GB of CPU memory. So, asking 1 to 4 GPUs, one node, and 6-8 CPUs per GPU with an appropriate amount of RAM (4-8GB) per job would be a good starting point.   
+How many GPUs to ask? Grex at the moment does not have GPU-direct MPI enabled, which means that most of the jobs would be single-node. The GPU nodes in either __gpu__ (two nodes there, 32GB V100s) or __stamps-b__ (three nodes, 16GB V100s) partition have 4 V100 GPUs, 32 Intel 52xx CPUs and 192GB of CPU memory. (There also is the __livi-b__ partition with a large single 16x v100 GPU server, but it seldom has all 16GPUs idle). So, asking 1 to 4 GPUs, one node, and 6-8 CPUs per GPU with an appropriate amount of RAM (4-8GB) per job would be a good starting point.   
 
-Note that V100 is a fairly large GPU for most of the jobs, and to best utilize the GPU resources available on Grex it is best to start with single GPU and then try if the code actually is able to saturate it with load! Many codes cannot scale to utilize more than one GPU, and few codes can utilize more than two of them.
+Note that V100 is a fairly large GPU for most of the jobs, and for good utilization of the GPU resources available on Grex, it is a good idea to start with single GPU, and then try if the code actually is able to saturate it with load. Many codes cannot scale to utilize more than one GPU, and few codes can utilize more than two of them. 
 
 {{< highlight bash >}}
 #!/bin/bash
@@ -169,23 +162,19 @@ The above script (if called say, gpu.job) can be submitted with the usual comman
 
 ## Distributed, massively parallel jobs
 
-Parallel jobs that can spawn multiple servers are the most scalable ones. GAMESS-US, SIESTA, NWChem, are the examples. Running many parallel tasks across more than one node requires some inter-node communication which as a rule is slower than shared memory within one server.
-
-In HPC, high speed interconnect like Infiniband (IB) used on Grex and specialized RDMA-aware communication libraries make distributed parallel computational very scalable.
+Parallel jobs that can spawn multiple servers are the most scalable ones, because they are not limited by the number of CPUs or memory per node. Running many parallel tasks across more than one node requires some inter-node communication (which as a rule is slower than shared memory within one server). In HPC, high speed interconnect and specialized RDMA-aware communication libraries make distributed parallel computational very scalable. Grex uses Infiniband interconnect. 
  
-Most often (but not always), parallel programs build upon a low-level message passing library called MPI. Refer to the Software section for the informations of the parallel libraries on Grex.
+Most often (but not always), parallel programs are built upon a low-level message passing library called MPI. Refer to the Software section for the informations of the parallel libraries on Grex. Examples of distributed parallel codes are GAMESS-US, ORCA, LAMMPS, VASP, etc. 
 
-The jobs must specify required layout of nodes/tasks (or nodes/tasks/threads, or even nodes/tasks/GPUs since hybrid MPI+OpenMP and MPI+GPU programs exist), amount of memory and walltime.
+The distributed parallel jobs can be placed across their compute nodes in several ways (i.e., how many parallel tasks per compute node?). Thus SLURM resource request syntax alows to specify the required layout of nodes/tasks (or nodes/tasks/threads, or even nodes/tasks/GPUs since hybrid MPI+OpenMP and MPI+GPU programs exist). A consideration about the layout is a tradeoff between making program to work  faaster (and sometimes to work correctly at all) and making the scheduler's work easier.
 
-The layout to consider is a tradeoff between making program to work correctly and making scheduler's work easier.
+A well written MPI software theoretically should not care how the tasks are distributed across how many physical compute nodes. Thus, SLURMs _-\-ntasks=_ request (similar to the old Torque _procs=_) specified without _-\-nodes_ would work and make the scheduling easier.
 
-A well written MPI software theoretically should not care how the tasks are distributed across how many physical compute nodes. Thus, SLURMs _-\-ntasks=_ request (similar to the old Torque _procs=_) specified without _-\-nodes_ would work and make scheduling easier.
+A note on process starting: since MPI jobs are distributed, there should be a mechanism to start the compute processes across all of the  nodes allocated for it. The mechanism should know which nodes to use, and how many. Most modern MPI implementations "tightly integrate" with SLURM, so they will get this informaton automatically via a Process Management Interface (PMI). SLURM provides its own job starting command called _srun_. Most MPI implementations also provide their own job spawner commands, usually called _mpiexec_ or _mpirun_ . These are specific to each MPI vendor/kind and not  well standartised, and differ in the support of SLURM.
 
-A note on process starting: since MPI jobs are distributed, there should be a mechanism to start the compute processes across many nodes. And, come to think of it, the mechanism should know which nodes to use, and how many. Most modern MPI implementations "tightly integrate" with SLURM, so they will get this informaton automatically via a Process Management Interface (PMI).
+For example, OpenMPI (the default, supported MPI implementation) on Grex is compiled against PMIx (3.x, 4.x) or PMI1 (1.6.5). So it is preferrable to use _srun_ instead of _mpiexec_ to kickstart the MPI proecesses, because _srun_ would use PMI.
 
-OpenMPI on Grex is compiled against PMIx (3.x, 4.x) or PMI1 (1.6.5). So it is preferrable to use _srun_ instead of _mpiexec_ to kickstart the MPI proecesses, because _srun_ would use PMI.
-
-For Intel MPI, _srun_ may not work, but PMI1 can be used with _mpiexec.hydra_ by setting the following environmemt variable:
+For Intel MPI (another MPI also available on Grex and required by some of the binary codes, like ANSYS or ADF), _srun_ sometimes may not work, but PMI1 can be used with _mpiexec.hydra_ by setting the following environmemt variable:
 
 ```export I_PMI_LIBRARY=/opt/slurm/lib/libpmi.so```
 
@@ -210,7 +199,7 @@ srun pw.x -in MyFile.scf.in  > Myfile.scf.log
 echo "Job finished with exit code $? at: `date`"
 {{< /highlight >}}
 
-However, in practice there are cases when layout should be more restrictive. If the software or script it runs form assumes equal distribution of processes per node, the request should be _--nodes=N --ntasks-per-node=M_ (similar to old Torque's nodes=N:ppn=M). A similar case is MPMD codes (Like NWCHem or GAMESS or OpenMolcas) that have some of the processes doing computation and some communication functions, and therefore requiring at least two tasks running per each node.
+However, in practice there are cases when layout should be more restrictive. If the software code assumes equal distribution of processes per node, the request should be _--nodes=N --ntasks-per-node=M_ . A similar case is MPMD codes (Like NWCHem or GAMESS or OpenMolcas) that have some of the processes doing computation and some communication functions, and therefore requiring at least two tasks running per each node.
 
 For some codes, especially for large parallel jobs with intensive communication between tasks there can be performance differences due to memory and interconnect bandwidths, depending on whether the same number of parallel tasks is compacted on few nodes or spread across many of them. Find an example of the job below.
 
@@ -245,6 +234,10 @@ echo "Starting run at: `date`"
 srun nwchem  dft_feco5.nw > dft_feco5.$SLURM_JOBID.log
 echo "Job finished with exit code $? at: `date`"
 {{< /highlight >}}
+
+### OpenMPI ###
+
+OpenMPI is the default MPI implementation for Grex (and ComputeCanada). The modules for it on Grex are called _ompi_ .The MPI example scripts above are all OpenMPI based. The old version 1.6.5 is there for compatibility reasons with older software; most users should use 3.1.x or 4.x.x versions. Using _srun_ is recommended in all cases.
 
 ### Intel MPI
 
@@ -364,5 +357,8 @@ processes on two nodes with several MPI implementations (CC means MPI coming fro
 
 ![](/doc/mpis-on-grex.png)
 
-You can see that differences in performance between OpenMPI 3.1.x from CC stack and Grex are minor for this benchmark, even vithout attemting
-at any local tuning for the CC OpenMPI.
+You can see that differences in performance between OpenMPI 3.1.x from CC stack and Grex are minor for this benchmark, even vithout attemting at any local tuning for the CC OpenMPI.
+
+### Using New 2020 CC CVMFS Stack ###
+
+ComputeCanada in Spring 2021 had updated the default software stack on ther CVMFS distribution to StdEnv/2020 and gentoo. This version will not run on legacy Grex partitions (**compute**) at all, because it requires AVX2 CPU architecture. It will work as expected on all new GPU and CPU nodes (**skylake**, **largemem**, **gpu** and contributed systems).

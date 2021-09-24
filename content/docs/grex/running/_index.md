@@ -13,27 +13,29 @@ After being long-time PBS/Moab users, we have switched to the SLURM batch system
 
 ## Partitions
 
-Unlike original Grex under Moab which was flat, the current Grex that has contributed nodes, large memory nodes and contributed GPU nodes is (and getting more and more) heterogeneous. With SLURM as a scheduler, this requires partitioning: a "partition" is a set of compute nodes, groupped by a characteristic, usuall by kind of hardware the node has, and sometimes by who "owns" the hardware as well. 
+The current Grex system that has contributed nodes, large memory nodes and contributed GPU nodes is (and getting more and more) heterogeneous. With SLURM as a scheduler, this requires partitioning: a "partition" is a set of compute nodes, groupped by a characteristic, usuall by kind of hardware the node has, and sometimes by who "owns" the hardware as well. 
+
+There is no fully automatic selection of partitions, other than the default _skylake_ for most of the users, and _compute_ for the short jobs. For the contributors' group members, the default partition will be their contributed nodes. **Thus in many cases users have to specify the partition manually when submitting their jobs!**
+
 
 Currently, the following partitions are available on Grex:
 
-- **skylake**  : new 52-core, CascadeLake Refresh compute nodes, 96 Gb/node (set as the default partition) **NEW**
-- **largemem**  : new 40-core, CascadeLake compute nodes, 384 Gb/node  **NEW**
-- **compute**  : original SSE4.2 12-core Grex nodes, RAM 48Gb/node (no longer set as the default partition) and the original SSE4.2 12-core Grex nodes, RAM 94GB/node ( no longer configured as a separate "bigmem" partition).
+- **skylake**  : the new 52-core, CascadeLakeRefresh compute nodes, 96 Gb/node (set as the default partition) **NEW**
+- **largemem**  : the new 40-core, CascadeLake compute nodes, 384 Gb/node  **NEW**
+- **compute**  : the original SSE4.2 12-core Grex nodes, RAM 48Gb/node (no longer set as the default partition for jobs over 30min)
 - **gpu**      : two GPU V100/32GB AVX512 nodes, RAM 192GB/node **NEW**
 - **stamps**   : three 4xGPU v100/16GB AVX512 nodes contributed by Prof. R. Stamps (Department of Physics and Astronomy)
 - **livi**     : a HGX-2 16xGPU V100/32GB, NVSwitch server contributed by Prof. L. Livi (Department of Computer Science)
 - **stamps-b** : Preemptible partition for general use of the above nodes contributed by Prof. R. Stamps.
 - **livi-b**   : Preemptible partition for general use of the above nodes contributed by Prof. L. Livi.
 
-The former four partitions (**skyake**, **compute** and **largemem** and **gpu**) are generally accessible. The next three are open only to the contributor's groups.
+The former four partitions (**skyake**, **compute**, **largemem** and **gpu**) are generally accessible. The next three are open only to the contributor's groups.
 
 On the contributed partitions, the owner's group has preferencial access. However, users belonging to other groups can submit jobs to one of the preemptible partitions (ending with **\-b**) to run on the contributed hardware as long as it is unused, on the condition that their jobs can be preempted (that is, killed) should owners jobs need the hardware.
 There is a minimum runtime guaranteed to preemptible jobs, which is as of now 1 hour. The maximum walltime for the preemptible partition is set per partition (and can be seen in the output of the _sinfo_ command).
 
 Jobs cannot span several partitions; but it is possible to specify more than one partiton, like in _-\-partition=compute,bigmem_ so that the job will be directed by the scheduler
 to the first partiton available.
-There is no fully automatic selection of partitions, other than the default _skylake_ for most of the users, and _compute_ for the short jobs. For the contributors' group members, the default partition will be their contributed nodes. **Thus in many cases users have to specify the partition manually when submitting their jobs!**
 
 Jobs will be rejected by the SLURM scheduler if partition's hardware and requested resources do not match 
 (that is, asking for GPUs on compute or bigmem partitions is not possible). So in some cases, explicitly adding_-\-partition=_ flag to SLURM job submission is needed.
@@ -96,8 +98,8 @@ Generic resources can be software licenses, etc. There are also options to contr
  * _-\-mem=_ : specifies the memory per node.
  * _-\-gpus=_ : specifies number of GPUs per job. There are also _-\-gpus-per-XXX_ and _-\-XXX-per-gpu_
  * _-\-time-_ : specifies walltime in format DD-HH:MM
- * _-\-qos=_  : specifies a QOS by its name.
- * _-\-partition=_ : specifies a partiton by its name.
+ * _-\-qos=_  : specifies a QOS by its name (Should not be used on Grex!)
+ * _-\-partition=_ : specifies a partiton by its name (Can be very useful on Grex!)
 
 An example of using some of these options with _sbatch_ and _salloc_ are listed below:
 
