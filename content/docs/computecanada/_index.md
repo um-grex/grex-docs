@@ -17,7 +17,7 @@ Compute Canada also maintains a user authentication service and usage database c
 - [CCDB, the Compute Canada accounts database](https://ccdb.computecanada.ca/)
 - [Compute Canada user documentation Wiki](https://docs.computecanada.ca/wiki) 
 
-### Getting a Compute Canada / Westgrid Account
+### Getting a Compute Canada Account
 
 University of Manitoba Faculty memebers are eligible for getting ComputeCanada account. Once it is obtained, they can manage accounts of their group members in CCDBa
 .
@@ -25,7 +25,7 @@ If you are a postdoc, a student or an external collaborator, you can apply for a
 
 The account will allow you to manage your roles and groups in CCDB, to access National HPC and Cloud machines, as well as few other Compute Canada services such as Globus and NextCloud. 
 
-However, it is insufficient to access Grex.
+Since we have switched Grex to CCDB credentials in late 2019, the CCDB account is both necessary and sufficient to access Grex. The old Westgrid accounts are no longer needed, nor working. 
 
 ## Regional Partners
 
@@ -37,5 +37,4 @@ University of Manitoba is a Westgrid member insitution, and provides a site for 
 
 The single point of contact for Compute Canada support is:  _support@computecanada.ca_
 
-In order to access Grex, a legacy Westgrid Consortium account is still needed. In CCDB [Apply for a Consortoim account](https://ccdb.computecanada.ca/me/facilities), pick Westgrid. The website will redirect you to [portal.westgrid.ca](https://portal.westgrid.ca) and will create Westgrid account. The account (username and password) are used to connect to Grex.
 
