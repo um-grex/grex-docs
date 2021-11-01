@@ -6,11 +6,11 @@ bookTOC: true
 
 # Grex
 
-Grex is an UManitoba High Performance Computing (HPC) system, first put in production in early 2011 as part of [Westgrid](https://www.westgrid.ca/) consortium.  "Grex" is a Latin name for "herd" (or may be "flock"?). The names of the Grex login nodes (bison, tatanka, aurochs, yak) also refer to various kinds of bovine animals.
+Grex is a UManitoba High Performance Computing (HPC) system, first put in production in early 2011 as part of [Westgrid](https://www.westgrid.ca/) consortium.  "Grex" is a Latin name for "herd" (or may be "flock"?). The names of the Grex login nodes (bison, tatanka, aurochs, yak) also refer to various kinds of bovine animals.
 
 ![](grex-room-2020.png)
 
-Since being defunded by Westgrid (on April 2, 2018), Grex is now available only to the users affiliated with University of Manitoba and their collaborators. The old Westgrid documentation, hosted on the [Westgrid website](https://www.westgrid.ca) became irrelevant after the Grex upgrade, so please visit [Grex's New Documentation](/doc/docs/grex). Thus, if you are a user experienced in the previous "version" of Grex,  you might benefit from reading this dociment: [Description of Grex changes](/doc/docs/longread/). If you are a new Grex user, proceed to the quick start guide and documentation right away.
+Since being defunded by Westgrid (on April 2, 2018), Grex is now available only to the users affiliated with University of Manitoba and their collaborators. The old Westgrid documentation, hosted on the [Westgrid website](https://www.westgrid.ca) became irrelevant after the Grex upgrade, so please visit [Grex's New Documentation](/doc/docs/grex). Thus, if you are an experienced user in the previous "version" of Grex, you might benefit from reading this document: [Description of Grex changes](/doc/docs/longread/). If you are a new Grex user, proceed to the quick start guide and documentation right away.
 
 ## Hardware 
 
@@ -21,7 +21,7 @@ The orihginal Grex was an SGI Altrix machine, with 312 compute nodes (Xeon 5560,
 - 2 4x V100 NVLINK, 32 core Intel 5218 CPUs, 192 GB RAM, FDR 56GB/s IB interconnect
 - Original Grex (slated for decommission in Spring 2022) Xeon 5560, 12 CPU cores , 48 GB of RAM, QDR 40GB/s IB interconnect
 
-There are also  several researcher-contributed nodes (CPU and GPU) to Grex which makes it a "community cluster". The researcher-contributed node are available for others on opportunistic basis; the owner grop's will preempt the others' workload.
+There are also  several researcher-contributed nodes (CPU and GPU) to Grex which make it a "community cluster". The researcher-contributed nodes are available for others on opportunistic basis; the owner groups will preempt the others' workloads.
 
 Grex's compute nodes have access to two filesystems: 
 
