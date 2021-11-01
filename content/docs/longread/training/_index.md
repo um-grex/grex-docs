@@ -8,8 +8,8 @@ bookToc: true
 # Autumn workshio, November 2021
 
 Slides from Day 1 (Nov 1, 2021)
- * [Introduction To HPC](/doc/Introduction-to-HPC-Basics.pptx%20(1).pdf)
- * [Basics of Linux Shell](/doc/Linux%20shell%20basics%202021%20-Grigory-2.pdf)
+ * [Introduction To HPC](https://github.com/um-grex/grex-docs/blob/main/static/Introduction-to-HPC-Basics.pptx%20(1).pdf)
+ * [Basics of Linux Shell](https://github.com/um-grex/grex-docs/blob/main/static/Linux%20shell%20basics%202021%20-Grigory-2.pdf)
 
 # Spring workshop , April 2021
 
