@@ -10,6 +10,9 @@ bookToc: true
 Slides from Day 1 (Nov 1, 2021)
  * [Introduction To HPC](https://github.com/um-grex/grex-docs/blob/main/static/Introduction-to-HPC-Basics.pptx%20(1).pdf)
  * [Basics of Linux Shell](https://github.com/um-grex/grex-docs/blob/main/static/Linux%20shell%20basics%202021%20-Grigory-2.pdf)
+ 
+Slides from Day 2 (Nov 2, 2021)
+ * [HPC software environments](https://github.com/um-grex/grex-docs/blob/main/static/Introduction-HPC-Software-Grex.pdf)
 
 # Spring workshop , April 2021
 
