@@ -5,7 +5,7 @@ title: "Training Materials and Presentations"
 bookToc: true
 ---
 
-# Autumn workshio, November 2021
+# Autumn workshop, November 2021
 
 Slides from Day 1 (Nov 1, 2021)
  * [Introduction To HPC](https://github.com/um-grex/grex-docs/blob/main/static/Introduction-to-HPC-Basics.pptx%20(1).pdf)
