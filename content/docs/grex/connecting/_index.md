@@ -10,6 +10,7 @@ In order to use almost any HPC system, you would need to be able to somehow conn
 
 To log in to Grex in the text mode, connect to **grex.westgrid.ca** using an **SSH** (secure shell) client. The DNS name grex.westgrid.ca serves as an alias for two login nodes: **bison.westgrid.ca** and **tatanka.westgrid.ca** .
 
+
 Uploading and downloading your data can be done using an **SCP/SFTP** capable file transfer client. The recommended clients are OpenSSH (providing **ssh** and **scp**, **sftp** command line tools on Linux and MacOS X) and PuTTY/WinSCP/X-Ming or MobaXterm under Windows. Note that since Jun 1, 2014 the original "SSH Secure Shell" Windows SSH/SFTP client is not supported anymore.
 
 Since Dec. 2015, support is provided for the graphical mode connection to Grex using **X2go**.
@@ -18,10 +19,13 @@ Since Dec. 2015, support is provided for the graphical mode connection to Grex u
 
 For now, there is no load balancing support for connections, so while connecting to the host address grex.westgrid.ca will work, session suspend/resume functionality might require specifying connection to a physical Grex login node explicitly, using **tatanka.westgrid.ca** or **bison.westgrid.ca**.
 
-Finally, for graphical mode it is possible to use VNC remote desktop connections to Grex by tunneling them through SSH. After connecting by SSH as usual, do **module load vncworkspace** command on Grex and follow the instructions on how to use the conveninet vncworkspace wrapper over TigerVNC startup commands.
+``NEW:`` Since early 2021, a new login node, **yak.westgrid.ca** is available to access and build software that uses new Intel AVX2, AVX512 CPU instructions. **Yak** is not part of the **grex.westgrid.ca** alias.
+
+``NEW:`` Since October 2021, there is an OpenOnDemand (OOD) Web interface to Grex, available at [aurochs.westgrid.ca](https://aurochs.westgrid.ca) from UManitoba IP addresses.
+OOD provides a way to connect both in text and graphical mode right in the browser, to transfer data between Grex local machines, and to run jobs.
 
 See the documentation for more details on how to connect from various client operaton systems:
 
 - [Connecting with SSH](/doc/docs/grex/connecting/ssh/)
 - [Connecting with X2Go](/doc/docs/grex/connecting/x2go/)
-
+- [Connecting with OOD](/doc/docs/grex/ood/)

@@ -57,3 +57,11 @@ To use such clients, one would need to tell them that SFTP is needed, and to pro
 Note that we advise against saving your password in the clients: first, it is less secure, and second, it is easy to store a wrong password. FIle transfer clients
 would try to autoconnect automatically, and having a wrong password stored with them will create many failed connection attempts from your client machine, which in turn
 might temporarily block your IP address from accessing Grex.
+
+## File transfers with OOD browser GUI
+
+``NEW:`` It is now possible to use [OpenOnDemand on aurochs](https://aurochs.westgrid.ca) Web interface to download and upload data to and from Grex. Use "Files" dashboard menu to select a filesystem (currently ``/home/$USER`` and ``/global/scratch/$USER`` are available), and then Upload and Download buttons.
+
+There is a limit of about 10GB to the file transfer sizes with OOD. The OOD interface is, as of now, open for UManitoba IP addresses only (i.e., machines from campus will work). 
+
+More information is available on our [OOD pages](/doc/docs/grex/ood)

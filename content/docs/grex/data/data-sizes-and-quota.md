@@ -6,7 +6,7 @@ out where your current usage stands with the limit,  POSIX _quota_ or Lustres' a
 
 ## NFS quota
 
-The _/home/ filesystem is served by NFS and thus supports the standard POSIX _quota_ command. For the current user it is just:
+The _/home/ filesystem is served by NFSv1 and thus supports the standard POSIX _quota_ command. For the current user it is just:
 
 ```quota```
 
