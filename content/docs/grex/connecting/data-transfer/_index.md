@@ -64,4 +64,4 @@ might temporarily block your IP address from accessing Grex.
 
 There is a limit of about 10GB to the file transfer sizes with OOD. The OOD interface is, as of now, open for UManitoba IP addresses only (i.e., machines from campus will work). 
 
-More information is available on our [OOD pages](/doc/docs/grex/ood)
+More information is available on our [OOD pages](../../ood)

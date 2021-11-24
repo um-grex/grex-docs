@@ -1,6 +1,7 @@
 ---
+bookCollapseSection: true
 title: Grex's OpenOnDemand Web Portal
-weight: 10
+weight: 52
 ---
 
 # Introduction

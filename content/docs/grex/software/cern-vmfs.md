@@ -126,6 +126,6 @@ Thus, only GCC compilers and GCC-based toolchains from CC Stack are useful for t
 
 ## OpenScienceGrid
 
-On Grex, we mount OSG reporsitories, mainly for Singularity containers provided through OSG. Pointing the singularuty to the desired path under /cvmfs/singularity.opensciencegrid.org/ will automatically mount and fetch the required software items. Discovering them is up the the users. See more in our [Containers](/doc/docs/grex/software/containers/) documentation page.
+On Grex, we mount OSG reporsitories, mainly for Singularity containers provided through OSG. Pointing the singularuty to the desired path under /cvmfs/singularity.opensciencegrid.org/ will automatically mount and fetch the required software items. Discovering them is up the the users. See more in our [Containers](../containers/) documentation page.
 
 

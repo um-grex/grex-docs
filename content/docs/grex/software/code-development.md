@@ -39,15 +39,15 @@ See Modules for more information.
 
 _There is no modules loaded by default_ ! There will be only system's GCC-4.8 and no MPI whatsoever. To get started, load a compiler/version. Then, if necessary, an MPI (ompi or impi) and if necessary, CUDA (for which 10.2 is the current version, there is no known reason to use another).
 
-```module load intel/15.0```
+```module load intel/2019.5```
 
 ```module load ompi/3.1.4```
 
-The above loads Intel compilers and OpenMPI 3.1.4.
+The above loads Intel compilers and OpenMPI 3.1.4. The example below is for GCC 7 and openmpi 4.1.2. 
 
-```module load gcc/5.2```
+```module load gcc/7.4```
 
-```module load ompi/3.1.4```
+```module load ompi/4.1.2```
 
 The MPI wrappers (_mpicc_, _mpicxx_, _mpif90_, ... etc.)  will be set correctly by _ompi_ modules to point to the right compiler.
 
@@ -55,9 +55,12 @@ The MPI wrappers (_mpicc_, _mpicxx_, _mpif90_, ... etc.)  will be set correctly 
 
 At the moment of writing this documentation, the following Intel Compilers Suites are available on Grex:
 
-  - Intel 15.0
-  - Intel 14.0
-  - Intel 12.1
+  - Intel 2019.5 : a recent Intel Parallel Studio suite. Most software is compiled with it, so use this one if unsure.
+  - Intel 2020.4 : a recent Intel Parallel Studio suite. 
+  - Intel 2017.8 : a somewhat less recent Intel Parallel studio suite.
+  - Intel 15.0  :  Legacy, for maintenance of older Grex software. Do not use for anything new, unless absolutely must
+  - Intel 12.1  : a very old one, for maintenance of a very old PETSc version. Do not use.
+  - Intel 14.1  : a very old one, for maintenance of older Grex software, and broken. Do not use. It will be removed soon.
 
 The name for the Intel suite modules is _intel_; ```module spider intel``` is the command to find available Intel versions. The later is left for compatibility with legacy codes. It does not work with systems C++ standard libraries well, so _icpc_ for Intel 12.1 might be dysfunctional. So the intel/12.1 toolchain is actually using GCC 4.8's C++ and C compilers. 
 
@@ -84,11 +87,12 @@ The standard distribution of MPI on Grex is [OpenMPI](https://www.open-mpi.org/)
 
 For a long time Grex was using the interconnect drivers with ibverbs packages from the IB hardware vendor, Mellanox. It is no longer the case: for CentOS-7, we have switched to the vanilla Linux infiniband drivers, the open source RDMA-core package, and OpenUCX libraries. The current version of UCX on Grex is 1.6.1. Recent versions of OpenMPI (3.1.x and 4.0.x) do support UCX. Also, our OpenMPI is built with process management interface versions PMI1, PMIx2 and 3, for tight integration with the SLURM scheduler.
 
-The current default and recommended version of MPI is OpenMPI 3.1.4. There is a newer version, OpenMPI 4.0.2 that works well for then new codes, but might break compatibility with older MPI codes because it is a major old-code cleanup version. Therefore, most of Grex  users might want to go with this:
+The current default and recommended version of MPI is OpenMPI 4.1.1. OpenMPI 4.1 works well for new codes but could break old ones
+There is an older version, OpenMPI 3.1.4 or 3.1.6 that is more compatible. A very old OpenMPI 1.6.5 exists for compatibily with older software. 
 
 ```module load ompi/3.1.4```
 
-There is also IntelMPI, for which the modules are named _impi_. See the notes on running MPI applications under SLURM [here](/doc/docs/grex/running/batch).
+There is also IntelMPI, for which the modules are named _impi_. See the notes on running MPI applications under SLURM [here](../running/batch).
 
 All MPI modules, be that OpenMPI or Intel, will set MPI compiler wrappers such as _mpicc_, _mpicxx_, _mpif90_ to the compiler suite they were built with. The typical workflow for building parallel programs with MPI would be to first load a compiler module, then an MPI module, and then use the wrapper of C, C++ or Fortran in your makefile or build script.
 

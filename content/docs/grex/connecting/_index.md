@@ -26,6 +26,6 @@ OOD provides a way to connect both in text and graphical mode right in the brows
 
 See the documentation for more details on how to connect from various client operaton systems:
 
-- [Connecting with SSH](/doc/docs/grex/connecting/ssh/)
-- [Connecting with X2Go](/doc/docs/grex/connecting/x2go/)
-- [Connecting with OOD](/doc/docs/grex/ood/)
+- [Connecting with SSH](./ssh/)
+- [Connecting with X2Go](./x2go/)
+- [Connecting with OOD](../ood/)

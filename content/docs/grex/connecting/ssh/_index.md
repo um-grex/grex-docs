@@ -98,5 +98,5 @@ What to do after you connect? You will be facing a Linux shell, most likely BASH
  [HPC Carpentries](https://hpc-carpentry.github.io/hpc-shell/), [ComputeCanadas SSH documentation page](https://docs.computecanada.ca/wiki/SSH), 
 [Bash Guide for Beginners](https://www.tldp.org/LDP/Bash-Beginners-Guide/html/Bash-Beginners-Guide.html) and simple googling for the commands.
 
-You would probably like to explore software via [Modules](/doc/docs/grex/running/), and learning how to [submit jobs](/doc/docs/grex/running/).
+You would probably like to explore software via [Modules](../../software/), and learning how to [submit jobs](../../running/).
 
