@@ -14,13 +14,13 @@ For more general OOD information, see the [OpenOnDemand Paper](https://joss.theo
 
 ## OpenOndemand on Grex 
 
-OOD instance runs now on [aurochs.westgrid.ca](https://aurochs.westgrid.ca) .
+Grex's OOD instance runs on [aurochs.westgrid.ca](https://aurochs.westgrid.ca) .
+It is available only from UManitoba IP addresses -- that is, your computer should be on UM Campus network to connect.
+To connect from outside network, please use install and start [UManitoba Virtual Private Network](https://umanitoba.ca/computing/ist/connect/virtualpn.html).
 
-It is available only from UManitoba IP addresses -- that is, your computer should be on UM Campus network to connect. We will change that in a near future, but for now it is the case.
+OOD relies on in-browser VNC sessions; so a modern browser with HTML5 support is required; we recommend Google Chrome or Firefox and its derivatives (Waterfox, for example).
 
-OOD relies on in-browser VNC sessions; so a modern browser with HTML5 support is required; we recommend Google Chrome or Firefox. 
-
-OOD expects  user accounts and directories on Grex to be already created. Thus, new users that want to work with OOD must first connect to Grex normally, via SSH shell at least once, to make account, directories, and quota creation complete.
+OOD expects user accounts and directories on Grex to be already created. Thus, new users that want to work with OOD must first connect to Grex normally, via SSH shell at least once, to make the creation of account, directories, and quota complete.
 
 OOD creates a state directory under users' ``/home`` (``/home/$USER/ondemand``) where it keeps information about running and completed OOD jobs, shells, desktop sessions and such. Deleting the ``ondemand`` directory while a job or session is running would likely cause the job or session to fail.
 
