@@ -28,7 +28,7 @@ OOD relies on in-browser VNC sessions; so a modern browser with HTML5 support is
 
 When connected, you will see the following screen with the current Grex Message-of-the-day (MOTD):
 
-![](ood-frontpage.png)
+![](ood-frontpage.jpg)
 
 OOD expects user accounts and directories on Grex to be already created. 
 Thus, new users that want to work with OOD should first connect to Grex normally, via SSH shell at least once, to make the creation of account, directories, and quota complete.
@@ -53,7 +53,7 @@ Note that there are limits on uploads on the Web server (a few GBs) and there ca
 The OOD Dashboard menues "Interactive Apps" shows interactive applications. This is the main feature of OOD, it allows interactive work and visualizations, all in browser.
 These application will run on as SLURM Jobs on Grex compute nodes. Users can specify required SLURM resources such as time, number of cores and partitions 
 
-![](ood-applications.png)
+![](ood-applications.jpg)
 
 There are the apps for:
 
