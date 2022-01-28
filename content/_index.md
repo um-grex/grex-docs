@@ -18,28 +18,30 @@ The orihginal Grex was an SGI Altrix machine, with 312 compute nodes (Xeon 5560,
 
 - 12 40 core Intel CPU nodes, 384 GB RAM, EDR 100GB/s IB interconnect
 - 43 52 core Intel 6230R nodes, 96 GB RAM, EDR 100GB/s IB interconnect
-- 2 4x V100 NVLINK, 32 core Intel 5218 CPUs, 192 GB RAM, FDR 56GB/s IB interconnect
+- 2 4xV100 NVLINK, 32 core Intel 5218 CPUs, 192 GB RAM, FDR 56GB/s IB interconnect
 - Original Grex (slated for decommission in Spring 2022) Xeon 5560, 12 CPU cores , 48 GB of RAM, QDR 40GB/s IB interconnect
 
 There are also  several researcher-contributed nodes (CPU and GPU) to Grex which make it a "community cluster". The researcher-contributed nodes are available for others on opportunistic basis; the owner groups will preempt the others' workloads.
 
 Grex's compute nodes have access to two filesystems: 
 
-- /home filesystem, NFSv4/RDMA, 15Tb total usable, 100GB/user quota
-- /global/scratch filesystem, Lustre, 418 GB total usable, 4TB/user quota
+- /home filesystem, NFSv4/RDMA, **15 TB** total usable, 100GB/user quota
+- /global/scratch filesystem, Lustre, **418 TB** total usable, 4TB/user quota
 
 There is a 10GB/s Ethernet connection between Grex and Westgrid's network.
+
+## Software
+
+Grex is a traditional HPC machine, running CentOS Linux under SLURM resource management system.
 
 ## Useful links
 
 {{< columns >}}
 {{< button href="https://docs.computecanada.ca/wiki/Compute_Canada_Documentation" >}}ComputeCanada{{< /button >}}
 <--->
-{{< button href="https://www.westgrid.ca" >}}Westgrid{{< /button >}}
-<--->
 {{< button href="https://grex-status.netlify.app" >}}Grex Status Page{{< /button >}}
 <--->
 {{< button relref="/docs/grex"  >}}Grex Documentation{{< /button >}}
 <--->
-{{< button relref="/docs/localit"  >}}Local Resources{{< /button >}}
+{{< button relref="/docs/localit"  >}}Local Resources at UManitoba{{< /button >}}
 {{< /columns >}}

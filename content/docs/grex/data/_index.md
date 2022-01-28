@@ -14,7 +14,7 @@ As of now, the storage system of Grex consists of the following:
 
 - The local node storage as defined by the environment variable $TMPDIR is recommended for temporary job data that is not needed after job completes. Grex nodes have SATA local disks of various capacities, leaving 150 Gb, 400 Gb, 800 Gb and 1700 Gb usable space per node, depending of the kind of local disk it has.
 
-Most user would want to use */home* for code development, source code, scripts, visualization, processed data etc., that do not take much space and benefits for small files I/O. For production data processing, that is, massive I/O tasks from many compute or interactive jobs, */global/scratch* should be used. It is often beneficial to place temporary files on the local disk space of the compute nodes, if space permits, so that the jobs do not load Lustre or NFS extensively.
+Most user would want to use **/home** for code development, source code, scripts, visualization, processed data etc., that do not take much space and benefits for small files I/O. For production data processing, that is, massive I/O tasks from many compute or interactive jobs, */global/scratch* should be used. It is often beneficial to place temporary files on the local disk space of the compute nodes, if space permits, so that the jobs do not load Lustre or NFS extensively.
 
 ## Data retention and Backup
 
@@ -25,7 +25,7 @@ Backup: after migration to new /home, the backup temporarily lapsed. There is no
 ## Data sharing
 
 Sharing of accounts login information (like passwords or SSH keys) is stricty forbidden on Grex, as well as on most of the HPC systems. There is a mechanism of data/file sharing that does not require sharing of the accounts. 
-To access each others' data on Grex, the UNIX groups and permissions mechanism can be used as explined here(Link).
+To access each others' data on Grex, the UNIX groups and permissions mechanism can be used. 
 
 ## Disclaimer of any responsibility for Data loss
 

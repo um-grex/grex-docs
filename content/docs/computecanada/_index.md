@@ -19,8 +19,8 @@ Compute Canada also maintains a user authentication service and usage database c
 
 ### Getting a Compute Canada Account
 
-University of Manitoba Faculty memebers are eligible for getting ComputeCanada account. Once it is obtained, they can manage accounts of their group members in CCDBa
-.
+University of Manitoba Faculty memebers are eligible for getting ComputeCanada account. Once it is obtained, they can manage accounts of their group members in CCDB.
+
 If you are a postdoc, a student or an external collaborator, you can apply for an account as part of the Faculty's group. You will need your PI's CCDB role identificator code (CCRI). [Follow this guide](https://www.computecanada.ca/research-portal/account-management/apply-for-an-account/).
 
 The account will allow you to manage your roles and groups in CCDB, to access National HPC and Cloud machines, as well as few other Compute Canada services such as Globus and NextCloud. 
@@ -29,12 +29,11 @@ Since we have switched Grex to CCDB credentials in late 2019, the CCDB account i
 
 ## Regional Partners
 
-Compute Canada is also a Federation of four Regions: Westgrid, which consists of institutional members belongigt to Western Canada, ComputeOntario, CalculQuebec and AceNET which is a consortium of universities of Matitime provinces.
+Compute Canada is also a Federation of four Regions: Westgrid, which consists of institutional members belongigt to Western Canada, ComputeOntario, CalculQuebec and AceNET which is a consortium of universities of Maritime provinces.
 
 - [WestGrid](https://www.westgrid.ca)
 
 University of Manitoba is a Westgrid member insitution, and provides a site for Compute Canada support staff that support usage of the National DRI by Manitoba researchers. 
 
 The single point of contact for Compute Canada support is:  _support@computecanada.ca_
-
 

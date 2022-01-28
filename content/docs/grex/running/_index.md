@@ -17,22 +17,26 @@ The current Grex system that has contributed nodes, large memory nodes and contr
 
 There is no fully automatic selection of partitions, other than the default _skylake_ for most of the users, and _compute_ for the short jobs. For the contributors' group members, the default partition will be their contributed nodes. **Thus in many cases users have to specify the partition manually when submitting their jobs!**
 
-
 Currently, the following partitions are available on Grex:
 
 - **skylake**  : the new 52-core, CascadeLakeRefresh compute nodes, 96 Gb/node (set as the default partition) **NEW**
 - **largemem**  : the new 40-core, CascadeLake compute nodes, 384 Gb/node  **NEW**
 - **compute**  : the original SSE4.2 12-core Grex nodes, RAM 48Gb/node (no longer set as the default partition for jobs over 30min)
 - **gpu**      : two GPU V100/32GB AVX512 nodes, RAM 192GB/node **NEW**
+- **test**     : a 24-core Skylake CPU Dell large memory(512GB), NVMe workstation for interactive work and visualizations
 - **stamps**   : three 4xGPU v100/16GB AVX512 nodes contributed by Prof. R. Stamps (Department of Physics and Astronomy)
 - **livi**     : a HGX-2 16xGPU V100/32GB, NVSwitch server contributed by Prof. L. Livi (Department of Computer Science)
+- **agro**     : two 24 core AMD Zen , RAM 256GB/node, two NVIDIA A30 GPUs per node, contributed by Faculty of Agriculture.
 - **stamps-b** : Preemptible partition for general use of the above nodes contributed by Prof. R. Stamps.
 - **livi-b**   : Preemptible partition for general use of the above nodes contributed by Prof. L. Livi.
+- **agro-b**   : Preemptible partition for general use of the above nodes contributed by Faculty of Agriculture.
 
-The former four partitions (**skyake**, **compute**, **largemem** and **gpu**) are generally accessible. The next three are open only to the contributor's groups.
+The former five partitions (**skyake**, **compute**, **largemem**, **test** and **gpu**) are generally accessible. The next three are open only to the contributor's groups.
 
 On the contributed partitions, the owner's group has preferencial access. However, users belonging to other groups can submit jobs to one of the preemptible partitions (ending with **\-b**) to run on the contributed hardware as long as it is unused, on the condition that their jobs can be preempted (that is, killed) should owners jobs need the hardware.
 There is a minimum runtime guaranteed to preemptible jobs, which is as of now 1 hour. The maximum walltime for the preemptible partition is set per partition (and can be seen in the output of the _sinfo_ command).
+
+On the special partition **test** , oversubcsription is enabled in SLURM , to facilitate better turnaround of interactive jobs.
 
 Jobs cannot span several partitions; but it is possible to specify more than one partiton, like in _-\-partition=compute,bigmem_ so that the job will be directed by the scheduler
 to the first partiton available.
