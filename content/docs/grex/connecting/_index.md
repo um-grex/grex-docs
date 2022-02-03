@@ -8,16 +8,13 @@ title: Connecting / Transferring data
 
 In order to use almost any HPC system, you would need to be able to somehow connect and log in to it. ALso, it would be necessary to be able to transfer data to and from the system. The standard means for these tasks are provided by the [SSH protocol](https://en.wikipedia.org/wiki/Secure_Shell).
 
-To log in to Grex in the text mode, connect to **grex.westgrid.ca** using an **SSH** (secure shell) client. The DNS name grex.westgrid.ca serves as an alias for two login nodes: **bison.westgrid.ca** and **tatanka.westgrid.ca** .
-
+To log in to Grex in the text mode, connect to **grex.westgrid.ca** using an [**SSH**](./ssh/) (secure shell) client. The DNS name grex.westgrid.ca serves as an alias for two login nodes: **bison.westgrid.ca** and **tatanka.westgrid.ca** .
 
 Uploading and downloading your data can be done using an **SCP/SFTP** capable file transfer client. The recommended clients are OpenSSH (providing **ssh** and **scp**, **sftp** command line tools on Linux and MacOS X) and PuTTY/WinSCP/X-Ming or MobaXterm under Windows. Note that since Jun 1, 2014 the original "SSH Secure Shell" Windows SSH/SFTP client is not supported anymore.
 
-Since Dec. 2015, support is provided for the graphical mode connection to Grex using **X2go**.
+Since Dec. 2015, support is provided for the graphical mode connection to Grex using [**X2go**](./x2go/).
  
-[X2go](https://wiki.x2go.org/doku.php/download:start) remote desktop clients are available for Windows, MacOS X and Windows. When creting a new session, please chose either of the supported desktop environments: **"OPENBOX"** or **"ICEWM"** in the "Session type" menu. The same Westgrid login/password should be used as for SSH text based connections. 
-
-For now, there is no load balancing support for connections, so while connecting to the host address grex.westgrid.ca will work, session suspend/resume functionality might require specifying connection to a physical Grex login node explicitly, using **tatanka.westgrid.ca** or **bison.westgrid.ca**.
+[X2go](https://wiki.x2go.org/doku.php/download:start) remote desktop clients are available for Windows, MacOS X and Windows. When creting a new session, please chose either of the supported desktop environments: **"OPENBOX"** or **"ICEWM"** in the "Session type" menu. The same  login/password should be used as for SSH text based connections. 
 
 ``NEW:`` Since early 2021, a new login node, **yak.westgrid.ca** is available to access and build software that uses new Intel AVX2, AVX512 CPU instructions. **Yak** is not part of the **grex.westgrid.ca** alias.
 

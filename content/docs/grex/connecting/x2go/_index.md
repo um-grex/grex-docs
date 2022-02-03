@@ -24,13 +24,24 @@ After installing the X2Go client, you'd need to start it and create a "_New Sess
 
 For now, there is no load balancing support for connections: while connecting to the host address **grex.westgrid.ca** will work, session suspend/resume functionality might require specifying connection to a physical Grex login node explicitly, using either of **tatanka.westgrid.ca** or **bison.westgrid.ca** correspondingly in the _Host_ field. (You can also create two sessions, one for tatanka and another for bison.)
 
-The same Westgrid username should be used as for SSH text based connections in the _Login_ field. It is also possible to provide an SSH key instead of the password.
+The same username should be used as for SSH text based connections in the _Login_ field. It is also possible to provide an SSH key instead of the password.
 
-When creating a new Session, please chose either of the supported desktop environment, **"OPENBOX"** or **"ICEWM"**, in the "Session type" menu. We support the two most lightweight Linux Desktop environments for now. It is also possible to avoid using te desktops altogether and select "Published Applications" instead following the documentation [here](https://wiki.x2go.org/doku.php/wiki:advanced:published-applications); however, most of the Grex applications are only accessible as _modules_ and therefore not present in this menu.
+When creating a new Session, a ["Desktop Environment"](https://en.wikipedia.org/wiki/Desktop_environment) needs to be selected in the "Session Type" menu 
+Not all DE's that are listed in this X2go menu are available on Grex. We support the following Linux Desktop environments :
+  * **OPENBOX** : a lightweight DE
+  * **IceWM**   : a lightweight DE that looks like Windows95
+  * **XFCE4**   : a full fledged Linux DE
+
+It is also possible to avoid using te desktops altogether and select "Published Applications" instead following the documentation [here](https://wiki.x2go.org/doku.php/wiki:advanced:published-applications);
+ however, most of the Grex applications are only accessible as _modules_ and therefore not present in this menu.
 
 In the _Media_ tab, you might want to disable printing and sound support to suppress the corresponding warnings. 
 
 After saving the new session, you should be able to connect to Grex with X2go!
+
+## Problems and Limitations of X2go
+
+X2go relies on older version of NX library, that might fail to support newer versions of OpenGL based software.
 
 ## Links
 
