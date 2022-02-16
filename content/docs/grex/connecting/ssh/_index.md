@@ -6,58 +6,67 @@ title: Connecting with SSH
 
 # SSH
 
-Most of the work on shared/HPC computing systems is done via Linux command line / shell. To connect, in a secure manner, to a remote Linux system, you would like to use SSH protocol. You will need to have:
+Most of the work on shared HPC computing systems is done via Linux command line / shell. To connect, in a secure manner, to a remote Linux system, you would like to use SSH protocol. You will need to have:
 
- * access to Internet that lets SSH ports open 
- * a user account on Grex (presently, it is a Westgrid Account!)
- * and an SSH client for your operating system
+{{< hint info >}}
+* access to Internet that lets SSH ports open 
+* a user account on Grex (presently, it is a Westgrid Account!)
+* and an SSH client for your operating system
+{{< /hint >}}
 
 If you are not sure what your account on Grex is, check [Getting Access](https://www.computecanada.ca/research-portal/account-management/apply-for-an-account/). You will also need the DNS name of Grex Which is **grex.westgrid.ca**.
 
 ## SSH clients
 
 {{< tabs "uniqueid" >}}
+
 {{< tab "MacOS" >}}
 
-# MacOS SSH clients
+<!-- # MacOS SSH clients -->
 
-SSH clients for  **MacOS**.
+## SSH clients for  **MacOS**
 
 MacOS X has a built-in OpenSSH command line client. It also has a full-fledged UNIX shell. Therefore, using SSH under MacOS is not different from Linux. In any terminal, **ssh** (as well as **scp** , **sftp** ) just works with one caveat: for the support of X11 tunneling, some of the MacOS X versions would require the [XQuartz](https://www.xquartz.org/) package installed. 
 
+{{< hint info >}}
   ```ssh -Y username@grex.westgrid.ca```
+{{< /hint >}}
 
-You can manage your keys (adding key pairs, ediding known_hosts etc.) in the  _$HOME/.ssh_ directory. Compute Canada has several documentation pages on [managing SSH keys](https://docs.computecanada.ca/wiki/Using_SSH_keys_in_Linux) and [creating SSH tunnels](https://docs.computecanada.ca/wiki/SSH_tunnelling)
+You can manage your keys (adding key pairs, ediding known_hosts etc.) in the  __$HOME/.ssh__ directory. Compute Canada has several documentation pages on [managing SSH keys](https://docs.computecanada.ca/wiki/Using_SSH_keys_in_Linux) and [creating SSH tunnels](https://docs.computecanada.ca/wiki/SSH_tunnelling)
 
 {{< /tab >}}
 
 {{< tab "Linux" >}}
 
-# Linux SSH clients
+<!-- # Linux SSH clients -->
 
-SSH clients for  **Linux** 
+## SSH clients for  **Linux** 
 
 Linux provides the command line SSH package, OpenSSH, which is installed by default in most of the Linux distributions. If not, or you are using a very minimal Linux installation, use your package manager to install OpenSSH package. In any terminal window **ssh** (as well as **scp** , **sftp** ) commands should work. To connect to Grex, use:
 
+{{< hint info >}}
   ```ssh -Y username@grex.westgrid.ca```
+{{< /hint >}}
 
-You can manage your keys (adding key pairs, ediding known_hosts etc.) in the  _$HOME/.ssh_ directory. Compute Canada has several documentation pages on [managing SSH keys](https://docs.computecanada.ca/wiki/Using_SSH_keys_in_Linux) and [creating SSH tunnels](https://docs.computecanada.ca/wiki/SSH_tunnelling)
+You can manage your keys (adding key pairs, ediding known_hosts etc.) in the __$HOME/.ssh__ directory. Compute Canada has several documentation pages on [managing SSH keys](https://docs.computecanada.ca/wiki/Using_SSH_keys_in_Linux) and [creating SSH tunnels](https://docs.computecanada.ca/wiki/SSH_tunnelling)
 
 {{< /tab >}}
 
 {{< tab "Windows" >}}
 
-# Windows SSH clients
+## SSH clients for **Windows**
 
 **Windows** has a very diverse infrastructure for SSH (and Linux support in general). You would like to pick one of the options below and connect to **grex.westgrid.ca** with your Westgrid username ans password.
 
 ## Putty, WinSCP and VCXsrv
 
-The (probably the most popular) free software combination to work under Windows is :
+The (probably the most popular) free software combination to work under Windows are:
 
-  * Putty SSH client : [download PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
-  * WinSCP graphical SFTP client: [download WinSCP](https://winscp.net/eng/index.php)
-  * A free X11 server for Windows: [download VCXSrv](https://sourceforge.net/projects/vcxsrv/)
+{{< hint info >}}
+* Putty SSH client : [download PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
+* WinSCP graphical SFTP client: [download WinSCP](https://winscp.net/eng/index.php)
+* A free X11 server for Windows: [download VCXSrv](https://sourceforge.net/projects/vcxsrv/)
+{{< /hint >}}
 
 WinSCP interacts with PuTTY, so you can configure it to open SSH terminal windows from WinSCP client. For X11 forwarding, make sure the "X11 tunneling" is enabled in PuTTY's session settings, and VCXSrv is running (it sits in the system tray and does nothing unless you start a graphical X11 appication).
 
@@ -73,7 +82,9 @@ Please check out Compute Canada's documentation on MobaXterm [here](https://docs
 
 There is a way to use Linux command shell tools under Windows. [Cygwin](https://www.cygwin.com/). When openssh package is installed, you can use OpenSSH's command line tools like **ssh**, **scp** and **sftp** as if you were under Linux: 
 
+{{< hint info >}}
   ```ssh -Y username@grex.westgrid.ca```
+{{< /hint >}}
 
 ## Windows 10, WSL subsystem
 
@@ -94,9 +105,7 @@ The original SSHSecureShell and SecureFTP client from www.ssh.fi is now obsolete
 
 ## Using command line
 
-What to do after you connect? You will be facing a Linux shell, most likely BASH. There is a plenty of online documentation on how to use it,
- [HPC Carpentries](https://hpc-carpentry.github.io/hpc-shell/), [ComputeCanadas SSH documentation page](https://docs.computecanada.ca/wiki/SSH), 
-[Bash Guide for Beginners](https://www.tldp.org/LDP/Bash-Beginners-Guide/html/Bash-Beginners-Guide.html) and simple googling for the commands.
+What to do after you connect? You will be facing a Linux shell, most likely BASH. There is a plenty of online documentation on how to use it, [HPC Carpentries](https://hpc-carpentry.github.io/hpc-shell/), [Compute Canada's SSH documentation page](https://docs.computecanada.ca/wiki/SSH), [Bash Guide for Beginners](https://www.tldp.org/LDP/Bash-Beginners-Guide/html/Bash-Beginners-Guide.html) and simple googling for the commands.
 
-You would probably like to explore software via [Modules](../../software/), and learning how to [submit jobs](../../running/).
+You would probably like to explore software via [Modules](/docs/grex/software), and learning how to [submit jobs](/docs/grex/running).
 

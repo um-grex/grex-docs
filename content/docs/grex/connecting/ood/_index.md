@@ -8,5 +8,7 @@ weight: 20
 
 There is a Web-portal software that can replace both SSH and SCP clients via a convenient Web access.
 
-Find its documentation here: [Connecting with OOD](../../ood/)
+For more information, please visit the page: [Connecting with OOD](../../ood/)
 
+<!--
+-->

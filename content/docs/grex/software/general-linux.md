@@ -5,17 +5,19 @@ weight: 30
 
 # Linux tools on Grex
 
-There is a number of general and distro-specific tools on Grex that are worth mentioning here. Such tools are: text editors, image viewers, file managers, etc.
+There is a number of general and distro-specific tools on Grex that are worth mentioning here. Such tools are: **text editors**, **image viewers**, **file managers**, ... etc.
 
 ## Command line Text editors
 
 Command line text editors allow you to edit files right on Grex in any terminal session (such as SSH session or an X terminal under X2Go):
 
- - The (arguably) most popular editor is ```vi```, or ```vim```. It is very powerful, but requires some experience to use. To exit a vim session, you can use **ZZ** key combination (hold shift key + zz), or **ESC, :x!**. There are many vi tutorials around, for [example this one](http://heather.cs.ucdavis.edu/~matloff/UnixAndC/Editors/ViIntro.html).
+{{< hint info >}}
+- The (arguably) most popular editor is ```vi```, or ```vim```. It is very powerful, but requires some experience to use. To exit a vim session, you can use **ZZ** key combination (hold shift key + zz), or **ESC, :x!**. There are many vi tutorials around, for [example this one](http://heather.cs.ucdavis.edu/~matloff/UnixAndC/Editors/ViIntro.html).
 
- - Another lightweight text-mode editor is ```nano```. It provides self-explanatory key-combination menu at the bottom of the screen.
+- Another lightweight text-mode editor is ```nano```. It provides self-explanatory key-combination menu at the bottom of the screen.
 
- - The MidnightCommander file manager provides a text-mode editor that can be invoked stand-alone as ```mc -e filename```.
+- The MidnightCommander file manager provides a text-mode editor that can be invoked stand-alone as ```mc -e filename```.
+{{< /hint >}}
 
 ## GUI Text editors
 
@@ -26,4 +28,5 @@ Vi has a GUI counterpart which is accesible as ```evim``` command. There are als
 ## Image viewers
 
 There are the following commands that can be used for viewing images: ```xfe-xfi``` and ```nemacs```. A simple PDF viewer for X11, ```xpdf``` and ```ghostscript``` are also available.
+
 

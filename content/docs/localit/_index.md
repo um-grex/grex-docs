@@ -12,11 +12,11 @@ In addition to the HPC Research Computing facility, there are other IT providers
 
 IST provides a number of services related to Administrative IT, Teaching, and Research Computing as well.
 
-For more information about IST, please visit [UM IST help website](http://umanitoba.ca/ist/help/) and [IST service catalog](http://umanitoba.ca/ist/service_catalogue/).
+For more information about IST, please visit [UM IST Help](http://umanitoba.ca/ist/help/ "UM IST Help") website and [IST service catalog](http://umanitoba.ca/ist/service_catalogue/ "IST service catalog").
 
 ## Resources provided by the Libraries
 
-Libraries provide a variety of services relaed to Research Data Management, as well as a GIS service: [UM Libraries Research Services](https://libguides.lib.umanitoba.ca/researchservices)
+Libraries provide a variety of services relaed to Research Data Management, as well as a GIS service: [UM Libraries Research Services](https://libguides.lib.umanitoba.ca/researchservices "UM Libraries Research Services").
 
 ## Faculties IT representatives
 
