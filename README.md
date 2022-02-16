@@ -23,7 +23,7 @@ When the above requirements are satisfied, here is how to get started.
 
 2. Clone this repository recursively, to get Alex Shpak's Book theme.
 
-	git clone https://github.com/gshamov/site --recursive
+	git clone https://github.com/um-grex/grex-docs.git --recursive 
 
 3. Change to the repository and render it with hugo.
 
@@ -43,5 +43,4 @@ Conventions for writing the documentation pages we know of.
 
  * command line commands should be on a separate line, and quoted with ```triple backticks```
  * code, job scripts and such should use highlight shortcode for the appropriate language (like, bash)
-
 
