@@ -1,4 +1,5 @@
 // Used in layout
+
 $padding-1: 1px !default;
 $padding-4: 0.25rem !default;
 $padding-8: 0.5rem !default;
@@ -12,7 +13,9 @@ $font-size-16: 1rem !default;
 $border-radius: 0.15rem !default;
 
 // Grayscale
+
 $white: #ffffff !default;
+
 $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
 $gray-300: #dee2e6 !default;
@@ -22,6 +25,7 @@ $gray-600: #868e96 !default;
 $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
+
 $black: #000 !default;
 
 $color-link: #05b !default;
@@ -42,10 +46,12 @@ $md-breakpoint: $menu-width + $body-min-width * 1.25 + $toc-width !default;
 $sm-breakpoint: $menu-width + $body-min-width !default;
 
 // Hint colors
+
 $hint-colors: (
   info: #6bf,
   warning: #fd6,
-  danger: #f66
+  danger: #f66,
+  slurm: #33ccff
 ) !default;
 
 $icon-filter: none !default;

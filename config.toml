@@ -3,25 +3,57 @@
 baseURL = "http://um-grex.github.io/grex-docs"
 languageCode = "en-us"
 title = "Unofficial Grex User Guide"
+
 theme="book"
 
-
 # Book configuration
+
 disablePathToLower = true
 enableGitInfo = true
 
 # Needed for mermaid/katex shortcodes
+
 [markup]
 [markup.goldmark.renderer]
   unsafe = true
 
+[markup.goldmark.extensions]
+      definitionList = true
+      footnote = true
+      linkify = true
+      strikethrough = true
+      table = true
+      taskList = true
+      typographer = true
+
 [markup.tableOfContents]
   startLevel = 1
+
+[markup.highlight]
+    #anchorLineNos = false
+    #codeFences = true
+    #guessSyntax = false
+    #hl_Lines = ''
+    #lineAnchors = ''
+    #lineNoStart = 1
+    #lineNos = false
+    #lineNumbersInTable = true
+    #noClasses = true
+    style = 'borland'
+    #tabWidth = 4
+
+    # Available styles: https://xyproto.github.io/splash/docs/all.html
+    # abap algol algol_nu api arduino autumn borland bw colorful dracula 
+    # emacs friendly fruity github igor lovelace manni monokai monokailight 
+    # murphy native paraiso-dark paraiso-light pastie perldoc pygments 
+    # rainbow_dash rrt solarized-dark solarized-dark256 solarized-light 
+    # swapoff tango trac vim vs xcode
 
 # Multi-lingual mode config
 # There are different options to translate files
 # See https://gohugo.io/content-management/multilingual/#translation-by-filename
 # And https://gohugo.io/content-management/multilingual/#translation-by-content-directory
+
 [languages]
 [languages.en]
   languageName = 'English'
@@ -33,44 +65,103 @@ enableGitInfo = true
 #  contentDir = 'content.fr'
 #  weight = 2
 
-#[languages.cn]
-#  languageName = 'Chinese'
-#  contentDir = 'content.cn'
-#  weight = 3
-
 [params]
   # (Optional, default 6) Set how many table of contents levels to be showed on page.
   # Use false to hide ToC, note that 0 will default to 6 (https://gohugo.io/functions/default/)
   # You can also specify this parameter per page in front matter
+
   BookToC = 4
 
   # (Optional, default none) Set the path to a logo for the book. If the logo is
   # /static/logo.png then the path would be logo.png
-  BookLogo = 'um_logo_email_signature.png'
+
+  BookLogo = 'logo/um_logo_email_signature.png'
 
   # (Optional, default none) Set leaf bundle to render as side menu
   # When not specified file structure and weights will be used
+
   #BookMenuBundle = '/menu'
 
   # (Optional, default docs) Specify section of content to render as menu
   # You can also set value to '*' to render all sections to menu
+
   BookSection = 'docs'
 
   # Set source repository location.
   # Used for 'Last Modified' and 'Edit this page' links.
+
   BookRepo = 'https://github.com/um-grex/grex-docs'
 
   # Enable "Edit this page" links for 'doc' page type.
   # Disabled by default. Uncomment to enable. Requires 'BookRepo' param.
   # Path must point to 'content' directory of repo.
+
   BookEditPath = 'blob/master/content'
 
   # Configure the date format used on the pages
   # - In git information
   # - In blog posts
+
   BookDateFormat = 'Jan 2, 2006'
 
   # (Optional, default true) Enables search function with flexsearch,
   # Index is built on fly, therefore it might slowdown your website.
+
   BookSearch = true
 
+[sitemap]
+  changefreq = 'monthly'
+  filename = 'sitemap.xml'
+  priority = 0.5
+
+[imaging]
+
+  # Default resample filter used for resizing. Default is Box,
+  # a simple and fast averaging filter appropriate for downscaling.
+  # See https://github.com/disintegration/imaging
+
+  resampleFilter = "box"
+
+  # Default JPEG or WebP quality setting. Default is 75.
+  quality = 75
+
+  # Default hint about what type of image. Currently only used for WebP encoding.
+  # Default is "photo".
+  # Valid values are "picture", "photo", "drawing", "icon", or "text".
+  hint = "photo"
+
+  # Anchor used when cropping pictures.
+  # Default is "smart" which does Smart Cropping, using https://github.com/muesli/smartcrop
+  # Smart Cropping is content aware and tries to find the best crop for each image.
+  # Valid values are Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight
+  anchor = "smart"
+
+  # Default background color.
+# Hugo will preserve transparency for target formats that supports it,
+# but will fall back to this color for JPEG.
+# Expects a standard HEX color string with 3 or 6 digits.
+# See https://www.google.com/search?q=color+picker
+bgColor = "#ffffff"
+
+[imaging.exif]
+ # Regexp matching the fields you want to Exclude from the (massive) set of Exif info
+# available. As we cache this info to disk, this is for performance and
+# disk space reasons more than anything.
+# If you want it all, put ".*" in this config setting.
+# Note that if neither this or ExcludeFields is set, Hugo will return a small
+# default set: GPS|Exif|Exposure[M|P|B]|Contrast|Resolution|Sharp|JPEG|Metering|Sensing|Saturation|ColorSpace|Flash|WhiteBalance
+includeFields = ""
+
+# Regexp matching the Exif fields you want to exclude. This may be easier to use
+# than IncludeFields above, depending on what you want.
+excludeFields = ""
+
+# Hugo extracts the "photo taken" date/time into .Date by default.
+# Set this to true to turn it off.
+disableDate = false
+
+# Hugo extracts the "photo taken where" (GPS latitude and longitude) into
+# .Long and .Lat. Set this to true to turn it off.
+disableLatLong = false
+
+# End of configuration file.

@@ -1,8 +1,21 @@
+<style>
+
+hr {
+   border: 0;
+   height: 3px;
+   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(9, 84, 132), rgba(0, 0, 0, 0));
+}
+
+</style>
+
 <h2 class="book-brand">
   <a href="{{ .Site.BaseURL }}">
     {{- with .Site.Params.BookLogo -}}
-    <img src="{{ . | relURL }}" alt="Logo" />
+    <img src="{{ . | relURL }}" style="width:auto;height:auto;" alt="Logo" />
     {{- end -}}
+    <br>
+    <hr>
     <span>{{ .Site.Title }}</span>
+    <hr>
   </a>
 </h2>
