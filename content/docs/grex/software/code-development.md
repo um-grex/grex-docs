@@ -107,17 +107,17 @@ The current default and recommended version of MPI is OpenMPI 4.1.1. OpenMPI 4.1
 There is an older version, OpenMPI 3.1.4 or 3.1.6 that is more compatible. A very old OpenMPI 1.6.5 exists for compatibily with older software. 
 
 {{< hint info >}}
-```module load ompi/3.1.4```
+module load ompi/3.1.4
 {{< /hint >}}
 
-There is also IntelMPI, for which the modules are named __impi__. See the notes on running MPI applications under SLURM [here](../running/batch).
+There is also IntelMPI, for which the modules are named __impi__. See the notes on running MPI applications under SLURM [here](../../running/batch).
 
 All MPI modules, be that OpenMPI or Intel, will set MPI compiler wrappers such as __mpicc__, __mpicxx__, __mpif90__ to the compiler suite they were built with. The typical workflow for building parallel programs with MPI would be to first load a compiler module, then an MPI module, and then use the wrapper of C, C++ or Fortran in your makefile or build script.
 
 In case a build or configure script does not want to use the wrapper and needs explicit compiler and link options for MPI, OpenMPI wrappers provide the __-\-show__ option that list the required command line options. Try for example:
 
 {{< hint info >}}
-```mpicc --show```
+mpicc --show
 {{< /hint >}}
 
 to print include and library flags to the C compiler to be linked against currently loaded OpenMPI version. 

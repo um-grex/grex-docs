@@ -13,9 +13,9 @@ Fortunately most HPC systems, and Grex is no exception, come with a pre-installe
 
 ## How software is installed and distributed
 
-There are several mechanisms of software installation under Linux. One of them is using Linux software package manager (_apt_ on Ubuntu, _yum_ on Centos, etc) and a binary package repository provided by some third party. These package managers would install a version of the code system wide, into standard OS directories like _/usr/bin_ where it would be immediately available in the systems PATH (PATH is a variable that specifies where the operating systems would look for executable code).
+There are several mechanisms of software installation under Linux. One of them is using Linux software package manager (__apt__ on Ubuntu, __yum__ on Centos, etc) and a binary package repository provided by some third party. These package managers would install a version of the code system wide, into standard OS directories like __/usr/bin__ where it would be immediately available in the systems PATH (PATH is a variable that specifies where the operating systems would look for executable code).
 
-This method of installation is often practiced on person's own workstations, because it requires no knowledge other than syntax of the OS package manager. There are however significant drawbacks to it for using on HPC clusters that consists of many compute nodes and are shared by many users.
+This method of installation is often practiced on person's own workstations, because it requires no knowledge other than syntax of the OS package manager. There are however significant drawbacks to it for using on HPC clusters that consists of many compute nodes and are shared by many users:
 
 {{< hint warning >}}
 - Need of root access to install in the base OS is a systems stability and security threat, and has a potential of users interfering with each other.
@@ -27,7 +27,7 @@ This method of installation is often practiced on person's own workstations, bec
 - Binary packages in public repos tend to be compiled for generic CPU architectures rather than optimized for a particular system.
 {{< /hint >}}
 
-Thus in HPC world, as a rule, only a minimal set of core Linux OS packages is installed by system administrators, and no access to package managers is given to the end users. There are ways to let users have their own Linux OS images through virtualization and containerization technolgies (see the Containers section) when it is really necessary.
+Thus in HPC world, as a rule, only a minimal set of core Linux OS packages is installed by system administrators, and no access to package managers is given to the end users. There are ways to let users have their own Linux OS images through virtualization and containerization technolgies (see the [Containers](../software/containers/) section) when it is really necessary.
 
 On most of the HPC machines, the application software is recompiled from sources and installed into a shared filesystem so that each compute node has access to the same code. Multiple versions of a software package can be installed into each own PATH; dependencies between software (such as libraries from one package needed to be accessed by another package) are tracked via a special software called Environmental Modules.
 
@@ -43,16 +43,16 @@ The main feature of Lmod is hierarchical module system to provide a better contr
 
 A "software stack" module should be loaded first. On Grex, there are two software stack, called __GrexEnv__ and __CCEnv__, and standing for the sofware built on Grex locally and the software environment from Compute Canada, correspondingly. __GrexEnv__ is the only module loaded by default. 
 
-When a software stack module is loaded, the **module spider** command will find a specific software item (for example, GAMESS; note that all the module names are __lower-case__ on Grex and on Compute Canada stacks) if it exist under that stack:
+When a software stack module is loaded, the **module spider** command will find a specific software item (for example, GAMESS; note that all the module names are __lower-case__ on Grex and on Compute Canada software stacks) if it exist under that stack:
 
 {{< hint info >}}
-  ```module spider gamess```
+module spider gamess
 {{< /hint >}}
 
 It might return several versions; then usually a subsequent command with the version is used to determine dependencies required for the software. In case of GAMESS on Grex:
 
 {{< hint info >}}
- ```module spider gamess/Sept2019```
+module spider gamess/Sept2019
 {{< /hint >}}
 
 It will advise to load the following modules: __"intel/15.0.5.223  impi/5.1.1.109"__. Then, **module load** command can be used actually to load the GAMESS environment (note that the dependencies must be loaded first:
@@ -79,4 +79,12 @@ Software that come as binary archive to be unpacked can be simply unpacked into 
 There exist binary software environments like Conda that manage their own tree of binary-everything. These can be used as well, with some caution, because automatically pulling everything might conflict with the same software existing in the HPC environment (Python package paths, MPI libraries, etc.).
 
 However, if a software is really a part of the base OS (something like a graphics Desktop software, etc.), it can be hard to rebuild from sources due to many dependencies. If needed, it may be better if installed centrally or used in a container (see Containers documentation).
+
+## Related links
+
+* [Lmod](https://lmod.readthedocs.io/en/latest/ "Lmod")
+* [Tcl Modules](http://modules.sourceforge.net/ "Tcl Modules")
+* [CMake](https://cmake.org/ "CMake")
+* [Autoconf](https://www.gnu.org/software/autoconf/ "Autoconf")
+
 
