@@ -9,7 +9,7 @@ weight: 30
 As of now, the storage system of Grex consists of the following:
 
 {{< hint info >}}
-- The **/home** NFSv4 filesystem is served by a very fast NVME disk server. The total size of the filesystem is 15 TB. The quota per-user is 100 GB of space and 500K of files. 
+- The **/home** NFSv4 filesystem is served by a very fast NVME disk server. The total size of the filesystem is __15 TB__. The quota per-user is __100 GB__ of space and __500K__ of files. 
 
 - The **/global/scratch** Lustre filesystem, Seagate SBB, total usable size of 418 TB. It is intended to be used as the high-performance, scalable workspace for active projects. It is not backed up and is not intended for long-time storage of users data that is not actively used. The default quota is 2 TB of space and 1M files per user and can be increased on request to 10 TB per research group. Larger disk space requires a local RAC application.
 

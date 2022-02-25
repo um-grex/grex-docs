@@ -18,10 +18,8 @@ Now that you have a __wg-xxxxx__ UNIX group created, you can set up the data sha
 The directory you wish to share should be owned by the group and permitted to the group. For example:
 
 {{< hint info >}}
-
-```chgrp -R wg-group dir```
-
-```chmod g+s dir```
+chgrp -R wg-group dir
+chmod g+s dir
 {{< /hint >}}
 
 You must ensure that there is access to parent directories as well.
@@ -29,7 +27,7 @@ You must ensure that there is access to parent directories as well.
 A directory and all the files in it can be permitted to the group as follows:
 
 {{< hint info >}}
- ```chmod -R g+rX /global/scratch/dirname```
+chmod -R g+rX /global/scratch/dirname
 {{< /hint >}}
 
 Tto set access for the /global/scratch/dirname directory and all its subdirectories. Note the uppercase X in the command. This will set x permissions on the subdirectories (needed for others to list the directories) as well as regular execute permission on executable files.
@@ -37,24 +35,31 @@ Tto set access for the /global/scratch/dirname directory and all its subdirector
 If you want the to allow other members to not only read files in the shared directory "dir", but also permit write access to allow them to create and change files in that directory, then all members in the group must add a line:
 
 {{< hint info >}}
- ```umask 007```
+umask 007
 {{< /hint >}}
 
 to the __~/.bashrc__ or __~/.cshrc__ file in their respective home directories. Furthermore, you must add write permission to the shared directory itself:
 
 {{< hint info >}}
-  ```chmod -R g+rwX dir```
+chmod -R g+rwX dir
 {{< /hint >}}
 
 which would allow read and write access to the directory dir and all its files and subdirectories.
 
 ## Linux ACLs
 
-On Lustre filesystem (__/global/scratch/$USER__), it is possible to use Linux access control lists (ACLs) which offer more fine-grained control over access than UNIX groups. Compute Canada's [Sharing Data](https://docs.computecanada.ca/wiki/Sharing_data) documentation might be relevant, with one caution: on Grex, there is no project layout as exists on Compute Canada clusters.
+On Lustre filesystem (__/global/scratch/$USER__), it is possible to use Linux access control lists (ACLs) which offer more fine-grained control over access than UNIX groups. Compute Canada's [Sharing Data](https://docs.computecanada.ca/wiki/Sharing_data "Sharing data") documentation might be relevant, with one caution: on Grex, there is no project layout as exists on Compute Canada clusters.
 
 An example setting of ACL command, to allow for "search" access of the top directory to a group wg-abcdf, presumably with some of the directories under it being shared by a UNUX group:
 
 {{< hint info >}}
-```setfacl  -m g:wg-abcdf:X /global/scratch/$USER```
+setfacl  -m g:wg-abcdf:X /global/scratch/$USER
 {{< /hint >}}
 
+## Related links
+
+* [Linux permissions](https://linuxize.com/post/understanding-linux-file-permissions/ "Understanding Linux File Permissions")
+
+* [ACLs](https://www.geeksforgeeks.org/access-control-listsacl-linux/ "Access Control Lists in Linux")
+
+<!-- -->
