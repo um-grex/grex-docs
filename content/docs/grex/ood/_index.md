@@ -6,26 +6,28 @@ weight: 52
 
 # Introduction
 
-[OpenOnDemand](https://openondemand.org/), or OOD for short, is an open source Web portal for High-Performance computing, developed at Ohio Supercomputing Center. OOD makes it easier for beginner HPC user to access the resources via a Web interface. OOD also allows for interactive, visualization and other linux Desktop applications to be accessed on HPC systems via a convenient Web user interface.
+[OpenOnDemand](https://openondemand.org/ "OpenOnDemand") or __OOD__ for short, is an open source Web portal for High-Performance computing, developed at Ohio Supercomputing Center. OOD makes it easier for beginner HPC user to access the resources via a Web interface. OOD also allows for interactive, visualization and other linux Desktop applications to be accessed on HPC systems via a convenient Web user interface.
 
-Since end of October 2021, OnDemand version 2 is officially in production  on Grex. 
+{{< hint info >}}
+Since end of __October 2021__, OnDemand version 2 is officially in production  on Grex. 
+{{< /hint >}}
 
-For more general OOD information, see the [OpenOnDemand Paper](https://joss.theoj.org/papers/10.21105/joss.00622)
+For more general OOD information, see the [OpenOnDemand Paper](https://joss.theoj.org/papers/10.21105/joss.00622 "OpenOnDemand Paper")
 
 ## OpenOndemand on Grex 
 
 Grex's OOD instance runs on **aurochs.westgrid.ca** . It is available only from UManitoba IP addresses -- that is, your computer should be on UM Campus network to connect. 
 
-To connect from outside network, please use install and start [UManitoba Virtual Private Network](https://umanitoba.ca/computing/ist/connect/virtualpn.html). OOD relies on in-browser VNC sessions; so a modern browser with HTML5 support is required; we recommend Google Chrome or Firefox and its derivatives (Waterfox, for example).
+To connect from outside UM network, please install and start [UManitoba Virtual Private Network](https://umanitoba.ca/computing/ist/connect/virtualpn.html). OOD relies on in-browser VNC sessions; so a modern browser with HTML5 support is required; we recommend Google Chrome or Firefox and its derivatives (Waterfox, for example).
 
+**Connect to OOD using [UManitoba VPN](https://umanitoba.ca/computing/ist/connect/virtualpn.html):**
 {{< hint info >}}
-**Connect to OOD using [UManitoba VPN](https://umanitoba.ca/computing/ist/connect/virtualpn.html)**  
  - Make sure Pulse Secure VPN is connected
  - Point your Web browser to [https://aurochs.westgrid.ca](https://aurochs.westgrid.ca) 
- - Use your ComputeCanada username and password to log in to Grex OOD.
+ - Use your Compute Canada username and password to log in to Grex OOD.
 {{< /hint >}}
 
-<!--
+<!-- 
 When connected, you will see the following screen with the current Grex Message-of-the-day (MOTD):
 ![](ood-frontpage.jpg)
 -->
@@ -66,4 +68,5 @@ As for now, the following applications are supported:
 
 As with regular SLURM jobs, it is important to specify SLURM partitions for them to start faster. Perhaps the __test__ partition for Desktop is the best place to start interactive Desktop jobs, so it is hardcoded in the Simplified Desktop item.
  
-
+<!--
+-->
