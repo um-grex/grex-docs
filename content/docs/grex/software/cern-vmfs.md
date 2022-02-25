@@ -5,9 +5,9 @@ weight: 10
 
 # Cern VMFS on Grex
 
-[CVMFS or CernVM](https://cernvm.cern.ch/portal/filesystem) stands for CernVM File System. It provides a scalable, reliable and low-maintenance software distribution service. It was developed to assist High Energy Physics (HEP) collaborations to deploy software on the worldwide-distributed computing infrastructure used to run data processing applications. 
+[CVMFS or CernVM](https://cernvm.cern.ch/portal/filesystem "CVMFS") stands for CernVM File System. It provides a scalable, reliable and low-maintenance software distribution service. It was developed to assist High Energy Physics (HEP) collaborations to deploy software on the worldwide-distributed computing infrastructure used to run data processing applications. 
 
-Presently, we use CernVMFS (CVMFS) to provide Compute Canada's software stack. We plan to add more publically available CVMFS software repositories such as the one from [OpenScienceGrid](https://opensciencegrid.org/), in a near future. Note that we can only "pull" software from these repositories. To actually add or change software, datasets etc., the respective orgaizations controlling CVMFS repositories should be contacted directly.
+Presently, we use CernVMFS (CVMFS) to provide Compute Canada's software stack. We plan to add more publically available CVMFS software repositories such as the one from [OpenScienceGrid](https://opensciencegrid.org/ "OpenScienceGrid"), in a near future. Note that we can only "pull" software from these repositories. To actually add or change software, datasets etc., the respective orgaizations controlling CVMFS repositories should be contacted directly.
 
 Access to the CVMFS should be transparent to the Grex users: no action is needed other than loading a software module or setting a path.
 
