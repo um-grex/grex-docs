@@ -2,7 +2,7 @@
 
 ## Introduction
 
-[Gaussian 16](http://gaussian.com/) is a comprehensive suite for electronic structure modeling using __ab initio__, DFT and semi-empirical methods. A list of Gaussian 16 features can be found [here](http://gaussian.com/g16glance/).
+[Gaussian 16](http://gaussian.com/ "Gaussian") is a comprehensive suite for electronic structure modeling using __ab initio__, DFT and semi-empirical methods. A list of Gaussian 16 features can be found [here](http://gaussian.com/g16glance/ "Gaussian Features").
 
 ## User Responsibilities and Access
 
@@ -26,7 +26,7 @@ Moreover, the terms of the UManitoba license are actually stricter than for the 
 On Grex, Gaussian is limited to single node, SMP jobs and the memory of single node. There is no Linda. The Gaussian code is accessible as a module. The module sets Gaussian's environment variables like __GAUSS_SCRDIR__ (the later, to local node scratch).
 
 {{< hint info >}}
-```module load gaussian/g16.c01```
+module load gaussian/g16.c01
 {{< /hint >}}
 
 To load the module and access the binaries, you will have first get access as per above. Also, our Gaussian license span is less than Compute Canada's support contract, so there is fewer versions available. Use ```module spider gaussian``` to see what is available on Grex.
@@ -34,7 +34,7 @@ To load the module and access the binaries, you will have first get access as pe
 After a Gaussian module is loaded, the GaussView software also becomes available (provided you have connected with X11 support, perhaps using X2Go) as follows:
 
 {{< hint info >}}
-```gv```
+gv
 {{< /hint >}}
   
 The viewer should not be used to run production calculations on a Grex login nodes. Instead, as for any other production calculations, SLURM jobs should be used as described below.
@@ -66,7 +66,7 @@ echo "Program finished with exit code $? at: `date`"
 A simplified job script **sbg16** is available (aftr loading of the g16 module) for automatic generation and sumbission of SLURM Gaussian jobs.
 
 {{< hint info >}}
-```sbg16 input.gjf -ppn 12 -mem 40000mb -time 8:00:00```
+sbg16 input.gjf -ppn 12 -mem 40000mb -time 8:00:00
 {{< /hint >}}
 
 ### Using NBO
@@ -74,7 +74,7 @@ A simplified job script **sbg16** is available (aftr loading of the g16 module) 
 University of Manitoba has site licenses for NBO6 and NBO7. Corresponding NBO modules would have to be loaded in order to use Gaussian's POP=NBO6 or NBO7 keywords.
 
 {{< hint info >}}
-```module spider nbo```
+module spider nbo
 {{< /hint >}}
 
 should list available NBO versions with their dependencies.
