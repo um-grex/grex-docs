@@ -16,12 +16,12 @@ Owners of the user-contributed hardware on Grex have preferential access to thei
 
 ## Getting an account on Grex
 
-As of the moment, Grex is using the Compute Canada account management database ([CCDB](https://ccdb.computecanada.ca)). Any eligible Canadian Faculty member can get a Compute Canada account in the CCDB system. If you are a graduate student, postdoctoral fellow, research assistant, undergraduate student, or a non-research staff member, visiting faculty or external collaborator, you will need to be sponsored in CCDB by a Principal Investigator (PI), i.e. a Faculty member. The PI must register in the CCDB first, and then he/she can sponsor you as a 'Group Member' under his/her account. Once your application for a Compute Canada account has been approved, you will receive a confirmation email and you can start using the computing and data storage facilities.
+As of the moment, Grex is using the Compute Canada account management database ([CCDB](https://ccdb.computecanada.ca "CCDB")). Any eligible Canadian Faculty member can get a Compute Canada account in the CCDB system. If you are a graduate student, postdoctoral fellow, research assistant, undergraduate student, or a non-research staff member, visiting faculty or external collaborator, you will need to be sponsored in CCDB by a Principal Investigator (PI), i.e. a Faculty member. The PI must register in the CCDB first, and then he/she can sponsor you as a 'Group Member' under his/her account. Once your application for a Compute Canada account has been approved, you will receive a confirmation email and you can start using the computing and data storage facilities.
 
 **There are two technical conditions for getting access:**
 
 {{< hint info >}}
- - An active [CCDB](https://ccdb.computecanada.ca) account. 
+ - An active [CCDB](https://ccdb.computecanada.ca "CCDB") account. 
  - An active CCDB "role" affiliated with UManitoba.
 {{< /hint >}} 
 
