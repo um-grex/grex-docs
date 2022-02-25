@@ -7,19 +7,17 @@ bookToc: true
 
 # Grex
 
-Grex is an UManitoba High Performance Computing (HPC) system, first put in production in early 2011 as part of [Westgrid](https://www.westgrid.ca/) consortium. Now it is owned and operated by University of Manitoba. Gres is accessible only for UManitoba users and their collaborators.
+Grex is an UManitoba High Performance Computing (HPC) system, first put in production in early 2011 as part of [WestGrid](https://www.westgrid.ca/ "WestGrid") consortium. Now it is owned and operated by University of Manitoba. Grex is accessible only for UManitoba users and their collaborators.
 
 ### A Very Quick Start guide
 
-1. Create an account on [CCDB](https://ccdb.computecanada.ca/security/login). You will need an institutional Email address. If you are a sponsored user, you'd want to ask your PI for his/her _CCRI_ code. For a detailed procedure, visit the page [Apply for an account](https://www.computecanada.ca/research-portal/account-management/apply-for-an-account/).
+1. Create an account on [CCDB](https://ccdb.computecanada.ca/security/login "CCDB"). You will need an institutional Email address. If you are a sponsored user, you'd want to ask your PI for his/her __CCRI__ code {Compute Canada Role Identifier}. For a detailed procedure, visit the page [Apply for an account](https://www.computecanada.ca/research-portal/account-management/apply-for-an-account/ "Apply for a Compute Canada account").
 
 2. Wait for half a day. While waiting, install an SSH client, and SFTP client for your operating system.
 
 3. Connect to **grex.westgrid.ca** with SSH, using your username/password from step 1.
 
-4. Make a sample job script, call it _sleep.job_ . The job script is a text file that has a special syntax to be
- recognized by SLURM. You can use the editor _nano_ , or any other right on Grex SSH prompt (vim, emacs, pico, .
-..); you can also create the script file on your machine and upload to Grex using your SFTP client.
+4. Make a sample job script, call it, for example, __sleep.job__ . The job script is a text file that has a special syntax to be recognized by SLURM. You can use the editor __nano__ , or any other right on Grex SSH prompt (vim, emacs, pico, ... etc); you can also create the script file on your machine and upload to Grex using your SFTP client or scp.
 
 {{< hint slurm >}}
 {{< highlight bash >}}
@@ -32,17 +30,17 @@ echo "all done"
 {{< / highlight >}}
 {{< /hint >}}
 
-5. Submit the script using sbatch command, to the _compute_ partition
+5. Submit the script using sbatch command, to the __compute__ partition using:
 
 {{< hint info >}}
- ```sbatch --partition=compute sleep.job```
+sbatch --partition=compute sleep.job
 {{< /hint >}}
 
 6. Wait until the job finishes; you can monitor queue's state with the 'sq' command. When the job finishes, a file slurm-NNNN.out should be created in the same directory.
 
 7. Download the output slurm-NNNN.out from grex.westgrid.ca to your local machine using your SFTP client.
 
-8. Congratulations, you have just ran your fist HPC-style batch job. This is the general workflow, more or less; you'd just want to substitute the __sleep__ command to something useful, like __./your-code.x your-input.dat__ .
+8. Congratulations, you have just ran your first HPC-style batch job. This is the general workflow, more or less; you'd just want to substitute the __sleep__ command to something useful, like __./your-code.x your-input.dat__ .
 
 
 # More information on this website
