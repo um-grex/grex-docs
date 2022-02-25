@@ -145,7 +145,7 @@ An example of using some of these options with _sbatch_ and _salloc_ are listed 
 And so on. The options for batch jobs can be either in command line, or (perhaps better) in the special comments in the job file, like:
 
 {{< highlight bash >}}
-#SBATCH -\-mem=40gb
+#SBATCH --mem=40gb
 {{< /highlight >}}
 
 Refer to the subsection for [Batch jobs]({{< relref "/docs/grex/running/batch" >}}) and [Interacive jobs]({{< relref "/docs/grex/running/interactive" >}}) for more information, examples of job scripts and how to actually sumbit jobs.
