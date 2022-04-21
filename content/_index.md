@@ -4,6 +4,17 @@ type: docs
 bookTOC: true
 ---
 
+**Spring Workshop: UManitoba HPC resources, and jobs optimization workshop**
+
+Please join us at the Research Computing online Workshop dedicated to news, updates and effective use of UManitoba’s local HPC supercomputer, Grex. The workshop will be held in two sessions May 4, 5 at 10:30 AM- 1:00 PM, Winnipeg time. It is open for all UManitoba users.
+
+{{< hint info >}}
+* May 4, 2022: Updates on Grex HPC machine status, new hardware and services. Updates on local RAC. Introductory how-to using HPC machines, Using GPUs / contributed systems on Grex.    
+* May 5, 2022: HPC software overview and best practices, Using OOD Web portal on Grex, Roundtable, Q/A    
+{{< /hint >}}
+
+Register [here](https://www.eventbrite.ca/e/umanitoba-hpc-resources-and-jobs-optimization-workshop-tickets-325012801037)
+
 # Grex
 
 Grex is a UManitoba High Performance Computing (HPC) system, first put in production in early 2011 as part of [WestGrid](https://www.westgrid.ca/ "WestGrid") consortium. "Grex" is a _Latin_ name for "herd" (or maybe "flock"?). The names of the Grex login nodes ([bison](https://en.wikipedia.org/wiki/Bison "Bison"), tatanka, [aurochs](https://en.wikipedia.org/wiki/Aurochs "Aurochs"), [yak](https://en.wikipedia.org/wiki/Yak "Yak")) also refer to various kinds of bovine animals.
