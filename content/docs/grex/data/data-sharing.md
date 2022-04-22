@@ -19,6 +19,7 @@ The directory you wish to share should be owned by the group and permitted to th
 
 {{< hint info >}}
 chgrp -R wg-group dir
+
 chmod g+s dir
 {{< /hint >}}
 
