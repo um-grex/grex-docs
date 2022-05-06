@@ -19,8 +19,7 @@ Slides from Day 2 (Nov 2, 2021):
 
 Below are the slides from the Grex workshop that was held on APril 21,22 2021
 
- * [Updates: ComputeCanada and Grex status, New Hardware, local RAC 2021](/doc/Grex-Updates-Spring2021.pdf)
- * [Beginners Introduction to HPC on Grex and ComputeCanada systems](/doc/Introduction-to-HPC-2021.pdf)
- * [Introduction to SLURM resources and partitions](/doc/Introduction-SLURM-resources-and-Partitions-2021.pdf)
- * [Introduction to HPC software](/doc/Introduction-HPC-Software-2021.pdf)
-
+ * [Updates: ComputeCanada and Grex status, New Hardware, local RAC 2021](https://github.com/um-grex/grex-docs/blob/main/static/Grex-Updates-Spring2021.pdf)
+ * [Beginners Introduction to HPC on Grex and ComputeCanada systems](https://github.com/um-grex/grex-docs/blob/main/static/Introduction-to-HPC-2021.pdf)
+ * [Introduction to SLURM resources and partitions](https://github.com/um-grex/grex-docs/blob/main/static/Introduction-SLURM-resources-and-Partitions-2021.pdf)
+ * [Introduction to HPC software](https://github.com/um-grex/grex-docs/blob/main/static/Introduction-HPC-Software-2021.pdf)
