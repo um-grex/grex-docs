@@ -17,7 +17,7 @@ Slides from Day 2 (Nov 2, 2021):
 
 # Spring workshop , April 2021
 
-Below are the slides from the Grex workshop that was held on APril 21,22 2021
+Below are the slides from the Grex workshop that was held on April 21,22 2021
 
  * [Updates: ComputeCanada and Grex status, New Hardware, local RAC 2021](https://github.com/um-grex/grex-docs/blob/main/static/Grex-Updates-Spring2021.pdf)
  * [Beginners Introduction to HPC on Grex and ComputeCanada systems](https://github.com/um-grex/grex-docs/blob/main/static/Introduction-to-HPC-2021.pdf)
