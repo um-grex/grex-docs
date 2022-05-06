@@ -5,11 +5,19 @@ title: "Training Materials and Presentations"
 bookToc: true
 ---
 
+# Spring workshop, May 2022
+
+* [Introduction to local and National HPC at UManitoba: How to use available software and run jobs efficiently](https://github.com/um-grex/grex-docs/blob/main/static/Intro-Program-Spring2022.pdf)
+* [Introduction to High Performance Computing step by step: From getting an account to running jobs](https://github.com/um-grex/grex-docs/blob/main/static/HPC-Step-by-Step-Grex-Spring2022.pdf)
+* [Using GP GPU compute on Grex](https://github.com/um-grex/grex-docs/blob/main/static/Using-GPU-Nodes-Grex-Spring2022.pdf)
+* [High Performance Computing and software environments](https://github.com/um-grex/grex-docs/blob/main/static/HPC-Soft-Env-Grex-Spring2022.pdf)
+* [OSC OpenOnDemand portal on Grex](https://github.com/um-grex/grex-docs/blob/main/static/OpenOndemand-Grex-Spring2022.pdf)
+
 # Autumn workshop, November 2021
 
 Slides from Day 1 (Nov 1, 2021):
 
- * [Introduction To HPC](/static/Introduction-to-HPC-Basics.pdf)
+ * [Introduction To HPC](https://github.com/um-grex/grex-docs/blob/main/static/Introduction-to-HPC-Basics.pdf)
  * [Basics of Linux Shell](https://github.com/um-grex/grex-docs/blob/main/static/Linux_shell_basics_2021-2.pdf)
  
 Slides from Day 2 (Nov 2, 2021):
