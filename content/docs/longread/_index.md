@@ -73,7 +73,7 @@ In the hierarchical module system, dependent modules are not visible for “_mod
 
 For more information and features, visit the official documentation of [Lmod](https://lmod.readthedocs.io/en/latest/010_user.html) and/or Compute Canada documentation for [modules](https://docs.computecanada.ca/wiki/Utiliser_des_modules/en). 
 
-We have tried to preserve the module names and paths closest to the original TCL-modules on Grex, whenever that was possible with the new hierarchy format. Note that the hierarchy is not “complete”: not every combination of software, compilers, and MPI exists on Grex, for practical reasons. Use "_module spider <name of the software>/<version>_" to check what built variants are there. Send us a request to [support@computecanada.ca](mailto:support@computecanada.ca) if there is any missing software/toolchain combination you may want to use.
+We have tried to preserve the module names and paths closest to the original TCL-modules on Grex, whenever that was possible with the new hierarchy format. Note that the hierarchy is not “complete”: not every combination of software, compilers, and MPI exists on Grex, for practical reasons. Use "_module spider <name of the software>/<version>_" to check what built variants are there. Send us a request to [support@computecanada.ca](mailto:support@tech.alliancecan.ca) if there is any missing software/toolchain combination you may want to use.
 
 #### Software Modules: Stacks , CVMFS, Defaults
 
