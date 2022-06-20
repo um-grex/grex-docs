@@ -55,7 +55,7 @@ If a script assumes, or relies on using the _mpiexec.hydra_ launcher, the later 
 
 ### How to find software on CC CVMFS
 
-Compute Canada's software building system automatically generates documentation for each item, which is available at the [Available Software](https://docs.computecanada.ca/wiki/Available_software) page. So the first destination to look for a software item is probably to browse this page. Note that this page covers the default CPU arhitectures (AVX2, AVX512) of the National systems, and legacy architecturs (SSE3, AVX) might not necessary have each of the software versions and items compiled for them. It is possible to request such versions to be added.
+Compute Canada's software building system automatically generates documentation for each item, which is available at the [Available Software](https://docs.alliancecan.ca/wiki/Available_software) page. So the first destination to look for a software item is probably to browse this page. Note that this page covers the default CPU arhitectures (AVX2, AVX512) of the National systems, and legacy architecturs (SSE3, AVX) might not necessary have each of the software versions and items compiled for them. It is possible to request such versions to be added.
 
 The Lmod, __module spider__ command can be used on Grex to search for modules that are actually available. Note that the _CCEnv_ software stack is not loaded by default; you would have to load it first to enable the spider command to search through the CC software stack:
 
@@ -65,17 +65,17 @@ The Lmod, __module spider__ command can be used on Grex to search for modules th
 ```module spider mysoftware```
 {{< /hint >}}
   
-Then, when finding available software versions and their dependencies, _module load_ command can be used, as descibed [here](https://docs.computecanada.ca/wiki/Utiliser_des_modules/en)
+Then, when finding available software versions and their dependencies, _module load_ command can be used, as descibed [here](https://docs.alliancecan.ca/wiki/Utiliser_des_modules/en)
 
 ### How to request software added to CC CVMFS
 
-Compute Canada maintains and distributes the software stack as part of its mandate to maintain the National HPC systems. To request a software item installed, the requestor should be part of Compute Canada system (that is, have an account in [CCDB](https://ccdb.computecanada.ca), which is also a prerequisite to have access to Grex. Any CC user can submit such request to [support@computecanada.ca](mailto:support@computecanada.ca) and notify if a version for non-default CPU architecture such as SSE3 is also necessary to build.
+Compute Canada maintains and distributes the software stack as part of its mandate to maintain the National HPC systems. To request a software item installed, the requestor should be part of Compute Canada system (that is, have an account in [CCDB](https://ccdb.computecanada.ca), which is also a prerequisite to have access to Grex. Any CC user can submit such request to [support@tech.alliancecan.ca](mailto:support@tech.alliancecan.ca) and notify if a version for non-default CPU architecture such as SSE3 is also necessary to build.
 
 ### An example, R code with dependencies from CC CVMFS stack
 
 A real world example of using R on Grex, with several dependencies required for the R packages.
  
-For the dynamic languages like R and Python, Compute Canada does not, in general, provide or manage pre-installed packages. Rather, users are expected to load the base R (Python, Perl, Julia) module and then proceed for the loacl installation of the required R (or Python, Perl, Julia etc.) packages in their home directories. Check the [CC R documentation](https://docs.computecanada.ca/wiki/R) and [CC Python documentation](https://docs.computecanada.ca/wiki/Python).
+For the dynamic languages like R and Python, Compute Canada does not, in general, provide or manage pre-installed packages. Rather, users are expected to load the base R (Python, Perl, Julia) module and then proceed for the loacl installation of the required R (or Python, Perl, Julia etc.) packages in their home directories. Check the [CC R documentation](https://docs.alliancecan.ca/wiki/R) and [CC Python documentation](https://docs.alliancecan.ca/wiki/Python).
 
 {{< hint slurm >}}
 {{< highlight bash >}}
