@@ -10,11 +10,11 @@ Most of the work on shared HPC computing systems is done via Linux command line 
 
 {{< hint info >}}
 * access to Internet that lets SSH ports open 
-* a user account on Grex (presently, it is a Westgrid Account!)
+* a user account on Grex (presently, it is an Alliance (formerly known as Compute Canada) Account!)
 * and an SSH client for your operating system
 {{< /hint >}}
 
-If you are not sure what your account on Grex is, check [Getting Access](https://www.computecanada.ca/research-portal/account-management/apply-for-an-account/). You will also need the DNS name of Grex Which is **grex.westgrid.ca**.
+If you are not sure what your account on Grex is, check [Getting Access](https://alliancecan.ca/en/services/advanced-research-computing/account-management/apply-account). You will also need the DNS name of Grex Which is **grex.hpc.umanitoba.ca**.
 
 ## SSH clients
 
@@ -32,7 +32,7 @@ MacOS X has a built-in OpenSSH command line client. It also has a full-fledged U
   ```ssh -Y username@grex.westgrid.ca```
 {{< /hint >}}
 
-You can manage your keys (adding key pairs, ediding known_hosts etc.) in the  __$HOME/.ssh__ directory. Compute Canada has several documentation pages on [managing SSH keys](https://docs.computecanada.ca/wiki/Using_SSH_keys_in_Linux) and [creating SSH tunnels](https://docs.computecanada.ca/wiki/SSH_tunnelling)
+You can manage your keys (adding key pairs, ediding known_hosts etc.) in the  __$HOME/.ssh__ directory. Compute Canada has several documentation pages on [managing SSH keys](https://docs.alliancecan.ca/wiki/Using_SSH_keys_in_Linux) and [creating SSH tunnels](https://docs.alliancecan.ca/wiki/SSH_tunnelling)
 
 {{< /tab >}}
 
@@ -45,10 +45,10 @@ You can manage your keys (adding key pairs, ediding known_hosts etc.) in the  __
 Linux provides the command line SSH package, OpenSSH, which is installed by default in most of the Linux distributions. If not, or you are using a very minimal Linux installation, use your package manager to install OpenSSH package. In any terminal window **ssh** (as well as **scp** , **sftp** ) commands should work. To connect to Grex, use:
 
 {{< hint info >}}
-  ```ssh -Y username@grex.westgrid.ca```
+  ```ssh -Y username@grex.hpc.umanitoba.ca```
 {{< /hint >}}
 
-You can manage your keys (adding key pairs, ediding known_hosts etc.) in the __$HOME/.ssh__ directory. Compute Canada has several documentation pages on [managing SSH keys](https://docs.computecanada.ca/wiki/Using_SSH_keys_in_Linux) and [creating SSH tunnels](https://docs.computecanada.ca/wiki/SSH_tunnelling)
+You can manage your keys (adding key pairs, ediding known_hosts etc.) in the __$HOME/.ssh__ directory. Compute Canada has several documentation pages on [managing SSH keys](https://docs.alliancecan.ca/wiki/Using_SSH_keys_in_Linux) and [creating SSH tunnels]([https://docs.computecanada.ca/wiki/SSH_tunnelling](https://docs.alliancecan.ca/wiki/SSH_tunnelling)
 
 {{< /tab >}}
 
@@ -56,7 +56,7 @@ You can manage your keys (adding key pairs, ediding known_hosts etc.) in the __$
 
 ## SSH clients for **Windows**
 
-**Windows** has a very diverse infrastructure for SSH (and Linux support in general). You would like to pick one of the options below and connect to **grex.westgrid.ca** with your Westgrid username ans password.
+**Windows** has a very diverse infrastructure for SSH (and Linux support in general). You would like to pick one of the options below and connect to **grex.hpc.umanitoba.ca** with your Westgrid username ans password.
 
 ## Putty, WinSCP and VCXsrv
 
@@ -70,20 +70,20 @@ The (probably the most popular) free software combination to work under Windows 
 
 WinSCP interacts with PuTTY, so you can configure it to open SSH terminal windows from WinSCP client. For X11 forwarding, make sure the "X11 tunneling" is enabled in PuTTY's session settings, and VCXSrv is running (it sits in the system tray and does nothing unless you start a graphical X11 appication).
 
-Compute Canada has a [PuTTY](https://docs.computecanada.ca/wiki/Connecting_with_PuTTY) documentation page which has some useful screenshots.
+Compute Canada has a [PuTTY](https://docs.alliancecan.ca/wiki/Connecting_with_PuTTY) documentation page which has some useful screenshots.
 
 ## MobaXterm
 
 There is a quite popular package: MobaXterm. It is not open source, but has a limited free version [MobaXterm](https://mobaxterm.mobatek.net/download.html). 
 
-Please check out Compute Canada's documentation on MobaXterm [here](https://docs.computecanada.ca/wiki/Connecting_with_MobaXTerm)
+Please check out Compute Canada's documentation on MobaXterm [here](https://docs.alliancecan.ca/wiki/Connecting_with_MobaXTerm)
 
 ## All Windows versions, CygWin shell
 
 There is a way to use Linux command shell tools under Windows. [Cygwin](https://www.cygwin.com/). When openssh package is installed, you can use OpenSSH's command line tools like **ssh**, **scp** and **sftp** as if you were under Linux: 
 
 {{< hint info >}}
-  ```ssh -Y username@grex.westgrid.ca```
+  ```ssh -Y username@grex.hpc.umanitoba.ca```
 {{< /hint >}}
 
 ## Windows 10, WSL subsystem
