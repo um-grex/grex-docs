@@ -11,12 +11,12 @@ Compute Canada is a Canadian National digital research infrastructore (DRI) orga
 
 Compute Canada also maintains a user authentication service and usage database called CCDB. On Grex, we rely on CCDB for accessing our system. The first step to get started with Grex is to [**register**](https://ccdb.computecanada.ca/account_application "Apply for an account") for a Compute Canada account at the CCDB website.
 
-### Compute Canada on the Web
+### The Alliance (Compute Canada) on the Web
 
 - Digital Research Alliance of Canada [official website](https://alliancecan.ca/)
 - The Alliance database [CCDB](https://ccdb.computecanada.ca/ "Compute Canada accounts database")
 - The Alliance user documentation [Wiki](https://docs.alliancecan.ca/wiki "the Alliance user documentation Wiki")
-- Status page for the [Alliance clusters](https://status.alliancecan.ca/"Status page for the Alliance services")
+- Status page for the [Alliance clusters](https://status.alliancecan.ca/ "Status page for the Alliance services")
 
 ### Getting a Compute Canada Account
 
