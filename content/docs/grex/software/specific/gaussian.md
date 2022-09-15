@@ -8,7 +8,7 @@
 
 University of Manitoba has a site license for Gaussian 16 and GaussView. However it comes with certain license limitations, so access to the code is subject to some license conditions.
 
-Since, as of now, Compute Canada accounts are a superset of Grex accounts, users will want to initiate getting access by sendiong email agreeing to Gaussian conditions to **support@computecanada.ca**, confirming that you have read and agree to abide by the following conditions, and mentioning that you'd also want to access it on Grex:
+Since, as of now, Compute Canada accounts are a superset of Grex accounts, users will want to initiate getting access by sendiong email agreeing to Gaussian conditions to **support@tech.alliancecan.ca**, confirming that you have read and agree to abide by the following conditions, and mentioning that you'd also want to access it on Grex:
 
 {{< hint danger >}}
  * I am not a member of a research group developing software competitive to Gaussian.
