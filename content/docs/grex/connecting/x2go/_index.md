@@ -22,7 +22,7 @@ There are also alternative X2Go clients (PyHoca CLI and GUI, etc.) that you coul
 
 After installing the X2Go client, you'd need to start it and create a __"New Session"__ by clicking the corresponding icon.
 
-For now, there is no load balancing support for connections: while connecting to the host address **grex.westgrid.ca** will work, session suspend/resume functionality might require specifying connection to a physical Grex login node explicitly, using either of **tatanka.westgrid.ca** or **bison.westgrid.ca** correspondingly in the __Host__ field. (You can also create two sessions, one for tatanka and another for bison.)
+For now, there is no load balancing support for connections: while connecting to the host address **grex.hpc.umanitoba.ca** will work, session suspend/resume functionality might require specifying connection to a physical Grex login node explicitly, using either of **tatanka.hpc.umanitoba.ca** or **bison.hpc.umanitoba.ca** correspondingly in the __Host__ field. (You can also create two sessions, one for tatanka and another for bison.)
 
 The same username should be used as for SSH text based connections in the __Login__ field. It is also possible to provide an SSH key instead of the password.
 
@@ -47,6 +47,6 @@ X2go relies on older version of NX library, that might fail to support newer ver
 
 ## Links
 
-Compute Canada has an X2Go documentation page [here](https://docs.computecanada.ca/wiki/X2Go), with useful screenshots. X2go installation on the [X2Go Wiki](https://wiki.x2go.org/doku.php/doc:installation:x2goclient) and [X2go FAQ](https://wiki.x2go.org/doku.php/doc:faq:start)
+Compute Canada has an X2Go documentation page [here](https://docs.alliancecan.ca/wiki/X2Go), with useful screenshots. X2go installation on the [X2Go Wiki](https://wiki.x2go.org/doku.php/doc:installation:x2goclient) and [X2go FAQ](https://wiki.x2go.org/doku.php/doc:faq:start)
 
 <!-- End of the page -->
