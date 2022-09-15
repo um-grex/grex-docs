@@ -7,15 +7,15 @@ bookToc: true
 
 # Grex
 
-Grex is an UManitoba High Performance Computing (HPC) system, first put in production in early 2011 as part of [WestGrid](https://www.westgrid.ca/ "WestGrid") consortium. Now it is owned and operated by University of Manitoba. Grex is accessible only for UManitoba users and their collaborators.
+Grex is an UManitoba High Performance Computing (HPC) system, first put in production in early 2011 as part of WestGrid consortium. Now it is owned and operated by University of Manitoba. Grex is accessible only for UManitoba users and their collaborators.
 
 ### A Very Quick Start guide
 
-1. Create an account on [CCDB](https://ccdb.computecanada.ca/security/login "CCDB"). You will need an institutional Email address. If you are a sponsored user, you'd want to ask your PI for his/her __CCRI__ code {Compute Canada Role Identifier}. For a detailed procedure, visit the page [Apply for an account](https://www.computecanada.ca/research-portal/account-management/apply-for-an-account/ "Apply for a Compute Canada account").
+1. Create an account on [CCDB](https://ccdb.computecanada.ca/security/login "CCDB"). You will need an institutional Email address. If you are a sponsored user, you'd want to ask your PI for his/her __CCRI__ code {Compute Canada Role Identifier}. For a detailed procedure, visit the page [Apply for an account](https://alliancecan.ca/en/services/advanced-research-computing/account-management/apply-account "Apply for an account").
 
 2. Wait for half a day. While waiting, install an SSH client, and SFTP client for your operating system.
 
-3. Connect to **grex.westgrid.ca** with SSH, using your username/password from step 1.
+3. Connect to **grex.hpc.umanitoba.ca** with SSH, using your username/password from step 1.
 
 4. Make a sample job script, call it, for example, __sleep.job__ . The job script is a text file that has a special syntax to be recognized by SLURM. You can use the editor __nano__ , or any other right on Grex SSH prompt (vim, emacs, pico, ... etc); you can also create the script file on your machine and upload to Grex using your SFTP client or scp.
 
