@@ -7,7 +7,7 @@ Priroda is a fast parallel relativistic DFT and ab initio code for molecular mod
 ## User Responsibilities and Access
 
 The code is free for academic users, but is not open source. It is distributed on request by the Author, Dr. Dimitri N. Laikov.
-To access the Priroda code on Grex, the prospective users have to send us (support@computecanada.ca) a free-form email confirming that 
+To access the Priroda code on Grex, the prospective users have to send us (support@tech.alliancecan.ca) a free-form email confirming that 
 they have read and agreed to abide by the following conditions:
 
 **Conditions for the Priroda code access on Grex:**
