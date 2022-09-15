@@ -41,7 +41,7 @@ Grex is a traditional HPC machine, running CentOS Linux under SLURM resource man
 ## Useful links
 
 {{< columns >}}
-{{< button href="https://docs.computecanada.ca/wiki/Compute_Canada_Documentation" >}}Compute Canada{{< /button >}}
+{{< button href="https://docs.alliancecan.ca/wiki/Technical_documentation" >}}The Alliance (formerly known as Compute Canada){{< /button >}}
 <--->
 {{< button href="https://grex-status.netlify.app" >}}Grex Status Page{{< /button >}}
 <--->
