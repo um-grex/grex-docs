@@ -8,7 +8,7 @@ title: Transferring data
 
 ## GlobusOnline file transfer
 
-Unfortunately, the WestGrid [Globus](https://www.globus.org "Globus") endpoint on Grex had expired. It is not possible to use Globus on Grex as of the time of writing this documentation. However, You can still use Globus to transfer data between Compute Canada systems as described [here](https://docs.computecanada.ca/wiki/Globus "Globus on Compute Canada clusters"). 
+Unfortunately, the WestGrid [Globus](https://www.globus.org "Globus") endpoint on Grex had expired. It is not possible to use Globus on Grex as of the time of writing this documentation. However, You can still use Globus to transfer data between Compute Canada systems as described [here](https://docs.alliancecan.ca/wiki/Globus "Globus on Compute Canada clusters"). 
 
 Check the [ESNet](https://fasterdata.es.net/ "ESNet") website if you are curious about Globus, and why large data transfers over WAN might need specialized networks and software setups.
 
@@ -20,7 +20,7 @@ SFTP opens a session and then drops the user to a command line, which provides c
 
 {{< hint info >}}
 {{< highlight bash >}}
-sftp  someuser@grex.westgrid.ca
+sftp  someuser@grex.hpc.umanitoba.ca
 sftp> lls
 sftp> put  myfile.fchk
 {{< /highlight >}}
@@ -34,11 +34,11 @@ SCP behaves like __cp__. To copy a file __myfile.fchk__ to Grex, from the curren
 
 {{< hint info >}}
 {{< highlight bash >}}
-scp ./myfile.fchk someuser@grex.westgrid.ca:/global/scratch/someuser
+scp ./myfile.fchk someuser@grex.hpc.umanitoba.ca:/global/scratch/someuser
 {{< /highlight >}}
 {{< /hint >}}
 
-Note that the destination is remote (for it has the form of user@host:/path). More information about file transfer tools exist on [Compute Canada documentation](https://docs.computecanada.ca/wiki/Transferring_data#SCP "SCP")
+Note that the destination is remote (for it has the form of user@host:/path). More information about file transfer tools exist on [Compute Canada documentation](https://docs.alliancecan.ca/wiki/Transferring_data/en#SCP "SCP")
 
 ## LFTP tool
 
@@ -66,13 +66,13 @@ Some examples of the popular file transfer clients are
 
 Other GUI clients will work with Grex too, as long as they provide SFTP protocol support.
 
-To use such clients, one would need to tell them that SFTP is needed, and to provide the address, which is **grex.westgrid.ca** and your Grex/Westgrid username.
+To use such clients, one would need to tell them that SFTP is needed, and to provide the address, which is **grex.hpc.umanitoba.ca** and your Grex/Alliance (Compute Canada) username.
 
 Note that we advise against saving your password in the clients: first, it is less secure, and second, it is easy to store a wrong password. FIle transfer clients would try to autoconnect automatically, and having a wrong password stored with them will create many failed connection attempts from your client machine, which in turn might temporarily block your IP address from accessing Grex.
 
 ## File transfers with OOD browser GUI
 
-**NEW:** It is now possible to use [OpenOnDemand on aurochs](https://aurochs.westgrid.ca "OpenOnDemand on Grex") Web interface to download and upload data to and from Grex. Use __Files__ dashboard menu to select a filesystem (currently __/home/$USER__ and __/global/scratch/$USER__ are available), and then Upload and Download buttons.
+**NEW:** It is now possible to use [OpenOnDemand on aurochs](https://aurochs.hpc.umanitoba.ca "OpenOnDemand on Grex") Web interface to download and upload data to and from Grex. Use __Files__ dashboard menu to select a filesystem (currently __/home/$USER__ and __/global/scratch/$USER__ are available), and then Upload and Download buttons.
 
 There is a limit of about 10GB to the file transfer sizes with OOD. The OOD interface is, as of now, open for UManitoba IP addresses only (i.e., machines from campus and on UM PulseVPN will work). 
 
