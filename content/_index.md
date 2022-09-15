@@ -6,11 +6,11 @@ bookTOC: true
 
 # Grex
 
-Grex is a UManitoba High Performance Computing (HPC) system, first put in production in early 2011 as part of [WestGrid](https://www.westgrid.ca/ "WestGrid") consortium. "Grex" is a _Latin_ name for "herd" (or maybe "flock"?). The names of the Grex login nodes ([bison](https://en.wikipedia.org/wiki/Bison "Bison"), tatanka, [aurochs](https://en.wikipedia.org/wiki/Aurochs "Aurochs"), [yak](https://en.wikipedia.org/wiki/Yak "Yak")) also refer to various kinds of bovine animals.
+Grex is a UManitoba High Performance Computing (HPC) system, first put in production in early 2011 as part of WestGrid consortium. "Grex" is a _Latin_ name for "herd" (or maybe "flock"?). The names of the Grex login nodes ([bison](https://en.wikipedia.org/wiki/Bison "Bison"), tatanka, [aurochs](https://en.wikipedia.org/wiki/Aurochs "Aurochs"), [yak](https://en.wikipedia.org/wiki/Yak "Yak")) also refer to various kinds of bovine animals.
 
 ![HPCC](grex-room-2020.png)
 
-Since being defunded by WestGrid (on April 2, 2018), Grex is now available only to the users affiliated with University of Manitoba and their collaborators. The old WestGrid documentation, hosted on the [WestGrid website](https://www.westgrid.ca "WestGrid") became irrelevant after the Grex upgrade, so please visit [Grex's New Documentation](./docs/grex). Thus, if you are an experienced user in the previous "version" of Grex, you might benefit from reading this document: [Description of Grex changes](./docs/longread/). If you are a new Grex user, proceed to the quick start guide and documentation right away.
+Since being defunded by WestGrid (on April 2, 2018), Grex is now available only to the users affiliated with University of Manitoba and their collaborators. The old WestGrid documentation, hosted on the WestGrid website became irrelevant after the Grex upgrade, so please visit [Grex's New Documentation](./docs/grex). Thus, if you are an experienced user in the previous "version" of Grex, you might benefit from reading this document: [Description of Grex changes](./docs/longread/). If you are a new Grex user, proceed to the quick start guide and documentation right away.
 
 ## Hardware 
 
