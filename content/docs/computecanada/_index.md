@@ -14,16 +14,15 @@ Compute Canada also maintains a user authentication service and usage database c
 ### Compute Canada on the Web
 
 - Digital Research Alliance of Canada [official website](https://alliancecan.ca/)
-- Former Compute Canada [official website](https://www.computecanada.ca/ "Compute Canada official website") Not maintained since April 1st, 2022.
 - The Alliance database [CCDB](https://ccdb.computecanada.ca/ "Compute Canada accounts database")
 - The Alliance user documentation [Wiki](https://docs.alliancecan.ca/wiki "the Alliance user documentation Wiki")
-- Status page for the [Alliance clusters](https://status.computecanada.ca/ "Status page for Compute Canada services")
+- Status page for the [Alliance clusters](https://status.alliancecan.ca/"Status page for the Alliance services")
 
 ### Getting a Compute Canada Account
 
 University of Manitoba Faculty memebers are eligible for a getting Compute Canada account. Once it is obtained, they can manage accounts of their group members in CCDB.
 
-If you are a postdoc, a student or an external collaborator, you can apply for an account as part of the Faculty's group. You will need your PI's CCDB role identificator code (CCRI). For more information, please [follow this guide](https://www.computecanada.ca/research-portal/account-management/apply-for-an-account/ "Apply for a Compute Canada account").
+If you are a postdoc, a student or an external collaborator, you can apply for an account as part of the Faculty's group. You will need your PI's CCDB role identificator code (CCRI). For more information, please [follow this guide](https://alliancecan.ca/en/services/advanced-research-computing/account-management/apply-account "Apply for an Alliance account").
 
 The account will allow you to manage your roles and groups in CCDB, to access National HPC and Cloud machines, as well as few other services such as [Globus](https://docs.alliancecan.ca/wiki/Globus "Globus") and [NextCloud](https://docs.alliancecan.ca/wiki/Nextcloud "NextCloud").
 
@@ -37,7 +36,7 @@ Since we have switched Grex to CCDB credentials in late **2019**, the CCDB accou
 
 Compute Canada is also a Federation of four Regions: Westgrid, which consists of institutional members belonging to Western Canada, Compute Ontario, Calcul Quebec and AceNET which is a consortium of universities of Maritime provinces.
 
-- [WestGrid](https://www.westgrid.ca "WestGrid official website")
+- [WestGrid](https://westgrid.github.io/trainingMaterials/) "Training material; the official website is down")
 - [Compute Ontario](https://www.computeontario.ca/ "Compute Ontario official website")
 - [Calcul Quebec](https://www.calculquebec.ca/ "Calcul Quebec official website")
 - [AceNET](https://wiki.ace-net.ca/wiki/ACENET "AceNET official website")
