@@ -23,7 +23,7 @@ To connect from outside UM network, please install and start [UManitoba Virtual 
 **Connect to OOD using [UManitoba VPN](https://umanitoba.ca/computing/ist/connect/virtualpn.html):**
 {{< hint info >}}
  - Make sure Pulse Secure VPN is connected
- - Point your Web browser to [https://aurochs.westgrid.ca](https://aurochs.westgrid.ca) 
+ - Point your Web browser to [https://aurochs.westgrid.ca](https://aurochs.hpc.umanitoba.ca) 
  - Use your Compute Canada username and password to log in to Grex OOD.
 {{< /hint >}}
 
