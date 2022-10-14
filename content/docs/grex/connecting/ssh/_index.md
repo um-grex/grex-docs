@@ -29,7 +29,7 @@ If you are not sure what your account on Grex is, check [Getting Access](https:/
 MacOS X has a built-in OpenSSH command line client. It also has a full-fledged UNIX shell. Therefore, using SSH under MacOS is not different from Linux. In any terminal, **ssh** (as well as **scp** , **sftp** ) just works with one caveat: for the support of X11 tunneling, some of the MacOS X versions would require the [XQuartz](https://www.xquartz.org/) package installed. 
 
 {{< hint info >}}
-  ```ssh -Y username@grex.westgrid.ca```
+  ```ssh -Y username@grex.hpc.umanitoba.ca```
 {{< /hint >}}
 
 You can manage your keys (adding key pairs, ediding known_hosts etc.) in the  __$HOME/.ssh__ directory. Compute Canada has several documentation pages on [managing SSH keys](https://docs.alliancecan.ca/wiki/Using_SSH_keys_in_Linux) and [creating SSH tunnels](https://docs.alliancecan.ca/wiki/SSH_tunnelling)
