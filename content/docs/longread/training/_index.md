@@ -5,6 +5,14 @@ title: "Training Materials and Presentations"
 bookToc: true
 ---
 
+# Autumn workshop, Oct 2022
+
+* [Program and updates](https://github.com/um-grex/grex-docs/blob/main/static/Programme-And-Grex-Updates-Autumn2022.pdf)
+* [High Performance Computing: Start Guide](https://github.com/um-grex/grex-docs/blob/main/static/Start-Guide-HPC-Grex-Autumn2022.pdf)
+* [High Performance Computing and software environments](https://github.com/um-grex/grex-docs/blob/main/static/HPC-Software-Grex-Autumn2022.pdf)
+* [OSC OpenOnDemand portal on Grex](https://github.com/um-grex/grex-docs/blob/main/static/Using-OpenOndemand-On-Grex-Autumn2022.pdf)
+
+
 # Spring workshop, May 2022
 
 * [Introduction to local and National HPC at UManitoba](https://github.com/um-grex/grex-docs/blob/main/static/Intro-Program-Spring2022.pdf)
