@@ -8,7 +8,7 @@ title: Connecting / Transferring data
 
 In order to use almost any HPC system, you would need to be able to somehow connect and log in to it. ALso, it would be necessary to be able to transfer data to and from the system. The standard means for these tasks are provided by the [SSH protocol](https://en.wikipedia.org/wiki/Secure_Shell "Secure Shell").
 
-To log in to Grex in the text mode, connect to **grex.hpc.umanitoba.ca** using an [**SSH**](./ssh/) (secure shell) client. The DNS name grex.westgrid.ca serves as an alias for two login nodes: **bison.hpc.umanitoba.ca** and **tatanka.hpc.umanitoba.ca** .
+To log in to Grex in the text mode, connect to **grex.hpc.umanitoba.ca** using an [**SSH**](./ssh/) (secure shell) client. The DNS name grex.hpc.umanitoba.ca serves as an alias for two login nodes: **bison.hpc.umanitoba.ca** and **tatanka.hpc.umanitoba.ca** .
 
 Uploading and downloading your data can be done using an **SCP/SFTP** capable file transfer client. The recommended clients are OpenSSH (providing **ssh** and **scp**, **sftp** command line tools on Linux and MacOS X) and PuTTY/WinSCP/X-Ming or MobaXterm under Windows. Note that since Jun 1, 2014, the original "SSH Secure Shell" Windows SSH/SFTP client is not supported anymore.
 
