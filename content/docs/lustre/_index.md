@@ -12,7 +12,7 @@ date: Feb 27, 2023
 As announced, we have added a new storage of 1 PB on Grex. It is called “/project” filesystem. The called outage since Feb 22 was used to add this storage and connect it to a new UPS, as well as some other OS updates.
 
 {{< hint info >}}
-Start Time : 2.00 PM (Winnipeg Time), Wednesday, Feb 22, 202
+Start Time : 2.00 PM (Winnipeg Time), Wednesday, Feb 22, 2023
 
 Anticipated End Time : Friday, Feb 24, 2023
 
@@ -74,6 +74,7 @@ In the coming days, a script “diskusage_report” will be customized to show t
 ## scratch file system
 
 * The data from /global/scratch was migrated to a new storage called project. Please do not panic if you do not see your data under scratch but it should be under project. We still have not migrated some users who have more than 1 project since we do not know to which project the data belong to. The users have been contacted and we will proceed case by case when they answer.
+* Since the data was moved from your scratch to new project, please expect to find an emty "/global/scratch/USERNAME" directory.
 
 ## Backups
 
