@@ -16,7 +16,7 @@ For more general OOD information, see the [OpenOnDemand Paper](https://joss.theo
 
 ## OpenOndemand on Grex 
 
-Grex's OOD instance runs on **aurochs.westgrid.ca** . It is available only from UManitoba IP addresses -- that is, your computer should be on UM Campus network to connect. 
+Grex's OOD instance runs on **aurochs.hpc.umanitoba.ca** . It is available only from UManitoba IP addresses -- that is, your computer should be on UM Campus network to connect. 
 
 To connect from outside UM network, please install and start [UManitoba Virtual Private Network](https://umanitoba.ca/computing/ist/connect/virtualpn.html). OOD relies on in-browser VNC sessions; so a modern browser with HTML5 support is required; we recommend Google Chrome or Firefox and its derivatives (Waterfox, for example).
 
