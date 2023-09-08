@@ -13,7 +13,7 @@ bookToc: true
 * [Beginner's HPC Software - Overview](https://github.com/um-grex/grex-docs/blob/main/static/4-Beginning-With-HPC-Software.pdf)
 * [Using OpenOnDemand Web Portal on Grex - Live Demonstration](https://github.com/um-grex/grex-docs/blob/main/static/5-OSC-OnDemand-on-Grex-Spring-2023.pdf)
 * [Using HPC Clusters Efficiently - SLURM, kinds of jobs](https://github.com/um-grex/grex-docs/blob/main/static/6-Using-HPC-Clusters-Efficiently.pdf)
-* [Advanced HPC Software - Containers, CVMFS](https://github.com/um-grex/grex-docs/blob/main/static/7-HPC-Software-Stacks.pdf)
+* [Advanced HPC Software - Containers, CVMFS]({{< relref "/static/7-HPC-Software-Stacks.pdf" >}} "Advanced HPC Software - Containers, CVMFS")
 * [Using GPUs on HPC Systems - Live Demonstration](https://github.com/um-grex/grex-docs/blob/main/static/8-Using-GPU-nodes-on-Grex-and-DRAC-updates-2023.pdf)
 * [Beginner’s Introduction for Using Cloud Computing - OpenStack](https://github.com/um-grex/grex-docs/blob/main/static/9-OpenStack-Community-Cloud-Beginner.pdf)
 * [Overview of Further Training and Materials Available](https://github.com/um-grex/grex-docs/blob/main/static/10-HPC-Trainings-and-Documentation.pdf)
