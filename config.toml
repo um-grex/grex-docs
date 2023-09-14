@@ -2,7 +2,7 @@
 # Standard configuration
 #================================================================================
 
-baseURL                = "https://alikerr.github.io/grex-docs/"
+baseURL                = "https://um-grex.github.io/grex-docs/"
 copyright              = "The MIT License (MIT) Copyright © 2022 um-grex"
 
 defaultContentLanguage = "en"
@@ -86,7 +86,7 @@ theme                  = "shadocs"
        function = "scExample"
     [[params.navbar.versions]]
        name = 'Production version'
-       url  = 'https://alikerr.github.io/grex-docs/'
+       url  = 'https://um-grex.github.io/grex-docs/'
     [[params.navbar.versions]]
        name = 'Development version'
        url  = 'http://um-grex.github.io/grex-docs/'
@@ -122,10 +122,10 @@ theme                  = "shadocs"
 #================================================================================
 
 [github]
-  main = "https://alikerr.github.io/grex-dev"
-  download = "https://alikerr.github.io/archive/main.zip"
-  issue = "https://alikerr.github.io/issues"
-  fork = "https://alikerr.github.io/fork"
+  main = "https://um-grex.github.io/grex-dev"
+  download = "https://um-grex.github.io/archive/main.zip"
+  issue = "https://um-grex.github.io/issues"
+  fork = "https://um-grex.github.io/fork"
 
 #================================================================================
 # End of the config file.
