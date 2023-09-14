@@ -1,0 +1,17 @@
+<div id='globalLogoContainer' class='is-flex'>
+  <a id='globalLogo' class='navbar-item navbar-item-standard is-paddingless' href='{{.Site.Home.RelPermalink}}'>
+    <img src='{{with .Site.Params.logo}}{{. | relURL}}{{else}}{{"images/logo.png" | relURL}}{{end}}'>
+  </a>
+  <a id='globalTouchLogo' class='navbar-item navbar-item-standard is-paddingless' href='{{.Site.Home.RelPermalink}}'>
+    <img src='{{with .Site.Params.logoTouch}}{{. | relURL}}{{else}}{{"images/logoTouch.png" | relURL}}{{end}}'>
+  </a>
+</div>
+
+<!--div id='globalLogoContainer' class='is-flex'>
+  <a id='globalLogo' class='navbar-item navbar-item-standard is-paddingless' href='{{.Site.Home.RelPermalink | relLangURL}}'>
+    <img src='{{with .Site.Params.logo}}{{. | relURL}}{{else}}{{"images/logo.png" | relURL}}{{end}}'>
+  </a>
+  <a id='globalTouchLogo' class='navbar-item navbar-item-standard is-paddingless' href='{{.Site.Home.RelPermalink | relLangURL}}'>
+    <img src='{{with .Site.Params.logoTouch}}{{. | relURL}}{{else}}{{"images/logoTouch.png" | relURL}}{{end}}'>
+  </a>
+</div-->
