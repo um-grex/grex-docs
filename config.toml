@@ -27,9 +27,9 @@ theme                  = "shadocs"
     source = 'openapi'
     target = 'static/openapi'
 
-[taxonomies]
-  category = "categories"
-  tag = "tags"
+#[taxonomies]
+#  category = "categories"
+#  tag = "tags"
 
 [outputs]
   home = ["HTML", "JSON"]
