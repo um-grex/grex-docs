@@ -23,7 +23,11 @@ When the above requirements are satisfied, here is how to get started.
 
 1. Get the Hugo (then unpack and place the _hugo_ binary in yout PATH: 
  
-	wget https://github.com/gohugoio/hugo/releases/download/v0.62.2/hugo_extended_0.62.2_Linux-64bit.tar.gz
+	wget https://github.com/gohugoio/hugo/releases/download/v0.118.2/hugo_extended_0.118.2_linux-amd64.tar.gz
+	
+	or, for MAC
+	
+	curl -O https://github.com/gohugoio/hugo/releases/download/v0.118.2/hugo_extended_0.118.2_darwin-universal.tar.gz
 
 2. Clone this repository recursively, to get Alex Shpak's Book theme.
 
