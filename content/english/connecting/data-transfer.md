@@ -3,6 +3,8 @@ weight: 1800
 linkTitle: "Data transfer"
 title: "Transferring data"
 description: "Everything you need to know about transferring data."
+banner: true
+bannerContent: "GUI SCP/SFTP clients may need to be updated to their latest versions to work with the Duo MFA on Grex"
 #categories: []
 #tags: ["Configuration"]
 ---
@@ -68,7 +70,7 @@ There are many file transfer clients that provide convenient graphical user inte
 Some examples of the popular file transfer clients are
 
 * [WinSCP](https://winscp.net/eng/index.php "WinSCP") for Windows.
-* [CyberDuck](https://cyberduck.io/ "CyberDuck") for MacOS X
+* [MobaXterm](https://mobaxterm.mobatek.net/ "MobaXterm") for Windows has an SFTP app.
 * Cross platform [FileZilla Client](https://filezilla-project.org "FileZilla Client")
 
 Other GUI clients will work with Grex too, as long as they provide SFTP protocol support.
