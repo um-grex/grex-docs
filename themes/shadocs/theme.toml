@@ -7,9 +7,9 @@ licenselink = "https://github.com/jgazeau/shadocs/blob/master/LICENSE"
 description = "Multipurpose Theme for sharing documentation"
 homepage = "https://shadocs.netlify.app/"
 demosite = "https://shadocs.netlify.app/"
-tags = ["Bulma", "Search", "Simple", "Documentation", "Fontawesome", "Intro", "Mermaid", "OpenAPI"]
-features = ["Menu", "Nested sections", "Search", "Shortcuts", "Netlify", "Intro", "Mermaid", "OpenAPI"]
-min_version = "0.71.0"
+tags = ["Bulma", "Search", "Simple", "Documentation", "Fontawesome", "Intro", "Mermaid", "OpenAPI", "AsyncAPI"]
+features = ["Menu", "Nested sections", "Search", "Shortcuts", "Netlify", "Intro", "Mermaid", "OpenAPI", "AsyncAPI"]
+min_version = "0.112.0"
 
 [author]
   name = "Jordan GAZEAU"

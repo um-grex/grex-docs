@@ -5,8 +5,7 @@
   max-height: calc(#{$navbar-height} - (2 * #{$theme-gap-medium-size}))
   background-color: smooth-color($theme-color, 30) !important
   color: findColorInvert(smooth-color($theme-color, 30))
-  min-width: $navbar-search-min-width
-  max-width: $navbar-search-width
+  width: $navbar-search-width
   @extend %navbar-item-generic
   @extend %navbar-item-hover
   text-overflow: ellipsis
@@ -21,21 +20,27 @@
   &::placeholder
     color: smooth-color(findColorInvert(smooth-color($theme-color, 30)), 30)
     font-style: italic
+  +mobile
+    width: $navbar-search-width-mobile
 #searchInput
   +responsive-size(font-size, $content-font-size, 3px)
-  min-width: $navbar-search-min-width
-  max-width: $navbar-search-width
+  width: $navbar-search-width
   display: block
+  +mobile
+    width: $navbar-search-width-mobile
 #searchList
   +responsive-size(font-size, $content-font-size, 3px)
   max-height: $navbar-search-results-height
   @extend %navbar-content-partial-border
   margin: $theme-gap-medium-size 0 0 0
+  word-break: break-word
   overflow-x: hidden
   position: absolute
   border-radius: 0
   overflow-y: auto
-  min-width: 100%
+  width: $navbar-search-results-width
+  +touch
+    width: $navbar-search-results-width-touch
   z-index: 1
   strong
     color: $navbar-search-highlight-color !important
@@ -66,28 +71,20 @@
       font-weight: 900
       cursor: unset
     a
-      max-width: $navbar-search-results-width
       @extend %search-content-colors
       min-height: $control-height
-      width: max-content
-      min-width: 100%
       +touch
         max-width: $navbar-search-results-width-touch
       .level-left
-        width: calc((#{$navbar-search-results-width} * 75) / 100)
+        width: 75%
         min-height: $control-height
         position: relative
-        +touch
-          width: calc((#{$navbar-search-results-width-touch} * 75) / 100)
         .scontent
-          width: calc((#{$navbar-search-results-width} * 75) / 100)
+          width: 75%
           padding: $theme-gap-medium-size
-          word-break: break-word
           justify-content: left
           flex-wrap: wrap
           display: block
-          +touch
-            width: calc((#{$navbar-search-results-width-touch} * 75) / 100)
         &:after
           background: smooth-color(findColorInvert($content-background), 50)
           position: absolute
@@ -96,19 +93,14 @@
           width: 1px
           right: 0
       .level-right
-        width: calc((#{$navbar-search-results-width} * 25) / 100)
+        width: 25%
         min-height: $control-height
-        +touch
-          width: calc((#{$navbar-search-results-width-touch} * 25) / 100)
         .spath
-          width: calc((#{$navbar-search-results-width} * 25) / 100)
+          width: 25%
           padding: $theme-gap-medium-size
           justify-content: right
-          word-break: break-word
           text-align: right
           flex-wrap: wrap
-          +touch
-            width: calc((#{$navbar-search-results-width-touch} * 25) / 100)
       .level-item
         min-height: $control-height
         &.spre

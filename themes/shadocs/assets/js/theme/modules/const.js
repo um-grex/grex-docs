@@ -4,7 +4,7 @@
 {{- with $.Site.Params.navbar.shortcuts -}}
   {{- template "setShortcutsMap" dict "this" . "context" $ -}}
 {{- end -}}
-export const shortcutsKeys = {{($.Scratch.Get "shortcutsMap") | jsonify}};
+export const shortcutsKeys = {{- ($.Scratch.Get "shortcutsMap") | jsonify -}};
 export const flexSearchThemeOptions = {
   minMatchCharLength: 2,
   highlightMaxCharOffset: 20,
@@ -23,21 +23,24 @@ export const flexSearchOptions = {
   }
 }
 export const overlayOptions = {
-  className: 'main-scrollbar-theme',
   paddingAbsolute: true,
-  overflowBehavior: {
+  overflow: {
     x: 'hidden',
     y: 'scroll'
   },
   scrollbars : {
+    theme: 'os-theme-shadocs',
+    autoHideDelay: 300,
     autoHide: 'leave',
-    dragScrolling: false,
-    clickScrolling: false,
-    touchSupport: true
+    dragScroll: false,
+    clickScroll: false,
+    pointers: ['mouse', 'touch', 'pen']
   }
 };
+export const widescreenSize = 1216;
 export const desktopSize = 1024;
 export const tabletSize = 769;
+export const sizeTriggerWidescreen = 'widescreen';
 export const sizeTriggerDesktop = 'desktop';
 export const sizeTriggerTouch = 'touch';
 export const sizeTriggerMobile = 'mobile';
@@ -57,4 +60,4 @@ export let resizeFunctionsList = [];
       {{- $context.Scratch.SetInMap "shortcutsMap" $shortcutName ($context.Scratch.Get $shortcutName) -}}
     {{- end -}}
   {{- end -}}
-{{end}}
+{{- end -}}

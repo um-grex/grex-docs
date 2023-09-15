@@ -2,15 +2,39 @@
 // Markdown content styles
 //
 #mainContainer
-  +static-size-height(calc(100vh - #{$navbar-height}))
+  overflow-x: hidden
+  overflow-y: auto
+  flex: 1 1 auto
 #contentContainer
-  +static-size-height(calc(100vh - #{$navbar-height}))
   background: $content-background
   color: $content-writing-color
   word-break: break-word
   overflow-x: hidden
   overflow-y: auto
   flex: 1
+  &.has-toc
+    #content
+      +static-size-width(calc(100% - #{$toc-width} - #{$toc-collapsible-width}))
+    &.is-toc-collapsed
+      #content
+        +static-size-width(calc(100% - #{$toc-collapsible-width}))
+      #tocContainer
+        display: none
+      #tocCollapsible
+        i
+          transform: rotate(180deg)
+    &:not(.is-toc-collapsed):not(.is-toc-uncollapsed)
+      +touch
+        #content
+          +static-size-width(calc(100% - #{$toc-collapsible-width}))
+        #tocContainer
+          display: none
+        #tocCollapsible
+          i
+            transform: rotate(180deg)
+    +until-widescreen
+      #content
+        +static-size-width(calc(100% - #{$toc-collapsible-width}))
   #contentTitle
     margin-bottom: $theme-gap-large-size
     font-size: $theme-title-font-size
@@ -23,13 +47,14 @@
     text-align: center
     font-weight: 700
   #content
-    padding-right: $navbar-height
-    padding-left: $navbar-height
+    +mobile
+      padding-right: $theme-gap-medium-size
+      padding-left: $theme-gap-medium-size
+    +tablet
+      padding-right: $navbar-height
+      padding-left: $navbar-height
+    +static-size-width(100%)
     position: relative
-    +touch
-      +static-size-width(100%)
-    +desktop
-      +static-size-width(calc(100% - #{$toc-width}))
     &:after
       height: $theme-gap-large-size
       position: absolute

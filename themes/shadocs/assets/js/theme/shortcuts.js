@@ -1,7 +1,4 @@
-import {
-  closeModals,
-  isFocusable
-} from './modules/helpers.min.js'
+import { closeModals, isFocusable } from './modules/helpers.min.js';
 
 // VARS //
 // MAIN //
@@ -16,7 +13,9 @@ function scShowInfo() {
 window.scShowShortcuts = scShowShortcuts;
 function scShowShortcuts() {
   closeModals();
-  document.getElementById('navbarShortcuts').classList.toggle('is-hidden', false);
+  document
+    .getElementById('navbarShortcuts')
+    .classList.toggle('is-hidden', false);
   document.getElementById('search').blur();
 }
 // Function to go to homepage
@@ -38,6 +37,12 @@ window.scToggleSidebar = scToggleSidebar;
 function scToggleSidebar() {
   closeModals();
   document.getElementById('sidebarCollapse').click();
+}
+// Function to toggle the toc
+window.scToggleToc = scToggleToc;
+function scToggleToc() {
+  closeModals();
+  document.getElementById('tocCollapsible').click();
 }
 // Function to back to top of the current page
 window.scBackToTop = scBackToTop;
