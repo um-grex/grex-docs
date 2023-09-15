@@ -2,7 +2,7 @@
 # Standard configuration
 #================================================================================
 
-baseURL                = 'https://um-grex.github.io/grex-doc/'
+baseURL                = 'https://um-grex.github.io/grex-docs/'
 title                  = 'Unofficial Grex User Guide'
 copyright              = 'The MIT License (MIT) Copyright © 2023 UM-Grex'
 theme                  = 'shadocs'
