@@ -57,24 +57,12 @@ description: "Documentation for Grex"
       "triggerexcept": ["nohover"],
       "onbeforechange": "toggleSidebar(false,true);toggleExtendMenu(true);"
     },{
-#      "title": "Taxonomies",
-#      "intro": "The taxonomies button provides access to the several taxonomies of the website.<br><i>NB: This button is only visible if at least one taxonomy exists.</i>",
-#      "element": "getFirstVisibleElement('#taxonomiesSelector, #taxonomiesSelectorExtend');",
-#      "position": "left",
-#      "onbeforechange": "toggleSidebar(false,true);toggleExtendMenu(true);"
-#    },{
-      "title": "Multilingual",
-      "intro": "The multilingual button provides access to the several translations of the current page.<br><i>NB: This button is only visible if a translation page exists for the current page. Only the English version is available at this time.</i>",
-      "element": "getFirstVisibleElement('#langsSelector, #langsSelectorExtend');",
+    "title": "Taxonomies",
+      "intro": "The taxonomies button provides access to the several taxonomies of the website.<br><i>NB: This button is only visible if at least one taxonomy exists.</i>",
+      "element": "getFirstVisibleElement('#taxonomiesSelector, #taxonomiesSelectorExtend');",
       "position": "left",
       "onbeforechange": "toggleSidebar(false,true);toggleExtendMenu(true);"
     },{
-#      "title": "Versionning",
-#      "intro": "The versionning button provides other available versions of the website.",
-#      "element": "getFirstVisibleElement('#versionsSelector, #versionsSelectorExtend');",
-#      "position": "left",
-#      "onbeforechange": "toggleSidebar(false,true);toggleExtendMenu(true);"
-#    },{
       "title": "About the website",
       "intro": "The information button provides general information about the website.",
       "element": "getFirstVisibleElement('#siteInfo, #siteInfoExtend');",

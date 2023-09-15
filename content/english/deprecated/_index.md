@@ -1,5 +1,5 @@
 ---
-weight: 9900
+weight: 9000
 linkTitle: "Deprecated pages"
 title: "Deprecated pages"
 description: "List of major changes on Grex: software and hardware updates."

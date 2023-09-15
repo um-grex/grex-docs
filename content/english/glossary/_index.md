@@ -1,5 +1,5 @@
 ---
-weight: 9250
+weight: 9500
 title: "Glossary"
 linktitle: "Glossary"
 description: "Glossary"

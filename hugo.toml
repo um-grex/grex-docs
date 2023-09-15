@@ -1,0 +1,61 @@
+#================================================================================
+# Standard configuration
+#================================================================================
+
+baseURL                = 'https://um-grex.github.io/grex-doc/'
+title                  = 'Unofficial Grex User Guide'
+copyright              = 'The MIT License (MIT) Copyright © 2023 UM-Grex'
+theme                  = 'shadocs'
+languageCode           = 'en-us'
+defaultContentLanguage = 'en'
+enableEmoji            = false
+publishDir             = 'public'
+
+[Author]
+  name = 'Ali Kerrache, Grigory Shamov'
+
+#================================================================================
+# Languages parameters
+#================================================================================
+
+[Languages]
+  [Languages.en]
+    contentDir   = 'content/english'
+    title        = 'Grex'
+    weight       = 1
+    languageName = 'English'
+#  [Languages.fr]
+#    contentDir   = 'content/french'
+#    title        = 'Grex'
+#    weight       = 2
+#    languageName = 'Français'
+
+#================================================================================
+# Miscellaneous sidebar parameters
+#================================================================================
+
+#[sidebar]
+#  homeSectionIconDefault   = 'fa-solid fa-house-chimney'
+#  firstSectionIconDefault  = 'fa-solid fa-ban'
+#  nestedSectionIconDefault = 'fa-solid fa-turn-up fa-rotate-90 fa-xs'
+
+#================================================================================
+# Specific configuration
+#================================================================================
+
+[params]
+  logo               = 'logo/um_logo_email_signature.png'
+  logoTouch          = 'logo/um_logo_email_signature.png'
+#  image404           = 'images/404.gif'
+  favicon            = 'logo/um_logo_vertical.png'
+  faviconmd          = '![](logo/um_logo_vertical.png)'
+  homeLayout         = 'onboarding'
+  siteContentOrder   = 'weight'
+  globalBanner       = false
+  currentVersion     = 'latest'
+  latestVersionUrl   = 'https://um-grex.github.io/grex-docs/'
+  [params.github]
+    main     = 'https://github.com/um-grex/grex-docs'
+    download = 'https://github.com/um-grex/grex-docs/archive/refs/heads/main.zip'
+    issue    = 'https://github.com/um-grex/grex-docs/issues'
+    fork     = 'https://github.com/um-grex/grex-docs/forks'

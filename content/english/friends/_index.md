@@ -1,5 +1,5 @@
 ---
-weight: 8900
+weight: 8800
 title: "Friendly Organizations"
 description: "Local and National Resources."
 titleIcon: "fa-solid fa-house-chimney"

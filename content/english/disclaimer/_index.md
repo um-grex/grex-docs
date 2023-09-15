@@ -1,5 +1,5 @@
 ---
-weight: 9000
+weight: 9250
 title: "Disclaimer"
 linktitle: "Disclaimer"
 description: "Disclaimer."

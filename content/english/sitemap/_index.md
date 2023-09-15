@@ -1,5 +1,5 @@
 ---
-weight: 9500
+weight: 9900
 title: "Grex Documentation - Sitemap"
 linktitle: "Sitemap"
 description: "Sitemap."
