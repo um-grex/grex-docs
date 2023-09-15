@@ -10,20 +10,19 @@ categories: ["Information"]
 ## Data size and quotas
 ---
 
-This section explains how to find the actual space and inode usage of your __/home/__ and __/global/scratch__ allocations on Grex. We limit the size of the data and the number of files that can be stored on these filesystems.
+This section explains how to find the actual space and inode usage of your __/home/__ and __/project__ allocations on Grex. We limit the size of the data and the number of files that can be stored on these filesystems.
 
-| File system         | Type        | Total space | Quota per user |
-| -----------         | :---:       | :---------: | :------------: |
-| __/home__           | NFSv4/RDMA  | **15 TB**   | 100 GB         |
-| __/global/scratch__ | Lustre      | **418 TB**  | 4 TB           |
-| __/project__        | Lustre      | **1 PB**    | -              |
+| File system         | Type        | Total space | Bulk Quota | Files Quota |
+| -----------         | :---:       | :---------: | :------------: | :------------: |
+| __/home__           | NFSv4/RDMA  | **15 TB**   | 100 GB / user   |0.5M  |
+| __/project__        | Lustre      | **1 PB**    | 5-20 TB / group        | 1M / user , 2M/ group |
 
 To figure out where your current usage stands with the limit, POSIX __quota__ or Lustre's analog, __lfs quota__, commands can be used.
 
 ### NFS quota 
 ---
 
-The __/home/__ filesystem is served by NFSv1 and thus supports the standard POSIX __quota__ command. For the current user, it is just:
+The __/home/__ filesystem is served by NFSv4 and thus supports the standard POSIX __quota__ command. For the current user, it is just:
 
 {{< highlight bash >}}
 quota
@@ -53,7 +52,15 @@ __CAVEAT:__ The Alliance (Compute Canada) breaks the POSIX standard by redefinin
 ### Lustre quota
 ---
 
-The __/global/scratch/__ filesystem is actually a link to a (new) Lustre filesystem called __/sbb/__. We have retained the old name for compatibility with the old Lustre filesystem that was used on Grex between 2011 and 2017. Lustre filesystem provides a __lfs quota__ sub-command that requires the name of the filesystem specified. So, for the current user, the command to get current usage {space and number of files}, in the human-readable units, would be as follows:
+There are two Lustre storage appliances on Grex,__/project__ . __/global/scratch/__ . Since 2022, the main project filesystem on Grex is __/project__ . The previous filesystem was called __/global/scratch/__ and , as of now, is not available for users. 
+
+#### /project/ (current)
+
+TBD
+
+#### /global/scratch/  (old)
+
+The __/global/scratch/__ filesystem is actually a link to a Lustre filesystem called __/sbb/__. We have retained the old name for compatibility with the old Lustre filesystem that was used on Grex between 2011 and 2017. Lustre filesystem provides a __lfs quota__ sub-command that requires the name of the filesystem specified. So, for the current user, the command to get current usage {space and number of files}, in the human-readable units, would be as follows:
 
 {{< highlight bash >}}
 lfs quota -h -u $USER /sbb
@@ -68,7 +75,7 @@ With the output:
       /sbb   622G  2.644T  3.653T     - 5070447 6000000 7000000     -
 {{< /highlight >}}
 
-Presently we do not enforce __group__ or __project__ quota on Grex.
+Presently the  __group__ or __project__ quota on __/global/scratch__ are not enforced.
 
 If you are over quota on Lustre __/global/scratch__ filesystem, just like for NFS, there will be a star to the value exceeding the limit, and the grace countdown will be active. 
 
