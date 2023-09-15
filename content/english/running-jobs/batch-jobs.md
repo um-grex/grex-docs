@@ -227,7 +227,7 @@ Here is an example for running MPI job (in this case, Quantum ESPRESSO) using 32
 />}}
 {{< /collapsible >}}
 
-However, in practice there are cases when layout should be more restrictive. If the software code assumes equal distribution of processes per node, the request should be __-\-nodes=N -\-ntasks-per-node=M__. A similar case is MPMD codes (Like [NWCHem](specific-soft/nwchem/) or GAMESS-US or OpenMolcas) that have some of the processes doing computation and some communication functions, and therefore requires at least two tasks running per each node.
+However, in practice there are cases when layout should be more restrictive. If the software code assumes equal distribution of processes per node, the request should be __-\-nodes=N -\-ntasks-per-node=M__. A similar case is MPMD codes (Like [NWCHem](/specific-soft/nwchem/) or GAMESS-US or OpenMolcas) that have some of the processes doing computation and some communication functions, and therefore requires at least two tasks running per each node.
 
 For some codes, especially for large parallel jobs with intensive communication between tasks there can be performance differences due to memory and interconnect bandwidths, depending on whether the same number of parallel tasks is compacted on few nodes or spread across many of them. Find an example of the job below.
 
@@ -334,7 +334,7 @@ module load StdEnv/2018.3
 
 Below is an arbitrarily chosen IMB benchmark result for MPI1 on Grex, the _sendrecv_ tests using two processes on two nodes with several MPI implementations (CC means MPI coming from the Compute Canada (now, the Alliance) stack, Grex means compiled locally on Grex).
 
-![](benchmarks/mpis-on-grex.png)
+![](/benchmarks/mpis-on-grex.png)
 
 You can see that differences in performance between OpenMPI 3.1.x from CC stack and Grex are minor for this benchmark, even without attempting any local tuning for the CC OpenMPI.
 

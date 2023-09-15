@@ -1,6 +1,6 @@
 ---
 weight: 600
-linkTitle: "The Alliance (DRAC)"
+linkTitle: "DRAC (Alliance)"
 title: "Digital Research Alliance of Canada"
 description: "Digital Research Alliance of Canada."
 titleIcon: "fa-solid fa-house-chimney"
@@ -8,7 +8,7 @@ categories: ["Information"]
 #tags: ["Content management"]
 ---
 
-[![Digital Research Alliance of Canad](alliance/Alliance_logo_English-first+slogan.jpg)](https://alliancecan.ca/)
+[![Digital Research Alliance of Canad](/alliance/Alliance_logo_English-first_slogan.jpg)](https://alliancecan.ca/)
 
 ## Introduction
 ---
@@ -21,8 +21,8 @@ The Alliance also maintains a user authentication service and usage database cal
 ---
 
 - Digital Research Alliance of Canada [official website](https://alliancecan.ca/)
-- The Alliance database [CCDB](https://ccdb.computecanada.ca/ "Compute Canada accounts database")
-- The Alliance user documentation [Wiki](https://docs.alliancecan.ca/wiki "the Alliance user documentation Wiki") 
+- Alliance database [CCDB](https://ccdb.computecanada.ca/ "Compute Canada accounts database")
+- Alliance user documentation [Wiki](https://docs.alliancecan.ca/wiki "the Alliance user documentation Wiki") 
 - Status page for the Alliance [clusters](https://status.alliancecan.ca/ "Status page for the Alliance services and platforms")
 
 ## Getting an account with the Alliance
@@ -41,7 +41,7 @@ Since we have switched Grex to CCDB credentials in late **2019**, the CCDB accou
 * WestGrid network addresses in the westgrid.ca domain are no longer nor used on Grex. Please use hpc.umanitoba.ca domain!
 {{< /alert >}}
 
-## The Alliance's clusters and services
+## Alliance's clusters and services
 ---
 
 * [Beluga](https://docs.alliancecan.ca/wiki/B%C3%A9luga/en)
@@ -73,16 +73,16 @@ University of Manitoba is a member institution of Prairies DRI group, and provid
 ## Getting support
 ---
 
-The single point of contact for the Alliance (Compute Canada) support is: __support@tech.alliancecan.ca__
+The single point of contact for Alliance (Compute Canada) support is: __support@tech.alliancecan.ca__
 
 When requesting support, please make sure to include enough [information](https://docs.alliancecan.ca/wiki/Technical_support) that will help support staff to identify your issue in order to solve it in time. An example of details to include in your email are (but not limited to): user name, name of the cluster, job id if applicable, job script, list of the modules, a path to your files and scripts, ... etc. You may include any other details that may help to understand your issue. 
 
 ---
 
-[![Digital Research Alliance of Canad](alliance/Alliance_logo_English-first+slogan.jpg)](https://alliancecan.ca/)
+[![Digital Research Alliance of Canad](/alliance/Alliance_logo_English-first_slogan.jpg)](https://alliancecan.ca/)
 
 <!--
-[![Digital Research Alliance of Canad](alliance/Alliance_logo_English-first.jpg)](https://alliancecan.ca/)
+[![Digital Research Alliance of Canad](/alliance/Alliance_logo_English-first.jpg)](https://alliancecan.ca/)
 -->
 
 ---

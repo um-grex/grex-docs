@@ -24,13 +24,13 @@ To connect from outside the UM network, please install and start [UManitoba Virt
 ---
 
 {{< collapsible title="OpenOndemand login page" >}}
-![OpenOnDemand Login Page](ood/loginpage.png)
+![OpenOnDemand Login Page](/ood/loginpage.png)
 {{< /collapsible >}}
 
 When connected, you will see the following screen with the current Grex Message-of-the-day (MOTD):
 
 {{< collapsible title="File view on OpenOndemand web portal on Grex" >}}
-![OpenOnDemand Front Page](ood/frontpage.png)
+![OpenOnDemand Front Page](/ood/frontpage.png)
 {{< /collapsible >}}
 
 OOD expects user accounts and directories on Grex to be already created. Thus, new users who want to work with OOD should first connect to Grex normally, via SSH shell at least once, to make the creation of account, directories, and quota complete. Also, OOD creates a state directory under users' ``/home`` (__/home/$USER/ondemand__) where it keeps information about running and completed OOD jobs, shells, desktop sessions and such. Deleting the __ondemand__ directory while a job or session is running would likely cause the job or session to fail.

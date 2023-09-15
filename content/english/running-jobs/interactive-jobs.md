@@ -84,10 +84,10 @@ salloc --ntasks=1 --x11 --mem=4000M
 
 To make it work you'd want the SSH session login node is also supporting graphics: either through the -Y flag of ssh (or X11 enabled in PuTTy) or by using [X2Go](connecting/x2go). If you are using Mac OS, you will have to install [XQuartz](https://www.xquartz.org/) to enable X11 forwarding.
 
-You may also try to use [OpenOnDemand](ood) portal on Grex.
+You may also try to use [OpenOnDemand](/ood) portal on Grex.
 
 {{< collapsible title="OpenOnDemand portal on Grex: click on the image to read the documentation" >}}
-[![](ood/loginpage.png)](ood)
+[![](/ood/loginpage.png)](/ood)
 {{< /collapsible >}}
 
 ---

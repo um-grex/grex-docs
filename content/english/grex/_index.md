@@ -24,7 +24,7 @@ The old WestGrid documentation, hosted on the WestGrid website became irrelevant
 Thus, if you are an experienced user in the previous "version" of Grex, you might benefit from reading this document: description of Grex [changes.](changes/linux-slurm-update)
 -->
 
-If you are a new Grex user, proceed to the quick start [guide](start-guide) and documentation right away.
+If you are a new Grex user, proceed to the [quick start guide](start-guide) and documentation right away.
 
 ## Hardware 
 ---
@@ -47,7 +47,7 @@ On Grex, there are multiple login nodes:
 * __Tatanka__: tatanka.hpc.umanitoba.ca
 * __Grex__: grex.hpc.umanitoba.ca
 * __Yak__: yak.hpc.umanitoba.ca (please note that the architecture for this node is avx512).
-* __Aurochs__: https://aurochs.hpc.umanitoba.ca (only used for [OOD](./ood) and requires VPN if used outside campus network).
+* __Aurochs__: https://aurochs.hpc.umanitoba.ca (only used for [OOD](/ood) and requires VPN if used outside campus network).
 
 To login to Grex in the text (bash) mode, connect to __grex.hpc.umanitoba.ca__ using a secure shell client, [SSH](connecting/#ssh). 
 
@@ -120,7 +120,7 @@ Grex is a traditional HPC machine, running CentOS Linux under SLURM resource man
 
 In addition to the traditional bash mode (connecting via ssh), users have access to:
 
-* __OpenOnDemand:__ on Grex, it is possible to use OpenOnDemand (OOD for short) to login to Grex and run batch or GUI applications (VNC Desktops, Matlab, Gaussview, Jupyter, ...). For more information, please refer to the page: [OpenOnDemand](./ood)
+* __OpenOnDemand:__ on Grex, it is possible to use OpenOnDemand (OOD for short) to login to Grex and run batch or GUI applications (VNC Desktops, Matlab, Gaussview, Jupyter, ...). For more information, please refer to the page: [OpenOnDemand](/ood)
 * __X2Go:__ for more information, visit the page, connect to Grex via [X2Go](connecting/#x2go)
 
 ## Useful links

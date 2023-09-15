@@ -67,7 +67,7 @@ Grex provides a jupyter server as an [OpenOnDemand](ood) dashboard application. 
 Presently, jupyter for these apps uses an installation of Grex's Python 3.7 module. There are two versions of the app, one for the GCC 7.4 toolchain, another for Intel the 2019.5 toolchain. 
 
 {{< collapsible title="OpenOndemand applications: jupyter" >}}
-![](ood/applications.png)
+![](/ood/applications.png)
 {{< /collapsible >}}
 
 Find out more on how to use OOD on the [Grex OOD pages](ood)

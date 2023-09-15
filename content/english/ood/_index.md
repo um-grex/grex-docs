@@ -33,13 +33,13 @@ To connect from outside the UM network, please install and start __UManitoba Vir
 ---
 
 {{< collapsible title="OpenOndemand login page" >}}
-![OpenOnDemand login page](ood/loginpage.png)
+![OpenOnDemand login page](/ood/loginpage.png)
 {{< /collapsible >}}
 
 Once connected, you will see the following screen with the current Grex Message-of-the-day (MOTD):
 
 {{< collapsible title="File view on OpenOndemand web portal on Grex" >}}
-![OpenOnDemand Front Page](ood/frontpage.png)
+![OpenOnDemand Front Page](/ood/frontpage.png)
 {{< /collapsible >}}
 
 OOD expects user accounts and directories on Grex to be already created. Thus, new users who want to work with OOD should first connect to Grex normally, via [SSH](connecting/ssh) shell at least once, to make the creation of account, directories, and quota complete. Also, OOD creates a state directory under users' ``/home`` (__/home/$USER/ondemand__) where it keeps information about running and completed OOD jobs, shells, desktop sessions and such. Deleting the __ondemand__ directory while a job or session is running would likely cause the job or session to fail.
@@ -55,7 +55,7 @@ One of the convenient and useful features of OOD is its Files app that allows yo
 across all Grex filesystems: __/home__, __/global/scratch__ and __/project__. 
 
 {{< collapsible title="File view on OpenOndemand web portal on Grex" >}}
-![](ood/files.png)
+![](/ood/files.png)
 {{< /collapsible >}}
 
 You can also upload your data to Grex using this Web interface. Note that there are limits on uploads on the Web server (a few GBs) and there can be practical limits on download sizes as well due to internet connection speed and stability.
@@ -66,7 +66,7 @@ You can also upload your data to Grex using this Web interface. Note that there 
 The OOD Dashboard menu, __Interactive Apps__, shows interactive applications. This is the main feature of OOD, it allows interactive work and visualizations, all in the browser. These applications will run as SLURM Jobs on Grex compute nodes. Users can specify required SLURM resources such as time, number of cores and partitions.
 
 {{< collapsible title="OpenOndemand applications on Grex" >}}
-![](ood/applications.png)
+![](/ood/applications.png)
 {{< /collapsible >}}
 
 As for now, the following applications are supported:

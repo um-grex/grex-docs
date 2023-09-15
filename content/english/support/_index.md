@@ -65,7 +65,7 @@ Monday - Friday
 8:30 am - 4:30 pm
 {{< /collapsible >}}
 
-![E2](campus/E2.jpg)
+![E2](/campus/E2.jpg)
 
 {{< alert type="info" >}}
 We also provide small-group workshops on Research Computing topics when there is enough demand. Contact us if you are interested  in having a workshop on a particular topic.

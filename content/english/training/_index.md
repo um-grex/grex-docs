@@ -19,7 +19,7 @@ categories: ["Training"]
     display="tree"
 />}}
 
-## WestGrid training material
+## WestDRI training material
 ---
 
 The training material from WestDRI (BC DRI and Prairies DRI groups, formerly known as WestGrid) webinars are available [online](https://training.westdri.ca/) and classified into different categories:
@@ -33,7 +33,7 @@ The training material from WestDRI (BC DRI and Prairies DRI groups, formerly kno
 ## Training material from the Alliance and its regional partners
 ---
 
-* [the Alliance](https://alliancecan.ca/en/training)
+* [DRAC](https://alliancecan.ca/en/training)
 * [ACENET](https://www.ace-net.ca/training.html)
 * [CAC](https://cac.queensu.ca/about_us/events-training/)
 * [Calcul Quebec](https://www.calculquebec.ca/en/academic-research-services/procedures/)

@@ -29,7 +29,7 @@ This method of installation is often practiced on person's own workstations, bec
 > - A package should be installed across all the nodes of the cluster; thus, the installations should be somehow managed.
 > - Binary packages in public repos tend to be compiled for generic CPU architectures rather than optimized for a particular system.
 
-Thus, in the HPC world, as a rule, only a minimal set of core Linux OS packages is installed by system administrators, and no access to package managers is given to the end users. There are ways to let users have their own Linux OS images through virtualization and containerization technologies (see the [containers](software/containers/) section) when it is really necessary.
+Thus, in the HPC world, as a rule, only a minimal set of core Linux OS packages is installed by system administrators, and no access to package managers is given to the end users. There are ways to let users have their own Linux OS images through virtualization and containerization technologies (see the [containers](/software/containers/) section) when it is really necessary.
 
 On most of the HPC machines, the application software is recompiled from sources and installed into a shared filesystem so that each compute node has access to the same code or program. Multiple versions of a software package can be installed into each own PATH; dependencies between software (such as libraries from one package needed to be accessed by another package) are tracked via a special software called Environmental Modules.
 
