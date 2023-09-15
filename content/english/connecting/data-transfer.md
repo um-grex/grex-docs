@@ -4,7 +4,7 @@ linkTitle: "Data transfer"
 title: "Transferring data"
 description: "Everything you need to know about transferring data."
 banner: true
-bannerContent: "GUI SCP/SFTP clients may need to be updated to their latest versions to work with the Duo MFA on Grex"
+bannerContent: "GUI clients may need to be updated to the latest versions to work with the Duo MFA on Grex"
 #categories: []
 #tags: ["Configuration"]
 ---
