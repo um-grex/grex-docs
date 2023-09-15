@@ -86,7 +86,7 @@ Note that we advise against saving your password in the clients: first, it is le
 
 There is a limit of about 10GB to the file transfer sizes with OOD. The OOD interface is, as of now, open for UManitoba IP addresses only (i.e., machines from campus and on UM PulseVPN will work). 
 
-More information is available on our [OOD pages](jobs)
+More information is available on our [OOD pages](/jobs)
 
 <!-- {{< treeview display="tree" />}} -->
 
