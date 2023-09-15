@@ -4,6 +4,8 @@ linkTitle: "Connecting with SSH"
 title: "Connecting to Grex with SSH"
 description: "Everything you need to know about connecting to Grex using various SSH clients."
 categories: ["How to"]
+banner: true
+bannerContent: "SSH clients may have to be updated to their latest versions to work with the Duo MFA!"
 #tags: ["Configuration"]
 ---
 
