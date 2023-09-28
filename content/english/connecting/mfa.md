@@ -136,6 +136,23 @@ $ gio mount sftp://ccdb_username@grex_login_hostname
 
 Note that if the master connection get closed for any reason (e.g.: timeout, lost connection, ...), then it must be restarted manually to keep browsing the remote location.
 
+## Configuring OpenSSH clients for longer MFA sessions
+
+For the users of OpenSSH clients on Linux, MacOS, and Windows (see [SSH](/connecting/ssh) ) it is possible to reduce the number of second-factor challenges by caching them between sessions for a period of time. This can be configured in the OpenSSH client's user config as follows. 
+
+Edit or create the file $HOME/.ssh/config that contains a config similar to this :
+
+
+```bash
+Host yak.hpc.umanitoba.ca
+    ControlPath ~/.ssh/cm-%r@%h:%p
+    ControlMaster auto
+    ControlPersist 10m
+```
+
+The example above uses the Yak login node of Grex; replace it with other hostnames as required, or add sections for more than one host if needed.
+
+
 <!-- {{< treeview display="tree" />}} -->
 
 <!-- Changes and update:
