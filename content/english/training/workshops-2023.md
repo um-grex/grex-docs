@@ -8,6 +8,23 @@ categories: ["Training"]
 #tags: ["Content management"]
 ---
 
+## Autumn workshop, November 2023
+---
+
+Below are the slides from the Grex workshop that was held on November 6-8, 2023:
+
+> - **Updates on Research Computing Resources**: Not Yet Available
+> - **Getting accounts, connecting, using Duo MFA**: [Slides](/workshops/autumn2023/02-Accounts-and-MFA.pdf)
+> - **Basics of Linux Shell**: [Slides](/workshops/autumn2023/03-Basics-of-Linux-Shell.pdf)
+> - **Beginner running HPC jobs with SLURM**: [Slides](/workshops/autumn2023/04-Running-Jobs-On-HPC-Clusters.pdf)
+> - **Using HPC with OpenOnDemand Web portal**: Not Yet Available
+> - **Beginner HPC software overview**: [Slides](/workshops/autumn2023/06-HPC-Software-Overview.pdf)
+> - **Using containers in HPC (Docker, Singularity, Apptainer)**: Not Yet Available
+> - **Basics of using OpenStack cloud**: [Slides](/workshops/autumn2023/08-OpenStack-Cloud-Beginner.pdf)
+> - **Getting most of HPC system**: [Slides](/workshops/autumn2023/09-Monitoring-Jobs-and-Efficiency.pdf)
+
+---
+
 ## Fall DATA-4010 seminars, September 2023
 ---
 
