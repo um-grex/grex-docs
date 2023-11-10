@@ -19,7 +19,7 @@ Below are the slides from the Grex workshop that was held on November 6-8, 2023:
 > - **Beginner running HPC jobs with SLURM**: [Slides](/workshops/autumn2023/04-Running-Jobs-On-HPC-Clusters.pdf)
 > - **Using HPC with OpenOnDemand Web portal**: [Slides](/workshops/autumn2023/05-OSC-OnDemand-on-Grex.pdf)
 > - **Beginner HPC software overview**: [Slides](/workshops/autumn2023/06-HPC-Software-Overview.pdf)
-> - **Using containers in HPC (Apptainer, SingularityCE: [Slides](/workshops/autumn2023/07-SingularityApptainer.pdf)
+> - **Using containers in HPC (Apptainer, SingularityCE) **: [Slides](/workshops/autumn2023/07-SingularityApptainer.pdf)
 > - **Basics of using OpenStack cloud**: [Slides](/workshops/autumn2023/08-OpenStack-Cloud-Beginner.pdf)
 > - **Getting most of HPC system**: [Slides](/workshops/autumn2023/09-Monitoring-Jobs-and-Efficiency.pdf)
 
