@@ -19,15 +19,16 @@ For more general OOD information, see the OpenOnDemand [paper](https://joss.theo
 
 ## OpenOndemand on Grex 
 ---
+**NOTE: aurochs.hpc.umanitoba.ca has been decommisioned since 29/11/2023. Please use zebu.hpc.umanitoba.ca to access OpenOnDemand portal.**
 
-Grex's OOD instance runs on **aurochs.hpc.umanitoba.ca** . It is available only from UManitoba IP addresses -- that is, your computer should be on the UM Campus network to connect. 
+Grex's OOD instance runs on **zebu.hpc.umanitoba.ca** and requires MFA. It is available only from UManitoba IP addresses -- that is, your computer should be on the UM Campus network to connect. 
 
 To connect from outside the UM network, please install and start __UManitoba Virtual Private Network__ [VPN](https://umanitoba.ca/computing/ist/connect/virtualpn.html). OOD relies on in-browser VNC sessions; so, a modern browser with HTML5 support is required; we recommend Google Chrome or Firefox and its derivatives (Firefox, for example).
 
 **Connect to OOD using UManitoba [VPN](https://umanitoba.ca/computing/ist/connect/virtualpn.html):**
 
 > - Make sure Pulse Secure VPN is connected
-> - Point your Web browser to [https://aurochs.hpc.umanitoba.ca](https://aurochs.hpc.umanitoba.ca) 
+> - Point your Web browser to [https://zebu.hpc.umanitoba.ca](https://xebu.hpc.umanitoba.ca) 
 > - Use your Alliance (Compute Canada) username and password to log in to Grex OOD.
 
 ---
