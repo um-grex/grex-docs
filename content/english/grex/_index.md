@@ -13,7 +13,7 @@ bannerContent: "__SCRATCH - OS and LUSTRE UPDATES__"
 ## Introduction
 ---
 
-Grex is a UManitoba High Performance Computing (HPC) system, first put in production in early __2011__ as part of WestGrid consortium. "Grex" is a _Latin_ name for "herd" (or maybe "flock"?). The names of the Grex login nodes ([bison](https://en.wikipedia.org/wiki/Bison "Bison"), tatanka, [aurochs](https://en.wikipedia.org/wiki/Aurochs "Aurochs"), [yak](https://en.wikipedia.org/wiki/Yak "Yak")) also refer to various kinds of bovine animals.
+Grex is a UManitoba High Performance Computing (HPC) system, first put in production in early __2011__ as part of WestGrid consortium. "Grex" is a _Latin_ name for "herd" (or maybe "flock"?). The names of the Grex login nodes ([bison](https://en.wikipedia.org/wiki/Bison "Bison"), tatanka, [zebu](https://en.wikipedia.org/wiki/Zebu "Zebu"), [yak](https://en.wikipedia.org/wiki/Yak "Yak")) also refer to various kinds of bovine animals.
 
 Since being defunded by WestGrid (on April 2, 2018), Grex is now available only to the users affiliated with University of Manitoba and their collaborators. 
 <!--
@@ -47,7 +47,7 @@ On Grex, there are multiple login nodes:
 * __Tatanka__: tatanka.hpc.umanitoba.ca
 * __Grex__: grex.hpc.umanitoba.ca
 * __Yak__: yak.hpc.umanitoba.ca (please note that the architecture for this node is avx512).
-* __Aurochs__: https://aurochs.hpc.umanitoba.ca (only used for [OOD](/ood) and requires VPN if used outside campus network).
+* __Zebu__: https://zebu.hpc.umanitoba.ca (only used for [OOD](/ood) and requires VPN if used outside campus network).
 
 To login to Grex in the text (bash) mode, connect to __grex.hpc.umanitoba.ca__ using a secure shell client, [SSH](connecting/#ssh). 
 

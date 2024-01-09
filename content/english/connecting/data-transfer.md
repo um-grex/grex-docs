@@ -82,7 +82,7 @@ Note that we advise against saving your password in the clients: first, it is le
 ## File transfers with OOD browser GUI
 ---
 
-**NEW:** It is now possible to use [OpenOnDemand on aurochs](https://aurochs.hpc.umanitoba.ca "OpenOnDemand on Grex") Web interface to download and upload data to and from Grex. Use __Files__ dashboard menu to select a filesystem (currently __/home/$USER__ and __/global/scratch/$USER__ are available), and then Upload and Download buttons.
+**NEW:** It is now possible to use [OpenOnDemand on aurochs](https://zebu.hpc.umanitoba.ca "OpenOnDemand on Grex") Web interface to download and upload data to and from Grex. Use __Files__ dashboard menu to select a filesystem (currently __/home/$USER__ and __/global/scratch/$USER__ are available), and then Upload and Download buttons.
 
 There is a limit of about 10GB to the file transfer sizes with OOD. The OOD interface is, as of now, open for UManitoba IP addresses only (i.e., machines from campus and on UM PulseVPN will work). 
 

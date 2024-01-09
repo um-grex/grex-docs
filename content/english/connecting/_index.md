@@ -44,7 +44,7 @@ Since Dec. 2015, support has been provided for the graphical mode connection to 
 ## OpenOnDemand (OOD) Web Interface
 ---
 
-Since October 2021, there is an OpenOnDemand (OOD) Web interface to Grex, available at [https://aurochs.hpc.umanitoba.ca](https://aurochs.hpc.umanitoba.ca "OpenOnDemand OOD Web interface on Grex") from UManitoba IP addresses. OOD provides a way to connect both in text and graphical mode right in the browser, to transfer data between Grex local machines, and to run jobs.
+Since October 2021, there is an OpenOnDemand (OOD) Web interface to Grex, currently available at [https://zebu.hpc.umanitoba.ca](https://zebu.hpc.umanitoba.ca "OpenOnDemand OOD Web interface on Grex") from UManitoba IP addresses. OOD provides a way to connect both in text and graphical mode right in the browser, to transfer data between Grex local machines, and to run jobs.
 
 See the documentation for more details on how to connect from various clients of operating systems: [SSH](connecting/ssh), [X2Go](connecting/x2go), [OOD](connecting/ood).
 
