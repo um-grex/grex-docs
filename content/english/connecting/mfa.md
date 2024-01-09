@@ -10,7 +10,7 @@ categories: ["How to"]
 ## Important Notices
 ---
 
-- **We plan for MFA to become mandatory for all Grex users in October 2023.**
+- **As of January 9, 2024  MFA is enforced for all UManitoba/Grex users.**
 - We appreciate your attention to this matter and encourage you to enroll at your earliest convenience to ensure a smooth transition. Should you have any questions or require further assistance, please don't hesitate to reach out to your local HPC team.
 - If some of your work relies on unattended connections or automations that may be disrupted by MFA, we ask that you do not enroll yet, and instead [contact us](mailto:support@tech.alliancecan.ca) for technical support, so that we can work with you on a solution.
 - Please note that enrolling in MFA for Grex, makes MFA active and enforced also on the Alliance National systems as well, and vice versa. If this does not work for you, please [contact us](mailto:support@tech.alliancecan.ca).
@@ -21,21 +21,19 @@ categories: ["How to"]
 Both Digital Research Alliance of Canada and our UManitoba HPC systems, are proceeding with the ongoing implementation of a multifactor authentication (MFA) system.
 MFA adds an additional layer of security to the traditional password-based and SSH keys authentications by requiring a second factor, known as "something you have".
 The Cisco Duo product was chosen as the provider for this additional authentication factor.
-Grex is using the Duo instance provided by the Alliance, for this reason the available additional factors are not the same as those used by the University of Manitoba for platforms such as UM Intranet and University MS Office products.
+Grex is using the Duo instance provided by the Alliance. The available additional factors and even the MFA provider are not the same as those used by the University of Manitoba for platforms such as UM Intranet and University MS Office products.
 
 On Grex and Alliance systems, the following factors are enabled:
 
 - Duo smartphone app (Android and iOS)
 - Yubico Yubikey cybersecurity USB key device
-- One-time codes (recommended as a backup MFA)
+- One-time codes (recommended as a backup, available only after one of the above primary factors is already enabled)
 
 ## Enrollment
 ---
 
 Enrollment into the Alliance Duo is through [CCDB](https://ccdb.alliancecan.ca), this enables the MFA requirement on every SSH login on both Grex and Alliance systems (Cedar, Graham, Beluga, Narval or Niagara).
 As of now, the enrollment is voluntary: we kindly ask you to let us know (sending an email to [support@tech.alliancecan.ca](mailto:support@tech.alliancecan.ca) if you/your group members would like to enroll, and we will then enable the MFA option under your CCDB account.
-
-**(Please do note that we plan for MFA to become mandatory for all Grex users in October 2023)**
 
 After our staff enable MFA for your account, you must follow these steps to complete the enrollment:
 
