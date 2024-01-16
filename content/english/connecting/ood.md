@@ -32,13 +32,11 @@ To connect from outside the UM network, please install and start [UManitoba Virt
 ### Connect via OOD
 ---
 
-{{< collapsible title="OpenOndemand login page" >}}
-![OpenOnDemand Login Page](/ood/loginpage.png)
-{{< /collapsible >}}
+First, the OOD host would present a Keycloack login page, followed by the usual Duo second factor prompt.
 
-When connected, you will see the following screen with the current Grex Message-of-the-day (MOTD):
+When authenticated, you will see the following screen with the current Grex Message-of-the-day (MOTD):
 
-{{< collapsible title="File view on OpenOndemand web portal on Grex" >}}
+{{< collapsible title="Landing / MOTD page,  OpenOndemand web portal on Grex" >}}
 ![OpenOnDemand Front Page](/ood/frontpage.png)
 {{< /collapsible >}}
 
@@ -49,13 +47,23 @@ OOD expects user accounts and directories on Grex to be already created. Thus, n
 ### Transfer data
 ---
 
+The _Files_ dropdown menu in the OOD Dashboard bar provides a File browser for each of the filesystems available to the user. 
+The _Files_ interface allows for uploading, downloading and editing of the files on the HPC cluster.
+
+{{< collapsible title="File view on OpenOndemand web portal on Grex" >}}
+![](/ood/files.png)
+{{< /collapsible >}}
+
+
 ## Internal links
 ---
 
-* Run applications with [OOD](ood)
+* Run applications with [OOD](../ood)
 
 ## External links
 ---
+
+[Homepage of the OnDemand project](https://openondemand.org/)
 
 <!-- {{< treeview display="tree" />}} -->
 

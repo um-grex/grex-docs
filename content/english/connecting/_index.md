@@ -11,15 +11,21 @@ categories: ["How-To", "Information"]
 ## Connecting to Grex
 ---
 
-In order to use almost any HPC system, you would need to be able to somehow connect and log in to it. Also, it would be necessary to be able to transfer data to and from the system. The standard means for these tasks are provided by the [SSH protocol](https://en.wikipedia.org/wiki/Secure_Shell "Secure Shell").
+In order to use almost any HPC system, you would need to be able to somehow connect and log in to it. Also, it would be necessary to be able to transfer data to and from the system. The standard means for these tasks are provided by the [SSH protocol](https://en.wikipedia.org/wiki/Secure_Shell "Secure Shell"). The following hosts (login nodes) are avilable: 
+ * yak.hpc.umanitoba.ca
+ * grex.hpc.umanitoba.ca
+ * bison.hpc.umanitoba.ca
+ * tatanka.hpc.umanitoba.ca
 
-To log in to Grex in the text (or bash) mode, connect to **grex.hpc.umanitoba.ca** using an [**SSH**](./ssh/) (Secure SHELL) client. The DNS name **grex.hpc.umanitoba.ca** serves as an alias for two login nodes: **bison.hpc.umanitoba.ca** and **tatanka.hpc.umanitoba.ca** . 
+To log in to Grex in the text (or bash) mode, connect to one of the above hosts using an [**SSH**](./ssh/) (Secure SHELL) client. 
+
+The DNS name **grex.hpc.umanitoba.ca** serves as an alias for two login nodes: **bison.hpc.umanitoba.ca** and **tatanka.hpc.umanitoba.ca** . These two login nodes are the original login nodes, and can be used for accessing the system as well as building software that has to run on older compute nodes (Intel SSE4.2 instructions or earlier).
 
 {{< highlight bash >}}
 ssh someuser@grex.hpc.umanitoba.ca
 {{< /highlight >}}
 
-Since early 2021, a new login node, **yak.hpc.umanitoba.ca** is available to access and build software that uses new Intel AVX2, AVX512 CPU instructions. **Yak** is not part of the **grex.hpc.umanitoba.ca** alias.
+Since early 2021, a new login node, **yak.hpc.umanitoba.ca** is available to access and build software that uses new Intel AVX2, AVX512 CPU instructions. **Yak** is not part of the **grex.hpc.umanitoba.ca** alias, so users would want to specify this host directly. As of 2024, majority of users would likely use **Yak**.
 
 {{< highlight bash >}}
 ssh someuser@yak.hpc.umanitoba.ca
