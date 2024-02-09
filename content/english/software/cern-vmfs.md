@@ -7,16 +7,19 @@ categories: ["Software"]
 #tags: ["Configuration"]
 ---
 
-## Cern VMFS on Grex
+## CC CernVMFS on Grex
 ---
 
 [CVMFS or CernVM](https://cernvm.cern.ch/portal/filesystem) stands for CernVM File System. It provides a scalable, reliable and low-maintenance software distribution service. It was developed to assist High Energy Physics (HEP) collaborations to deploy software on the worldwide-distributed computing infrastructure used to run data processing applications. 
 
-Presently, we use CernVMFS (CVMFS) to provide the Alliance's (or Compute Canada's) software stack. We plan to add more publically available CVMFS software repositories such as the one from [OpenScienceGrid](https://opensciencegrid.org/ "OpenScienceGrid"), in the near future. Note that we can only "pull" software from these repositories. To actually add or change software, datasets, ... etc., the respective organizations controlling CVMFS repositories should be contacted directly.
+Presently, we use CernVMFS (CVMFS) to provide the Alliance's (or Compute Canada's) software stack. Through the Alliance CVMVS servers, several other publically available CVMFS software repositories are available. 
+The examples are a Singularity/Apptainer repository from [OpenScienceGrid](https://opensciencegrid.org/ "OpenScienceGrid"), and a Genomics software colection (GenPipes/MUGQIC) from [C3G](https://computationalgenomics.ca/). 
+Note that we can only "pull" the software from these repositories. To actually add or change software, datasets, etc., or receive support, the respective organizations controlling these CVMFS repositories should be contacted directly.
 
 Access to the CVMFS should be transparent to the Grex users: no action is needed other than loading a software module or setting a path.
 
-Grex does not have a local CVMFS stratum server. All we do is to cache the software items as they get requested. Thus, there can be a delay associated with pulling a software item from **Stratum 1 (Replica Server)** for the first time. It usually does not matter for serial programs but parallel codes, that rely on simultaneous process spawning across many nodes, might cause timeout errors. Thus, it is probably a good idea to first access the codes in a small interactive job to warm up the Grex's local CVMFS cache.
+Grex does not have a local CVMFS "stratum" (that is, a replica server). All we do is to cache the software items as they get requested. Thus, there can be a delay associated with pulling a software item for the first time, from the Alliance's Stratum 1 (Replica Servers) located at the National HPC sites.
+It usually does not matter for serial programs but parallel codes, that rely on simultaneous process spawning across many nodes, might cause timeout errors. Thus, it could be useful to first access the codes in a small interactive job to warm up Grex's local CVMFS cache.
 
 ## The Alliance's software stack
 ---
@@ -28,18 +31,29 @@ module purge
 module load CCEnv
 {{< /highlight >}}
 
-After the above command, use **module spider** to search for any software that might be available in the CC software stack. Note that "default" environments (the _StdEnv_ and _nixpkgs_ modules of the CC stack) are not loaded automatically, unlike on Compute Canada general purpose (GP) clusters. Therefore, it is a good practice to load these modules right away after the CCEnv. The example below loads the Nix package layer that forms the base layer of CC software stack, and then one of the "standard environments", in this case based on Intel 2018 and GCC 7.3 compilers, MKL and OpenMPI.
+After the above command, use **module spider** to search for any software that might be available in the CC software stack. 
+Note that "default" environments (the _StdEnv_ and either _gentoo_ or _nixpkgs_ modules of the CC stack) are not loaded automatically, unlike on CC / Alliance general purpose (GP) HPC machines. 
+Therefore, it is a good practice to load these modules right away after the CCEnv. The example below loads the Nix package layer that forms the base layer of CC software stack, and then one of the "standard environments", in this case based on Intel 2018 and GCC 7.3 compilers, MKL and OpenMPI.
 
-There is more than one StdEnv version to choose from.
+There is more than one StdEnv version to choose from. An example below is for the older StdEnv/2018.3
 
 {{< highlight bash >}}
 module load nixpkgs/16.09
 module load StdEnv/2018.3
+module load arch/avx2
 {{< /highlight >}}
 
 Note that there are several CPU architectures in the CC software stack. They differ in the CPU instruction set used by the compilers, to generate the binary code. The default for legacy systems like Grex is the lowest SSE3 architectures _arch/sse3_. It ensures that there is no failure on the legacy Grex nodes (which are of NEHALEM, SSE4.2 architecture) due to more recent instructions like AVX, AVX2 and AVX512 that were added by Intel afterwards.
 
 For running on Contributed Nodes, that may be of much newer CPU generation, it is better to use the _arch/avx512_ module and setting RSNT_ARCH=avx512 environment variable in the job scripts.
+
+An example for the most current StdEnv/2023 that uses _gentoo_ instead of _nixpkgs_ and the AVX512-enabled codes.
+
+{{< highlight bash >}}
+module load StdEnv/2023
+module load arch/avx512
+{{< /highlight >}}
+
 
 Some of the software items on CC software stack might assume certain environment variables set that are not present on Grex; one example is SLURM_TMPDIR. In case your script fails for this reason, the following line could be added to the job script:
 
@@ -115,13 +129,25 @@ sbatch imb.slurm
 
 Because Compute Canada software stack can only distribute open source software to non-CC systems like Grex, proprietary/restricted software items are omitted. This means that Intel compiler modules, while providing their redistributable parts necessary to run the code compiled with them, will not work to compile new code on Grex. Thus, only GCC compilers and GCC-based toolchains from CC Stack are useful for the local code development on Grex.
 
-## OpenScienceGrid
+## Other software repositories available through CC CVMFS
+
+### OpenScienceGrid repository for Singularity/Apptainer OSG software
 ---
 
-On Grex, we mount OSG repositories, mainly for Singularity containers provided through OSG. Pointing the singularity to the desired path under /cvmfs/singularity.opensciencegrid.org/ will automatically mount and fetch the required software items. Discovering them is up to the users. See more in our [Containers](software/containers) documentation page.
+On Grex, we mount OSG repositories, mainly for Singularity/Apptainer containers provided through OSG. 
+Pointing the singularity to the desired path under **/cvmfs/singularity.opensciencegrid.org/** will automatically mount and fetch the required software items. 
+Discovering them is up to the users. One of the ways would be simply exploring the directories under the path _/cvmfs/singularity.opensciencegrid.org/_ using _ls_ and _cd_ commands.
+
+See more about using Singularity in our [Containers](software/containers) documentation page.
 
 ---
 
+### C3G repository for GenPipes/MUGQIC genomes and modules
+---
+
+On Grex, GenPipes/MUGQIC repositories should be also available through CC CVMFS. Please refer to the [GenPipes/MUGQIC Documentation](https://genpipes.readthedocs.io/en/latest/deploy/access_gp_pre_installed.html#docs-access-gp-pre-installed) provided by C3G on how to user them.
+
+---
 <!-- {{< treeview display="tree" />}} -->
 
 <!-- Changes and update:

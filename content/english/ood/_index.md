@@ -28,7 +28,7 @@ To connect from outside the UM network, please install and start __UManitoba Vir
 **Connect to OOD using UManitoba [VPN](https://umanitoba.ca/computing/ist/connect/virtualpn.html):**
 
 > - Make sure Pulse Secure VPN is connected
-> - Point your Web browser to [https://zebu.hpc.umanitoba.ca](https://xebu.hpc.umanitoba.ca) 
+> - Point your Web browser to [https://zebu.hpc.umanitoba.ca](https://zebu.hpc.umanitoba.ca) 
 > - Use your Alliance (Compute Canada) username and password to log in to Grex OOD.
 
 ---
