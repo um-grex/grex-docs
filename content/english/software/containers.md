@@ -2,7 +2,7 @@
 weight: 1600
 linkTitle: "Containers"
 title: "Containers for Software"
-description: "Everything you need to know before to use containers and singularity."
+description: "Everything you need to know before to use Singularity containers"
 categories: ["Software", "Applications"]
 #tags: ["Configuration"]
 ---
@@ -10,7 +10,13 @@ categories: ["Software", "Applications"]
 ## Introduction
 ---
 
-Linux Containers are means to isolate software dependencies from the base Linux operating system. On Grex, we support the [Singularity](https://sylabs.io/guides/3.5/user-guide/) container system, now developed by a company called SyLabs. Several other Linux container engines exist, most notably [Docker](https://www.docker.com) which is a very popular tool in DevOps community. Presently Docker containers cannot be directly supported on shared HPC systems like Grex. However, with help of Singularity, it is possible to run Docker images from [DockerHub](https://hub.docker.com/), as well as native Singularity images from other repositories, such as [SingularityHub](https://singularity-hub.org/) and [SyLabsCloud](https://cloud.sylabs.io/home).
+Linux Containers are means to isolate software dependencies from the base Linux operating system. 
+On Grex, we support the [Singularity](https://sylabs.io/guides/3.11/user-guide/) container system, developed by a company called SyLabs. 
+There was a fork of the Singularity project, that produced a new project called [Apptainer](https://apptainer.org/). 
+As of now (early 2024), Singularity-CE by Sylabs and Apptainer by Linux Foundations are using the same SIF image format and thus are largely same with respect to their usage and main features.
+Grex supports Singularity-CE, while National DRI (the Alliance) HPC machines like Cedar or Graham support Apptainer. 
+
+Several different Linux container engines exist, most notably [Docker](https://www.docker.com) which is a very popular tool in DevOps community. Presently Docker containers cannot be directly supported on shared HPC systems like Grex. However, with help of Singularity, it is possible to run Docker images from [DockerHub](https://hub.docker.com/), as well as native Singularity images from other repositories, such as [SingularityHub](https://singularity-hub.org/) and [SyLabsCloud](https://cloud.sylabs.io/home).
 
 ## Using Singularity on Grex
 ---
