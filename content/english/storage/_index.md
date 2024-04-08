@@ -15,9 +15,9 @@ As of now, the storage system of Grex consists of the following:
 
 - The **/home** NFSv4/RDMA filesystem is served by a very fast NVME disk server. The total size of the filesystem is __15 TB__. The quota per-user is __100 GB__ of space and __500K__ files. 
 
-- The **/global/scratch** Lustre filesystem, Seagate SBB, total usable size of **418 TB**. It is intended to be used as the high-performance, scalable workspace for active projects. It is not backed up and is not intended for long-time storage of users' data that is not actively used. The default quota is **4 TB** of space and **1 M** files per user and can be increased on request to **10 TB** per research group. Larger disk space requires a local RAC application.
+- _Disabled as of now_ The **/global/scratch** Lustre filesystem, Seagate SBB, total usable size of **418 TB**. It is intended to be used as the high-performance, scalable workspace for active projects. It is not backed up and is not intended for long-time storage of users' data that is not actively used. The default quota is **4 TB** of space and **1 M** files per user and can be increased on request to **10 TB** per research group. Larger disk space requires a local RAC application.
 
-- The **/project** Lustre filesystem: ias of Sep 2022, an additional storage of **1 PB** was added to Grex. There is no backup and it is allocated per group.
+- The **/project** Lustre filesystem: as of Sep 2022, an additional storage of **1 PB** was added to Grex. There is no backup and it is allocated per group.
 
 <!--
 - The **/project**: a project file system is in the process of installation on Grex. More information will be available in time.
@@ -26,8 +26,7 @@ As of now, the storage system of Grex consists of the following:
 | File system         | Type       | Total space | Quota/User | Number of files |
 | :---------:         | :--:       | :---------: | :--------: | :-------------: |
 | __/home__           | NFSv4/RDMA | **15 TB**   | 100 GB     | 500 K           |
-| __/global/scratch__ | Lustre     | **418 TB**  | 4 TB       | 1 M             |
-| __/project__        | Lustre     | **1 PB**    | -          | -               |
+| __/project__        | Lustre     | **2 PB**    | -          | -               |
 
 - The [local node storage](running-jobs/using-localdisks) as defined by the environment variable __$TMPDIR__ is recommended for temporary job data that is not needed after job completes. Grex nodes have SATA local disks of various capacities, leaving 150 Gb, 400 Gb, 800 Gb and 1700 Gb usable space per node, depending on the kind of local disk it has.
 
