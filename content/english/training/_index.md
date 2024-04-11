@@ -19,6 +19,8 @@ categories: ["Training"]
     display="tree"
 />}}
 
+## Next workshop
+
 ## WestDRI training material
 ---
 
