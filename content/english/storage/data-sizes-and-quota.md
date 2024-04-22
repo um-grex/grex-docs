@@ -10,14 +10,14 @@ categories: ["Information"]
 ## Data size and quotas
 ---
 
-This section explains how to find the actual space and inode usage of your __/home/__ and __/project__ allocations on Grex. We limit the size of the data and the number of files that can be stored on these filesystems.
+This section explains how to find the actual space and inode usage of __/home/__ and __/project__ allocations on Grex. We limit the size of the data and the number of files that can be stored on these filesystems. The table provides "defaut" storage quota on Grex. Larger quota can be obtained on __/project__ via UM local RAC process.
 
 | File system         | Type        | Total space | Bulk Quota | Files Quota |
 | -----------         | :---:       | :---------: | :------------: | :------------: |
 | __/home__           | NFSv4/RDMA  | **15 TB**   | 100 GB / user   |0.5M  |
-| __/project__        | Lustre      | **1 PB**    | 5-20 TB / group        | 1M / user , 2M/ group |
+| __/project__        | Lustre      | **2 PB**    | 5-20 TB / group        | 1M / user , 2M/ group |
 
-To figure out where your current usage stands with the limit, POSIX __quota__ or Lustre's analog, __lfs quota__, commands can be used.
+To figure out where your current usage stands with the limit, POSIX __quota__ or Lustre's analog, __lfs quota__, commands can be used. A convenient command, __disk-usage-report__ summarizes usage and quota across all the available filesystems.
 
 ### NFS quota 
 ---
@@ -40,7 +40,7 @@ The command will result in something like this (note the __-s__ flag added to ma
 [someuser@bison ~]$ quota -s
   Disk quotas for user someuser (uid 12345):
      Filesystem  space quota limit grace files quota limit grace
-192.168.24.70:/   249M  100G  105G        4953  500k 1000k       
+192.168.x.y:/   249M  100G  105G        4953  500k 1000k       
 {{< /highlight >}}
 
 The output is a self-explanatory table. There are two values: __soft__ "quota" and __hard__ "limit" per each of (space, files) quotas. If you are over soft quota, the value of used resource (space or files) will have a star _*_ to it, and a __grace__ countdown will be shown. Getting over grace period, or over the hard limit prevents you from writing new data or creating new files on the filesystem. If you are over quota on __/home__, it is time to do some clean up there, or migrate the data-heavy items to __/global/scratch__ where they belong.
@@ -52,11 +52,36 @@ __CAVEAT:__ The Alliance (Compute Canada) breaks the POSIX standard by redefinin
 ### Lustre quota
 ---
 
-There are two Lustre storage appliances on Grex,__/project__ . __/global/scratch/__ . Since 2022, the main project filesystem on Grex is __/project__ . The previous filesystem was called __/global/scratch/__ and , as of now, is not available for users. 
+There are two Lustre storage appliances on Grex,__/project__ and __/global/scratch/__ . Since 2022, the main project filesystem on Grex is __/project__ . The previous filesystem was called __/global/scratch/__ and , as of now, is disabled and not available for users. 
+
+On a Lustre filesystem, three types of quota are possible: per user, across all the filesystem; per group, across all the filesystem; and a directory quota that is per directory, per group. 
 
 #### /project/ (current)
 
-TBD
+This filesystem has a similar [hierarchical directory structure](https://docs.alliancecan.ca/wiki/Project_layout) to the Alliance/ComputeCanada HPC systems. On Grex, it is like follows:
+
+ *  /project/Project-GID/{user1, user2, user3} 
+
+Where the Project-GID is a number of the PI's default RAPI group in CCDB, and user1..3 are the users on Grex, including the PI. 
+
+{{< alert type="warning" >}}
+
+Note that the directories get created, and the quota is set, on a first login of a user to the Grex system. Before the first login of any user, no /home and /project directories exist and no quota is set for them on Grex. Thus, certain operations that need them ( running jobs through [OOD](/ood), and using automated workflows) would fail. Please log in to Grex via a normal SSH through a regular login node first!
+
+{{< /alert >}}
+
+It is inconvenient to go by using numerical values of the Project-GID in the paths, so there are symbolic links present in each user's _/home/$USER/projects_ directory that point to his _/project_ directories.  A user can belong to more than one research groups and thus can have more than one project links. Also, on the filesystem there is a system of symbolic links in the form of _/project/Faculty/def-PIname/_ . 
+
+{{< highlight bash >}}
+[someuser@bison ~]$ lfs quota -h -p 123456 /project/123456
+Disk quotas for prj 123456 (pid 123456):
+     Filesystem    used   quota   limit   grace   files   quota   limit   grace
+/project/123456
+                 150.6G  4.883T  5.371T       -  208654  2000000 2200000       -   
+
+{{< /highlight >}}
+
+In addition to the directory quota, each user has her own quota, presently for inodes (the number of files and directories on the entire filesystem. 
 
 #### /global/scratch/  (old)
 
@@ -75,7 +100,7 @@ With the output:
       /sbb   622G  2.644T  3.653T     - 5070447 6000000 7000000     -
 {{< /highlight >}}
 
-Presently the  __group__ or __project__ quota on __/global/scratch__ are not enforced.
+Presently the  group or directory quotas on __/global/scratch__ are not enforced.
 
 If you are over quota on Lustre __/global/scratch__ filesystem, just like for NFS, there will be a star to the value exceeding the limit, and the grace countdown will be active. 
 
