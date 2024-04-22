@@ -12,11 +12,7 @@ bannerContent: "Work in progress."
 ## Data sharing
 ---
 
-Sharing of accounts login information (like passwords or SSH keys) is strictly forbidden on Grex, as well as on most of the HPC systems. There is a mechanism of data/file sharing that does not require sharing of the accounts. To access each other's data on Grex, the UNIX groups and permissions mechanism can be used as explained below. 
-
-<!--
-We use a Westgrid exlpanation because Grex is still using Westgrid accounts and groups database, so the text below is still relevant.
--->
+Sharing of accounts login information (like passwords or SSH keys) is strictly forbidden on Grex, as well as on most of the HPC systems. There is a mechanism of data/file sharing that does not require sharing of the accounts. To access each other's data on Grex, the UNIX groups and permissions mechanism can be used as explained below. Also, Access Control Lists (ACLs) should be used for a more fine-grained control of permissions.
 
 ## UNIX groups
 ---
@@ -61,12 +57,12 @@ which would allow read and write access to the directory dir and all its files a
 ## Linux ACLs
 ---
 
-On the Lustre filesystem (__/global/scratch/$USER__), it is possible to use Linux access control lists (ACLs) which offer more fine-grained control over access than UNIX groups. Compute Canada's [Sharing Data](https://docs.alliancecan.ca/wiki/Sharing_data "Sharing data") documentation might be relevant, with one caution: on Grex, there is no project layout as exists on Compute Canada clusters.
+On the Lustre filesystemis (__/project__), it is possible to use Linux access control lists (ACLs) which offer more fine-grained control over access than UNIX groups. Compute Canada's [Sharing Data](https://docs.alliancecan.ca/wiki/Sharing_data "Sharing data") documentation describes how to use ACLs for data sharing, and Grex has a similar hierarchical structure of the __/project__ filesystem. __/home__ on Grex is an NFSv4 and has its own syntax of ACLs. Generally, we assume that it is the __/project__ where the data would be shared.
 
-An example setting of ACL command, to allow for "search" access of the top directory to a group wg-abcdf, presumably with some of the directories under it being shared by a UNIX group:
+An example setting of ACL command, to allow for "search" access of the top directory to a group wg-abcdf, presumably with some of the directories under it being shared by a UNIX group (the 123456 is the project GUID of the PI):
 
 {{< highlight bash >}}
-setfacl -m g:wg-abcdf:X /global/scratch/$USER
+setfacl -m g:wg-abcdf:X /project/123456/$USER
 {{< /highlight >}}
 
 ## External links

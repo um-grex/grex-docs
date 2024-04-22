@@ -16,7 +16,7 @@ The login nodes of Grex can be used to compile codes and to run short interactiv
 
 > **(a)** the build process and/or tests requires heavy, many-core computations
 
-> **(b)** you need access to specific hardware not present on the login nodes, such as GPUs and AVX512 CPUs.
+> **(b)** you need access to specific hardware not present on the login nodes, such as GPUs and newer CPUs.
 
 Most of the software on Grex is available through environmental modules. To find a software development tool or a library to build your code against, the __module spider__ command is a good start. The applications software is usually installed by us from sources, into subdirectories under __/global/software/cent7__
 
@@ -55,7 +55,7 @@ Due to the hierarchical nature of our **Lmod** modules system, compilers and cer
 
 See Modules for more information.
 
-__There is no module loaded by default__! There will be only the system's GCC-4.8 and no MPI whatsoever. To get started, load a compiler/version. Then, if necessary, an MPI (ompi or impi) and if necessary, CUDA (for which 10.2 is the current version, there is no known reason to use another).
+__There is no module loaded by default__! There will be only the system's GCC-4.8 and no MPI whatsoever. To get started, load a compiler/version. Then, if necessary, an MPI (ompi or impi) and if necessary, CUDA if GPUs are required, etc..
 
 {{< highlight bash >}}
 module load intel/2019.5
@@ -79,13 +79,13 @@ At the moment of writing this documentation, the following Intel Compilers Suite
   - __Intel 2020.4__ : a recent Intel Parallel Studio suite.
   - __Intel 2019.5__ : a recent Intel Parallel Studio suite. Most software is compiled with it, so use this one if unsure.
   - __Intel 2017.8__ : a somewhat less recent Intel Parallel studio suite.
-  - __Intel 15.0__ : Legacy, for maintenance of older Grex software. Do not use it for anything new, unless absolutely must.
+  - __Intel 15.0__ : Legacy, for maintenance of older Grex software. Do not use it for anything new, unless absolutely must. Broken now. Will be removed soon.
   - __Intel 14.1__ : a very old one, for maintenance of older Grex software, and broken. Do not use. It will be removed soon.
-  - __Intel 12.1__ : a very old one, for maintenance of a very old PETSc version. Do not use.
+  - __Intel 12.1__ : a very old one, for maintenance of a very old PETSc version. Do not use. Broken, wont build new code. Will be removed soon.
 
 The name for the Intel suite modules is __intel__; ```module spider intel``` is the command to find available Intel versions. The latter is left for compatibility with legacy codes. It does not work with systems C++ standard libraries well, so _icpc_ for Intel 12.1 might be dysfunctional. So the intel/12.1 toolchain is actually using GCC 4.8's C++ and C compilers. 
 
-If unsure, or do not have a special reason otherwise, use Intel 15.0 compilers (icc, icpc, ifort). Intel 15.0 is probably the first Intel compiler to support AVX512 if you are going to use the contributed nodes that have AVX512 architecture.
+If unsure, or do not have a special reason otherwise, use Intel 2019.5 compilers (icc, icpc, ifort). 
 
 The Intel compilers suite also provides tools and libraries such as [MKL](https://software.intel.com/en-us/mkl) (Linear Algebra, FFT, etc.), Intel Performance Primitives (IPP), Intel [Threads Building Blocks](https://software.intel.com/en-us/tbb) (TBB), and [VTune](https://software.intel.com/en-us/vtune). Intel MPI as well as MKL for GCC compilers are available as separate modules, should they be needed for use separately.
 
@@ -102,7 +102,7 @@ At the moment of writing this page, the following GCC compilers are available:
 
 The name for GCC is __gcc__, as in ```module spider gcc```. The GCC 4.8 is a placeholder module; its use is to unload any other modules of the compiler family, to avoid toolchains conflicts. Also, GCC 4.8 is the only multi-lib GCC compiler around; all the others are strictly **64-bit**, and thus unable to compile legacy **32-bit** programs.
 
-For utilizing the AVX512 instructions, probably the best way is to go with the latest GCC compilers (9.2 and 7.4) and and latest MKL. GCC 4.8 does not handle AVX512. Generally Intel compilers outperform GCC, but GCC might have better support for the recent C++11,14,17 standards.
+For utilizing the AVX512 instructions, probably the best way is to go with the latest GCC compilers (9.2 and 11.2) and and latest MKL. GCC 4.8 does not handle AVX512. Generally Intel compilers outperform GCC, but GCC might have better support for the recent C++11,14,17 standards.
 
 ## MPI and Interconnect libraries
 ---

@@ -6,24 +6,40 @@ description: "Information about user data backup on Grex."
 categories: ["Information"]
 banner: true
 bannerContent: "Work in progress."
-draft: true
+draft: false
 #tags: ["Configuration"]
 ---
 
 ## Backup policies
 ---
 
-TBD
+Since late 2023 there has been a tape backup for user data stored on main Grex filesystems, __/home__ and __/project__. Our limited resources and large amounts of data do put some limitations on what and how fast can be backed up and restored. All backup is done to tape in the same HPCC datacentre.
+
+The __/home__ filesystem is backed up daily using incremental backup. A new full backup is done quarterly.
+
+We aim for the __/project__ filesystem to have a monthly backup, with a full backup done quarterly. However, due to
+the large amount of data, the backup for particularly active projects having larger file counts and/or large data can be delayed past one month.
+
+Retention of the data on tape is determined by our available tape space. Generally, there is a month's worth of retain
+ed data on __/project__ and three months on __/home__.
+
 
 ## Restoring your data from backup
 ---
 
-TBD
+Restoring data from tape backup requires a Sysadmin intervention. 
+On __/project__ it may take more time if the request happens during the time of the full backup happening (in January, April, July, October). 
+
+Please send us a [support](/support) request to restore your data from the tape backup.
 
 ## Disclaimer of responsibility despite Backup
 ---
 
-TBD
+Any electronic or mechanical system can fail. The tape system is located in the same datacentre as the storage it backs up.
+So, while backup we have adds a level of data protection against system failures and user errors, it is by no means absolute.
+
+Users are encouraged to research and adopt data preservation strategies for their research data that is particularly important to them (for example, a set of data that is unique and cannot be easily re-generated). One of the popular strategies is the 3+2+1 :
+It usually is understood as keeping at least 3 copies of your data, on at least 2 storage locations, and at least 1 copy off-site.
 
 ---
 
