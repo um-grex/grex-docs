@@ -72,6 +72,22 @@ The commands **singularity build** and **singularity pull** would get Singularit
 
 Use the __-\-nv__ flag to singularity run/exec/shell commands. Naturally, you should be on a node that has a GPU, in an interactive job. NVIDIA provides many pre-built Docker and Singularity container images on their ["GPU cloud"](https://ngc.nvidia.com/), together with instructions on how to pull them and to run them. These should work on Grex without much changes.
 
+## Using Apptainer from CC Stack on Grex
+---
+The Alliance's (formerly ComputeCanada) software stack now provides Apptainer modules in the two latest Standard Environments , _StdEnv/2020_ and _StdEnv/2023_. Most recent Apptainer versions (1.2.4 and older) do not require "suexec" and thus can be used off the CVMFS as usual. The only caveat would be to first unload any "singularity" or "apptainer" modules from other software stacks by _module purge_. 
+
+{{< highlight bash >}}
+module purge
+module load CCEnv
+module load arch/avx512 StdEnv/2023
+module load apptainer
+
+apptainer version
+apptainer run docker://ghcr.io/apptainer/lolcow
+{{< /highlight >}}
+
+---
+
 ## OpenScienceGrid CVMFS
 ---
 
@@ -82,19 +98,19 @@ module load singularity
 singularity shell /cvmfs/singularity.opensciencegrid.org/jeffersonlab/remoll\:develop
 {{< /highlight >}}
 
-A partial description of what is present on OSG CVMFS is available [here](https://support.opensciencegrid.org/support/solutions/articles/12000024676-docker-and-singularity-containers).
+It looks like the list of what is present on the OSG CVMFS is on Github: [OSG Github docker images](https://github.com/opensciencegrid/cvmfs-singularity-sync/blob/master/docker_images.txt) .
+
 
 ## External links
 ---
 
  * [Singularity/Sylabs homepage](https://sylabs.io)
- * [Singularity documentation](https://docs.alliancecan.ca/wiki/Singularity) (The Alliance documentation)
- * [Westgrid Singularity tutorial](https://westgrid.github.io/trainingMaterials/materials/singularity20210526.pdf), a recording can be found [here](https://westgrid.github.io/trainingMaterials/tools/virtual/)
+ * [Apptainer homepage](https://apptainer.org/)
+ * [Singularity documentation on the Alliance Wiki](https://docs.alliancecan.ca/wiki/Singularity) 
  * [Docker Hub](https://hub.docker.com)
- * [Singularity Hub](https://ngc.nvidia.com/)
- * [Sylabs Cloud](https://cloud.sylabs.io/home)
+ * [RedHat Quay.io Hub](https://quay.io/search)
+ * [Sylabs Cloud](https://cloud.sylabs.io/builder)
  * [NVIDIA NGC cloud](https://ngc.nvidia.com/)
- * [OSG Helpdesk for Singularity](https://support.opensciencegrid.org/support/solutions/articles/12000024676-docker-and-singularity-containers)
 
 <!-- {{< treeview display="tree" />}} -->
 
