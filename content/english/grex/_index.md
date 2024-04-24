@@ -102,7 +102,7 @@ Grex's compute nodes have access to three filesystems:
 | :-----------:       | :----:      | :----------: | :--------------: |
 | __/home__           | NFSv4/RDMA  | **15 TB**    | 100 GB           |
 | __/global/scratch__ | Lustre      | **418 TB**   | 4 TB             |
-| __/project__        | Lustre      | **1 PB**     | Allocated per group. |
+| __/project__        | Lustre      | **2 PB**     | Allocated per group. |
 
 In addition to the shared file system, the compute nodes have their own local disks that can be used as temporary storage when [running jobs](running-jobs).
 
