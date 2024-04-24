@@ -9,7 +9,7 @@ bannerContent: "Work in progress."
 #tags: ["Configuration"]
 ---
 
-## Data sharing  PPPPP
+## Data sharing
 ---
 
 Sharing of accounts login information (like passwords or SSH keys) is strictly forbidden on Grex, as well as on most of the HPC systems. There is a mechanism of data/file sharing that does not require sharing of the accounts. To access each other's data on Grex, the UNIX groups and permissions mechanism can be used as explained below. Also, Access Control Lists (ACLs) should be used for a more fine-grained control of permissions.
