@@ -9,7 +9,7 @@ bannerContent: "Work in progress."
 #tags: ["Configuration"]
 ---
 
-## Data sharing
+## Data sharing  PPPPP
 ---
 
 Sharing of accounts login information (like passwords or SSH keys) is strictly forbidden on Grex, as well as on most of the HPC systems. There is a mechanism of data/file sharing that does not require sharing of the accounts. To access each other's data on Grex, the UNIX groups and permissions mechanism can be used as explained below. Also, Access Control Lists (ACLs) should be used for a more fine-grained control of permissions.
@@ -19,13 +19,17 @@ Sharing of accounts login information (like passwords or SSH keys) is strictly f
 
 Each UNIX (or Linux) file or directory is owned by an individual user and also by a group (which may be composed of several users). The permission to access files and directories can be restricted to just the individual owning the file, to the group that owns the file, or access can be unrestricted.
 
-By default, each account (username) is set up with an associated UNIX group containing just that single username. So, even if you have set permission for your UNIX group to access files, they are still not being shared with anyone else. You can override the default by using the __chmod__ command to set unrestricted read access to your files. However, if you need more specific control over access, you can ask us to create a special UNIX group containing the usernames of other researchers with whom you want to share data by sending an email to support (__support@tech.alliancecan.ca__) to ask that a new UNIX group be created for you. Include a list of the users who should be added to that group. One user should be designated as the authority for the group. If a request to join the group is made from someone else, we will ask the designated authority for the permission to add the new researcher to the group. The group name must be of the format __wg-xxxxx__ where __xxxxx__ represents up to five characters. Please indicate your preference for a group name in your email. 
+By default, each account (username) is set up with an associated UNIX group containing just that single username. So, even if you have set permission for your UNIX group to access files, they are still not being shared with anyone else. You can override the default by using the __chmod__ command to set unrestricted read access to your files. However, if you need more specific control over access, you can ask us to create a special __UNIX__ group containing the usernames of other researchers with whom you want to share your data by sending an email to support (__support@tech.alliancecan.ca__) to ask that a new UNIX group be created for you. Include a list of the users who should be added to that group. One user should be designated as the authority for the group. If a request to join the group is made from someone else, we will ask the designated authority for the permission to add the new researcher to the group. The group name must be of the format __wg-xxxxx__ where __xxxxx__ represents up to five characters. Please indicate your preference for a group name in your email. 
 
 The group will be set up on the Grex system. This may take a day or two to set up. You will get an email whenever you are added or removed from a UNIX group.
 
 Now that you have a __wg-xxxxx__ UNIX group created, you can set up the data sharing with it, by setting the permissions as described below.
 
 The directory you wish to share should be owned by the group and permitted to the group. For example:
+
+{{< alert type="warning" >}}
+In the following example and for demonstration purpose, we have used __/global/scratch__ but the instructions could be applied to __/project__ directories as well.
+{{< /alert >}}
 
 {{< highlight bash >}}
 chgrp -R wg-group dir

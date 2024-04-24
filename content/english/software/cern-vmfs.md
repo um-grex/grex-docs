@@ -64,7 +64,8 @@ The  __module spider__ command can be used on Grex to search for modules that ar
 {{< highlight bash >}}
 module purge
 module load CCEnv
-module load arch/avx512 StdEnv/2023
+module load arch/avx512 
+module load StdEnv/2023
 module spider amber
 {{< /highlight >}}
  

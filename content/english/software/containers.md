@@ -79,7 +79,8 @@ The Alliance's (formerly ComputeCanada) software stack now provides Apptainer mo
 {{< highlight bash >}}
 module purge
 module load CCEnv
-module load arch/avx512 StdEnv/2023
+module load arch/avx512 
+module load StdEnv/2023
 module load apptainer
 
 apptainer version
