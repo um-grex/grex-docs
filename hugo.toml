@@ -11,7 +11,7 @@ defaultContentLanguage = 'en'
 enableEmoji            = false
 publishDir             = 'public'
 
-[Author]
+[param.author]
   name = 'Ali Kerrache, Grigory Shamov'
 
 #================================================================================
