@@ -5,7 +5,7 @@ title: "Connecting to Grex via X2Go"
 description: "Everything you need to know about connecting to Grex via X2Go."
 categories: ["How to"]
 banner: true
-bannerContent: "X2Go clients may not work currently on Grex because their lack the Duo MFA support"
+bannerContent: "X2Go clients may not work currently on Grex because due to a lack of Duo MFA support"
 #tags: ["Configuration"]
 ---
 
