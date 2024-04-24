@@ -16,7 +16,13 @@ Linux (and UNIX) have a graphical user interface framework, which is called [X11
 
 Luckily, there is a solution for this, which is called NX. NX software on client and server sides caches and compresses X11 traffic, leading to a great improvement of the performance of X11 applications. A free NX-based remote desktop solution exists, and is called [X2Go](https://wiki.x2go.org/doku.php/doc:newtox2go "X2Go").
 
-On Grex, we have supported X2Go since 2015; that is, we run an X2Go __server__ on Grex login nodes. So, if you have a valid Grex account, and an X2Go client installed on your local machine, you can connect to Grex and use a remote Linux desktop to run your favorite GUI applications.
+On Grex, we have supported X2Go since 2015; that is, we ran an X2Go __server__ on Grex login nodes. However, X2go lacks support of the newly enforced [Duo MFA](/connecting/mfa/). Therefore, sadly, this great tool is no longer supported on Grex.
+
+Please refer to [OpenOnDemand](/ood/) as the alternative. Thanks!
+
+<!--
+
+So, if you have a valid Grex account, and an X2Go client installed on your local machine, you can connect to Grex and use a remote Linux desktop to run your favorite GUI applications.
 
 Since X2Go runs over an encrypted SSH connection, it does not require anything else to access Grex. If you have SSH command line access working, and have X2Go client working, it should be enough to get you started.
 
@@ -56,6 +62,12 @@ X2Go relies on an older version of NX library that might fail to support newer v
 
 * The Alliance documentation page about [X2Go](https://docs.alliancecan.ca/wiki/X2Go)
 * X2Go installation on the [X2Go Wiki](https://wiki.x2go.org/doku.php/doc:installation:x2goclient)
+
+-->
+
+## External links
+---
+
 * [X2Go FAQ](https://wiki.x2go.org/doku.php/doc:faq:start)
 
 <!-- {{< treeview display="tree" />}} -->
