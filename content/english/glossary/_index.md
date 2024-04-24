@@ -113,6 +113,8 @@ categories: ["Information"]
 
 ## W
 
+* WAN :: A wide-area network (WAN) is a network that spans several geographically distributed locations
+
 ## X
 
 ## Y
