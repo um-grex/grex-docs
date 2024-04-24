@@ -130,7 +130,10 @@ Discovering them is up to the users. One of the ways would be simply exploring t
 
 See more about using Singularity in our [Containers](software/containers) documentation page. 
 
+### E4S containers in the OSG repository of Singularity/Apptainer software
 ---
+
+In particular, the path __/cvmfs/singularity.opensciencegrid.org/ecpe4s__ provides access to the containerized [E4S software stack for HPC and AI applications](https://e4s-project.github.io/). 
 
 ### C3G repository for GenPipes/MUGQIC genomes and modules
 ---
