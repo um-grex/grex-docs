@@ -24,6 +24,7 @@ Currently, the following partitions are available on Grex:
 | **largemem** |  **12** |    **40** |  **480** |  384 Gb  | CascadeLake        |
 | **compute**  | **316** |    **12** | **3792** |   48 Gb  | SSE4.2             |  
 | **compute**  |   **4** |    **20** |   **80** |   32 Gb  | Avx                |
+| **test**     |   **1** |    **18** |   **36** |  512 Gb  | **-**              |
 | **-**        | **374** |     **-** | **6536** |   **-**  | **-**              |
 
 ### General purpose GPU partitions
@@ -41,18 +42,28 @@ Currently, the following partitions are available on Grex:
 > - **test**     : a **24-core** Skylake CPU Dell large memory (512 GB), NVMe workstation for interactive work and visualizations. **NEW**
 -->
 
+### Contributed CPU partitions
+---
+
+| Partition         | Nodes   | CPU type                    | CPUs/Node    | Mem/Node    | Notes           |
+| :--------:        | :-----: | :----:                      | :----------: | :--------:  | :---------:     |
+| **mcordcpu** [^5] | **5**   | ** AMD EPYC 9634 84-Core**  | **168**      | **1500 Gb** | -               |
+
 ### Contributed GPU partitions
 ---
 
-| Partition       | Nodes   | GPU type                   | CPUs/Node    | Mem/Node    | Notes           |
-| :--------:      | :-----: | :----:                     | :----------: | :--------:  | :---------:     |
-| **stamps** [^1] | **3**   | **4 - V100/16GB**          | **32**       | **187 Gb**  | AVX512          |
-| **livi**   [^2] | **1**   | **HGX-2 16xGPU V100/32GB** | **48**       | **1500 Gb** | NVSwitch server |
-| **agro**   [^3] | **2**   | **AMD Zen**                | **24**       | **250 Gb**  | AMD             |
+| Partition         | Nodes   | GPU type                   | CPUs/Node    | Mem/Node    | Notes           |
+| :--------:        | :-----: | :----:                     | :----------: | :--------:  | :---------:     |
+| **stamps** [^1]   | **3**   | **4 - V100/16GB**          | **32**       | **187 Gb**  | AVX512          |
+| **livi**   [^2]   | **1**   | **HGX-2 16xGPU V100/32GB** | **48**       | **1500 Gb** | NVSwitch server |
+| **agro**   [^3]   | **2**   | **AMD Zen**                | **24**       | **250 Gb**  | AMD             |
+| **mcordgpu** [^4] | **5**   | **AMD EPYC 9634**          | **168**      | **1500 Gb** | -               |
 
 [^1]: **stamps:** GPU nodes contributed by Prof. R. Stamps
 [^2]: **livi:**   GPU node  contributed by Prof. L. Livi 
 [^3]: **agro:**   GPU node  contributed by Faculty of Agriculture
+[^4]: **mcordgpu** GPU nodes contributed by Prof. Marcos Cordeiro (Department of Agriculture). 
+[^5]: **mcordcpu** CPU nodes contributed by Prof. Marcos Cordeiro (Department of Agriculture). 
 
 <!--
 - **stamps**   : three **4 x GPU v100/16GB** AVX512 nodes contributed by Prof. R. Stamps (Department of Physics and Astronomy).
@@ -63,17 +74,18 @@ Currently, the following partitions are available on Grex:
 ### Preemptible partitions
 ---
 
-The following **pre-emptible partition** are set for general use of the contributed nodes:
+The following **preemptible partition** are set for general use of the contributed nodes:
 
-| Partition       | Contributed by |
-| :--------:      | :-----: |
-| **stamps-b**    | Prof. R. Stamps|
-| **livi-b**      | Prof. L. Livi |
+| Partition       | Contributed by         |
+| :--------:      | :-----:                |
+| **stamps-b**    | Prof. R. Stamps        |
+| **livi-b**      | Prof. L. Livi          |
 | **agro-b**      | Faculty of Agriculture |
+| **mcordgpu-b**  | Faculty of Agriculture |
 
 The former five partitions (**skylake**, **compute**, **largemem**, **test** and **gpu**) are generally accessible. The next three partitions (**stamps**, **livi** and **agro**) are open only to the contributor's groups.
 
-On the contributed partitions, the owners' group has preferential access. However, users belonging to other groups can submit jobs to one of the pre-emptible partitions (ending with **\-b**) to run on the contributed hardware as long as it is unused, on the condition that their jobs can be preempted (that is, killed) should owners' jobs need the hardware. There is a minimum runtime guaranteed to pre-emptible jobs, which is as of now 1 hour. The maximum wall time for the pre-emptible partition is set per partition (and can be seen in the output of the __sinfo__ command). To have a global overview of all partitions on Grex, run the custom script **partition-list** from your terminal. 
+On the contributed partitions, the owners' group has preferential access. However, users belonging to other groups can submit jobs to one of the preemptible partitions (ending with **\-b**) to run on the contributed hardware as long as it is unused, on the condition that their jobs can be preempted (that is, killed) should owners' jobs need the hardware. There is a minimum runtime guaranteed to preemptible jobs, which is as of now 1 hour. The maximum wall time for the preemptible partition is set per partition (and can be seen in the output of the __sinfo__ command). To have a global overview of all partitions on Grex, run the custom script **partition-list** from your terminal. 
 
 On the special partition **test**, oversubscription is enabled in SLURM, to facilitate better turnaround of interactive jobs.
 
@@ -81,10 +93,8 @@ Jobs cannot run on several partitions at the same time; but it is possible to sp
 
 Jobs will be rejected by the SLURM scheduler if partition's hardware and requested resources do not match (that is, asking for GPUs on compute, largemem or skylake partitions is not possible). So, in some cases, explicitly adding __-\-partition=__ flag to SLURM job submission is needed.
 
-Jobs that require __stamps-b__ or __gpu__ partitions have to use GPUs, otherwise they will be rejected; this is to prevent of bogging up the precious GPU nodes with CPU-only jobs!
+Jobs that require __stamps-b__ or __gpu__ partitions have to use GPUs, otherwise they will be rejected; this is to prevent bogging up the precious GPU nodes with CPU-only jobs!
 
 <!-- Changes and update:
-* 
-*
-*
+* Last reviewed on: Apr 30, 2024.
 -->

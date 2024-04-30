@@ -37,7 +37,7 @@ Please remember to change **username** in the above command with your Compute Ca
 ### Linux 
 ---
 
-Linux provides the command line SSH package, OpenSSH, which is installed by default in most of the Linux distributions. If not, or you are using a very minimal Linux installation, use your package manager to install OpenSSH package. In any terminal window **ssh** (as well as **scp** , **sftp** ) commands should work. To connect to Grex, use:
+Linux provides the command line SSH package, OpenSSH, which is installed by default in most of the Linux distributions. If not, or you are using a very minimal Linux installation, use your package manager to install the OpenSSH package. In any terminal window **ssh** (as well as **scp** , **sftp** ) commands should work. To connect to Grex, use:
 
 {{< highlight bash >}}
 ssh -XY username@grex.hpc.umanitoba.ca
@@ -65,7 +65,7 @@ The (probably the most popular) free software combination to work under Windows 
 * WinSCP graphical SFTP client: [download WinSCP](https://winscp.net/eng/index.php)
 * A free X11 server for Windows: [download VCXSrv](https://sourceforge.net/projects/vcxsrv/)
 
-WinSCP interacts with PuTTy, so you can configure it to open SSH terminal windows from WinSCP client. For X11 forwarding, make sure the "X11 tunneling" is enabled in PuTTy's session settings, and VCXSrv is running (it sits in the system tray and does nothing unless you start a graphical X11 application).
+WinSCP interacts with PuTTy, so you can configure it to open SSH terminal windows from the WinSCP client. For X11 forwarding, make sure the "X11 tunneling" is enabled in PuTTy's session settings, and VCXSrv is running (it sits in the system tray and does nothing unless you start a graphical X11 application).
 
 The Alliance wiki has a [PuTTY](https://docs.alliancecan.ca/wiki/Connecting_with_PuTTY) documentation page with some useful screenshots.
 
@@ -88,7 +88,7 @@ ssh -Y username@grex.hpc.umanitoba.ca
 #### Windows 10, WSL subsystem
 ---
 
-There is a Linux Subsystem for Windows which allows you running a containerized instance of Linux (Ubuntu, for example) from under Windows 10. Refer to [MS documentation on enabling WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10). Then, you will have the same OpenSSH under Linux. 
+There is a Linux Subsystem for Windows which allows you to run a containerized instance of Linux (Ubuntu, for example) from under Windows 10. Refer to [MS documentation on enabling WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10). Then, you will have the same OpenSSH under Linux. 
 
 It is actually possible to run X11 applications from WSL as well; you would need to get VCXSrv running, on the Windows side, and DISPLAY variable set on the WSL Linux side.
 
@@ -126,7 +126,5 @@ You would probably like to explore software via [Modules](software/using-modules
 <!-- {{< treeview display="tree" />}} -->
 
 <!-- Changes and update:
-* 
-*
-*
+* Last reviewed on: Apr 29, 2024. 
 -->

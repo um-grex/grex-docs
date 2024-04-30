@@ -12,7 +12,7 @@ enableEmoji            = false
 publishDir             = 'public'
 
 [param.author]
-  name = 'Ali Kerrache, Grigory Shamov'
+  name = 'Ali Kerrache, Grigory Shamov, Stefano Ansaloni'
 
 #================================================================================
 # Languages parameters

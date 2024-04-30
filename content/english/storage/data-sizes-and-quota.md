@@ -10,14 +10,14 @@ categories: ["Information"]
 ## Data size and quotas
 ---
 
-This section explains how to find the actual space and inode usage of __/home/__ and __/project__ allocations on Grex. We limit the size of the data and the number of files that can be stored on these filesystems. The table provides "defaut" storage quota on Grex. Larger quota can be obtained on __/project__ via UM local RAC process.
+This section explains how to find the actual space and inode usage of __/home/__ and __/project__ allocations on Grex. We limit the size of the data and the number of files that can be stored on these filesystems. The table provides a "default" storage quota on Grex. Larger quota can be obtained on __/project__ via UM local RAC process.
 
-| File system         | Type        | Total space | Bulk Quota | Files Quota |
-| -----------         | :---:       | :---------: | :------------: | :------------: |
-| __/home__           | NFSv4/RDMA  | **15 TB**   | 100 GB / user   |0.5M  |
-| __/project__        | Lustre      | **2 PB**    | 5-20 TB / group        | 1M / user , 2M/ group |
+| File system         | Type        | Total space | Bulk Quota       | Files Quota    |
+| -----------         | :---:       | :---------: | :------------:   | :------------: |
+| __/home__           | NFSv4/RDMA  | **15 TB**   | 100 GB / user    |0.5M per user   |
+| __/project__        | Lustre      | **2 PB**    | 5-20 TB / group  | 1M / user, 2M / group |
 
-To figure out where your current usage stands with the limit, POSIX __quota__ or Lustre's analog, __lfs quota__, commands can be used. A convenient command, __disk-usage-report__ summarizes usage and quota across all the available filesystems.
+To figure out where your current usage stands with the limit, POSIX __quota__ or Lustre's analog, __lfs quota__, commands can be used. A convenient command, __diskusage_report__ summarizes usage and quota across all the available filesystems.
 
 ### NFS quota 
 ---
@@ -43,7 +43,7 @@ The command will result in something like this (note the __-s__ flag added to ma
 192.168.x.y:/   249M  100G  105G        4953  500k 1000k       
 {{< /highlight >}}
 
-The output is a self-explanatory table. There are two values: __soft__ "quota" and __hard__ "limit" per each of (space, files) quotas. If you are over soft quota, the value of used resource (space or files) will have a star _*_ to it, and a __grace__ countdown will be shown. Getting over grace period, or over the hard limit prevents you from writing new data or creating new files on the filesystem. If you are over quota on __/home__, it is time to do some clean up there, or migrate the data-heavy items to __/global/scratch__ where they belong.
+The output is a self-explanatory table. There are two values: __soft__ "quota" and __hard__ "limit" per each of (space, files) quotas. If you are over soft quota, the value of used resource (space or files) will have a star _*_ to it, and a __grace__ countdown will be shown. Getting over grace period, or over the hard limit prevents you from writing new data or creating new files on the filesystem. If you are over quota on __/home__, it is time to do some cleaning up there, or migrate the data-heavy items to __/global/scratch__ where they belong.
 
 {{< alert type="warning" >}}
 __CAVEAT:__ The Alliance (Compute Canada) breaks the POSIX standard by redefining the quota command in their software stack. So, after loading the __CCEnv__ module on Grex, the quota command may return garbage. For accurate output about your quota, load __GrexEnv__ first before running the command __quota__ or use the command __diskusage_report__ (see below).
@@ -62,7 +62,7 @@ This filesystem has a similar [hierarchical directory structure](https://docs.al
 
  *  /project/Project-GID/{user1, user2, user3} 
 
-Where the Project-GID is a number of the PI's default RAPI group in CCDB, and user1..3 are the users on Grex, including the PI. 
+Where the Project-GID is a __number (or identifier)__ of the PI's default RAPI group in CCDB, and user1..3 are the users on Grex, including the PI. 
 
 {{< alert type="warning" >}}
 
@@ -70,7 +70,7 @@ Note that the directories get created, and the quota is set, on a first login of
 
 {{< /alert >}}
 
-It is inconvenient to go by using numerical values of the Project-GID in the paths, so there are symbolic links present in each user's _/home/$USER/projects_ directory that point to his _/project_ directories.  A user can belong to more than one research groups and thus can have more than one project links. Also, on the filesystem there is a system of symbolic links in the form of _/project/Faculty/def-PIname/_ . 
+It is inconvenient to go by using numerical values of the Project-GID in the paths, so there are symbolic links present in each user's _/home/$USER/projects_ directory that point to his _/project_ directories.  A user can belong to more than one research group and thus can have more than one project link. Also, on the filesystem there is a system of symbolic links in the form of _/project/Faculty/def-PIname/_ . 
 
 {{< highlight bash >}}
 [someuser@bison ~]$ lfs quota -h -p 123456 /project/123456
@@ -140,11 +140,11 @@ Q  ==> Soft Quota (Space, Inode)
 L  ==> Hard Quota (Space, Inode)    
 {{< /highlight >}}
 
+The command __diskusage_report__ can also be invoked with the argument __--home__ or __--project__ to get the quota for the corresponding file system.
+
 <!-- {{< treeview display="tree" />}} -->
 
 <!-- Changes and update:
-* 
-*
-*
+* Last reviewed on: Apr 29, 2024.
 -->
 

@@ -132,7 +132,7 @@ $ gio mount sftp://ccdb_username@grex_login_hostname
 -- USE NAUTILUS TO BROWSE REMOTE FILES --
 ```
 
-Note that if the master connection get closed for any reason (e.g.: timeout, lost connection, ...), then it must be restarted manually to keep browsing the remote location.
+Note that if the master connection gets closed for any reason (e.g.: timeout, lost connection, ...), then it must be restarted manually to keep browsing the remote location.
 
 ## Configuring OpenSSH clients for longer MFA sessions
 
@@ -154,7 +154,5 @@ The example above uses the Yak login node of Grex; replace it with other hostnam
 <!-- {{< treeview display="tree" />}} -->
 
 <!-- Changes and update:
-* 
-*
-*
+* Last reviewed on: Apr 29, 2024.
 -->

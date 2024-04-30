@@ -8,18 +8,12 @@ categories: ["Training"]
 #tags: ["Content management"]
 ---
 
-{{< alert type="info" >}}
-**Next workshop:** coming soon ...
-{{< /alert >}}
-
 ## Local workshops
 ---
 
 {{< treeview 
     display="tree"
 />}}
-
-## Next workshop
 
 ## WestDRI training material
 ---
@@ -47,7 +41,5 @@ The training material from WestDRI (BC DRI and Prairies DRI groups, formerly kno
 ---
 
 <!-- Changes and update:
-* 
-*
-*
+* Last reviewed on: Apr 25, 2024.
 -->

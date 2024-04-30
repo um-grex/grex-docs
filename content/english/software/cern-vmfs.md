@@ -10,19 +10,18 @@ categories: ["Software"]
 ## CC CernVMFS on Grex
 ---
 
- [CVMFS or CernVM FS](https://cernvm.cern.ch/portal/filesystem) stands for CernVM File System. It provides a scalable, reliable and low-maintenance software distribution service. CVMFS was originally developed to assist High Energy Physics (HEP) collaborations to deploy software on the worldwide-distributed computing infrastructure used to run data processing applications. Since then it got a use as a generic way of distributing software. 
-
+[CVMFS or CernVM FS](https://cernvm.cern.ch/portal/filesystem) stands for CernVM File System. It provides a scalable, reliable and low-maintenance software distribution service. CVMFS was originally developed to assist High Energy Physics (HEP) collaborations to deploy software on the worldwide-distributed computing infrastructure used to run data processing applications. Since then it has been used as a a generic way of distributing software. 
 Presently, we use CernVMFS (CVMFS) to provide the Alliance's (or Compute Canada's) software stack. Through the Alliance CVMVS servers, several other publically available CVMFS software repositories are available as well. 
 The examples are a Singularity/Apptainer repository from [OpenScienceGrid](https://opensciencegrid.org/ "OpenScienceGrid"), Extreme-Scale Scientific Software Stack [E4S](https://e4s-project.github.io/), and a Genomics software colection (GenPipes/MUGQIC) from [C3G](https://computationalgenomics.ca/). Note that we can only "pull" the software from these repositories. To actually add or change software, datasets, etc., or receive support, the respective organizations controlling these CVMFS repositories should be contacted directly.
 
-Access to the software and data distributed via CVMFS should be transparent to the Grex users: no action is needed other than loading a software module or setting a path. However, for accessing ComputeCanada software stack, a module should always be loaded to switch between software environments.
+Access to the software and data distributed via CVMFS should be transparent to the Grex users: no action is needed other than loading a software module or setting a path. However, for accessing the Compute Canada software stack, a module should always be loaded to switch between software environments.
 
 Grex does not have a local CVMFS "stratum" (that is, a replica server). All we do is to cache the software items as they get requested. Thus, there can be a delay associated with pulling a software item for the first time, from the Alliance's Stratum 1 (Replica Servers) located at the National HPC sites. It usually does not matter for serial programs but parallel codes, that rely on simultaneous process spawning across many nodes, might cause timeout errors. Thus, it could be useful to first access the codes in a small interactive job to warm up Grex's local CVMFS cache.
 
 ## The Alliance's software stack
 ---
 
-The main reason for having CVMFS supported on Grex is to provide Grex users with the software environment as similar as possible with the environment existing on national Alliance's HPC machines. On Grex, the module tree from Compute Canada software stack is not set as default, but has to be loaded with the following commands:
+The main reason for having CVMFS supported on Grex is to provide Grex users with the software environment as similar as possible with the environment existing on National Alliance's HPC machines. On Grex, the module tree from Compute Canada software stack is not set as default, but has to be loaded with the following commands:
 
 {{< highlight bash >}}
 module purge
@@ -59,7 +58,7 @@ If a script assumes, or relies on using the _mpiexec.hydra_ launcher, the later 
 
 Compute Canada's software building system automatically generates documentation for each item, which is available at the [Available Software](https://docs.alliancecan.ca/wiki/Available_software) page. So, the first destination to look for a software item is probably to browse this page. Note that this page covers the default CPU architectures (AVX2, AVX512) of the National systems, and legacy architectures (SSE3, AVX) might not necessarily have each of the software versions and items compiled for them.
 
-The  __module spider__ command can be used on Grex to search for modules that are actually available. Note that the _CCEnv_ software stack is not loaded by default; you would have to load it first to enable the spider command to search through the CC software stacki. The the example below is for the Amber MM software:
+The  __module spider__ command can be used on Grex to search for modules that are actually available. Note that the _CCEnv_ software stack is not loaded by default; you would have to load it first to enable the spider command to search through the CC software stack. The the example below is for the Amber MM software:
 
 {{< highlight bash >}}
 module purge
@@ -74,7 +73,7 @@ One of the available versions of Amber as returned by the commands above, would 
 ### How to request software added to CC CVMFS
 ---
 
-The Alliance (formerly Compute Canada) maintains and distributes the software stack as part of its mandate to maintain the National HPC systems. To request a software item installed, the requestor should be  have an account in [CCDB](https://ccdb.computecanada.ca), which is also a prerequisite to have access to Grex. Any CCDB user can submit such a request to __support@tech.alliancecan.ca__ .
+The Alliance (formerly Compute Canada) maintains and distributes the software stack as part of its mandate to maintain the National HPC systems. To request a software item installed, the requestor should have an account in [CCDB](https://ccdb.alliancecan.ca), which is also a prerequisite to have access to Grex. Any CCDB user can submit such a request to __support@tech.alliancecan.ca__ .
 
 ### An example, R code with dependencies from CC CVMFS stack
 
@@ -113,13 +112,13 @@ sbatch imb.slurm
 ### Notes on Restricted/Commercial software on CC Stack
 ---
 
-The Alliance (formerly Compute Canada) software stack can have two options for distribution: open source software stack to all non-CC systems, or the full software stack to systems that obey CCDB groups and ACL permissions that control access to licensed, commercial software. Grex is presentlt a CCDB-based system and has full access to the CC software stack.
+The Alliance (formerly Compute Canada) software stack can have two options for distribution: open source software stack to all non-CC systems, or the full software stack to systems that obey CCDB groups and ACL permissions that control access to licensed, commercial software. Grex is presntly a CCDB-based system and has full access to the CC software stack.
 
 However, each item of the proprietary code on the CC software stack comes with its own license and/or its own access conditions that we abide by. Thus, to request access to each item of commercial software the procedure must be found on the Alliance documentation site, and followed up via _support@tech.alliancecan.ca_ . 
 
-Many commercial items there also are BYOL (bring-your-own license). An example would be Matlab, where our users woudl want to provide UManitoba's Matlab license even when using the code from CC CVMFS.
+Many commercial items there also are BYOL (bring-your-own license). An example would be Matlab, where our users would want to provide UManitoba's Matlab license even when using the code from CC CVMFS.
 
-As of now, older Intel compiler modules on the CC CVMFS software stack do not match license avilable on Grex. Thus, while all GCC compilers and GCC-based toolchains from CC Stack are useful for the local code development on Grex, for Intel it might depend on a version. Newest Intel OneAPI compilers (past 2023.x) are free to use and will work.
+As of now, older Intel compiler modules on the CC CVMFS software stack do not match license available on Grex. Thus, while all GCC compilers and GCC-based toolchains from CC Stack are useful for the local code development on Grex, for Intel it might depend on a version. Newest Intel OneAPI compilers (past 2023.x) are free to use and will work.
 
 ## Other software repositories available through CC CVMFS
 
@@ -139,27 +138,31 @@ In particular, the path __/cvmfs/singularity.opensciencegrid.org/ecpe4s__ provid
 ### C3G repository for GenPipes/MUGQIC genomes and modules
 ---
 
-On Grex, GenPipes/MUGQIC repositories should be also available through CC CVMFS. Please refer to the [GenPipes/MUGQIC Documentation](https://genpipes.readthedocs.io/en/latest/deploy/access_gp_pre_installed.html#docs-access-gp-pre-installed) provided by C3G on how to user them.
+On Grex, GenPipes/MUGQIC repositories should be also available through CC CVMFS. Please refer to the [GenPipes/MUGQIC Documentation](https://genpipes.readthedocs.io/en/latest/deploy/access_gp_pre_installed.html#docs-access-gp-pre-installed) provided by C3G on how to use them.
 
 ---
 
 ### AlphaFold data repository from ComputeCanada CVMFS
 ---
 
-On Grex, several Genomics data repositories are available thanks to the effort of the Alliance's Biomolecular National Teams. One of them is Alphafold. As of the time of writing, the current version of it can be seen as follows:
+On Grex, several Genomics data repositories are available thanks to the effort of the Alliance's Biomolecular National Teams. One of them is Alpha Fold. As of the time of writing this page, the current version of it can be seen as follows:
 
 {{< highlight bash >}}
-ls /cvmfs/bio.data.computecanada.ca/content/databases/Core/alphafold2_dbs/2024_01/ **
+ls /cvmfs/bio.data.computecanada.ca/content/databases/Core/alphafold2_dbs/2024_01/
 {{< /highlight >}}
+
 Thus, Alphafold can be used on Grex using CC software stack as described [here](https://docs.alliancecan.ca/wiki/AlphaFold) .
 
-A few other databases seems to be also available under _/cvmfs/bio.data.computecanada.ca/content/databases/Core/_ .
+A few other databases seems to be also available under:
+
+{{< highlight bash >}}
+/cvmfs/bio.data.computecanada.ca/content/databases/Core/
+{{< /highlight >}} 
 
 ---
+
 <!-- {{< treeview display="tree" />}} -->
 
 <!-- Changes and update:
-* 
-*
-*
+* Last reviewed on: Apr 30, 2024.
 -->

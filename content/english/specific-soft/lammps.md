@@ -98,7 +98,5 @@ The name of the binary is called __lmp_gpu__ (see the example of script below).
 <!-- {{< treeview display="tree" />}} -->
 
 <!-- Changes and update:
-* 
-*
-*
+* Last reviewed on: Apr 26, 2024.
 -->

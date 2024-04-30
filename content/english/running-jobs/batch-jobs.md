@@ -93,7 +93,7 @@ Refer to the official SLURM [documentation](https://slurm.schedmd.com/documentat
 ## Serial jobs 
 ---
 
-The simplest kind of job is a serial job when one compute process runs in a sequential fashion. Naturally, such job can utilize only a single CPU core: even large parallel supercomputers as a rule do not parallelize binary codes automatically. So, the CPU request for a serial job is always 1, which is the default;  the other resources can be wall time and memory. SLURM has two ways of specifying the later: memory per core (__-\-mem-per-cpu=__) and total memory per node (__-\-mem=__). It is more logical to use per-core memory always; except in case of the whole-node jobs when special value __-\-mem=0__ gives all the available memory for the allocated node. An example script (for 1 CPU, wall time of 30 minutes and a memory of 2500M) is provided below.
+The simplest kind of job is a serial job when one compute process runs in a sequential fashion. Naturally, such job can utilize only a single CPU core: even large parallel supercomputers as a rule do not parallelize binary codes automatically. So, the CPU request for a serial job is always 1, which is the default;  the other resources can be wall time and memory. SLURM has two ways of specifying the memory: memory per core (__-\-mem-per-cpu=__) and total memory per node (__-\-mem=__). It is more logical to use per-core memory always; except in case of the whole-node jobs when special value __-\-mem=0__ gives all the available memory for the allocated node. An example script (for 1 CPU, wall time of 30 minutes and a memory of 2500M) is provided below.
 
 {{< collapsible title="Script template for serial job" >}}
 {{< snippet
@@ -142,9 +142,9 @@ For MKL it is __MKL_NUM_THREADS__, for Julia __-\-JULIA_NUM_THREADS__, for Java 
 />}}
 {{< /collapsible >}}
 
-Note that the above example requests whole node's memory with __-\-mem=0__ because the node is allocated to the job fully due to all the CPUs anyways. It is easier to use the __-\-mem__ syntax for SMP jobs because typically the memory is shared between threads (i.e., the amount of memory  used does not change with the number of SMP threads). Note, however, that the memory request should be reasonably "efficient" if possible. 
+Note that the above example requests the whole node's memory with __-\-mem=0__ because the node is allocated to the job fully due to all the CPUs anyways. It is easier to use the __-\-mem__ syntax for SMP jobs because typically the memory is shared between threads (i.e., the amount of memory  used does not change with the number of SMP threads). Note, however, that the memory request should be reasonably "efficient" if possible. 
 
-It is also possible to use a fraction of the node for running OpenMP job. Here is an example asking for 1 task with 4 threads on compute partition:
+It is also possible to use a fraction of the node for running OpenMP jobs. Here is an example asking for 1 task with 4 threads on compute partition:
 
 {{< collapsible title="Script template for running a job on **compute** partition: using a fraction of the node" >}}
 {{< snippet
@@ -351,7 +351,5 @@ Since Spring 2021, Compute Canada has updated the default software stack on thei
 <!-- {{< treeview display="tree" />}} -->
 
 <!-- Changes and update:
-* 
-*
-*
+* Last reviewed on: Apr 30, 2024.
 -->

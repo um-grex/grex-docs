@@ -22,24 +22,29 @@ Preferential access is when you have non-exclusive access to your hardware, in a
 
 The owner is the owner of the contributed hardware. Others are other users. A **partition** is a subset of the HPC system’s compute nodes.
 
-Preemption by partition: the contributed nodes have a SLURM partition on them, allowing the owner to use them, normally, for batch or interactive jobs. The partition is a “preemptor”. There is an overlapping partition, on the same set of the nodes but for the others to use, which is “pre-emptible”. Jobs in the pre-emptible partition can be killed after a set “grace period” (1 hour) as the owner's job enters the "preemptor" partition. If works, preempted jobs might be check-pointed rather than killed, but that’s harder to set up. Currently, it is not generally supported. If you have a code that supports checkpoint/restart at the application level, you can get most of the contributed nodes.
+Preemption by partition: the contributed nodes have a SLURM partition on them, allowing the owner to use them, normally, for batch or interactive jobs. The partition is a “preemptor”. There is an overlapping partition, on the same set of the nodes but for the others to use, which is “preemptible”. Jobs in the preemptible partition can be killed after a set “grace period” (1 hour) as the owner's job enters the "preemptor" partition. If works, preempted jobs might be check-pointed rather than killed, but that’s harder to set up. Currently, it is not generally supported. If you have a code that supports checkpoint/restart at the application level, you can get most of the contributed nodes.
 
-On Grex, the "preemptor" partition is named after the name of the owner PI, and the pre-emptible partitions named similarly but with added **\-b** suffix. Use the __-\-partition=__ option to submit the jobs with __sbatch__ and __salloc__ commands to select the desired partition.
+On Grex, the "preemptor" partition is named after the name of the owner PI, and the preemptible partitions named similarly but with added **\-b** suffix. Use the __-\-partition=__ option to submit the jobs with __sbatch__ and __salloc__ commands to select the desired partition.
 
 ## Contributed Nodes
 ---
 
-As of now, the pre-emptible partitions are:
+As of now, the preemptible partitions are:
 
-| Partition         | Nodes   | GPUs/Node    | CPUs/Node    | Mem/Node    | Notes           |
-| :--------:        | :-----: | :----:       | :----------: | :--------:  | :---------:     |
-| **stamps-b** [^1] | **3**   | **4**        | **32**       | **187 Gb**  | AVX512          |
-| **livi-b**   [^2] | **1**   | **16**       | **48**       | **1500 Gb** | NVSwitch server |
-| **agro-b**   [^3] | **2**   | **2**        | **24**       | **250 Gb**  | AMD             |
+| Partition           | Nodes   | GPUs/Node    | CPUs/Node    | Mem/Node    | Notes                       |
+| :--------:          | :-----: | :----:       | :----------: | :--------:  | :---------:                 |
+| **stamps-b** [^1]   | **3**   | **4**        | **32**       | **187 Gb**  | AVX512                      |
+| **livi-b**   [^2]   | **1**   | **16**       | **48**       | **1500 Gb** | NVSwitch server             |
+| **agro-b**   [^3]   | **2**   | **2**        | **24**       | **250 Gb**  | AMD                         |
+| **mcordcpu-b** [^4] | **5**   | -            | **168**      | **1500 Gb** | ** AMD EPYC 9634 84-Core**  |
+| **mcordgpu-b** [^5] | **5**   | -            | **168**      | **1500 Gb** | **AMD EPYC 9634**           |
+
 
 [^1]: **stamps-b:** GPU [**4 - V100/16GB**] nodes contributed by Prof. R. Stamps
 [^2]: **livi-b:**   GPU [**HGX-2 16xGPU V100/32GB**] node  contributed by Prof. L. Livi
 [^3]: **agro-b:**   GPU [**AMD Zen**] node contributed by Faculty of Agriculture
+[^4]: **mcordcpu-b** GPU nodes contributed by Prof. Marcos Cordeiro (Department of Agriculture).
+[^5]: **mcordgpu-b** CPU nodes contributed by Prof. Marcos Cordeiro (Department of Agriculture).
 
 <!--
 For more information, please refer to [Contributed Nodes](contributed-gpu-partitions) section.
@@ -129,7 +134,5 @@ Here is an example of script for running LAMMPS job on this partition:
 <!-- {{< treeview display="tree" />}} -->
 
 <!-- Changes and update:
-* 
-*
-*
+* Last reviewed on: Apr 30, 2024.
 -->

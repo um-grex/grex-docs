@@ -13,7 +13,7 @@ titleIcon: "fa-solid fa-house-chimney"
 
 As of now, the storage system of Grex consists of the following:
 
-- The **/home** NFSv4/RDMA filesystem is served by a very fast NVME disk server. The total size of the filesystem is __15 TB__. The quota per-user is __100 GB__ of space and __500K__ files. 
+- The **/home** NFSv4/RDMA filesystem is served by a very fast NVME disk server. The total size of the filesystem is __15 TB__. The quota per-user is __100 GB__ of space and __500K__ files. This quota can not be increased. For larger amount of data, users should use project.
 
 <!--
 - _Disabled as of now_ The **/global/scratch** Lustre filesystem, Seagate SBB, total usable size of **418 TB**. It is intended to be used as the high-performance, scalable workspace for active projects. It is not backed up and is not intended for long-time storage of users' data that is not actively used. The default quota is **4 TB** of space and **1 M** files per user and can be increased on request to **10 TB** per research group. Larger disk space requires a local RAC application.
@@ -68,7 +68,5 @@ Sharing of accounts login information (like passwords or SSH keys) is strictly f
 ---
 
 <!-- Changes and update:
-* 
-*
-*
+* Last reviewed on: Apr 29, 2024.
 -->

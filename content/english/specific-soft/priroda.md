@@ -56,7 +56,7 @@ An archive of old Priroda documentation is here [Priroda old docs from KNC](/man
 
 Priroda is MPI-parallelized. The parallel efficiency varies on the method used and the kind of calculation (energies, geometry optimizations or analytical hessians) performed. Pure GGA DFT calculations are quite fast and tightly coupled, and it makes sense to use a single node with a few tasks per node, or a few nodes, as in the example below. RI-MP2 calculations would benefit from more massively parallel calculations, spanning several nodes. 
 
-It makes no sense to ask more than 4000mb per task. 
+It makes no sense to ask more than 4000 mb per task. 
 
 {{< collapsible title="Script example for running PRIRODA on Grex" >}}
 {{< snippet
@@ -82,7 +82,5 @@ There are some simple scripts and utilities in the __$PRIRODA/contrib__ director
 <!-- {{< treeview display="tree" />}} -->
 
 <!-- Changes and update:
-* 
-*
-*
+* Last reviewed on: Apr 26, 2024.
 -->

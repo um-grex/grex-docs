@@ -173,7 +173,7 @@ The [command line advisor](https://software.intel.com/en-us/articles/intel-mkl-l
 
 FFTW3 is the standard and well performing implementation of FFT. ```module spider fftw``` should find it. There is a parallel version of the FFTW3 that depends on MPI it uses, thus to load the _fftw_ module, compiler and MPI modules would have to be loaded first. MKL also provides FFTW bindings, which can be used as follows:
 
-Either Intel or GCC MKL modules would set the _MKLROOT_ environment variable, and add necessary directories to _LD_LIBRARY_PATH_. The _MKLROOT_ is handy when using explicit linking against libraries. It can be useful if you want to select a particular compiler (Intel or GCC), pointer width (the corresponding libraries have suffix _lp64 for **32-bit** pointers and_ilp64 for 64 bit ones; the later is needed for, for example, Fortran codes with INTEGER*8 array indexes, explicit or set by -i8 compiler option) and kind of MPI library to be used in BLACS (OpenMPI or IntelMPI which both are available on Grex). An example of the linker options to link against sequential, 64 bit pointed version of BLAS, LAPACK for an Intel Fortran code is:
+Either Intel or GCC MKL modules would set the _MKLROOT_ environment variable, and add necessary directories to _LD_LIBRARY_PATH_. The _MKLROOT_ is handy when using explicit linking against libraries. It can be useful if you want to select a particular compiler (Intel or GCC), pointer width (the corresponding libraries have suffix _lp64 for **32-bit** pointers and_ilp64 for 64 bit ones; the later is needed for, for example, Fortran codes with INTEGER*8 array indexes, explicit or set by -i8 compiler option) and a kind of MPI library to be used in BLACS (OpenMPI or IntelMPI which both are available on Grex). An example of the linker options to link against sequential, 64 bit pointed version of BLAS, LAPACK for an Intel Fortran code is:
 
 {{< highlight bash >}}
 ifort -O2 -i8 main.f -L$MKLROOT/lib/intel64 -lmkl_intel_ilp64 -lmkl_sequential -lmkl_core -lpthread -lm
@@ -185,7 +185,7 @@ MKL also has FFTW bindings. They have to be enabled separately from the general 
 -I$MKLROOT/include/fftw -I$MKLROOT/interfaces/fftw3xf -L$MKLROOT/interfaces/fftw3xf -lfftw3xf_intel_lp64
 {{< /highlight >}}
 
-The above line is, admittedly, rather elaborate but give the benefit of compiling and building all of the code with MKL, without the need for maintaining a separate library such as FFTW3.
+The above line is, admittedly, rather elaborate but gives the benefit of compiling and building all of the code with MKL, without the need for maintaining a separate library such as FFTW3.
 
 ## HDF5 and NetCDF
 ---
@@ -229,7 +229,5 @@ Several R packages are installed with the R modules on Grex. Note that it is oft
 <!-- {{< treeview display="tree" />}} -->
 
 <!-- Changes and update:
-* 
-*
-*
+* Last reviewed on: Apr 30, 2024.
 -->

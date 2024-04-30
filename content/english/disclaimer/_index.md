@@ -27,17 +27,15 @@ categories: ["Information"]
 ---
 
 {{< alert type="warning" >}}
-__WestGrid__ ceased its operations since April 1st, 2022. The former WestGrid institutions are now re-organized into two consortia: __BC DRI group__ and __Prairies DRI group.__
+__WestGrid__ ceased operations on April 1st, 2022. The former WestGrid institutions are now re-organized into two consortia: __BC DRI group__ and __Prairies DRI group.__
 {{< /alert >}}
 
 {{< alert type="warning" >}}
-__Compute Canada__ ceased its operations since April 1st, 2022. The __Digital Research Alliance of Canada__, [the Alliance](https://alliancecan.ca/), is coordinating the national advanced research computing [ARC](https://alliancecan.ca/en/services/advanced-research-computing) services.
+__Compute Canada__ ceased operations on April 1st, 2022. The __Digital Research Alliance of Canada__, [the Alliance](https://alliancecan.ca/), is coordinating the national advanced research computing [ARC](https://alliancecan.ca/en/services/advanced-research-computing) services.
 {{< /alert >}}
 
 ---
 
 <!-- Changes and update:
-* 
-*
-*
+* Last reviewed on: Apr 25, 2024. 
 -->

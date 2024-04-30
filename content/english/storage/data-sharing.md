@@ -28,7 +28,7 @@ Now that you have a __wg-xxxxx__ UNIX group created, you can set up the data sha
 The directory you wish to share should be owned by the group and permitted to the group. For example:
 
 {{< alert type="warning" >}}
-In the following example and for demonstration purpose, we have used __/global/scratch__ but the instructions could be applied to __/project__ directories as well.
+In the following example and for demonstration purposes, we have used __/global/scratch__ but the instructions could be applied to __/project__ directories as well.
 {{< /alert >}}
 
 {{< highlight bash >}}
@@ -81,7 +81,5 @@ setfacl -m g:wg-abcdf:X /project/123456/$USER
 <!-- {{< treeview display="tree" />}} -->
 
 <!-- Changes and update:
-* 
-*
-*
+* Last reviewed on: Apr 29, 2024.
 -->

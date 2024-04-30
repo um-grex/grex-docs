@@ -19,7 +19,7 @@ GlobusOnline is a specialized Data Transfer and Data Sharing tool for large tran
 Check the [ESNet](https://fasterdata.es.net/ "ESNet") website if you are curious about Globus, and why large data transfers over WAN might need specialized networks and software setups.
 
 We do not have a Server Endpoint of Globus on Grex as of the time of writing of the documentation page. 
-However, you can still use Globus to transfer data between the Allaince's (Compute Canada) systems as described [here](https://docs.alliancecan.ca/wiki/Globus "Globus on Compute Canada clusters"). 
+However, you can still use Globus to transfer data between the Alliance's (former Compute Canada) systems as described [here](https://docs.alliancecan.ca/wiki/Globus "Globus on Compute Canada clusters"). 
 
 ### RSYNC
 ---
@@ -35,10 +35,10 @@ rsync  -aAHSv -x --delete -e "ssh -i a-private-key.key -o StrictHostKeyChecking=
 {{< /highlight >}}
 
 In the example above,
- * _-e_ is the option governing SSH use and behaviour for __rsync__ .
+ * _-e_ is the option governing SSH use and behavior for __rsync__ .
  * SSH tries to use a key pair (replace a-private-key.key with the name and location of your actual private key; for Grex, the corresponding public key can be uploaded to CCDB. If the key is not provided or not found, SSH will default to password authentication.
  * /home/$LOCAL_USER/somedir/ is a path on a local machine. An actual source directory has to be supplied instead.
- * /home/$REMOTE_USER is a home directory on Grex system, and $REMOTE_USER is the user name on Grex. The local and remote user names may or may not be the same.
+ * /home/$REMOTE_USER is a home directory on the Grex system, and $REMOTE_USER is the user name on Grex. The local and remote user names may or may not be the same.
  * note that the trailing slash __/__ matters for __rsync__!
 
 There is a lot of useful documentation pages for __rsync__ ; just [one example](https://phoenixnap.com/kb/how-to-rsync-over-ssh).
@@ -47,7 +47,7 @@ There is a lot of useful documentation pages for __rsync__ ; just [one example](
 ---
 
 The OpenSSH package, available on Linux, MacOS and recent versions of Windows, provides not only the command line SSH client, but two command line file transfer tools: SFTP and SCP.
-OpenSSH encrypts all the traffic and provides several authentication options. A useful option for SCP and SFTP is to have a key pair, with public key deposited in CCDB.
+OpenSSH encrypts all the traffic and provides several authentication options. A useful option for SCP and SFTP is to have a key pair, with the public key deposited in CCDB.
 
 ### SFTP
 ---
@@ -98,7 +98,7 @@ It has a command line interface not unlike the __ftp__ or __sftp__ command line 
 ## File transfer clients with GUI
 ---
 
-There are many file transfer clients that provide convenient graphical user interface.
+There are many file transfer clients that provide convenient graphical user interfaces.
 
 Some examples of the popular file transfer clients are
 
@@ -126,7 +126,5 @@ More information is available on our [OOD pages](/ood/)
 <!-- {{< treeview display="tree" />}} -->
 
 <!-- Changes and update:
-* 
-*
-*
+* Last reviewed on: Apr 29, 2024.
 -->

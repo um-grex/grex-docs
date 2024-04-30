@@ -22,7 +22,7 @@ Fortunately, most HPC systems, and Grex is no exception, come with a pre-install
 
 There are several mechanisms of software installation under Linux. One of them is using Linux software package manager (__apt__ on Ubuntu, __yum__ on Centos, ... etc.) and a binary package repository provided by some third party. These package managers would install a version of the code system wide, into standard OS directories like __/usr/bin__ where it would be immediately available in the system's PATH (PATH is a variable that specifies where the operating systems would look for executable code).
 
-This method of installation is often practiced on person's own workstations, because it requires no knowledge other than syntax of the OS package manager. There are however significant drawbacks to it for using on HPC clusters that consists of many compute nodes and are shared by many users:
+This method of installation is often practiced on a person's own workstations, because it requires no knowledge other than syntax of the OS package manager. There are however significant drawbacks to it for using on HPC clusters that consists of many compute nodes and are shared by many users:
 
 > - Need of root access to install in the base OS is a systems stability and security threat, and has a potential of users interfering with each other.
 > - Package managers as a rule do not keep several versions of the same package; they are geared towards having only the newest one (as in "software update"), which poses a problem for reproducible research.
@@ -71,17 +71,17 @@ For more information about using Lmod modules, please refer to the Alliance (Com
 ## How and when to install software in your HOME directory
 ---
 
-Linux (Unlike some Desktop operating systems) has a concept of user permissions separation. Regular users cannot, unless explicitly permitted, access system's files and files of other users.
+Linux (Unlike some Desktop operating systems) has a concept of user permissions separation. Regular users cannot, unless explicitly permitted, access the system's files and files of other users.
 
 You can almost always install software without **super-user** access into your __/home/$USER__ directory. Moreover, you can manage the software with Lmod: Lmod automatically searches for module files under __$HOME/modulefiles__ and adds the modules it discovers there into the modules tree so they can be found by __module spider__, loaded by __module load__, etc.
 
-Most Linux software can be installed from sources using either [Autoconf](https://www.gnu.org/software/autoconf/) or [CMake](https://cmake.org/) configuration tools. These will accept __-\-prefix=/home/$USER/my-software/version__ or __-DCMAKE_INSTALL_PREFIX=/home/$USER/my-software/version__ as arguments. These paths are used for the installation directories where the user have full access.
+Most Linux software can be installed from sources using either [Autoconf](https://www.gnu.org/software/autoconf/) or [CMake](https://cmake.org/) configuration tools. These will accept __-\-prefix=/home/$USER/my-software/version__ or __-DCMAKE_INSTALL_PREFIX=/home/$USER/my-software/version__ as arguments. These paths are used for the installation directories where the user has full access.
 
 Software that comes as a binary archive to be unpacked can be simply unpacked into your home directory location. Then, the paths should be set for the software to be found: either by including the environment variable in __$HOME/.bashrc__ or in __$HOME/.bash_profile__ or by creating a specific module in __$HOME/modulefiles/my-software/version__ following Lmod instructions for [writing Modules](https://lmod.readthedocs.io/en/latest/015_writing_modules.html).
 
 There exist binary software environments like conda that manage their own tree of binary-everything. These can be used as well, with some caution, because automatically pulling everything might conflict with the same software existing in the HPC environment (Python package paths, MPI libraries, etc.).
 
-However, if a software is really a part of the base OS (something like a graphics Desktop software, etc.), it can be hard to rebuild from sources due to many dependencies. If needed, it may be better if installed centrally or used in a containeri, see Containers [documentation](software/containers).
+However, if a software is really a part of the base OS (something like a graphics Desktop software, etc.), it can be hard to rebuild from sources due to many dependencies. If needed, it may be better if installed centrally or used in a container, see Containers [documentation](software/containers).
 
 ## Internal links
 ---
@@ -99,7 +99,5 @@ However, if a software is really a part of the base OS (something like a graphic
 ---
 
 <!-- Changes and update:
-* 
-*
-*
+* Last reviewed on: Apr 30, 2024.
 -->

@@ -21,7 +21,7 @@ categories: ["Information"]
 ## C
 
 * __CPU__ :: Central Processing Unit
-* __CC__ :: ComputeCanada, an organization superceded by DRAC
+* __CC__ :: Compute Canada, a former organization replaced by DRAC
 * __CCDB__ :: CC User Database, a user accounts portal maintained by DRAC
 * __CVMFS__ :: Cern Virtual Machines File System
 * __CY__:: Core Year, a unit of CPU and GPU resources used by CCDB and RAC
@@ -46,8 +46,8 @@ categories: ["Information"]
 ## H
 
 * __HPC__ :: High-Performance Computing
-* __HTTPS__ :: Hypertext Transfer Protocol Secure
 * __HTTP__ :: Hypertext Transfer Protocol
+* __HTTPS__ :: Hypertext Transfer Protocol Secure
 * __HDF5__ :: Hierarchical Data file Format version 5
 
 ## I
@@ -113,7 +113,7 @@ categories: ["Information"]
 
 ## W
 
-* __WAN__ :: A wide-area network (WAN) is a network that spans several geographically distributed locations.
+* __WAN__ :: A Wide Area Network (WAN) is a network that spans several geographically distributed locations.
 
 ## X
 
@@ -124,7 +124,5 @@ categories: ["Information"]
 ---
 
 <!-- Changes and update:
-* 
-*
-*
+* Last reviewed on: Apr 25, 2024.
 -->

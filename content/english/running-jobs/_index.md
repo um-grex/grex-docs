@@ -11,7 +11,7 @@ categories: ["Software", "Scheduler"]
 ## Why running jobs in batch mode?
 ---
 
-There are many reasons for adopting a batch mode for running jobs on a cluster. From providing user's computations with fairness, traffic control to prevent resource congestion and resource trashing, enforcing organizational priorities, to better understanding the workload, utilization and resource needs for future capacity planning; the scheduler provides it all. After being long-time PBS/Moab users, we have switched to the [SLURM](https://slurm.schedmd.com/documentation.html) batch system since **December 2019** with the **Linux/SLURM update** [project](changes/linux-slurm-update).
+There are many reasons for adopting a batch mode for running jobs on a cluster. From providing user's computations with fairness, traffic control to prevent resource congestion and wasting, enforcing organizational priorities, to better understanding the workload, utilization and resource needs for future capacity planning; the scheduler provides it all. After being long-time PBS/Moab users, we have switched to the [SLURM](https://slurm.schedmd.com/documentation.html) batch system since **December 2019** with the **Linux/SLURM update** [project](changes/linux-slurm-update).
 
 ## Accounting groups
 ---
@@ -53,7 +53,7 @@ export SACCTMGR_FORMAT="cluster%9,user%12,account%20,share%5,qos%24,maxjobs%15,g
 sacctmgr show assoc where user=$USER format=$SACCTMGR_FORMAT
 {{< /highlight >}}
 
-* Partitions for pre-emptible jobs running on contributed hardware might be further limited, so that they cannot occupy the whole contributed hardware.
+* Partitions for preemptible jobs running on contributed hardware might be further limited, so that they cannot occupy the whole contributed hardware.
 
 * In cases when Grex is underutilized, but some jobs exist in the queue that can be run if not for the above-mentioned limits, we might relax the limits as a temporary "bonus".
 
@@ -150,7 +150,7 @@ Refer to the subsection for [batch jobs](running-jobs/batch-jobs) and [interacti
 
 Without the above parameters, squeue would return all the jobs in the system. There is a shortcut __sq__ for __squeue -u $USER__
 
-**Cancelling jobs:**
+**Canceling jobs:**
 
 > * __scancel JobID__ (to cancel a job JobID)
 > * __echo "Deleting all the jobs by $USER" && scancel -u $USER__ (to cancel all your queued jobs at once).
@@ -228,7 +228,5 @@ Since the HPC technology is widely used by most universities and National labs, 
 {{< /alert >}}
 
 <!-- Changes and update:
-* 
-*
-*
+* Last reviewed on: Apr 30, 2024.
 -->

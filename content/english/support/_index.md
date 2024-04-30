@@ -84,11 +84,9 @@ We also provide small-group workshops on Research Computing topics when there is
 * WestDRI Training [Material](https://training.westdri.ca/)
 * the Alliance National Training [Calendar](https://alliancecan.ca/en/services/advanced-research-computing/technical-support/training-calendar)
 ---
- 
+
 <!-- {{< treeview display="tree" />}} -->
 
 <!-- Changes and update:
-* 
-*
-*
+* Last reviewed on: Apr 25, 2024.
 -->

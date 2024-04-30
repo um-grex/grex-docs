@@ -5,7 +5,7 @@ linkTitle: "Home"
 description: "All you need to know about Grex and how to use it for running jobs"
 titleIcon: "fa-solid fa-user-gear"
 categories: ["Information"]
-banner: true
+banner: false
 bannerContent: "__SCRATCH - OS and LUSTRE UPDATES__"
 #tags: ["Content management"]
 ---
@@ -13,9 +13,10 @@ bannerContent: "__SCRATCH - OS and LUSTRE UPDATES__"
 ## Introduction
 ---
 
-Grex is a UManitoba High Performance Computing (HPC) system, first put in production in early __2011__ as part of WestGrid consortium. "Grex" is a _Latin_ name for "herd" (or maybe "flock"?). The names of the Grex login nodes ([bison](https://en.wikipedia.org/wiki/Bison "Bison"), tatanka, [zebu](https://en.wikipedia.org/wiki/Zebu "Zebu"), [yak](https://en.wikipedia.org/wiki/Yak "Yak")) also refer to various kinds of bovine animals.
+__Grex__ is a UManitoba High Performance Computing (HPC) system, first put in production in early __2011__ as part of WestGrid consortium. "Grex" is a _Latin_ name for "herd" (or maybe "flock"?). The names of the Grex login nodes ([bison](https://en.wikipedia.org/wiki/Bison "Bison"), tatanka, [zebu](https://en.wikipedia.org/wiki/Zebu "Zebu"), [yak](https://en.wikipedia.org/wiki/Yak "Yak")) also refer to various kinds of bovine animals.
 
 Since being defunded by WestGrid (on April 2, 2018), Grex is now available only to the users affiliated with University of Manitoba and their collaborators. 
+
 <!--
 The old WestGrid documentation, hosted on the WestGrid website became irrelevant after the Grex upgrade, so please visit Grex's current [documentation.](/) 
 -->
@@ -32,7 +33,8 @@ If you are a new Grex user, proceed to the [quick start guide](start-guide) and 
 * The original Grex was an SGI Altix machine, with 312 compute nodes (Xeon 5560, 12 CPU cores and 48 GB of RAM per node) and QDR 40 Gb/s InfiniBand network. 
 * In 2017, a new Seagate **Storage Building Blocks (SBB)** based Lustre filesystem of **418 TB** of useful space was added to Grex.
 * In 2020 and 2021, the University added several modern Intel CascadeLake CPU nodes, a few GPU nodes, a new NVME storage for home directories, and EDR InfiniBand interconnect. 
-* On March 2023, a new storage of **1 PB** was added to Grex. It is called **/project** filesystem. 
+* On March 2023, a new storage of **1 PB** was added to Grex. It is called **/project** filesystem.
+* On January 2024, the **/project** was extended by another **1 PB**.
 
 The current computing hardware available for general use is as follow:
 
@@ -58,35 +60,37 @@ It is also possible to connect via __yak.hpc.umanitoba.ca__
 ### CPU nodes
 ---
 
-In addition to the original nodes, new skylake nodes have been added to Grex:
+In addition to the original nodes, new skylake and AMD nodes have been added to Grex:
 
 | Hardware            | Number of nodes | CPUs/Node | Mem/Node | Network |
 | :-------:           | :-------------: | :-------: | :------: | :-----: |
 | Intel CPU           | 12              | **40**    | 384 GB   | EDR 100GB/s IB interconnect |
-| Intel 6230R         | 42              | **52**    |  96 GB   | EDR 100GB/s IB interconnect |
+| Intel 6230R         | 42              | **52**    | 188 GB   | EDR 100GB/s IB interconnect |
 | Intel Xeon 5560[^1] | 312             | **12**    |  48 GB   | QDR 40GB/s IB interconnect  |
-| Contributed[^2]     | 4               | **20**    |  32 GB   | -                           |
+| AMD EPYC 9634[^2]   | 5               | **168**   | 1500 GB  | HDR 100GB/s IB interconnect |
 
 [^1]: Original Grex nodes: **slated for decommission in the near furure**
-[^2]: Contributed nodes.
+[^2]: CPU nodes contributed by Prof. Marcos Cordeiro (Department of Agriculture).
 
 ### GPU nodes
 ---
 
 There are also several researcher-contributed nodes (CPU and GPU) to Grex which make it a "community cluster". The researcher-contributed nodes are available for others on opportunistic basis; the owner groups will preempt the others' workloads.
 
-| Hardware            | Number of nodes | GPUs/Node | CPUs/node |Mem/Node |
-| :-------:           | :-------------: | :-------: | :-------: |:------: |
-| GPU                 | 2               | 4         | 32        | 192 GB  |
-| 4 [V100-32 GB][^3]  | 2               | 4         | 32        | 187 GB  |
-| 4 [V100-16 GB][^4]  | 3               | 4         | 32        | 187 GB  |
-| 16 [V100-32 GB][^5] | 1               | 16        | 48        | 1500 GB |
-| AMD [A30][^6]       | 2               | 2         | 18        | 500 GB  |
+| Hardware             | Number of nodes | GPUs/Node | CPUs/node |Mem/Node |
+| :-------:            | :-------------: | :-------: | :-------: |:------: |
+| GPU                  | 2               | 4         | 32        | 192 GB  |
+| 4 [V100-32 GB][^3]   | 2               | 4         | 32        | 187 GB  |
+| 4 [V100-16 GB][^4]   | 3               | 4         | 32        | 187 GB  |
+| 16 [V100-32 GB][^5]  | 1               | 16        | 48        | 1500 GB |
+| AMD [A30][^6]        | 2               | 2         | 18        | 500 GB  |
+| NVIDIA AMD [A30][^7] | 2               | 4         | 32        | 500 GB  |
 
 [^3]: GPU nodes available for all users (general purpose).
 [^4]: GPU nodes contributed by Prof. R. Stamps (Department of Physics and Astronomy).
 [^5]: NVSwitch server contributed by Prof. L. Livi (Department of Computer Science).
 [^6]: GPU nodes contributed by Faculty of Agriculture.
+[^7]: GPU nodes contributed by Prof. Marcos Cordeiro (Department of Agriculture).
 
 ## Storage
 ---
@@ -113,7 +117,7 @@ There is a **10 GB/s** Ethernet connection between Grex and [CANARIE](https://ww
 ## Software
 ---
 
-Grex is a traditional HPC machine, running CentOS Linux under SLURM resource management system. On Grex, we use different software [stacks](software).
+Grex is a traditional HPC machine, running Linux and SLURM resource management systems. On Grex, we use different software [stacks](software).
 
 ## Web portals and GUI
 ---
@@ -121,7 +125,9 @@ Grex is a traditional HPC machine, running CentOS Linux under SLURM resource man
 In addition to the traditional bash mode (connecting via ssh), users have access to:
 
 * __OpenOnDemand:__ on Grex, it is possible to use OpenOnDemand (OOD for short) to login to Grex and run batch or GUI applications (VNC Desktops, Matlab, Gaussview, Jupyter, ...). For more information, please refer to the page: [OpenOnDemand](/ood)
+<!--
 * __X2Go:__ for more information, visit the page, connect to Grex via [X2Go](connecting/#x2go)
+-->
 
 ## Useful links
 ---
@@ -135,13 +141,11 @@ In addition to the traditional bash mode (connecting via ssh), users have access
 ---
 
 {{< alert type="warning" >}}
-__WestGrid__ ceased its operations since April 1st, 2022. The former WestGrid institutions are now re-organized into two consortia: __BC DRI group__ and __Prairies DRI group.__
+__WestGrid__ ceased operations on April 1st, 2022. The former WestGrid institutions are now re-organized into two consortia: __BC DRI group__ and __Prairies DRI group.__
 {{< /alert >}}
 
 <!-- {{< treeview display="tree" />}} -->
 
 <!-- Changes and update:
-* 
-*
-*
+* Last reviewed on: Apr 25, 2024.
 -->

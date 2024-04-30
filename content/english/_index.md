@@ -100,7 +100,5 @@ The University of Manitoba campuses are located on original lands of Anishinaabe
 ---
 
 <!-- Changes and update:
-* 
-*
-*
+* Last reviewed on: Apr 25, 2024.
 -->

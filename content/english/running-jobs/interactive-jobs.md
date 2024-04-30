@@ -34,7 +34,7 @@ Note that manual SSH connections to the compute nodes without having active runn
 ## Interactive batch jobs
 ---
 
-To request an interactive job, the **salloc** command should be used. These jobs are not limited to single node jobs; any nodes/tasks/gpus layout can be requested by salloc in the same way as for sbatch directives. However, to minimize queuing time, usually a minimal set of required resources should be used when submitting interactive jobs (less than 3 hours of wall time, less than 4 GB memory per core, ... etc). Because there is no batch file for interactive jobs, all the resource requests should be added as command line options of the **salloc** command. The same logic of __-\-nodes=__,  __-\-ntasks-per-node=__ , __-\-mem=__ and __-\-cpus-per-task=__ resources as per batch jobs applies here as well.
+To request an interactive job, the **salloc** command should be used. These jobs are not limited to a single node jobs; any nodes/tasks/gpus layout can be requested by salloc in the same way as for sbatch directives. However, to minimize queuing time, usually a minimal set of required resources should be used when submitting interactive jobs (less than 3 hours of wall time, less than 4 GB memory per core, ... etc). Because there is no batch file for interactive jobs, all the resource requests should be added as command line options of the **salloc** command. The same logic of __-\-nodes=__,  __-\-ntasks-per-node=__ , __-\-mem=__ and __-\-cpus-per-task=__ resources as per batch jobs applies here as well.
 
 For a threaded SMP code asking for half a node for two hours:
 
@@ -59,7 +59,7 @@ The difference for GPU jobs is that they would have to be directed to a node wit
 
 * The GPU jobs should run on the nodes that have GPU hardware, which means you'd always want to specify __-\-partition=gpu__ or __-\-partition=stamps-b__.
 
-* SLURM on Grex uses the so-called "GTRES" plugin for scheduling GPU jobs, which means that a request in the form of __-\-gpus=N__ or __-\-gpus-per-node=N__ or __-\-gpus-per-task=N__ is required. Note that both partitions have up to four GPU per node, so asking more than 4 GPUs per node, or per task, is nonsensical. For interactive jobs, it makes more sense to use single GPU in most of the cases.
+* SLURM on Grex uses the so-called "GTRES" plugin for scheduling GPU jobs, which means that a request in the form of __-\-gpus=N__ or __-\-gpus-per-node=N__ or __-\-gpus-per-task=N__ is required. Note that both partitions have up to four GPU per node, so asking more than 4 GPUs per node, or per task, is nonsensical. For interactive jobs, it makes more sense to use ia single GPU in most of the cases.
 
 For an interactive session using two hours of one 16 GB V100 GPU, 4 CPUs and 4000MB per cpu:
 
@@ -76,13 +76,13 @@ salloc --gpus=1 --cpus-per-task=4 --mem-per-cpu=4000M --time=0-2:00:00 --partiti
 ## Graphical jobs
 ---
 
-What to do if your interactive job involves a GUI based program? You can SSH to a login node with X11 forwarding enabled, or using X2Go remote desktop, and run it there. It is also possible to forward the X11 connection to compute nodes where your interactive jobs run with __-\-x11__ flag to **salloc**:
+What to do if your interactive job involves a GUI based program? You can SSH to a login node with X11 forwarding enabled, and run it there. It is also possible to forward the X11 connection to compute nodes where your interactive jobs run with __-\-x11__ flag to **salloc**:
 
 {{< highlight bash >}}
 salloc --ntasks=1 --x11 --mem=4000M
 {{< /highlight >}}
 
-To make it work you'd want the SSH session login node is also supporting graphics: either through the -Y flag of ssh (or X11 enabled in PuTTy) or by using [X2Go](connecting/x2go). If you are using Mac OS, you will have to install [XQuartz](https://www.xquartz.org/) to enable X11 forwarding.
+To make it work you'd want the SSH session login node is also supporting graphics: either through the -Y flag of ssh (or X11 enabled in PuTTy). If you are using Mac OS, you will have to install [XQuartz](https://www.xquartz.org/) to enable X11 forwarding.
 
 You may also try to use [OpenOnDemand](/ood) portal on Grex.
 
@@ -95,7 +95,5 @@ You may also try to use [OpenOnDemand](/ood) portal on Grex.
 <!-- {{< treeview display="tree" />}} -->
 
 <!-- Changes and update:
-* 
-*
-*
+* Last reviewed on: Apr 30, 2024.
 -->

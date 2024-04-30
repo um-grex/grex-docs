@@ -65,7 +65,7 @@ The regional partners of the Alliance are: BC DRI group and Prairies DRI group, 
 - [AceNET](https://wiki.ace-net.ca/wiki/ACENET "AceNET official website")
 
 {{< alert type="warning" >}}
-__WestGrid__ ceased its operations since April 1st, 2022. The former WestGrid institutions are now re-organized into two consortia: __BC DRI group__ and __Prairies DRI group.__
+__WestGrid__ ceased operations on April 1st, 2022. The former WestGrid institutions are now re-organized into two consortia: __BC DRI group__ and __Prairies DRI group.__
 {{< /alert >}}
 
 University of Manitoba is a member institution of Prairies DRI group, and provides a site for the Alliance support staff that support usage of the National DRI by Manitoba researchers and their collaborators. 
@@ -79,18 +79,16 @@ When requesting support, please make sure to include enough [information](https:
 
 ---
 
+<!--
 [![Digital Research Alliance of Canad](/alliance/Alliance_logo_English-first_slogan.jpg)](https://alliancecan.ca/)
+-->
 
 <!--
 [![Digital Research Alliance of Canad](/alliance/Alliance_logo_English-first.jpg)](https://alliancecan.ca/)
 -->
 
----
-
 <!-- {{< treeview display="tree" />}} -->
 
 <!-- Changes and update:
-* 
-*
-*
+* Last reviewed on: Apr 26, 2024.
 -->

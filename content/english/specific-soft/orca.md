@@ -148,9 +148,6 @@ sbatch run-nbo-orca-grex.sh
 
 For more information, visit the page [running jobs on Grex](running-jobs)
 
-### Running ORCA using ${SLURM_TMPDIR}
----
-
 ## Related links
 ---
 
@@ -167,7 +164,5 @@ For more information, visit the page [running jobs on Grex](running-jobs)
 <!-- {{< treeview display="tree" />}} -->
 
 <!-- Changes and update:
-* 
-*
-*
+* Last reviewed on: Apr 26, 2024.
 -->

@@ -12,14 +12,15 @@ bannerContent: "THe new Zebu OOD server works with the Duo MFA on Grex"
 ## OSC OpenOnDemand on Grex
 ---
 
-Grex's current OOD v.3 instance runs on **zebu.hpc.umanitoba.ca** (the earlier OOD v.2 instance on **aurochs.hpc.umanitoba.ca** is depreciated and no longer available) . It is available only from UManitoba IP addresses -- that is, your computer should be on the UM Campus network or the UM VPN to connect. 
+Grex's current OOD v.3 instance runs on **zebu.hpc.umanitoba.ca** (the earlier OOD v.2 instance on **aurochs.hpc.umanitoba.ca** is decommissioned and no longer available). It is available only from UManitoba IP addresses -- that is, your computer should be on the UM Campus network or the UM VPN to connect. 
 
 To connect from outside the UM network, please install and start [UManitoba Virtual Private Network](https://umanitoba.ca/computing/ist/connect/virtualpn.html). OOD relies on in-browser VNC sessions; so, a modern browser with HTML5 support is required; we recommend Google Chrome or Firefox and its derivatives (Waterfox, for example).
 
 **Connect to OOD when on campus network:**
+
 > - Point your Web browser to [https://zebu.hpc.umanitoba.ca](https://zebu.hpc.umanitoba.ca) 
 > - Use your Alliance CCDB username and password to log in to Grex OOD.
-> - New: use your Alliance CCDB Duo second factor method to continue loggin in to Grex OOD.
+> - New: use your Alliance CCDB Duo second factor method to continue logging in to Grex OOD.
 
 **Connect to OOD using [UManitoba VPN](https://umanitoba.ca/computing/ist/connect/virtualpn.html):**
 
@@ -68,7 +69,5 @@ The _Files_ interface allows for uploading, downloading and editing of the files
 <!-- {{< treeview display="tree" />}} -->
 
 <!-- Changes and update:
-* 
-*
-*
+* Last reviewed on: Apr 29, 2024.
 -->

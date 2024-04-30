@@ -41,7 +41,7 @@ sbatch --partition=compute sleep-job.sh
 
 7. Download the output slurm-NNNN.out from grex.hpc.umanitoba.ca to your local machine using your SFTP client.
 
-8. Congratulations, you have just ran your first HPC-style batch job. This is the general workflow, more or less; you'd just want to substitute the __sleep__ command to something useful, like __./your-code.x your-input.dat__ .
+8. Congratulations, you have just run your first HPC-style batch job. This is the general workflow, more or less; you'd just want to substitute the __sleep__ command to something useful, like __./your-code.x your-input.dat__ .
 
 <!--
 Check out [Getting an ccount](./access), [Moving Data](./connecting/data-transfer/) and [Running jobs](./running) for general information. [Software pages](./software) might have information specific to running particular [software items](./software/specific). [OpenOndemand](./ood) pages explain how to use the new Grex's Web portal.
@@ -50,7 +50,5 @@ Check out [Getting an ccount](./access), [Moving Data](./connecting/data-transfe
 <!-- {{< treeview display="tree" />}} -->
 
 <!-- Changes and update:
-* 
-*
-*
+* Last reviewed on: Apr 25, 2024.
 -->

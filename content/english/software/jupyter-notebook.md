@@ -84,7 +84,5 @@ Most of the Alliance's (Compute Canada) HPC machines deployed [JupyterHub](https
 <!-- {{< treeview display="tree" />}} -->
 
 <!-- Changes and update:
-* 
-*
-*
+* Last reviewed on: Apr 30, 2024.
 -->
