@@ -15,10 +15,13 @@ Please review the brief summary of the Grex upgrades and changes that are done d
 # Operating System: 
 ---
 
-Grex is now running a new version of Linux (__Alma Linux 8.x__). All modern compute nodes are upgraded to Alma Linux. The following partitions are running Alma Linux: 
+Grex is now running a new version of Linux (__Alma Linux 8.x__). All modern compute nodes are upgraded to Alma Linux. 
+The following general purpose partitions are running Alma Linux: 
 
 * __skylake__ 
 * __largemem__
+* __gpu__
+* __testgenoa__
 
 The only exception is made for the legacy nodes (__bison__, __tatanka__ and the old __compute__ partition) that are still running __Centos-7.9.__ The reason for that is related to the local software stack __GrexEnv__. For more details, see the __Software Stacks__ section below.
 
@@ -32,7 +35,7 @@ The storage servers for __/home__ and __/project__ have been upgraded. The users
 
 * The login nodes __bison__ and __tatanka__ are still running __Centos-7.9__ and they can be used to compile programs using the __GrexEnv__ and submit the jobs to __compute__ partition. 
 
-* The new login node _yak__ was upgraded to __Alma Linux.__ This node can be used to compile codes under the new environment __SBEnv__ that is loaded by default. From this node, tou can submit jobs to all partitions, except to __compute__ partition. If submitted to __compute__ partition, the scheduler will not even accept the job at submission time. From this node, you should be able to use the following partitions: __skylake__, __largemem__, and other contributed partitions, like __testgenoa__ and __mcordcpu-b__. 
+* The new login node _yak__ was upgraded to __Alma Linux.__ This node can be used to compile codes under the new environment __SBEnv__ that is loaded by default. From this node, tou can submit jobs to all partitions, except to __compute__ partition. If submitted to __compute__ partition, the scheduler will not even accept the job at submission time. From this node, you should be able to use the following partitions: __skylake__, __largemem__, and other contributed partitions, like __livi-b__ and __mcordcpu-b__. 
 
 # Software Stacks:
 ---
@@ -56,8 +59,9 @@ This is a new software stack that is meant to be used on __yak__ and all __moder
 
 __SBEnv__ has already:
 
-* different compilers: gcc/13.2.0; intel/2019.5, intel/2023.2, intel-one/2023.2, intel-one/2024.1;  intelmpi/2019.8; intelmpi/2021.10
-* OpenMPI (openmpi/4.1.6)
+* different compiler versions for Intel and GCC suites: gcc/13.2.0; intel/2019.5, intel/2023.2, intel-one/2023.2, intel-one/2024.1;  intelmpi/2019.8; intelmpi/2021.10
+* a new AOCC compiler suite for new AMD nodes (__testgenoa__ and __mcordcpu-b__ partitions): aocc/4.2.0
+* OpenMPI (openmpi/4.1.6 is the default version to be used in most cases)
 * some commercial software (ORCA, Gaussian)
 * some restricted software to particular groups, like stata, vasp, adf. 
 * some tools and popular dependencies. 
