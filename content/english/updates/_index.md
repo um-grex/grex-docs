@@ -1,63 +1,129 @@
 ---
 weight: 1000
 linkTitle: "Grex Updates"
-title: "OS, Lustre and Sogtware updates"
+title: "OS, Lustre and Software updates"
 description: "List of major changes on Grex: software and hardware updates."
 titleIcon: "fa-solid fa-house-chimney"
 banner: true
-bannerContent: "**OS and Lustre Update - May 2024**"
+bannerContent: "**OS and Lustre Updates - May 2024**"
 #categories: ["Functionalities"]
 #tags: ["Content management"]
 ---
 
-Please review a brief summary of the Grex upgrade and changes:
+Please review the brief summary of the Grex upgrades and changes that are done during the outage of **May 2024**:
 
 # Operating System: 
 ---
 
-Grex is now running a new version of Linux (Alma Linux 8.x). All modern compute nodes are upgraded to Alma Linux. The only exception is made for the legacy nodes (bison, tatanka and the old “compute” partition) that are still running Centos-7.9. The reason for that is related to the local software stack {GrexEnv}. For more details, see the “Software Stacks'' section below.
+Grex is now running a new version of Linux (__Alma Linux 8.x__). All modern compute nodes are upgraded to Alma Linux. The following partitions are running Alma Linux: 
+
+* __skylake__ 
+* __largemem__
+
+The only exception is made for the legacy nodes (__bison__, __tatanka__ and the old __compute__ partition) that are still running __Centos-7.9.__ The reason for that is related to the local software stack __GrexEnv__. For more details, see the __Software Stacks__ section below.
 
 # Storage:
 ---
 
-The storage servers for home and project have been upgraded. The users’ data was not affected.
+The storage servers for __/home__ and __/project__ have been upgraded. The users’ data was not affected.
 
 # Login nodes:
 ---
 
-The login nodes “bison” and “tatanka” are still running Centos-7.9 and they can be used to compile programs using the GrexEnv and submit the jobs to compute partitions. 
+* The login nodes __bison__ and __tatanka__ are still running __Centos-7.9__ and they can be used to compile programs using the __GrexEnv__ and submit the jobs to __compute__ partition. 
 
-The new login node “yak” was upgraded to Alma Linux. To submit jobs to any partition other than “compute”, please use the “yak” login node! 
+* The new login node _yak__ was upgraded to __Alma Linux.__ This node can be used to compile codes under the new environment __SBEnv__ that is loaded by default. From this node, tou can submit jobs to all partitions, except to __compute__ partition. If submitted to __compute__ partition, the scheduler will not even accept the job at submission time. From this node, you should be able to use the following partitions: __skylake__, __largemem__, and other contributed partitions, like __testgenoa__ and __mcordcpu-b__. 
 
 # Software Stacks:
 ---
 
-Grex has now 3 different software stacks:
+As mentioned above, Grex is running two operating systems:
 
-## GrexEnv: 
+* __Alma Linux:__ This OS is running on the new login node __yak__ and __zebu__ (that serves as a host for OOD). All other partions {except for __compute__} are running Alma Linux.
+
+* __Centos-7.9:__ This OS is running on the login nodes __bison__ and __tatanka__. The old __compute__ partition is also running Cento-7.9.
+
+For convenience, we have kept the old software stacks __GrexEnv__ as it was before the outage. This can be only used for running jobs on __compute__ partition. 
+
+For other partitions, we have deployed a new sotftware stack __SBEnv__ that is set as default when connecting to __yak__.
+
+After the outage of May 2024, Grex has 3 different software stacks:
+
+## SBEnv:
 ---
 
-This environment is enabled by default on bison, tatanka and the “compute” partition.
+This is a new software stack that is meant to be used on __yak__ and all __modern partitions__ on Grex {except for the legacy __compute__ partition}. __SBEnv__ stands for __Simplified Build Environment__. 
 
-CCEnv:
-This environment corresponds to the software stack from the Alliance which is the same used on national systems, like cedar, graham, beluga and narval. It can be used on yak and all partitions, except for the “compute” partition that has an old architecture.
+__SBEnv__ has already:
 
-# SBEnv:
+* different compilers: gcc/13.2.0; intel/2019.5, intel/2023.2, intel-one/2023.2, intel-one/2024.1;  intelmpi/2019.8; intelmpi/2021.10
+* OpenMPI (openmpi/4.1.6)
+* some commercial software (ORCA, Gaussian)
+* some restricted software to particular groups, like stata, vasp, adf. 
+* some tools and popular dependencies. 
+
+We will continue to add more programs as they are requested by users. If you can not find the program or the module you want to use, please send us a request via __support@tech.alliancecan.ca__ and we will install the module for you. 
+
+{{< alert type="warning" >}}
+If you have compiled locally your programs, you may have to re-compile them using the compilers available under this software stack.
+{{< /alert >}}
+
+Since this is a new software stack managed by a different package manager, the names of the modules may have changed compared to the old software stack. For example, the modules that have _uofm_ under their name, they no longer show this name. For example, instead of __uofm/adf__, the module name is __adf__. 
+
+The better way to find modules and see how to load them is to run the usual command:
+
+{{< highlight bash >}}
+module spider <name of the program>
+{{< /highlight >}}
+
+## GrexEnv
 ---
 
-This is a new software stack that is meant to be used on yak and all modern partitions on Grex {except for the legacy compute partition}. SBEnv stands for “Simplified Build Environment”. It already has different compilers (gcc/13.2.0; intel/2019.5, intel/2023.2, intel-one/2023.2, intel-one/2024.1;  intelmpi/2019.8; intelmpi/2021.10), OpenMPI (openmpi/4.1.6), some commercial software (ORCA, Gaussian), some restricted software to particular groups, like STAT. We have also added some tools and popular dependencies. We will continue to add more programs as they are requested by users. If you can not find the program or the module you want to use, please send us a request via {support@tech.alliancecan.ca} and we will install the module for you. If you have compiled locally your programs, you may have to re-compile them using the compilers available under this software stack!
+This environment is enabled by default on __bison__, __tatanka__ and the __compute__ partition. This environment was not changed and it is kept in the same state as before the outage. Now, it can be only used to run jobs on __compute__ partition.
+
+
+## CCEnv
+---
+
+This environment corresponds to the software stack from the Alliance which is the same used on national systems, like cedar, graham, beluga and narval. It can be used on yak and all partitions, except for the __compute__ partition that has an old architecture.
+
+To use it on Grex, you should first load the following modules on this odrer:
+
+{{< highlight bash >}}
+module load CCEnv
+module load arch/avx512
+module load StdEnv/2023
+{{< /highlight >}}
+
+Then use __module spider__ to search for other modules under this environment.
 
 # Scheduler: 
 ---
 
-1) No major changes to mention about the scheduler since we are still using the same version as before the outage. The only significant change is as follows. Due to two versions of Linux and Software existing now on Grex (all modern CPU and GPU nodes running Alma8, and legacy “compute” , bison and tatanka still have CentOS7), we have limited job submission between the new and old hardware. That is, jobs to compute must be submitted from the “grex/bison/tatanka” login node, and jobs to anything else must be submitted from the “yak” login node. Eventually we will decommission the legacy “compute” hardware altogether. 
-
-2) However, we are still working on enabling and testing Grex, SLURM and reservations are being gradually lifted. Not all jobs might be able to start right away. 
+* No major changes to mention about the scheduler since we are still using the same version as before the outage. The only significant change is as follows. Due to two versions of Linux and Software existing now on Grex (all modern CPU and GPU nodes running Alma Linux, and legacy __compute__ , bison and tatanka still have CentOS7), we have limited job submission between the new and old hardware. That is, jobs to compute must be submitted from the __grex/bison/tatanka__ login node, and jobs to anything else must be submitted from the __yak__ login node. Eventually we will decommission the legacy __compute__ hardware altogether. 
 
 # Open OnDemand Web interface:
 ---
  
 Right now, the interface fully works, including “Simplified Desktop” jobs, Files App. We are still working on porting all other OOD applications to Alma Linux and for that some of them may not yet be available. 
+
+# Workflow summary
+---
+
+As a summary of the changes, there are two workflows on Grex now:
+
+* __New environment:__
+
+> * connect via __yak.hpc.umanitoba.ca__
+> * Use the new environment __SBEnv__ for modules and/or compile your programs.
+> * Submit your jobs to __skylake__, __largemem__ or any other partition, except for __compute__. For a complete list of partitions, run the command __partition-list__ from your terminal
+> * You could also use __CCEnv__ as shown above.
+
+* __Old environment:__
+
+> * connect via __grex.hpc.umanitoba.ca__
+> * Use the new environment __GrexEnv__ for modules and/or compile your programs.
+> * Submit your jobs to __compute__ partition.
 
 If you have questions or concerns, please don't hesitate to contact us at: support@tech.alliancecan.ca
 
