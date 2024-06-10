@@ -70,8 +70,14 @@ The viewer should not be used to run production calculations on Grex login nodes
 A simplified job script **sbg16** is available (after loading of the g16 module) for automatic generation and submission of SLURM Gaussian jobs.
 
 {{< highlight bash >}}
-sbg16 input.gjf -ppn 12 -mem 40000mb -time 8:00:00
+sbg16 input.gjf -ppn 12 -part skylake -mem 40000mb -time 12:00:00
 {{< /highlight >}}
+
+The script takes input file name (must have the _.gjf_ extension), which must be the first argument, and a couple of parameters:
+ * _-ppn N_ : number of threads. Cannot be more than physical number of threads per node on the selected partition
+ * _-part name_ : a SLURM partition to run the job in . 
+ * _-mem MemSpec_ : total memory per job. The MemSpec can include usual units, without spaces (1000mb, 3gb , etc). 
+ * _-time TimeSpec_ : walltime requested for the job, in SLURM format (1-00:00 or 24:00:00 give one day).
 
 ## Using NBO
 ---
