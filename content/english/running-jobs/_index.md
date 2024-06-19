@@ -30,6 +30,8 @@ or
 #SBATCH --account=def-sponsor2
 {{< /highlight >}}
 
+> NEW : Since Jun 19, 2024,  for users that have more than one Account (that is, working for more than one research group), SLURM on Grex will no longer try to assume which of the accounts is default. Instead, sbatch and salloc would ask to provide the –account= opton explicitly, list the possible accounts, and stop. Thus, for users that are members of more than one group, specifying the account as per above is now mandatory!
+
 ## QOSs
 ---
 
