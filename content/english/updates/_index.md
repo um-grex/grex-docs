@@ -104,7 +104,10 @@ Then use __module spider__ to search for other modules under this environment.
 # Scheduler: 
 ---
 
-* No major changes to mention about the scheduler since we are still using the same version as before the outage. The only significant change is as follows. Due to two versions of Linux and Software existing now on Grex (all modern CPU and GPU nodes running Alma Linux, and legacy __compute__ , bison and tatanka still have CentOS7), we have limited job submission between the new and old hardware. That is, jobs to compute must be submitted from the __grex/bison/tatanka__ login node, and jobs to anything else must be submitted from the __yak__ login node. Eventually we will decommission the legacy __compute__ hardware altogether. 
+ * No major changes to mention about the scheduler since we are still using the same version as before the outage. 
+ * One significant change is as follows. Due to two versions of Linux and Software co-existing now on Grex (all modern CPU and GPU nodes running Alma Linux, and legacy __compute__ , bison and tatanka still have CentOS7), we have limited job submission between the new and old hardware. That is, jobs to compute must be submitted from the __grex/bison/tatanka__ login node, and jobs to anything else must be submitted from the __yak__ login node. Eventually we will decommission the legacy __compute__ hardware altogether. 
+ * If no partition is specified, the default will be either **skylake** or **compute** depending on the job submission host, as per above.
+>  NEW : another significant change introduced on Jun 19, 2024: For users that have more than one Account (that is, working for more than one research group), SLURM on Grex will no longer try to assume which of the accounts is default. Instead, _sbatch_ and _salloc_ would ask to provide the _--account=_ opton explicitly, list the possible accounts, and stop. If you are a member of more than one group, always specify the account you intend to be used for the job!
 
 # Open OnDemand Web interface:
 ---
