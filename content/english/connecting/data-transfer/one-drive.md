@@ -100,8 +100,10 @@ As with the command line access, the access token has to be periodically refresh
 ## Using Rclone for other "remotes" like NextCloud
 ---
 
-Actually, many remotes besides MS OneDrive would work with _rclone_ and OpenOnDemand. The following example of setting up the Alliance's NextCloud remote with __rclone__ 
-[Rclone and NextClod on Alliance](https://docs.alliancecan.ca/wiki/Nextcloud#Upload_and_download_files_using_rclone) would also work. After setting up the NextCLoud remote as described on the documentation file, the remote storage will appear in the OOD Files App.
+Actually, many remotes besides MS OneDrive would work with _rclone_ and OpenOnDemand. 
+
+The following example of setting up the Alliance's NextCloud remote with __rclone__ [Rclone and NextClod on Alliance](https://docs.alliancecan.ca/wiki/Nextcloud#Upload_and_download_files_using_rclone) would also work. 
+After setting up the NextCLoud remote as described on the documentation file, the remote storage will appear in the OOD Files App.
 
 ## External links
 ---

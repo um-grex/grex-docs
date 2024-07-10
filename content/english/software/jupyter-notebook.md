@@ -1,8 +1,8 @@
 ---
 weight: 2000
 linkTitle: "Jupyter notebooks"
-title: "How to use jupyter notebooks on Grex?"
-description: "Everything you need to know for using jupyter notebooks."
+title: "How to use Jupyter notebooks on Grex?"
+description: "Everything you need to know for using Jupyter notebooks."
 categories: ["Software"]
 #tags: ["Configuration"]
 ---
@@ -15,6 +15,70 @@ categories: ["Software"]
 Jupyter can be used either as a simple, individual notebook or as a multi-user Web server/Interactive Development Environment (IDE), such as JupyterHub/JupyterLab. The JupyterHub servers can use a variety of computational back-end configurations: from free-for-all shared workstation to job spawning interfaces to HPC schedulers like SLURM or container workflow systems like Kubernetes.
 
 This page lists examples of several ways of accessing jupyter.
+
+## Using notebooks via Grex OOD Web Portal
+---
+
+Grex provides Jupyter Notebooks and/or JupyterLab as an [OpenOnDemand](ood) dashboard application. 
+This is much more convenient than handling SSH tunnels for Jupyter manually. 
+The servers will run as a batch job on Grex compute nodes, so as usual, a choice of SLURM partition will be needed. 
+
+There is more than one versions of the OOD app, one for the local Grex software environment with a GCC toolchain,
+and another for the Alliance/ComputeCanada environment with the StdEnv/2023 environment. The later is less polished for Grex. In particular, Rstudio and Desktop Launcher links there will not work. 
+It is better to use OOD's standalone Rstudio and Desktop Apps instead of launching them from JupyterLab. 
+
+{{< collapsible title="OpenOndemand applications: jupyter" >}}
+![](/ood/applications.png)
+{{< /collapsible >}}
+
+Find out more on how to use OOD on the [Grex OOD pages](ood)
+
+## Installing additional Jupyter Kernels
+
+To use R, Julia, and different instances or versions of Python from Jupyter, a corresponding Jupyter notebook kernel has to be installed for each of the languages, by each user in their HOME directories. 
+Note that the language kernels must match the software environments they will be used from (i.e., to be installed using a local Grex software stack and then used from OOD Jupyter App off the same software stack).
+Python's _virtualenv_ can be helful in isolating the various environements and their dependencies.
+
+The kernels are installed under a hidden directory _$HOME/.local/share/jupyter/kernels_. 
+
+### Adding an R kernel
+For example, in order to add an R kernel, the following commands can be used:
+
+{{< highlight bash >}}
+#Loading the R module of a required version and its dependencies go here. _R_ will be in the PATH.
+R -e "install.packages(c('crayon', 'pbdZMQ', 'devtools'), repos='http://cran.us.r-project.org')"
+R -e "devtools::install_github(paste0('IRkernel/', c('repr', 'IRdisplay', 'IRkernel')))"
+R -e "IRkernel::installspec()"
+{{< /highlight >}}
+
+### Adding a Julia kernel
+For Julia, the package [IJulia](https://github.com/JuliaLang/IJulia.jl) has to be installed:
+{{< highlight bash >}}
+#Loading the Python and Jula module of a required version and its dependencies go here. _julia_ will be in the PATH.
+echo 'Pkg.add("IJulia")' | julia
+python -m ipykernel install --user --name julia --display-name "Julia"
+{{< /highlight >}}
+
+### Adding a Python kernel using virtualenv
+
+TBD
+
+### Keeping track of installed kernels
+
+The kernels are installed under a hidden directory _$HOME/.local/share/jupyter/kernels_. To list installed kernels, manipulate them etc., there are a few useful commands:
+
+{{< highlight bash >}}
+#Loading the Python module of a required version and its dependencies go here. 
+jupyter kernelspec list
+{{< /highlight >}}
+The output will be the list of installed kernels. A kernel can be uninstalled using the following command, referring to a kernel name from the list:
+{{< highlight bash >}}
+#Loading the Python module of a required version and its dependencies go here. 
+jupyter kernelspec  uninstall my_kernel
+{{< /highlight >}}
+
+
+Check out the corresponding Compute Canada documentation [here](https://docs.alliancecan.ca/wiki/JupyterNotebook#Adding_kernels) for more information
 
 ## Using notebooks via SSH tunnel and interactive jobs
 ---
@@ -59,30 +123,45 @@ The notebook session will be usable for as long as the interactive (__salloc__) 
 
 The above-mentioned method will work not only on Grex, but on Compute Canada systems as well.
 
-## Using notebooks via Grex OOD Web Portal
----
 
-Grex provides a jupyter server as an [OpenOnDemand](ood) dashboard application. This is much more convenient than handling SSH tunnels manually. The servers will run as a batch job on Grex compute nodes, so as usual, a choice of SLURM partition will be needed. 
+## Not using Jupyter notebooks in SLURM jobs
 
-Presently, jupyter for these apps uses an installation of Grex's Python 3.7 module. There are two versions of the app, one for the GCC 7.4 toolchain, another for Intel the 2019.5 toolchain. 
+> While Jupyter is a great debugging and visualization tool, for heavy production calculations it is almost always a better idea to use batch jobs. However, the Notebooks cannot be executed from Python (or other script languages) directly!
 
-{{< collapsible title="OpenOndemand applications: jupyter" >}}
-![](/ood/applications.png)
-{{< /collapsible >}}
+Fortunately, it is possible to convert Jupyter Notebooks (_.ipynb_ format) to a runnable script using Jupyter's _nbconvert_ command. 
 
-Find out more on how to use OOD on the [Grex OOD pages](ood)
+For example, in a Python's Notebook cell:
 
-To use R, Julia, and different instances or versions of Python, a jupyter notebook kernel needs to be installed by each user in their home directories. Check out the corresponding Compute Canada documentation [here](https://docs.alliancecan.ca/wiki/JupyterNotebook#Adding_kernels) .
+>!pip install --no-index nbconvert
+
+>!jupyter nbconvert --to script my_notebook.ipynb
+
+Or, in the Jupyter Notebook or JupyterLab GUI, there is an
+
+Or, in command line (provided corresponding Python and Jupyter modules are loaded first):
+{{< highlight bash >}}
+#Python modules, virtualenv activation commands etc. go here
+jupyter nbconvert --to script my_notebook.ipynb
+{{< /highlight >}}
+
+Then, in a SLURM job, the resulting script can be executed with a regular Python (or R, or Julia). Again, after loading the required modules,
+
+{{< highlight bash >}}
+#SLURM headers and modules go here
+python  my_notebook.py
+{{< /highlight >}}
+
 
 ## Other jupyter instances around
 ---
 
-There is a SyZyGy instance [umanitoba.syzygy.ca](https://umanitoba.syzygy.ca) that gives a free-for-all shared JupyterHub for UManitoba users.
+There is a SyZyGy instance [umanitoba.syzygy.ca](https://umanitoba.syzygy.ca) that gives a free-for-all shared SyZyGy JupyterHub for UManitoba users.
 
 Most of the Alliance's (Compute Canada) HPC machines deployed [JupyterHub](https://docs.alliancecan.ca/wiki/JupyterHub/en) interfaces: Cedar, Beluga, Narval and Niagara.
+These instances submit Jupyter notebooks as SLURM jobs directly from the JupyterHub interface. 
 
 <!-- {{< treeview display="tree" />}} -->
 
 <!-- Changes and update:
-* Last reviewed on: Apr 30, 2024.
+* Last reviewed on: Jul 10, 2024 by GAS
 -->
