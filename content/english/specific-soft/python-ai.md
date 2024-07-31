@@ -31,7 +31,9 @@ ComputeCanada / The Alliance provides repackaged Python "wheels" to work properl
 
 Adding each and every package with pip is time-consuming. CCEnv provides "modules" for a most common combination of fixed module versions of NumPy, SciPy, Matplotlib, etc., so-called _scipy-stack_ modules.
  
-##  Example 1: using OpenAI shape-e in CCEnv virtualenv
+## Examples Use Sases
+
+###  Example 1: using OpenAI shape-e in CCEnv virtualenv
 
 
 Let us put the above into practice, by using an old OpenAI ML model, [shap-e](https://github.com/openai/shap-e) that can generate 3D objects in the form of _.ply_ meshes, from a text.
@@ -109,7 +111,7 @@ The script can be submitted as usual, with the sbatch command:
 sbatch run-python-gpu.sh
 {{< /highlight >}}
 
-##  Example 2: using manga-image-translator with Singularity Container engine
+###  Example 2: using manga-image-translator with Singularity 
 
 Containers are another popular way of managing Python dependencies.  In this example, let us try to translate Manga captions using AI code and models from [manga-image-translator](https://github.com/zyddnys/manga-image-translator) . We will need the software and the AI models it is using. While it is possible to build the software from Github sources with pip/virtualenv, it can be tricky and time consuming.
 The authors of the repository have provided [a container image on DockerHub](https://hub.docker.com/r/zyddnys/manga-image-translator) . We will be using the image on Grex with Singularity/ Apptainer.
@@ -165,7 +167,7 @@ singularity exec --writable-tmpfs  --nv -B `pwd`/translators:/app/models/transla
 
 When the command finishes, the _./source-translated_ would contain a image with Japanese text translated to English.
 
-##  Example 3: using manga-image-translator with Podman container engine
+###  Example 3: using manga-image-translator with Podman 
 
 Singularity is the preferred container engine on our shared HPC systems. However, there are cases when Singularity/Apptainer SISF images would not run Docker images correctly.
 In these cases, root-less Podman can be used. Both the Alliance's _CCEnv_ and Grex's _SBEnv_ provide a module for Podman. Using Podman is very similar to using Docker in that Podman supports same command line options.
