@@ -79,7 +79,8 @@ Most Linux software can be installed from sources using either [Autoconf](https:
 
 Software that comes as a binary archive to be unpacked can be simply unpacked into your home directory location. Then, the paths should be set for the software to be found: either by including the environment variable in __$HOME/.bashrc__ or in __$HOME/.bash_profile__ or by creating a specific module in __$HOME/modulefiles/my-software/version__ following Lmod instructions for [writing Modules](https://lmod.readthedocs.io/en/latest/015_writing_modules.html).
 
-There exist binary software environments like conda that manage their own tree of binary-everything. These can be used as well, with some caution, because automatically pulling everything might conflict with the same software existing in the HPC environment (Python package paths, MPI libraries, etc.).
+There exist binary software environments like _conda_ that manage their own tree of binary-everything. These can be used from your home directory as well, with some caution, because automatically pulling every software from a conda channel might conflict with the same software existing in the HPC environment (Python package paths, MPI libraries, etc.).
+> Note that as of 2024, Anaconda owners strictened their licensing policy. We do not provide any system-wide _conda_ installations on Grex. In case users want to continue using _conda_, they must be sure that they have a proper Anaconda license to do so. Note also that the same applies for _mamba_ which would use the same conda software channels.
 
 However, if a software is really a part of the base OS (something like a graphics Desktop software, etc.), it can be hard to rebuild from sources due to many dependencies. If needed, it may be better if installed centrally or used in a container, see Containers [documentation](software/containers).
 

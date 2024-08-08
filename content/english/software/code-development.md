@@ -207,13 +207,14 @@ module spider netcdf
 ## Python
 ---
 
-There are Conda python modules and Python built from sources with a variety of the compilers. The conda based modules can be distinguished by the module name. Note that the base OS python should in most cases not be used; rather use a module:
+There are modules for Python versions that we buid from source using optimizations specific to our HPC hardware.
+> Note that the base OS python should in most cases not be used; rather find and use a module!
 
 {{< highlight bash >}}
 module spider python
 {{< /highlight >}}
 
-We do install certain most popular python modules (such as Numpy, Scipy, matplotlib) centrally. _pip list_ and _conda list_ would show the installed modules.
+We do install certain most popular python modules centrally. _pip list_ would show the installed modules.
 
 ## R
 ---
