@@ -24,7 +24,8 @@ Some of the mechanisms to handle thiese dependency problems are
 
 The _conda_ offers an easy way to package up all of the dependencies and often is liked by the users. Many _conda_ repositories exist. Sometimes _conda_ is the only way to run a particularly badly maintained Python package.
 However, it has important drawbacks such as packaging up all the dependencies which uses a lot of disk space, and provide for conflicts with HPC and Linux environments. Thus, _conda_ can be used on HPC machines like Grex at the user's risk.
-In particular, we suggest against any automatic "activation" of _conda_ environments in users' startup scripts (like _~/.bashrc_).
+In particular, we suggest against any automatic "activation" of _conda_ environments in users' startup scripts (like _~/.bashrc_). 
+> Note that as of 2024, Anaconda owners strictened their licensing policy. We do not provide any system-wide _conda_ installations on Grex. In case users want to continue using _conda_, they must be sure that they have a proper Anaconda license to do so. Note also that the same applies for _mamba_ which would use the same conda software channels.
 
 The _virtualenv_ while similar to _conda_ in that it would isolate the Python dependencies, is more HPC-friendly because it allows for using HPC modules together with Python _pip_ to control dependencies per particular software item. ComputeCanada / The Alliance has chosen to provide for the CCEnv just basic Python as a Module, and let users use _virtualenv_ for each workflow they would like.
 ComputeCanada / The Alliance provides repackaged Python "wheels" to work properly with CCEnv. _pip install_ from CCEnv would use these wheels first. Using _--index-url _ that would point to other sources of the "wheels" can lead to problems and broken installations.
