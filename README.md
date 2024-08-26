@@ -17,10 +17,10 @@ Conventions:
 
 The Hugo version to work with is the latest stable, extended.
 
-1. Get the Hugo binary (extended) from https://github.com/gohugoio/hugo/releases, then unpack and place it in your `PATH`:
-2. Clone this repository recursively, to get the currently used Hugo theme: `git clone https://github.com/um-grex/grex-docs.git`
+1. Get the Hugo binary (extended) from https://github.com/gohugoio/hugo/releases, then unpack and place it in your `PATH`
+2. Clone this repository to get the currently used Hugo theme: `git clone https://github.com/um-grex/grex-docs.git`
 3. Change to the repository and render it with Hugo: `hugo server -w --disableFastRender`
-4. Connect a local browser to http://127.0.0.1:1313 (as directed by hugo) and observe the rendered website
+4. Using a browser navigate to http://127.0.0.1:1313 (as directed by hugo) and observe the rendered website
 5. Deploy the site to GitHub CI: `git push origin main`
 
 Submodules can be updated somehow when the theme updates. 
