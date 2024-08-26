@@ -93,7 +93,7 @@ For dynamic languages like R and Python, the Alliance (formerly known as Compute
 
 We recommend using a recent environment/toolchain that provides OpenMPI 3.1.x or later, which has a recent PMIx process management interface and supports UCX interconnect libraries that are used on Grex. Earlier versions of OpenMPI might or might not work. With OpenMPI 3.1.x or 4.0.x, __srun__ command should be used in SLURM job scripts on Grex.
 
-Below is an example of an MPI job (Intel benchmark) using the StdEnv/2018.3 toolchain (Intel 2018 / GCC 7.3.0 and OpenMPI 3.1.2).
+Below is an example of an MPI job (Intel benchmark) using the StdEnv/2023 toolchain (Intel 2023  and OpenMPI 4.1).
 
 {{< collapsible title="Script example for running MPI program using the Alliance's software stack" >}}
 {{< snippet
