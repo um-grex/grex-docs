@@ -25,11 +25,11 @@ The Hugo version to work with is the latest stable, extended.
 	
 	curl -O https://github.com/gohugoio/hugo/releases/download/v0.133.1/hugo_extended_0.133.1_darwin-universal.tar.gz
 
-2. Clone this repository recursively, to get Alex Shpak's Book theme.
+2. Clone this repository recursively, to get the currently used Hugo theme.
 
 	git clone https://github.com/um-grex/grex-docs.git --recursive 
 
-3. Change to the repository and render it with hugo.
+3. Change to the repository and render it with Hugo.
 
 	hugo  server
 
@@ -37,7 +37,9 @@ The Hugo version to work with is the latest stable, extended.
 
 5. Deploy the site to GitHub CI by using **git push origin main**
 
-Submodules can be updated somehow when the theme updates. A nice feature of the Book theme is that the pages can be edited right in this source repository, by using the Edit link an the bottom on the rendered website. However it is still necessary and good to pull and render the website with local Hugo process, because Hugo's Golang modules and shorthands are a superset of the Git's markdown syntax, and not all of them are rendered on the github repository pages.
+Submodules can be updated somehow when the theme updates. 
+The page sources are in Markdown and thus can be edited directly in the Github editor. 
+It is a good practice to pull and render the website with local Hugo process, because Hugo's Golang modules and shorthands are a superset of the Git's markdown syntax, and not all of them are rendered on the github repository pages.
 
 ## Git
 
@@ -49,14 +51,15 @@ When ready, merge the `develop` branch into the `main` branch and push it to dep
 
 For example:
 ```bash
-[~]$ git clone <REPO_URL>
+[~]$ git clone https://github.com/um-grex/grex-docs.git --recursive  # if clean doc copy is needed
 [~]$ git pull  # if the repo is already cloned
 [~]$ git switch develop
-# change/update files
+# change/update the documentation files; render them locally with Hugo server as described above. 
+# Then, commit the changes to the Github
 [~]$ git commit
 [~]$ git push
 # other team members can pull/check the changes locally
-# chnages are approved
+# when changes are approved
 [~]$ git switch main
 [~]$ git merge develop
 [~]$ git push
@@ -71,4 +74,5 @@ Conventions for writing the documentation pages we know of.
 
  * command line commands should be on a separate line, and quoted with ```triple backticks```
  * code, job scripts and such should use highlight shortcode for the appropriate language (like, bash)
+ * etc.? How do we highlight things like partition names and environment vars, with Bold ?
 
