@@ -104,10 +104,7 @@ We provide [Podman](https://podman.io/) modules as part of the default Grex envi
 Under no circumstances, users are allowed to use Podman to run services (inclunding and not limited to databases, and network services). Ignoring this policy will result in the forced termination of the job.
 Due to the nature of container runtime environments, we strive to update Podman regularly, so the installed version is usually the latest one.
 
-On Grex, Podman is
- - configured as _rootless_
- - uses _crun_ to actually run the containers
- - uses _netavark_/_aardavark_/_passt_ for networking
+On Grex, Podman is configured as _rootless_, and uses _crun_ to actually run the containers.
 
 Users can load the module and get some infomration using the following commmand:
 {{< highlight bash >}}
@@ -124,7 +121,7 @@ podman pull _required_image_
 {{< /highlight >}}
 
 Grex is hosting a Docker Registry proxy/cache locally to improve performances, while avoiding rate limits imposed by the official Docker Hub.
-Users that build their own images, can ask write access to the Grex Docker Registry to push their artifacts (granting such requests will be evaluated case by case).
+In the future, users that build their own images will be able to ask write access to the Grex Docker Registry to push their artifacts (this service is currently under development, and not publicly available).
 
 ---
 
