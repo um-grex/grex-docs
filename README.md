@@ -35,13 +35,44 @@ When the above requirements are satisfied, here is how to get started.
 
 3. Change to the repository and render it with hugo.
 
-	hugo -D --theme=book server
+	hugo  server
 
 4. Connect a local browser to port :1313 as directed by hugo and observe the rendered website.
 
-5. Deploy the ./public directory somewhere, somehow. Can be a local server with rsync or github.io site. There is documentation on the Hugo website. 
+~~5. Deploy the ./public directory somewhere, somehow. Can be a local server with rsync or github.io site. There is documentation on the Hugo website. ~~
+
+5. Deploy the site to GitHub CI by using **git push origin main**
 
 Submodules can be updated somehow when the theme updates. A nice feature of the Book theme is that the pages can be edited right in this source repository, by using the Edit link an the bottom on the rendered website. However it is still necessary and good to pull and render the website with local Hugo process, because Hugo's Golang modules and shorthands are a superset of the Git's markdown syntax, and not all of them are rendered on the github repository pages.
+
+## "Using Developing Branch for proofreading and drafts"
+
+There is now a "branch" called **develop** . Editing the branch does not cause GitHub CI to re-create the public UM-Grex docs website. Editors can commit their change to the branch, so as to then can be pulled by co-workers, edited, and rendered locally with Hugo as per above.
+
+1. In the repository, pull the current repo
+    git pull
+    
+2. List the branches. There should be at least two there: devel and main.
+    git branch
+
+    devel
+    main
+
+2. Switch to the development branch
+    git branch devel
+    git pull
+
+3. Render the repo with Hugo. This is the local copy of the devel branch!
+    ../hugo server
+
+4. Make edit, git commit, git push them to the devel branch.
+
+5. To synchronize the changes made in develio with the main branch, switch to main and use "git merge develop".
+
+    git switch main
+    git pull
+    git merge develop
+    git push origin main
 
 ## Markdown ##
 
