@@ -43,7 +43,7 @@ When ready, merge the `develop` branch into the `main` branch and push it to dep
 
 For example:
 ```bash
-[~]$ git clone https://github.com/um-grex/grex-docs.git --recursive  # if clean doc copy is needed
+[~]$ git clone https://github.com/um-grex/grex-docs.git --recursive  && cd grex-docs.git # if clean doc copy is needed
 [~]$ git pull  # if the repo is already cloned
 [~]$ git switch develop
 # change/update the documentation files; render them locally with Hugo server as described above. 
