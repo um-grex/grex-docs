@@ -61,17 +61,17 @@ export SINGULARITY_TMPDIR="/global/scratch/$USER/singularity/tmp"
 
 before building the singularity image.
 
-#### Getting and building Singularity images
+### Getting and building Singularity images
 ---
 
 The commands **singularity build** and **singularity pull** would get Singularity images from DockerHub, SingularityHub or SyLabsCloud. Images can also be built from other images, and from recipes. A recipe is a text file that specifies the base image and post-install commands to be performed on it.
 
-#### Singularity with GPUs
+### Singularity with GPUs
 ---
 
 Use the __-\-nv__ flag to singularity run/exec/shell commands. Naturally, you should be on a node that has a GPU, in an interactive job. NVIDIA provides many pre-built Docker and Singularity container images on their ["GPU cloud"](https://ngc.nvidia.com/), together with instructions on how to pull them and to run them. These should work on Grex without much changes.
 
-#### Singularity with OpenScienceGrid CVMFS
+### Singularity with OpenScienceGrid CVMFS
 ---
 
 We can run Singularity containers distributed with OSG CVMFS which is currently mounted on Grex's CVMFS. The containers are distributed via CVMFS as unpacked directory images. So, the way to access them is to find a directory of interest and point singularity runtime to it. The directories will then be mounted and fetched automatically. The repository starts with __/cvmfs/singularity.opensciencegrid.org/__. Then you'd need an idea from somewhere what you are looking for in the subdirectories of the above-mentioned path. An example (accessing, that is, exploring via __singularity shell__ command, Remoll software distributed through OSG CVMFS by __jeffersonlab__):
@@ -125,7 +125,7 @@ In the future, users that build their own images will be able to ask write acces
 
 ---
 
-# External links
+## External links
 ---
 
  * [Singularity/Sylabs homepage](https://sylabs.io)
