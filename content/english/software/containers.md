@@ -11,12 +11,13 @@ categories: ["Software", "Applications"]
 ---
 
 Linux Containers are means to isolate software dependencies from the base Linux operating system. 
-On Grex, we support the [Singularity](https://sylabs.io/guides/3.11/user-guide/) container system, developed by a company called SyLabs. 
-There was a fork of the Singularity project that produced a new project called [Apptainer](https://apptainer.org/). 
+On Grex, we support the [Singularity](https://docs.sylabs.io/guides/latest/user-guide/) container system (developed by a company called SyLabs), and [Podman](https://podman.io/).
+There was a fork of the Singularity project that produced a new project called [Apptainer](https://apptainer.org/).
 As of now (early 2024), Singularity-CE by Sylabs and Apptainer by Linux Foundations are using the same SIF image format and thus are largely the same with respect to their usage and main features.
-Grex supports Singularity-CE, while National DRI (the Alliance) HPC machines like Cedar or Graham support Apptainer. 
+Grex supports Singularity-CE, while National DRI (the Alliance) HPC machines like Cedar or Graham support Apptainer.
+Both Grex and National DRI (the Alliance) HPC machines like Cedar or Graham support Podman.
 
-Several different Linux container engines exist, most notably [Docker](https://www.docker.com) which is a very popular tool in the DevOps community. Presently Docker containers cannot be directly supported on shared HPC systems like Grex. However, with help of Singularity, it is possible to run Docker images from [DockerHub](https://hub.docker.com/), as well as native Singularity images from other repositories, such as [SingularityHub](https://singularity-hub.org/) and [SyLabsCloud](https://cloud.sylabs.io/home).
+Several different Linux container engines exist, most notably [Docker](https://www.docker.com) which is a very popular tool in the DevOps community. With Singularity it is possible to run Docker images from [DockerHub](https://hub.docker.com/), as well as native Singularity images from other repositories, such as [SingularityHub](https://singularity-hub.org/) and [SyLabsCloud](https://cloud.sylabs.io/home).
 
 ## Using Singularity from SBEnv on Grex
 ---
@@ -33,7 +34,7 @@ With **singularity** command, one can list singularity commands and their option
 singularity help
 {{< /highlight >}}
 
-A brief introduction on [getting started with Singularity](https://sylabs.io/guides/3.5/user-guide/quick_start.html) can be useful to get started. You will not need to install Singularity on Grex since it is already provided as a module.
+A brief introduction on [getting started with Singularity](https://docs.sylabs.io/guides/latest/user-guide/quick_start.html) can be useful to get started. You will not need to install Singularity on Grex since it is already provided as a module.
 
 To execute an application within the container, do it in the usual way for that application, but prefix the command with ''singularity exec image_name.sif". For example, to run R on an R script, using a container named R-INLA.sif:
 
@@ -41,7 +42,7 @@ To execute an application within the container, do it in the usual way for that 
 singularity exec ./R-INLA.sif R --vanilla < myscript.R
 {{< /highlight >}}
  
-Quite often, it is useful to provide the containerized application with data residing on a shared HPC filesystem such as __/home__ or __/global/scratch__. This is done via [bind mounts](https://sylabs.io/guides/3.5/user-guide/bind_paths_and_mounts.html). Normally, the container **bind-mounts** $HOME, /tmp and the current working directory. On Grex to bind the global Lustre filesystem the following __-B__ option should be used:
+Quite often, it is useful to provide the containerized application with data residing on a shared HPC filesystem such as __/home__ or __/global/scratch__. This is done via [bind mounts](https://docs.sylabs.io/guides/latest/user-guide/bind_paths_and_mounts.html). Normally, the container **bind-mounts** $HOME, /tmp and the current working directory. On Grex to bind the global Lustre filesystem the following __-B__ option should be used:
 
 {{< highlight bash >}}
 singularity exec -B /sbb/scratch:/global/scratch ./R-INLA.sif R --vanilla < myscript.R
@@ -123,6 +124,16 @@ podman pull _required_image_
 Grex is hosting a Docker Registry proxy/cache locally to improve performances, while avoiding rate limits imposed by the official Docker Hub.
 In the future, users that build their own images will be able to ask write access to the Grex Docker Registry to push their artifacts (this service is currently under development, and not publicly available).
 
+### Getting and building Podman images
+---
+
+The command **podman pull _image_name_** would get Podman images from a Docker Registry. Images can also be built from other images, or from containerfiles (e.g. dockerfiles) using the command **podman build _containerfile_**. A _containerfile_ is a text file that specifies the base image and commands to be run on it.
+
+### Podman with GPUs
+---
+
+Use the __-\-device=nvidia.com/gpu=all__ flag when running a podman container. Naturally, you should be on a node that has a GPU. NVIDIA provides many pre-built Docker container images on their [NGC Cloud](https://ngc.nvidia.com/), together with instructions on how to pull and run them. These should work on Grex without much changes.
+
 ---
 
 ## External links
@@ -130,11 +141,12 @@ In the future, users that build their own images will be able to ask write acces
 
  * [Singularity/Sylabs homepage](https://sylabs.io)
  * [Apptainer homepage](https://apptainer.org/)
+ * [Podman homepage](https://podman.io/)
  * [Singularity documentation on the Alliance Wiki](https://docs.alliancecan.ca/wiki/Singularity) 
  * [Docker Hub](https://hub.docker.com)
  * [RedHat Quay.io Hub](https://quay.io/search)
  * [Sylabs Cloud](https://cloud.sylabs.io/builder)
- * [NVIDIA NGC cloud](https://ngc.nvidia.com/)
+ * [NVIDIA NGC Cloud](https://ngc.nvidia.com/)
 
 <!-- {{< treeview display="tree" />}} -->
 
