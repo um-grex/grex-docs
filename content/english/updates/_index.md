@@ -18,14 +18,14 @@ Please review the brief summary of the Grex upgrades and changes that are done d
 # Operating System: 
 ---
 
-Grex is now running a new version of Linux (__Alma Linux 8.10). All compute nodes are upgraded to Alma Linux. 
+Grex is now running a new version of Linux (__Alma Linux 8.10_). All compute nodes are upgraded to Alma Linux. 
 
 # Login nodes:
 ---
 
 * The login nodes __bison__ and __tatanka__ are offline.
 
-* The login node _yak__ was upgraded to __Alma Linux.__ This is the only login node that you can use for now. To connect to Grex, use:
+* The login node __yak__ was upgraded to __Alma Linux.__ This is the only login node that you can use for now. To connect to Grex, use:
 
 {{< highlight bash >}}
 ssh -XY username@yak.hpc.umanitoba.ca
@@ -42,7 +42,6 @@ The following general purpose partitions are running Alma Linux:
 * __largemem__
 * __gpu__
 * __testgenoa__
-* __genoa__
 
 # Legacy nodes:
 ---
