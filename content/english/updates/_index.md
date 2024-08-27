@@ -1,14 +1,113 @@
 ---
 weight: 1000
 linkTitle: "Grex Updates"
-title: "OS, Lustre and Software updates"
-description: "List of major changes on Grex: software and hardware updates."
+#title: "OS, Lustre and Software updates"
+#description: "List of major changes on Grex: software and hardware updates."
+title: "Grex upgrade: SISF2023 - Aug 26 -Sep 6, 2024"
+description: "List of major changes on Grex: Hardware, cooling and power upgrades."
 titleIcon: "fa-solid fa-house-chimney"
 banner: true
-bannerContent: "**OS and Lustre Updates - May 2024**"
+#bannerContent: "**OS and Lustre Updates - May 2024**"
+bannerContent: "**Grex upgrade: SISF2023 - Aug 26 -Sep 6, 2024.**"
 #categories: ["Functionalities"]
 #tags: ["Content management"]
 ---
+
+Please review the brief summary of the Grex upgrades and changes that are done during the outage of **Aug 26 -Sep 6, 2024.**
+
+# Operating System: 
+---
+
+Grex is now running a new version of Linux (__Alma Linux 8.10). All compute nodes are upgraded to Alma Linux. 
+
+# Login nodes:
+---
+
+* The login nodes __bison__ and __tatanka__ are offline.
+
+* The login node _yak__ was upgraded to __Alma Linux.__ This is the only login node that you can use for now. To connect to Grex, use:
+
+{{< highlight bash >}}
+ssh -XY username@yak.hpc.umanitoba.ca
+{{< /highlight >}}
+
+* OOD is down during the outage. 
+
+# Partitions
+---
+
+The following general purpose partitions are running Alma Linux:
+
+* __skylake__ 
+* __largemem__
+* __gpu__
+* __testgenoa__
+* __genoa__
+
+# Legacy nodes:
+---
+
+As of Aug 29, 2024, the legacy nodes (bison, tatanka and **compute** partitions) are decommissions.
+
+# Storage:
+---
+
+The storage servers for __/home__ and __/project__ are online. Users can have access and/or transfer data as needed. Please note that you can not submit jobs at this time. 
+
+# Software Stacks:
+---
+
+Grex is now running one operating systems:
+
+* __Alma Linux:__ This OS is running on the new login node __yak__ and __zebu__ (that serves as a host for OOD). All other partions {except for __compute__} are running Alma Linux.
+
+The new sotftware stack __SBEnv__ is set as default.
+
+## SBEnv:
+---
+
+This is a new software stack that is meant to be used on __yak__ and all __modern partitions__ on Grex {except for the legacy __compute__ partition}. __SBEnv__ stands for __Simplified Build Environment__. 
+
+__SBEnv__ has already:
+
+* different compiler versions for Intel and GCC suites: gcc/13.2.0; intel/2019.5, intel/2023.2, intel-one/2023.2, intel-one/2024.1;  intelmpi/2019.8; intelmpi/2021.10
+* a new AOCC compiler suite for new AMD nodes (__testgenoa__ and __mcordcpu-b__ partitions): aocc/4.2.0
+* OpenMPI (openmpi/4.1.6 is the default version to be used in most cases)
+* some commercial software (ORCA, Gaussian)
+* some restricted software to particular groups, like stata, vasp, adf. 
+* some tools and popular dependencies. 
+
+We will continue to add more programs as they are requested by users. If you can not find the program or the module you want to use, please send us a request via __support@tech.alliancecan.ca__ and we will install the module for you. 
+
+{{< alert type="warning" >}}
+If you have compiled locally your programs, you may have to re-compile them using the compilers available under this software stack.
+{{< /alert >}}
+
+Since this is a new software stack managed by a different package manager, the names of the modules may have changed compared to the old software stack. For example, the modules that have _uofm_ under their name, they no longer show this name. For example, instead of __uofm/adf__, the module name is __adf__. 
+
+The better way to find modules and see how to load them is to run the usual command:
+
+{{< highlight bash >}}
+module spider <name of the program>
+{{< /highlight >}}
+
+## CCEnv
+---
+
+This environment corresponds to the software stack from the Alliance which is the same used on national systems, like cedar, graham, beluga and narval. It can be used on yak and all partitions, except for the __compute__ partition that has an old architecture.
+
+To use it on Grex, you should first load the following modules on this odrer:
+
+{{< highlight bash >}}
+module load CCEnv
+module load arch/avx512
+module load StdEnv/2023
+{{< /highlight >}}
+
+Then use __module spider__ to search for other modules under this environment.
+
+<!--
+From the outage of May 2024:
 
 Please review the brief summary of the Grex upgrades and changes that are done during the outage of **May 2024**:
 
@@ -135,6 +234,8 @@ As a summary of the changes, there are two workflows on Grex now:
 If you have questions or concerns, please don't hesitate to contact us at: support@tech.alliancecan.ca
 
 **Your Grex Team**
+
+-->
 
 <!-- Changes and update:
 -->
