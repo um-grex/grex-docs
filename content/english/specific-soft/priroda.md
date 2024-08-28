@@ -4,8 +4,12 @@ linkTitle: "Priroda"
 title: "Running Priroda on Grex"
 description: "Everything you need to know for running Priroda on Grex."
 categories: ["Software", "Scheduler"]
+banner: true
+bannerContent: "__Work in progress.__"
 #tags: ["Configuration"]
 ---
+
+**Note: Priroda in not available yet on the new environment. This documentation was written for the old environment.**
 
 ## Introduction
 ---

@@ -10,15 +10,21 @@ categories: ["Software", "Scheduler"]
 ## Introduction
 ---
 
-[MATLAB](http://www.mathworks.com/) is a general-purpose high-level programming package for numerical work such as linear algebra, signal processing and other calculations involving matrices or vectors of data. We have a campus license for MATLAB which is used on Grex and other local computing resources. MATLAB is available only for UManitoba users.
+[MATLAB](http://www.mathworks.com/) is a general-purpose high-level programming package for numerical work such as linear algebra, signal processing and other calculations involving matrices or vectors of data. We have a campus license for MATLAB which is used on Grex and other local computing resources. <!-- MATLAB is available only for UManitoba users.-->
 
 As with most of the Grex software, MATLAB is available as a module. The following command will load the latest version available on Grex:
 
 {{< highlight bash >}}
-module load uofm/matlab
+module load matlab
 {{< /highlight >}}
 
 Then the **matlab** executable will be in the PATH.
+
+To see all the available versions, use:
+
+{{< highlight bash >}}
+module spider matlab
+{{< /highlight >}}
 
 ## Available Toolboxes
 ---
@@ -26,18 +32,19 @@ Then the **matlab** executable will be in the PATH.
 To see a list of the MATLAB toolboxes available with MATLAB license on Grex, you can use the following command: 
 
 {{< highlight bash >}}
-module load uofm/matlab
+module load matlab
 matlab -nodisplay -nojvm -batch "ver"
 {{< /highlight >}}
 
 ## Running Matlab
 ---
 
-It is possible to run MATLAB GUI interactively, for best performance in an X2Go session, [OOD](ood) session and a terminal. There is no **Applications** menu shortcut for MATLAB, because it is only in the PATH after the module is loaded from the command line. After loading the module, the command **matlab** will be in the PATH.
+It is possible to run MATLAB GUI interactively, for best performance in [OOD](ood) session and a terminal. There is no **Applications** menu shortcut for MATLAB, because it is only in the PATH after the module is loaded from the command line. After loading the module, the command **matlab** will be in the PATH.
 
 For running a MATLAB script in text mode, or a batch script, the following options can be used:
 
 {{< highlight bash >}}
+module load matlab
 matlab -nodisplay -nojvm -nodesktop -nosplash -r your_matlab_script.m
 {{< /highlight >}}
 
@@ -46,12 +53,12 @@ However, each instance, GUI or command line, will consume a license unit. By sub
 ### Standalone Matlab runners: MCR
 ---
 
-MATLAB compiler, the **mcc** command can be used to compile a source code (__.m__ file) into a standalone executable. There are a couple of important considerations to keep in mind when creating an executable that can be run in the batch-oriented, HPC environment. One is that there is no graphical display attached to your session and the other is that the number of threads used by the standalone application has to be controlled.
+MATLAB compiler, the **mcc** command can be used to compile a source code (__.m__ file) into a standalone executable. There are couple of important considerations to keep in mind when creating an executable that can be run in the batch-oriented, HPC environment. One is that there is no graphical display attached to your session and the other is that the number of threads used by the standalone application has to be controlled.
 
 For example, with code __mycode.m__ a source directory __src__, with the compiled files being written to a directory called __deploy__, the following **mcc** command line (at the Linux shell prompt) could be used:
 
 {{< highlight bash >}}
-module load uofm/matlab
+module load matlab
 mkdir deploy
 cd src
 mcc -R -nodisplay -R -singleCompThread -m -v -w enable -d ../deploy mycode.m
@@ -101,5 +108,5 @@ For using MATLAB on the Alliance's clusters, please visit the corresponding MATL
 <!-- {{< treeview display="tree" />}} -->
 
 <!-- Changes and update:
-* Last reviewed on: Apr 26, 2024.
+* Last revision: Aug 28, 2024. 
 -->

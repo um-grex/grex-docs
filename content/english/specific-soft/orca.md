@@ -28,24 +28,24 @@ The same procedure is applied to get access to [ORCA on the Alliance's clusters]
 ## System specific notes
 ---
 
-To see the versions installed on Grex and how to load them, please use **module spider orca** and follow the instructions. Both **ORCA-4** and **ORCA-5** are available on Grex.
+To see the versions installed on Grex and how to load them, please use **module spider orca** and follow the instructions. Both **ORCA-5** and **ORCA-6** are available on Grex.
 
 To load **ORCA-5**, use:
 
 {{< highlight bash >}}
-module load gcc/4.8 ompi/4.1.1 orca/5.0.2
+module load arch/avx512  intel/2023.2  openmpi/4.1.6 orca/5.0.4
 {{< /highlight >}}
 
-To load **ORCA-4**, use:
+To load **ORCA-6**, use:
 
 {{< highlight bash >}}
-module load gcc/4.8 ompi/3.1.4 orca/4.2.1
+module load arch/avx512  gcc/13.2.0  openmpi/4.1.6 orca/6.0.0
 {{< /highlight >}}
 
 **Note:**
 
 {{< alert type="warning" >}}
-The first released version of **ORCA-5** (5.0.1) is available on Grex. However, ORCA users should use the versions released after (as for now: **5.0.2** since it addresses some bugs of the two first releases 5.0.0 and 5.0.1). We may remove these versions any time.
+After updating the software stack, we removed the previous versions of ORCA. If needed, we can put back a particular version. However, ORCA users should use the versions released after (as they addresses some bugs of the two first releases like 5.0.0 and 5.0.1).
 {{< /alert >}}
 
 ## Using ORCA with SLURM
@@ -85,17 +85,20 @@ For more than eight processors (!PAL8), the explicit %PAL option has to be used:
 
 When running ORCA calculations in parallel, always use the full path to ORCA:
 
-* On Grex, you can use:
-
 {{< highlight bash >}}
-ORCAEXEC=`which orca`
-
-${ORCAEXEC} your-orca-input.in > your-orca-output.txt
+module load arch/avx512  gcc/13.2.0  openmpi/4.1.6 orca/6.0.0
+${MODULE_ORCA_PREFIX}/orca your-orca-input.in > your-orca-output.txt
 {{< /highlight >}}
 
-* On the Alliance clusters, the path is defined via an environment variable __EBROOTORCA__ that is set by the module:
+* On the Alliance clusters, the path is defined via an environment variable __EBROOTORCA__ that is set by the module. To use ORCA from the Alliance software stack, add the following lines to your script:
 
 {{< highlight bash >}}
+module purge
+module load CCEnv
+module load arch/avx512 
+module load StdEnv/2023
+module load gcc/12.3  openmpi/4.1.5
+module load orca/6.0.0
 ${EBROOTORCA}/orca your-orca-input.in > your-orca-output.txt
 {{< /highlight >}}
 
@@ -110,8 +113,24 @@ ${EBROOTORCA}/orca your-orca-input.in > your-orca-output.txt
 />}}
 {{< /collapsible >}}
 
-### Sample Script for running ORCA on Grex
+### Simple script for running ORCA on Grex
 ---
+
+This script assumes to have an input file _orca.inp_. The output is written to a file with the name _orca.out_. These files could be customized according to the names of your input files and whatever name you want for the output. Before submitting any ORCA job, please make sure to set the same number of CPUs in the input files according to your job script (as discussed above).
+Here is a simple script to run ORCA on Grex:
+
+{{< collapsible title="Script example for running ORCA on Grex" >}}
+{{< snippet
+    file="scripts/jobs/orca/run-orca-grex-simple.sh"
+    caption="run-orca-grex-simple.sh"
+    codelang="bash"
+/>}}
+{{< /collapsible >}}
+
+### Advanced script for running ORCA on Grex
+---
+
+This script assumes that you have one inpu file in the directory from where you submit the job. The script sets the output file based on the name of the input file. For example, using an input file _my-orca.inp_ will generate an output with the name _my-orca.out_. To avoid wasting resources in case a user forgot to set the number of CPUs in the input file, the script generates a new input file and append the directorive for setting the number of CPUs in the input files, like _%PAL NPROCS 8 END_ if the job script asks for 8 CPUs. Before using the script, please take the time to read it and understand how it works:
 
 {{< collapsible title="Script example for running ORCA on Grex" >}}
 {{< snippet
@@ -127,6 +146,7 @@ Assuming the script above is saved as __run-orca-grex.sh__, it can be submitted 
 sbatch run-orca-grex.sh
 {{< /highlight >}}
 
+<!--
 ### Sample Script for running NBO with ORCA on Grex
 ---
 
@@ -147,6 +167,7 @@ sbatch run-nbo-orca-grex.sh
 {{< /highlight >}}
 
 For more information, visit the page [running jobs on Grex](running-jobs)
+-->
 
 ## Related links
 ---

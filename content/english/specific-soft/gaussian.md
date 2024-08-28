@@ -70,7 +70,7 @@ The viewer should not be used to run production calculations on Grex login nodes
 A simplified job script **sbg16** is available (after loading of the g16 module) for automatic generation and submission of SLURM Gaussian jobs.
 
 {{< highlight bash >}}
-sbg16 input.gjf -ppn 12 -part skylake -mem 40000mb -time 12:00:00
+sbg16 input.gjf -ppn 8 -part skylake -mem 40000mb -time 12:00:00
 {{< /highlight >}}
 
 The script takes input file name (must have the _.gjf_ extension), which must be the first argument, and a couple of parameters:
@@ -94,11 +94,11 @@ module spider nbo
 ---
 
 * [Gaussian](https://gaussian.com/man/) documentation.
-* [Gaussian](https://docs.alliancecan.ca/wiki/Gaussian) page on Compute Canada wiki.
+* [Gaussian](https://docs.alliancecan.ca/wiki/Gaussian) page on the Alliance wiki.
 * Gaussian [error messages](https://docs.alliancecan.ca/wiki/Gaussian_error_messages).
 
 ---
 
 <!-- Changes and update:
-* Last reviewed on: Apr 26, 2024.
+* Last revision: Aug 28, 2024.
 -->

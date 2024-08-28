@@ -45,5 +45,5 @@ Please note that **yak** has **avx512** CPU architecture and if you have to use 
 ---
 
 <!-- Changes and update:
-* Last reviewed on: Apr 26, 2024.
+* Last revision: Aug 28, 2024. 
 -->

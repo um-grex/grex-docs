@@ -15,14 +15,34 @@ categories: ["Software", "Scheduler"]
 ## System specific notes
 ---
 
-On the Grex local software stack, we have VASP 5 and VASP 6 using Intel compiler and OpenMPI 3.1. To find out which versions of VASP are available, use ```module spider vasp``` .
+<!--On the Grex local software stack, we have VASP 5 and VASP 6 using Intel compiler and OpenMPI 3.1.--> 
 
-For a version 6.1.2, at the time of writing the following modules have to be loaded:
+To find out which versions of VASP are available, use ```module spider vasp``` .
+
+At the time of reviewing this page, the following versions are avaiable: _vasp/6.1.2-sol_ and _vasp/6.3.2-vtst_.
+
+To load the module _vasp/6.1.2-sol_ use:
 
 {{< highlight bash >}}
-module load intel/2019.5  ompi/3.1.4
-module load vasp/6.1.2`
+module load arch/avx512  intel/2023.2  intelmpi/2021.10
+module load vasp/6.1.2-sol
 {{< /highlight >}}
+
+To load the module _vasp/6.3.2-vtst_ use:
+
+{{< highlight bash >}}
+module load arch/avx512  gcc/13.2.0  openmpi/4.1.6
+module load vasp/6.1.2-6.3.2-vtst
+{{< /highlight >}}
+
+or
+
+{{< highlight bash >}}
+module load arch/avx512  intel/2023.2  intelmpi/2021.10
+module load vasp/6.1.2-6.3.2-vtst
+{{< /highlight >}}
+
+The first module was build with GCC and the later with Intel compiler.
 
 There are three executables for VASP CPU version: __vasp_gam__ , __vasp_ncl__ , and  __vasp_std__. Refer to the VASP manual as to what these mean. An example VASP SLURM script using the standard version of the VASP binary is below:
 
@@ -55,5 +75,5 @@ For more information, visit the page [running jobs on Grex](running-jobs)
 <!-- {{< treeview display="tree" />}} -->
 
 <!-- Changes and update:
-* Last reviewed on: Apr 26, 2024.
+* Last revision: Aug 28, 2024. 
 -->

@@ -17,7 +17,5 @@ categories: ["Miscellaneous"]
 ---
 
 <!-- Changes and update:
-* 
-*
-*
+* Last revision: Aug 28, 2024. 
 -->

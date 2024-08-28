@@ -59,7 +59,5 @@ There are different ways to connect to grex:
 <!-- {{< treeview display="tree" />}} -->
 
 <!-- Changes and update:
-* 
-*
-*
+* Last revision: Aug 28, 2024.  
 -->

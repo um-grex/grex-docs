@@ -15,7 +15,7 @@ categories: ["Software", "Scheduler"]
 ## Available Julia versions
 ---
 
-Presently, binary Julia versions **1.3.0**, **1.5.4** and **1.6.1** are available. Use ```module spider julia``` to find out other versions.
+Presently, binary Julia version **julia/1.10.3** is available. Use ```module spider julia``` to find out other versions.
 
 ## Installing packages
 ---
@@ -74,7 +74,5 @@ It is possible to use Julia with CUDA Array objects to greatly speed up the Juli
 <!-- {{< treeview display="tree" />}} -->
 
 <!-- Changes and update:
-* 
-*
-*
+* Last revision: Aug 28, 2024. 
 -->

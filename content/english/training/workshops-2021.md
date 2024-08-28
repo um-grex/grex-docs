@@ -33,5 +33,5 @@ Below are the slides from the Grex workshop that was held on April 21-22, 2021:
 <!-- {{< treeview display="tree" />}} -->
 
 <!-- Changes and update:
-* Last reviewed on: Apr 25, 2024.
+* Last revision: Aug 28, 2024. 
 -->

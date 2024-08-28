@@ -1,8 +1,8 @@
 #!/bin/bash
 
 #SBATCH --ntasks=1 
-#SBATCH --cpus-per-task=12
-#SBATCH --mem=40gb
+#SBATCH --cpus-per-task=8
+#SBATCH --mem=32gb
 #SBATCH --time=8:00:00
 #SBATCH --job-name=Gauss16-test
 
@@ -12,7 +12,7 @@ echo "Starting run at: `date`"
 
 which g16
 
-# note that input should have %nproc=12
+# note that input should have %nproc=8
 # and %mem=40gb for the above resurce request.
 
 g16 < input.gjf > output.$SLURM_JOBID.log

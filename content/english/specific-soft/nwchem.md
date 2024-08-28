@@ -17,10 +17,25 @@ categories: ["Software", "Scheduler"]
 
 On the Grex software stack, NWChem is using OpenMPI 3.1 with Intel compilers toolchains. To find out which versions aare available, use **module spider nwchem**.
 
-For a version 6.8.1, at the time of writing the following modules have to be loaded:
+For a version 7.2.2, at the time of writing the following modules have to be loaded:
 
 {{< highlight bash >}}
-module load intel/15.0 ompi/3.1.4 nwchem/6.8.1
+module load arch/avx512 intel-one/2024.1 openmpi/4.1.6 
+module load nwchem/7.2.2
+{{< /highlight >}}
+
+or
+
+{{< highlight bash >}}
+module load arch/avx512  aocc/4.2.0  openmpi/4.1.6
+module load nwchem/7.2.2+aocl-4.2.0-64
+{{< /highlight >}}
+
+or
+
+{{< highlight bash >}}
+module load arch/avx512  gcc/13.2.0  openmpi/4.1.6 
+module load nwchem/7.2.2+aocl-4.2.0-64
 {{< /highlight >}}
 
 The NWChem on Grex was built with the ARMCI variant [MPI-PR](https://github.com/nwchemgit/nwchem/wiki/ARMCI). Thus, NWCHem needs at least One process per node reserved for data communication. To run a serial job one needs 2 tasks per node. To run a 22-core job over two whole nodes, one has to ask for 2 nodes, 12 tasks per node. Simple number of tasks specification likely won't work because of the chance of having a single-task node allocated by SLURM; so __-\-nodes= -\-ntask-per-node__ specification is required.
@@ -52,5 +67,5 @@ For more information, visit the page [running jobs on Grex](running-jobs)
 <!-- {{< treeview display="tree" />}} -->
 
 <!-- Changes and update:
-* Last reviewed on: Apr 26, 2024.
+* Last revision: Aug 28, 2024. 
 -->
