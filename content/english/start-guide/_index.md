@@ -50,5 +50,5 @@ Check out [Getting an ccount](./access), [Moving Data](./connecting/data-transfe
 <!-- {{< treeview display="tree" />}} -->
 
 <!-- Changes and update:
-* Last reviewed on: Aug 27, 2024.
+* Last revision: Aug 28, 2024.  
 -->

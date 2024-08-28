@@ -37,7 +37,7 @@ quota -s
 The command will result in something like this (note the __-s__ flag added to make units human readable):
 
 {{< highlight bash >}}
-[someuser@bison ~]$ quota -s
+[someuser@yak ~]$ quota -s
   Disk quotas for user someuser (uid 12345):
      Filesystem  space quota limit grace files quota limit grace
 192.168.x.y:/   249M  100G  105G        4953  500k 1000k       
@@ -73,7 +73,7 @@ Note that the directories get created, and the quota is set, on a first login of
 It is inconvenient to go by using numerical values of the Project-GID in the paths, so there are symbolic links present in each user's _/home/$USER/projects_ directory that point to his _/project_ directories.  A user can belong to more than one research group and thus can have more than one project link. Also, on the filesystem there is a system of symbolic links in the form of _/project/Faculty/def-PIname/_ . 
 
 {{< highlight bash >}}
-[someuser@bison ~]$ lfs quota -h -p 123456 /project/123456
+[someuser@yak ~]$ lfs quota -h -p 123456 /project/123456
 Disk quotas for prj 123456 (pid 123456):
      Filesystem    used   quota   limit   grace   files   quota   limit   grace
 /project/123456
@@ -94,7 +94,7 @@ lfs quota -h -u $USER /sbb
 With the output:
 
 {{< highlight bash >}}
-[someuser@bison ~]$ lfs quota -h -u $USER /sbb
+[someuser@yak ~]$ lfs quota -h -u $USER /sbb
  Disk quotas for usr someuser (uid 12345):
  Filesystem  used   quota  limit  grace   files  quota   limit  grace
       /sbb   622G  2.644T  3.653T     - 5070447 6000000 7000000     -
@@ -111,11 +111,17 @@ To make it easier, we have set a custom script with the same name as for the All
 
 {{< highlight bash >}}
 [someuser@bison ~]$  diskusage_report 
-           Description (FS)     Space (U/Q) # of files (U/Q)
-           /home (someuser)      254M/104G        4953/500k
- /global/scratch (someuser)     131G/2147G       992k/1000k
+------------------------------------------------------------------------
+              Description (FS)          Space (U/Q)     # of files (U/Q)
+------------------------------------------------------------------------
+              /home (someuser)           254M/104G            4953/500k
+      /project (def-professor)          131G/2147G           992k/1000k
+------------------------------------------------------------------------
+   /project/6543210 = /home/someuser/projects/def-professor
+------------------------------------------------------------------------
 {{< /highlight >}}
 
+<!--
 for more details[^1], run the command:
 
 [^1]: These options are not implemented on the Alliance clusters.
@@ -139,6 +145,7 @@ U  ==> Current Usage (Space, Inode)
 Q  ==> Soft Quota (Space, Inode)           
 L  ==> Hard Quota (Space, Inode)    
 {{< /highlight >}}
+-->
 
 The command __diskusage_report__ can also be invoked with the argument __--home__ or __--project__ to get the quota for the corresponding file system.
 

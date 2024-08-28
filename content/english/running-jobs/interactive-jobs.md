@@ -39,13 +39,13 @@ To request an interactive job, the **salloc** command should be used. These jobs
 For a threaded SMP code asking for half a node for two hours:
 
 {{< highlight bash >}}
-salloc --nodes=1 --ntasks=1 --cpus-per-task=6 --mem=12000M --partition=compute --time=0-2:00:00
+salloc --nodes=1 --ntasks=1 --cpus-per-task=6 --mem=12000M --partition=skylake --time=0-2:00:00
 {{< /highlight >}}
 
 For an MPI jobs asking for 48 tasks, irrespectively of the nodes layout: 
 
 {{< highlight bash >}}
-salloc  --ntasks=48 --mem-per-task=2000M --partition=compute --time=0-2:00:00
+salloc  --ntasks=48 --mem-per-task=2000M --partition=skylake --time=0-2:00:00
 {{< /highlight >}}
 
 Similar to [batch jobs](running-jobs), specifying a partition with __-\-partition=__ is required. Otherwise, the default partition will be used (as for now, **skylake** is set as default partition for CPU jobs).
@@ -95,5 +95,5 @@ You may also try to use [OpenOnDemand](/ood) portal on Grex.
 <!-- {{< treeview display="tree" />}} -->
 
 <!-- Changes and update:
-* Last reviewed on: Apr 30, 2024.
+* Last revision: Aug 28, 2024. 
 -->

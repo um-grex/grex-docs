@@ -59,7 +59,5 @@ Sharing any account information (login/password or SSH private keys) leads to im
 <!-- {{< treeview display="tree" />}} -->
 
 <!-- Changes and update:
-* 
-*
-*
+* Last revision: Aug 28, 2024.
 -->
