@@ -151,11 +151,11 @@ module load podman
 podman pull _required_image_
 {{< /highlight >}}
 
-The command **podman pull _image_name_** would get Podman images from a Docker Registry. 
+The command **podman pull _image_name_** would get Podman images from a container registry. 
 Images can also be built from other images, or from containerfiles (e.g. Dockerfiles) using the command **podman build _Containerfile_**. 
-A _containerfile_ is a text "recipe" that specifies the base image and commands to be run on it. Podman's recipes are compatible with _Dockerfiles_ .
+A _containerfile_ is a text "recipe" that specifies the base image and commands to be run on it. Podman's recipes are compatible with _Dockerfiles_.
 
-Podman, as configured on Grex, by default would store pulled images inside the user HOME directory. Depending on the size of the images, it could be easy to exhaust the disk quota on HOME quickly. 
+Podman, as configured on Grex, by default would store all pulled and locally built images inside the user HOME directory. Depending on the size of the images, it could be easy to exhaust the disk quota on HOME quickly. 
 It is the users responsibility to manage their Podman images (delete the old/unused ones).
 To manage pulled images, users can take advantage of the following commands:
 
