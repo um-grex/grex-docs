@@ -14,11 +14,10 @@ Linux Containers are means to isolate software dependencies from the base Linux 
 
 Since then, a lot of work had been done by major Linux players like Google, RedHat and others to develop an open standard for container runtimes, which developed based on Docker, [OCI](https://opencontainers.org/).
 
-There are HPC-specific container engines/runtimes that offer similar or equivalent functionality, but allow for easier intgration with shared Linux HPC systems.
-At the time of writing, the most widely used of them is the  [Singularity](https://sylabs.io/guides/3.11/user-guide/) container system, developed by a company called SyLabs, and its fork, a Linux Foundation project called [Apptainer](https://apptainer.org/). 
+There are HPC-specific container engines/runtimes that offer similar or equivalent functionality but allow for easier integration with shared Linux HPC systems. At the time of writing, the most widely used of them is the  [Singularity](https://sylabs.io/guides/3.11/user-guide/) container system, developed by a company called SyLabs, and its fork, a Linux Foundation project called [Apptainer](https://apptainer.org/). 
 They are [compatible](https://apptainer.org/docs/user/latest/singularity_compatibility.html) with each other. However, Singularity/Apptainer provides functionality for running most Docker images by converting them to the Singularity Image format (SIF). However, Singularity/Apptainer own format is [not completely OCI-compatible](https://apptainer.org/docs/user/latest/docker_and_oci.html#differences-and-limitations-vs-docker), so there exists Docker images that would not work properly. 
 
-Finally, recent developments in Linux Kernel namespaces allowed to happen such projects as "rootless Docker" and "rootless [Podman](https://podman.io)" which are more suitable for HPC systems than the original Docker implementation which requires priviliged access to the Linux system.
+Finally, recent developments in Linux Kernel namespaces allowed to happen such projects as "rootless Docker" and "rootless [Podman](https://podman.io)" which are more suitable for HPC systems than the original Docker implementation which requires privileged access to the Linux system.
 
 On Grex, Sylabs Singularity-CE is supported on local SBEnv software stack, while Apptainer is supported as part of the ComputeCanada/Alliance CCEnv stack. At the time of writing, these engines can be used largely interchangeably.
 
@@ -41,7 +40,7 @@ With **singularity** command, one can list singularity commands and their option
 singularity help
 {{< /highlight >}}
 
-To execute an application within the container, do it in the usual way for that application, but prefix the command with ''singularity exec image_name.sif'' or, if the container has a valid "entrypoint", execute it with  ''singularity run image_name.sif". 
+To execute an application within the container, do it in the usual way for that application, but prefix the command with __singularity exec image_name.sif__ or, if the container has a valid _entry point_, execute it with __singularity run image_name.sif__. 
 
 {{< highlight bash >}}
 singularity run docker://ghcr.io/apptainer/lolcow
@@ -51,7 +50,8 @@ In the example above, Singularity downloads a Docker image from a registry, and 
 
 {{< highlight bash >}}
 singularity pull lolcow_local.sif docker://ghcr.io/apptainer/lolcow
-# the above should create a local image lolcow_local.sif . Lets run it with singularity
+# The above should create a local image lolcow_local.sif 
+# Lets run it with singularity
 singularity run lolcow_local.sif
 {{< /highlight >}}
 
@@ -69,7 +69,7 @@ singularity exec -B /sbb/scratch:/global/scratch ./R-INLA.sif R --vanilla < mysc
 
 In case you do not want to mount anything to preserve the containers' environment from any overlapping of data/code from say $HOME, use the __-\-containall__ flag.
 
-Some attention has to be paid to Singularity's local cache and temporary directories. Singularity caches the container images it pulls and Docker layers under __$HOME/.singularity__. Containers can be large, in tens of gigabytes, and thus they can easily accumulate and exhaust the users' storage space quota on $HOME. Thus, users might want to set the __SINGULARITY_CACHEDIR__ and __SINGULARITY_TMPDIR__ variables to some place under their __/global/scratch__ space.
+Some attention should be paid to Singularity's local cache and temporary directories. Singularity caches the container images it pulls and Docker layers under __$HOME/.singularity__. Containers can be large, in tens of gigabytes, and thus they can easily accumulate and exhaust the users' storage space quota on $HOME. Thus, users might want to set the __SINGULARITY_CACHEDIR__ and __SINGULARITY_TMPDIR__ variables to some place under their __/global/scratch__ space.
 
 For example, to change the location of __SINGULARITY_CACHEDIR__ and __SINGULARITY_TMPDIR__, before building the singularity image, one might run:
 
@@ -88,8 +88,7 @@ The commands **singularity build** and **singularity pull** would get Singularit
 ### Singularity with GPUs
 ---
 
-Use the __-\-nv__ flag to ''singularity'' run/exec/shell commands. Naturally, you should be on a node that has a GPU, in an interactive job. NVIDIA provides many pre-built Docker and Singularity container images on their ["GPU cloud"](https://ngc.nvidia.com/), together with instructions on how to pull them and to run them. 
-NVidia's NGC Docker images should, as a rule, work on HPC machines with Singularity without any changes.
+Use the __-\-nv__ flag to __singularity__ run/exec/shell commands. Naturally, you should be on a node that has a GPU, in an interactive job. NVIDIA provides many pre-built Docker and Singularity container images on their [GPU cloud](https://ngc.nvidia.com/), together with instructions on how to pull them and to run them. NVidia's NGC Docker images should, as a rule, work on HPC machines with Singularity without any changes.
 
 ### Singularity with OpenScienceGrid CVMFS
 ---
@@ -101,7 +100,7 @@ module load singularity
 singularity shell /cvmfs/singularity.opensciencegrid.org/jeffersonlab/remoll\:develop
 {{< /highlight >}}
 
-It looks like the list of what is present on the OSG CVMFS is on Github: [OSG Github docker images](https://github.com/opensciencegrid/cvmfs-singularity-sync/blob/master/docker_images.txt) .
+It looks like the list of what is present on the OSG CVMFS is on GitHub: [OSG GitHub docker images](https://github.com/opensciencegrid/cvmfs-singularity-sync/blob/master/docker_images.txt) .
 
 ## Using Apptainer from CCEnv on Grex
 ---
@@ -123,17 +122,14 @@ apptainer run docker://ghcr.io/apptainer/lolcow
 {{< /highlight >}}
 
 Similarly to Singularity, you will need to bind mount the required data directories for accessing data outside the container. 
-The same best practices mentioned above for Singularity (pulling containers beforehand, controlling the cache location) equally apply for the Apptainer. The environment variables for Apptainer should be usinge APPTAINER_ instead of SINGULARITY_ prefixes.
+The same best practices mentioned above for Singularity (pulling containers beforehand, controlling the cache location) equally apply for the Apptainer. The environment variables for Apptainer should be using APPTAINER_ instead of SINGULARITY_ prefixes.
 
 ## Using Podman from SBEnv on Grex
 ---
 
-[Podman](https://podman.io/) modules re now provided under the default Grex SBEnv environment. On Grex, Podman is configured as _rootless_.
-Podman is meant to be used by experienced users for jobs that cannot be executed as regular binaries, or through Singularity due to OCI requirements.
-Grex is an HPC systems, so it is expected that users would be using Podman to run comopute jobs rather than persistent services (inclunding and not limited to databases, and network services). 
-Thus Podman jobs and running containers that deemed to be inappropriate for HPC may be terminated without notice. 
+[Podman](https://podman.io/) modules re now provided under the default Grex SBEnv environment. On Grex, Podman is configured as _rootless_. Podman is meant to be used by experienced users for jobs that cannot be executed as regular binaries, or through Singularity due to OCI requirements. Grex is an HPC systems, so it is expected that users would be using Podman to run compute jobs rather than persistent services (including and not limited to databases, and network services). Thus, Podman jobs and running containers that deemed to be inappropriate for HPC may be terminated without notice. 
 
-Access to the Podman runtime is throigh a module. Due to the nature of container runtime environment, we strive to update Podman regularly, so in most cased, the latest installed version must be used:
+Access to the Podman runtime is through a module. Due to the nature of the container runtime environment, we strive to update Podman regularly, so in most cases, the latest installed version must be used:
 
 {{< highlight bash >}}
 module load podman
@@ -144,8 +140,7 @@ podman run --rm docker.io/godlovedc/lolcow
 ### Getting and building Podman images
 ---
 
-When using Podman to run a job, we suggest to manually pre-download the required image to avoid wasting time during the job. 
-Grex is hosting a Docker Registry proxy/cache locally to improve performance, and avoiding rate limits that can be imposed by various container registries for exessive downloads.
+When using Podman to run a job, we suggest to manually pre-download the required image to avoid wasting time during the job. Grex is hosting a Docker Registry proxy/cache locally to improve performance, and avoiding rate limits that can be imposed by various container registries for excessive downloads.
 
 {{< highlight bash >}}
 module load podman
@@ -179,5 +174,5 @@ Naturally, you should be on a node that has a GPU. NVIDIA provides many pre-buil
 <!-- {{< treeview display="tree" />}} -->
 
 <!-- Changes and update:
-* Last reviewed on: Apr 30, 2024.
+* Last revision: Aug 29, 2024. 
 -->
