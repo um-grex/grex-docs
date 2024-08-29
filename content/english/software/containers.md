@@ -137,22 +137,14 @@ podman version
 podman run --rm docker.io/godlovedc/lolcow
 {{< /highlight >}}
 
-Please note that Podman stores the pulled images inside the user home directory () and is the user responsibility to delete the old/unused ones.
-This means that, depending on the size of the images, it could be easy to exhaust home disk quota.
+The above command would pull a container image and run it. 
 
-To manage pulled images, users can take advantage of the following commands:
 
-{{< highlight bash >}}
-# list images
-podman image ls
-# delete image
-podman image rm <IMAGE_ID>
-{{< /highlight >}}
-
-### Getting and building Podman images
+### Getting and Managing Podman images
 ---
 
-When using Podman to run a job, we suggest to manually pre-download the required image to avoid wasting time during the job. Grex is hosting a Docker Registry proxy/cache locally to improve performance, and avoiding rate limits that can be imposed by various container registries for excessive downloads.
+When using Podman to run a job, we suggest to manually pre-download the required image to avoid wasting time during the job. 
+Grex is hosting a Docker Registry proxy/cache locally to improve the download performance, and for avoiding rate limits that can be imposed by various container registries.
 
 {{< highlight bash >}}
 module load podman
@@ -160,14 +152,25 @@ podman pull _required_image_
 {{< /highlight >}}
 
 The command **podman pull _image_name_** would get Podman images from a Docker Registry. 
-Images can also be built from other images, or from containerfiles (e.g. dockerfiles) using the command **podman build _Containerfile_**. 
+Images can also be built from other images, or from containerfiles (e.g. Dockerfiles) using the command **podman build _Containerfile_**. 
 A _containerfile_ is a text "recipe" that specifies the base image and commands to be run on it. Podman's recipes are compatible with _Dockerfiles_ .
+
+Podman, as configured on Grex, by default would store pulled images inside the user HOME directory. Depending on the size of the images, it could be easy to exhaust the disk quota on HOME quickly. 
+It is the users responsibility to manage their Podman images (delete the old/unused ones).
+To manage pulled images, users can take advantage of the following commands:
+
+{{< highlight bash >}}
+# list images
+podman image ls
+# delete an unnecessary image
+podman image rm <IMAGE_ID>
+{{< /highlight >}}
 
 ### Podman with GPUs
 ---
 
-Use the __-\-device=nvidia.com/gpu=all__ flag when running a podman container. 
-Naturally, you should be on a node that has a GPU. NVIDIA provides many pre-built Docker container images on their [NGC Cloud](https://ngc.nvidia.com/), together with instructions on how to pull and run them. Podman would usually run Docker containers without changes to the command line parameters.
+Use the __-\-device=nvidia.com/gpu=all__ flag when running a podman container. Naturally, you should be on a node that has a GPU. 
+NVIDIA provides many pre-built Docker container images on their [NGC Cloud](https://ngc.nvidia.com/), together with instructions on how to pull and run them. Podman would usually run Docker containers without changes to the command line parameters.
 
 ---
 
