@@ -37,5 +37,5 @@ __Compute Canada__ ceased operations on April 1st, 2022. The __Digital Research 
 ---
 
 <!-- Changes and update:
-* Last reviewed on: Apr 25, 2024. 
+* Last revision: Aug 28, 2024. 
 -->

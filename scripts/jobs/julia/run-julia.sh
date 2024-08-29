@@ -8,7 +8,7 @@
 
 # Load the modules:
 
-module load julia/1.7.0-bin
+module load julia/1.10.3
 
 echo "Starting run at: `date`"
 

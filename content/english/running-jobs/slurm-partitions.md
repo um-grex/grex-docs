@@ -30,10 +30,16 @@ Currently, the following partitions are available on Grex:
 | :--------:   | :-----: | :-------: | :------: | :-----:  | :----:             |
 | **skylake**  |  **42** |    **52** | **2184** |   96 Gb  | CascadeLakeRefresh |
 | **largemem** |  **12** |    **40** |  **480** |  384 Gb  | CascadeLake        |
-| **compute**  | **316** |    **12** | **3792** |   48 Gb  | SSE4.2             |  
-| **compute**  |   **4** |    **20** |   **80** |   32 Gb  | Avx                |
 | **test**     |   **1** |    **18** |   **36** |  512 Gb  | **-**              |
+
+<!--
 | **-**        | **374** |     **-** | **6536** |   **-**  | **-**              |
+-->
+
+<!--
+| **compute**  | **316** |    **12** | **3792** |   48 Gb  | SSE4.2             |
+| **compute**  |   **4** |    **20** |   **80** |   32 Gb  | Avx                |
+-->
 
 ### General purpose GPU partitions
 ---
@@ -92,7 +98,7 @@ The following **preemptible partition** are set for general use of the contribut
 | **mcordcpu-b**  | Prof M. Cunha Cordeiro |
 | **mcordgpu-b**  | Prof M. Conha Cordeiro |
 
-The former five partitions (**skylake**, **compute**, **largemem**, **test** and **gpu**) are generally accessible. The other partitions (**stamps**, **livi**,  **agro**, **mcordcpu** and **mcordgpu**) are open only to the contributor's groups.
+The former following partitions (**skylake**, **largemem**, **test** and **gpu**) are generally accessible. The other partitions (**stamps**, **livi**,  **agro**, **mcordcpu** and **mcordgpu**) are open only to the contributor's groups.
 
 On the contributed partitions, the owners' group has preferential access. However, users belonging to other groups can submit jobs to one of the preemptible partitions (ending with **\-b**) to run on the contributed hardware as long as it is unused, on the condition that their jobs can be preempted (that is, killed) should owners' jobs need the hardware. There is a minimum runtime guaranteed to preemptible jobs, which is as of now 1 hour. The maximum wall time for the preemptible partition is set per partition (and can be seen in the output of the __sinfo__ command). To have a global overview of all partitions on Grex, run the custom script _**partition-list**_ from your terminal. 
 
@@ -100,5 +106,5 @@ On the contributed partitions, the owners' group has preferential access. Howeve
 
 
 <!-- Changes and update:
-* Last reviewed on: Jun 19, 2024.
+* Last revision: Aug 28, 2024. 
 -->

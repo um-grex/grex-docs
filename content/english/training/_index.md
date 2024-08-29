@@ -41,5 +41,5 @@ The training material from WestDRI (BC DRI and Prairies DRI groups, formerly kno
 ---
 
 <!-- Changes and update:
-* Last reviewed on: Apr 25, 2024.
+* Last revision: Aug 28, 2024.
 -->

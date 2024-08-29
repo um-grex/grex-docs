@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #SBATCH --ntasks=16 
-#SBATCH -cpus-per-task=1
+#SBATCH --cpus-per-task=1
 #SBATCH --mem-per-cpu=3400M
 #SBATCH --time=0-3:00:00
 #SBATCH --job-name=vasp-test
@@ -11,8 +11,8 @@
 
 # Load the modules:
 
-module load intel/2019.5 ompi/3.1.4
-module load vasp/6.1.2
+module load arch/avx512  gcc/13.2.0  openmpi/4.1.6
+module load vasp/6.1.2-6.3.2-vtst
 
 echo "Starting run at: `date`"
 

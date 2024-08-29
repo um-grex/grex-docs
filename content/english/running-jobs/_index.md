@@ -73,7 +73,7 @@ The SLURM command that shows the state of nodes and partitions is **sinfo**:
 
 > * __sinfo__ to list the state of all the nodes (idle, down, allocated, mixed) and partitions. 
 > * __sinfo -\-state=idle__ to list all idle nodes. 
-> * __sinfo -p compute__ to list information about a given partition (**compute** in this case).
+> * __sinfo -p skylake__ to list information about a given partition (**skylake** in this case).
 > * __sinfo -p skylake --state=idle__ to list idle nodes on a given partition (**skylake** in this case).
 > * __sinfo -R__: to list all down nodes.
 > * __sinfo -R -N -o"%.12N %15T [ %50E ]"|uniq -c__: to list all down nodes and print the output in a specific format.
@@ -124,7 +124,7 @@ sbatch --nodes=1 --ntasks-per-node=1 --cpus-per-task=12 --mem=40G --time=0-48:00
 and
 
 {{< highlight bash >}}
-salloc --nodes=1 --ntasks-per-node=4 --mem-per-cpu=4000M --x11 --partition=compute
+salloc --nodes=1 --ntasks-per-node=4 --mem-per-cpu=4000M --x11 --partition=skylake
 {{< /highlight >}}
 
 And so on. The options for batch jobs can be either in command line, or (perhaps better) in the special comments in the job file, like:
@@ -135,7 +135,7 @@ And so on. The options for batch jobs can be either in command line, or (perhaps
 #SBATCH --cpus-per-task=12
 #SBATCH --mem=40G
 #SBATCH --time=0-48:00
-#SBATCH --partition=compute
+#SBATCH --partition=skylake
 {{< /highlight >}}
 
 Refer to the subsection for [batch jobs](running-jobs/batch-jobs) and [interactive jobs](running-jobs/interactive-jobs) for more information, examples of job scripts and how to actually submit jobs.
@@ -230,5 +230,5 @@ Since the HPC technology is widely used by most universities and National labs, 
 {{< /alert >}}
 
 <!-- Changes and update:
-* Last reviewed on: Apr 30, 2024.
+* Last revision: Aug 28, 2024.  
 -->

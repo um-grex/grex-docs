@@ -15,6 +15,10 @@ bannerContent: "__SCRATCH - OS and LUSTRE UPDATES__"
 
 __Grex__ is a UManitoba High Performance Computing (HPC) system, first put in production in early __2011__ as part of WestGrid consortium. "Grex" is a _Latin_ name for "herd" (or maybe "flock"?). The names of the Grex login nodes ([bison](https://en.wikipedia.org/wiki/Bison "Bison"), tatanka, [zebu](https://en.wikipedia.org/wiki/Zebu "Zebu"), [yak](https://en.wikipedia.org/wiki/Yak "Yak")) also refer to various kinds of bovine animals.
 
+{{< alert type="warning" >}}
+Please note that _bison_ and _tatanks_ are offline during and after the outage of Aug 26 -Sep 6, 2024. For more information, visit the updates [page](updates)
+{{< /alert >}}
+
 Since being defunded by WestGrid (on April 2, 2018), Grex is now available only to the users affiliated with University of Manitoba and their collaborators. 
 
 <!--
@@ -45,9 +49,11 @@ As of Sep 14, 2022, Grex is using UManitoba network. We have decommissioned the 
 
 On Grex, there are multiple login nodes:
 
+<!--
 * __Bison__: bison.hpc.umanitoba.ca
 * __Tatanka__: tatanka.hpc.umanitoba.ca
 * __Grex__: grex.hpc.umanitoba.ca
+-->
 * __Yak__: yak.hpc.umanitoba.ca (please note that the architecture for this node is avx512).
 * __Zebu__: https://zebu.hpc.umanitoba.ca (only used for [OOD](/ood) and requires VPN if used outside campus network).
 
@@ -66,10 +72,14 @@ In addition to the original nodes, new skylake and AMD nodes have been added to 
 | :-------:           | :-------------: | :-------: | :------: | :-----: |
 | Intel CPU           | 12              | **40**    | 384 GB   | EDR 100GB/s IB interconnect |
 | Intel 6230R         | 42              | **52**    | 188 GB   | EDR 100GB/s IB interconnect |
+<!--
 | Intel Xeon 5560[^1] | 312             | **12**    |  48 GB   | QDR 40GB/s IB interconnect  |
+-->
 | AMD EPYC 9634[^2]   | 5               | **168**   | 1500 GB  | HDR 100GB/s IB interconnect |
 
+<!--
 [^1]: Original Grex nodes: **slated for decommission in the near furure**
+-->
 [^2]: CPU nodes contributed by Prof. Marcos Cordeiro (Department of Agriculture).
 
 ### GPU nodes
@@ -105,8 +115,11 @@ Grex's compute nodes have access to three filesystems:
 | File system         | Type        | Total space  | Quota per user   |
 | :-----------:       | :----:      | :----------: | :--------------: |
 | __/home__           | NFSv4/RDMA  | **15 TB**    | 100 GB           |
-| __/global/scratch__ | Lustre      | **418 TB**   | 4 TB             |
 | __/project__        | Lustre      | **2 PB**     | Allocated per group. |
+
+<!--
+| __/global/scratch__ | Lustre      | **418 TB**   | 4 TB             |
+-->
 
 In addition to the shared file system, the compute nodes have their own local disks that can be used as temporary storage when [running jobs](running-jobs).
 
@@ -125,6 +138,7 @@ Grex is a traditional HPC machine, running Linux and SLURM resource management s
 In addition to the traditional bash mode (connecting via ssh), users have access to:
 
 * __OpenOnDemand:__ on Grex, it is possible to use OpenOnDemand (OOD for short) to login to Grex and run batch or GUI applications (VNC Desktops, Matlab, Gaussview, Jupyter, ...). For more information, please refer to the page: [OpenOnDemand](/ood)
+
 <!--
 * __X2Go:__ for more information, visit the page, connect to Grex via [X2Go](connecting/#x2go)
 -->
@@ -147,5 +161,5 @@ __WestGrid__ ceased operations on April 1st, 2022. The former WestGrid instituti
 <!-- {{< treeview display="tree" />}} -->
 
 <!-- Changes and update:
-* Last reviewed on: Apr 25, 2024.
+* Last revision: Aug 28, 2024.
 -->

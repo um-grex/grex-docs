@@ -3,13 +3,13 @@
 #SBATCH --time=0-8:00:00
 #SBATCH --nodes=1
 #SBATCH --ntask-per-node=1
-#SBATCH --cpus-per-task=12
+#SBATCH --cpus-per-task=52
 #SBATCH --mem=0
-#SBATCH --partition=compute
+#SBATCH --partition=skylake
 #SBATCH --job-name="OMP-Job-Test"
 
 # An example of an OpenMP threaded job that 
-# takes a whole "old" Grex node for 8 hours. 
+# takes a whole "skylake" node for 8 hours. 
 
 export OMP_NUM_THREADS=${SLURM_CPUS_PER_TASK}
 

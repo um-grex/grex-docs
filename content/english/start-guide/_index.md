@@ -19,7 +19,7 @@ Grex is an UManitoba High Performance Computing (HPC) system, first put in produ
 
 2. Wait for half a day. While waiting, install an SSH client, and SFTP client for your operating system.
 
-3. Connect to **grex.hpc.umanitoba.ca** with SSH, using your username/password from step 1.
+3. Connect to **yak.hpc.umanitoba.ca** with SSH, using your username/password from step 1.
 
 4. Make a sample job script, call it, for example, __sleep-job.sh__ . The job script is a text file that has a special syntax to be recognized by SLURM. You can use the editor __nano__ , or any other right on the Grex SSH prompt (vim, emacs, pico, ... etc); you can also create the script file on your machine and upload to Grex using your SFTP client or scp.
 
@@ -31,15 +31,15 @@ Grex is an UManitoba High Performance Computing (HPC) system, first put in produ
 />}}
 {{< /collapsible >}}
 
-5. Submit the script using sbatch command, to the __compute__ partition using:
+5. Submit the script using sbatch command, to the __skylake__ partition using:
 
 {{< highlight bash >}}
-sbatch --partition=compute sleep-job.sh
+sbatch --partition=skylake sleep-job.sh
 {{< /highlight >}}
 
 6. Wait until the job finishes; you can monitor the queues state with the 'sq' command. When the job finishes, a file slurm-NNNN.out should be created in the same directory.
 
-7. Download the output slurm-NNNN.out from grex.hpc.umanitoba.ca to your local machine using your SFTP client.
+7. Download the output slurm-NNNN.out from yak.hpc.umanitoba.ca to your local machine using your SFTP client.
 
 8. Congratulations, you have just run your first HPC-style batch job. This is the general workflow, more or less; you'd just want to substitute the __sleep__ command to something useful, like __./your-code.x your-input.dat__ .
 
@@ -50,5 +50,5 @@ Check out [Getting an ccount](./access), [Moving Data](./connecting/data-transfe
 <!-- {{< treeview display="tree" />}} -->
 
 <!-- Changes and update:
-* Last reviewed on: Apr 25, 2024.
+* Last revision: Aug 28, 2024.  
 -->

@@ -88,5 +88,5 @@ We also provide small-group workshops on Research Computing topics when there is
 <!-- {{< treeview display="tree" />}} -->
 
 <!-- Changes and update:
-* Last reviewed on: Apr 25, 2024.
+* Last revision: Aug 28, 2024. 
 -->

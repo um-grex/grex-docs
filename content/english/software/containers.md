@@ -11,11 +11,19 @@ categories: ["Software", "Applications"]
 ---
 
 Linux Containers are means to isolate software dependencies from the base Linux operating system. 
+<<<<<<< HEAD
 On Grex, we support the [Singularity](https://docs.sylabs.io/guides/latest/user-guide/) container system (developed by a company called SyLabs), and [Podman](https://podman.io/).
 There was a fork of the Singularity project that produced a new project called [Apptainer](https://apptainer.org/).
 As of now (early 2024), Singularity-CE by Sylabs and Apptainer by Linux Foundations are using the same SIF image format and thus are largely the same with respect to their usage and main features.
 Grex supports Singularity-CE, while National DRI (the Alliance) HPC machines like Cedar or Graham support Apptainer.
 Both Grex and National DRI (the Alliance) HPC machines like Cedar or Graham support Podman.
+=======
+On Grex, we support the [Singularity](https://sylabs.io/guides/3.11/user-guide/) container system, developed by a company called SyLabs. 
+There was a fork of the Singularity project that produced a new project called [Apptainer](https://apptainer.org/). 
+As of early 2024, Singularity-CE by Sylabs and Apptainer by Linux Foundations are using the same SIF image format and thus are largely the same with respect to their usage and main features.
+
+Grex supports Singularity-CE, while National DRI (the Alliance) HPC machines like Cedar or Graham support Apptainer. 
+>>>>>>> main
 
 Several different Linux container engines exist, most notably [Docker](https://www.docker.com) which is a very popular tool in the DevOps community. With Singularity it is possible to run Docker images from [DockerHub](https://hub.docker.com/), as well as native Singularity images from other repositories, such as [SingularityHub](https://singularity-hub.org/) and [SyLabsCloud](https://cloud.sylabs.io/home).
 
@@ -88,6 +96,8 @@ It looks like the list of what is present on the OSG CVMFS is on Github: [OSG Gi
 ---
 The Alliance's (formerly ComputeCanada) software stack now provides Apptainer modules in the two latest Standard Environments , _StdEnv/2020_ and _StdEnv/2023_. Most recent Apptainer versions (1.2.4 and older) do not require "suexec" and thus can be used off the CVMFS as usual. The only caveat would be to first unload any "singularity" or "apptainer" modules from other software stacks by _module purge_. 
 
+The following commands show how to run the image from the previous example _/R-INLA.sif_:
+
 {{< highlight bash >}}
 module purge
 module load CCEnv
@@ -96,18 +106,28 @@ module load StdEnv/2023
 module load apptainer
 
 apptainer version
-apptainer run docker://ghcr.io/apptainer/lolcow
+apptainer run ./R-INLA.sif R --vanilla < myscript.R
 {{< /highlight >}}
+
+Similar to singularity, you will need to bind mount all the directories for accessing data outside the container.
+
+<!--
+apptainer run docker://ghcr.io/apptainer/lolcow
+-->
 
 ## (Advanced) Using Podman from SBEnv on Grex
 ---
+
 We provide [Podman](https://podman.io/) modules as part of the default Grex environment. Podman is meant to be used only by experienced users for jobs that cannot be executed as regular binaries, or through Singularity.
+
 Under no circumstances, users are allowed to use Podman to run services (inclunding and not limited to databases, and network services). Ignoring this policy will result in the forced termination of the job.
-Due to the nature of container runtime environments, we strive to update Podman regularly, so the installed version is usually the latest one.
+
+Due to the nature of container runtime environment, we strive to update Podman regularly, so the installed version is usually the latest one.
 
 On Grex, Podman is configured as _rootless_, and uses _crun_ to actually run the containers.
 
 Users can load the module and get some infomration using the following commmand:
+
 {{< highlight bash >}}
 module load podman
 podman version
@@ -115,14 +135,16 @@ podman run --rm docker.io/godlovedc/lolcow
 {{< /highlight >}}
 
 When using Podman to run a job, we suggest to manually pre-download the required image to avoid wasting time during the job:
+
 {{< highlight bash >}}
-ssh _your_username_@yak.hpc.umanitoba.ca
+ssh someuser@yak.hpc.umanitoba.ca
 module load podman
 podman pull _required_image_
 {{< /highlight >}}
 
-Grex is hosting a Docker Registry proxy/cache locally to improve performances, while avoiding rate limits imposed by the official Docker Hub.
-In the future, users that build their own images will be able to ask write access to the Grex Docker Registry to push their artifacts (this service is currently under development, and not publicly available).
+Replace _required_image_ by the URL where the image is located.
+
+Grex is hosting a Docker Registry proxy/cache locally to improve performances, while avoiding rate limits imposed by the official Docker Hub. In the future, users who build their own images will be able to ask write access to the Grex Docker Registry to push their artifacts (this service is currently under development, and not publicly available).
 
 ### Getting and building Podman images
 ---

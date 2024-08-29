@@ -10,8 +10,6 @@ bannerContent: "__Work in progress.__"
 #tags: ["Content management"]
 ---
 
-<!--
-
 ## Access
 ---
 
@@ -28,9 +26,11 @@ If you forgot and/or would like to reset your password for Grex and/or any Allia
 
 There are different ways to connect to grex: 
 
-> * [ssh](connecting/ssh)
-> * [X2Go](connecting/x2go/)
-> * [OOD](connecting/ood/)
+* [ssh](connecting/ssh)
+
+* [OOD](connecting/ood/)
+
+<!--
 
 ## Storage and data
 ---
@@ -47,18 +47,17 @@ There are different ways to connect to grex:
 ## Scheduler
 ---
 
+-->
+
 ## How to get support
 ---
 
-> * For any question related to Grex and/or the Alliance's clusters, please submit your questions to the Alliance’s or CC [HelpDesk](support/#the-alliance-support)
-> * For any question related to IST at University of Manitoba and their resources, please contact IST [HelpDesk](support/#ist-helpdesk)
+* For any question related to Grex and/or the Alliance's clusters, please submit your questions to the Alliance’s or CC [HelpDesk](support/#the-alliance-support)
 
--->
+* For any question related to IST at University of Manitoba and their resources, please contact IST [HelpDesk](support/#ist-helpdesk)
 
 <!-- {{< treeview display="tree" />}} -->
 
 <!-- Changes and update:
-* 
-*
-*
+* Last revision: Aug 28, 2024.  
 -->

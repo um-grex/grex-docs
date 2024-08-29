@@ -59,7 +59,7 @@ Any batch job is submitted with **sbatch** command. Batch jobs are usually shell
 | __-\-gpus=__            | -\-gpus=1            | Number of GPUs per job. |
 | __-\-time-__            | -\-time=0-8:00:00    | wall time in format DD-HH:MM:SS |
 | __-\-qos=__             | *                    | QOS by name (Not to be used on Grex!). |
-| __-\-partition=__       | -\-partition=compute | Partition name: **compute**, **skylake**, ... etc (**very much used on Grex!**). |
+| __-\-partition=__       | -\-partition=skylake | Partition name: **skylake**, ... etc (**very much used on Grex!**). |
 
 <!--
  * __-\-ntasks=__ : specifies number of tasks (MPI processes) per job.
@@ -86,7 +86,7 @@ or
 sbatch [+some options] myfile.slurm
 {{< /highlight >}}
 
-Some options like __-\-partition=compute__ could be invoked at submission time.
+Some options like __-\-partition=skylake__ could be invoked at submission time.
 
 Refer to the official SLURM [documentation](https://slurm.schedmd.com/documentation.html) and/or **man sbatch** for the available options. Below we provide examples for typical cases of SLURM jobs.
 
@@ -134,7 +134,7 @@ export OMP_NUM_THREADS=${SLURM_CPUS_PER_TASK}
 
 For MKL it is __MKL_NUM_THREADS__, for Julia __-\-JULIA_NUM_THREADS__, for Java __-Xfixme__ parameter.
 
-{{< collapsible title="Script template for running a job on **compute** partition: using full node" >}}
+{{< collapsible title="Script template for running a job on **skylake** partition: using full node" >}}
 {{< snippet
     file="scripts/jobs/templates/run-smp-job-node-template.sh"
     caption="run-smp-job-node-template.sh"
@@ -146,7 +146,7 @@ Note that the above example requests the whole node's memory with __-\-mem=0__ b
 
 It is also possible to use a fraction of the node for running OpenMP jobs. Here is an example asking for 1 task with 4 threads on compute partition:
 
-{{< collapsible title="Script template for running a job on **compute** partition: using a fraction of the node" >}}
+{{< collapsible title="Script template for running a job on **skylake** partition: using a fraction of the node" >}}
 {{< snippet
     file="scripts/jobs/templates/run-smp-job-partial-node-template.sh"
     caption="run-smp-job-partial-node-template.sh"
@@ -351,5 +351,5 @@ Since Spring 2021, Compute Canada has updated the default software stack on thei
 <!-- {{< treeview display="tree" />}} -->
 
 <!-- Changes and update:
-* Last reviewed on: Apr 30, 2024.
+* Last revision: Aug 28, 2024. 
 -->

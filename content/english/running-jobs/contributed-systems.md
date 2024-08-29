@@ -134,5 +134,5 @@ Here is an example of script for running LAMMPS job on this partition:
 <!-- {{< treeview display="tree" />}} -->
 
 <!-- Changes and update:
-* Last reviewed on: Apr 30, 2024.
+* Last revision: Aug 28, 2024.  
 -->

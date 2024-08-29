@@ -10,7 +10,8 @@
 
 # Load the modules:
 
-module load intel/15.0.5.223 ompi/3.1.4 nwchem/6.8.1
+module load arch/avx512 intel-one/2024.1 openmpi/4.1.6 
+module load nwchem/7.2.2
 
 echo "Starting run at: `date`"
 
@@ -18,7 +19,7 @@ which nwchem
 
 # Uncomment/Change these in case you want to use custom basis sets
 
-NWCHEMROOT=/global/software/cent7/nwchem/6.8.1-intel15-ompi314
+NWCHEMROOT=${MODULE_NWCHEM_PREFIX}
 export NWCHEM_NWPW_LIBRARY=${NWCHEMROOT}/data/libraryps
 export NWCHEM_BASIS_LIBRARY=${NWCHEMROOT}/data/libraries
 
