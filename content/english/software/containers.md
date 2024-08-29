@@ -11,6 +11,7 @@ categories: ["Software", "Applications"]
 ---
 
 Linux Containers are means to isolate software dependencies from the base Linux operating system.  Several different Linux container engines exist, most notably [Docker](https://www.docker.com) which was first to emerge as the most popular tool in the DevOps community. 
+
 Since then, a lot of work had been done by major Linux players like Google, RedHat and others to develop an open standard for container runtimes, which developed based on Docker, [OCI](https://opencontainers.org/).
 
 There are HPC-specific container engines/runtimes that offer similar or equivalent functionality, but allow for easier intgration with shared Linux HPC systems.
@@ -26,6 +27,8 @@ On Grex, Sylabs Singularity-CE is supported on local SBEnv software stack, while
 ## Using Singularity from SBEnv on Grex
 ---
 
+A brief introduction on [getting started with Singularity](https://docs.sylabs.io/guides/latest/user-guide/quick_start.html) can be useful to get started. You will not need to install Singularity on Grex since it is already provided as a module.
+
 Start with __module spider singularity__; it will list the current version. Due to the nature of container runtime environments, we update Singularity regularly, so the installed version is usually the latest one. Load the module (in the default Grex environment) by the following command:
 
 {{< highlight bash >}}
@@ -38,9 +41,21 @@ With **singularity** command, one can list singularity commands and their option
 singularity help
 {{< /highlight >}}
 
-A brief introduction on [getting started with Singularity](https://docs.sylabs.io/guides/latest/user-guide/quick_start.html) can be useful to get started. You will not need to install Singularity on Grex since it is already provided as a module.
+To execute an application within the container, do it in the usual way for that application, but prefix the command with ''singularity exec image_name.sif'' or, if the container has a valid "entrypoint", execute it with  ''singularity run image_name.sif". 
 
-To execute an application within the container, do it in the usual way for that application, but prefix the command with ''singularity exec image_name.sif". For example, to run R on an R script, using a container named R-INLA.sif:
+{{< highlight bash >}}
+singularity run docker://ghcr.io/apptainer/lolcow
+{{< /highlight >}}
+
+In the example above, Singularity downloads a Docker image from a registry, and runs it instantly. It is advisable, to avoid getting banned by container registries for massive downloads off a single HPC system, to "pull" or "build" containers first as images, and then "run" and "exec" them locally.
+
+{{< highlight bash >}}
+singularity pull lolcow_local.sif docker://ghcr.io/apptainer/lolcow
+# the above should create a local image lolcow_local.sif . Lets run it with singularity
+singularity run lolcow_local.sif
+{{< /highlight >}}
+
+For another example, to run R on an R script, using an existing container image named R-INLA.sif (INLA is a popular R library installed in the container):
 
 {{< highlight bash >}}
 singularity exec ./R-INLA.sif R --vanilla < myscript.R
@@ -56,7 +71,7 @@ In case you do not want to mount anything to preserve the containers' environmen
 
 Some attention has to be paid to Singularity's local cache and temporary directories. Singularity caches the container images it pulls and Docker layers under __$HOME/.singularity__. Containers can be large, in tens of gigabytes, and thus they can easily accumulate and exhaust the users' storage space quota on $HOME. Thus, users might want to set the __SINGULARITY_CACHEDIR__ and __SINGULARITY_TMPDIR__ variables to some place under their __/global/scratch__ space.
 
-For example, to change the location of __SINGULARITY_CACHEDIR__ and __SINGULARITY_TMPDIR__, one might run:
+For example, to change the location of __SINGULARITY_CACHEDIR__ and __SINGULARITY_TMPDIR__, before building the singularity image, one might run:
 
 {{< highlight bash >}}
 mkdir -p /global/scratch/$USER/singularity/{cache,tmp}
@@ -64,7 +79,6 @@ export SINGULARITY_CACHEDIR="/global/scratch/$USER/singularity/cache"
 export SINGULARITY_TMPDIR="/global/scratch/$USER/singularity/tmp"
 {{< /highlight >}}
 
-before building the singularity image.
 
 ### Getting and building Singularity images
 ---
@@ -74,7 +88,8 @@ The commands **singularity build** and **singularity pull** would get Singularit
 ### Singularity with GPUs
 ---
 
-Use the __-\-nv__ flag to singularity run/exec/shell commands. Naturally, you should be on a node that has a GPU, in an interactive job. NVIDIA provides many pre-built Docker and Singularity container images on their ["GPU cloud"](https://ngc.nvidia.com/), together with instructions on how to pull them and to run them. These should work on Grex without much changes.
+Use the __-\-nv__ flag to ''singularity'' run/exec/shell commands. Naturally, you should be on a node that has a GPU, in an interactive job. NVIDIA provides many pre-built Docker and Singularity container images on their ["GPU cloud"](https://ngc.nvidia.com/), together with instructions on how to pull them and to run them. 
+NVidia's NGC Docker images should, as a rule, work on HPC machines with Singularity without any changes.
 
 ### Singularity with OpenScienceGrid CVMFS
 ---
@@ -90,7 +105,8 @@ It looks like the list of what is present on the OSG CVMFS is on Github: [OSG Gi
 
 ## Using Apptainer from CCEnv on Grex
 ---
-The Alliance's (formerly ComputeCanada) software stack now provides Apptainer modules in the two latest Standard Environments , _StdEnv/2020_ and _StdEnv/2023_. Most recent Apptainer versions (1.2.4 and older) do not require "suexec" and thus can be used off the CVMFS as usual. The only caveat would be to first unload any "singularity" or "apptainer" modules from other software stacks by _module purge_. 
+The Alliance's (formerly ComputeCanada) software stack now provides Apptainer modules in the two latest Standard Environments , _StdEnv/2020_ and _StdEnv/2023_. Most recent Apptainer versions (1.2.4 and older) do not require "suexec" and thus can be used off the CVMFS as usual. 
+The only caveat would be to first unload any "singularity" or "apptainer" modules from other software stacks by _module purge_. Apptainer on the CCEnv stack is installed in suid-less mode.
 
 The following commands show how to run the image from the previous example _/R-INLA.sif_:
 
@@ -100,16 +116,14 @@ module load CCEnv
 module load arch/avx512 
 module load StdEnv/2023
 module load apptainer
-
+# testing if apptainer command works
 apptainer version
-apptainer run ./R-INLA.sif R --vanilla < myscript.R
+# running the basic example
+apptainer run docker://ghcr.io/apptainer/lolcow
 {{< /highlight >}}
 
-Similar to singularity, you will need to bind mount all the directories for accessing data outside the container.
-
-<!--
-apptainer run docker://ghcr.io/apptainer/lolcow
--->
+Similarly to Singularity, you will need to bind mount the required data directories for accessing data outside the container. 
+The same best practices mentioned above for Singularity (pulling containers beforehand, controlling the cache location) equally apply for the Apptainer. The environment variables for Apptainer should be usinge APPTAINER_ instead of SINGULARITY_ prefixes.
 
 ## (Advanced) Using Podman from SBEnv on Grex
 ---
