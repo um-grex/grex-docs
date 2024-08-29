@@ -15,7 +15,7 @@ Linux Containers are means to isolate software dependencies from the base Linux 
 Since then, a lot of work had been done by major Linux players like Google, RedHat and others to develop an open standard for container runtimes, which developed based on Docker, [OCI](https://opencontainers.org/).
 
 There are HPC-specific container engines/runtimes that offer similar or equivalent functionality but allow for easier integration with shared Linux HPC systems. At the time of writing, the most widely used of them is the  [Singularity](https://sylabs.io/guides/3.11/user-guide/) container system, developed by a company called SyLabs, and its fork, a Linux Foundation project called [Apptainer](https://apptainer.org/). 
-They are [compatible](https://apptainer.org/docs/user/latest/singularity_compatibility.html) with each other. However, Singularity/Apptainer provides functionality for running most Docker images by converting them to the Singularity Image format (SIF). However, Singularity/Apptainer own format is [not completely OCI-compatible](https://apptainer.org/docs/user/latest/docker_and_oci.html#differences-and-limitations-vs-docker), so there exists Docker images that would not work properly. 
+They are [compatible](https://apptainer.org/docs/user/latest/singularity_compatibility.html) with each other. Singularity/Apptainer provides functionality for running most Docker images by converting them to the Singularity Image format (SIF). However, Singularity/Apptainer own format is [not completely OCI-compatible](https://apptainer.org/docs/user/latest/docker_and_oci.html#differences-and-limitations-vs-docker), so there exists Docker images that would not work properly. 
 
 Finally, recent developments in Linux Kernel namespaces allowed to happen such projects as "rootless Docker" and "rootless [Podman](https://podman.io)" which are more suitable for HPC systems than the original Docker implementation which requires privileged access to the Linux system.
 
@@ -135,6 +135,18 @@ Access to the Podman runtime is through a module. Due to the nature of the conta
 module load podman
 podman version
 podman run --rm docker.io/godlovedc/lolcow
+{{< /highlight >}}
+
+Please note that Podman stores the pulled images inside the user home directory () and is the user responsibility to delete the old/unused ones.
+This means that, depending on the size of the images, it could be easy to exhaust home disk quota.
+
+To manage pulled images, users can take advantage of the following commands:
+
+{{< highlight bash >}}
+# list images
+podman image ls
+# delete image
+podman image rm <IMAGE_ID>
 {{< /highlight >}}
 
 ### Getting and building Podman images
