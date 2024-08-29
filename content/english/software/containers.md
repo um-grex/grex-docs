@@ -125,18 +125,15 @@ apptainer run docker://ghcr.io/apptainer/lolcow
 Similarly to Singularity, you will need to bind mount the required data directories for accessing data outside the container. 
 The same best practices mentioned above for Singularity (pulling containers beforehand, controlling the cache location) equally apply for the Apptainer. The environment variables for Apptainer should be usinge APPTAINER_ instead of SINGULARITY_ prefixes.
 
-## (Advanced) Using Podman from SBEnv on Grex
+## Using Podman from SBEnv on Grex
 ---
 
-We provide [Podman](https://podman.io/) modules as part of the default Grex environment. Podman is meant to be used only by experienced users for jobs that cannot be executed as regular binaries, or through Singularity.
+[Podman](https://podman.io/) modules re now provided under the default Grex SBEnv environment. On Grex, Podman is configured as _rootless_.
+Podman is meant to be used by experienced users for jobs that cannot be executed as regular binaries, or through Singularity due to OCI requirements.
+Grex is an HPC systems, so it is expected that users would be using Podman to run comopute jobs rather than persistent services (inclunding and not limited to databases, and network services). 
+Thus Podman jobs and running containers that deemed to be inappropriate for HPC may be terminated without notice. 
 
-Under no circumstances, users are allowed to use Podman to run services (inclunding and not limited to databases, and network services). Ignoring this policy will result in the forced termination of the job.
-
-Due to the nature of container runtime environment, we strive to update Podman regularly, so the installed version is usually the latest one.
-
-On Grex, Podman is configured as _rootless_, and uses _crun_ to actually run the containers.
-
-Users can load the module and get some infomration using the following commmand:
+Access to the Podman runtime is throigh a module. Due to the nature of container runtime environment, we strive to update Podman regularly, so in most cased, the latest installed version must be used:
 
 {{< highlight bash >}}
 module load podman
@@ -144,27 +141,26 @@ podman version
 podman run --rm docker.io/godlovedc/lolcow
 {{< /highlight >}}
 
-When using Podman to run a job, we suggest to manually pre-download the required image to avoid wasting time during the job:
+### Getting and building Podman images
+---
+
+When using Podman to run a job, we suggest to manually pre-download the required image to avoid wasting time during the job. 
+Grex is hosting a Docker Registry proxy/cache locally to improve performance, and avoiding rate limits that can be imposed by various container registries for exessive downloads.
 
 {{< highlight bash >}}
-ssh someuser@yak.hpc.umanitoba.ca
 module load podman
 podman pull _required_image_
 {{< /highlight >}}
 
-Replace _required_image_ by the URL where the image is located.
-
-Grex is hosting a Docker Registry proxy/cache locally to improve performances, while avoiding rate limits imposed by the official Docker Hub. In the future, users who build their own images will be able to ask write access to the Grex Docker Registry to push their artifacts (this service is currently under development, and not publicly available).
-
-### Getting and building Podman images
----
-
-The command **podman pull _image_name_** would get Podman images from a Docker Registry. Images can also be built from other images, or from containerfiles (e.g. dockerfiles) using the command **podman build _containerfile_**. A _containerfile_ is a text file that specifies the base image and commands to be run on it.
+The command **podman pull _image_name_** would get Podman images from a Docker Registry. 
+Images can also be built from other images, or from containerfiles (e.g. dockerfiles) using the command **podman build _Containerfile_**. 
+A _containerfile_ is a text "recipe" that specifies the base image and commands to be run on it. Podman's recipes are compatible with _Dockerfiles_ .
 
 ### Podman with GPUs
 ---
 
-Use the __-\-device=nvidia.com/gpu=all__ flag when running a podman container. Naturally, you should be on a node that has a GPU. NVIDIA provides many pre-built Docker container images on their [NGC Cloud](https://ngc.nvidia.com/), together with instructions on how to pull and run them. These should work on Grex without much changes.
+Use the __-\-device=nvidia.com/gpu=all__ flag when running a podman container. 
+Naturally, you should be on a node that has a GPU. NVIDIA provides many pre-built Docker container images on their [NGC Cloud](https://ngc.nvidia.com/), together with instructions on how to pull and run them. Podman would usually run Docker containers without changes to the command line parameters.
 
 ---
 
