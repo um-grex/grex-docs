@@ -61,10 +61,11 @@ For another example, to run R on an R script, using an existing container image 
 singularity exec ./R-INLA.sif R --vanilla < myscript.R
 {{< /highlight >}}
  
-Quite often, it is useful to provide the containerized application with data residing on a shared HPC filesystem such as __/home__ or __/global/scratch__. This is done via [bind mounts](https://docs.sylabs.io/guides/latest/user-guide/bind_paths_and_mounts.html). Normally, the container **bind-mounts** $HOME, /tmp and the current working directory. On Grex to bind the global Lustre filesystem the following __-B__ option should be used:
+Quite often, it is necessary to provide the containerized application with data residing outside of the container image. For running HPC jobs, the data usually resides ona a shared filesystem such as __/home__ or __/project__. This is done via [bind mounts](https://docs.sylabs.io/guides/latest/user-guide/bind_paths_and_mounts.html). Normally, the container **bind-mounts** $HOME, /tmp and the current working directory. It is possible to mount a subdirectory, such as _$PWD/workdir_ ,or an entire filesystem such as _/project_. 
+Example below bind-mounts a __./workdir__ folder relative to the current path. The folder must exist before being bind-mounted.
 
 {{< highlight bash >}}
-singularity exec -B /sbb/scratch:/global/scratch ./R-INLA.sif R --vanilla < myscript.R
+singularity exec -B `pwd`/workdir:/workdir ./R-INLA.sif R --vanilla < myscript.R
 {{< /highlight >}}
 
 In case you do not want to mount anything to preserve the containers' environment from any overlapping of data/code from say $HOME, use the __-\-containall__ flag.
