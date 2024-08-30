@@ -61,7 +61,7 @@ For another example, to run R on an R script, using an existing container image 
 singularity exec ./R-INLA.sif R --vanilla < myscript.R
 {{< /highlight >}}
  
-Quite often, it is necessary to provide the containerized application with data residing outside of the container image. For running HPC jobs, the data usually resides ona a shared filesystem such as __/home__ or __/project__. This is done via [bind mounts](https://docs.sylabs.io/guides/latest/user-guide/bind_paths_and_mounts.html). Normally, the container **bind-mounts** $HOME, /tmp and the current working directory. It is possible to mount a subdirectory, such as _$PWD/workdir_ ,or an entire filesystem such as _/project_. 
+Quite often, it is necessary to provide the containerized application with data residing outside of the container image. For running HPC jobs, the data usually resides on a shared filesystem such as __/home__ or __/project__. This is done via [bind mounts](https://docs.sylabs.io/guides/latest/user-guide/bind_paths_and_mounts.html). Normally, the container **bind-mounts** $HOME, /tmp and the current working directory. It is possible to mount a subdirectory, such as _$PWD/workdir_, or an entire filesystem such as _/project_. 
 Example below bind-mounts a __./workdir__ folder relative to the current path. The folder must exist before being bind-mounted.
 
 {{< highlight bash >}}
@@ -105,8 +105,8 @@ It looks like the list of what is present on the OSG CVMFS is on GitHub: [OSG Gi
 
 ## Using Apptainer from CCEnv on Grex
 ---
-The Alliance's (formerly ComputeCanada) software stack now provides Apptainer modules in the two latest Standard Environments , _StdEnv/2020_ and _StdEnv/2023_. Most recent Apptainer versions (1.2.4 and older) do not require "suexec" and thus can be used off the CVMFS as usual. 
-The only caveat would be to first unload any "singularity" or "apptainer" modules from other software stacks by _module purge_. Apptainer on the CCEnv stack is installed in suid-less mode.
+
+The Alliance's (formerly ComputeCanada) software stack now provides Apptainer modules in the two latest Standard Environments, _StdEnv/2020_ and _StdEnv/2023_. Most recent Apptainer versions (1.2.4 and older) do not require "suexec" and thus can be used off the CVMFS as usual. The only caveat would be to first unload any "singularity" or "apptainer" modules from other software stacks by _module purge_. Apptainer on the CCEnv stack is installed in suid-less mode.
 
 The following commands show how to run the image from the previous example _/R-INLA.sif_:
 
@@ -156,8 +156,8 @@ The command **podman pull _image_name_** would get Podman images from a containe
 Images can also be built from other images, or from containerfiles (e.g. Dockerfiles) using the command **podman build _Containerfile_**. 
 A _containerfile_ is a text "recipe" that specifies the base image and commands to be run on it. Podman's recipes are compatible with _Dockerfiles_.
 
-Podman, as configured on Grex, by default would store all pulled and locally built images inside the user HOME directory. Depending on the size of the images, it could be easy to exhaust the disk quota on HOME quickly. 
-It is the users responsibility to manage their Podman images (delete the old/unused ones).
+Podman, as configured on Grex, by default would store all pulled and locally built images inside the user HOME directory. Depending on the size of the images, it could be easy to exhaust the disk quota on HOME quickly. It is the user's responsibility to manage their Podman images (delete the old/unused ones).
+
 To manage pulled images, users can take advantage of the following commands:
 
 {{< highlight bash >}}
@@ -190,5 +190,5 @@ NVIDIA provides many pre-built Docker container images on their [NGC Cloud](http
 <!-- {{< treeview display="tree" />}} -->
 
 <!-- Changes and update:
-* Last revision: Aug 29, 2024. 
+* Last revision: Aug 30, 2024. 
 -->
