@@ -65,8 +65,8 @@ The contributed partitions are the same as before the outage:
 * __stamps__ and __stamps-b__
 * __livi__ and __livi-b__
 * __agro__ and __agro-b__
-* __mcordgpu__ and __mcordcpu__
-* __mcordgpu-b__ and __mcordcpu-b__
+* __mcordgpu__ and __mcordgpu-b__
+* __mcordcpu__ and __mcordcpu-b__
 
 {{< alert type="warning" >}}
 The partition __testgenoa__ has been removed and the nodes assigned to the new partition __genoa__ (see above).
@@ -98,11 +98,12 @@ This is a new software stack that is meant to be used on __yak__ and all __moder
 
 __SBEnv__ has already:
 
-* different compiler versions for Intel and GCC suites: gcc/13.2.0; intel/2019.5, intel/2023.2, intel-one/2023.2, intel-one/2024.1;  intelmpi/2019.8; intelmpi/2021.10
-* a new AOCC compiler suite for new AMD nodes (__testgenoa__ and __mcordcpu-b__ partitions): aocc/4.2.0
+* different compiler versions for Intel and GCC suites: gcc/13.2.0; intel/2019.5, intel/2023.2,  intel-one/2024.1;  intelmpi/2019.8; intelmpi/2021.10
+* a new AOCC compiler suite for new AMD nodes (__genoa__, __genlm__ and __mcordcpu-b__ partitions): aocc/4.2.0
+* a new AOCL math libraries (AMD BLAS/LAPACK/ScaLAPAC): aocl/4.2.0 and aocl/4.2.0-64
 * OpenMPI (openmpi/4.1.6 is the default version to be used in most cases)
-* some commercial software (ORCA, Gaussian)
-* some restricted software to particular groups, like stata, vasp, adf. 
+* some commercial software (ORCA, Gaussian, Matlab)
+* some restricted software to particular groups, like STATA, VASP, ADF. 
 * some tools and popular dependencies. 
 
 We will continue to add more programs as they are requested by users. If you can not find the program or the module you want to use, please send us a request via __support@tech.alliancecan.ca__ and we will install the module for you. 
@@ -132,7 +133,8 @@ module load arch/avx512
 module load StdEnv/2023
 {{< /highlight >}}
 
-Then use __module spider__ to search for other modules under this environment.
+Then use __module spider__ to search for other modules under this environment. 
+> Note that on the AMD Genoa based partitions, CCEnv enviroments earlier than StdEnv/2023 will likely not work. It is recommended to use the latest StdEnv on the new AMD hardware.
 
 # Scheduler
 ---
@@ -152,7 +154,7 @@ As a summary of the changes, there is only one workflow on Grex:
 
 > * connect via __yak.hpc.umanitoba.ca__ or __grex.hpc.umanitoba.ca__
 > * Use the new environment __SBEnv__ for modules and/or compile your programs using the compilers available under this environment.
-> * Submit your jobs to __skylake__, __largemem__ or any other partition. For a complete list of partitions, run the command __partition-list__ from your terminal.
+> * Submit your jobs to __skylake__, __genoa__, __largemem__ or any other partition. For a complete list of partitions, run the command __partition-list__ from your terminal.
 > * You could also use __CCEnv__ as shown above.
 
 <!--
