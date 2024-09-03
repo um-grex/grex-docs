@@ -13,19 +13,31 @@ bannerContent: "**Grex upgrade: SISF2023 - Aug 26 -Sep 6, 2024.**"
 #tags: ["Content management"]
 ---
 
-Please review the brief summary of the Grex upgrades and changes that are done during the outage of **Aug 26 -Sep 6, 2024.**
+Please review the brief summary of the Grex upgrades and changes that are done during the outage of **Aug 26 - Sep 6, 2024.**
 
-# Operating System: 
+# Operating System 
 ---
 
-Grex is now running a new version of Linux (__Alma Linux 8.10_). All compute nodes are upgraded to Alma Linux. 
+Grex is now running a new version of Linux (__Alma Linux 8.10__). All compute and login nodes are upgraded to Alma Linux. 
 
-# Login nodes:
+# Login nodes
 ---
 
-* The login nodes __bison__ and __tatanka__ are offline.
+* The login node __yak__ was upgraded to __Alma Linux.__ This is the only login node that you can use for now. 
 
-* The login node __yak__ was upgraded to __Alma Linux.__ This is the only login node that you can use for now. To connect to Grex, use:
+* The alias __grex__ is now redirected to __yak__.
+
+{{< alert type="warning" >}}
+The login nodes __bison__ and __tatanka__ are offline.
+{{< /alert >}}
+
+To connect to Grex, use one of the following:
+
+{{< highlight bash >}}
+ssh -XY username@grex.hpc.umanitoba.ca
+{{< /highlight >}}
+
+or 
 
 {{< highlight bash >}}
 ssh -XY username@yak.hpc.umanitoba.ca
@@ -36,36 +48,53 @@ ssh -XY username@yak.hpc.umanitoba.ca
 # Partitions
 ---
 
-The following general purpose partitions are running Alma Linux:
+After Grex upgrade, we added new partitions:
 
-* __skylake__ 
-* __largemem__
-* __gpu__
-* __testgenoa__
+* __genoa__: 27 nodes, 750 Gb of total usable memory, 192 CPUs per node, about 4000M of memory per core, Total CPUs 5184.
+* __genlm__: 3 nodes, 1.5 Tb of total usable memory, 192 CPUs per node, about 8000M of memory per core, Total CPUs 576.
 
-# Legacy nodes:
+The following partitions are the same as before the outage:
+
+* __skylake__:  42 nodes, 192 Gb of total usable memory, 52 CPUs per node, about 3600M of memory per core, Total CPUs 2184.
+* __largemem__: 12 nodes, 384 Gb of total usable memory, 40 CPUs per node, about 9600M of memory per core, Total CPUs 480.
+* __gpu__: 
+* __test__: 
+
+The contributed partitions are the same as before the outage: 
+
+* __stamps__ and __stamps-b__
+* __livi__ and __livi-b__
+* __agro__ and __agro-b__
+* __mcordgpu__ and __mcordcpu__
+* __mcordgpu-b__ and __mcordcpu-b__
+
+{{< alert type="warning" >}}
+The partition __testgenoa__ has been removed and the nodes assigned to the new partition __genoa__ (see above).
+{{< /alert >}}
+
+# Legacy nodes
 ---
 
-As of Aug 29, 2024, the legacy nodes (bison, tatanka and **compute** partitions) are decommissions.
+As of Aug 29, 2024, the legacy nodes (bison, tatanka and **compute** partition) are decommissioned.
 
-# Storage:
+# Storage
 ---
 
-The storage servers for __/home__ and __/project__ are online. Users can have access and/or transfer data as needed. Please note that you can not submit jobs at this time. 
+The storage servers for __/home__ and __/project__ are online. Users can have access and/or transfer data as needed.
 
-# Software Stacks:
+# Software Stacks
 ---
 
-Grex is now running one operating systems:
+Grex is now running one operating system (__Alma Linux__):
 
-* __Alma Linux:__ This OS is running on the new login node __yak__ and __zebu__ (that serves as a host for OOD). All other partions {except for __compute__} are running Alma Linux.
+* __Alma Linux:__ This OS is running on the new login node __yak__ and __zebu__ (that serves as a host for OOD). All partions are running Alma Linux.
 
-The new sotftware stack __SBEnv__ is set as default.
+* The new sotftware stack __SBEnv__ is set as default.
 
 ## SBEnv:
 ---
 
-This is a new software stack that is meant to be used on __yak__ and all __modern partitions__ on Grex {except for the legacy __compute__ partition}. __SBEnv__ stands for __Simplified Build Environment__. 
+This is a new software stack that is meant to be used on __yak__ and all __modern partitions__ on Grex. __SBEnv__ stands for __Simplified Build Environment__. 
 
 __SBEnv__ has already:
 
@@ -93,9 +122,9 @@ module spider <name of the program>
 ## CCEnv
 ---
 
-This environment corresponds to the software stack from the Alliance which is the same used on national systems, like cedar, graham, beluga and narval. It can be used on yak and all partitions, except for the __compute__ partition that has an old architecture.
+This environment corresponds to the software stack from the Alliance which is the same used on national systems, like cedar, graham, beluga and narval. It can be used on yak and all partitions. 
 
-To use it on Grex, you should first load the following modules on this odrer:
+To use it on Grex, you should first load the following modules on this order:
 
 {{< highlight bash >}}
 module load CCEnv
@@ -105,13 +134,30 @@ module load StdEnv/2023
 
 Then use __module spider__ to search for other modules under this environment.
 
-<!--
-From the outage of May 2024:
-
-Please review the brief summary of the Grex upgrades and changes that are done during the outage of **May 2024**:
-
-# Operating System: 
+# Scheduler
 ---
+
+* No major changes to mention about the scheduler since we are still using the same version as before the outage.
+* If no partition is specified, the default will be **skylake**.
+
+{{< alert type="warning" >}}
+__NEW__, another significant change introduced on Jun 19, 2024: 
+For users that have more than one Account (that is, working for more than one research group), SLURM on Grex will no longer try to assume which of the accounts is default. Instead, _sbatch_ and _salloc_ would ask to provide the _--account=_ option explicitly, list the possible accounts, and stop. If you are a member of more than one group, always specify the account you intend to be used for the job. To see the accounting groups, run the command __sshare -U__ from your terminal.
+{{< /alert >}}
+
+# Workflow summary
+---
+
+As a summary of the changes, there is only one workflow on Grex:
+
+> * connect via __yak.hpc.umanitoba.ca__ or __grex.hpc.umanitoba.ca__
+> * Use the new environment __SBEnv__ for modules and/or compile your programs using the compilers available under this environment.
+> * Submit your jobs to __skylake__, __largemem__ or any other partition. For a complete list of partitions, run the command __partition-list__ from your terminal.
+> * You could also use __CCEnv__ as shown above.
+
+<!--
+
+From the outage of May 2024:
 
 Grex is now running a new version of Linux (__Alma Linux 8.x__). All modern compute nodes are upgraded to Alma Linux. 
 The following general purpose partitions are running Alma Linux: 
@@ -123,12 +169,12 @@ The following general purpose partitions are running Alma Linux:
 
 The only exception is made for the legacy nodes (__bison__, __tatanka__ and the old __compute__ partition) that are still running __Centos-7.9.__ The reason for that is related to the local software stack __GrexEnv__. For more details, see the __Software Stacks__ section below.
 
-# Storage:
+# Storage
 ---
 
 The storage servers for __/home__ and __/project__ have been upgraded. The users’ data was not affected.
 
-# Login nodes:
+# Login nodes
 ---
 
 * The login nodes __bison__ and __tatanka__ are still running __Centos-7.9__ and they can be used to compile programs using the __GrexEnv__ and submit the jobs to __compute__ partition. 
