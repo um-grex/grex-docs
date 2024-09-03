@@ -1,3 +1,36 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Storage and Data on Grex</title><link>https://um-grex.github.io/grex-docs/storage/</link><description>Recent content in Storage and Data on Grex</description><generator>Hugo</generator><language>en</language><copyright>The MIT License (MIT) Copyright © 2023 UM-Grex</copyright><atom:link href="https://um-grex.github.io/grex-docs/storage/index.xml" rel="self" type="application/rss+xml"/><item><title>Data sizes and quotas</title><link>https://um-grex.github.io/grex-docs/storage/data-sizes-and-quota/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/storage/data-sizes-and-quota/</guid><description>Data size and quotas# This section explains how to find the actual space and inode usage of /home/ and /project allocations on Grex. We limit the size of the data and the number of files that can be stored on these filesystems. The table provides a &amp;ldquo;default&amp;rdquo; storage quota on Grex. Larger quota can be obtained on /project via UM local RAC process.
-File system Type Total space Bulk Quota Files Quota /home NFSv4/RDMA 15 TB 100 GB / user 0.</description></item><item><title>Data Backup</title><link>https://um-grex.github.io/grex-docs/storage/data-backup/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/storage/data-backup/</guid><description>Backup policies# Since late 2023, there has been a tape backup for user data stored on main Grex filesystems, /home and /project. Our limited resources and large amounts of data do put some limitations on what and how fast can be backed up and restored. All backup is done to tape in the same HPCC data centre.
-The /home filesystem is backed up daily using incremental backup. A new full backup is done quarterly.</description></item><item><title>Data sharing</title><link>https://um-grex.github.io/grex-docs/storage/data-sharing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/storage/data-sharing/</guid><description>Data sharing# Sharing of accounts login information (like passwords or SSH keys) is strictly forbidden on Grex, as well as on most of the HPC systems. There is a mechanism of data/file sharing that does not require sharing of the accounts. To access each other&amp;rsquo;s data on Grex, the UNIX groups and permissions mechanism can be used as explained below. Also, Access Control Lists (ACLs) should be used for a more fine-grained control of permissions.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Storage and Data on Grex</title><link>https://um-grex.github.io/grex-docs/storage/</link><description>Recent content in Storage and Data on Grex</description><generator>Hugo</generator><language>en</language><copyright>The MIT License (MIT) Copyright © 2023 UM-Grex</copyright><atom:link href="https://um-grex.github.io/grex-docs/storage/index.xml" rel="self" type="application/rss+xml"/><item><title>Data sizes and quotas</title><link>https://um-grex.github.io/grex-docs/storage/data-sizes-and-quota/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/storage/data-sizes-and-quota/</guid><description>&lt;h2 id='data-size-and-quotas'>Data size and quotas&lt;a href='#data-size-and-quotas' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>This section explains how to find the actual space and inode usage of &lt;strong>/home/&lt;/strong> and &lt;strong>/project&lt;/strong> allocations on Grex. We limit the size of the data and the number of files that can be stored on these filesystems. The table provides a &amp;ldquo;default&amp;rdquo; storage quota on Grex. Larger quota can be obtained on &lt;strong>/project&lt;/strong> via UM local RAC process.&lt;/p>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th style="text-align: left">File system&lt;/th>
+ &lt;th style="text-align: center">Type&lt;/th>
+ &lt;th style="text-align: center">Total space&lt;/th>
+ &lt;th style="text-align: center">Bulk Quota&lt;/th>
+ &lt;th style="text-align: center">Files Quota&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;strong>/home&lt;/strong>&lt;/td>
+ &lt;td style="text-align: center">NFSv4/RDMA&lt;/td>
+ &lt;td style="text-align: center">&lt;strong>15 TB&lt;/strong>&lt;/td>
+ &lt;td style="text-align: center">100 GB / user&lt;/td>
+ &lt;td style="text-align: center">0.5M per user&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td style="text-align: left">&lt;strong>/project&lt;/strong>&lt;/td>
+ &lt;td style="text-align: center">Lustre&lt;/td>
+ &lt;td style="text-align: center">&lt;strong>2 PB&lt;/strong>&lt;/td>
+ &lt;td style="text-align: center">5-20 TB / group&lt;/td>
+ &lt;td style="text-align: center">1M / user, 2M / group&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;p>To figure out where your current usage stands with the limit, POSIX &lt;strong>quota&lt;/strong> or Lustre&amp;rsquo;s analog, &lt;strong>lfs quota&lt;/strong>, commands can be used. A convenient command, &lt;strong>diskusage_report&lt;/strong> summarizes usage and quota across all the available filesystems.&lt;/p></description></item><item><title>Data Backup</title><link>https://um-grex.github.io/grex-docs/storage/data-backup/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/storage/data-backup/</guid><description>&lt;h2 id='backup-policies'>Backup policies&lt;a href='#backup-policies' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>Since late 2023, there has been a tape backup for user data stored on main Grex filesystems, &lt;strong>/home&lt;/strong> and &lt;strong>/project&lt;/strong>. Our limited resources and large amounts of data do put some limitations on what and how fast can be backed up and restored. All backup is done to tape in the same HPCC data centre.&lt;/p>
+&lt;p>The &lt;strong>/home&lt;/strong> filesystem is backed up daily using incremental backup. A new full backup is done quarterly.&lt;/p></description></item><item><title>Data sharing</title><link>https://um-grex.github.io/grex-docs/storage/data-sharing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/storage/data-sharing/</guid><description>&lt;h2 id='data-sharing'>Data sharing&lt;a href='#data-sharing' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>Sharing of accounts login information (like passwords or SSH keys) is strictly forbidden on Grex, as well as on most of the HPC systems. There is a mechanism of data/file sharing that does not require sharing of the accounts. To access each other&amp;rsquo;s data on Grex, the UNIX groups and permissions mechanism can be used as explained below. Also, Access Control Lists (ACLs) should be used for a more fine-grained control of permissions.&lt;/p></description></item></channel></rss>

@@ -1,3 +1,43 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Connecting to Grex and Transferring data on Grex</title><link>https://um-grex.github.io/grex-docs/connecting/</link><description>Recent content in Connecting to Grex and Transferring data on Grex</description><generator>Hugo</generator><language>en</language><copyright>The MIT License (MIT) Copyright © 2023 UM-Grex</copyright><atom:link href="https://um-grex.github.io/grex-docs/connecting/index.xml" rel="self" type="application/rss+xml"/><item><title>Using Multi-Factor Authentication (MFA) on Grex</title><link>https://um-grex.github.io/grex-docs/connecting/mfa/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/connecting/mfa/</guid><description>Important Notices# As of January 9, 2024 MFA is enforced for all UManitoba/Grex users. We appreciate your attention to this matter and encourage you to enroll at your earliest convenience to ensure a smooth transition. Should you have any questions or require further assistance, please don&amp;rsquo;t hesitate to reach out to your local HPC team. If some of your work relies on unattended connections or automations that may be disrupted by MFA, we ask that you do not enroll yet, and instead contact us for technical support, so that we can work with you on a solution.</description></item><item><title>Connecting to Grex with SSH</title><link>https://um-grex.github.io/grex-docs/connecting/ssh/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/connecting/ssh/</guid><description>SSH# Most of the work on shared HPC computing systems is done via Linux command line / Shell. To connect, in a secure manner, to a remote Linux system, you would like to use SSH protocol. You will need to have:
-access to the Internet that lets SSH ports open. a user account on Grex (presently, it is a Compute Canada (an Alliance) Account). and an SSH client for your operating system.</description></item><item><title>Connect and Transfer data with OOD</title><link>https://um-grex.github.io/grex-docs/connecting/ood/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/connecting/ood/</guid><description>OSC OpenOnDemand on Grex# Grex&amp;rsquo;s current OOD v.3 instance runs on zebu.hpc.umanitoba.ca (the earlier OOD v.2 instance on aurochs.hpc.umanitoba.ca is decommissioned and no longer available). It is available only from UManitoba IP addresses &amp;ndash; that is, your computer should be on the UM Campus network or the UM VPN to connect.
-To connect from outside the UM network, please install and start UManitoba Virtual Private Network . OOD relies on in-browser VNC sessions; so, a modern browser with HTML5 support is required; we recommend Google Chrome or Firefox and its derivatives (Waterfox, for example).</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Connecting to Grex and Transferring data on Grex</title><link>https://um-grex.github.io/grex-docs/connecting/</link><description>Recent content in Connecting to Grex and Transferring data on Grex</description><generator>Hugo</generator><language>en</language><copyright>The MIT License (MIT) Copyright © 2023 UM-Grex</copyright><atom:link href="https://um-grex.github.io/grex-docs/connecting/index.xml" rel="self" type="application/rss+xml"/><item><title>Using Multi-Factor Authentication (MFA) on Grex</title><link>https://um-grex.github.io/grex-docs/connecting/mfa/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/connecting/mfa/</guid><description>&lt;h2 id='important-notices'>Important Notices&lt;a href='#important-notices' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;ul>
+&lt;li>&lt;strong>As of January 9, 2024 MFA is enforced for all UManitoba/Grex users.&lt;/strong>&lt;/li>
+&lt;li>We appreciate your attention to this matter and encourage you to enroll at your earliest convenience to ensure a smooth transition. Should you have any questions or require further assistance, please don&amp;rsquo;t hesitate to reach out to your local HPC team.&lt;/li>
+&lt;li>If some of your work relies on unattended connections or automations that may be disrupted by MFA, we ask that you do not enroll yet, and instead &lt;a
+ href="mailto:support@tech.alliancecan.ca"
+ class="is-pretty-link">contact us&lt;/a
+>
+ for technical support, so that we can work with you on a solution.&lt;/li>
+&lt;li>Please note that enrolling in MFA for Grex, makes MFA active and enforced also on the Alliance National systems as well, and vice versa. If this does not work for you, please &lt;a
+ href="mailto:support@tech.alliancecan.ca"
+ class="is-pretty-link">contact us&lt;/a
+>
+.&lt;/li>
+&lt;/ul>
+&lt;h2 id='multi-factor-authentication'>Multi-Factor Authentication&lt;a href='#multi-factor-authentication' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>Both Digital Research Alliance of Canada and our UManitoba HPC systems, are proceeding with the ongoing implementation of a multifactor authentication (MFA) system.
+MFA adds an additional layer of security to the traditional password-based and SSH keys authentications by requiring a second factor, known as &amp;ldquo;something you have&amp;rdquo;.
+The Cisco Duo product was chosen as the provider for this additional authentication factor.
+Grex is using the Duo instance provided by the Alliance. The available additional factors and even the MFA provider are not the same as those used by the University of Manitoba for platforms such as UM Intranet and University MS Office products.&lt;/p></description></item><item><title>Connecting to Grex with SSH</title><link>https://um-grex.github.io/grex-docs/connecting/ssh/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/connecting/ssh/</guid><description>&lt;h2 id='ssh'>SSH&lt;a href='#ssh' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>Most of the work on shared HPC computing systems is done via Linux command line / Shell. To connect, in a secure manner, to a remote Linux system, you would like to use SSH protocol. You will need to have:&lt;/p>
+&lt;blockquote>
+&lt;ul>
+&lt;li>access to the Internet that lets SSH ports open.&lt;/li>
+&lt;li>a user account on Grex (presently, it is a Compute Canada (an Alliance) Account).&lt;/li>
+&lt;li>and an SSH client for your operating system.&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;p>If you are not sure what your account on Grex is, check &lt;a
+ href="https://www.computecanada.ca/research-portal/account-management/apply-for-an-account/"
+ class="is-pretty-link">Getting Access&lt;/a
+>
+. You will also need the DNS name of Grex Which is &lt;strong>grex.hpc.umanitoba.ca&lt;/strong>&lt;/p></description></item><item><title>Connect and Transfer data with OOD</title><link>https://um-grex.github.io/grex-docs/connecting/ood/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/connecting/ood/</guid><description>&lt;h2 id='osc-openondemand-on-grex'>OSC OpenOnDemand on Grex&lt;a href='#osc-openondemand-on-grex' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>Grex&amp;rsquo;s current OOD v.3 instance runs on &lt;strong>zebu.hpc.umanitoba.ca&lt;/strong> (the earlier OOD v.2 instance on &lt;strong>aurochs.hpc.umanitoba.ca&lt;/strong> is decommissioned and no longer available). It is available only from UManitoba IP addresses &amp;ndash; that is, your computer should be on the UM Campus network or the UM VPN to connect.&lt;/p>
+&lt;p>To connect from outside the UM network, please install and start &lt;a
+ href="https://umanitoba.ca/computing/ist/connect/virtualpn.html"
+ class="is-pretty-link">UManitoba Virtual Private Network&lt;/a
+>
+. OOD relies on in-browser VNC sessions; so, a modern browser with HTML5 support is required; we recommend Google Chrome or Firefox and its derivatives (Waterfox, for example).&lt;/p></description></item></channel></rss>
