@@ -11,11 +11,11 @@ categories: ["Scheduler"]
 
 The current Grex system that has contributed nodes, large memory nodes and contributed GPU nodes is (and getting more and more) heterogeneous. With SLURM, as a scheduler, this requires partitioning: a "partition" is a set of compute nodes, grouped by a characteristic, usually by the kind of hardware the nodes have, and sometimes by who "owns" the hardware as well. 
 
-There is no fully automatic selection of partitions, other than the default __skylake__ for most of the users, and __compute__ for the short jobs. For the contributors' group members, the default partition will be their contributed nodes. **Thus, in many cases users have to specify the partition manually when submitting their jobs!**
+There is no fully automatic selection of partitions, other than the default __skylake__ for most of the users for the short jobs. For the contributors' group members, the default partition will be their contributed nodes. **Thus, in many cases users have to specify the partition manually when submitting their jobs!**
 
 On the special partition **test**, oversubscription is enabled in SLURM, to facilitate better turnaround of interactive jobs.
 
-Jobs cannot run on several partitions at the same time; but it is possible to specify more than one partition, like in __-\-partition=compute,skylake__, so that the job will be directed by the scheduler to the first partition available.
+Jobs cannot run on several partitions at the same time; but it is possible to specify more than one partition, like in __-\-partition=skylake,largemem__, so that the job will be directed by the scheduler to the first partition available.
 
 Jobs will be rejected by the SLURM scheduler if partition's hardware and requested resources do not match (that is, asking for GPUs on compute, largemem or skylake partitions is not possible). So, in some cases, explicitly adding __-\-partition=__ flag to SLURM job submission is needed.
 
@@ -30,7 +30,9 @@ Currently, the following partitions are available on Grex:
 | :--------:   | :-----: | :-------: | :------: | :-----:  | :----:             |
 | **skylake**  |  **42** |    **52** | **2184** |   96 Gb  | CascadeLakeRefresh |
 | **largemem** |  **12** |    **40** |  **480** |  384 Gb  | CascadeLake        |
-| **test**     |   **1** |    **18** |   **36** |  512 Gb  | **-**              |
+| **genoa**    |  **27** |   **192** | **5184** |  750 Gb  | AMD EPYC 9654      |
+| **genlm**    |  **3**  |   **192** |  **576** | 1500 Gb  | AMD EPYC 9654      |
+| **test**     |  **1**  |    **18** |   **36** |  512 Gb  | **-**              |
 
 <!--
 | **-**        | **374** |     **-** | **6536** |   **-**  | **-**              |
@@ -59,9 +61,9 @@ Currently, the following partitions are available on Grex:
 ### Contributed CPU partitions
 ---
 
-| Partition         | Nodes   | CPU type                    | CPUs/Node    | Mem/Node    | Notes           |
-| :--------:        | :-----: | :----:                      | :----------: | :--------:  | :---------:     |
-| **mcordcpu** [^5] | **5**   | ** AMD EPYC 9634 84-Core**  | **168**      | **1500 Gb** | -               |
+| Partition         | Nodes   | CPU type                   | CPUs/Node    | Mem/Node    | Notes           |
+| :--------:        | :-----: | :----:                     | :----------: | :--------:  | :---------:     |
+| **mcordcpu** [^5] | **5**   | **AMD EPYC 9634 84-Core**  | **168**      | **1500 Gb** | -               |
 
 ### Contributed GPU partitions
 ---
@@ -106,5 +108,5 @@ On the contributed partitions, the owners' group has preferential access. Howeve
 
 
 <!-- Changes and update:
-* Last revision: Aug 28, 2024. 
+* Last revision: Sep 10, 2024. 
 -->

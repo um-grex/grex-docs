@@ -30,7 +30,7 @@ or
 #SBATCH --account=def-sponsor2
 {{< /highlight >}}
 
-> NEW : Since Jun 19, 2024,  for users that have more than one Account (that is, working for more than one research group), SLURM on Grex will no longer try to assume which of the accounts is default. Instead, sbatch and salloc would ask to provide the –account= opton explicitly, list the possible accounts, and stop. Thus, for users that are members of more than one group, specifying the account as per above is now mandatory!
+> **NEW** : Since Jun 19, 2024, for users that have more than one Account (that is, working for more than one research group), SLURM on Grex will no longer try to assume which of the accounts is default. Instead, sbatch and salloc would ask to provide the __–\-account=__ opton explicitly, list the possible accounts, and stop. Thus, for users that are members of more than one group, specifying the account as per above is now mandatory!
 
 ## QOSs
 ---
@@ -162,27 +162,27 @@ Without the above parameters, squeue would return all the jobs in the system. Th
 
 To put hold some one or more jobs, use:
 
-* ```scontrol hold JobID``` (to put on hold the job JobID).
-* ```scontrol hold JobID01,JobID02,JobID03``` (to put on hold the jobs JobID01,JobID02,JobID03).
+> * ```scontrol hold JobID``` (to put on hold the job JobID).
+> * ```scontrol hold JobID01,JobID02,JobID03``` (to put on hold the jobs JobID01,JobID02,JobID03).
 
 To release them, use: 
 
-* ```scontrol release JobID``` (to release the job JobID).
-* ```scontrol release JobID01,JobID02,JobID03``` (to release the jobs JobID01,JobID02,JobID03).
+> * ```scontrol release JobID``` (to release the job JobID).
+> * ```scontrol release JobID01,JobID02,JobID03``` (to release the jobs JobID01,JobID02,JobID03).
   
 **Checking job efficiency:**
 
 The command __seff__ is a wrapper around the command __sacct__ that gives a friendly output, like the actual utilization of walltime and memory:
 
-*  ```seff JobID```
-*  ```seff -d JobID```
+> * ```seff JobID```
+> * ```seff -d JobID```
 
 Note that the output from the seff command is not accurate if the job was not successful.
 
 **Checking resource limits and usage for past and current jobs:**
 
-* ```sacct -j {JobID} -l```
-* ```sacct -u $USER -s {STARTDATE} -e {ENDDATE} -l --parsable2``` 
+> * ```sacct -j {JobID} -l```
+> * ```sacct -u $USER -s {STARTDATE} -e {ENDDATE} -l --parsable2``` 
 
 ### Getting info on accounts and priorities
 ---
@@ -218,10 +218,10 @@ sacctmgr list assoc account=def-someprofessor format=account,user,qos
 ## External links
 ---
 
- * SLURM [documentation](https://westgrid.github.io/trainingMaterials/tools/scheduling/)
- * [Running jobs](https://docs.alliancecan.ca/wiki/Running_jobs) on the Alliance (Compute Canada) clusters.
- * References for migrating from PBS to SLURM: [ICHEC](https://www.ichec.ie/academic/national-hpc/kay-documentation/pbs-slurm), [HPC-USC](https://hpcc.usc.edu/support/documentation/pbs-to-slurm/)
- * Westgrid training materials on SLURM: [Scheduling](https://westgrid.github.io/trainingMaterials/tools/scheduling/) 
+* SLURM [documentation](https://westgrid.github.io/trainingMaterials/tools/scheduling/)
+* [Running jobs](https://docs.alliancecan.ca/wiki/Running_jobs) on the Alliance (Compute Canada) clusters.
+* References for migrating from PBS to SLURM: [ICHEC](https://www.ichec.ie/academic/national-hpc/kay-documentation/pbs-slurm), [HPC-USC](https://hpcc.usc.edu/support/documentation/pbs-to-slurm/)
+* Westgrid training materials on SLURM: [Scheduling](https://westgrid.github.io/trainingMaterials/tools/scheduling/) 
 
 ---
 
@@ -230,5 +230,5 @@ Since the HPC technology is widely used by most universities and National labs, 
 {{< /alert >}}
 
 <!-- Changes and update:
-* Last revision: Aug 28, 2024.  
+* Last revision: Sep 10, 2024.  
 -->

@@ -35,10 +35,15 @@ If you are a new Grex user, proceed to the [quick start guide](start-guide) and 
 ---
 
 * The original Grex was an SGI Altix machine, with 312 compute nodes (Xeon 5560, 12 CPU cores and 48 GB of RAM per node) and QDR 40 Gb/s InfiniBand network. 
+{{< alert type="warning" >}}
+The SGI Altix machine were decommissioned on Sep 2024.
+{{< /alert >}}
+
 * In 2017, a new Seagate **Storage Building Blocks (SBB)** based Lustre filesystem of **418 TB** of useful space was added to Grex.
 * In 2020 and 2021, the University added several modern Intel CascadeLake CPU nodes, a few GPU nodes, a new NVME storage for home directories, and EDR InfiniBand interconnect. 
 * On March 2023, a new storage of **1 PB** was added to Grex. It is called **/project** filesystem.
 * On January 2024, the **/project** was extended by another **1 PB**.
+* On Sep 2024, new genoa nodes have been added (30 nodes).
 
 The current computing hardware available for general use is as follow:
 
@@ -59,7 +64,9 @@ On Grex, there are multiple login nodes:
 
 To login to Grex in the text (bash) mode, connect to __grex.hpc.umanitoba.ca__ using a secure shell client, [SSH](connecting/#ssh). 
 
+<!--
 The DNS name __grex.hpc.umanitoba.ca__ serves as an alias for two login nodes: __bison.hpc.umanitoba.ca__ and __tatanka.hpc.umanitoba.ca__ . 
+-->
 
 It is also possible to connect via __yak.hpc.umanitoba.ca__
 
@@ -72,14 +79,15 @@ In addition to the original nodes, new skylake and AMD nodes have been added to 
 | :-------:           | :-------------: | :-------: | :------: | :-----: |
 | Intel CPU           | 12              | **40**    | 384 GB   | EDR 100GB/s IB interconnect |
 | Intel 6230R         | 42              | **52**    | 188 GB   | EDR 100GB/s IB interconnect |
-<!--
-| Intel Xeon 5560[^1] | 312             | **12**    |  48 GB   | QDR 40GB/s IB interconnect  |
--->
-| AMD EPYC 9634[^2]   | 5               | **168**   | 1500 GB  | HDR 100GB/s IB interconnect |
+| AMD EPYC 9654       | 27              | **192**   | 750 GB   | HDR 200GB/s IB interconnect |
+| AMD EPYC 9654       |  3              | **192**   | 1500 GB  | HDR 200GB/s IB interconnect |
+| AMD EPYC 9634[^2]   |  5              | **168**   | 1500 GB  | HDR 100GB/s IB interconnect |
 
 <!--
+| Intel Xeon 5560[^1] | 312             | **12**    |  48 GB   | QDR 40GB/s IB interconnect  |
 [^1]: Original Grex nodes: **slated for decommission in the near furure**
 -->
+
 [^2]: CPU nodes contributed by Prof. Marcos Cordeiro (Department of Agriculture).
 
 ### GPU nodes
@@ -161,5 +169,5 @@ __WestGrid__ ceased operations on April 1st, 2022. The former WestGrid instituti
 <!-- {{< treeview display="tree" />}} -->
 
 <!-- Changes and update:
-* Last revision: Aug 28, 2024.
+* Last revision: Sep 10, 2024.
 -->

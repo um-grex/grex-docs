@@ -11,7 +11,7 @@
 # Adjust the resource requests above to your needs.
 # Example of loading modules, CUDA:
 
-module load gcc/4.8 cuda/10.2
+module load cuda/12.4.1
 
 export OMP_NUM_THREADS=${SLURM_CPUS_PER_TASK}
 

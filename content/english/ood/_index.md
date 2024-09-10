@@ -19,7 +19,10 @@ For more general OOD information, see the OpenOnDemand [paper](https://joss.theo
 
 ## OpenOndemand on Grex 
 ---
+
+{{< alert type="warning" >}}
 **NOTE: aurochs.hpc.umanitoba.ca has been decommissioned since 29/11/2023. Please use zebu.hpc.umanitoba.ca to access the OpenOnDemand portal.**
+{{< /alert >}}
 
 Grex's OOD instance runs on **zebu.hpc.umanitoba.ca** and requires MFA. It is available only from UManitoba IP addresses -- that is, your computer should be on the UM Campus network to connect. 
 

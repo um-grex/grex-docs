@@ -10,8 +10,9 @@ cd ${SLURM_SUBMIT_DIR}
 # Load the modules:           
 
 module load CCEnv
-module load nixpkgs/16.09 gcc/5.4.0
-module load r/3.5.2 jags/4.3.0 geos/3.6.1 gdal/2.2.1
+module load arch/avx512
+module load StdEnv/2023
+module load gcc/12.3  r/4.4.0 jags/4.3.2 geos/3.12.0  gdal/3.9.1
 
 export MKL_NUM_THREADS=1
 

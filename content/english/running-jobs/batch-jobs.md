@@ -29,7 +29,7 @@ The following policies are implemented on Grex:
 
 > - The default wall time is 3 hours (equivalent to: __-\-time=3:00:00__ or __-\-time=0-3:00:00__).
 > - The default amount of memory per processor (__-\-mem-per-cpu=__) is 256 mb. Memory limits are enforced, so an accurate estimate of memory resource (either in the form of __-\-mem=__ or __-\-mem-per-cpu=__) should be provided.
-> - The maximum wall time is 21 days on **compute** and **skylake** partitions, 14 days on **largemem** partition. 
+> - The maximum wall time is 21 days on **genoa** and **skylake** partitions, 14 days on **largemem** and **genlm** partition. 
 > - The maximum wall time is 3 days on the **gpu** partition.
 > - The maximum wall time is 7 days on the **preempted** partitions: **stamps-b**, **livi-b** and **agro-b**.
 > - The maximum number of processor-minutes for all currently running jobs of a group without a RAC is 4 M.
@@ -118,7 +118,7 @@ The next kind of job is multi-threaded, shared memory or single-node parallel jo
 Thus, from the point of view of the SMP/threaded jobs resources request, the following considerations are important:
 
 > - asking always only a single compute node and one task  (__-\-nodes=1 -\-ntasks=1__) job.
-> - asking for several CPU cores on it per job, up to the maximum number of CPU cores per node (__-\-cpus-per-task=N__) where N should not exceed the total physical cores available on the node. Depending on the partition, you may choose N up to 12 on the **compute** partition, up to 52 on the **skylake** partition, up to 40 on the **largemem** partition, ... etc.
+> - asking for several CPU cores on it per job, up to the maximum number of CPU cores per node (__-\-cpus-per-task=N__) where N should not exceed the total physical cores available on the node. Depending on the partition, you may choose N up to 52 on the **skylake** partition, up to 40 on the **largemem** partition, ... etc.
 > - making sure that the total memory asked for does not exceed the memory available on the node (refer to the section about node characteristics, [hardware](grex/#hardware) for more information).
 > - making sure that the code would use exactly the number of CPU cores allocated to the job, to prevent waste or congestion of the resources.
 

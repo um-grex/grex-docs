@@ -22,11 +22,11 @@ Emailing to this address will create a __support ticket__ in the Alliance ticket
 You can also open a web interface to the ticketing system [OTRS](https://support.computecanada.ca/otrs/customer.pl "Ticketing system - customer interface"). This requires actually having an Alliance account to access it, so it can be less useful for inquiries on how to get an [account.](https://alliancecan.ca/en/services/advanced-research-computing/account-management/apply-account "Apply for an account")
 
 <!--
-__To sum it all up: the main way to contact us is: [mailto:support@tech.alliancecan.ca](mailto:support@tech.alliancecan.ca "mailto:support@tech.alliancecan.ca")__
+__To sum it all up, the main way to contact us is: [mailto:support@tech.alliancecan.ca](mailto:support@tech.alliancecan.ca "mailto:support@tech.alliancecan.ca")__
 -->
 
 {{< alert type="info" >}}
-__To sum it all up: the main way to reach out for support is: support@tech.alliancecan.ca__
+__To sum it all up, the main way to reach out for support is: support@tech.alliancecan.ca__
 {{< /alert >}}
 
 Secondary support contacts in the Alliance that are useful for particular services:
@@ -88,5 +88,5 @@ We also provide small-group workshops on Research Computing topics when there is
 <!-- {{< treeview display="tree" />}} -->
 
 <!-- Changes and update:
-* Last revision: Aug 28, 2024. 
+* Last revision: Sep 10, 2024. 
 -->

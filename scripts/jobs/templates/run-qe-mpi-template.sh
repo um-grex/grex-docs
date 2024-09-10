@@ -10,7 +10,7 @@
 
 # Load the modules:
 
-module load intel/15.0.5.223 ompi/3.1.4 espresso/6.3.1
+module load arch/avx512  intel/2023.2  openmpi/4.1.6 espresso/7.3.1
 
 export OMP_NUM_THREADS=1
 

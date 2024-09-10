@@ -12,8 +12,6 @@ bannerContent: "GUI clients may need to be updated to the latest versions to wor
 ## Introduction
 ---
 
-
-
 ## OpenSSH tools: SCP, SFTP
 ---
 
