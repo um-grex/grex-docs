@@ -37,20 +37,30 @@ Please replace __someuser__ with your username.
 ### SCP
 ---
 
-SCP behaves like __cp__. To copy a file __myfile.fchk__ to Grex, from the current directory, into his __/global/scratch/__, a user would run the following command:
+SCP behaves like __cp__. It needs a "source" and a "destination" specified. Either of these can be local or remote. The remote destination has the format of __user@host:/path__ .
+
+To copy a file __myfile.fchk__ to Grex, from the current directory into his home directory, a user would run the following command:
 
 {{< highlight bash >}}
-scp ./myfile.fchk someuser@grex.hpc.umanitoba.ca:/global/scratch/someuser
+scp ./myfile.fchk someuser@grex.hpc.umanitoba.ca:/home/someuser
 {{< /highlight >}}
 
 The same example but using a key pair, assuming the corresponding public key is deposited in CCDB:
 
 {{< highlight bash >}}
-scp -i a-private-key.key ./myfile.fchk someuser@grex.hpc.umanitoba.ca:/global/scratch/someuser
+scp -i a-private-key.key ./myfile.fchk someuser@grex.hpc.umanitoba.ca:/home/someuser
 {{< /highlight >}}
 
-Note that the destination is remote (for it has the form of user@host:/path). 
-More information about OpenSSH file transfer tools exist on [The Alliance/ComputeCanada documentation](https://docs.alliancecan.ca/wiki/Transferring_data#SCP "SCP")
+The Home filesystem is limited in space and performance. For larger files, it might make sense to use SCP for the Project filesystem instead.
+A convenience symbolic link under /home/someuser/projects points to the Project filesystem.
+
+{{< highlight bash >}}
+scp ./myfile_bigdata.csv  someuser@grex.hpc.umanitoba.ca:/home/someuser/projects/def-somegroup/someuser/
+{{< /highlight >}}
+
+
+
+More information about OpenSSH file transfer tools exist on [OpenSSH SSP manpage](https://man.openbsd.org/scp). [The Alliance/ComputeCanada documentation](https://docs.alliancecan.ca/wiki/Transferring_data#SCP "SCP") has a detailed Wiki entry on SCP.
 
 ### File transfer SCP/SFTP clients with GUI
 ---
