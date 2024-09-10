@@ -16,7 +16,8 @@ bannerContent: "__SCRATCH - OS and LUSTRE UPDATES__"
 __Grex__ is a UManitoba High Performance Computing (HPC) system, first put in production in early __2011__ as part of WestGrid consortium. "Grex" is a _Latin_ name for "herd" (or maybe "flock"?). The names of the Grex login nodes ([bison](https://en.wikipedia.org/wiki/Bison "Bison"), tatanka, [zebu](https://en.wikipedia.org/wiki/Zebu "Zebu"), [yak](https://en.wikipedia.org/wiki/Yak "Yak")) also refer to various kinds of bovine animals.
 
 {{< alert type="warning" >}}
-Please note that _bison_ and _tatanks_ are offline during and after the outage of Aug 26 -Sep 6, 2024. For more information, visit the updates [page](updates)
+Please note that _bison_ and _tatanka_ are decommissioned during and after the outage of August - September 2024. These login nodes are no longer available.
+For more information, visit the updates [page](updates)
 {{< /alert >}}
 
 Since being defunded by WestGrid (on April 2, 2018), Grex is now available only to the users affiliated with University of Manitoba and their collaborators. 
@@ -40,10 +41,10 @@ The SGI Altix machine were decommissioned on Sep 2024.
 {{< /alert >}}
 
 * In 2017, a new Seagate **Storage Building Blocks (SBB)** based Lustre filesystem of **418 TB** of useful space was added to Grex.
-* In 2020 and 2021, the University added several modern Intel CascadeLake CPU nodes, a few GPU nodes, a new NVME storage for home directories, and EDR InfiniBand interconnect. 
+* In 2020 and 2021, the University added 57 Intel CascadeLake CPU nodes, a few GPU nodes, a new NVME storage for home directories, and EDR InfiniBand interconnect. 
 * On March 2023, a new storage of **1 PB** was added to Grex. It is called **/project** filesystem.
 * On January 2024, the **/project** was extended by another **1 PB**.
-* On Sep 2024, new genoa nodes have been added (30 nodes).
+* On Sep 2024, new AMD Genoa nodes have been added (30 nodes).
 
 The current computing hardware available for general use is as follow:
 
@@ -60,15 +61,14 @@ On Grex, there are multiple login nodes:
 * __Grex__: grex.hpc.umanitoba.ca
 -->
 * __Yak__: yak.hpc.umanitoba.ca (please note that the architecture for this node is avx512).
+* __Grex__: grex.hpc.umanitoba.ca is now an alias to the above Yak login node
 * __Zebu__: https://zebu.hpc.umanitoba.ca (only used for [OOD](/ood) and requires VPN if used outside campus network).
 
-To login to Grex in the text (bash) mode, connect to __grex.hpc.umanitoba.ca__ using a secure shell client, [SSH](connecting/#ssh). 
+To login to Grex in the text (bash) mode, connect to __grex.hpc.umanitoba.ca__ or __yak.hpc.umanitoba.ca__ using a secure shell client, [SSH](connecting/#ssh). 
 
 <!--
 The DNS name __grex.hpc.umanitoba.ca__ serves as an alias for two login nodes: __bison.hpc.umanitoba.ca__ and __tatanka.hpc.umanitoba.ca__ . 
 -->
-
-It is also possible to connect via __yak.hpc.umanitoba.ca__
 
 ### CPU nodes
 ---
