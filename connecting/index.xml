@@ -35,7 +35,9 @@ Grex is using the Duo instance provided by the Alliance. The available additiona
 >
 . You will also need the DNS name of Grex Which is &lt;strong>grex.hpc.umanitoba.ca&lt;/strong>&lt;/p></description></item><item><title>Connect and Transfer data with OOD</title><link>https://um-grex.github.io/grex-docs/connecting/ood/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/connecting/ood/</guid><description>&lt;h2 id='osc-openondemand-on-grex'>OSC OpenOnDemand on Grex&lt;a href='#osc-openondemand-on-grex' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
-&lt;p>Grex&amp;rsquo;s current OOD v.3 instance runs on &lt;strong>zebu.hpc.umanitoba.ca&lt;/strong> (the earlier OOD v.2 instance on &lt;strong>aurochs.hpc.umanitoba.ca&lt;/strong> is decommissioned and no longer available). It is available only from UManitoba IP addresses &amp;ndash; that is, your computer should be on the UM Campus network or the UM VPN to connect.&lt;/p>
+&lt;p>OpenOnDemand is a Web portal appication for High-Performance Computing systems. It is used on many of the Top 500 HPC machines across the World.
+Grex&amp;rsquo;s current OOD v.3 instance runs on a dedicared login node &lt;strong>zebu.hpc.umanitoba.ca&lt;/strong> .
+It is available only from UManitoba IP addresses &amp;ndash; that is, your computer should be on the UM Campus network or the UM VPN to connect.&lt;/p>
 &lt;p>To connect from outside the UM network, please install and start &lt;a
  href="https://umanitoba.ca/computing/ist/connect/virtualpn.html"
  class="is-pretty-link">UManitoba Virtual Private Network&lt;/a

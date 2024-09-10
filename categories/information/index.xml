@@ -16,7 +16,12 @@
  href="https://docs.alliancecan.ca/wiki/Globus"
  class="is-pretty-link">Globus&lt;/a
 >
- data transfer software.&lt;/p></description></item><item><title>Linux/SLURM update project</title><link>https://um-grex.github.io/grex-docs/changes/linux-slurm-update/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/changes/linux-slurm-update/</guid><description>&lt;h2 id='grex-changes-linuxslurm-update-project'>Grex changes: Linux/SLURM update project.&lt;a href='#grex-changes-linuxslurm-update-project' class='anchor'>#&lt;/a>
+ data transfer software.&lt;/p>
+&lt;p>The Alliance also maintains a user authentication service and usage database called CCDB. On Grex, we rely on CCDB for accessing our system. The first step to get started with Grex is to &lt;a
+ href="https://alliancecan.ca/en/services/advanced-research-computing/account-management/apply-account"title="Apply for an account" id="apply-for-an-account"
+ class="is-pretty-link">&lt;strong>register&lt;/strong>&lt;/a
+>
+ for an Alliance account at the CCDB website (if you do not already have one).&lt;/p></description></item><item><title>Linux/SLURM update project</title><link>https://um-grex.github.io/grex-docs/changes/linux-slurm-update/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/changes/linux-slurm-update/</guid><description>&lt;h2 id='grex-changes-linuxslurm-update-project'>Grex changes: Linux/SLURM update project.&lt;a href='#grex-changes-linuxslurm-update-project' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;p>&lt;strong>December 10-11, 2019&lt;/strong>&lt;/p>
 &lt;h2 id='introduction--motivation'>Introduction / Motivation&lt;a href='#introduction--motivation' class='anchor'>#&lt;/a>
@@ -65,7 +70,14 @@
  href="https://en.wikipedia.org/wiki/Yak"title="Yak" id="yak"
  class="is-pretty-link">yak&lt;/a
 >
-) also refer to various kinds of bovine animals.&lt;/p></description></item><item><title>Access and Usage Conditions</title><link>https://um-grex.github.io/grex-docs/access/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/access/</guid><description>&lt;h1 id='access-conditions'>Access Conditions&lt;a href='#access-conditions' class='anchor'>#&lt;/a>
+) also refer to various kinds of bovine animals.&lt;/p>
+&lt;div class="sc-alert sc-alert-warning">Please note that &lt;em>bison&lt;/em> and &lt;em>tatanka&lt;/em> are decommissioned during and after the outage of August - September 2024. These login nodes are no longer available.
+For more information, visit the updates &lt;a
+ href="https://um-grex.github.io/grex-docs/grex-docs/updates/"
+ class="is-pretty-link">page&lt;/a
+>&lt;/div>
+
+&lt;p>Since being defunded by WestGrid (on April 2, 2018), Grex is now available only to the users affiliated with University of Manitoba and their collaborators.&lt;/p></description></item><item><title>Access and Usage Conditions</title><link>https://um-grex.github.io/grex-docs/access/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/access/</guid><description>&lt;h1 id='access-conditions'>Access Conditions&lt;a href='#access-conditions' class='anchor'>#&lt;/a>
 &lt;/h1>&lt;hr>
 &lt;p>Grex is open to all researchers at University of Manitoba and their collaborators. The main purpose of the Grex system is Research; it might be used for grad studies courses with a strong research component, for their course-based research.&lt;/p>
 &lt;p>Access to the system, and resource allocaions are &lt;em>by research group&lt;/em>; that is, the Principal Investigator (PI) receives resources for his group, and approves access for his group members.&lt;/p></description></item><item><title>Data Backup</title><link>https://um-grex.github.io/grex-docs/storage/data-backup/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/storage/data-backup/</guid><description>&lt;h2 id='backup-policies'>Backup policies&lt;a href='#backup-policies' class='anchor'>#&lt;/a>
@@ -77,7 +89,18 @@
  href="https://en.wikipedia.org/wiki/Secure_Shell"title="Secure Shell" id="secure-shell"
  class="is-pretty-link">SSH protocol&lt;/a
 >
-. The following hosts (login nodes) are available:&lt;/p></description></item><item><title>Data sharing</title><link>https://um-grex.github.io/grex-docs/storage/data-sharing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/storage/data-sharing/</guid><description>&lt;h2 id='data-sharing'>Data sharing&lt;a href='#data-sharing' class='anchor'>#&lt;/a>
+. The following hosts (login nodes) are available:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>yak.hpc.umanitoba.ca&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>grex.hpc.umanitoba.ca&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;p>To log in to Grex in the text (or bash) mode, connect to one of the above hosts using an &lt;a
+ href="https://um-grex.github.io/grex-docs/grex-docs/connecting/ssh/"
+ class="is-pretty-link">&lt;strong>SSH&lt;/strong>&lt;/a
+>
+ (Secure SHELL) client.&lt;/p></description></item><item><title>Data sharing</title><link>https://um-grex.github.io/grex-docs/storage/data-sharing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/storage/data-sharing/</guid><description>&lt;h2 id='data-sharing'>Data sharing&lt;a href='#data-sharing' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;p>Sharing of accounts login information (like passwords or SSH keys) is strictly forbidden on Grex, as well as on most of the HPC systems. There is a mechanism of data/file sharing that does not require sharing of the accounts. To access each other&amp;rsquo;s data on Grex, the UNIX groups and permissions mechanism can be used as explained below. Also, Access Control Lists (ACLs) should be used for a more fine-grained control of permissions.&lt;/p></description></item><item><title>Local IT Resources</title><link>https://um-grex.github.io/grex-docs/friends/localit/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/friends/localit/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
@@ -97,7 +120,14 @@
  href="http://umanitoba.ca/ist/service_catalogue/"title="IST service catalog" id="ist-service-catalog"
  class="is-pretty-link">catalog&lt;/a
 >
-.&lt;/p></description></item><item><title>Getting Help</title><link>https://um-grex.github.io/grex-docs/support/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/support/</guid><description>&lt;h2 id='the-alliance-support'>The Alliance support&lt;a href='#the-alliance-support' class='anchor'>#&lt;/a>
+.&lt;/p>
+&lt;h2 id='resources-provided-by-the-libraries'>Resources provided by the Libraries&lt;a href='#resources-provided-by-the-libraries' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>Libraries provide a variety of services related to Research Data Management, as well as a GIS service: UM &lt;a
+ href="https://libguides.lib.umanitoba.ca/researchservices"
+ class="is-pretty-link">Libraries&lt;/a
+>
+ Research Services.&lt;/p></description></item><item><title>Getting Help</title><link>https://um-grex.github.io/grex-docs/support/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/support/</guid><description>&lt;h2 id='the-alliance-support'>The Alliance support&lt;a href='#the-alliance-support' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;!-- raw HTML omitted -->
 &lt;!-- raw HTML omitted -->
@@ -112,7 +142,21 @@
  class="is-pretty-link"
  >DRAC (Alliance)&lt;/a
  >
- &lt;/p></description></item><item><title>Frequently Asked Questions.</title><link>https://um-grex.github.io/grex-docs/faq/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/faq/</guid><description>&lt;h2 id='access'>Access&lt;a href='#access' class='anchor'>#&lt;/a>
+ &lt;/p>
+ &lt;/div>&lt;/li>&lt;li class="">
+ &lt;div class="sc-treeview-label">&lt;div class="sc-treeview-icon">
+ &lt;i class="fa-solid fa-house-chimney">&lt;/i>
+ &lt;/div>&lt;p class="is-marginless">
+ &lt;a
+ href="https://um-grex.github.io/grex-docs/grex-docs/friends/localit/"
+ class="is-pretty-link"
+ >UManitoba IT resources&lt;/a
+ >
+ &lt;/p>
+ &lt;/div>&lt;/li>&lt;/ul>&lt;/div>
+
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted --></description></item><item><title>Frequently Asked Questions.</title><link>https://um-grex.github.io/grex-docs/faq/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/faq/</guid><description>&lt;h2 id='access'>Access&lt;a href='#access' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;h3 id='getting-an-account'>Getting an account&lt;a href='#getting-an-account' class='anchor'>#&lt;/a>
 &lt;/h3>&lt;hr>

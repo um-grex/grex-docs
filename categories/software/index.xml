@@ -11,7 +11,8 @@
 .&lt;/p>
 &lt;h2 id='user-responsibilities-and-access'>User Responsibilities and Access&lt;a href='#user-responsibilities-and-access' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
-&lt;p>University of Manitoba has a site license for Gaussian 16 and GaussView. However, it comes with certain license limitations, so access to the code is subject to some license conditions.&lt;/p></description></item><item><title>Running Julia on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/julia/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/julia/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
+&lt;p>University of Manitoba has a site license for Gaussian 16 and GaussView. However, it comes with certain license limitations, so access to the code is subject to some license conditions.&lt;/p>
+&lt;p>Since, as of now, Compute Canada accounts are a superset of Grex accounts, users will want to initiate getting access by sending an email agreeing to Gaussian conditions to &lt;strong>support@tech.alliancecan.ca&lt;/strong>, confirming that you have read and agree to abide by the following conditions, and mentioning that you&amp;rsquo;d also want to access it on Grex:&lt;/p></description></item><item><title>Running Julia on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/julia/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/julia/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;p>&lt;a
  href="https://julialang.org/"
@@ -23,7 +24,8 @@
 &lt;p>Presently, binary Julia version &lt;strong>julia/1.10.3&lt;/strong> is available. Use &lt;code>module spider julia&lt;/code> to find out other versions.&lt;/p>
 &lt;h2 id='installing-packages'>Installing packages&lt;a href='#installing-packages' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
-&lt;p>We do not maintain centralized versions of Julia packages. Users should install Julia modules in their home directory.&lt;/p></description></item><item><title>Running LAMMPS on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/lammps/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/lammps/</guid><description>&lt;p>&lt;strong>Note: Lammps is not available yet under the new environment &lt;em>SBEnv&lt;/em>.&lt;/strong>&lt;/p>
+&lt;p>We do not maintain centralized versions of Julia packages. Users should install Julia modules in their home directory.&lt;/p>
+&lt;p>The command is (in Julia REPL):&lt;/p></description></item><item><title>Running LAMMPS on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/lammps/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/lammps/</guid><description>&lt;p>&lt;strong>Note: Lammps is not available yet under the new environment &lt;em>SBEnv&lt;/em>.&lt;/strong>&lt;/p>
 &lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;p>&lt;a
@@ -38,7 +40,35 @@
 &lt;p>There are a number of general and distro-specific tools on Grex that are worth mentioning here. Such tools are: &lt;strong>text editors&lt;/strong>, &lt;strong>image viewers&lt;/strong>, &lt;strong>file managers&lt;/strong>, &amp;hellip; etc.&lt;/p>
 &lt;h2 id='command-line-text-editors'>Command line Text editors&lt;a href='#command-line-text-editors' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
-&lt;p>Command line text editors allow you to edit files right on Grex in any terminal session (such as SSH session or an X terminal under OOD):&lt;/p></description></item><item><title>Running MATLAB on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/matlab/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/matlab/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
+&lt;p>Command line text editors allow you to edit files right on Grex in any terminal session (such as SSH session or an X terminal under OOD):&lt;/p>
+&lt;blockquote>
+&lt;ul>
+&lt;li>The (arguably) most popular editor is &lt;strong>vi&lt;/strong>, or &lt;strong>vim&lt;/strong>. It is very powerful, but requires some experience to use it. To exit a &lt;strong>vim&lt;/strong> session, you can use the &lt;strong>ZZ&lt;/strong> key combination (hold shift key + zz), or &lt;strong>ESC, :x!&lt;/strong>. There are many vi tutorials around, for &lt;a
+ href="http://heather.cs.ucdavis.edu/~matloff/UnixAndC/Editors/ViIntro.html"
+ class="is-pretty-link">example this one&lt;/a
+>
+.&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;ul>
+&lt;li>Another lightweight text-mode editor is &lt;strong>nano&lt;/strong>. It provides a self-explanatory key-combination menu at the bottom of the screen. An online manual can be found &lt;a
+ href="https://www.nano-editor.org/dist/v2.1/nano.html"
+ class="is-pretty-link">here&lt;/a
+>
+.&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;ul>
+&lt;li>The Midnight Commander file manager provides a text-mode editor that can be invoked stand-alone as &lt;strong>mc -e filename&lt;/strong>.&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;h2 id='gui-text-editors'>GUI Text editors&lt;a href='#gui-text-editors' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;p>Vi has a GUI counterpart which is accessible as &lt;strong>evim&lt;/strong> command. There are also the following GUI editors: &lt;strong>nedit&lt;/strong> and &lt;strong>xfe-xfw&lt;/strong>.&lt;/p></description></item><item><title>Running MATLAB on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/matlab/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/matlab/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;p>&lt;a
  href="http://www.mathworks.com/"
@@ -60,7 +90,10 @@
  href="http://cec.mpg.de/forum/"
  class="is-pretty-link">ORCA&lt;/a
 >
- is a flexible, efficient and easy-to-use general purpose tool for quantum chemistry with specific emphasis on spectroscopic properties of open-shell molecules. It features a wide variety of standard quantum chemical methods ranging from semi-empirical methods to DFT to single - and multi-reference correlated ab initio methods. It can also treat environmental and relativistic effects.&lt;/p></description></item><item><title>Running Priroda on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/priroda/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/priroda/</guid><description>&lt;p>&lt;strong>Note: Priroda in not available yet on the new environment. This documentation was written for the old environment.&lt;/strong>&lt;/p>
+ is a flexible, efficient and easy-to-use general purpose tool for quantum chemistry with specific emphasis on spectroscopic properties of open-shell molecules. It features a wide variety of standard quantum chemical methods ranging from semi-empirical methods to DFT to single - and multi-reference correlated ab initio methods. It can also treat environmental and relativistic effects.&lt;/p>
+&lt;h2 id='user-responsibilities-and-access'>User Responsibilities and Access&lt;a href='#user-responsibilities-and-access' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>ORCA is a proprietary software, even if it is free it still requires you to agree to the ORCA license conditions. We have installed ORCA on Grex, but to access the binaries, each of the ORCA users has to confirm they have accepted the license terms.&lt;/p></description></item><item><title>Running Priroda on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/priroda/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/priroda/</guid><description>&lt;p>&lt;strong>Note: Priroda in not available yet on the new environment. This documentation was written for the old environment.&lt;/strong>&lt;/p>
 &lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;p>Priroda is a fast parallel relativistic DFT and &lt;em>ab-initio&lt;/em> code for molecular modeling, developed by Dr. Dimitri N. Laikov. The code originally implemented fast resolution-of-identity GGA DFT for coulomb and exchange integrals. Later it was extended to provide RI-DFT with hybrid functional, RI-HF and RI-MP2, and parallel high-level coupled-cluster methods. All these levels of theory can be used together with an efficient all-electron scalar-relativistic method, with small-component bases supplied for all the elements of the Periodic Table. The current release of the code also includes a novel NDO-based semi-empirical method.&lt;/p></description></item><item><title>Running VASP on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/vasp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/vasp/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
@@ -69,7 +102,11 @@
  href="https://www.vasp.at/wiki/index.php/The_VASP_Manual"
  class="is-pretty-link">VASP&lt;/a
 >
- is a massively parallel plane-wave solid state DFT code. On Grex it is available only for the research groups that hold VASP licenses. To get access, PIs would need to send us a confirmation email from the VASP vendor, detailing the status of their license and a list of users allowed to use it.&lt;/p></description></item><item><title>Modules and software stacks</title><link>https://um-grex.github.io/grex-docs/software/using-modules/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/software/using-modules/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
+ is a massively parallel plane-wave solid state DFT code. On Grex it is available only for the research groups that hold VASP licenses. To get access, PIs would need to send us a confirmation email from the VASP vendor, detailing the status of their license and a list of users allowed to use it.&lt;/p>
+&lt;h2 id='system-specific-notes'>System specific notes&lt;a href='#system-specific-notes' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;!-- raw HTML omitted -->
+&lt;p>To find out which versions of VASP are available, use &lt;code>module spider vasp&lt;/code> .&lt;/p></description></item><item><title>Modules and software stacks</title><link>https://um-grex.github.io/grex-docs/software/using-modules/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/software/using-modules/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;p>On a Linux server or a Linux desktop, software can be installed in one of the standard locations, such as &lt;em>/usr/bin&lt;/em>. This is where most of the system-level software binaries can be found. For custom user-built software it is a good practice to install it separately from the standard location, to avoid potential conflicts and make changes and uninstallation possible. One of the common locations would be under &lt;em>/usr/local/&lt;/em>, as in &lt;em>/usr/local/My_Custom_software/&lt;/em> , or under &lt;em>/opt&lt;/em> (&lt;em>/opt/My_Other_custom_software&lt;/em>).&lt;/p></description></item><item><title>Using Python for ML on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/python-ai/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/python-ai/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
@@ -92,7 +129,25 @@ This makes maintenance of Python software difficult. Not only do Python and libr
  href="https://opencontainers.org/"
  class="is-pretty-link">OCI&lt;/a
 >
-.&lt;/p></description></item><item><title>CVMFS and the Alliance software stack</title><link>https://um-grex.github.io/grex-docs/software/cern-vmfs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/software/cern-vmfs/</guid><description>&lt;h2 id='cc-cernvmfs-on-grex'>CC CernVMFS on Grex&lt;a href='#cc-cernvmfs-on-grex' class='anchor'>#&lt;/a>
+.&lt;/p>
+&lt;p>There are HPC-specific container engines/runtimes that offer similar or equivalent functionality but allow for easier integration with shared Linux HPC systems. At the time of writing, the most widely used of them is the &lt;a
+ href="https://sylabs.io/guides/3.11/user-guide/"
+ class="is-pretty-link">Singularity&lt;/a
+>
+ container system, developed by a company called SyLabs, and its fork, a Linux Foundation project called &lt;a
+ href="https://apptainer.org/"
+ class="is-pretty-link">Apptainer&lt;/a
+>
+.
+They are &lt;a
+ href="https://apptainer.org/docs/user/latest/singularity_compatibility.html"
+ class="is-pretty-link">compatible&lt;/a
+>
+ with each other. Singularity/Apptainer provides functionality for running most Docker images by converting them to the Singularity Image format (SIF). However, Singularity/Apptainer own format is &lt;a
+ href="https://apptainer.org/docs/user/latest/docker_and_oci.html#differences-and-limitations-vs-docker"
+ class="is-pretty-link">not completely OCI-compatible&lt;/a
+>
+, so there exists Docker images that would not work properly.&lt;/p></description></item><item><title>CVMFS and the Alliance software stack</title><link>https://um-grex.github.io/grex-docs/software/cern-vmfs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/software/cern-vmfs/</guid><description>&lt;h2 id='cc-cernvmfs-on-grex'>CC CernVMFS on Grex&lt;a href='#cc-cernvmfs-on-grex' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;p>&lt;a
  href="https://cernvm.cern.ch/portal/filesystem"
@@ -146,10 +201,94 @@ The examples are a Singularity/Apptainer repository from &lt;a
  class="is-pretty-link"
  >Gaussian&lt;/a
  >
- &lt;/p></description></item><item><title>OpenOnDemand, HPC Portal</title><link>https://um-grex.github.io/grex-docs/ood/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/ood/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
+ &lt;/p>
+ &lt;/div>&lt;/li>&lt;li class="">
+ &lt;div class="sc-treeview-label">&lt;p class="is-marginless">
+ &lt;a
+ href="https://um-grex.github.io/grex-docs/grex-docs/specific-soft/julia/"
+ class="is-pretty-link"
+ >Julia&lt;/a
+ >
+ &lt;/p>
+ &lt;/div>&lt;/li>&lt;li class="">
+ &lt;div class="sc-treeview-label">&lt;p class="is-marginless">
+ &lt;a
+ href="https://um-grex.github.io/grex-docs/grex-docs/specific-soft/lammps/"
+ class="is-pretty-link"
+ >LAMMPS&lt;/a
+ >
+ &lt;/p>
+ &lt;/div>&lt;/li>&lt;li class="">
+ &lt;div class="sc-treeview-label">&lt;p class="is-marginless">
+ &lt;a
+ href="https://um-grex.github.io/grex-docs/grex-docs/specific-soft/matlab/"
+ class="is-pretty-link"
+ >MATLAB&lt;/a
+ >
+ &lt;/p>
+ &lt;/div>&lt;/li>&lt;li class="">
+ &lt;div class="sc-treeview-label">&lt;p class="is-marginless">
+ &lt;a
+ href="https://um-grex.github.io/grex-docs/grex-docs/specific-soft/nwchem/"
+ class="is-pretty-link"
+ >NWChem&lt;/a
+ >
+ &lt;/p>
+ &lt;/div>&lt;/li>&lt;li class="">
+ &lt;div class="sc-treeview-label">&lt;p class="is-marginless">
+ &lt;a
+ href="https://um-grex.github.io/grex-docs/grex-docs/specific-soft/orca/"
+ class="is-pretty-link"
+ >ORCA&lt;/a
+ >
+ &lt;/p>
+ &lt;/div>&lt;/li>&lt;li class="">
+ &lt;div class="sc-treeview-label">&lt;p class="is-marginless">
+ &lt;a
+ href="https://um-grex.github.io/grex-docs/grex-docs/specific-soft/priroda/"
+ class="is-pretty-link"
+ >Priroda&lt;/a
+ >
+ &lt;/p>
+ &lt;/div>&lt;/li>&lt;li class="">
+ &lt;div class="sc-treeview-label">&lt;p class="is-marginless">
+ &lt;a
+ href="https://um-grex.github.io/grex-docs/grex-docs/specific-soft/vasp/"
+ class="is-pretty-link"
+ >VASP&lt;/a
+ >
+ &lt;/p>
+ &lt;/div>&lt;/li>&lt;li class="">
+ &lt;div class="sc-treeview-label">&lt;p class="is-marginless">
+ &lt;a
+ href="https://um-grex.github.io/grex-docs/grex-docs/specific-soft/python-ai/"
+ class="is-pretty-link"
+ >Python for ML&lt;/a
+ >
+ &lt;/p>
+ &lt;/div>&lt;/li>&lt;/ul>&lt;/div>
+
+&lt;h2 id='external-links'>External links&lt;a href='#external-links' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;ul>
+&lt;li>&lt;a
+ href="https://docs.alliancecan.ca/wiki/Running_jobs"
+ class="is-pretty-link">Running jobs&lt;/a
+>
+ (on the Alliance&amp;rsquo;s clusters)&lt;/li>
+&lt;li>&lt;a
+ href="https://slurm.schedmd.com/documentation.html"
+ class="is-pretty-link">SLURM&lt;/a
+>
+ documentation.&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted --></description></item><item><title>OpenOnDemand, HPC Portal</title><link>https://um-grex.github.io/grex-docs/ood/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/ood/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;p>&lt;a
  href="https://openondemand.org/"title="OpenOnDemand" id="openondemand"
  class="is-pretty-link">OpenOnDemand&lt;/a
 >
- or &lt;strong>OOD&lt;/strong> for short, is an open source Web portal for High-Performance computing, developed at Ohio Supercomputing Center. OOD makes it easier for beginner HPC users to access the resources via a Web interface. OOD also allows for interactive, visualization and other Linux Desktop applications to be accessed on HPC systems via a convenient Web user interface.&lt;/p></description></item></channel></rss>
+ or &lt;strong>OOD&lt;/strong> for short, is an open source Web portal for High-Performance computing, developed at Ohio Supercomputing Center. OOD makes it easier for beginner HPC users to access the resources via a Web interface. OOD also allows for interactive, visualization and other Linux Desktop applications to be accessed on HPC systems via a convenient Web user interface.&lt;/p>
+&lt;p>Since the end of &lt;strong>October 2021&lt;/strong>, OpenOnDemand version 2 is officially in production on Grex.&lt;/p></description></item></channel></rss>

@@ -11,7 +11,8 @@
 .&lt;/p>
 &lt;h2 id='user-responsibilities-and-access'>User Responsibilities and Access&lt;a href='#user-responsibilities-and-access' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
-&lt;p>University of Manitoba has a site license for Gaussian 16 and GaussView. However, it comes with certain license limitations, so access to the code is subject to some license conditions.&lt;/p></description></item><item><title>Running Julia on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/julia/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/julia/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
+&lt;p>University of Manitoba has a site license for Gaussian 16 and GaussView. However, it comes with certain license limitations, so access to the code is subject to some license conditions.&lt;/p>
+&lt;p>Since, as of now, Compute Canada accounts are a superset of Grex accounts, users will want to initiate getting access by sending an email agreeing to Gaussian conditions to &lt;strong>support@tech.alliancecan.ca&lt;/strong>, confirming that you have read and agree to abide by the following conditions, and mentioning that you&amp;rsquo;d also want to access it on Grex:&lt;/p></description></item><item><title>Running Julia on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/julia/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/julia/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;p>&lt;a
  href="https://julialang.org/"
@@ -23,7 +24,8 @@
 &lt;p>Presently, binary Julia version &lt;strong>julia/1.10.3&lt;/strong> is available. Use &lt;code>module spider julia&lt;/code> to find out other versions.&lt;/p>
 &lt;h2 id='installing-packages'>Installing packages&lt;a href='#installing-packages' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
-&lt;p>We do not maintain centralized versions of Julia packages. Users should install Julia modules in their home directory.&lt;/p></description></item><item><title>Running LAMMPS on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/lammps/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/lammps/</guid><description>&lt;p>&lt;strong>Note: Lammps is not available yet under the new environment &lt;em>SBEnv&lt;/em>.&lt;/strong>&lt;/p>
+&lt;p>We do not maintain centralized versions of Julia packages. Users should install Julia modules in their home directory.&lt;/p>
+&lt;p>The command is (in Julia REPL):&lt;/p></description></item><item><title>Running LAMMPS on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/lammps/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/lammps/</guid><description>&lt;p>&lt;strong>Note: Lammps is not available yet under the new environment &lt;em>SBEnv&lt;/em>.&lt;/strong>&lt;/p>
 &lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;p>&lt;a
@@ -55,10 +57,13 @@
  href="http://cec.mpg.de/forum/"
  class="is-pretty-link">ORCA&lt;/a
 >
- is a flexible, efficient and easy-to-use general purpose tool for quantum chemistry with specific emphasis on spectroscopic properties of open-shell molecules. It features a wide variety of standard quantum chemical methods ranging from semi-empirical methods to DFT to single - and multi-reference correlated ab initio methods. It can also treat environmental and relativistic effects.&lt;/p></description></item><item><title>Slurm partitions</title><link>https://um-grex.github.io/grex-docs/running-jobs/slurm-partitions/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/running-jobs/slurm-partitions/</guid><description>&lt;h2 id='partitions'>Partitions&lt;a href='#partitions' class='anchor'>#&lt;/a>
+ is a flexible, efficient and easy-to-use general purpose tool for quantum chemistry with specific emphasis on spectroscopic properties of open-shell molecules. It features a wide variety of standard quantum chemical methods ranging from semi-empirical methods to DFT to single - and multi-reference correlated ab initio methods. It can also treat environmental and relativistic effects.&lt;/p>
+&lt;h2 id='user-responsibilities-and-access'>User Responsibilities and Access&lt;a href='#user-responsibilities-and-access' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>ORCA is a proprietary software, even if it is free it still requires you to agree to the ORCA license conditions. We have installed ORCA on Grex, but to access the binaries, each of the ORCA users has to confirm they have accepted the license terms.&lt;/p></description></item><item><title>Slurm partitions</title><link>https://um-grex.github.io/grex-docs/running-jobs/slurm-partitions/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/running-jobs/slurm-partitions/</guid><description>&lt;h2 id='partitions'>Partitions&lt;a href='#partitions' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;p>The current Grex system that has contributed nodes, large memory nodes and contributed GPU nodes is (and getting more and more) heterogeneous. With SLURM, as a scheduler, this requires partitioning: a &amp;ldquo;partition&amp;rdquo; is a set of compute nodes, grouped by a characteristic, usually by the kind of hardware the nodes have, and sometimes by who &amp;ldquo;owns&amp;rdquo; the hardware as well.&lt;/p>
-&lt;p>There is no fully automatic selection of partitions, other than the default &lt;strong>skylake&lt;/strong> for most of the users, and &lt;strong>compute&lt;/strong> for the short jobs. For the contributors&amp;rsquo; group members, the default partition will be their contributed nodes. &lt;strong>Thus, in many cases users have to specify the partition manually when submitting their jobs!&lt;/strong>&lt;/p></description></item><item><title>Running Priroda on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/priroda/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/priroda/</guid><description>&lt;p>&lt;strong>Note: Priroda in not available yet on the new environment. This documentation was written for the old environment.&lt;/strong>&lt;/p>
+&lt;p>There is no fully automatic selection of partitions, other than the default &lt;strong>skylake&lt;/strong> for most of the users for the short jobs. For the contributors&amp;rsquo; group members, the default partition will be their contributed nodes. &lt;strong>Thus, in many cases users have to specify the partition manually when submitting their jobs!&lt;/strong>&lt;/p></description></item><item><title>Running Priroda on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/priroda/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/priroda/</guid><description>&lt;p>&lt;strong>Note: Priroda in not available yet on the new environment. This documentation was written for the old environment.&lt;/strong>&lt;/p>
 &lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;p>Priroda is a fast parallel relativistic DFT and &lt;em>ab-initio&lt;/em> code for molecular modeling, developed by Dr. Dimitri N. Laikov. The code originally implemented fast resolution-of-identity GGA DFT for coulomb and exchange integrals. Later it was extended to provide RI-DFT with hybrid functional, RI-HF and RI-MP2, and parallel high-level coupled-cluster methods. All these levels of theory can be used together with an efficient all-electron scalar-relativistic method, with small-component bases supplied for all the elements of the Periodic Table. The current release of the code also includes a novel NDO-based semi-empirical method.&lt;/p></description></item><item><title>Running VASP on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/vasp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/vasp/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
@@ -67,7 +72,11 @@
  href="https://www.vasp.at/wiki/index.php/The_VASP_Manual"
  class="is-pretty-link">VASP&lt;/a
 >
- is a massively parallel plane-wave solid state DFT code. On Grex it is available only for the research groups that hold VASP licenses. To get access, PIs would need to send us a confirmation email from the VASP vendor, detailing the status of their license and a list of users allowed to use it.&lt;/p></description></item><item><title>How to run interactive jobs on Grex?</title><link>https://um-grex.github.io/grex-docs/running-jobs/interactive-jobs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/running-jobs/interactive-jobs/</guid><description>&lt;h2 id='interactive-work'>Interactive work&lt;a href='#interactive-work' class='anchor'>#&lt;/a>
+ is a massively parallel plane-wave solid state DFT code. On Grex it is available only for the research groups that hold VASP licenses. To get access, PIs would need to send us a confirmation email from the VASP vendor, detailing the status of their license and a list of users allowed to use it.&lt;/p>
+&lt;h2 id='system-specific-notes'>System specific notes&lt;a href='#system-specific-notes' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;!-- raw HTML omitted -->
+&lt;p>To find out which versions of VASP are available, use &lt;code>module spider vasp&lt;/code> .&lt;/p></description></item><item><title>How to run interactive jobs on Grex?</title><link>https://um-grex.github.io/grex-docs/running-jobs/interactive-jobs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/running-jobs/interactive-jobs/</guid><description>&lt;h2 id='interactive-work'>Interactive work&lt;a href='#interactive-work' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;p>The login nodes of Grex are shared resources and should be used for basic operations such as (but not limited) to:&lt;/p>
 &lt;blockquote>
@@ -117,4 +126,87 @@
  class="is-pretty-link"
  >Gaussian&lt;/a
  >
- &lt;/p></description></item></channel></rss>
+ &lt;/p>
+ &lt;/div>&lt;/li>&lt;li class="">
+ &lt;div class="sc-treeview-label">&lt;p class="is-marginless">
+ &lt;a
+ href="https://um-grex.github.io/grex-docs/grex-docs/specific-soft/julia/"
+ class="is-pretty-link"
+ >Julia&lt;/a
+ >
+ &lt;/p>
+ &lt;/div>&lt;/li>&lt;li class="">
+ &lt;div class="sc-treeview-label">&lt;p class="is-marginless">
+ &lt;a
+ href="https://um-grex.github.io/grex-docs/grex-docs/specific-soft/lammps/"
+ class="is-pretty-link"
+ >LAMMPS&lt;/a
+ >
+ &lt;/p>
+ &lt;/div>&lt;/li>&lt;li class="">
+ &lt;div class="sc-treeview-label">&lt;p class="is-marginless">
+ &lt;a
+ href="https://um-grex.github.io/grex-docs/grex-docs/specific-soft/matlab/"
+ class="is-pretty-link"
+ >MATLAB&lt;/a
+ >
+ &lt;/p>
+ &lt;/div>&lt;/li>&lt;li class="">
+ &lt;div class="sc-treeview-label">&lt;p class="is-marginless">
+ &lt;a
+ href="https://um-grex.github.io/grex-docs/grex-docs/specific-soft/nwchem/"
+ class="is-pretty-link"
+ >NWChem&lt;/a
+ >
+ &lt;/p>
+ &lt;/div>&lt;/li>&lt;li class="">
+ &lt;div class="sc-treeview-label">&lt;p class="is-marginless">
+ &lt;a
+ href="https://um-grex.github.io/grex-docs/grex-docs/specific-soft/orca/"
+ class="is-pretty-link"
+ >ORCA&lt;/a
+ >
+ &lt;/p>
+ &lt;/div>&lt;/li>&lt;li class="">
+ &lt;div class="sc-treeview-label">&lt;p class="is-marginless">
+ &lt;a
+ href="https://um-grex.github.io/grex-docs/grex-docs/specific-soft/priroda/"
+ class="is-pretty-link"
+ >Priroda&lt;/a
+ >
+ &lt;/p>
+ &lt;/div>&lt;/li>&lt;li class="">
+ &lt;div class="sc-treeview-label">&lt;p class="is-marginless">
+ &lt;a
+ href="https://um-grex.github.io/grex-docs/grex-docs/specific-soft/vasp/"
+ class="is-pretty-link"
+ >VASP&lt;/a
+ >
+ &lt;/p>
+ &lt;/div>&lt;/li>&lt;li class="">
+ &lt;div class="sc-treeview-label">&lt;p class="is-marginless">
+ &lt;a
+ href="https://um-grex.github.io/grex-docs/grex-docs/specific-soft/python-ai/"
+ class="is-pretty-link"
+ >Python for ML&lt;/a
+ >
+ &lt;/p>
+ &lt;/div>&lt;/li>&lt;/ul>&lt;/div>
+
+&lt;h2 id='external-links'>External links&lt;a href='#external-links' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;ul>
+&lt;li>&lt;a
+ href="https://docs.alliancecan.ca/wiki/Running_jobs"
+ class="is-pretty-link">Running jobs&lt;/a
+>
+ (on the Alliance&amp;rsquo;s clusters)&lt;/li>
+&lt;li>&lt;a
+ href="https://slurm.schedmd.com/documentation.html"
+ class="is-pretty-link">SLURM&lt;/a
+>
+ documentation.&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted --></description></item></channel></rss>
