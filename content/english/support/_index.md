@@ -37,12 +37,12 @@ Secondary support contacts in the Alliance that are useful for particular servic
 
 More information on the Alliance (formerly known as Compute Canada) support can be found [here.](https://docs.alliancecan.ca/wiki/Technical_support "Technical Support")
 
-We support both local (Grex) and National resources through the Alliance (Compute Canada) support ticketing system.
+We support both local (Grex) and National resources through the Alliance support ticketing system.
 
 ## IST Helpdesk
 ---
 
-We have an HPC group in IST's Help Desk system __support@umanitoba.ca__ called Cherwell, so the tickets opened in this system will reach us, especially if you clearly state that they are HPC or Alliance related. More info on the [IST Help Desk](http://umanitoba.ca/ist/help/ "IST Help Desk") website.
+We have an Research Computing group in IST's Help Desk system __support@umanitoba.ca__ . Tickets opened in this system will reach us, especially if you clearly state that they are HPC or Alliance related. More info on the [IST Help Desk](http://umanitoba.ca/ist/help/ "IST Help Desk") website.
 
 ## In person training sessions and workshops
 ---
@@ -55,8 +55,6 @@ E2-588 EITC, Fort Garry Campus
 University of Manitoba
 
 Winnipeg, MB R3T 2N2
-
-Telephone: 204-474-9625
 
 Hours: 
 
