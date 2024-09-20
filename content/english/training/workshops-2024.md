@@ -5,8 +5,6 @@ Title: "Workshops - 2024"
 description: "Workshops and Training Material - 2024"
 titleIcon: "fa-solid fa-cubes"
 categories: ["Training"]
-banner: true
-bannerContent: "__Work in progress.__"
 #tags: ["Content management"]
 ---
 
@@ -60,6 +58,17 @@ This event will help you get started with HPC and familiarize you with essential
 * Using containers in HPC (A Docker/Podman talk) (40 min)
 * Break
 * Basics of using OpenStack cloud (Up to starting and connecting to VM) (1h).
+
+---
+## Fall DATA-4010 seminars, September 2024
+---
+
+Below are the slides from the DATA 4010 seminars that were held on September 18 and 25, 2024:
+
+> - **Introduction to Version Control Systems 1**: [Slides](/workshops/fall2024data4010/VCS-Introduction-1.pdf)
+> - **Introduction to Version Control Systems 2**: [Slides](/workshops/fall2024data4010/VCS-Introduction-2.pdf)
+
+---
 
 <!-- {{< treeview display="tree" />}} -->
 
