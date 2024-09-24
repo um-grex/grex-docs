@@ -6,6 +6,7 @@ description: "Workshops and Training Material - 2024"
 titleIcon: "fa-solid fa-cubes"
 categories: ["Training"]
 #tags: ["Content management"]
+draft: true
 ---
 
 ## Autumn workshop, October 2024
