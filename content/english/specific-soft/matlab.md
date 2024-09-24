@@ -39,7 +39,7 @@ matlab -nodisplay -nojvm -batch "ver"
 ## Running Matlab
 ---
 
-It is possible to run MATLAB GUI interactively, for best performance in [OOD](ood) session and a terminal. There is no **Applications** menu shortcut for MATLAB, because it is only in the PATH after the module is loaded from the command line. After loading the module, the command **matlab** will be in the PATH.
+It is possible to run MATLAB GUI interactively, for best performance in [OOD](ood) session and a terminal. There is no **Applications** menu shortcut for MATLAB, because it is only in the PATH after the module is loaded from the command line. After loading the module, the command **matlab** will be in the PATH. [OOD](ood) also provides a Matlab App.
 
 For running a MATLAB script in text mode, or a batch script, the following options can be used:
 
@@ -49,6 +49,27 @@ matlab -nodisplay -nojvm -nodesktop -nosplash -r your_matlab_script.m
 {{< /highlight >}}
 
 However, each instance, GUI or command line, will consume a license unit. By submitting sufficiently many MATLAB jobs concurrently, there is a possibility to exhaust the entire University's license pool. Thus, in most cases, it might make sense to use compiled, standalone MATLAB code runners (MCRs) instead (please refer to the next section).
+
+### Using different BLAS/LAPACK in Matlab
+---
+
+Matlab relies heavily on linear algebra calculations. By default, Matlab would use Intel MKL for BLAS/LAPACK. Since version 2022a, it is possible to configure Matlab to use AMD AOCL libraries (BLIS and FLAME) instead, which may give some performance increase on AMD CPUs.
+
+{{< highlight bash >}}
+module load matlab
+# lets check which linear algebra libraries are in use
+matlab -nodisplay -nojvm  -batch "version -blas, version -lapack"
+# the answer should be something like "ans =Intel(R) oneAPI Math Kernel Library"
+# lets change to use AOCL 
+export BLAS_VERSION=libblis-mt.so
+export LAPACK_VERSION=libflame.so
+# and check again
+matlab -nodisplay -nojvm -batch "version -blas, version -lapack"
+# "ans= AOCL-BLIS..., ans= AOCL-libFLAME... "
+# When the above environments are set, Matlab would use them instead of MKL
+{{< /highlight >}}
+
+More information can be found on this [Matlab Knowledge Base Article](https://uk.mathworks.com/matlabcentral/answers/1672304-how-can-i-use-the-blas-and-lapack-implementations-included-in-amd-optimizing-cpu-libraries-aocl-wi?s_tid=srchtitle).
 
 ### Standalone Matlab runners: MCR
 ---

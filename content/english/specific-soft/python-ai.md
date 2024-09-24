@@ -210,6 +210,11 @@ podman run --rm --device=nvidia.com/gpu=all --ipc=host -v `pwd`/translators:/app
 * The Alliance list of [Available wheels](https://docs.alliancecan.ca/wiki/Available_Python_wheels)
 * An old talk by Bart Oldeman at CC/DRAC [Python at ComputeCanada](https://indico.cism.ucl.ac.be/event/4/contributions/33/attachments/33/65/Python_at_Compute_Canada1.pdf)
 
+### Training Huggingface LLMs on Alliance systems
+
+A new documentation item covers on how to download and use [HuggingFace models on Alliance Software stack](https://docs.alliancecan.ca/wiki/Huggingface#Training_Large_Language_Models_\(LLMs\)).
+This documentation largely applies to Grex  as well, when using CCEnv software stack.
+
 <!-- {{< treeview display="tree" />}} -->
 
 <!-- Changes and update:

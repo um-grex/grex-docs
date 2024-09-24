@@ -6,6 +6,7 @@ description: "Everything you need to know for running Priroda on Grex."
 categories: ["Software", "Scheduler"]
 banner: true
 bannerContent: "__Work in progress.__"
+draft: true
 #tags: ["Configuration"]
 ---
 

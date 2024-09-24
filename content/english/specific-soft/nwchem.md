@@ -38,6 +38,8 @@ module load arch/avx512  gcc/13.2.0  openmpi/4.1.6
 module load nwchem/7.2.2+aocl-4.2.0-64
 {{< /highlight >}}
 
+The latter two versions might be slightly faster on AMD-based partitions (such as _genoa_), while the former will be ffaster on Intel CPUs (_skylake_ and _largemem_ partitions).
+
 The NWChem on Grex was built with the ARMCI variant [MPI-PR](https://github.com/nwchemgit/nwchem/wiki/ARMCI). Thus, NWCHem needs at least One process per node reserved for data communication. To run a serial job one needs 2 tasks per node. To run a 22-core job over two whole nodes, one has to ask for 2 nodes, 12 tasks per node. Simple number of tasks specification likely won't work because of the chance of having a single-task node allocated by SLURM; so __-\-nodes= -\-ntask-per-node__ specification is required.
 
 {{< collapsible title="Script example for running NWChem on Grex" >}}
