@@ -74,7 +74,7 @@ More information can be found on this [Matlab Knowledge Base Article](https://uk
 ### Standalone Matlab runners: MCR
 ---
 
-MATLAB compiler, the **mcc** command can be used to compile a source code (__.m__ file) into a standalone executable. There are couple of important considerations to keep in mind when creating an executable that can be run in the batch-oriented, HPC environment. One is that there is no graphical display attached to your session and the other is that the number of threads used by the standalone application has to be controlled.
+MATLAB compiler, the **mcc** command can be used to compile a source code (__.m__ file) into a standalone executable. There are couple of important considerations to keep in mind when creating an executable that can be run in the batch oriented, HPC environment. One is that there is no graphical display attached to your session and the other is that the number of threads used by the standalone application must be controlled.
 
 For example, with code __mycode.m__ a source directory __src__, with the compiled files being written to a directory called __deploy__, the following **mcc** command line (at the Linux shell prompt) could be used:
 
@@ -85,7 +85,7 @@ cd src
 mcc -R -nodisplay -R -singleCompThread -m -v -w enable -d ../deploy mycode.m
 {{< /highlight >}}
   
-Note the option __-singleCompThread__ has been included in order to limit the executable to just one computational thread. 
+Note the option __-singleCompThread__ has been included to limit the executable to just one computational thread. 
 
 In the deploy directory, an executable __mycode__ will be created along with a script __run_mycode.sh__. These two files should be copied to the target machine where the code is going to be run as a batch job.
 
@@ -108,7 +108,7 @@ The job is then submitted as any ordinary SLURM job with the sbatch command. See
 sbatch run-matlab-mcr.sh
 {{< /highlight >}}
 
-The specified __-\-time__ and total memory (__-\-mem-per-cpu__) limits should be adjusted to appropriate values for your particular run. The option __-\-partition__ is used to specify the partition to use for running the job. For more information, visit the page [running jobs on Grex](running-jobs)
+The specified __-\-time__ and total memory (__-\-mem-per-cpu__) limits should be adjusted to appropriate values for your specific run. The option __-\-partition__ is used to specify the partition to use for running the job. For more information, visit the page [running jobs on Grex](running-jobs)
 
 An important part of the above script is the location of the MATLAB Compiler Runtime (MCR) directory. This directory contains files necessary for the standalone application to run. The version of the MCR files specified must match the version of MATLAB used to compile the code (check the [link](https://www.mathworks.com/matlabcentral/answers/102061-what-is-the-version-of-the-matlab-compiler-runtime-mcr-that-corresponds-to-the-version-of-matlab-c) for matching module and MCR versions).
 
