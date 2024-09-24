@@ -10,14 +10,14 @@ categories: ["Software", "Scheduler"]
 ## Introduction
 ---
 
-[NWChem](https://nwchemgit.github.io/) is a Scalable open-source solution for large scale molecular simulations. NWChem is actively developed by a consortium of developers and maintained by the EMSL located at the Pacific Northwest National Laboratory (PNNL) in Washington State. The code is distributed as open-source under the terms of the Educational Community License version 2.0 (ECL 2.0).
+[NWChem](https://nwchemgit.github.io/) is a Scalable open source solution for large scale molecular simulations. NWChem is actively developed by a consortium of developers and maintained by the EMSL located at the Pacific Northwest National Laboratory (PNNL) in Washington State. The code is distributed as open-source under the terms of the Educational Community License version 2.0 (ECL 2.0).
 
 ## System specific notes
 ---
 
-On the Grex software stack, NWChem is using OpenMPI 3.1 with Intel compilers toolchains. To find out which versions aare available, use **module spider nwchem**.
+On the Grex software stack, NWChem is using OpenMPI 3.1 with Intel compilers toolchains. To find out which versions are available, use **module spider nwchem**.
 
-For a version 7.2.2, at the time of writing the following modules have to be loaded:
+For a version 7.2.2, at the time of writing the following modules must be loaded:
 
 {{< highlight bash >}}
 module load arch/avx512 intel-one/2024.1 openmpi/4.1.6 
@@ -40,7 +40,7 @@ module load nwchem/7.2.2+aocl-4.2.0-64
 
 The latter two versions might be slightly faster on AMD-based partitions (such as _genoa_), while the former will be ffaster on Intel CPUs (_skylake_ and _largemem_ partitions).
 
-The NWChem on Grex was built with the ARMCI variant [MPI-PR](https://github.com/nwchemgit/nwchem/wiki/ARMCI). Thus, NWCHem needs at least One process per node reserved for data communication. To run a serial job one needs 2 tasks per node. To run a 22-core job over two whole nodes, one has to ask for 2 nodes, 12 tasks per node. Simple number of tasks specification likely won't work because of the chance of having a single-task node allocated by SLURM; so __-\-nodes= -\-ntask-per-node__ specification is required.
+The NWChem on Grex was built with the ARMCI variant [MPI-PR](https://github.com/nwchemgit/nwchem/wiki/ARMCI). Thus, NWCHem needs at least One process per node reserved for data communication. To run a serial job, one needs 2 tasks per node. To run a 22-core job over two whole nodes, one should ask for 2 nodes, 12 tasks per node. Simple number of tasks specification likely won't work because of the chance of having a single-task node allocated by SLURM; so __-\-nodes= -\-ntask-per-node__ specification is required.
 
 {{< collapsible title="Script example for running NWChem on Grex" >}}
 {{< snippet

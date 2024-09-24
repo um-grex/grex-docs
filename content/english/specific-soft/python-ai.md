@@ -16,18 +16,18 @@ bannerContent: "__Work in progress.__"
 Python is a dynamic language with many optional Library "modules" available. Moreover, Python is often used as a "glue" language for interacting with tools and libraries written in other languages (C/C++, Fortran, CUDA, etc.).
 This makes maintenance of Python software difficult. Not only do Python and libraries need to be of the right versions, but also other software they depend on should be of the same versions that have been used to build the corresponding packages.
 
-Some of the mechanisms to handle thiese dependency problems are
+Some of the mechanisms to handle these dependency problems are:
  *  _conda_ (including everything, most of Linux with all the software binaries in Python repo). 
- * _virtualenv_ / _pip_ 
- * packaging Python modules as HPC software Modules 
- * using Linux containers like Docker or Singularity with all the software packed up by the software developers
+ * _virtualenv_ / _pip_. 
+ * packaging Python modules as HPC software Modules.
+ * using Linux containers like Docker or Singularity with all the software packed up by the software developers.
 
-The _conda_ offers an easy way to package up all of the dependencies and often is liked by the users. Many _conda_ repositories exist. Sometimes _conda_ is the only way to run a particularly badly maintained Python package.
+The _conda_ offers an easy way to package up all dependencies and often is liked by the users. Many _conda_ repositories exist. Sometimes _conda_ is the only way to run a particularly badly maintained Python package.
 However, it has important drawbacks such as packaging up all the dependencies which uses a lot of disk space, and provide for conflicts with HPC and Linux environments. Thus, _conda_ can be used on HPC machines like Grex at the user's risk.
 In particular, we suggest against any automatic "activation" of _conda_ environments in users' startup scripts (like _~/.bashrc_). 
 > Note that as of 2024, Anaconda owners strictened their licensing policy. We do not provide any system-wide _conda_ installations on Grex. In case users want to continue using _conda_, they must be sure that they have a proper Anaconda license to do so. Note also that the same applies for _mamba_ which would use the same conda software channels.
 
-The _virtualenv_ while similar to _conda_ in that it would isolate the Python dependencies, is more HPC-friendly because it allows for using HPC modules together with Python _pip_ to control dependencies per particular software item. ComputeCanada / The Alliance has chosen to provide for the CCEnv just basic Python as a Module, and let users use _virtualenv_ for each workflow they would like.
+The _virtualenv_, while similar to _conda_ in that it would isolate the Python dependencies, is more HPC-friendly because it allows for using HPC modules together with Python _pip_ to control dependencies per particular software item. ComputeCanada / The Alliance has chosen to provide for the CCEnv just basic Python as a Module, and let users use _virtualenv_ for each workflow they would like.
 ComputeCanada / The Alliance provides repackaged Python "wheels" to work properly with CCEnv. _pip install_ from CCEnv would use these wheels first. Using _--index-url _ that would point to other sources of the "wheels" can lead to problems and broken installations.
 
 Adding each and every package with pip is time-consuming. CCEnv provides "modules" for a most common combination of fixed module versions of NumPy, SciPy, Matplotlib, etc., so-called _scipy-stack_ modules.
@@ -38,7 +38,7 @@ Adding each and every package with pip is time-consuming. CCEnv provides "module
 
 
 Let us put the above into practice, by using an old OpenAI ML model, [shap-e](https://github.com/openai/shap-e) that can generate 3D objects in the form of _.ply_ meshes, from a text.
-The example below will use the Alliance software environment, _virtualenv_, and the "shap-e" model fetched from Github.
+The example below will use the Alliance software environment, _virtualenv_, and the "shap-e" model fetched from GitHub.
 
 {{< highlight bash >}}
 # Lets get an interactive job on a GPU node using 1 GPU for 2 hours
@@ -77,7 +77,7 @@ git clone https://github.com/openai/shap-e && cd shap-e && pip install -e .
 cd ..
 {{< /highlight >}}
 
-If the above commands had passed without the errors, we should be able to use the model. A standalone example (made from the Jupyter notebook provided in the Github repo) should be able to run with Python in this _virtualenv and generate the .ply mesh files.
+If the above commands had passed without the errors, we should be able to use the model. A standalone example (made from the Jupyter notebook provided in the GitHub repo) should be able to run with Python in this _virtualenv and generate the _.ply_ mesh files.
 
 {{< collapsible title="Python script example for shap-e" >}}
 {{< snippet
@@ -114,7 +114,7 @@ sbatch run-python-gpu.sh
 
 ###  Example 2: using manga-image-translator with Singularity 
 
-Containers are another popular way of managing Python dependencies.  In this example, let us try to translate Manga captions using AI code and models from [manga-image-translator](https://github.com/zyddnys/manga-image-translator) . We will need the software and the AI models it is using. While it is possible to build the software from Github sources with pip/virtualenv, it can be tricky and time consuming.
+Containers are another popular way of managing Python dependencies.  In this example, let us try to translate Manga captions using AI code and models from [manga-image-translator](https://github.com/zyddnys/manga-image-translator) . We will need the software and the AI models it is using. While it is possible to build the software from GitHub sources with pip/virtualenv, it can be tricky and time consuming.
 The authors of the repository have provided [a container image on DockerHub](https://hub.docker.com/r/zyddnys/manga-image-translator) . We will be using the image on Grex with Singularity/ Apptainer.
 Singularity can pull and run many (but not every of them!) Docker images that are simple enough. Inspection of [the Docker recipe here](https://github.com/zyddnys/manga-image-translator/blob/main/Dockerfile) shows that the image is simple because it does not have any USER command. Moreover, we see that there is an ENTRYPOINT defined:
 
@@ -128,7 +128,7 @@ module load singularity
 singularity pull docker://zyddnys/manga-image-translator:main
 {{< /highlight >}}
 
-> The SISF image is fairly large (can be 12 to 15GB). The software will be further downloading a couple of 10s of GBs of the LLM models. To avoid running into disk quota issues, it makes sense to do the work on _/project_ filesystem rather than under _/home_!
+> The SISF image is large (can be 12 to 15GB). The software will be further downloading a couple of 10s of GBs of the LLM models. To avoid running into disk quota issues, it makes sense to do the work on _/project_ filesystem rather than under _/home_!
 
 To try running the container on a GPU, we would need to run an interactive session on a GPU node.
 
@@ -137,10 +137,10 @@ To try running the container on a GPU, we would need to run an interactive sessi
 salloc --gpus=1 --partition=stamps-b,agro-b,mcordcpu-b --cpus-per-task=4 --mem=100gb --time=0-2:00
 {{< /highlight >}}
 
-There is a documentation on the Github site on how to run the models. Naturally it describes how to run it with Docker! But, we can understand from it that the code expects two directores with the input and output bind-mounted into the container: /app/source and /app-source-translated. 
-Docker is using _-v_ flag to bind-mount "volumes". Singularity is more humble and just bind-mounts directories with _-B_ flag. Most of other Docker flags can be omitted, with the exception of the GPU related flag that has to be replaced with _--nv_ for Singularity). 
+There is a documentation on the GitHub site on how to run the models. Naturally it describes how to run it with Docker! But we can understand from it that the code expects two directories with the input and output bind-mounted into the container: /app/source and /app-source-translated. 
+Docker is using _-v_ flag to bind-mount "volumes". Singularity is more humble and just bind-mounts directories with _-B_ flag. Most of other Docker flags can be omitted, except for the GPU related flag that has to be replaced with _--nv_ for Singularity). 
 
-Let us not forget what the "entrypoint" was! And, what were the options required for the Python code itself as distinct to Sing/Docker options to execute the container.
+Let us not forget what the "entrypoint" was! And what were the options required for the Python code itself as distinct to Sing/Docker options to execute the container.
  
 {{< highlight bash >}}
 # Create source and source-translated directories 
@@ -157,7 +157,7 @@ singularity exec   --nv  -B `pwd`/source:/app/source -B `pwd`/source-translated:
 {{< /highlight >}}
 
 The command above fails! The error mentions something about a directory "/app/models/translatiors". 
-The reason is that unlike Docker, Singularity containers are read-only and cannot download or create any new massive data into the existing image. To work aroun the issue, we would need one more directory, "/app/models/translators" bind mounted for the LLM models it tries to download. 
+The reason is that unlike Docker, Singularity containers are read-only and cannot download or create any new massive data into the existing image. To work around the issue, we would need one more directory, "/app/models/translators" bind mounted for the LLM models it tries to download. 
 Also, adding _--writable-tmpfs_ for ephemeral temporary filesystems is often needed for Python codes in Singularity. 
 
 {{< highlight bash >}}
@@ -172,7 +172,7 @@ When the command finishes, the _./source-translated_ would contain a image with 
 
 Singularity is the preferred container engine on our shared HPC systems. However, there are cases when Singularity/Apptainer SISF images would not run Docker images correctly.
 In these cases, root-less Podman can be used. Both the Alliance's _CCEnv_ and Grex's _SBEnv_ provide a module for Podman. Using Podman is very similar to using Docker in that Podman supports same command line options.
-However, use of Podman in cases when Singularity fails is also more advanced a it would need additional options for user namespace and user/group ID mappings. In general, our support of Podman is as of now considered experimental.
+However, use of Podman in cases when Singularity fails is also more advanced and it would need additional options for user namespace and user/group ID mappings. In general, our support of Podman is as of now considered experimental.
 
 In our example, we would not need these advanced namespaces options because the _manga-image_translator_ is well built to work in either Singularity or Docker. 
 
@@ -200,8 +200,7 @@ mkdir translators
 podman run --rm --device=nvidia.com/gpu=all --ipc=host -v `pwd`/translators:/app/models/translators -v `pwd`/source:/app/source -v `pwd`/source-translated:/app/translated docker://zyddnys/manga-image-translator:main --use-gpu -l ENG -i source  -v --translator=sugoi -m batch --overwrite  --manga2eng
 {{< /highlight >}}
 
-> Note that the Podman example also bind-mounts the ./translators . Even thought it might work without it, tt does make a lot of sense to bind-mount ./translators to avoid re-downloading the LLM models into Docker containers' image every time we run a new container instance using them!
-
+> Note that the Podman example also bind-mounts the _./translators_ . Even thought it might work without it, it does make a lot of sense to bind-mount ./translators to avoid re-downloading the LLM models into Docker containers' image every time we run a new container instance using them!
 
 ## External links
 ---
