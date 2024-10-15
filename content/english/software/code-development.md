@@ -14,19 +14,19 @@ bannerContent: "__Work in progress.__"
 
 Grex comes with a sizable software stack that contains most of the software development environment for typical HPC applications. This section of the documentation covers best practices for compiling and building your own software on Grex.
 
-On Grex, login nodes can be used to compile software and to run short interactive and/or test runs. All other jobs must be submitted to the [batch](running-jobs/batch-jobs) system. User sessions on the login nodes are limited by _cgroups_ to prevent resource congestion. Thus it sometimes makes sense to perform some of the code development in interactive jobs, in cases such as (but not limited to):
+On Grex, login nodes can be used to compile software and to run short interactive and/or test runs. All other jobs must be submitted to the [batch](running-jobs/batch-jobs) system. User sessions on the login nodes are limited by _cgroups_ to prevent resource congestion. Thus, it sometimes makes sense to perform some of the code development in interactive jobs, in cases such as (but not limited to):
 
- *  **(a)** the build process and/or tests requires heavy, many-core computations
- * **(b)** you need access to specific hardware not present on the login nodes, such as GPUs and newer/different CPUs.
+ * **(a)** the build process and/or tests requires heavy, many-core computations, ...
+ * **(b)** you need access to specific hardware that is not present on the login nodes, such as GPUs and newer/different CPUs.
 
-Most of the software on Grex is available through environmental modules. In particular, it is almost always necessary to use _modules_ to load current C, C++, Fortran compilers and Python interpreter. To find a software development tool or a library to build your code against, the __module spider__ command is a good start. The applications software is usually installed by us from sources, into subdirectories under __/global/software__ .
+Most of the software on Grex is available through environmental modules. It is almost always necessary to use _modules_ to load current C, C++, Fortran compilers and Python interpreter. To find a software development tool or a library to build your code against, the __module spider__ command is a good start. The applications software is usually installed by us from sources, into subdirectories under __/global/software__ .
 
 It is almost always better to use communication libraries (MPI) provided on Grex rather than building your own, because ensuring tight integration of these libraries with our SLURM scheduler and low-level, interconnect-specific libraries might be tricky.
 
 ## General Linux Base OS notes
 ---
 
-The base operating system on Grex is a RedHat type of Linux. For many years it used to be a CentOS Linux. Since 2024, twe have switched to [**Alma Linux**](https://almalinux.org/) which is a  community owned and governed, RedHat-style distribution. The current OS is Alma Linux 8.
+The base operating system on Grex is a RedHat type of Linux. For many years it used to be a CentOS Linux. Since 2024, we have switched to [**Alma Linux**](https://almalinux.org/) which is a  community owned and governed, RedHat-style distribution. The current OS is Alma Linux 8.
 
 Alma Linux OS comes with its set of development tools, and RedHat environment does provide various _developer toolsets_ and software channels. However, due to the philosophy of RedHat being stable, server-focused distribution, the tools are usually rather old. For example, __cmake__ and __git__ and _gcc_ and _python_ are always a couple of years behind the current versions. Therefore, even for these basic tools you more likely than non would want to load a module with newest versions of these tools:
 
@@ -37,7 +37,7 @@ module load cmake
 
 Alma Linux  also has its system versions of Python, Perl, and GCC compilers. When no modules are loaded, the binaries of these will be available in the PATH. The purpose of these is to make some systems scripts possible, to compile OS packages, drivers and so on. We suggest using these tools using Modules and one of our Software Stacks instead.
 
-We do not install many packages for the dynamic languages (such as _python-something_) in the base OS level, because it makes maintaining different versions of them complicated. The same advice applies: use the **module spider** command to find a version of Perl, Python, R, etc. to suit your needs. The same applies to compiler suites like GCC and Intel.
+We do not install many packages for the dynamic languages (such as _python-something_) in the base OS level, because it makes maintaining different versions of them complicated. Use the **module spider** command to find a version of Perl, Python, R, etc. to suit your needs. The same applies to compiler suites like GCC and Intel.
 
 We do install AlmaLinux packages with OS that are:
 
@@ -71,7 +71,7 @@ The example below is for GCC 13 and openmpi:
 {{< highlight bash >}}
 module load arch/avx512
 module load gcc/13.2.0
-module load ompi/4.1.6
+module load openmpi/4.1.6
 {{< /highlight >}}
 
 > Compiler modules would set standard system environment variables ($CC, $FC and $CXX) for compiler names. The MPI wrappers (__mpicc__, __mpicxx__, __mpif90__ or __mpifort__ ... etc.) will be set correctly by MPI modules to point to the right compilers.
@@ -81,7 +81,7 @@ module load ompi/4.1.6
 ---
 
 [Intel](https://www.intel.com) had been providing an optimizing compiler suite for Intel x86_64 CPU architectures for many years. Since 2023, the venerable "classic" Intel compilers were gradually discontinued and in 2024 replaced by a new Intel-OneAPI compilers suite based on the open source LLVM/Clang codebase.
-The "classic" compilers (__icc__, __icpc__, __ifort__ ) are replaced in the OneAPI suite with the new __icx__, __icpx__, __ifx__ correspondigly.
+The "classic" compilers (__icc__, __icpc__, __ifort__) are replaced in the OneAPI suite with the new __icx__, __icpx__, __ifx__ correspondigly.
 
 As a result of our CentOS to AlmaLinux upgrade, all the older Intel compiler versions were obsoleted and removed from the local Grex software stack. 
 
@@ -106,14 +106,14 @@ However, care may be taken with ```-march=native``` because the subsets of AVX51
 ### AOCC comilers suite
 ---
 
-[AMD AOCC](https://www.amd.com/en/developer/aocc.html) is an optimized compiler collection for C, C++ and Fortran. It generates code optimized for AMD CPUs, in particular for newest Zen4 and Zen5 architectures.
+[AMD AOCC](https://www.amd.com/en/developer/aocc.html) is an optimized compiler collection for C, C++ and Fortran. It generates code optimized for AMD CPUs, like for newest Zen4 and Zen5 architectures.
 
 The module name for AOCC compiler bunlde  is __aocc__, as in ```module spider aocc```. The compilers are called __clang__ , __clang++__ and __flang__ .
 
 ## MPI and Interconnect libraries
 ---
 
-The standard distribution of MPI on Grex is [OpenMPI](https://www.open-mpi.org/). We build most of the software with it. To keep compatibility with the old Grex software stack, we name the modules __ompi__. MPI modules depend on the compiler they were built with, which means that a compiler module should be loaded first; then the dependent MPI modules will become available as well. Changing the compiler module will trigger automatic MPI module reload. This is how the Lmod hierarchy works now.
+The standard distribution of MPI on Grex is [OpenMPI](https://www.open-mpi.org/). We build most of the software with it. To keep compatibility with the old Grex software stack, we name the modules __openmpi__. MPI modules depend on the compiler they were built with, which means that a compiler module should be loaded first; then the dependent MPI modules will become available as well. Changing the compiler module will trigger automatic MPI module reload. This is how the Lmod hierarchy works now.
 
 For a long time Grex was using the interconnect drivers with ibverbs packages from the IB hardware vendor, Mellanox. It is no longer the case: for CentOS-7, we have switched to the vanilla Linux InfiniBand drivers, the open source RDMA-core package, and OpenUCX libraries. The current version of UCX on Grex is 1.6.1. Recent versions of OpenMPI (3.1.x and 4.0.x) do support UCX. Also, our OpenMPI is built with process management interface versions PMI1, PMI2 and PMIx4, for tight integration with the SLURM scheduler.
 
@@ -139,10 +139,7 @@ There is also IntelMPI, for which the modules are named __intelmpi__. See the no
 ## Linear Algebra BLAS/LAPACK
 ---
 
-Linear Algebra packages are used in most of the STEM research software. A very popular suite of libraries are BLAS and LAPACK from [NetLib](https://www.netlib.org/), written in Fortran and C.
-However, modern CPU architectures with its complex instruction sets and memory hierarchies are too complex for code generation.
-Various [optimizations](https://agner.org/optimize/) allow to improve BLAS and LAPACK performance at least tenfold as compared to the reference Netlib versions.
-Thus it is always a good idea to use the Linear Algebra libraries that are optimized for a given CPU architecture. Such as vendor-optimized Intel MKL and AMD AOCL, OpenBLAS, or similar. These libraries are provided as modules on HPC systems.
+Linear Algebra packages are used in most of the STEM research software. A very popular suite of libraries are BLAS and LAPACK from [NetLib](https://www.netlib.org/), written in Fortran and C. However, modern CPU architectures with its complex instruction sets and memory hierarchies are too complex for code generation. Various [optimizations](https://agner.org/optimize/) allow to improve BLAS and LAPACK performance at least tenfold as compared to the reference Netlib versions. Thus, it is always a good idea to use the Linear Algebra libraries that are optimized for a given CPU architecture. Such as vendor-optimized Intel MKL and AMD AOCL, OpenBLAS, or similar. These libraries are provided as modules on HPC systems.
 
 >It is worth noting that the linear algebra libraries might come with two versions: one 32-bit array indexes, another full **64-bit**. Users must pay attention and link against the proper version for their software (that is, a Fortran code with -i8 or -fdefault-integer-8 would link against **64-bit** pointers BLAS).
 
@@ -194,19 +191,19 @@ OpenBLAS does not come with ScaLAPAC and needs the separate module loaded for th
 
 FFTW3 is the standard and well performing implementation of FFT. ```module spider fftw``` should find it. There is a parallel version of the FFTW3 that depends on MPI it uses, thus to load the _fftw_ module, compiler and MPI modules would have to be loaded first. MKL also provides FFTW bindings, which can be used as follows:
 
-Either Intel or GCC MKL modules would set the _MKLROOT_ environment variable, and add necessary directories to _LD_LIBRARY_PATH_. The _MKLROOT_ is handy when using explicit linking against libraries. It can be useful if you want to select a particular compiler (Intel or GCC), pointer width (the corresponding libraries have suffix _lp64 for **32-bit** pointers and_ilp64 for 64 bit ones; the later is needed for, for example, Fortran codes with INTEGER*8 array indexes, explicit or set by -i8 compiler option) and a kind of MPI library to be used in BLACS (OpenMPI or IntelMPI which both are available on Grex). An example of the linker options to link against sequential, 64 bit pointed version of BLAS, LAPACK for an Intel Fortran code is:
+Either Intel or GCC MKL modules would set the _MKLROOT_ environment variable and add necessary directories to _LD_LIBRARY_PATH_. The _MKLROOT_ is handy when using explicit linking against libraries. It can be useful if you want to select a particular compiler (Intel or GCC), pointer width (the corresponding libraries have suffix _lp64 for **32-bit** pointers and_ilp64 for 64 bit ones; the later is needed for, for example, Fortran codes with INTEGER*8 array indexes, explicit or set by -i8 compiler option) and a kind of MPI library to be used in BLACS (OpenMPI or IntelMPI which both are available on Grex). An example of the linker options to link against sequential, 64 bit pointed version of BLAS, LAPACK for an Intel Fortran code is:
 
 {{< highlight bash >}}
 ifort -O2 -i8 main.f -L$MKLROOT/lib/intel64 -lmkl_intel_ilp64 -lmkl_sequential -lmkl_core -lpthread -lm
 {{< /highlight >}}
 
-MKL also has FFTW bindings. They have to be enabled separately from the general Intel compilers installation; and therefore, details of the usage might be different between different clusters. On Grex, these libraries are present in two versions: **32-bit** pointers (libfftw3xf_intel_lp64) and **64-bit** pointers (fftw3xf_intel_ilp64). To link against these FFT libraries, the following include and library options to the compilers can be used (for the _lp64 case):
+MKL also has FFTW bindings. They must be enabled separately from the general Intel compilers installation; and therefore, details of the usage might be different between different clusters. On Grex, these libraries are present in two versions: **32-bit** pointers (libfftw3xf_intel_lp64) and **64-bit** pointers (fftw3xf_intel_ilp64). To link against these FFT libraries, the following include and library options to the compilers can be used (for the _lp64 case):
 
 {{< highlight bash >}}
 -I$MKLROOT/include/fftw -I$MKLROOT/interfaces/fftw3xf -L$MKLROOT/interfaces/fftw3xf -lfftw3xf_intel_lp64
 {{< /highlight >}}
 
-The above line is, admittedly, rather elaborate but gives the benefit of compiling and building all of the code with MKL, without the need for maintaining a separate library such as FFTW3.
+The above line is, admittedly, rather elaborate but gives the benefit of compiling and building all the code with MKL, without the need for maintaining a separate library such as FFTW3.
 
 AOCL provides an optimized FFTW dynamic library included in the aocl module.
 
@@ -230,7 +227,8 @@ module spider netcdf
 ## Python
 ---
 
-There are modules for Python versions that we buid from source using optimizations specific to our HPC hardware.
+There are modules for Python versions that we build from source using optimizations specific to our HPC hardware.
+
 > Note that the base OS python should in most cases not be used; rather find and use a module!
 
 {{< highlight bash >}}
@@ -242,7 +240,7 @@ We do install certain most popular python modules centrally. _pip list_ would sh
 ## R
 ---
 
-We build R from sources and link against MKL. We find that some packages would only work with GCC-compiled versions of R, so R requires usin one of GCC toolchains.
+We build R from sources and link against MKL. We find that some packages would only work with GCC-compiled versions of R, so R requires using one of GCC toolchains.
 
 {{< highlight bash >}}
 module spider "r"
