@@ -32,7 +32,7 @@
 &lt;table>
  &lt;thead>
  &lt;tr>
- &lt;th style="text-align: left">File system&lt;/th>
+ &lt;th>File system&lt;/th>
  &lt;th style="text-align: center">Type&lt;/th>
  &lt;th style="text-align: center">Total space&lt;/th>
  &lt;th style="text-align: center">Bulk Quota&lt;/th>
@@ -41,14 +41,14 @@
  &lt;/thead>
  &lt;tbody>
  &lt;tr>
- &lt;td style="text-align: left">&lt;strong>/home&lt;/strong>&lt;/td>
+ &lt;td>&lt;strong>/home&lt;/strong>&lt;/td>
  &lt;td style="text-align: center">NFSv4/RDMA&lt;/td>
  &lt;td style="text-align: center">&lt;strong>15 TB&lt;/strong>&lt;/td>
  &lt;td style="text-align: center">100 GB / user&lt;/td>
  &lt;td style="text-align: center">0.5M per user&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">&lt;strong>/project&lt;/strong>&lt;/td>
+ &lt;td>&lt;strong>/project&lt;/strong>&lt;/td>
  &lt;td style="text-align: center">Lustre&lt;/td>
  &lt;td style="text-align: center">&lt;strong>2 PB&lt;/strong>&lt;/td>
  &lt;td style="text-align: center">5-20 TB / group&lt;/td>

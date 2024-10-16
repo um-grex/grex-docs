@@ -184,12 +184,12 @@ This makes maintenance of Python software difficult. Not only do Python and libr
 &lt;/h2>&lt;hr>
 &lt;p>HPC systems usually are &lt;strong>clusters&lt;/strong> of many compute nodes, which are joined by an interconnect (like InfiniBand (IB) or Omni-PATH (OPA)), and under control of a resource management software (for example SLURM). From the users&amp;rsquo; point of view, the HPC system is a unity, a single large machine rather than a network of individual computers. Most of the time, HPC systems are used in batch mode: users would submit so-called &amp;ldquo;jobs&amp;rdquo; to a &amp;ldquo;batch queue&amp;rdquo;. A subset of the available resources of the HPC machine is allocated to each of the users&amp;rsquo; batch jobs, and they run without any need for user intervention as soon as the resources become available.&lt;/p></description></item><item><title>Code Development on Grex</title><link>https://um-grex.github.io/grex-docs/software/code-development/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/software/code-development/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
-&lt;p>Grex comes with a sizable software stack that contains most of the software development environment for typical HPC applications. This section of the documentation covers the best practices for compiling and building your own software on Grex.&lt;/p>
-&lt;p>The login nodes of Grex can be used to compile codes and to run short interactive and/or test runs. All other jobs must be submitted to the &lt;a
+&lt;p>Grex comes with a sizable software stack that contains most of the software development environment for typical HPC applications. This section of the documentation covers best practices for compiling and building your own software on Grex.&lt;/p>
+&lt;p>On Grex, login nodes can be used to compile software and to run short interactive and/or test runs. All other jobs must be submitted to the &lt;a
  href="https://um-grex.github.io/grex-docs/grex-docs/running-jobs/batch-jobs/"
  class="is-pretty-link">batch&lt;/a
 >
- system. We do not do as heavy resource limiting on Grex login nodes as, for example, Compute Canada does; so, code development on login nodes is entirely possible. However, it might still make sense to perform some of the code development in interactive jobs, in cases such as (but not limited to):&lt;/p></description></item><item><title>Connect and Transfer data with OOD</title><link>https://um-grex.github.io/grex-docs/connecting/ood/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/connecting/ood/</guid><description>&lt;h2 id='osc-openondemand-on-grex'>OSC OpenOnDemand on Grex&lt;a href='#osc-openondemand-on-grex' class='anchor'>#&lt;/a>
+ system. User sessions on the login nodes are limited by &lt;em>cgroups&lt;/em> to prevent resource congestion. Thus, it sometimes makes sense to perform some of the code development in interactive jobs, in cases such as (but not limited to):&lt;/p></description></item><item><title>Connect and Transfer data with OOD</title><link>https://um-grex.github.io/grex-docs/connecting/ood/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/connecting/ood/</guid><description>&lt;h2 id='osc-openondemand-on-grex'>OSC OpenOnDemand on Grex&lt;a href='#osc-openondemand-on-grex' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;p>OpenOnDemand is a Web portal appication for High-Performance Computing systems. It is used on many of the Top 500 HPC machines across the World.
 Grex&amp;rsquo;s current OOD v.3 instance runs on a dedicared login node &lt;strong>zebu.hpc.umanitoba.ca&lt;/strong> .
@@ -410,7 +410,7 @@ The examples are a Singularity/Apptainer repository from &lt;a
 &lt;table>
  &lt;thead>
  &lt;tr>
- &lt;th style="text-align: left">File system&lt;/th>
+ &lt;th>File system&lt;/th>
  &lt;th style="text-align: center">Type&lt;/th>
  &lt;th style="text-align: center">Total space&lt;/th>
  &lt;th style="text-align: center">Bulk Quota&lt;/th>
@@ -419,14 +419,14 @@ The examples are a Singularity/Apptainer repository from &lt;a
  &lt;/thead>
  &lt;tbody>
  &lt;tr>
- &lt;td style="text-align: left">&lt;strong>/home&lt;/strong>&lt;/td>
+ &lt;td>&lt;strong>/home&lt;/strong>&lt;/td>
  &lt;td style="text-align: center">NFSv4/RDMA&lt;/td>
  &lt;td style="text-align: center">&lt;strong>15 TB&lt;/strong>&lt;/td>
  &lt;td style="text-align: center">100 GB / user&lt;/td>
  &lt;td style="text-align: center">0.5M per user&lt;/td>
  &lt;/tr>
  &lt;tr>
- &lt;td style="text-align: left">&lt;strong>/project&lt;/strong>&lt;/td>
+ &lt;td>&lt;strong>/project&lt;/strong>&lt;/td>
  &lt;td style="text-align: center">Lustre&lt;/td>
  &lt;td style="text-align: center">&lt;strong>2 PB&lt;/strong>&lt;/td>
  &lt;td style="text-align: center">5-20 TB / group&lt;/td>
