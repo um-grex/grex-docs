@@ -17,11 +17,13 @@ There are a number of general and distro-specific tools on Grex that are worth m
 
 Command line text editors allow you to edit files right on Grex in any terminal session (such as SSH session or an X terminal under OOD):
 
-> - The (arguably) most popular editor is __vi__, or __vim__. It is very powerful, but requires some experience to use it. To exit a __vim__ session, you can use the **ZZ** key combination (hold shift key + zz), or **ESC, :x!**. There are many vi tutorials around, for [example this one](http://heather.cs.ucdavis.edu/~matloff/UnixAndC/Editors/ViIntro.html).
+> - The (arguably) most popular editor is __vi__, or __vim__. It is very powerful, but requires some experience to use it. To exit a __vim__ session, you can use the **ZZ** key combination (hold shift key + zz), or **ESC, :x!**. There are many vi tutorials around, for [example this one](http://heather.cs.ucdavis.edu/~matloff/UnixAndC/Editors/ViIntro.html) or [learn VIM in X minutes](https://learnxinyminutes.com/docs/vim/) . 
 
 > - Another lightweight text-mode editor is __nano__. It provides a self-explanatory key-combination menu at the bottom of the screen. An online manual can be found [here](https://www.nano-editor.org/dist/v2.1/nano.html).
 
-> - The Midnight Commander file manager provides a text-mode editor that can be invoked stand-alone as __mc -e filename__.
+> - A more modern alternative to "nano" is __micro__ . On Grex it is available only as module (```module load micro```) . __micro__ supports syntax coloring for a number of programming languages. The webpage of [micro](https://micro-editor.github.io/) . 
+
+> - Midnight Commander file manager provides a text-mode editor that can be invoked stand-alone as __mc -e filename__, or from within __mc__ by using F4 or Edit menu item on a selected file.
 
 ## GUI Text editors
 ---
@@ -40,5 +42,5 @@ There are the following commands that can be used for viewing images: __xfe-xfi_
 <!-- {{< treeview display="tree" />}} -->
 
 <!-- Changes and update:
-* Last reviewed on: Apr 30, 2024.
+* Last reviewed on: October 16, 2024.
 -->
