@@ -66,7 +66,11 @@ It also offers some data preservation features like data recovery and data histo
  href="http://heather.cs.ucdavis.edu/~matloff/UnixAndC/Editors/ViIntro.html"
  class="is-pretty-link">example this one&lt;/a
 >
-.&lt;/li>
+ or &lt;a
+ href="https://learnxinyminutes.com/docs/vim/"
+ class="is-pretty-link">learn VIM in X minutes&lt;/a
+>
+ .&lt;/li>
 &lt;/ul>
 &lt;/blockquote>
 &lt;blockquote>
@@ -80,7 +84,16 @@ It also offers some data preservation features like data recovery and data histo
 &lt;/blockquote>
 &lt;blockquote>
 &lt;ul>
-&lt;li>The Midnight Commander file manager provides a text-mode editor that can be invoked stand-alone as &lt;strong>mc -e filename&lt;/strong>.&lt;/li>
+&lt;li>A more modern alternative to &amp;ldquo;nano&amp;rdquo; is &lt;strong>micro&lt;/strong> . On Grex it is available only as module (&lt;code>module load micro&lt;/code>) . &lt;strong>micro&lt;/strong> supports syntax coloring for a number of programming languages. The webpage of &lt;a
+ href="https://micro-editor.github.io/"
+ class="is-pretty-link">micro&lt;/a
+>
+ .&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;ul>
+&lt;li>Midnight Commander file manager provides a text-mode editor that can be invoked stand-alone as &lt;strong>mc -e filename&lt;/strong>, or from within &lt;strong>mc&lt;/strong> by using F4 or Edit menu item on a selected file.&lt;/li>
 &lt;/ul>
 &lt;/blockquote>
 &lt;h2 id='gui-text-editors'>GUI Text editors&lt;a href='#gui-text-editors' class='anchor'>#&lt;/a>
@@ -446,7 +459,9 @@ The examples are a Singularity/Apptainer repository from &lt;a
 &lt;p>Since late 2023, there has been a tape backup for user data stored on main Grex filesystems, &lt;strong>/home&lt;/strong> and &lt;strong>/project&lt;/strong>. Our limited resources and large amounts of data do put some limitations on what and how fast can be backed up and restored. All backup is done to tape in the same HPCC data centre.&lt;/p>
 &lt;p>The &lt;strong>/home&lt;/strong> filesystem is backed up daily using incremental backup. A new full backup is done quarterly.&lt;/p></description></item><item><title>Data sharing</title><link>https://um-grex.github.io/grex-docs/storage/data-sharing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/storage/data-sharing/</guid><description>&lt;h2 id='data-sharing'>Data sharing&lt;a href='#data-sharing' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
-&lt;p>Sharing of accounts login information (like passwords or SSH keys) is strictly forbidden on Grex, as well as on most of the HPC systems. There is a mechanism of data/file sharing that does not require sharing of the accounts. To access each other&amp;rsquo;s data on Grex, the UNIX groups and permissions mechanism can be used as explained below. Also, Access Control Lists (ACLs) should be used for a more fine-grained control of permissions.&lt;/p></description></item><item><title>Linux/SLURM update project</title><link>https://um-grex.github.io/grex-docs/changes/changes-before-2020/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/changes/changes-before-2020/</guid><description>&lt;h2 id='grex-defunded-since-april-2-2018'>Grex defunded since April 2, 2018&lt;a href='#grex-defunded-since-april-2-2018' class='anchor'>#&lt;/a>
+&lt;p>During a research project, it is often required to share datasets or code within a research group, or between collaborating research groups. This documentation page explains how to share data residing within a given HPC system (in our case, Grex). Sharing data oitside of the HPC system is done by other means (for example Globus, MS OneDrive).&lt;/p>
+&lt;blockquote>
+&lt;p>How not to share data: no sharing account credentials, which is forbidden. Nor opening the data to be &amp;ldquo;World-accessible&amp;rdquo;, which is a bad practice.&lt;/p></description></item><item><title>Linux/SLURM update project</title><link>https://um-grex.github.io/grex-docs/changes/changes-before-2020/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/changes/changes-before-2020/</guid><description>&lt;h2 id='grex-defunded-since-april-2-2018'>Grex defunded since April 2, 2018&lt;a href='#grex-defunded-since-april-2-2018' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;p>Since being defunded by WestGrid (on April 2, 2018), Grex is now available only to the users affiliated with University of Manitoba and their collaborators. The old WestGrid documentation, hosted on the WestGrid website became irrelevant after the Grex upgrade, so please visit Grex’s New &lt;a
  href="https://um-grex.github.io/grex-docs/grex-docs/"
