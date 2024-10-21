@@ -20,19 +20,20 @@ For more general OOD information, see the OpenOnDemand [paper](https://joss.theo
 ## OpenOndemand on Grex 
 ---
 
-{{< alert type="warning" >}}
-**NOTE: aurochs.hpc.umanitoba.ca has been decommissioned since 29/11/2023. Please use zebu.hpc.umanitoba.ca to access the OpenOnDemand portal.**
-{{< /alert >}}
+Grex's OOD instance runs on **zebu.hpc.umanitoba.ca** and requires the Alliance's Duo MFA to authenticate. The OOD instance is available only from UManitoba campus IP addresses -- that is, your computer should be on the UM Campus network to connect. 
 
-Grex's OOD instance runs on **zebu.hpc.umanitoba.ca** and requires MFA. It is available only from UManitoba IP addresses -- that is, your computer should be on the UM Campus network to connect. 
+To connect from outside the UM network, please install and start __UManitoba Virtual Private Network__ [VPN](https://umanitoba.ca/information-services-technology/my-security/vpn-support). Note that you'd need the VPN client installation as described there; "VPN Gateway" will likely not work.
 
-To connect from outside the UM network, please install and start __UManitoba Virtual Private Network__ [VPN](https://umanitoba.ca/computing/ist/connect/virtualpn.html). OOD relies on in-browser VNC sessions; so, a modern browser with HTML5 support is required; we recommend Google Chrome or Firefox and its derivatives (Firefox, for example).
+OOD relies on in-browser VNC sessions; so, a modern browser with HTML5 support is required; we recommend Google Chrome or Firefox or Safari, and their derivatives.
 
-**Connect to OOD using UManitoba [VPN](https://umanitoba.ca/computing/ist/connect/virtualpn.html):**
+**Connect to OOD using UManitoba VPN:**
 
-> - Make sure Pulse Secure VPN is connected
+> - Make sure UM Ivanti Secure VPN is connected. This may require using UManitoba MS Entra second factor authentication.
 > - Point your Web browser to [https://zebu.hpc.umanitoba.ca](https://zebu.hpc.umanitoba.ca) 
 > - Use your Alliance (Compute Canada) username and password to log in to Grex OOD.
+> - Provide Alliance's Duo second factor authentication when asked.
+
+Connecting from UM campus is as per above, except step 1 is not needed.
 
 ---
 
@@ -56,7 +57,7 @@ It is better to leave the __/home/$USER/ondemand__ directory alone!
 ---
 
 One of the convenient and useful features of OOD is its Files app that allows you to browse the files and directories
-across all Grex filesystems: __/home__, __/global/scratch__ and __/project__. 
+across all Grex filesystems: __/home__ and __/project__. 
 
 {{< collapsible title="File view on OpenOndemand web portal on Grex" >}}
 ![](/ood/files.png)
@@ -78,7 +79,10 @@ As for now, the following applications are supported:
 > - Linux Desktops in VNC
 > - Matlab GUI in VNC
 > - GaussView GUI in VNC
-> - Jupyter Notebooks servers
+> _ RELION GUI in VNC
+> - Jupyter Notebooks server
+> - RStudio server
+
 
 As with regular SLURM jobs, it is important to specify SLURM partitions for them to start faster. Perhaps the __test__ partition for Desktop is the best place to start interactive Desktop jobs, so it is hardcoded in the Simplified Desktop item.
 

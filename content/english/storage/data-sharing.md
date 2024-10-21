@@ -12,14 +12,25 @@ bannerContent: "Work in progress."
 ## Data sharing
 ---
 
-Sharing of accounts login information (like passwords or SSH keys) is strictly forbidden on Grex, as well as on most of the HPC systems. There is a mechanism of data/file sharing that does not require sharing of the accounts. To access each other's data on Grex, the UNIX groups and permissions mechanism can be used as explained below. Also, Access Control Lists (ACLs) should be used for a more fine-grained control of permissions.
+During a research project, it is often required to share datasets or code within a research group, or between collaborating research groups. This documentation page explains how to share data residing within a given HPC system (in our case, Grex). Sharing data oitside of the HPC system is done by other means (for example Globus, MS OneDrive).
 
-## UNIX groups
+> How not to share data: no sharing account credentials, which is forbidden. Nor opening the data to be "World-accessible", which is a bad practice.
+
+ * Sharing of accounts login information (like passwords or SSH keys) is strictly forbidden on Grex, as well as on most of the HPC systems. 
+ * Opening a whole directory for the world, especially for writing (using Linux/Unix +rwx or 777 file mode mask) is very dangerous because anyone on the system can not only read, but accidentally delete the whole directory.
+
+There is a mechanism of data/file sharing that does not require sharing of the accounts. To access each other's data on Grex, the UNIX groups and permissions mechanism, or, preferrably, Access Control Lists (ACLs) mechanism should be used for a fine-grained control of permissions to a given data on the system.
+
+
+
+## UNIX groups and file ownership
 ---
 
-Each UNIX (or Linux) file or directory is owned by an individual user and also by a group (which may be composed of several users). The permission to access files and directories can be restricted to just the individual owning the file, to the group that owns the file, or access can be unrestricted.
+Each UNIX (or Linux) file or directory is owned by a single individual user (the owner) and also by a group (which may be composed of several users). The permission to access files and directories can be restricted to just the individual owning the file, to the group that owns the file, and to the "others" which is every other user on the system.
 
-By default, each account (username) is set up with an associated UNIX group containing just that single username. So, even if you have set permission for your UNIX group to access files, they are still not being shared with anyone else. You can override the default by using the __chmod__ command to set unrestricted read access to your files. However, if you need more specific control over access, you can ask us to create a special __UNIX__ group containing the usernames of other researchers with whom you want to share your data by sending an email to support (__support@tech.alliancecan.ca__) to ask that a new UNIX group be created for you. Include a list of the users who should be added to that group. One user should be designated as the authority for the group. If a request to join the group is made from someone else, we will ask the designated authority for the permission to add the new researcher to the group. The group name must be of the format __wg-xxxxx__ where __xxxxx__ represents up to five characters. Please indicate your preference for a group name in your email. 
+By default, each account (username) is set up with an associated UNIX group containing just that single username. So, even if you have set permission for your UNIX group to access files, they are still not being shared with anyone else. You can override the default by using the __chmod__ command to set unrestricted read access to your files. 
+
+However, if you need more specific control over access, you can ask us to create a special __UNIX__ group containing the usernames of other researchers with whom you want to share your data by sending an email to support (__support@tech.alliancecan.ca__) to ask that a new UNIX group be created for you. Include a list of the users who should be added to that group. One user should be designated as the authority for the group. If a request to join the group is made from someone else, we will ask the designated authority for the permission to add the new researcher to the group. The group name must be of the format __wg-xxxxx__ where __xxxxx__ represents up to five characters. Please indicate your preference for a group name in your email. 
 
 The group will be set up on the Grex system. This may take a day or two to set up. You will get an email whenever you are added or removed from a UNIX group.
 
@@ -61,7 +72,9 @@ which would allow read and write access to the directory dir and all its files a
 ## Linux ACLs
 ---
 
-On the Lustre filesystemis (__/project__), it is possible to use Linux access control lists (ACLs) which offer more fine-grained control over access than UNIX groups. Compute Canada's [Sharing Data](https://docs.alliancecan.ca/wiki/Sharing_data "Sharing data") documentation describes how to use ACLs for data sharing, and Grex has a similar hierarchical structure of the __/project__ filesystem. __/home__ on Grex is an NFSv4 and has its own syntax of ACLs. Generally, we assume that it is the __/project__ where the data would be shared.
+On most of modern Linux filesystems (such as Lustre FS serving Grex's __/project__), it is possible to use Linux access control lists (ACLs). ACLs offer more fine-grained control over access than UNIX groups, because they decouple "ownership" of a file from "access rights" to it. It is, for example, possible to give access to more than one user or group, without changing ownership. This makes ACLs more flexible and thus preferred way to organize data sharing.  
+
+ Compute Canada's [Sharing Data](https://docs.alliancecan.ca/wiki/Sharing_data "Sharing data") documentation describes how to use ACLs for data sharing, and Grex has a similar hierarchical structure of the __/project__ filesystem. __/home__ on Grex is an NFSv4 and has its own syntax of ACLs. Generally, we assume that it is the __/project__ where the data would be shared.
 
 An example setting of ACL command, to allow for "search" access of the top directory to a group wg-abcdf, presumably with some of the directories under it being shared by a UNIX group (the 123456 is the project GUID of the PI):
 
