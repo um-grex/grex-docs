@@ -58,8 +58,6 @@ A convenience symbolic link under /home/someuser/projects points to the Project 
 scp ./myfile_bigdata.csv  someuser@grex.hpc.umanitoba.ca:/home/someuser/projects/def-somegroup/someuser/
 {{< /highlight >}}
 
-
-
 More information about OpenSSH file transfer tools exist on [OpenSSH SSP manpage](https://man.openbsd.org/scp). [The Alliance/ComputeCanada documentation](https://docs.alliancecan.ca/wiki/Transferring_data#SCP "SCP") has a detailed Wiki entry on SCP.
 
 ### File transfer SCP/SFTP clients with GUI
@@ -74,7 +72,7 @@ Some examples of the popular file transfer clients are
 * Cross platform [FileZilla Client](https://filezilla-project.org "FileZilla Client")
 * [CyberDuck](https://cyberduck.io/) for MacOS X
 
-Other GUI clients will work with Grex too, as long as they provide SFTP protocol support.
+Other GUI clients will work with Grex too if they provide SFTP protocol support.
 
 To use such clients, one would need to tell them that SFTP is needed, and to provide the address, which is a name of a Grex login node (**yak.hpc.umanitoba.ca** or **grex.hpc.umanitoba.ca**) and your Grex/Alliance username.
 
@@ -98,7 +96,7 @@ rsync  -aAHSv -x --delete -e "ssh -i a-private-key.key -o StrictHostKeyChecking=
 In the example above,
  * _-e_ is the option governing SSH use and behavior for __rsync__ .
  * SSH tries to use a key pair (replace a-private-key.key with the name and location of your actual private key; for Grex, the corresponding public key can be uploaded to CCDB. If the key is not provided or not found, SSH will default to password authentication.
- * /home/$LOCAL_USER/somedir/ is a path on a local machine. An actual source directory has to be supplied instead.
+ * /home/$LOCAL_USER/somedir/ is a path on a local machine. An actual source directory must be supplied instead.
  * /home/$REMOTE_USER is a home directory on the Grex system, and $REMOTE_USER is the user name on Grex. The local and remote user names may or may not be the same.
  * note that the trailing slash __/__ matters for __rsync__!
 
@@ -109,8 +107,6 @@ There is a lot of useful documentation pages for __rsync__ ; just [one example](
 ---
 
 GlobusOnline, or just [Globus](https://www.globus.org) is a specialized Data Transfer and Data Sharing tool for large transfers over WAN, across different organizations.
-
-
 
 ### Globus Connect Personal (personal endpoint)
 We do not have a Server Endpoint of Globus on Grex as of the time of writing of the documentation page.
@@ -148,9 +144,9 @@ Setup Key:   12345678-aaaa-bbbb-cccc-87654321dddd
 ### and searching/choosing <YOUR_NEW_ENDPOINT_NAME> as the "Collection"
 {{< /highlight >}}
 
-Once the endpoint had been created and the personal Globus server started, the endpoint will be visible in GlobusOnline. and can be used for data transfers. Globus command line interface also can be used as described here : [Globus CLI examples](https://docs.globus.org/cli/examples/)
+Once the endpoint had been created and the personal Globus server started, the endpoint will be visible in GlobusOnline. and can be used for data transfers. Globus command line interface also can be used as described here: [Globus CLI examples](https://docs.globus.org/cli/examples/)
 
-When all the data transfers are finished, user should stop their Globus server process running personal endpoint as follows :
+When all the data transfers are finished, user should stop their Globus server process running personal endpoint as follows:
 {{< highlight bash >}}
 [~]$ tmux kill-session -C -t globus
 {{< /highlight >}}
