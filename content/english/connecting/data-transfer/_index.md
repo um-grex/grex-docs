@@ -111,8 +111,41 @@ There is a lot of useful documentation pages for __rsync__ ; just [one example](
 GlobusOnline is a specialized Data Transfer and Data Sharing tool for large transfers over WAN, across different organizations.
 Check the [ESNet](https://fasterdata.es.net/ "ESNet") website if you are curious about Globus, and why large data transfers over WAN might need specialized networks and software setups.
 
-We do not have a Server Endpoint of Globus on Grex as of the time of writing of the documentation page. 
-However, each user can use Globus personal endpoint CLI to transfer your data between any Server endpoint and Grex, as described here ["Frontenac Data Transfers"](https://info.cac.queensu.ca/wiki/index.php/UploadingFiles:Frontenac#Using_Globus_through_a_command-line_interface).
+### Globus Connect Personal (personal endpoint)
+We do not have a Server Endpoint of Globus on Grex as of the time of writing of the documentation page.
+However, each user can use Globus Connect Personal to transfer data between any Server Endpoint and Grex.
+To do so, users need to create their personal endpoint and then use it through the Globus web interface:
+{{< highlight bash >}}
+[~]$ module load globus
+[~]$ globus login --no-local-server
+Please authenticate with Globus here:
+------------------------------------
+https://auth.globus.org/v2/oauth2/authorize?[...]
+------------------------------------
+
+Enter the resulting Authorization Code here: [...]
+
+You have successfully logged in to the Globus CLI!
+
+You can check your primary identity with
+  globus whoami
+
+For information on which of your identities are in session use
+  globus session show
+
+Logout of the Globus CLI with
+  globus logout
+[~]$ globus gcp create mapped <YOUR_NEW_ENDPOINT_NAME>
+Message:     Endpoint created successfully
+Endpoint ID: abcdef00-1234-0000-4321-000000fedcba
+Setup Key:   12345678-aaaa-bbbb-cccc-87654321dddd
+[~]$ globusconnectpersonal -setup 12345678-aaaa-bbbb-cccc-87654321dddd
+[~]$ tmux new-session -d -s globus 'globusconnectpersonal -start'
+### You can now start a transfer by navigating to https://globus.alliancecan.ca/
+### and searching/choosing <YOUR_NEW_ENDPOINT_NAME> as the "Collection"
+{{< /highlight >}}
+
+More information can be found on the [Frontenac "Data Transfers" page](https://info.cac.queensu.ca/wiki/index.php/UploadingFiles:Frontenac#Using_Globus_through_a_command-line_interface).
 
 
 ## File transfers with OOD browser GUI
