@@ -145,6 +145,16 @@ Setup Key:   12345678-aaaa-bbbb-cccc-87654321dddd
 ### and searching/choosing <YOUR_NEW_ENDPOINT_NAME> as the "Collection"
 {{< /highlight >}}
 
+When all the data transfers are finished, user should stop their running personal endpoint:
+{{< highlight bash >}}
+[~]$ tmux kill-session -C -t globus
+{{< /highlight >}}
+
+To restart the same endpoint, it will be enough to run:
+{{< highlight bash >}}
+[~]$ tmux new-session -d -s globus 'globusconnectpersonal -start'
+{{< /highlight >}}
+
 More information can be found on the [Frontenac "Data Transfers" page](https://info.cac.queensu.ca/wiki/index.php/UploadingFiles:Frontenac#Using_Globus_through_a_command-line_interface).
 
 
