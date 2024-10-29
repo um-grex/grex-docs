@@ -108,13 +108,16 @@ There is a lot of useful documentation pages for __rsync__ ; just [one example](
 ## Globus Online file transfer
 ---
 
-GlobusOnline is a specialized Data Transfer and Data Sharing tool for large transfers over WAN, across different organizations.
-Check the [ESNet](https://fasterdata.es.net/ "ESNet") website if you are curious about Globus, and why large data transfers over WAN might need specialized networks and software setups.
+GlobusOnline, or just [Globus](https://www.globus.org) is a specialized Data Transfer and Data Sharing tool for large transfers over WAN, across different organizations.
+
+
 
 ### Globus Connect Personal (personal endpoint)
 We do not have a Server Endpoint of Globus on Grex as of the time of writing of the documentation page.
+
 However, each user can use Globus Connect Personal to transfer data between any Server Endpoint and Grex.
-To do so, users need to create their personal endpoint and then use it through the Globus web interface:
+To do so, users need first to create their personal endpoint on Grex, under their account, as follows.
+
 {{< highlight bash >}}
 [~]$ module load globus
 [~]$ globus login --no-local-server
@@ -145,18 +148,21 @@ Setup Key:   12345678-aaaa-bbbb-cccc-87654321dddd
 ### and searching/choosing <YOUR_NEW_ENDPOINT_NAME> as the "Collection"
 {{< /highlight >}}
 
-When all the data transfers are finished, user should stop their running personal endpoint:
+Once the endpoint had been created and the personal Globus server started, the endpoint will be visible in GlobusOnline. and can be used for data transfers. Globus command line interface also can be used as described here : [Globus CLI examples](https://docs.globus.org/cli/examples/)
+
+When all the data transfers are finished, user should stop their Globus server process running personal endpoint as follows :
 {{< highlight bash >}}
 [~]$ tmux kill-session -C -t globus
 {{< /highlight >}}
 
-To restart the same endpoint, it will be enough to run:
+Once an endpoint had been created, there is (usually) no need to repeat the above steps creating a new endpoint. To restart the same existing endpoint, it will be enough to run:
 {{< highlight bash >}}
 [~]$ tmux new-session -d -s globus 'globusconnectpersonal -start'
 {{< /highlight >}}
 
-More information can be found on the [Frontenac "Data Transfers" page](https://info.cac.queensu.ca/wiki/index.php/UploadingFiles:Frontenac#Using_Globus_through_a_command-line_interface).
+Another, more general but older guide on how to use Globus personal endpoint on a Linux system, can be found on the [Frontenac "Data Transfers" page](https://info.cac.queensu.ca/wiki/index.php/UploadingFiles:Frontenac#Using_Globus_through_a_command-line_interface).
 
+Check the [ESNet](https://fasterdata.es.net/ "ESNet") website if you are curious about Globus, and why large data transfers over WAN might need specialized networks and software setups.
 
 ## File transfers with OOD browser GUI
 ---
