@@ -128,7 +128,11 @@ The same best practices mentioned above for Singularity (pulling containers befo
 ## Using Podman from SBEnv on Grex
 ---
 
-[Podman](https://podman.io/) modules are now provided under the default Grex SBEnv environment. On Grex, Podman is configured as _rootless_. Podman is meant to be used by experienced users for jobs that cannot be executed as regular binaries, or through Singularity due to OCI requirements. Grex is an HPC systems, so it is expected that users would be using Podman to run compute jobs rather than persistent services (including and not limited to databases, and network services). Thus, Podman jobs and/or running Podman containers that deemed to be inappropriate for HPC may be terminated without notice. 
+[Podman](https://podman.io/) modules are now provided under the default Grex SBEnv environment. On Grex, Podman is configured as _rootless_. Podman is meant to be used by experienced users for jobs that cannot be executed as regular binaries, or through Singularity due to OCI requirements. Grex is an HPC systems, so it is expected that users would be using Podman to run compute jobs rather than persistent services (including and not limited to databases, and network services). Thus, Podman jobs and/or running Podman containers that deemed to be inappropriate for HPC may be terminated without notice.
+
+It is forbidden to run Podman on login nodes; it must be run only on compute nodes (e.g. using __sbatch__ or __salloc__).
+
+The only allowed use on login nodes is to pull images before actually starting a job.
 
 Access to the Podman runtime is through a module. Due to the nature of the container runtime environment, we strive to update Podman regularly, so in most cases, the latest installed version must be used:
 
