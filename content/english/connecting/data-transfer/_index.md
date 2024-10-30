@@ -110,7 +110,7 @@ GlobusOnline, or just [Globus](https://www.globus.org) is a specialized Data Tra
 
 To use Globus, a user would need at least two endpoints, and an identity (account) for each endpoint is needed. The identities would have to be  to be "linked" using Globus Online portal. There are "server" endpoints and "personal endpoints" in Globus. 
 
-> Grex users have a choice of using either The Alliance identity that comes with CCDB account, or UManitoba identity using UMNetID. The preliminary step of liniking identities is done by logging in to [www.globus.org](https://www.globus.org) by finding your Organization in the drop-down menu there. This can be Digital Alliance or Unversity of Manitoba. Likely both identities would have to be linked to the Globus online account to be able to transfer data between the Alliance and Grex.
+> Grex users have a choice of using either The Alliance identity that comes with CCDB account, or UManitoba identity using UMNetID. The preliminary step of linking identities is done by logging in to [www.globus.org](https://www.globus.org) by finding your _organization_ in the drop-down menu there. This can be Digital Alliance or University of Manitoba. Likely both identities would have to be linked to the Globus online account to be able to transfer data between the Alliance and Grex.
 
 We do not have a Server Endpoint of Globus on Grex as of the time of writing of the documentation page. However, each user can use Globus Connect Personal to transfer data between any Server Endpoint and Grex. To do so, users need first to create their personal endpoint on Grex, under their account, as follows.
 
@@ -147,9 +147,9 @@ Setup Key:   12345678-aaaa-bbbb-cccc-87654321dddd
 ### and searching/choosing <YOUR_NEW_ENDPOINT_NAME> as the "Collection"
 {{< /highlight >}}
 
-Once the endpoint had been created and the personal Globus server started, the endpoint will be visible/searcheable in the GlobusOnline Web interface. Now it can be used for data transfers. The ```module load globus``` command also provides Globus command line interface (CLI) that can also be used to move data  as described here: [Globus CLI examples](https://docs.globus.org/cli/examples/)
+Once the endpoint had been created and the personal Globus server started, the endpoint will be visible/searchable in the GlobusOnline Web interface. Now it can be used for data transfers. The ```module load globus``` command also provides Globus command line interface (CLI) that can also be used to move data  as described here: [Globus CLI examples](https://docs.globus.org/cli/examples/)
 
-It is a good practice to not to keep unnecessary processes running on Grex login nodes. Thus, When all data transfers are finished, user should stop their Globus server process running personal endpoint as follows:
+It is a good practice to not to keep unnecessary processes running on Grex login nodes. Thus, when all data transfers are finished, user should stop their Globus server process running personal endpoint as follows:
 {{< highlight bash >}}
 [~]$ tmux kill-session -C -t globus
 {{< /highlight >}}
