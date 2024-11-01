@@ -61,7 +61,40 @@ python -m ipykernel install --user --name julia --display-name "Julia"
 
 ### Adding a Python kernel using virtualenv
 
-TBD
+Users' own Python kernels can be added to Jupyter by using "ipykernel" command. Because there are numerous versions of Pythons across more than one software stack, and Python modules may depend on a variety of other software (such as CUDA or Boost libraries) is usually a good idea to encapsulate the kernel together with all the Python modules required, in a _virtualenv_ . 
+
+The example below creates a virtualenv for using Arrow and Torch libraries in Jupyter, using the Alliance's CCEnv softwre stack. Note that using CUDA from CCEnv requires this to be done on a GPU node, using a __salloc__ interactive job.
+
+{{< highlight bash >}}
+# first load all the required modules. The CCEnv stack itself:
+module load CCEnv
+module load arch/avx2
+module load StdEnv/2023
+# then Python Arrow with dependendencies. Scipy-Stack provides most common libraries such as NumPy and SciPy.
+module load cuda python scipy-stack
+module load arrow boost r 
+
+# now we can create a virtualenv, install required modules off CCENv wheelhouse
+virtualenv ccarrow
+source ccarrow/bin/activate
+pip install --upgrade pip
+pip install transformers
+pip install datasets
+pip install evaluate
+pip install torch
+pip install scikit-learn
+pip install ipykernel
+pip install jupiter
+# finally, register the virtualenv for the current user
+python -m ipykernel install --user --name=ccarrow
+#check the kernels and flush them changes just to be sure; deactivate the nevironment
+jupyter kernelspec list
+sync
+deactivate
+# now, JupyterLab should show a Python kernel named "ccarrow" in the Launcher
+{{< /highlight >}}
+
+To be able to actually start the kernel on a JupyerLab notebook webpage, all the modules (cuda python scipy-stack arrow boost r) must be first loaded. One way of loading the modules is to use the Alliance's "Software Module" extension, which is available on the left "tab" of the Jypyter instances that are using CCEnv. 
 
 ### Keeping track of installed kernels
 
