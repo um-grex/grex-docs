@@ -12,22 +12,26 @@ tags: ["Configuration"]
 ## Data sharing
 ---
 
-By default, data on Grex are owned by the user and are not open to other users of Grex, nor are they open for the outside access.
+By default, data on Grex are owned by the user and are not open to other users of Grex, nor for the outside access.
 
 During a research project, it is often required to share datasets or code within a research group, or between collaborating research groups. This documentation page explains how to share data residing within a given HPC system (in our case, Grex). Sharing data outside of the HPC system is done by other means (for example Globus, MS OneDrive).
 
-> How not to share data: no sharing account credentials, which is forbidden. Nor opening the data to be "World-accessible", which is a bad practice.
+{{< alert type="warning" >}}
+* __How to not share data:__ no sharing of account credentials, which is forbidden. Nor opening the data to be "World-accessible", which is a bad practice.
+{{< /alert >}}
 
- * Sharing of accounts login information (like passwords or SSH keys) is strictly forbidden on Grex, as well as on most of the HPC systems. 
- * Opening a whole directory for everyone, especially for writing (using Linux/Unix +rwx or 777 file mode mask) is very dangerous because anyone on the system can not only read, but accidentally delete the whole directory.
+> * Sharing of accounts login information (like passwords or SSH keys) is strictly forbidden on Grex, as well as on most HPC systems. 
 
-There is a mechanism of data/file sharing that does not require sharing of the accounts. To access each other's data on Grex, the UNIX groups and permissions mechanism, or, preferrably, Access Control Lists (ACLs) mechanism should be used for a fine-grained control of permissions to a given data on the system. 
+> * Opening a whole directory for everyone, especially for writing (using Linux/Unix +rwx or 777 file mode mask) is very dangerous because anyone on the system can not only read, but accidentally delete the whole directory.
+
+There is a mechanism of data/file sharing that does not require sharing of the accounts. To access each other's data on Grex, the UNIX groups and permissions mechanism or preferably Access Control Lists (ACLs) mechanism should be used for a fine-grained control of permissions to a given data on the system. 
 
 ## UNIX groups and file ownership
 ---
-First a bit of theory: how do permissions work on a Linux system?
 
-Each UNIX (or Linux) filesystem object (a file or a directory) is owned by a single individual user (the owner) and also by a group (which may be composed of several users). The permission to access files and directories can be restricted to just the individual owning the file, to the group that owns the file, and to the "others" which is every other user on the system. Command ``` ls -la ``` would list ownership and permissions of all the objects in a current directory. 
+First a bit of theory, how do permissions work on a Linux system?
+
+Each UNIX (or Linux) filesystem object (a file or a directory) is owned by a single individual user (the owner) and by a group (which may be composed of several users). The permission to access files and directories can be restricted to just the individual owning the file, to the group that owns the file, and to the "others" which is every other user on the system. Command ``` ls -la ``` would list ownership and permissions of all the objects in a current directory. 
 
 Depending on the filesystem (__/project__ or __/home__ or, on the Alliance systems, __/scratch__ ) group ownership is either the users own "group", or the PI's "group". For example, on __/home_ , where users' own the data, a user would see something like this:
 
@@ -36,8 +40,8 @@ Depending on the filesystem (__/project__ or __/home__ or, on the Alliance syste
 total 328408
 drwxrwxr-x  2 someuser someuser        75 Aug  9  2023 .
 drwxrwxr-x 25 someuser someuser      4096 Oct 18 10:46 ..
--rw-r--r--  1 someuser someuser  64479232 Aug  9  2023 C0006853.AIM
--rw-r--r--  1 someuser someuser 271805449 Aug  9  2023 Calgary_Adult_Skull_Atlas.mnc
+-rw-r--r--  1 someuser someuser  64479232 Aug  9  2023 file01.txt
+-rw-r--r--  1 someuser someuser 271805449 Aug  9  2023 file02.txt
 {{< /highlight >}}
 
 Or, on __/project__, where the group-based hierarchy exists, ls would show a different group ownership to the default allocation of the PI of the research group of the user, as follows.
@@ -46,20 +50,22 @@ Or, on __/project__, where the group-based hierarchy exists, ls would show a dif
 someuser@yak Data]$ ls -la
 total 328420
 drwxrwsr-x 3 someuser def-somePI      4096 Oct 21 14:43 .
-drwxrwsr-x 3 someuser def-somePI       4096 Oct 21 14:35 ..
--rw-r--r-- 1 someuser def-somePI   64479232 Oct 21 14:35 C0006853.AIM
+drwxrwsr-x 3 someuser def-somePI      4096 Oct 21 14:35 ..
+-rw-r--r-- 1 someuser def-somePI   64479232 Oct 21 14:35 file.txt
 -rw-r--r-- 1 someuser def-somePI  271805449 Oct 21 14:35 Calgary_Adult_Skull_Atlas.mnc
 drwxrwsr-x 2 someuser def-somePI       4096 Oct 21 14:43 Docker
 {{< /highlight >}}
 
-Because in UNIX/Linux, permissions are tied to group ownership, to change access two things are needed: changing ownership and group-ownership, and changing the permissions themselves. You override the default by using the __chmod__ command to modify access permissions to your files. You can use commands __chown__ and __chrgp__ to change owner and group of a filesystem object. This requires a group (or a user) to exist on the system. Sharing within PI's group thus is easily done with __chgrp__ and __chmod__ using the _def-somePI_ group. The def-somePI groups are created automatically based on CCDB group membershup, and are availeble for every group on Grex. They are also used to form directory structure on __/project__ filesystem. So, if a user would like to open a directory for this group, he'd need to modify the ownership masks as follows:
+Because in UNIX/Linux, permissions are tied to group ownership, to change access two things are needed: changing ownership and group ownership and changing the permissions themselves. You override the default by using the __chmod__ command to modify access permissions to your files. You can use commands __chown__ and __chrgp__ to change owner and group of a filesystem object. This requires a group (or a user) to exist on the system. Sharing within PI's group thus is easily done with __chgrp__ and __chmod__ using the _def-somePI_ group. The def-somePI groups are created automatically based on CCDB group membership and are available for every group on Grex. They are also used to form directory structure on __/project__ filesystem. So, if a user would like to open a directory for this group, he'd need to modify the ownership masks as follows:
 
 {{< highlight bash >}}
-# opening a file and a directory for read write and search by all members of the def-somePI group.
+# opening a file and a directory for read write 
+# and search by all members of the def-somePI group.
+
 chmod g+rwX Calgary_Adult_Skull_Atlas.mnc Docker
 {{< /highlight >}}
 
-However, there are cases when a more specific control over access is needed. Perhaps, only a subset of the PI's group needs the access to a dataset. Or, the set of users to access the dataset spans multiple research groups (that is, more than one PI). For such cases, a new UNIX group needs to be created. Grex and Alliance systems receive group and user information from CCDB. How are these groups created?
+However, there are cases when a more specific control over access is needed. Perhaps, only a subset of the PI's group needs the access to a dataset. Or the set of users to access the dataset spans multiple research groups (that is, more than one PI). For such cases, a new UNIX group needs to be created. Grex and Alliance systems receive group and user information from CCDB. How are these groups created?
 
 ### Requesting a Data-sharing group
 
@@ -107,7 +113,7 @@ On most of modern Linux filesystems (such as Lustre FS serving Grex's __/project
 
 The Alliance's [Sharing Data](https://docs.alliancecan.ca/wiki/Sharing_data "Sharing data") documentation describes how to use ACLs for data sharing, and Grex has a similar hierarchical structure of the __/project__ filesystem. __/home__ on Grex is an NFSv4 and has its own syntax of ACLs. Generally, we assume that it is the __/project__ where the data would be shared, and __/home__ is per-user and private.
 
-There are two commands to manipulate Linux ACLs on files and directories: ```getfacl``` to display the current ACL settings on a filesystem object, and ```setfacl``` to modify the settings. The modes of the access are similar to the symbolic codes of ```chmod```, that is ```r```, ```w``` and ```X```` stand for read, write and executa access. 
+There are two commands to manipulate Linux ACLs on files and directories: ```getfacl``` to display the current ACL settings on a filesystem object, and ```setfacl``` to modify the settings. The modes of the access are similar to the symbolic codes of ```chmod```, that is ```r```, ```w``` and ```X```` stand for read, write and execute access. 
 
 Because ACLs are not tied to ownership of the file, they can be used to give access to any individual user, many individual users, and one or more UNIX groups. To share a file and a directory under __/project__ :
 
@@ -129,7 +135,7 @@ setfacl -R -m g:wg-abcde:rwX /home/someuser/projects/def-somePI/Shared_data
 
 > Note that the above example refers to /home and uses the symlink to project. This will not work for data sharing between different PIs because $HOME is private. Thus, to refer to the shared data, "real" paths on __project__ of the form /project/PI-GIDnumber/Shared_data must be used.
 
-Another requirements for data sharing between different research groups exists. Data residing under different /project trees belonging to different PIs, requires for sharing  the top project directory must be opened for "Search" only. An example the  ACL command, to allow for "search" access of the top directory to a group wg-abcdf, presumably with some of the directories under it being shared by a UNIX group (the 123456 is the project GUID of the PI):
+Another requirement for data sharing between different research groups exists. Data residing under different /project trees belonging to different PIs, requires for sharing  the top project directory must be opened for "Search" only. An example the  ACL command, to allow for "search" access of the top directory to a group wg-abcdf, presumably with some of the directories under it being shared by a UNIX group (the 123456 is the project GUID of the PI):
 
 {{< highlight bash >}}
 setfacl -m g:wg-abcde:X /project/123456/
