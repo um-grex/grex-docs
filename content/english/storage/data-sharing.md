@@ -65,7 +65,7 @@ Sharing within the PI’s group is straightforward using ```chgrp``` and ```chmo
 chmod g+rwX Calgary_Adult_Skull_Atlas.mnc Docker
 {{< /highlight >}}
 
-In some cases, you may need more precise control over access—perhaps only a subset of the PI’s group should access a dataset, or you need to grant access to users from multiple research groups (more than one PI). In such cases, a new UNIX group is required. Grex and Alliance systems receive group and user information from the CCDB. Thus, the group has to be requested by the PI. 
+In some cases, you may need more precise control over access—perhaps only a subset of the PI’s group should access a dataset, or you need to grant access to users from multiple research groups (more than one PI). In such cases, a new UNIX group is required. Grex and Alliance systems receive group and user information from the CCDB. Thus, the group must be requested by the PI. 
 
 ### Requesting a Data-sharing Group
 
@@ -107,14 +107,14 @@ which would allow read and write access to the directory dir and all its files a
 ## Linux ACLs
 ---
 
-On most modern Linux filesystems, such as Lustre FS used for Grex’s __/project__ , Linux Access Control Lists (ACLs) provide more fine-grained access control than traditional UNIX groups. ACLs allow flexible permissions by decoupling file ownership from access rights, enabling access control for multiple users or groups without changing file ownership. This flexibility makes ACLs the preferred method for organizing data sharing.
+On most modern Linux filesystems, such as Lustre FS used for Grex’s __/project__, Linux Access Control Lists (ACLs) provide more fine-grained access control than traditional UNIX groups. ACLs allow flexible permissions by decoupling file ownership from access rights, enabling access control for multiple users or groups without changing file ownership. This flexibility makes ACLs the preferred method for organizing data sharing.
 
 The Alliance’s [Sharing Data](https://docs.alliancecan.ca/wiki/Sharing_data "Sharing data")a documentation describes using ACLs, and Grex’s /project filesystem has a similar hierarchical structure. Grex’s __/home__ uses a NFSv4 FS, which has its own ACL syntax, not compatible with Linux ACLs. Generally, data sharing is recommended under __/project__, while $HOME remains private to each user.
 
 Two main commands control ACLs on files and directories:
 
- * ```getfacl```: displays the current ACL settings
- * ```setfacl```: modifies ACL settings
+ * ```getfacl```: displays the current ACL settings.
+ * ```setfacl```: modifies ACL settings.
 
 The access modes are similar to ```chmod```'s symbolic codes:
 
@@ -152,7 +152,7 @@ When sharing data between different PIs, residing under separate __/project__ di
 setfacl -m g:wg-abcde:X /project/123456/
 {{< /highlight >}}
 
-Note that the real, absolute path to the project has to be used rather than a $HOME-based symbolic link. 
+Note that the real, absolute path to the project must be used rather than a $HOME-based symbolic link. 
 To get the absolute path to the PI's project, use ```diskusage_report``` tool.
 
 ### Managing ACLs: viewing and removing 

@@ -19,9 +19,9 @@ However, there are situations where parallel filesystems like Lustre can experie
 
 In some extreme cases, it may be beneficial to avoid using the shared parallel filesystem and instead utilize local disk storage. Local disks, particularly SSDs, are directly attached to the node and do not strain the Metadata Servers of the shared filesystem. This approach may improve the performance of jobs that involve large numbers of small files.
 
-> Note that node-local storage is temporary and will be deletd at the end of the SLURM job.
+> Note that node-local storage is temporary and will be deleted at the end of the SLURM job.
 
-> Note: the node-local storage is limited by what is available at the node (usually about 100-200GB). Large datasets would still have to use the __/project__ filesystem.
+> __Note:__ the node-local storage is limited by what is available at the node (usually about 100-200GB). Large datasets would still have to use the __/project__ filesystem.
 
 ### Using temporarily directory for SLURM jobs
 
@@ -50,13 +50,11 @@ cp -rf $TMPDIR/my-data-directory .
 {{< /highlight >}}
 
 
-> Note: If possible for a given software, it is advisable to direct output and checkpoint files to the parallel filesystem (e.g., /project). In case of job interruption (due to hardware failure or walltime expiration), data on the local disk will be lost.
-
-
+> __Note:__ If possible, for a given software, it is advisable to direct output and checkpoint files to the parallel filesystem (e.g., /project). In case of job interruption (due to hardware failure or walltime expiration), data on the local disk will be lost.
 
 ## External links
 
- * Alliance user documentation on [Using node local storage](https://docs.alliancecan.ca/wiki/Using_node-local_storage)
+* Alliance user documentation on [Using node local storage](https://docs.alliancecan.ca/wiki/Using_node-local_storage)
 
 <!-- {{< treeview display="tree" />}} -->
 
