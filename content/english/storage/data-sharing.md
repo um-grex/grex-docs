@@ -40,8 +40,8 @@ Depending on the filesystem (__/project__ or __/home__ or, on the Alliance syste
 total 328408
 drwxrwxr-x  2 someuser someuser        75 Aug  9  2023 .
 drwxrwxr-x 25 someuser someuser      4096 Oct 18 10:46 ..
--rw-r--r--  1 someuser someuser  64479232 Aug  9  2023 file01.txt
--rw-r--r--  1 someuser someuser 271805449 Aug  9  2023 file02.txt
+-rw-r--r--  1 someuser someuser  64479232 Aug  9  2023 file.txt
+-rw-r--r--  1 someuser someuser 271805449 Aug  9  2023 Calgary_Adult_Skull_Atlas.mnc
 {{< /highlight >}}
 
 Or, on __/project__, where the group-based hierarchy exists, ls would show a different group ownership to the default allocation of the PI of the research group of the user, as follows.
