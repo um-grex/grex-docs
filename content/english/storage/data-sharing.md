@@ -4,9 +4,9 @@ linkTitle: "Data sharing"
 title: "Data sharing"
 description: "Everything you need to know about sharing data on Grex."
 categories: ["Information"]
-banner: true
-bannerContent: "Work in progress."
-tags: ["Configuration"]
+#banner: true
+#bannerContent: "Work in progress."
+tags: ["Configuration", "Storage"]
 ---
 
 ## Data Sharing

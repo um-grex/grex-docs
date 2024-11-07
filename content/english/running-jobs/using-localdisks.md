@@ -1,5 +1,5 @@
 ---
-weight: 1600
+weight: 1750
 linkTitle: "Using local disks"
 title: "Using local disks: $TMPDIR"
 description: "Everything you need to know about using local disks."
@@ -19,9 +19,11 @@ However, there are situations where parallel filesystems like Lustre can experie
 
 In some extreme cases, it may be beneficial to avoid using the shared parallel filesystem and instead utilize local disk storage. Local disks, particularly SSDs, are directly attached to the node and do not strain the Metadata Servers of the shared filesystem. This approach may improve the performance of jobs that involve large numbers of small files.
 
-> Note that node-local storage is temporary and will be deleted at the end of the SLURM job.
+However, there are the following limitations:
 
-> __Note:__ the node-local storage is limited by what is available at the node (usually about 100-200GB). Large datasets would still have to use the __/project__ filesystem.
+> * The node-local storage is temporary and will be deleted at the end of the SLURM job.
+> * The node-local storage is limited by what is available at the node (usually about 100-200GB). Large datasets would still have to use the __/project__ filesystem.
+> * The node-local storage is local to the node, and is not available for milti-node, parallel computing jobs. Generally it is not worth the trouble to try using local disks manually, across several nodes.
 
 ### Using temporarily directory for SLURM jobs
 
@@ -51,6 +53,13 @@ cp -rf $TMPDIR/my-data-directory .
 
 
 > __Note:__ If possible, for a given software, it is advisable to direct output and checkpoint files to the parallel filesystem (e.g., /project). In case of job interruption (due to hardware failure or walltime expiration), data on the local disk will be lost.
+
+## Using local scratch for particular software
+
+Many codes provide a configuration option or an environment variable that determines, where to direct the temporary files.
+In such cases, when the application software handles temporary files, it is sufficient to set the location to __$TMPDIR__.
+
+Examples are Gaussian (```export GAU_SCRDIR=$TMPDIR```) , Quantum Espresso (```export ESPRESSO_TMPDIR=$TMPDIR```). 
 
 ## External links
 

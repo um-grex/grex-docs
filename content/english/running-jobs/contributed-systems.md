@@ -1,5 +1,5 @@
 ---
-weight: 1800
+weight: 1700
 linkTitle: "Contributed nodes"
 title: "Scheduling policies and running jobs on Contributed nodes"
 description: "Everything you need to know about running jobs on contributed hardware."
