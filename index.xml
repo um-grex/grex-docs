@@ -240,11 +240,7 @@ They are &lt;a
  href="https://apptainer.org/docs/user/latest/docker_and_oci.html#differences-and-limitations-vs-docker"
  class="is-pretty-link">not completely OCI-compatible&lt;/a
 >
-, so there exists Docker images that would not work properly.&lt;/p></description></item><item><title>Using local disks: $TMPDIR</title><link>https://um-grex.github.io/grex-docs/running-jobs/using-localdisks/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/running-jobs/using-localdisks/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
-&lt;/h2>&lt;hr>
-&lt;!-- raw HTML omitted -->
-&lt;!-- raw HTML omitted -->
-&lt;!-- raw HTML omitted --></description></item><item><title>Workshops - 2023</title><link>https://um-grex.github.io/grex-docs/training/workshops-2023/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/training/workshops-2023/</guid><description>&lt;h2 id='autumn-workshop-november-2023'>Autumn workshop, November 2023&lt;a href='#autumn-workshop-november-2023' class='anchor'>#&lt;/a>
+, so there exists Docker images that would not work properly.&lt;/p></description></item><item><title>Workshops - 2023</title><link>https://um-grex.github.io/grex-docs/training/workshops-2023/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/training/workshops-2023/</guid><description>&lt;h2 id='autumn-workshop-november-2023'>Autumn workshop, November 2023&lt;a href='#autumn-workshop-november-2023' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;p>Below are the slides from the Grex workshop that was held on November 6-8, 2023:&lt;/p>
 &lt;blockquote>
@@ -299,7 +295,21 @@ They are &lt;a
 &lt;hr>
 &lt;h2 id='fall-data-4010-seminars-september-2023'>Fall DATA-4010 seminars, September 2023&lt;a href='#fall-data-4010-seminars-september-2023' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
-&lt;p>Below are the slides from the DATA 4010 seminars that were held on September 18 and 25, 2023:&lt;/p></description></item><item><title>Workshops - 2022</title><link>https://um-grex.github.io/grex-docs/training/workshops-2022/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/training/workshops-2022/</guid><description>&lt;h2 id='autumn-workshop-october-2022'>Autumn workshop, October 2022&lt;a href='#autumn-workshop-october-2022' class='anchor'>#&lt;/a>
+&lt;p>Below are the slides from the DATA 4010 seminars that were held on September 18 and 25, 2023:&lt;/p></description></item><item><title>Scheduling policies and running jobs on Contributed nodes</title><link>https://um-grex.github.io/grex-docs/running-jobs/contributed-systems/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/running-jobs/contributed-systems/</guid><description>&lt;h2 id='scheduling-policies-for-contributed-systems'>Scheduling policies for contributed systems&lt;a href='#scheduling-policies-for-contributed-systems' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;p>Grex has a few user-contributed nodes. The owners of the hardware have preferred access to them. The current mechanism for the &amp;ldquo;preferred access&amp;rdquo; is preemption.&lt;/p>
+&lt;h2 id='on-the-definition-of-preferential-access-to-hpc-systems'>On the definition of preferential access to HPC systems&lt;a href='#on-the-definition-of-preferential-access-to-hpc-systems' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>Preferential access is when you have non-exclusive access to your hardware, in a sense that others can share in its usage over large enough periods. There are the following technical possibilities that rely on the HPC batch queueing technology we have. HPC makes access to CPU cores / GPUs / Memory exclusive per job, for the duration of the job (as opposed to time-sharing). Priority is a factor that decides which job gets to start (and thus exclude other jobs) first if there is a competitive situation (more jobs than free cores).&lt;/p></description></item><item><title>Using local disks: $TMPDIR</title><link>https://um-grex.github.io/grex-docs/running-jobs/using-localdisks/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/running-jobs/using-localdisks/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>High-Performance Computing (HPC) systems, such as Grex, typically provide a shared, scalable, POSIX-compliant filesystem that is accessible by all compute nodes.
+For Grex and the current generation of Alliance HPC machines, this shared filesystem is powered by &lt;a
+ href="https://www.lustre.org/"
+ class="is-pretty-link">Lustre FS&lt;/a
+>
+, which enables data sharing for compute jobs running on the cluster&amp;rsquo;s nodes. Due to its scalable design, Lustre FS can offer significant bandwidth for large parallel jobs through its parallelized Object Storage Targets (OSTs).&lt;/p></description></item><item><title>Workshops - 2022</title><link>https://um-grex.github.io/grex-docs/training/workshops-2022/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/training/workshops-2022/</guid><description>&lt;h2 id='autumn-workshop-october-2022'>Autumn workshop, October 2022&lt;a href='#autumn-workshop-october-2022' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;p>Below are the slides from the Grex workshop that was held on October 26-27, 2022:&lt;/p>
 &lt;blockquote>
@@ -361,14 +371,7 @@ They are &lt;a
 &lt;hr>
 &lt;!-- raw HTML omitted -->
 &lt;!-- raw HTML omitted -->
-&lt;!-- raw HTML omitted --></description></item><item><title>Scheduling policies and running jobs on Contributed nodes</title><link>https://um-grex.github.io/grex-docs/running-jobs/contributed-systems/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/running-jobs/contributed-systems/</guid><description>&lt;h2 id='scheduling-policies-for-contributed-systems'>Scheduling policies for contributed systems&lt;a href='#scheduling-policies-for-contributed-systems' class='anchor'>#&lt;/a>
-&lt;/h2>&lt;hr>
-&lt;!-- raw HTML omitted -->
-&lt;!-- raw HTML omitted -->
-&lt;p>Grex has a few user-contributed nodes. The owners of the hardware have preferred access to them. The current mechanism for the &amp;ldquo;preferred access&amp;rdquo; is preemption.&lt;/p>
-&lt;h2 id='on-the-definition-of-preferential-access-to-hpc-systems'>On the definition of preferential access to HPC systems&lt;a href='#on-the-definition-of-preferential-access-to-hpc-systems' class='anchor'>#&lt;/a>
-&lt;/h2>&lt;hr>
-&lt;p>Preferential access is when you have non-exclusive access to your hardware, in a sense that others can share in its usage over large enough periods. There are the following technical possibilities that rely on the HPC batch queueing technology we have. HPC makes access to CPU cores / GPUs / Memory exclusive per job, for the duration of the job (as opposed to time-sharing). Priority is a factor that decides which job gets to start (and thus exclude other jobs) first if there is a competitive situation (more jobs than free cores).&lt;/p></description></item><item><title>CVMFS and the Alliance software stack</title><link>https://um-grex.github.io/grex-docs/software/cern-vmfs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/software/cern-vmfs/</guid><description>&lt;h2 id='cc-cernvmfs-on-grex'>CC CernVMFS on Grex&lt;a href='#cc-cernvmfs-on-grex' class='anchor'>#&lt;/a>
+&lt;!-- raw HTML omitted --></description></item><item><title>CVMFS and the Alliance software stack</title><link>https://um-grex.github.io/grex-docs/software/cern-vmfs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/software/cern-vmfs/</guid><description>&lt;h2 id='cc-cernvmfs-on-grex'>CC CernVMFS on Grex&lt;a href='#cc-cernvmfs-on-grex' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;p>&lt;a
  href="https://cernvm.cern.ch/portal/filesystem"
@@ -457,10 +460,10 @@ The examples are a Singularity/Apptainer repository from &lt;a
 &lt;p>Jupyter can be used either as a simple, individual notebook or as a multi-user Web server/Interactive Development Environment (IDE), such as JupyterHub/JupyterLab. The JupyterHub servers can use a variety of computational back-end configurations: from free-for-all shared workstation to job spawning interfaces to HPC schedulers like SLURM or container workflow systems like Kubernetes.&lt;/p></description></item><item><title>Data Backup</title><link>https://um-grex.github.io/grex-docs/storage/data-backup/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/storage/data-backup/</guid><description>&lt;h2 id='backup-policies'>Backup policies&lt;a href='#backup-policies' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;p>Since late 2023, there has been a tape backup for user data stored on main Grex filesystems, &lt;strong>/home&lt;/strong> and &lt;strong>/project&lt;/strong>. Our limited resources and large amounts of data do put some limitations on what and how fast can be backed up and restored. All backup is done to tape in the same HPCC data centre.&lt;/p>
-&lt;p>The &lt;strong>/home&lt;/strong> filesystem is backed up daily using incremental backup. A new full backup is done quarterly.&lt;/p></description></item><item><title>Data sharing</title><link>https://um-grex.github.io/grex-docs/storage/data-sharing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/storage/data-sharing/</guid><description>&lt;h2 id='data-sharing'>Data sharing&lt;a href='#data-sharing' class='anchor'>#&lt;/a>
+&lt;p>The &lt;strong>/home&lt;/strong> filesystem is backed up daily using incremental backup. A new full backup is done quarterly.&lt;/p></description></item><item><title>Data sharing</title><link>https://um-grex.github.io/grex-docs/storage/data-sharing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/storage/data-sharing/</guid><description>&lt;h2 id='data-sharing'>Data Sharing&lt;a href='#data-sharing' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
-&lt;p>By default, data on Grex are owned by the user and are not open to other users of Grex, nor for the outside access.&lt;/p>
-&lt;p>During a research project, it is often required to share datasets or code within a research group, or between collaborating research groups. This documentation page explains how to share data residing within a given HPC system (in our case, Grex). Sharing data outside of the HPC system is done by other means (for example Globus, MS OneDrive).&lt;/p></description></item><item><title>Linux/SLURM update project</title><link>https://um-grex.github.io/grex-docs/changes/changes-before-2020/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/changes/changes-before-2020/</guid><description>&lt;h2 id='grex-defunded-since-april-2-2018'>Grex defunded since April 2, 2018&lt;a href='#grex-defunded-since-april-2-2018' class='anchor'>#&lt;/a>
+&lt;p>By default, data on Grex are owned by the user and are not accessible to other Grex users or to external parties.&lt;/p>
+&lt;p>In research it’s often necessary to share datasets or code within a research group or with collaborating groups. This documentation explains how to share data stored on a specific HPC system, in this case, Grex. Sharing data outside the HPC system can be done through other methods, such as Globus or MS OneDrive.&lt;/p></description></item><item><title>Linux/SLURM update project</title><link>https://um-grex.github.io/grex-docs/changes/changes-before-2020/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/changes/changes-before-2020/</guid><description>&lt;h2 id='grex-defunded-since-april-2-2018'>Grex defunded since April 2, 2018&lt;a href='#grex-defunded-since-april-2-2018' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;p>Since being defunded by WestGrid (on April 2, 2018), Grex is now available only to the users affiliated with University of Manitoba and their collaborators. The old WestGrid documentation, hosted on the WestGrid website became irrelevant after the Grex upgrade, so please visit Grex’s New &lt;a
  href="https://um-grex.github.io/grex-docs/grex-docs/"
