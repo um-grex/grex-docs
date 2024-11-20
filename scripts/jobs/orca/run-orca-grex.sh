@@ -9,7 +9,8 @@
 
 # Load the modules: 
 
-module load arch/avx512  gcc/13.2.0  openmpi/4.1.6 orca/6.0.0
+module load arch/avx512  gcc/13.2.0  openmpi/4.1.6
+module load orca/6.0.1
 
 # Assign the input file:
 

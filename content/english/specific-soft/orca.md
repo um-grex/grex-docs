@@ -33,13 +33,14 @@ To see the versions installed on Grex and how to load them, please use **module 
 To load **ORCA-5**, use:
 
 {{< highlight bash >}}
+
 module load arch/avx512  intel/2023.2  openmpi/4.1.6 orca/5.0.4
 {{< /highlight >}}
 
 To load **ORCA-6**, use:
 
 {{< highlight bash >}}
-module load arch/avx512  gcc/13.2.0  openmpi/4.1.6 orca/6.0.0
+module load arch/avx512  gcc/13.2.0  openmpi/4.1.6 orca/6.0.1
 {{< /highlight >}}
 
 **Note:**
@@ -86,7 +87,7 @@ For more than eight processors (!PAL8), the explicit %PAL option has to be used:
 When running ORCA calculations in parallel, always use the full path to ORCA:
 
 {{< highlight bash >}}
-module load arch/avx512  gcc/13.2.0  openmpi/4.1.6 orca/6.0.0
+module load arch/avx512  gcc/13.2.0  openmpi/4.1.6 orca/6.0.1
 ${MODULE_ORCA_PREFIX}/orca your-orca-input.in > your-orca-output.txt
 {{< /highlight >}}
 
@@ -98,7 +99,7 @@ module load CCEnv
 module load arch/avx512 
 module load StdEnv/2023
 module load gcc/12.3  openmpi/4.1.5
-module load orca/6.0.0
+module load orca/6.0.1
 ${EBROOTORCA}/orca your-orca-input.in > your-orca-output.txt
 {{< /highlight >}}
 
@@ -146,7 +147,6 @@ Assuming the script above is saved as __run-orca-grex.sh__, it can be submitted 
 sbatch run-orca-grex.sh
 {{< /highlight >}}
 
-<!--
 ### Sample Script for running NBO with ORCA on Grex
 ---
 
@@ -167,7 +167,6 @@ sbatch run-nbo-orca-grex.sh
 {{< /highlight >}}
 
 For more information, visit the page [running jobs on Grex](running-jobs)
--->
 
 ## Related links
 ---

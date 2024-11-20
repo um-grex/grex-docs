@@ -7,12 +7,12 @@
 
 # Load the modules:
 
-module load gcc/4.8  ompi/4.1.1 orca/5.0.2 
-module load nbo/7.0 
+module load arch/avx512  gcc/13.2.0  openmpi/4.1.6
+module load orca/6.0.1
+module load nbo/nbo7-2021
 
-EBROOTORCA=/global/software/cent7/orca/5.0.2_linux_x86-64_openmpi411
-export GENEXE=`which gennbo.i4.exe`
-export NBOEXE=`which nbo7.i4.exe`
+export GENEXE=`which gennbo.i8.exe`
+export NBOEXE=`which nbo7.i8.exe`
 
 # Assign the input file:
 
@@ -39,6 +39,6 @@ echo " "                      >> ${ORCA_IN}
 
 echo "Starting run at: `date`"
 
-${EBROOTORCA}/orca ${ORCA_IN} > ${ORCA_OUT}
+${MODULE_ORCA_PREFIX}/orca ${ORCA_IN} > ${ORCA_OUT}
 
 echo "Program finished with exit code $? at: `date`"
