@@ -149,6 +149,32 @@ Setup Key:   12345678-aaaa-bbbb-cccc-87654321dddd
 
 Once the endpoint had been created and the personal Globus server started, the endpoint will be visible/searchable in the GlobusOnline Web interface. Now it can be used for data transfers. The ```module load globus``` command also provides Globus command line interface (CLI) that can also be used to move data  as described here: [Globus CLI examples](https://docs.globus.org/cli/examples/)
 
+### Filesystems and symbolic links
+
+Often, there is more than one filesystem on a Linux machine the personal endpoint is started on. For example, an endpoint on Grex login node would have  __$HOME__ and __/project__ available for sharing. 
+However, on Linux, Globus does no share everything by default, other than users $HOME ! Even when there exist symbolic links to __/project__ or __/scratch__, they would not yet be navigable in the Globus Web UI or CLI.
+Symbolic links across the filesystems do not work in Globus, unless both filesystems are shared!
+
+To enable sharing filesystems other than $HOME, the following special file has to be edited: ``` ~/.globusonline/lta/config-paths ```
+By default Globus creates this file with only one line, ```~/,0,1``` that corresonds to user's home directory. To add your project, or other filesystems, an extra line per filesystem has to be added to the file.
+An example below shows a correct ```~/.globusonline/lta/config-paths``` file for Grex.
+
+{{< highlight bash >}}
+# modify the file as needed. Each line is of the format Path,SharingFlag,RWFlag. 
+# the SharingFlag must be 0 for non-Globus+ endpoints.
+cat ~/.globusonline/lta/config-paths
+~/,0,1
+/scratch/,0,1
+/project/your-Project-ID/,0,1
+{{< /highlight >}}
+
+Note that you would replace __your-project-ID__ above with your real path to the __/project__ filesystem. One way to get it on Grex is to examine the output of the ```diskusage_report``` script.
+Another, more general way, is to use ```realpath``` command to resolve the project symlink, as in ```realpath /home/$USER/projects/def-yourPI/``` .
+
+More information about configuring the Paths is available at [Globus Documentation on Linux Endpoints](https://docs.globus.org/globus-connect-personal/install/linux/#config-paths) .
+
+### Managing personal endpoints
+
 It is a good practice to not to keep unnecessary processes running on Grex login nodes. Thus, when all data transfers are finished, user should stop their Globus server process running personal endpoint as follows:
 {{< highlight bash >}}
 [~]$ tmux kill-session -C -t globus
