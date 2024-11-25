@@ -189,6 +189,14 @@ Another, more general but older guide on how to use Globus personal endpoint on 
 
 Check the [ESNet](https://fasterdata.es.net/ "ESNet") website if you are curious about Globus, and why large data transfers over WAN might need specialized networks and software setups.
 
+### Using Upload button and HTTP access 
+
+Globus v.5 adds a new feature to server endpoints that allows for [using HTTP protocol](https://docs.globus.org/globus-connect-server/v5/https-access-collections) (instead of the traditional globus-url-copy) .
+This feature can be used from the Web UI (Upload button), and from CLI for accessing Globus using HTTPS URL someone had shared with you.
+
+> Note that the Upload feature is not available for Personal Globus endpoints. It only can be used for Server endpoints.
+
+
 ## File transfers with OOD browser GUI
 ---
 
