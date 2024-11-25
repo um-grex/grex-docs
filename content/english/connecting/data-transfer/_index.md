@@ -22,7 +22,7 @@ OpenSSH encrypts all the traffic and provides several authentication options. A 
 ### SFTP
 ---
 
-On Mac OS and Linux, where OpenSSH client packages are always available, the following command line tools are present: __scp__, __sftp__. They work similar to UNIX __cp__ and __ftp__ commands, except that there is a remote target or source. 
+On Mac OS and Linux, where OpenSSH client packages are always available, the following command line tools are present: __scp__, __sftp__. They work like UNIX __cp__ and __ftp__ commands, except that there is a remote target or source. 
 
 SFTP opens a session and then drops the user to a command line, which provides commands like __ls__, __lls__, __get__, __put__, __cd__, __lcd__ to navigate the local and remote directories, upload and download files etc.
 
@@ -58,14 +58,14 @@ A convenience symbolic link under /home/someuser/projects points to the Project 
 scp ./myfile_bigdata.csv  someuser@grex.hpc.umanitoba.ca:/home/someuser/projects/def-somegroup/someuser/
 {{< /highlight >}}
 
-More information about OpenSSH file transfer tools exist on [OpenSSH SSP manpage](https://man.openbsd.org/scp). [The Alliance/ComputeCanada documentation](https://docs.alliancecan.ca/wiki/Transferring_data#SCP "SCP") has a detailed Wiki entry on SCP.
+More information about OpenSSH file transfer tools exist on [OpenSSH SSP manpage](https://man.openbsd.org/scp). [The Alliance](https://docs.alliancecan.ca/wiki/Transferring_data#SCP "SCP") has a detailed Wiki entry on SCP.
 
 ### File transfer SCP/SFTP clients with GUI
 ---
 
 There are many file transfer clients that provide convenient graphical user interface (GUI) while using and implementation of SCP or SFTP under the hood.
 
-Some examples of the popular file transfer clients are
+Some examples of the popular file transfer clients are:
 
 * [WinSCP](https://winscp.net/eng/index.php "WinSCP") for Windows.
 * [MobaXterm](https://mobaxterm.mobatek.net/ "MobaXterm") for Windows has an SFTP app. 
@@ -156,7 +156,7 @@ However, on Linux, Globus does no share everything by default, other than users 
 Symbolic links across the filesystems do not work in Globus, unless both filesystems are shared!
 
 To enable sharing filesystems other than $HOME, the following special file has to be edited: ``` ~/.globusonline/lta/config-paths ```
-By default Globus creates this file with only one line, ```~/,0,1``` that corresonds to user's home directory. To add your project, or other filesystems, an extra line per filesystem has to be added to the file.
+By default Globus creates this file with only one line, ```~/,0,1``` that corresonds to user's home directory. To add your project, or other filesystems, an extra line per filesystem must be added to the file.
 An example below shows a correct ```~/.globusonline/lta/config-paths``` file for Grex.
 
 {{< highlight bash >}}
