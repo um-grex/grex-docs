@@ -200,7 +200,7 @@ This feature can be used from the Web UI (Upload button), and from CLI for acces
 ## File transfers with OOD browser GUI
 ---
 
-**NEW:** It is now possible to use [OpenOnDemand on Grex](https://zebu.hpc.umanitoba.ca) Web interface to download and upload data to and from Grex. Use the __Files__ OOD dashboard menu to select a filesystem (currently __/home/$USER__ and __/project__ filesystems are listed there), and then Upload and Download buttons.
+**NEW:** It is now possible to use [OpenOnDemand on Grex](https://ood.hpc.umanitoba.ca) Web interface to download and upload data to and from Grex. Use the __Files__ OOD dashboard menu to select a filesystem (currently __/home/$USER__ and __/project__ filesystems are listed there), and then Upload and Download buttons.
 There is a limit of about 10GB to the file transfer sizes with OOD. The OOD interface is, as of now, open for UManitoba IP addresses only (i.e., machines from campus and on UM VPN will work). 
 The OOD File app allows also for transferring data to/from [MS OneDrive and NextCloud with Rclone tool](/connecting/data-transfer/one-drive)
 
@@ -209,5 +209,5 @@ More information is available on our [OOD pages](/ood/)
 <!-- {{< treeview display="tree" />}} -->
 
 <!-- Changes and update:
-* Last reviewed on: Apr 29, 2024.
+* Last reviewed on: Nov 26 , 2024.
 -->
