@@ -84,7 +84,23 @@ export SINGULARITY_TMPDIR="/global/scratch/$USER/singularity/tmp"
 ### Getting and building Singularity images
 ---
 
-The commands **singularity build** and **singularity pull** would get Singularity images from DockerHub, SingularityHub or SyLabsCloud. Images can also be built from other images, and from recipes. A recipe is a text file that specifies the base image and post-install commands to be performed on it.
+The commands __singularity build__ and/or __singularity pull__ would get pre-built Singularity images from DockerHub, SingularityHub, or SyLabsCloud. “pulling” images does not require elevated permissions (that is, sudo). There are several kinds of container repositories from which containers can be pulled. These repositories are distinguished by the URI string (library://, docker://, oras://, etc.)
+
+{{< highlight bash >}}
+module load singularity
+# Building Ubuntu image using Sylabs Library
+singularity build ubuntu_latest0.sif library://ubuntu
+# or using DockerHub, this will create ubuntu_latest.sif
+singularity pull docker://ubuntu:latest
+{{< /highlight >}}
+
+Singularity (SIF) images can also be built from other local images, local “sandbox” directories, and from recipes. A recipe is a text file that specifies the base image and post-install commands to be performed on it. However, Singularity-CE requires _sudo_ (priviliged) access to build images from recipes, which is not available for users of HPC machines. There are two solutions to this problem.
+
+ * Using remote build on Sylabs cloud with _\-\-remote_ option. This requires [setting up a free account on Sylabs and getting access key](https://cloud.sylabs.io/builder). 
+ * Using Apptainer with _\-\-fakeroot_ option (see below) instead of Singularity-CE .
+
+> Make sure you understand licensing and intellectual property implications before using remote build services!
+The second (_fakeroot_) method appears to be easier and does not require an external account. 
 
 ### Singularity with GPUs
 ---
@@ -124,6 +140,26 @@ apptainer run docker://ghcr.io/apptainer/lolcow
 
 Similarly to Singularity, you will need to bind mount the required data directories for accessing data outside the container. 
 The same best practices mentioned above for Singularity (pulling containers beforehand, controlling the cache location) equally apply for the Apptainer. The environment variables for Apptainer should be using APPTAINER_ instead of SINGULARITY_ prefixes.
+
+### Building apptainer images with "fakeroot"
+
+Apptainer supports building of SIF images from recipes without __sudo__ access using __--fakeroot__ option where it is available.
+
+On Grex, it can be used as in the following example:
+
+{{< highlight bash >}}
+module purge
+module load CCEnv
+module load StdEnv/2023
+module load apptainer
+# testing if apptainer command works
+apptainer version
+# build an image, INLA, from a local Singularity.def recipe
+# --fakeroot makes the build possible without elevated access
+apptainer build --fakeroot INLA.sif Singularity.def
+{{< /highlight >}}
+
+The resulting SIF image should be compatible with either Singularity-CE or Apptainer runtimes.
 
 ## Using Podman from SBEnv on Grex
 ---
@@ -194,5 +230,5 @@ NVIDIA provides many pre-built Docker container images on their [NGC Cloud](http
 <!-- {{< treeview display="tree" />}} -->
 
 <!-- Changes and update:
-* Last revision: Aug 30, 2024. 
+* Last revision: Jan 16, 2024. 
 -->
