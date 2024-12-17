@@ -94,7 +94,7 @@ singularity build ubuntu_latest0.sif library://ubuntu
 singularity pull docker://ubuntu:latest
 {{< /highlight >}}
 
-Singularity (SIF) images can also be built from other local images, local “sandbox” directories, and from recipes. A recipe is a text file that specifies the base image and post-install commands to be performed on it. However, Singularity-CE requires _sudo_ (priviliged) access to build images from recipes, which is not available for users of HPC machines. There are two solutions to this problem.
+Singularity (SIF) images can also be built from other local images, local “sandbox” directories, and from recipes. A [Singularity recipe or definition file](https://apptainer.org/docs/user/main/definition_files.html) is a text file that specifies the base image and post-install commands to be performed on it. However, Singularity-CE requires _sudo_ (priviliged) access to build images from recipes, which is not available for users of HPC machines. There are two solutions to this problem.
 
  * Using remote build on Sylabs cloud with _\-\-remote_ option. This requires [setting up a free account on Sylabs and getting access key](https://cloud.sylabs.io/builder). 
  * Using Apptainer with _\-\-fakeroot_ option (see below) instead of Singularity-CE .
