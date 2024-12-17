@@ -143,7 +143,7 @@ The same best practices mentioned above for Singularity (pulling containers befo
 
 ### Building apptainer images with "fakeroot"
 
-Apptainer supports building of SIF images from recipes without __sudo__ access using __--fakeroot__ option where it is available.
+Apptainer supports building of SIF images from recipes without __sudo__ access using __-\-fakeroot__ option where available.
 
 On Grex, it can be used as in the following example:
 
@@ -222,6 +222,7 @@ NVIDIA provides many pre-built Docker container images on their [NGC Cloud](http
  * [Apptainer homepage](https://apptainer.org/)
  * [Podman homepage](https://podman.io/)
  * [Singularity documentation on the Alliance Wiki](https://docs.alliancecan.ca/wiki/Singularity) 
+ * [Apptainer documentation on the Alliance Wiki]  https://docs.alliancecan.ca/wiki/Apptainer)
  * [Docker Hub](https://hub.docker.com)
  * [RedHat Quay.io Hub](https://quay.io/search)
  * [Sylabs Cloud](https://cloud.sylabs.io/builder)
