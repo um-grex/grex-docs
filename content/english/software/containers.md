@@ -222,7 +222,7 @@ NVIDIA provides many pre-built Docker container images on their [NGC Cloud](http
  * [Apptainer homepage](https://apptainer.org/)
  * [Podman homepage](https://podman.io/)
  * [Singularity documentation on the Alliance Wiki](https://docs.alliancecan.ca/wiki/Singularity) 
- * [Apptainer documentation on the Alliance Wiki]  https://docs.alliancecan.ca/wiki/Apptainer)
+ * [Apptainer documentation on the Alliance Wiki](https://docs.alliancecan.ca/wiki/Apptainer)
  * [Docker Hub](https://hub.docker.com)
  * [RedHat Quay.io Hub](https://quay.io/search)
  * [Sylabs Cloud](https://cloud.sylabs.io/builder)
