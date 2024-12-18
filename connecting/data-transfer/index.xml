@@ -1,15 +1,2 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Transferring data on Grex</title><link>https://um-grex.github.io/grex-docs/connecting/data-transfer/</link><description>Recent content in Transferring data on Grex</description><generator>Hugo</generator><language>en</language><copyright>The MIT License (MIT) Copyright © 2023 UM-Grex</copyright><atom:link href="https://um-grex.github.io/grex-docs/connecting/data-transfer/index.xml" rel="self" type="application/rss+xml"/><item><title>Connecting to OneDrive using Rclone</title><link>https://um-grex.github.io/grex-docs/connecting/data-transfer/one-drive/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/connecting/data-transfer/one-drive/</guid><description>&lt;h2 id='um-onedrive'>UM OneDrive&lt;a href='#um-onedrive' class='anchor'>#&lt;/a>
-&lt;/h2>&lt;hr>
-&lt;p>The University of Manitoba provides &lt;a
- href="https://www.microsoft.com/en-ca/microsoft-365/onedrive/onedrive-for-business"
- class="is-pretty-link">Microsoft OneDrive&lt;/a
->
- to its users as part of the Microsoft Office 365 contract.
-While not suited, for performance reasons, for online computation work or for storing large datasets, OneDrive can be a useful storage space to store important data of smaller size, documents, articles and such.
-It also offers some data preservation features like data recovery and data history.&lt;/p>
-&lt;blockquote>
-&lt;p>Please also refer to &lt;a
- href="https://umanitoba.ca/information-services-technology/sites/information-services-technology/files/2022-05/data-security-classification.pdf"
- class="is-pretty-link">UM Data Security Classification&lt;/a
->
- to learn which kinds of data can be stored where.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Transferring data on Grex</title><link>https://um-grex.github.io/grex-docs/connecting/data-transfer/</link><description>Recent content in Transferring data on Grex</description><generator>Hugo</generator><language>en</language><copyright>The MIT License (MIT) Copyright © 2023 UM-Grex</copyright><atom:link href="https://um-grex.github.io/grex-docs/connecting/data-transfer/index.xml" rel="self" type="application/rss+xml"/><item><title>Connecting to OneDrive using Rclone</title><link>https://um-grex.github.io/grex-docs/connecting/data-transfer/one-drive/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/connecting/data-transfer/one-drive/</guid><description>UM OneDrive# The University of Manitoba provides Microsoft OneDrive to its users as part of the Microsoft Office 365 contract. While not suited, for performance reasons, for online computation work or for storing large datasets, OneDrive can be a useful storage space to store important data of smaller size, documents, articles and such. It also offers some data preservation features like data recovery and data history.
+Please also refer to UM Data Security Classification to learn which kinds of data can be stored where.</description></item></channel></rss>
