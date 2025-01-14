@@ -176,6 +176,8 @@ setfacl -bR /home/someuser/projects/def-somePI/Shared_data
 
 * [ACLs](https://www.geeksforgeeks.org/access-control-listsacl-linux/ "Access Control Lists in Linux")
 
+* [Alliance documentation on the same topic](https://docs.alliancecan.ca/wiki/Sharing_data/en)
+
 ---
 
 <!-- {{< treeview display="tree" />}} -->
