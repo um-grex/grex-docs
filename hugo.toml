@@ -59,3 +59,20 @@ publishDir             = 'public'
     download = 'https://github.com/um-grex/grex-docs/archive/refs/heads/main.zip'
     issue    = 'https://github.com/um-grex/grex-docs/issues'
     fork     = 'https://github.com/um-grex/grex-docs/forks'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.extras]
+        [markup.goldmark.extensions.extras.delete]
+          enable = true
+        [markup.goldmark.extensions.extras.insert]
+          enable = true
+        [markup.goldmark.extensions.extras.mark]
+          enable = true
+        [markup.goldmark.extensions.extras.subscript]
+          enable = true
+        [markup.goldmark.extensions.extras.superscript]
+          enable = true
+    [markup.goldmark.renderer]
+      unsafe = true
