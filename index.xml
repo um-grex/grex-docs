@@ -1,33 +1,566 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Unofficial Grex User Guide on Grex</title><link>https://um-grex.github.io/grex-docs/</link><description>Recent content in Unofficial Grex User Guide on Grex</description><generator>Hugo</generator><language>en</language><copyright>The MIT License (MIT) Copyright © 2023 UM-Grex</copyright><atom:link href="https://um-grex.github.io/grex-docs/index.xml" rel="self" type="application/rss+xml"/><item><title>Connecting to OneDrive using Rclone</title><link>https://um-grex.github.io/grex-docs/connecting/data-transfer/one-drive/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/connecting/data-transfer/one-drive/</guid><description>UM OneDrive# The University of Manitoba provides Microsoft OneDrive to its users as part of the Microsoft Office 365 contract. While not suited, for performance reasons, for online computation work or for storing large datasets, OneDrive can be a useful storage space to store important data of smaller size, documents, articles and such. It also offers some data preservation features like data recovery and data history.
-Please also refer to UM Data Security Classification to learn which kinds of data can be stored where.</description></item><item><title>Linux/SLURM update project</title><link>https://um-grex.github.io/grex-docs/changes/linux-slurm-update/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/changes/linux-slurm-update/</guid><description>Grex changes: Linux/SLURM update project.# December 10-11, 2019
-Introduction / Motivation# Grex runs an old version of CentOS 6, which gets unsupported in 2020. The 2.6.x Linux kernel that is shipped with CentOS 6 does not support containerized workloads that require recent kernel features. The Lustre parallel filesystem client had some troubles that we were unable to resolve with the CentOS 6 kernel version as well. Finally, the original Grex resource management software, Torque 2.</description></item><item><title>Running Gaussian on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/gaussian/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/gaussian/</guid><description>Introduction# Gaussian 16 is a comprehensive suite for electronic structure modeling using ab initio, DFT and semi-empirical methods. A list of Gaussian 16 features can be found here .
-User Responsibilities and Access# University of Manitoba has a site license for Gaussian 16 and GaussView. However, it comes with certain license limitations, so access to the code is subject to some license conditions.
-Since, as of now, Compute Canada accounts are a superset of Grex accounts, users will want to initiate getting access by sending an email agreeing to Gaussian conditions to support@tech.</description></item><item><title>Running Julia on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/julia/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/julia/</guid><description>Introduction# Julia is a programming language that was designed for performance, ease of use and portability. It is available as a module on Grex.
-Available Julia versions# Presently, binary Julia version julia/1.10.3 is available. Use module spider julia to find out other versions.
-Installing packages# We do not maintain centralized versions of Julia packages. Users should install Julia modules in their home directory.
-The command is (in Julia REPL):
-Using Pkg; Pkg.</description></item><item><title>Running LAMMPS on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/lammps/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/lammps/</guid><description>Note: Lammps is not available yet under the new environment SBEnv.
-Introduction# LAMMPS is a classical molecular dynamics code. The name stands for Large-scale Atomic / Molecular Massively Parallel Simulator.
-Modules# As fo now, there is no LAMMPS version added to the new environment. We will add them when users request a specific version. With that said, it is possible to use LAMMPS from the Alliance software stack after load CCEnv:</description></item><item><title>General Linux tools</title><link>https://um-grex.github.io/grex-docs/software/general-linux/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/software/general-linux/</guid><description>Linux tools on Grex# There are a number of general and distro-specific tools on Grex that are worth mentioning here. Such tools are: text editors, image viewers, file managers, &amp;hellip; etc.
-Command line Text editors# Command line text editors allow you to edit files right on Grex in any terminal session (such as SSH session or an X terminal under OOD):
-The (arguably) most popular editor is vi, or vim. It is very powerful, but requires some experience to use it.</description></item><item><title>Running MATLAB on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/matlab/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/matlab/</guid><description>Introduction# MATLAB is a general-purpose high-level programming package for numerical work such as linear algebra, signal processing and other calculations involving matrices or vectors of data. We have a campus license for MATLAB which is used on Grex and other local computing resources. As with most of the Grex software, MATLAB is available as a module. The following command will load the latest version available on Grex:
-module load matlab Then the matlab executable will be in the PATH.</description></item><item><title>Running NWChem on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/nwchem/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/nwchem/</guid><description>Introduction# NWChem is a Scalable open source solution for large scale molecular simulations. NWChem is actively developed by a consortium of developers and maintained by the EMSL located at the Pacific Northwest National Laboratory (PNNL) in Washington State. The code is distributed as open-source under the terms of the Educational Community License version 2.0 (ECL 2.0).
-System specific notes# On the Grex software stack, NWChem is using OpenMPI 3.1 with Intel compilers toolchains.</description></item><item><title>Running ORCA on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/orca/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/orca/</guid><description>Introduction# ORCA is a flexible, efficient and easy-to-use general purpose tool for quantum chemistry with specific emphasis on spectroscopic properties of open-shell molecules. It features a wide variety of standard quantum chemical methods ranging from semi-empirical methods to DFT to single - and multi-reference correlated ab initio methods. It can also treat environmental and relativistic effects.
-User Responsibilities and Access# ORCA is a proprietary software, even if it is free it still requires you to agree to the ORCA license conditions.</description></item><item><title>Slurm partitions</title><link>https://um-grex.github.io/grex-docs/running-jobs/slurm-partitions/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/running-jobs/slurm-partitions/</guid><description>Partitions# The current Grex system that has contributed nodes, large memory nodes and contributed GPU nodes is (and getting more and more) heterogeneous. With SLURM, as a scheduler, this requires partitioning: a &amp;ldquo;partition&amp;rdquo; is a set of compute nodes, grouped by a characteristic, usually by the kind of hardware the nodes have, and sometimes by who &amp;ldquo;owns&amp;rdquo; the hardware as well.
-There is no fully automatic selection of partitions, other than the default skylake for most of the users for the short jobs.</description></item><item><title>Running VASP on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/vasp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/vasp/</guid><description>Introduction# VASP is a massively parallel plane-wave solid state DFT code. On Grex it is available only for the research groups that hold VASP licenses. To get access, PIs would need to send us a confirmation email from the VASP vendor, detailing the status of their license and a list of users allowed to use it.
-System specific notes# To find out which versions of VASP are available, use module spider vasp .</description></item><item><title>Using Multi-Factor Authentication (MFA) on Grex</title><link>https://um-grex.github.io/grex-docs/connecting/mfa/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/connecting/mfa/</guid><description>Important Notices# As of January 9, 2024 MFA is enforced for all UManitoba/Grex users. We appreciate your attention to this matter and encourage you to enroll at your earliest convenience to ensure a smooth transition. Should you have any questions or require further assistance, please don&amp;rsquo;t hesitate to reach out to your local HPC team. If some of your work relies on unattended connections or automations that may be disrupted by MFA, we ask that you do not enroll yet, and instead contact us for technical support, so that we can work with you on a solution.</description></item><item><title>Connecting to Grex with SSH</title><link>https://um-grex.github.io/grex-docs/connecting/ssh/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/connecting/ssh/</guid><description>SSH# Most of the work on shared HPC computing systems is done via Linux command line / Shell. To connect, in a secure manner, to a remote Linux system, you would like to use SSH protocol. You will need to have:
-access to the Internet that lets SSH ports open. a user account on Grex (presently, it is a Compute Canada (an Alliance) Account). and an SSH client for your operating system.</description></item><item><title>How to run interactive jobs on Grex?</title><link>https://um-grex.github.io/grex-docs/running-jobs/interactive-jobs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/running-jobs/interactive-jobs/</guid><description>Interactive work# The login nodes of Grex are shared resources and should be used for basic operations such as (but not limited) to:
-edit files compile codes and run short interactive calculations. configure and build programs (limit the number of threads to 4: make -j4) submit and monitor jobs transfer and/or download data run short tests, &amp;hellip; etc. In other terms, anything that is not CPU, nor memory intensive [for example, a test with up to 4 CPUs, less than 2 Gb per core for 30 minutes or less].</description></item><item><title>Modules and software stacks</title><link>https://um-grex.github.io/grex-docs/software/using-modules/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/software/using-modules/</guid><description>Introduction# On a Linux server or a Linux desktop, software can be installed in one of the standard locations, such as /usr/bin. This is where most of the system-level software binaries can be found. For custom user-built software it is a good practice to install it separately from the standard location, to avoid potential conflicts and make changes and uninstallation possible. One of the common locations would be under /usr/local/, as in /usr/local/My_Custom_software/ , or under /opt (/opt/My_Other_custom_software).</description></item><item><title>Using Python for ML on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/python-ai/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/python-ai/</guid><description>Introduction# Python is a dynamic language with many optional Library &amp;ldquo;modules&amp;rdquo; available. Moreover, Python is often used as a &amp;ldquo;glue&amp;rdquo; language for interacting with tools and libraries written in other languages (C/C++, Fortran, CUDA, etc.). This makes maintenance of Python software difficult. Not only do Python and libraries need to be of the right versions, but also other software they depend on should be of the same versions that have been used to build the corresponding packages.</description></item><item><title>Running batch jobs on Grex</title><link>https://um-grex.github.io/grex-docs/running-jobs/batch-jobs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/running-jobs/batch-jobs/</guid><description>Batch jobs# HPC systems usually are clusters of many compute nodes, which are joined by an interconnect (like InfiniBand (IB) or Omni-PATH (OPA)), and under control of a resource management software (for example SLURM). From the users&amp;rsquo; point of view, the HPC system is a unity, a single large machine rather than a network of individual computers. Most of the time, HPC systems are used in batch mode: users would submit so-called &amp;ldquo;jobs&amp;rdquo; to a &amp;ldquo;batch queue&amp;rdquo;.</description></item><item><title>Code Development on Grex</title><link>https://um-grex.github.io/grex-docs/software/code-development/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/software/code-development/</guid><description>Introduction# Grex comes with a sizable software stack that contains most of the software development environment for typical HPC applications. This section of the documentation covers best practices for compiling and building your own software on Grex.
-On Grex, login nodes can be used to compile software and to run short interactive and/or test runs. All other jobs must be submitted to the batch system. User sessions on the login nodes are limited by cgroups to prevent resource congestion.</description></item><item><title>Workshops - 2024</title><link>https://um-grex.github.io/grex-docs/training/workshops-2024/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/training/workshops-2024/</guid><description>Autumn workshop, October 2024# This workshop presented for a group of users from Bannatyne campus to explain the isage of a contributed partition. However, most of the materiel (software, singularity, podman, slurm, &amp;hellip;) from the following slides still valid for general use. Date: Oct 31 - Nov 01, 2024 Below are the slides from the workshop that was held on Oct 31 and Nov 1, 2024:
-Start Guide for Using Grex efficiently: Slides Containers in HPC: Singularity/Apptainer: Slides Containers in HPC – Podman: Slides Fall DATA-4010 seminars, September 2024# Below are the slides from the DATA 4010 seminars that were held on September 18 and 25, 2024:</description></item><item><title>Connect and Transfer data with OOD</title><link>https://um-grex.github.io/grex-docs/connecting/ood/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/connecting/ood/</guid><description>OSC OpenOnDemand on Grex# OpenOnDemand is a Web portal appication for High-Performance Computing systems. It is used on many of the Top 500 HPC machines across the World. Grex&amp;rsquo;s current OOD v.3 instance runs on a dedicared login node zebu.hpc.umanitoba.ca . It is available only from UManitoba IP addresses &amp;ndash; that is, your computer should be on the UM Campus network or the UM VPN to connect.
-To connect from outside the UM network, please install and start UManitoba Virtual Private Network .</description></item><item><title>Containers for Software</title><link>https://um-grex.github.io/grex-docs/software/containers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/software/containers/</guid><description>Introduction# Linux Containers are means to isolate software dependencies from the base Linux operating system. Several different Linux container engines exist, most notably Docker which was first to emerge as the most popular tool in the DevOps community.
-Since then, a lot of work had been done by major Linux players like Google, RedHat and others to develop an open standard for container runtimes, which developed based on Docker, OCI .</description></item><item><title>Workshops - 2023</title><link>https://um-grex.github.io/grex-docs/training/workshops-2023/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/training/workshops-2023/</guid><description>Autumn workshop, November 2023# Below are the slides from the Grex workshop that was held on November 6-8, 2023:
-Updates on Research Computing Resources: Slides Getting accounts, connecting, using Duo MFA: Slides Basics of Linux Shell: Slides Beginner running HPC jobs with SLURM: Slides Using HPC with OpenOnDemand Web portal: Slides Beginner HPC software overview: Slides Using containers in HPC (Apptainer, SingularityCE): Slides Basics of using OpenStack cloud: Slides Getting most of HPC system: Slides Fall DATA-4010 seminars, September 2023# Below are the slides from the DATA 4010 seminars that were held on September 18 and 25, 2023:</description></item><item><title>Scheduling policies and running jobs on Contributed nodes</title><link>https://um-grex.github.io/grex-docs/running-jobs/contributed-systems/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/running-jobs/contributed-systems/</guid><description>Scheduling policies for contributed systems# Grex has a few user-contributed nodes. The owners of the hardware have preferred access to them. The current mechanism for the &amp;ldquo;preferred access&amp;rdquo; is preemption.
-On the definition of preferential access to HPC systems# Preferential access is when you have non-exclusive access to your hardware, in a sense that others can share in its usage over large enough periods. There are the following technical possibilities that rely on the HPC batch queueing technology we have.</description></item><item><title>Using local disks: $TMPDIR</title><link>https://um-grex.github.io/grex-docs/running-jobs/using-localdisks/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/running-jobs/using-localdisks/</guid><description>Introduction# High-Performance Computing (HPC) systems, such as Grex, typically provide a shared, scalable, POSIX-compliant filesystem that is accessible by all compute nodes. For Grex and the current generation of Alliance HPC machines, this shared filesystem is powered by Lustre FS , which enables data sharing for compute jobs running on the cluster&amp;rsquo;s nodes. Due to its scalable design, Lustre FS can offer significant bandwidth for large parallel jobs through its parallelized Object Storage Targets (OSTs).</description></item><item><title>Workshops - 2022</title><link>https://um-grex.github.io/grex-docs/training/workshops-2022/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/training/workshops-2022/</guid><description>Autumn workshop, October 2022# Below are the slides from the Grex workshop that was held on October 26-27, 2022:
-Program and updates: Slides High Performance Computing: Start Guide: Slides High Performance Computing: software environments: Slides OSC OpenOnDemand portal on Grex: Slides Spring workshop, May 2022# Below are the slides from the Grex workshop that was held on May 4-5, 2022:
-Introduction to local and National HPC at UManitoba: How to use available software and run jobs efficiently: Slides Introduction to High Performance Computing step by step: From getting an account to running jobs: Slides Using GP GPU compute on Grex: Slides High Performance Computing and software environments: Slides OSC OpenOnDemand portal on Grex: Slides</description></item><item><title>CVMFS and the Alliance software stack</title><link>https://um-grex.github.io/grex-docs/software/cern-vmfs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/software/cern-vmfs/</guid><description>CC CernVMFS on Grex# CVMFS or CernVM FS stands for CernVM File System. It provides a scalable, reliable and low-maintenance software distribution service. CVMFS was originally developed to assist High Energy Physics (HEP) collaborations to deploy software on the worldwide-distributed computing infrastructure used to run data processing applications. Since then it has been used as a a generic way of distributing software. Presently, we use CernVMFS (CVMFS) to provide the Alliance&amp;rsquo;s (or Compute Canada&amp;rsquo;s) software stack.</description></item><item><title>Workshops - 2021</title><link>https://um-grex.github.io/grex-docs/training/workshops-2021/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/training/workshops-2021/</guid><description>Autumn workshop, November 2021# Below are the slides from the Grex workshop that was held on November 01-02, 2021:
-Introduction to HPC: Basics: Steps from getting an account to submitting jobs: Slides Linux (Unix) shell basics: Slides Software on HPC clusters: Slides Scheduling jobs on HPC clusters: How to optimize your jobs and get more from the resources available?: Slides Spring workshop, April 2021# Below are the slides from the Grex workshop that was held on April 21-22, 2021:</description></item><item><title>Data sizes and quotas</title><link>https://um-grex.github.io/grex-docs/storage/data-sizes-and-quota/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/storage/data-sizes-and-quota/</guid><description>Data size and quotas# This section explains how to find the actual space and inode usage of /home/ and /project allocations on Grex. We limit the size of the data and the number of files that can be stored on these filesystems. The table provides a &amp;ldquo;default&amp;rdquo; storage quota on Grex. Larger quota can be obtained on /project via UM local RAC process.
-File system Type Total space Bulk Quota Files Quota /home NFSv4/RDMA 15 TB 100 GB / user 0.</description></item><item><title>How to use Jupyter notebooks on Grex?</title><link>https://um-grex.github.io/grex-docs/software/jupyter-notebook/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/software/jupyter-notebook/</guid><description>Jupyter on Grex# Jupyter is a Web-interface aimed to support interactive data science and scientific computing. Jupyter supports several dynamic languages, most notably Python, R and Julia. Jupyter offers a metaphor of &amp;ldquo;computational document&amp;rdquo; that combines code, data and visualizations, and can be published or shared with collaborators.
-Jupyter can be used either as a simple, individual notebook or as a multi-user Web server/Interactive Development Environment (IDE), such as JupyterHub/JupyterLab. The JupyterHub servers can use a variety of computational back-end configurations: from free-for-all shared workstation to job spawning interfaces to HPC schedulers like SLURM or container workflow systems like Kubernetes.</description></item><item><title>Data Backup</title><link>https://um-grex.github.io/grex-docs/storage/data-backup/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/storage/data-backup/</guid><description>Backup policies# Since late 2023, there has been a tape backup for user data stored on main Grex filesystems, /home and /project. Our limited resources and large amounts of data do put some limitations on what and how fast can be backed up and restored. All backup is done to tape in the same HPCC data centre.
-The /home filesystem is backed up daily using incremental backup. A new full backup is done quarterly.</description></item><item><title>Data sharing</title><link>https://um-grex.github.io/grex-docs/storage/data-sharing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/storage/data-sharing/</guid><description>Data Sharing# By default, data on Grex are owned by the user and are not accessible to other Grex users or to external parties.
-In research it’s often necessary to share datasets or code within a research group or with collaborating groups. This documentation explains how to share data stored on a specific HPC system, in this case, Grex. Sharing data outside the HPC system can be done through other methods, such as Globus or MS OneDrive.</description></item><item><title>Linux/SLURM update project</title><link>https://um-grex.github.io/grex-docs/changes/changes-before-2020/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/changes/changes-before-2020/</guid><description>Grex defunded since April 2, 2018# Since being defunded by WestGrid (on April 2, 2018), Grex is now available only to the users affiliated with University of Manitoba and their collaborators. The old WestGrid documentation, hosted on the WestGrid website became irrelevant after the Grex upgrade, so please visit Grex’s New Documentation . Thus, if you are an experienced user in the previous “version” of Grex, you might benefit from reading this document: Description of Grex changes .</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Unofficial Grex User Guide on Grex</title><link>https://um-grex.github.io/grex-docs/</link><description>Recent content in Unofficial Grex User Guide on Grex</description><generator>Hugo</generator><language>en</language><copyright>The MIT License (MIT) Copyright © 2023 UM-Grex</copyright><atom:link href="https://um-grex.github.io/grex-docs/index.xml" rel="self" type="application/rss+xml"/><item><title>Connecting to OneDrive using Rclone</title><link>https://um-grex.github.io/grex-docs/connecting/data-transfer/one-drive/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/connecting/data-transfer/one-drive/</guid><description>&lt;h2 id='um-onedrive'>UM OneDrive&lt;a href='#um-onedrive' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>The University of Manitoba provides &lt;a
+ href="https://www.microsoft.com/en-ca/microsoft-365/onedrive/onedrive-for-business"
+ class="is-pretty-link">Microsoft OneDrive&lt;/a
+>
+ to its users as part of the Microsoft Office 365 contract.
+While not suited, for performance reasons, for online computation work or for storing large datasets, OneDrive can be a useful storage space to store important data of smaller size, documents, articles and such.
+It also offers some data preservation features like data recovery and data history.&lt;/p>
+&lt;blockquote>
+&lt;p>Please also refer to &lt;a
+ href="https://umanitoba.ca/information-services-technology/sites/information-services-technology/files/2022-05/data-security-classification.pdf"
+ class="is-pretty-link">UM Data Security Classification&lt;/a
+>
+ to learn which kinds of data can be stored where.&lt;/p></description></item><item><title>Linux/SLURM update project</title><link>https://um-grex.github.io/grex-docs/changes/linux-slurm-update/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/changes/linux-slurm-update/</guid><description>&lt;h2 id='grex-changes-linuxslurm-update-project'>Grex changes: Linux/SLURM update project.&lt;a href='#grex-changes-linuxslurm-update-project' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>&lt;strong>December 10-11, 2019&lt;/strong>&lt;/p>
+&lt;h2 id='introduction--motivation'>Introduction / Motivation&lt;a href='#introduction--motivation' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>&lt;strong>Grex&lt;/strong> runs an old version of CentOS 6, which gets unsupported in 2020. The 2.6.x Linux kernel that is shipped with CentOS 6 does not support containerized workloads that require recent kernel features. The Lustre parallel filesystem client had some troubles that we were unable to resolve with the CentOS 6 kernel version as well. Finally, the original Grex resource management software, Torque 2.5 and Moab7 are unable to properly schedule jobs that use newer MPI implementations (OpenMPI 2 and 3), which are increasingly common amongst HPC users. Therefore, using the power outages of October and December 2019, we have embarked on a rather ambitious project of updating the entire Grex OS and software stack and scheduling to CentOS 7 and SLURM. This document outlines the changes and how they will affect Grex users.&lt;/p></description></item><item><title>Running Gaussian on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/gaussian/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/gaussian/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>&lt;a
+ href="http://gaussian.com/"title="Gaussian" id="gaussian"
+ class="is-pretty-link">Gaussian 16&lt;/a
+>
+ is a comprehensive suite for electronic structure modeling using &lt;strong>ab initio&lt;/strong>, DFT and semi-empirical methods. A list of Gaussian 16 features can be found &lt;a
+ href="http://gaussian.com/g16glance/"title="Gaussian Features" id="gaussian-features"
+ class="is-pretty-link">here&lt;/a
+>
+.&lt;/p>
+&lt;h2 id='user-responsibilities-and-access'>User Responsibilities and Access&lt;a href='#user-responsibilities-and-access' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>University of Manitoba has a site license for Gaussian 16 and GaussView. However, it comes with certain license limitations, so access to the code is subject to some license conditions.&lt;/p>
+&lt;p>Since, as of now, Compute Canada accounts are a superset of Grex accounts, users will want to initiate getting access by sending an email agreeing to Gaussian conditions to &lt;strong>support@tech.alliancecan.ca&lt;/strong>, confirming that you have read and agree to abide by the following conditions, and mentioning that you&amp;rsquo;d also want to access it on Grex:&lt;/p></description></item><item><title>Running Julia on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/julia/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/julia/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>&lt;a
+ href="https://julialang.org/"
+ class="is-pretty-link">Julia&lt;/a
+>
+ is a programming language that was designed for performance, ease of use and portability. It is available as a module on Grex.&lt;/p>
+&lt;h2 id='available-julia-versions'>Available Julia versions&lt;a href='#available-julia-versions' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>Presently, binary Julia version &lt;strong>julia/1.10.3&lt;/strong> is available. Use &lt;code>module spider julia&lt;/code> to find out other versions.&lt;/p>
+&lt;h2 id='installing-packages'>Installing packages&lt;a href='#installing-packages' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>We do not maintain centralized versions of Julia packages. Users should install Julia modules in their home directory.&lt;/p>
+&lt;p>The command is (in Julia REPL):&lt;/p></description></item><item><title>Running LAMMPS on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/lammps/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/lammps/</guid><description>&lt;p>&lt;strong>Note: Lammps is not available yet under the new environment &lt;em>SBEnv&lt;/em>.&lt;/strong>&lt;/p>
+&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>&lt;a
+ href="https://www.lammps.org/"
+ class="is-pretty-link">LAMMPS&lt;/a
+>
+ is a classical molecular dynamics code. The name stands for Large-scale Atomic / Molecular Massively Parallel Simulator.&lt;/p>
+&lt;h2 id='modules'>Modules&lt;a href='#modules' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>As fo now, there is no LAMMPS version added to the new environment. We will add them when users request a specific version. With that said, it is possible to use LAMMPS from the Alliance software stack after load &lt;em>CCEnv&lt;/em>:&lt;/p></description></item><item><title>General Linux tools</title><link>https://um-grex.github.io/grex-docs/software/general-linux/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/software/general-linux/</guid><description>&lt;h2 id='linux-tools-on-grex'>Linux tools on Grex&lt;a href='#linux-tools-on-grex' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>There are a number of general and distro-specific tools on Grex that are worth mentioning here. Such tools are: &lt;strong>text editors&lt;/strong>, &lt;strong>image viewers&lt;/strong>, &lt;strong>file managers&lt;/strong>, &amp;hellip; etc.&lt;/p>
+&lt;h2 id='command-line-text-editors'>Command line Text editors&lt;a href='#command-line-text-editors' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>Command line text editors allow you to edit files right on Grex in any terminal session (such as SSH session or an X terminal under OOD):&lt;/p>
+&lt;blockquote>
+&lt;ul>
+&lt;li>The (arguably) most popular editor is &lt;strong>vi&lt;/strong>, or &lt;strong>vim&lt;/strong>. It is very powerful, but requires some experience to use it. To exit a &lt;strong>vim&lt;/strong> session, you can use the &lt;strong>ZZ&lt;/strong> key combination (hold shift key + zz), or &lt;strong>ESC, :x!&lt;/strong>. There are many vi tutorials around, for &lt;a
+ href="http://heather.cs.ucdavis.edu/~matloff/UnixAndC/Editors/ViIntro.html"
+ class="is-pretty-link">example this one&lt;/a
+>
+ or &lt;a
+ href="https://learnxinyminutes.com/docs/vim/"
+ class="is-pretty-link">learn VIM in X minutes&lt;/a
+>
+ .&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;ul>
+&lt;li>Another lightweight text-mode editor is &lt;strong>nano&lt;/strong>. It provides a self-explanatory key-combination menu at the bottom of the screen. An online manual can be found &lt;a
+ href="https://www.nano-editor.org/dist/v2.1/nano.html"
+ class="is-pretty-link">here&lt;/a
+>
+.&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;ul>
+&lt;li>A more modern alternative to &amp;ldquo;nano&amp;rdquo; is &lt;strong>micro&lt;/strong> . On Grex it is available only as module (&lt;code>module load micro&lt;/code>) . &lt;strong>micro&lt;/strong> supports syntax coloring for a number of programming languages. The webpage of &lt;a
+ href="https://micro-editor.github.io/"
+ class="is-pretty-link">micro&lt;/a
+>
+ .&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;ul>
+&lt;li>Midnight Commander file manager provides a text-mode editor that can be invoked stand-alone as &lt;strong>mc -e filename&lt;/strong>, or from within &lt;strong>mc&lt;/strong> by using F4 or Edit menu item on a selected file.&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;h2 id='gui-text-editors'>GUI Text editors&lt;a href='#gui-text-editors' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;!--
+Sometimes it is useful (for example, for copy/paste operations with mouse, between client computer and a remote session) or convenient to have a text editor with a graphical user interface. Note that a most practical way to use this is from X2Go sessions that provide tolerable interaction speeds.
+-->
+&lt;p>Vi has a GUI counterpart which is accessible as &lt;strong>evim&lt;/strong> command. There are also the following GUI editors: &lt;strong>nedit&lt;/strong> and &lt;strong>xfe-xfw&lt;/strong>.&lt;/p></description></item><item><title>Running MATLAB on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/matlab/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/matlab/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>&lt;a
+ href="http://www.mathworks.com/"
+ class="is-pretty-link">MATLAB&lt;/a
+>
+ is a general-purpose high-level programming package for numerical work such as linear algebra, signal processing and other calculations involving matrices or vectors of data. We have a campus license for MATLAB which is used on Grex and other local computing resources. &lt;!-- MATLAB is available only for UManitoba users.-->&lt;/p>
+&lt;p>As with most of the Grex software, MATLAB is available as a module. The following command will load the latest version available on Grex:&lt;/p></description></item><item><title>Running NWChem on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/nwchem/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/nwchem/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>&lt;a
+ href="https://nwchemgit.github.io/"
+ class="is-pretty-link">NWChem&lt;/a
+>
+ is a Scalable open source solution for large scale molecular simulations. NWChem is actively developed by a consortium of developers and maintained by the EMSL located at the Pacific Northwest National Laboratory (PNNL) in Washington State. The code is distributed as open-source under the terms of the Educational Community License version 2.0 (ECL 2.0).&lt;/p>
+&lt;h2 id='system-specific-notes'>System specific notes&lt;a href='#system-specific-notes' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>On the Grex software stack, NWChem is using OpenMPI 3.1 with Intel compilers toolchains. To find out which versions are available, use &lt;strong>module spider nwchem&lt;/strong>.&lt;/p></description></item><item><title>Running ORCA on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/orca/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/orca/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>&lt;a
+ href="http://cec.mpg.de/forum/"
+ class="is-pretty-link">ORCA&lt;/a
+>
+ is a flexible, efficient and easy-to-use general purpose tool for quantum chemistry with specific emphasis on spectroscopic properties of open-shell molecules. It features a wide variety of standard quantum chemical methods ranging from semi-empirical methods to DFT to single - and multi-reference correlated ab initio methods. It can also treat environmental and relativistic effects.&lt;/p>
+&lt;h2 id='user-responsibilities-and-access'>User Responsibilities and Access&lt;a href='#user-responsibilities-and-access' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>ORCA is a proprietary software, even if it is free it still requires you to agree to the ORCA license conditions. We have installed ORCA on Grex, but to access the binaries, each of the ORCA users has to confirm they have accepted the license terms.&lt;/p></description></item><item><title>Slurm partitions</title><link>https://um-grex.github.io/grex-docs/running-jobs/slurm-partitions/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/running-jobs/slurm-partitions/</guid><description>&lt;h2 id='partitions'>Partitions&lt;a href='#partitions' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>The current Grex system that has contributed nodes, large memory nodes and contributed GPU nodes is (and getting more and more) heterogeneous. With SLURM, as a scheduler, this requires partitioning: a &amp;ldquo;partition&amp;rdquo; is a set of compute nodes, grouped by a characteristic, usually by the kind of hardware the nodes have, and sometimes by who &amp;ldquo;owns&amp;rdquo; the hardware as well.&lt;/p>
+&lt;p>There is no fully automatic selection of partitions, other than the default &lt;strong>skylake&lt;/strong> for most of the users for the short jobs. For the contributors&amp;rsquo; group members, the default partition will be their contributed nodes. &lt;strong>Thus, in many cases users have to specify the partition manually when submitting their jobs!&lt;/strong>&lt;/p></description></item><item><title>Running VASP on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/vasp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/vasp/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>&lt;a
+ href="https://www.vasp.at/wiki/index.php/The_VASP_Manual"
+ class="is-pretty-link">VASP&lt;/a
+>
+ is a massively parallel plane-wave solid state DFT code. On Grex it is available only for the research groups that hold VASP licenses. To get access, PIs would need to send us a confirmation email from the VASP vendor, detailing the status of their license and a list of users allowed to use it.&lt;/p>
+&lt;h2 id='system-specific-notes'>System specific notes&lt;a href='#system-specific-notes' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;!--On the Grex local software stack, we have VASP 5 and VASP 6 using Intel compiler and OpenMPI 3.1.--> 
+&lt;p>To find out which versions of VASP are available, use &lt;code>module spider vasp&lt;/code> .&lt;/p></description></item><item><title>Using Multi-Factor Authentication (MFA) on Grex</title><link>https://um-grex.github.io/grex-docs/connecting/mfa/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/connecting/mfa/</guid><description>&lt;h2 id='important-notices'>Important Notices&lt;a href='#important-notices' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;ul>
+&lt;li>&lt;strong>As of January 9, 2024 MFA is enforced for all UManitoba/Grex users.&lt;/strong>&lt;/li>
+&lt;li>We appreciate your attention to this matter and encourage you to enroll at your earliest convenience to ensure a smooth transition. Should you have any questions or require further assistance, please don&amp;rsquo;t hesitate to reach out to your local HPC team.&lt;/li>
+&lt;li>If some of your work relies on unattended connections or automations that may be disrupted by MFA, we ask that you do not enroll yet, and instead &lt;a
+ href="mailto:support@tech.alliancecan.ca"
+ class="is-pretty-link">contact us&lt;/a
+>
+ for technical support, so that we can work with you on a solution.&lt;/li>
+&lt;li>Please note that enrolling in MFA for Grex, makes MFA active and enforced also on the Alliance National systems as well, and vice versa. If this does not work for you, please &lt;a
+ href="mailto:support@tech.alliancecan.ca"
+ class="is-pretty-link">contact us&lt;/a
+>
+.&lt;/li>
+&lt;/ul>
+&lt;h2 id='multi-factor-authentication'>Multi-Factor Authentication&lt;a href='#multi-factor-authentication' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>Both Digital Research Alliance of Canada and our UManitoba HPC systems, are proceeding with the ongoing implementation of a multifactor authentication (MFA) system.
+MFA adds an additional layer of security to the traditional password-based and SSH keys authentications by requiring a second factor, known as &amp;ldquo;something you have&amp;rdquo;.
+The Cisco Duo product was chosen as the provider for this additional authentication factor.
+Grex is using the Duo instance provided by the Alliance. The available additional factors and even the MFA provider are not the same as those used by the University of Manitoba for platforms such as UM Intranet and University MS Office products.&lt;/p></description></item><item><title>Connecting to Grex with SSH</title><link>https://um-grex.github.io/grex-docs/connecting/ssh/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/connecting/ssh/</guid><description>&lt;h2 id='ssh'>SSH&lt;a href='#ssh' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>Most of the work on shared HPC computing systems is done via Linux command line / Shell. To connect, in a secure manner, to a remote Linux system, you would like to use SSH protocol. You will need to have:&lt;/p>
+&lt;blockquote>
+&lt;ul>
+&lt;li>access to the Internet that lets SSH ports open.&lt;/li>
+&lt;li>a user account on Grex (presently, it is a Compute Canada (an Alliance) Account).&lt;/li>
+&lt;li>and an SSH client for your operating system.&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;p>If you are not sure what your account on Grex is, check &lt;a
+ href="https://www.computecanada.ca/research-portal/account-management/apply-for-an-account/"
+ class="is-pretty-link">Getting Access&lt;/a
+>
+. You will also need the DNS name of Grex Which is &lt;strong>grex.hpc.umanitoba.ca&lt;/strong>&lt;/p></description></item><item><title>How to run interactive jobs on Grex?</title><link>https://um-grex.github.io/grex-docs/running-jobs/interactive-jobs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/running-jobs/interactive-jobs/</guid><description>&lt;h2 id='interactive-work'>Interactive work&lt;a href='#interactive-work' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>The login nodes of Grex are shared resources and should be used for basic operations such as (but not limited) to:&lt;/p>
+&lt;blockquote>
+&lt;ul>
+&lt;li>edit files&lt;/li>
+&lt;li>compile codes and run short interactive calculations.&lt;/li>
+&lt;li>configure and build programs (limit the number of threads to 4: make -j4)&lt;/li>
+&lt;li>submit and monitor jobs&lt;/li>
+&lt;li>transfer and/or download data&lt;/li>
+&lt;li>run short tests, &amp;hellip; etc.&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;p>In other terms, anything that is not CPU, nor memory intensive [for example, a test with up to 4 CPUs, less than 2 Gb per core for 30 minutes or less].&lt;/p></description></item><item><title>Modules and software stacks</title><link>https://um-grex.github.io/grex-docs/software/using-modules/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/software/using-modules/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;!--
+&lt;div class="sc-collapsible-container">
+ &lt;div class="sc-collapsible-header">Modules allow for clean and dynamic modification of the user&amp;#39;s Linux session environment&lt;/div>
+ &lt;div class="sc-collapsible-content">&lt;/div>
+&lt;/div>
+
+-->
+&lt;p>On a Linux server or a Linux desktop, software can be installed in one of the standard locations, such as &lt;em>/usr/bin&lt;/em>. This is where most of the system-level software binaries can be found. For custom user-built software it is a good practice to install it separately from the standard location, to avoid potential conflicts and make changes and uninstallation possible. One of the common locations would be under &lt;em>/usr/local/&lt;/em>, as in &lt;em>/usr/local/My_Custom_software/&lt;/em> , or under &lt;em>/opt&lt;/em> (&lt;em>/opt/My_Other_custom_software&lt;/em>).&lt;/p></description></item><item><title>Using Python for ML on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/python-ai/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/python-ai/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>Python is a dynamic language with many optional Library &amp;ldquo;modules&amp;rdquo; available. Moreover, Python is often used as a &amp;ldquo;glue&amp;rdquo; language for interacting with tools and libraries written in other languages (C/C++, Fortran, CUDA, etc.).
+This makes maintenance of Python software difficult. Not only do Python and libraries need to be of the right versions, but also other software they depend on should be of the same versions that have been used to build the corresponding packages.&lt;/p></description></item><item><title>Running batch jobs on Grex</title><link>https://um-grex.github.io/grex-docs/running-jobs/batch-jobs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/running-jobs/batch-jobs/</guid><description>&lt;h2 id='batch-jobs'>Batch jobs&lt;a href='#batch-jobs' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>HPC systems usually are &lt;strong>clusters&lt;/strong> of many compute nodes, which are joined by an interconnect (like InfiniBand (IB) or Omni-PATH (OPA)), and under control of a resource management software (for example SLURM). From the users&amp;rsquo; point of view, the HPC system is a unity, a single large machine rather than a network of individual computers. Most of the time, HPC systems are used in batch mode: users would submit so-called &amp;ldquo;jobs&amp;rdquo; to a &amp;ldquo;batch queue&amp;rdquo;. A subset of the available resources of the HPC machine is allocated to each of the users&amp;rsquo; batch jobs, and they run without any need for user intervention as soon as the resources become available.&lt;/p></description></item><item><title>Code Development on Grex</title><link>https://um-grex.github.io/grex-docs/software/code-development/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/software/code-development/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>Grex comes with a sizable software stack that contains most of the software development environment for typical HPC applications. This section of the documentation covers best practices for compiling and building your own software on Grex.&lt;/p>
+&lt;p>On Grex, login nodes can be used to compile software and to run short interactive and/or test runs. All other jobs must be submitted to the &lt;a
+ href="https://um-grex.github.io/grex-docs/grex-docs/running-jobs/batch-jobs/"
+ class="is-pretty-link">batch&lt;/a
+>
+ system. User sessions on the login nodes are limited by &lt;em>cgroups&lt;/em> to prevent resource congestion. Thus, it sometimes makes sense to perform some of the code development in interactive jobs, in cases such as (but not limited to):&lt;/p></description></item><item><title>Workshops - 2024</title><link>https://um-grex.github.io/grex-docs/training/workshops-2024/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/training/workshops-2024/</guid><description>&lt;h2 id='autumn-workshop-october-2024'>Autumn workshop, October 2024&lt;a href='#autumn-workshop-october-2024' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;div class="sc-alert sc-alert-warning">This workshop presented for a group of users from Bannatyne campus to explain the isage of a contributed partition. However, most of the materiel (software, singularity, podman, slurm, &amp;hellip;) from the following slides still valid for general use.&lt;/div>
+
+&lt;ul>
+&lt;li>&lt;strong>Date:&lt;/strong> Oct 31 - Nov 01, 2024&lt;/li>
+&lt;/ul>
+&lt;p>Below are the slides from the workshop that was held on Oct 31 and Nov 1, 2024:&lt;/p>
+&lt;blockquote>
+&lt;ul>
+&lt;li>&lt;strong>Start Guide for Using Grex efficiently&lt;/strong>: &lt;a
+ href="https://um-grex.github.io/grex-docs/grex-docs/workshops/autumn2024/Start_Guide-and_Grex-Usage-Oct2024.pdf"
+ class="is-pretty-link">Slides&lt;/a
+>
+&lt;/li>
+&lt;li>&lt;strong>Containers in HPC: Singularity/Apptainer&lt;/strong>: &lt;a
+ href="https://um-grex.github.io/grex-docs/grex-docs/workshops/autumn2024/Singularity-Apptainer.pdf"
+ class="is-pretty-link">Slides&lt;/a
+>
+&lt;/li>
+&lt;li>&lt;strong>Containers in HPC – Podman&lt;/strong>: &lt;a
+ href="https://um-grex.github.io/grex-docs/grex-docs/workshops/autumn2024/introduction_podman.pdf"
+ class="is-pretty-link">Slides&lt;/a
+>
+&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;!--
+## Autumn workshop, October 2024
+---
+
+__Updates about High-Performance Computing resources, and HPC user workshop for UManitoba users.__
+
+* __Date:__ Oct 9, 10, 15 2024
+* __Time:__ 10:30 AM - 2:30 PM, Winnipeg Time
+ 
+Join Us for the Semi-Annual Online High-Performance Computing (HPC) Workshop!
+
+Are you new to High-Performance computing or looking to better understand available resources? Our Semi-Annual HPC Workshop is the perfect opportunity to start and learn more about both national and local computing resources. This workshop will provide updates about the upcoming Digital Alliance of Canada’s Resource Allocation Call (RAC), news about the recent upgrade of UManitoba’s local HPC system Grex, followed by introductory sessions explaining how to use the available HPC and cloud computing resources efficiently. 
+
+Key Highlights:
+
+* Introduction to national and local HPC resources and National RAC.
+* Updates on the latest developments, including the Grex Upgrade project
+* Guidance on how to get started using HPC and Community cloud systems for your research
+
+This event will help you get started with HPC and familiarize you with essential tools and resources.
+
+### __Wednesday (Oct 9th), 10 AM to 3 PM:__ 
+
+> RAC, Grex updates followed by Introduction to Linux Shell and HPC software modules
+
+* HPC intro, architecture, resources (20 min)
+* Updates for Grex SISF changes (10 min)
+* Updates for Alliance RAC 2024 (20 min)
+* Where and how to start with HPC? (50 mn)
+* Break
+* Basics of Linux Shell (40 min)
+* Using HPC software stacks (1h)
+
+### __Thursday (Oct 10th) 10 AM to 2 PM:__ 
+
+> Introduction to running HPC jobs with SLURM in various contexts (command line, OpenOnDemand and Jupyter).
+
+* Running jobs with SLURM (Only running)
+* break
+* Running jobs with Open OnDemand (40 min)
+* Using Jupyter notebooks as jobs (20-30 min demo of ssh tunnels, OOD and JH on National systems)
+* Advanced HPC usage, Getting most of HPC (40 min).
+
+### __Tuesday (Oct 15) 10 AM to 2 PM:__ 
+
+> Introduction to using containers (Apptainer/Singularity and Podman) in HPC. Introduction to using the Alliance’s OpenStack Cloud.
+
+* Using containers in HPC (A Singularity/Apptainer talk) (40 min)
+* Using containers in HPC (A Docker/Podman talk) (40 min)
+* Break
+* Basics of using OpenStack cloud (Up to starting and connecting to VM) (1h).
+-->
+&lt;hr>
+&lt;h2 id='fall-data-4010-seminars-september-2024'>Fall DATA-4010 seminars, September 2024&lt;a href='#fall-data-4010-seminars-september-2024' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>Below are the slides from the DATA 4010 seminars that were held on September 18 and 25, 2024:&lt;/p></description></item><item><title>Connect and Transfer data with OOD</title><link>https://um-grex.github.io/grex-docs/connecting/ood/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/connecting/ood/</guid><description>&lt;h2 id='osc-openondemand-on-grex'>OSC OpenOnDemand on Grex&lt;a href='#osc-openondemand-on-grex' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>OpenOnDemand is a Web portal appication for High-Performance Computing systems. It is used on many of the Top 500 HPC machines across the World.
+Grex&amp;rsquo;s current OOD v.3 instance runs on a dedicared login node &lt;strong>zebu.hpc.umanitoba.ca&lt;/strong> .
+It is available only from UManitoba IP addresses &amp;ndash; that is, your computer should be on the UM Campus network or the UM VPN to connect.&lt;/p>
+&lt;p>To connect from outside the UM network, please install and start &lt;a
+ href="https://umanitoba.ca/computing/ist/connect/virtualpn.html"
+ class="is-pretty-link">UManitoba Virtual Private Network&lt;/a
+>
+. OOD relies on in-browser VNC sessions; so, a modern browser with HTML5 support is required; we recommend Google Chrome or Firefox and its derivatives (Waterfox, for example).&lt;/p></description></item><item><title>Containers for Software</title><link>https://um-grex.github.io/grex-docs/software/containers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/software/containers/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>Linux Containers are means to isolate software dependencies from the base Linux operating system. Several different Linux container engines exist, most notably &lt;a
+ href="https://www.docker.com"
+ class="is-pretty-link">Docker&lt;/a
+>
+ which was first to emerge as the most popular tool in the DevOps community.&lt;/p>
+&lt;p>Since then, a lot of work had been done by major Linux players like Google, RedHat and others to develop an open standard for container runtimes, which developed based on Docker, &lt;a
+ href="https://opencontainers.org/"
+ class="is-pretty-link">OCI&lt;/a
+>
+.&lt;/p>
+&lt;p>There are HPC-specific container engines/runtimes that offer similar or equivalent functionality but allow for easier integration with shared Linux HPC systems. At the time of writing, the most widely used of them is the &lt;a
+ href="https://sylabs.io/guides/3.11/user-guide/"
+ class="is-pretty-link">Singularity&lt;/a
+>
+ container system, developed by a company called SyLabs, and its fork, a Linux Foundation project called &lt;a
+ href="https://apptainer.org/"
+ class="is-pretty-link">Apptainer&lt;/a
+>
+.
+They are &lt;a
+ href="https://apptainer.org/docs/user/latest/singularity_compatibility.html"
+ class="is-pretty-link">compatible&lt;/a
+>
+ with each other. Singularity/Apptainer provides functionality for running most Docker images by converting them to the Singularity Image format (SIF). However, Singularity/Apptainer own format is &lt;a
+ href="https://apptainer.org/docs/user/latest/docker_and_oci.html#differences-and-limitations-vs-docker"
+ class="is-pretty-link">not completely OCI-compatible&lt;/a
+>
+, so there exists Docker images that would not work properly.&lt;/p></description></item><item><title>Workshops - 2023</title><link>https://um-grex.github.io/grex-docs/training/workshops-2023/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/training/workshops-2023/</guid><description>&lt;h2 id='autumn-workshop-november-2023'>Autumn workshop, November 2023&lt;a href='#autumn-workshop-november-2023' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>Below are the slides from the Grex workshop that was held on November 6-8, 2023:&lt;/p>
+&lt;blockquote>
+&lt;ul>
+&lt;li>&lt;strong>Updates on Research Computing Resources&lt;/strong>: &lt;a
+ href="https://um-grex.github.io/grex-docs/grex-docs/workshops/autumn2023/01-Introduction.pdf"
+ class="is-pretty-link">Slides&lt;/a
+>
+&lt;/li>
+&lt;li>&lt;strong>Getting accounts, connecting, using Duo MFA&lt;/strong>: &lt;a
+ href="https://um-grex.github.io/grex-docs/grex-docs/workshops/autumn2023/02-Accounts-and-MFA.pdf"
+ class="is-pretty-link">Slides&lt;/a
+>
+&lt;/li>
+&lt;li>&lt;strong>Basics of Linux Shell&lt;/strong>: &lt;a
+ href="https://um-grex.github.io/grex-docs/grex-docs/workshops/autumn2023/03-Basics-of-Linux-Shell.pdf"
+ class="is-pretty-link">Slides&lt;/a
+>
+&lt;/li>
+&lt;li>&lt;strong>Beginner running HPC jobs with SLURM&lt;/strong>: &lt;a
+ href="https://um-grex.github.io/grex-docs/grex-docs/workshops/autumn2023/04-Running-Jobs-On-HPC-Clusters.pdf"
+ class="is-pretty-link">Slides&lt;/a
+>
+&lt;/li>
+&lt;li>&lt;strong>Using HPC with OpenOnDemand Web portal&lt;/strong>: &lt;a
+ href="https://um-grex.github.io/grex-docs/grex-docs/workshops/autumn2023/05-OSC-OnDemand-on-Grex.pdf"
+ class="is-pretty-link">Slides&lt;/a
+>
+&lt;/li>
+&lt;li>&lt;strong>Beginner HPC software overview&lt;/strong>: &lt;a
+ href="https://um-grex.github.io/grex-docs/grex-docs/workshops/autumn2023/06-HPC-Software-Overview.pdf"
+ class="is-pretty-link">Slides&lt;/a
+>
+&lt;/li>
+&lt;li>&lt;strong>Using containers in HPC (Apptainer, SingularityCE)&lt;/strong>: &lt;a
+ href="https://um-grex.github.io/grex-docs/grex-docs/workshops/autumn2023/07-SingularityApptainer.pdf"
+ class="is-pretty-link">Slides&lt;/a
+>
+&lt;/li>
+&lt;li>&lt;strong>Basics of using OpenStack cloud&lt;/strong>: &lt;a
+ href="https://um-grex.github.io/grex-docs/grex-docs/workshops/autumn2023/08-OpenStack-Cloud-Beginner.pdf"
+ class="is-pretty-link">Slides&lt;/a
+>
+&lt;/li>
+&lt;li>&lt;strong>Getting most of HPC system&lt;/strong>: &lt;a
+ href="https://um-grex.github.io/grex-docs/grex-docs/workshops/autumn2023/09-Monitoring-Jobs-and-Efficiency.pdf"
+ class="is-pretty-link">Slides&lt;/a
+>
+&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;hr>
+&lt;h2 id='fall-data-4010-seminars-september-2023'>Fall DATA-4010 seminars, September 2023&lt;a href='#fall-data-4010-seminars-september-2023' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>Below are the slides from the DATA 4010 seminars that were held on September 18 and 25, 2023:&lt;/p></description></item><item><title>Scheduling policies and running jobs on Contributed nodes</title><link>https://um-grex.github.io/grex-docs/running-jobs/contributed-systems/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/running-jobs/contributed-systems/</guid><description>&lt;h2 id='scheduling-policies-for-contributed-systems'>Scheduling policies for contributed systems&lt;a href='#scheduling-policies-for-contributed-systems' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;!--
+![](hpcc/grex-room-2020.png)
+-->
+&lt;p>Grex has a few user-contributed nodes. The owners of the hardware have preferred access to them. The current mechanism for the &amp;ldquo;preferred access&amp;rdquo; is preemption.&lt;/p>
+&lt;h2 id='on-the-definition-of-preferential-access-to-hpc-systems'>On the definition of preferential access to HPC systems&lt;a href='#on-the-definition-of-preferential-access-to-hpc-systems' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>Preferential access is when you have non-exclusive access to your hardware, in a sense that others can share in its usage over large enough periods. There are the following technical possibilities that rely on the HPC batch queueing technology we have. HPC makes access to CPU cores / GPUs / Memory exclusive per job, for the duration of the job (as opposed to time-sharing). Priority is a factor that decides which job gets to start (and thus exclude other jobs) first if there is a competitive situation (more jobs than free cores).&lt;/p></description></item><item><title>Using local disks: $TMPDIR</title><link>https://um-grex.github.io/grex-docs/running-jobs/using-localdisks/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/running-jobs/using-localdisks/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>High-Performance Computing (HPC) systems, such as Grex, typically provide a shared, scalable, POSIX-compliant filesystem that is accessible by all compute nodes.
+For Grex and the current generation of Alliance HPC machines, this shared filesystem is powered by &lt;a
+ href="https://www.lustre.org/"
+ class="is-pretty-link">Lustre FS&lt;/a
+>
+, which enables data sharing for compute jobs running on the cluster&amp;rsquo;s nodes. Due to its scalable design, Lustre FS can offer significant bandwidth for large parallel jobs through its parallelized Object Storage Targets (OSTs).&lt;/p></description></item><item><title>Workshops - 2022</title><link>https://um-grex.github.io/grex-docs/training/workshops-2022/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/training/workshops-2022/</guid><description>&lt;h2 id='autumn-workshop-october-2022'>Autumn workshop, October 2022&lt;a href='#autumn-workshop-october-2022' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>Below are the slides from the Grex workshop that was held on October 26-27, 2022:&lt;/p>
+&lt;blockquote>
+&lt;ul>
+&lt;li>&lt;strong>Program and updates&lt;/strong>: &lt;a
+ href="https://um-grex.github.io/grex-docs/grex-docs/workshops/autumn2022/Programme-And-Grex-Updates-Autumn2022.pdf"
+ class="is-pretty-link">Slides&lt;/a
+>
+&lt;/li>
+&lt;li>&lt;strong>High Performance Computing: Start Guide&lt;/strong>: &lt;a
+ href="https://um-grex.github.io/grex-docs/grex-docs/workshops/autumn2022/Start-Guide-HPC-Grex-Autumn2022.pdf"
+ class="is-pretty-link">Slides&lt;/a
+>
+&lt;/li>
+&lt;li>&lt;strong>High Performance Computing: software environments&lt;/strong>: &lt;a
+ href="https://um-grex.github.io/grex-docs/grex-docs/workshops/autumn2022/HPC-Software-Grex-Autumn2022.pdf"
+ class="is-pretty-link">Slides&lt;/a
+>
+&lt;/li>
+&lt;li>&lt;strong>OSC OpenOnDemand portal on Grex&lt;/strong>: &lt;a
+ href="https://um-grex.github.io/grex-docs/grex-docs/workshops/autumn2022/Using-OpenOndemand-On-Grex-Autumn2022.pdf"
+ class="is-pretty-link">Slides&lt;/a
+>
+&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;h2 id='spring-workshop-may-2022'>Spring workshop, May 2022&lt;a href='#spring-workshop-may-2022' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>Below are the slides from the Grex workshop that was held on May 4-5, 2022:&lt;/p>
+&lt;blockquote>
+&lt;ul>
+&lt;li>&lt;strong>Introduction to local and National HPC at UManitoba: How to use available software and run jobs efficiently&lt;/strong>: &lt;a
+ href="https://um-grex.github.io/grex-docs/grex-docs/workshops/spring2022/Intro-Program-Spring2022.pdf"
+ class="is-pretty-link">Slides&lt;/a
+>
+&lt;/li>
+&lt;li>&lt;strong>Introduction to High Performance Computing step by step: From getting an account to running jobs&lt;/strong>: &lt;a
+ href="https://um-grex.github.io/grex-docs/grex-docs/workshops/spring2022/HPC-Step-by-Step-Grex-Spring2022.pdf"
+ class="is-pretty-link">Slides&lt;/a
+>
+&lt;/li>
+&lt;li>&lt;strong>Using GP GPU compute on Grex&lt;/strong>: &lt;a
+ href="https://um-grex.github.io/grex-docs/grex-docs/workshops/spring2022/Using-GPU-Nodes-Grex-Spring2022.pdf"
+ class="is-pretty-link">Slides&lt;/a
+>
+&lt;/li>
+&lt;li>&lt;strong>High Performance Computing and software environments&lt;/strong>: &lt;a
+ href="https://um-grex.github.io/grex-docs/grex-docs/workshops/spring2022/HPC-Soft-Env-Grex-Spring2022.pdf"
+ class="is-pretty-link">Slides&lt;/a
+>
+&lt;/li>
+&lt;li>&lt;strong>OSC OpenOnDemand portal on Grex&lt;/strong>: &lt;a
+ href="https://um-grex.github.io/grex-docs/grex-docs/workshops/spring2022/OpenOndemand-Grex-Spring2022.pdf"
+ class="is-pretty-link">Slides&lt;/a
+>
+&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;hr>
+&lt;!-- &lt;div class="sc-treeview">&lt;div class="sc-alert sc-alert-warning">No data available&lt;/div>&lt;/div>
+ -->
+&lt;!-- Changes and update:
+* Last revision: Aug 28, 2024. 
+--></description></item><item><title>CVMFS and the Alliance software stack</title><link>https://um-grex.github.io/grex-docs/software/cern-vmfs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/software/cern-vmfs/</guid><description>&lt;h2 id='cc-cernvmfs-on-grex'>CC CernVMFS on Grex&lt;a href='#cc-cernvmfs-on-grex' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>&lt;a
+ href="https://cernvm.cern.ch/portal/filesystem"
+ class="is-pretty-link">CVMFS or CernVM FS&lt;/a
+>
+ stands for CernVM File System. It provides a scalable, reliable and low-maintenance software distribution service. CVMFS was originally developed to assist High Energy Physics (HEP) collaborations to deploy software on the worldwide-distributed computing infrastructure used to run data processing applications. Since then it has been used as a a generic way of distributing software.
+Presently, we use CernVMFS (CVMFS) to provide the Alliance&amp;rsquo;s (or Compute Canada&amp;rsquo;s) software stack. Through the Alliance CVMVS servers, several other publically available CVMFS software repositories are available as well.
+The examples are a Singularity/Apptainer repository from &lt;a
+ href="https://opensciencegrid.org/"title="OpenScienceGrid" id="opensciencegrid"
+ class="is-pretty-link">OpenScienceGrid&lt;/a
+>
+, Extreme-Scale Scientific Software Stack &lt;a
+ href="https://e4s-project.github.io/"
+ class="is-pretty-link">E4S&lt;/a
+>
+, and a Genomics software colection (GenPipes/MUGQIC) from &lt;a
+ href="https://computationalgenomics.ca/"
+ class="is-pretty-link">C3G&lt;/a
+>
+. Note that we can only &amp;ldquo;pull&amp;rdquo; the software from these repositories. To actually add or change software, datasets, etc., or receive support, the respective organizations controlling these CVMFS repositories should be contacted directly.&lt;/p></description></item><item><title>Workshops - 2021</title><link>https://um-grex.github.io/grex-docs/training/workshops-2021/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/training/workshops-2021/</guid><description>&lt;h2 id='autumn-workshop-november-2021'>Autumn workshop, November 2021&lt;a href='#autumn-workshop-november-2021' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>Below are the slides from the Grex workshop that was held on November 01-02, 2021:&lt;/p>
+&lt;blockquote>
+&lt;ul>
+&lt;li>&lt;strong>Introduction to HPC: Basics: Steps from getting an account to submitting jobs&lt;/strong>: &lt;a
+ href="https://um-grex.github.io/grex-docs/grex-docs/workshops/autumn2021/Intro-to-HPC-Basics-Autumn2021.pdf"
+ class="is-pretty-link">Slides&lt;/a
+>
+&lt;/li>
+&lt;li>&lt;strong>Linux (Unix) shell basics&lt;/strong>: &lt;a
+ href="https://um-grex.github.io/grex-docs/grex-docs/workshops/autumn2021/Linux-Shell-Basics-autumn2021-2.pdf"
+ class="is-pretty-link">Slides&lt;/a
+>
+&lt;/li>
+&lt;li>&lt;strong>Software on HPC clusters&lt;/strong>: &lt;a
+ href="https://um-grex.github.io/grex-docs/grex-docs/workshops/autumn2021/Intro-HPC-Software-Env-Grex-autumn2021.pdf"
+ class="is-pretty-link">Slides&lt;/a
+>
+&lt;/li>
+&lt;li>&lt;strong>Scheduling jobs on HPC clusters: How to optimize your jobs and get more from the resources available?&lt;/strong>: &lt;a
+ href="https://um-grex.github.io/grex-docs/grex-docs/workshops/autumn2021/Adv-Scheduling-Jobs-HPC-Cluster-Grex-autumn2021.pdf"
+ class="is-pretty-link">Slides&lt;/a
+>
+&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;h2 id='spring-workshop-april-2021'>Spring workshop, April 2021&lt;a href='#spring-workshop-april-2021' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>Below are the slides from the Grex workshop that was held on April 21-22, 2021:&lt;/p></description></item><item><title>Data sizes and quotas</title><link>https://um-grex.github.io/grex-docs/storage/data-sizes-and-quota/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/storage/data-sizes-and-quota/</guid><description>&lt;h2 id='data-size-and-quotas'>Data size and quotas&lt;a href='#data-size-and-quotas' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>This section explains how to find the actual space and inode usage of &lt;strong>/home/&lt;/strong> and &lt;strong>/project&lt;/strong> allocations on Grex. We limit the size of the data and the number of files that can be stored on these filesystems. The table provides a &amp;ldquo;default&amp;rdquo; storage quota on Grex. Larger quota can be obtained on &lt;strong>/project&lt;/strong> via UM local RAC process.&lt;/p>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>File system&lt;/th>
+ &lt;th style="text-align: center">Type&lt;/th>
+ &lt;th style="text-align: center">Total space&lt;/th>
+ &lt;th style="text-align: center">Bulk Quota&lt;/th>
+ &lt;th style="text-align: center">Files Quota&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;strong>/home&lt;/strong>&lt;/td>
+ &lt;td style="text-align: center">NFSv4/RDMA&lt;/td>
+ &lt;td style="text-align: center">&lt;strong>15 TB&lt;/strong>&lt;/td>
+ &lt;td style="text-align: center">100 GB / user&lt;/td>
+ &lt;td style="text-align: center">0.5M per user&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;strong>/project&lt;/strong>&lt;/td>
+ &lt;td style="text-align: center">Lustre&lt;/td>
+ &lt;td style="text-align: center">&lt;strong>2 PB&lt;/strong>&lt;/td>
+ &lt;td style="text-align: center">5-20 TB / group&lt;/td>
+ &lt;td style="text-align: center">1M / user, 2M / group&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;p>To figure out where your current usage stands with the limit, POSIX &lt;strong>quota&lt;/strong> or Lustre&amp;rsquo;s analog, &lt;strong>lfs quota&lt;/strong>, commands can be used. A convenient command, &lt;strong>diskusage_report&lt;/strong> summarizes usage and quota across all the available filesystems.&lt;/p></description></item><item><title>How to use Jupyter notebooks on Grex?</title><link>https://um-grex.github.io/grex-docs/software/jupyter-notebook/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/software/jupyter-notebook/</guid><description>&lt;h1 id='jupyter-on-grex'>Jupyter on Grex&lt;a href='#jupyter-on-grex' class='anchor'>#&lt;/a>
+&lt;/h1>&lt;hr>
+&lt;p>&lt;a
+ href="https://jupyter.org/"
+ class="is-pretty-link">Jupyter&lt;/a
+>
+ is a Web-interface aimed to support interactive data science and scientific computing. Jupyter supports several dynamic languages, most notably Python, R and Julia. Jupyter offers a metaphor of &amp;ldquo;computational document&amp;rdquo; that combines code, data and visualizations, and can be published or shared with collaborators.&lt;/p>
+&lt;p>Jupyter can be used either as a simple, individual notebook or as a multi-user Web server/Interactive Development Environment (IDE), such as JupyterHub/JupyterLab. The JupyterHub servers can use a variety of computational back-end configurations: from free-for-all shared workstation to job spawning interfaces to HPC schedulers like SLURM or container workflow systems like Kubernetes.&lt;/p></description></item><item><title>Data Backup</title><link>https://um-grex.github.io/grex-docs/storage/data-backup/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/storage/data-backup/</guid><description>&lt;h2 id='backup-policies'>Backup policies&lt;a href='#backup-policies' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>Since late 2023, there has been a tape backup for user data stored on main Grex filesystems, &lt;strong>/home&lt;/strong> and &lt;strong>/project&lt;/strong>. Our limited resources and large amounts of data do put some limitations on what and how fast can be backed up and restored. All backup is done to tape in the same HPCC data centre.&lt;/p>
+&lt;p>The &lt;strong>/home&lt;/strong> filesystem is backed up daily using incremental backup. A new full backup is done quarterly.&lt;/p></description></item><item><title>Data sharing</title><link>https://um-grex.github.io/grex-docs/storage/data-sharing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/storage/data-sharing/</guid><description>&lt;h2 id='data-sharing'>Data Sharing&lt;a href='#data-sharing' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>By default, data on Grex are owned by the user and are not accessible to other Grex users or to external parties.&lt;/p>
+&lt;p>In research it’s often necessary to share datasets or code within a research group or with collaborating groups. This documentation explains how to share data stored on a specific HPC system, in this case, Grex. Sharing data outside the HPC system can be done through other methods, such as Globus or MS OneDrive.&lt;/p></description></item><item><title>Linux/SLURM update project</title><link>https://um-grex.github.io/grex-docs/changes/changes-before-2020/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/changes/changes-before-2020/</guid><description>&lt;h2 id='grex-defunded-since-april-2-2018'>Grex defunded since April 2, 2018&lt;a href='#grex-defunded-since-april-2-2018' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>Since being defunded by WestGrid (on April 2, 2018), Grex is now available only to the users affiliated with University of Manitoba and their collaborators. The old WestGrid documentation, hosted on the WestGrid website became irrelevant after the Grex upgrade, so please visit Grex’s New &lt;a
+ href="https://um-grex.github.io/grex-docs/grex-docs/"
+ class="is-pretty-link">Documentation&lt;/a
+>
+. Thus, if you are an experienced user in the previous “version” of Grex, you might benefit from reading this document: Description of Grex &lt;a
+ href="https://um-grex.github.io/grex-docs/grex-docs/changes/linux-slurm-update/"
+ class="is-pretty-link">changes&lt;/a
+>
+.&lt;/p></description></item></channel></rss>

@@ -1,6 +1,120 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Software and Applications on Grex</title><link>https://um-grex.github.io/grex-docs/software/</link><description>Recent content in Software and Applications on Grex</description><generator>Hugo</generator><language>en</language><copyright>The MIT License (MIT) Copyright © 2023 UM-Grex</copyright><atom:link href="https://um-grex.github.io/grex-docs/software/index.xml" rel="self" type="application/rss+xml"/><item><title>General Linux tools</title><link>https://um-grex.github.io/grex-docs/software/general-linux/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/software/general-linux/</guid><description>Linux tools on Grex# There are a number of general and distro-specific tools on Grex that are worth mentioning here. Such tools are: text editors, image viewers, file managers, &amp;hellip; etc.
-Command line Text editors# Command line text editors allow you to edit files right on Grex in any terminal session (such as SSH session or an X terminal under OOD):
-The (arguably) most popular editor is vi, or vim. It is very powerful, but requires some experience to use it.</description></item><item><title>Modules and software stacks</title><link>https://um-grex.github.io/grex-docs/software/using-modules/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/software/using-modules/</guid><description>Introduction# On a Linux server or a Linux desktop, software can be installed in one of the standard locations, such as /usr/bin. This is where most of the system-level software binaries can be found. For custom user-built software it is a good practice to install it separately from the standard location, to avoid potential conflicts and make changes and uninstallation possible. One of the common locations would be under /usr/local/, as in /usr/local/My_Custom_software/ , or under /opt (/opt/My_Other_custom_software).</description></item><item><title>Code Development on Grex</title><link>https://um-grex.github.io/grex-docs/software/code-development/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/software/code-development/</guid><description>Introduction# Grex comes with a sizable software stack that contains most of the software development environment for typical HPC applications. This section of the documentation covers best practices for compiling and building your own software on Grex.
-On Grex, login nodes can be used to compile software and to run short interactive and/or test runs. All other jobs must be submitted to the batch system. User sessions on the login nodes are limited by cgroups to prevent resource congestion.</description></item><item><title>Containers for Software</title><link>https://um-grex.github.io/grex-docs/software/containers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/software/containers/</guid><description>Introduction# Linux Containers are means to isolate software dependencies from the base Linux operating system. Several different Linux container engines exist, most notably Docker which was first to emerge as the most popular tool in the DevOps community.
-Since then, a lot of work had been done by major Linux players like Google, RedHat and others to develop an open standard for container runtimes, which developed based on Docker, OCI .</description></item><item><title>CVMFS and the Alliance software stack</title><link>https://um-grex.github.io/grex-docs/software/cern-vmfs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/software/cern-vmfs/</guid><description>CC CernVMFS on Grex# CVMFS or CernVM FS stands for CernVM File System. It provides a scalable, reliable and low-maintenance software distribution service. CVMFS was originally developed to assist High Energy Physics (HEP) collaborations to deploy software on the worldwide-distributed computing infrastructure used to run data processing applications. Since then it has been used as a a generic way of distributing software. Presently, we use CernVMFS (CVMFS) to provide the Alliance&amp;rsquo;s (or Compute Canada&amp;rsquo;s) software stack.</description></item><item><title>How to use Jupyter notebooks on Grex?</title><link>https://um-grex.github.io/grex-docs/software/jupyter-notebook/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/software/jupyter-notebook/</guid><description>Jupyter on Grex# Jupyter is a Web-interface aimed to support interactive data science and scientific computing. Jupyter supports several dynamic languages, most notably Python, R and Julia. Jupyter offers a metaphor of &amp;ldquo;computational document&amp;rdquo; that combines code, data and visualizations, and can be published or shared with collaborators.
-Jupyter can be used either as a simple, individual notebook or as a multi-user Web server/Interactive Development Environment (IDE), such as JupyterHub/JupyterLab. The JupyterHub servers can use a variety of computational back-end configurations: from free-for-all shared workstation to job spawning interfaces to HPC schedulers like SLURM or container workflow systems like Kubernetes.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Software and Applications on Grex</title><link>https://um-grex.github.io/grex-docs/software/</link><description>Recent content in Software and Applications on Grex</description><generator>Hugo</generator><language>en</language><copyright>The MIT License (MIT) Copyright © 2023 UM-Grex</copyright><atom:link href="https://um-grex.github.io/grex-docs/software/index.xml" rel="self" type="application/rss+xml"/><item><title>General Linux tools</title><link>https://um-grex.github.io/grex-docs/software/general-linux/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/software/general-linux/</guid><description>&lt;h2 id='linux-tools-on-grex'>Linux tools on Grex&lt;a href='#linux-tools-on-grex' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>There are a number of general and distro-specific tools on Grex that are worth mentioning here. Such tools are: &lt;strong>text editors&lt;/strong>, &lt;strong>image viewers&lt;/strong>, &lt;strong>file managers&lt;/strong>, &amp;hellip; etc.&lt;/p>
+&lt;h2 id='command-line-text-editors'>Command line Text editors&lt;a href='#command-line-text-editors' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>Command line text editors allow you to edit files right on Grex in any terminal session (such as SSH session or an X terminal under OOD):&lt;/p>
+&lt;blockquote>
+&lt;ul>
+&lt;li>The (arguably) most popular editor is &lt;strong>vi&lt;/strong>, or &lt;strong>vim&lt;/strong>. It is very powerful, but requires some experience to use it. To exit a &lt;strong>vim&lt;/strong> session, you can use the &lt;strong>ZZ&lt;/strong> key combination (hold shift key + zz), or &lt;strong>ESC, :x!&lt;/strong>. There are many vi tutorials around, for &lt;a
+ href="http://heather.cs.ucdavis.edu/~matloff/UnixAndC/Editors/ViIntro.html"
+ class="is-pretty-link">example this one&lt;/a
+>
+ or &lt;a
+ href="https://learnxinyminutes.com/docs/vim/"
+ class="is-pretty-link">learn VIM in X minutes&lt;/a
+>
+ .&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;ul>
+&lt;li>Another lightweight text-mode editor is &lt;strong>nano&lt;/strong>. It provides a self-explanatory key-combination menu at the bottom of the screen. An online manual can be found &lt;a
+ href="https://www.nano-editor.org/dist/v2.1/nano.html"
+ class="is-pretty-link">here&lt;/a
+>
+.&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;ul>
+&lt;li>A more modern alternative to &amp;ldquo;nano&amp;rdquo; is &lt;strong>micro&lt;/strong> . On Grex it is available only as module (&lt;code>module load micro&lt;/code>) . &lt;strong>micro&lt;/strong> supports syntax coloring for a number of programming languages. The webpage of &lt;a
+ href="https://micro-editor.github.io/"
+ class="is-pretty-link">micro&lt;/a
+>
+ .&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;ul>
+&lt;li>Midnight Commander file manager provides a text-mode editor that can be invoked stand-alone as &lt;strong>mc -e filename&lt;/strong>, or from within &lt;strong>mc&lt;/strong> by using F4 or Edit menu item on a selected file.&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;h2 id='gui-text-editors'>GUI Text editors&lt;a href='#gui-text-editors' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;!--
+Sometimes it is useful (for example, for copy/paste operations with mouse, between client computer and a remote session) or convenient to have a text editor with a graphical user interface. Note that a most practical way to use this is from X2Go sessions that provide tolerable interaction speeds.
+-->
+&lt;p>Vi has a GUI counterpart which is accessible as &lt;strong>evim&lt;/strong> command. There are also the following GUI editors: &lt;strong>nedit&lt;/strong> and &lt;strong>xfe-xfw&lt;/strong>.&lt;/p></description></item><item><title>Modules and software stacks</title><link>https://um-grex.github.io/grex-docs/software/using-modules/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/software/using-modules/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;!--
+&lt;div class="sc-collapsible-container">
+ &lt;div class="sc-collapsible-header">Modules allow for clean and dynamic modification of the user&amp;#39;s Linux session environment&lt;/div>
+ &lt;div class="sc-collapsible-content">&lt;/div>
+&lt;/div>
+
+-->
+&lt;p>On a Linux server or a Linux desktop, software can be installed in one of the standard locations, such as &lt;em>/usr/bin&lt;/em>. This is where most of the system-level software binaries can be found. For custom user-built software it is a good practice to install it separately from the standard location, to avoid potential conflicts and make changes and uninstallation possible. One of the common locations would be under &lt;em>/usr/local/&lt;/em>, as in &lt;em>/usr/local/My_Custom_software/&lt;/em> , or under &lt;em>/opt&lt;/em> (&lt;em>/opt/My_Other_custom_software&lt;/em>).&lt;/p></description></item><item><title>Code Development on Grex</title><link>https://um-grex.github.io/grex-docs/software/code-development/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/software/code-development/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>Grex comes with a sizable software stack that contains most of the software development environment for typical HPC applications. This section of the documentation covers best practices for compiling and building your own software on Grex.&lt;/p>
+&lt;p>On Grex, login nodes can be used to compile software and to run short interactive and/or test runs. All other jobs must be submitted to the &lt;a
+ href="https://um-grex.github.io/grex-docs/grex-docs/running-jobs/batch-jobs/"
+ class="is-pretty-link">batch&lt;/a
+>
+ system. User sessions on the login nodes are limited by &lt;em>cgroups&lt;/em> to prevent resource congestion. Thus, it sometimes makes sense to perform some of the code development in interactive jobs, in cases such as (but not limited to):&lt;/p></description></item><item><title>Containers for Software</title><link>https://um-grex.github.io/grex-docs/software/containers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/software/containers/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>Linux Containers are means to isolate software dependencies from the base Linux operating system. Several different Linux container engines exist, most notably &lt;a
+ href="https://www.docker.com"
+ class="is-pretty-link">Docker&lt;/a
+>
+ which was first to emerge as the most popular tool in the DevOps community.&lt;/p>
+&lt;p>Since then, a lot of work had been done by major Linux players like Google, RedHat and others to develop an open standard for container runtimes, which developed based on Docker, &lt;a
+ href="https://opencontainers.org/"
+ class="is-pretty-link">OCI&lt;/a
+>
+.&lt;/p>
+&lt;p>There are HPC-specific container engines/runtimes that offer similar or equivalent functionality but allow for easier integration with shared Linux HPC systems. At the time of writing, the most widely used of them is the &lt;a
+ href="https://sylabs.io/guides/3.11/user-guide/"
+ class="is-pretty-link">Singularity&lt;/a
+>
+ container system, developed by a company called SyLabs, and its fork, a Linux Foundation project called &lt;a
+ href="https://apptainer.org/"
+ class="is-pretty-link">Apptainer&lt;/a
+>
+.
+They are &lt;a
+ href="https://apptainer.org/docs/user/latest/singularity_compatibility.html"
+ class="is-pretty-link">compatible&lt;/a
+>
+ with each other. Singularity/Apptainer provides functionality for running most Docker images by converting them to the Singularity Image format (SIF). However, Singularity/Apptainer own format is &lt;a
+ href="https://apptainer.org/docs/user/latest/docker_and_oci.html#differences-and-limitations-vs-docker"
+ class="is-pretty-link">not completely OCI-compatible&lt;/a
+>
+, so there exists Docker images that would not work properly.&lt;/p></description></item><item><title>CVMFS and the Alliance software stack</title><link>https://um-grex.github.io/grex-docs/software/cern-vmfs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/software/cern-vmfs/</guid><description>&lt;h2 id='cc-cernvmfs-on-grex'>CC CernVMFS on Grex&lt;a href='#cc-cernvmfs-on-grex' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>&lt;a
+ href="https://cernvm.cern.ch/portal/filesystem"
+ class="is-pretty-link">CVMFS or CernVM FS&lt;/a
+>
+ stands for CernVM File System. It provides a scalable, reliable and low-maintenance software distribution service. CVMFS was originally developed to assist High Energy Physics (HEP) collaborations to deploy software on the worldwide-distributed computing infrastructure used to run data processing applications. Since then it has been used as a a generic way of distributing software.
+Presently, we use CernVMFS (CVMFS) to provide the Alliance&amp;rsquo;s (or Compute Canada&amp;rsquo;s) software stack. Through the Alliance CVMVS servers, several other publically available CVMFS software repositories are available as well.
+The examples are a Singularity/Apptainer repository from &lt;a
+ href="https://opensciencegrid.org/"title="OpenScienceGrid" id="opensciencegrid"
+ class="is-pretty-link">OpenScienceGrid&lt;/a
+>
+, Extreme-Scale Scientific Software Stack &lt;a
+ href="https://e4s-project.github.io/"
+ class="is-pretty-link">E4S&lt;/a
+>
+, and a Genomics software colection (GenPipes/MUGQIC) from &lt;a
+ href="https://computationalgenomics.ca/"
+ class="is-pretty-link">C3G&lt;/a
+>
+. Note that we can only &amp;ldquo;pull&amp;rdquo; the software from these repositories. To actually add or change software, datasets, etc., or receive support, the respective organizations controlling these CVMFS repositories should be contacted directly.&lt;/p></description></item><item><title>How to use Jupyter notebooks on Grex?</title><link>https://um-grex.github.io/grex-docs/software/jupyter-notebook/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/software/jupyter-notebook/</guid><description>&lt;h1 id='jupyter-on-grex'>Jupyter on Grex&lt;a href='#jupyter-on-grex' class='anchor'>#&lt;/a>
+&lt;/h1>&lt;hr>
+&lt;p>&lt;a
+ href="https://jupyter.org/"
+ class="is-pretty-link">Jupyter&lt;/a
+>
+ is a Web-interface aimed to support interactive data science and scientific computing. Jupyter supports several dynamic languages, most notably Python, R and Julia. Jupyter offers a metaphor of &amp;ldquo;computational document&amp;rdquo; that combines code, data and visualizations, and can be published or shared with collaborators.&lt;/p>
+&lt;p>Jupyter can be used either as a simple, individual notebook or as a multi-user Web server/Interactive Development Environment (IDE), such as JupyterHub/JupyterLab. The JupyterHub servers can use a variety of computational back-end configurations: from free-for-all shared workstation to job spawning interfaces to HPC schedulers like SLURM or container workflow systems like Kubernetes.&lt;/p></description></item></channel></rss>
