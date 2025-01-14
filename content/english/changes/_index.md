@@ -16,6 +16,7 @@ bannerContent: "**Upcoming external network changes**"
 This page is dedicated to the cluster updates: software, hardware, storage, ... etc.
 -->
 
+<!--
 ## Upcoming changes to Grex external network
 ---
 
@@ -34,7 +35,7 @@ ssh your-user-name@yak.hpc.umanitoba.ca
 {{< alert type="warning" >}}
 Please note that **yak** has **avx512** CPU architecture and if you have to use it for compiling your codes, they may not run on the "compute" partition that has older CPUs. Other than that, it should behave as any other old login node. The other nodes (tatanka, bison, aurochs, and the alias grex) will be migrated later this summer. 
 {{< /alert >}}
-
+-->
 
 ## Internal links
 ---
@@ -45,6 +46,6 @@ Please note that **yak** has **avx512** CPU architecture and if you have to use 
 
 <!-- Changes and update:
 * 
-*
+* Jan 2025: commented out old notice for network and avx512
 *
 -->

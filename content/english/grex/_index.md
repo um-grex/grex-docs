@@ -13,10 +13,11 @@ bannerContent: "__SCRATCH - OS and LUSTRE UPDATES__"
 ## Introduction
 ---
 
-__Grex__ is a UManitoba High Performance Computing (HPC) system, first put in production in early __2011__ as part of WestGrid consortium. "Grex" is a _Latin_ name for "herd" (or maybe "flock"?). The names of the Grex login nodes ([bison](https://en.wikipedia.org/wiki/Bison "Bison"), tatanka, [zebu](https://en.wikipedia.org/wiki/Zebu "Zebu"), [yak](https://en.wikipedia.org/wiki/Yak "Yak")) also refer to various kinds of bovine animals.
+__Grex__ is a UManitoba High Performance Computing (HPC) system, first put in production in early __2011__ as part of WestGrid consortium. "Grex" is a _Latin_ name for "herd" (or maybe "flock"?). The names of the Grex login nodes ([bison](https://en.wikipedia.org/wiki/Bison "Bison"), [yak](https://en.wikipedia.org/wiki/Yak "Yak")) also refer to various kinds of bovine animals.
 
 {{< alert type="warning" >}}
-Please note that _bison_ and _tatanka_ are decommissioned during and after the outage of August - September 2024. These login nodes are no longer available.
+Please note that older login nodes  _tatanka_ and _zebu_ are decommissioned during and after the outage of August - September 2024. These login nodes are no longer available.
+
 For more information, visit the updates [page](updates)
 {{< /alert >}}
 
@@ -61,14 +62,12 @@ On Grex, there are multiple login nodes:
 * __Grex__: grex.hpc.umanitoba.ca
 -->
 * __Yak__: yak.hpc.umanitoba.ca (please note that the architecture for this node is avx512).
-* __Grex__: grex.hpc.umanitoba.ca is now an alias to the above Yak login node
-* __Zebu__: https://zebu.hpc.umanitoba.ca (only used for [OOD](/ood) and requires VPN if used outside campus network).
+* __Bison__: bison.hpc.umanitoba.ca (a second login nodes similar to Yak)
+* __Grex__: grex.hpc.umanitoba.ca is a DNS alias to the above Yak and Bison login nodes
+* __OOD__: https://ood.hpc.umanitoba.ca (only used for [OpenOnDemand Web interface](/ood) and requires VPN if used outside campus network).
 
-To login to Grex in the text (bash) mode, connect to __grex.hpc.umanitoba.ca__ or __yak.hpc.umanitoba.ca__ using a secure shell client, [SSH](connecting/#ssh). 
+To login to Grex in the text (bash) mode, connect to __grex.hpc.umanitoba.ca__  using a secure shell client, [SSH](connecting/#ssh). 
 
-<!--
-The DNS name __grex.hpc.umanitoba.ca__ serves as an alias for two login nodes: __bison.hpc.umanitoba.ca__ and __tatanka.hpc.umanitoba.ca__ . 
--->
 
 ### CPU nodes
 ---
@@ -79,16 +78,29 @@ In addition to the original nodes, new skylake and AMD nodes have been added to 
 | :-------:           | :-------------: | :-------: | :------: | :-----: |
 | Intel CPU           | 12              | **40**    | 384 GB   | EDR 100GB/s IB interconnect |
 | Intel 6230R         | 42              | **52**    | 188 GB   | EDR 100GB/s IB interconnect |
+| AMD EPYC 9654[^1]   | 31              | **192**   | 750 GB   | HDR 200GB/s IB interconnect |
+| AMD EPYC 9654[^1]   |  4              | **192**   | 1500 GB  | HDR 200GB/s IB interconnect |
+| AMD EPYC 9634[^2]   |  5              | **168**   | 1500 GB  | HDR 100GB/s IB interconnect |
+
+<!--
+
+| Hardware            | Number of nodes | CPUs/Node | Mem/Node | Network |
+| :-------:           | :-------------: | :-------: | :------: | :-----: |
+| Intel CPU           | 12              | **40**    | 384 GB   | EDR 100GB/s IB interconnect |
+| Intel 6230R         | 42              | **52**    | 188 GB   | EDR 100GB/s IB interconnect |
 | AMD EPYC 9654       | 27              | **192**   | 750 GB   | HDR 200GB/s IB interconnect |
 | AMD EPYC 9654       |  3              | **192**   | 1500 GB  | HDR 200GB/s IB interconnect |
 | AMD EPYC 9634[^2]   |  5              | **168**   | 1500 GB  | HDR 100GB/s IB interconnect |
 
-<!--
+
 | Intel Xeon 5560[^1] | 312             | **12**    |  48 GB   | QDR 40GB/s IB interconnect  |
 [^1]: Original Grex nodes: **slated for decommission in the near furure**
 -->
 
+[^1]: Of these nodes, five are contributed by a group of CHRIM researchers.
 [^2]: CPU nodes contributed by Prof. Marcos Cordeiro (Department of Agriculture).
+
+
 
 ### GPU nodes
 ---
