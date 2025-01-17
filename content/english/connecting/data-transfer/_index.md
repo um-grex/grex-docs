@@ -19,21 +19,6 @@ The OpenSSH package, available on Linux, MacOS and recent versions of Windows, p
 Thus, on almost any system that allows for SSH connection, data transfers can be performed using these tools.
 OpenSSH encrypts all the traffic and provides several authentication options. A useful option for SCP and SFTP is to have a key pair, with the public key deposited in CCDB.
 
-### SFTP
----
-
-On Mac OS and Linux, where OpenSSH client packages are always available, the following command line tools are present: __scp__, __sftp__. They work like UNIX __cp__ and __ftp__ commands, except that there is a remote target or source. 
-
-SFTP opens a session and then drops the user to a command line, which provides commands like __ls__, __lls__, __get__, __put__, __cd__, __lcd__ to navigate the local and remote directories, upload and download files etc.
-
-{{< highlight bash >}}
-sftp someuser@grex.hpc.umanitoba.ca
-sftp> lls
-sftp> put  myfile.fchk
-{{< /highlight >}}
-
-Please replace __someuser__ with your username.
-
 ### SCP
 ---
 
@@ -59,6 +44,21 @@ scp ./myfile_bigdata.csv  someuser@grex.hpc.umanitoba.ca:/home/someuser/projects
 {{< /highlight >}}
 
 More information about OpenSSH file transfer tools exist on [OpenSSH SSP manpage](https://man.openbsd.org/scp). [The Alliance](https://docs.alliancecan.ca/wiki/Transferring_data#SCP "SCP") has a detailed Wiki entry on SCP.
+
+### SFTP
+---
+
+On Mac OS and Linux, where OpenSSH client packages are always available, the following command line tools are present: __scp__, __sftp__. They work like UNIX __cp__ and __ftp__ commands, except that there is a remote target or source. 
+
+SFTP opens a session and then drops the user to a command line, which provides commands like __ls__, __lls__, __get__, __put__, __cd__, __lcd__ to navigate the local and remote directories, upload and download files etc.
+
+{{< highlight bash >}}
+sftp someuser@grex.hpc.umanitoba.ca
+sftp> lls
+sftp> put  myfile.fchk
+{{< /highlight >}}
+
+Please replace __someuser__ with your username.
 
 ### File transfer SCP/SFTP clients with GUI
 ---
@@ -155,9 +155,9 @@ Often, there is more than one filesystem on a Linux machine the personal endpoin
 However, on Linux, Globus does no share everything by default, other than users $HOME ! Even when there exist symbolic links to __/project__ or __/scratch__, they would not yet be navigable in the Globus Web UI or CLI.
 Symbolic links across the filesystems do not work in Globus, unless both filesystems are shared!
 
-To enable sharing filesystems other than $HOME, the following special file has to be edited: ``` ~/.globusonline/lta/config-paths ```
-By default Globus creates this file with only one line, ```~/,0,1``` that corresonds to user's home directory. To add your project, or other filesystems, an extra line per filesystem must be added to the file.
-An example below shows a correct ```~/.globusonline/lta/config-paths``` file for Grex.
+To enable sharing filesystems other than $HOME, the following special file has to be edited: `~/.globusonline/lta/config-paths`
+By default Globus creates this file with only one line, `~/,0,1` that corresonds to user's home directory. To add your project, or other filesystems, an extra line per filesystem must be added to the file.
+The example below shows a template `~/.globusonline/lta/config-paths` file for Grex.
 
 {{< highlight bash >}}
 # modify the file as needed. Each line is of the format Path,SharingFlag,RWFlag. 
@@ -165,11 +165,11 @@ An example below shows a correct ```~/.globusonline/lta/config-paths``` file for
 cat ~/.globusonline/lta/config-paths
 ~/,0,1
 /scratch/,0,1
-/project/your-Project-ID/,0,1
+/project/<YOUR_PROJECT_ID>/,0,1
 {{< /highlight >}}
 
-Note that you would replace __your-project-ID__ above with your real path to the __/project__ filesystem. One way to get it on Grex is to examine the output of the ```diskusage_report``` script.
-Another, more general way, is to use ```realpath``` command to resolve the project symlink, as in ```realpath /home/$USER/projects/def-yourPI/``` .
+Note that you would replace __<YOUR_PROJECT_ID>__ above with your real path to the __/project__ filesystem. One way to get it on Grex is to examine the output of the `diskusage_report` script.
+Another, more general way, is to use `realpath` command to resolve the project symlink, as in `realpath /home/${USER}/projects/def-<YOUR_PI>/` .
 
 More information about configuring the Paths is available at [Globus Documentation on Linux Endpoints](https://docs.globus.org/globus-connect-personal/install/linux/#config-paths) .
 

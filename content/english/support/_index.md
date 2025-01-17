@@ -26,7 +26,7 @@ __To sum it all up, the main way to contact us is: [mailto:support@tech.alliance
 -->
 
 {{< alert type="info" >}}
-__To sum it all up, the main way to reach out for support is: support@tech.alliancecan.ca__
+__To sum it all up, the main way to reach out for support is: [support@tech.alliancecan.ca](mailto:support@tech.alliancecan.ca "support@tech.alliancecan.ca")__
 {{< /alert >}}
 
 Secondary support contacts in the Alliance that are useful for particular services:
@@ -42,7 +42,7 @@ We support both local (Grex) and National resources through the Alliance support
 ## IST Helpdesk
 ---
 
-We have an Research Computing group in IST's Help Desk system __support@umanitoba.ca__ . Tickets opened in this system will reach us, especially if you clearly state that they are HPC or Alliance related. More info on the [IST Help Desk](http://umanitoba.ca/ist/help/ "IST Help Desk") website.
+We have a Research Computing group in IST's Help Desk system __support@umanitoba.ca__ . Tickets opened in this system will reach us, especially if you clearly state that they are HPC or Alliance related. More info on the IST Help Desk website: [DRAC](https://umanitoba.ca/information-services-technology/research-computing/digital-research-alliance-canada "IST HelpDesk DRAC"), [Grex](https://umanitoba.ca/information-services-technology/research-computing/um-high-performance-computing-system-grex "IST HelpDesk Grex").
 
 ## In person training sessions and workshops
 ---
