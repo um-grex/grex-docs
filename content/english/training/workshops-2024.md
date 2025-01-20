@@ -10,17 +10,16 @@ categories: ["Training"]
 ---
 
 ## Autumn workshop, October 2024
+---
 
 {{< alert type="warning" >}}
-This workshop presented for a group of users from Bannatyne campus to explain the isage of a contributed partition. However, most of the materiel (software, singularity, podman, slurm, ...) from the following slides still valid for general use. 
+This workshop has been created for a group of users from Bannatyne campus to explain the usage of contributed nodes. However, most of the material from the following slides (slurm, software, singularity, podman, ...) is still valid for general use.
 {{< /alert >}}
 
-* __Date:__ Oct 31 - Nov 01, 2024
-
-Below are the slides from the workshop that was held on Oct 31 and Nov 1, 2024:
+Below are the slides from the workshop that was held on October 31 and November 1, 2024:
 
 > - **Start Guide for Using Grex efficiently**: [Slides](/workshops/autumn2024/Start_Guide-and_Grex-Usage-Oct2024.pdf)
-> - **Containers in HPC: Singularity/Apptainer**: [Slides](/workshops/autumn2024/Singularity-Apptainer.pdf)
+> - **Containers in HPC - Singularity/Apptainer**: [Slides](/workshops/autumn2024/Singularity-Apptainer.pdf)
 > - **Containers in HPC – Podman**: [Slides](/workshops/autumn2024/introduction_podman.pdf)
 
 <!--
