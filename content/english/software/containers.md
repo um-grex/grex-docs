@@ -200,7 +200,7 @@ Podman, as configured on Grex, by default would store all pulled and locally bui
 
 {{< highlight bash >}}
 # after building an image locally, save it to a file
-podman save --format=docker-archive -o ${HOME}/my-local-image.tar _locally_built_image_name_
+podman save --format=oci-archive -o ${HOME}/my-local-image.tar _locally_built_image_name_
 # when running a job that needs that image, load it
 podman load -i ${HOME}/my-local-image.tar
 {{< /highlight >}}
