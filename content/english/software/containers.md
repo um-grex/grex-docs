@@ -92,15 +92,18 @@ module load singularity
 singularity build ubuntu_latest0.sif library://ubuntu
 # or using DockerHub, this will create ubuntu_latest.sif
 singularity pull docker://ubuntu:latest
+# or, using a local definition and --fakeroot option
+singularity build --fakeroot My_HPC_container.sif Singularity.def
 {{< /highlight >}}
 
 Singularity (SIF) images can also be built from other local images, local “sandbox” directories, and from recipes. A [Singularity recipe or definition file](https://apptainer.org/docs/user/main/definition_files.html) is a text file that specifies the base image and post-install commands to be performed on it. However, Singularity-CE requires _sudo_ (priviliged) access to build images from recipes, which is not available for users of HPC machines. There are two solutions to this problem.
 
  * Using remote build on Sylabs cloud with _\-\-remote_ option. This requires [setting up a free account on Sylabs and getting access key](https://cloud.sylabs.io/builder). 
- * Using Apptainer with _\-\-fakeroot_ option (see below) instead of Singularity-CE .
+ * Using Singularity-CE or Apptainer (see below) with _\-\-fakeroot_ option.
 
 > Make sure you understand licensing and intellectual property implications before using remote build services!
-The second (_fakeroot_) method appears to be easier and does not require an external account. 
+
+The _fakeroot_ method appears to be easier and does not require an external account. As of the time of writing, both Apptainer and Singularity-CE support the _fakeroot_ build method. On Grex, there ccould be differencences between running Apptainer _build_ in an interactive job and on a login node. Running builds in a job is preferred.
 
 ### Singularity with GPUs
 ---
