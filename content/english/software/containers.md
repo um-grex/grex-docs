@@ -196,7 +196,20 @@ The command **podman pull _image_name_** would get Podman images from a containe
 Images can also be built from other images, or from containerfiles (e.g. Dockerfiles) using the command **podman build _Containerfile_**. 
 A _containerfile_ is a text "recipe" that specifies the base image and commands to be run on it. Podman's recipes are compatible with Docker's _Dockerfiles_.
 
-Podman, as configured on Grex, by default would store all pulled and locally built images inside the Slurm TMPDIR directory. This means that images will be deleted when the job finishes, or get cancelled. To avoid rebuilding the same image every time the job runs, users can take advantage of **podman save** and **podman load** commands (it is the user's responsibility to manage their Podman images (delete the old/unused ones)):
+>Podman, as configured on Grex, by default stores all pulled and locally built images inside the Slurm TMPDIR directory that is local to the node. This means that images will be deleted when the job finishes, or get cancelled. 
+
+To list the local _images_, users can take advantage of the following Podman commands:
+
+{{< highlight bash >}}
+# list images
+podman image ls
+# delete an unnecessary image
+podman image rm <IMAGE_ID>
+{{< /highlight >}}
+
+However, the local images as listed by _image ls_ are local to the compute node they were pulled or created. That is, they are not visible on other nodes, or even the same node when the job ends, and would have to be pulled again or built again from the Containerfile.
+
+To avoid rebuilding the same image every time the job runs, users can take advantage of **podman save** and **podman load** commands that allow for storing the local container as a single image file. Note that these files are large, and it is the user's responsibility to manage their Podman images (delete the old/unused ones)):
 
 {{< highlight bash >}}
 # after building an image locally, save it to a file
@@ -205,14 +218,19 @@ podman save --format=oci-archive -o ${HOME}/my-local-image.tar _locally_built_im
 podman load -i ${HOME}/my-local-image.tar
 {{< /highlight >}}
 
-To manage images, users can take advantage of the following commands:
+### Podman with User Namespaces
+
+OCI containers may contain multilple users in the container. For example, a Jupyter container would have the _jovian_ user, a Mambaforge container would have the user _mambauser_, etc., in addition to the _root_ user inside container. To properly run such containes with rootless Podman on HPC, an explicit switch __\-\-userns=keepid__ with corresponding userID and groupID mappings has to be provided to Podman.
 
 {{< highlight bash >}}
-# list images
-podman image ls
-# delete an unnecessary image
-podman image rm <IMAGE_ID>
+# run a container with userID mapping for a user with id 1000
+# while binding the home directory of the "outside" user
+podman run --it --userns=keep-id:uid=1000,gid=1000 -v $HOME:$HOME docker://my_image:latest
 {{< /highlight >}}
+
+Since the user and group ID in an arbitrary containers are not known _a priori_, it is sometimes needed to use the _id_ command when running the container to get the user and group IDs first.
+
+Please refer to the Podman documentation on [User namespace options](https://docs.podman.io/en/v4.4/markdown/options/userns.container.html) for more information.
 
 ### Podman with GPUs
 ---
