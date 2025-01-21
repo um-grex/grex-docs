@@ -194,11 +194,18 @@ podman pull _required_image_
 
 The command **podman pull _image_name_** would get Podman images from a container registry. 
 Images can also be built from other images, or from containerfiles (e.g. Dockerfiles) using the command **podman build _Containerfile_**. 
-A _containerfile_ is a text "recipe" that specifies the base image and commands to be run on it. Podman's recipes are compatible with _Dockerfiles_.
+A _containerfile_ is a text "recipe" that specifies the base image and commands to be run on it. Podman's recipes are compatible with Docker's _Dockerfiles_.
 
-Podman, as configured on Grex, by default would store all pulled and locally built images inside the user HOME directory. Depending on the size of the images, it could be easy to exhaust the disk quota on HOME quickly. It is the user's responsibility to manage their Podman images (delete the old/unused ones).
+Podman, as configured on Grex, by default would store all pulled and locally built images inside the Slurm TMPDIR directory. This means that images will be deleted when the job finishes, or get cancelled. To avoid rebuilding the same image every time the job runs, users can take advantage of **podman save** and **podman load** commands (it is the user's responsibility to manage their Podman images (delete the old/unused ones)):
 
-To manage pulled images, users can take advantage of the following commands:
+{{< highlight bash >}}
+# after building an image locally, save it to a file
+podman save --format=docker-archive -o ${HOME}/my-local-image.tar _locally_built_image_name_
+# when running a job that needs that image, load it
+podman load -i ${HOME}/my-local-image.tar
+{{< /highlight >}}
+
+To manage images, users can take advantage of the following commands:
 
 {{< highlight bash >}}
 # list images
