@@ -209,12 +209,10 @@ This makes maintenance of Python software difficult. Not only do Python and libr
  class="is-pretty-link">batch&lt;/a
 >
  system. User sessions on the login nodes are limited by &lt;em>cgroups&lt;/em> to prevent resource congestion. Thus, it sometimes makes sense to perform some of the code development in interactive jobs, in cases such as (but not limited to):&lt;/p></description></item><item><title>Workshops - 2024</title><link>https://um-grex.github.io/grex-docs/training/workshops-2024/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/training/workshops-2024/</guid><description>&lt;h2 id='autumn-workshop-october-2024'>Autumn workshop, October 2024&lt;a href='#autumn-workshop-october-2024' class='anchor'>#&lt;/a>
-&lt;/h2>&lt;div class="sc-alert sc-alert-warning">This workshop presented for a group of users from Bannatyne campus to explain the isage of a contributed partition. However, most of the materiel (software, singularity, podman, slurm, &amp;hellip;) from the following slides still valid for general use.&lt;/div>
+&lt;/h2>&lt;hr>
+&lt;div class="sc-alert sc-alert-warning">This workshop has been created for a group of users from Bannatyne campus to explain the usage of contributed nodes. However, most of the material from the following slides (slurm, software, singularity, podman, &amp;hellip;) is still valid for general use.&lt;/div>
 
-&lt;ul>
-&lt;li>&lt;strong>Date:&lt;/strong> Oct 31 - Nov 01, 2024&lt;/li>
-&lt;/ul>
-&lt;p>Below are the slides from the workshop that was held on Oct 31 and Nov 1, 2024:&lt;/p>
+&lt;p>Below are the slides from the workshop that was held on October 31 and November 1, 2024:&lt;/p>
 &lt;blockquote>
 &lt;ul>
 &lt;li>&lt;strong>Start Guide for Using Grex efficiently&lt;/strong>: &lt;a
@@ -222,7 +220,7 @@ This makes maintenance of Python software difficult. Not only do Python and libr
  class="is-pretty-link">Slides&lt;/a
 >
 &lt;/li>
-&lt;li>&lt;strong>Containers in HPC: Singularity/Apptainer&lt;/strong>: &lt;a
+&lt;li>&lt;strong>Containers in HPC - Singularity/Apptainer&lt;/strong>: &lt;a
  href="https://um-grex.github.io/grex-docs/grex-docs/workshops/autumn2024/Singularity-Apptainer.pdf"
  class="is-pretty-link">Slides&lt;/a
 >
