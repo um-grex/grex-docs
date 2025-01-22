@@ -15,13 +15,13 @@ Grex is an UManitoba High Performance Computing (HPC) system, first put in produ
 ## A Very Quick Start guide
 ---
 
-**1.** Create an account on [CCDB](https://ccdb.alliancecan.ca/security/login "CCDB"). You will need an institutional Email address. If you are a sponsored user, you'd want to ask your PI for his/her __CCRI__ code {Compute Canada Role Identifier}. For a detailed procedure, visit the page [Apply for an account](https://alliancecan.ca/en/services/advanced-research-computing/account-management/apply-account "Apply for an Alliance account").
+**1.** Create an account on [CCDB](https://ccdb.alliancecan.ca/security/login "CCDB"). You will need an institutional Email address. If you are a sponsored user, you'd want to ask your PI for their __CCRI__ code {Compute Canada Role Identifier}. For a detailed procedure, visit the page [Apply for an account](https://alliancecan.ca/en/services/advanced-research-computing/account-management/apply-account "Apply for an Alliance account").
 
 **2.** If you did not set yet MFA, please enrol using the instructions from this [page](connecting/mfa).
 
 **3.** Wait for half a day. While waiting, install an SSH client, and SFTP client for your operating system.
 
-**4.** Connect to **yak.hpc.umanitoba.ca** or **grex.hpc.umanitoba.ca** with SSH, using your username/password from step 1.
+**4.** Connect to **grex.hpc.umanitoba.ca** (or **yak.hpc.umanitoba.ca** or **bison.hpc.umanitoba.ca**) with SSH, using your username/password from step 1.
 
 **5.** Make a sample job script, call it, for example, __sleep-job.sh__ . The job script is a text file that has a special syntax to be recognized by SLURM. You can use the editor __nano__ , or any other right on the Grex SSH prompt (vim, emacs, pico, ... etc); you can also create the script file on your machine and upload to Grex using your SFTP client or scp.
 

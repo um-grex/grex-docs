@@ -14,22 +14,23 @@ categories: ["Software", "Interfaces"]
 [OpenOnDemand](https://openondemand.org/ "OpenOnDemand") or __OOD__ for short, is an open source Web portal for High-Performance computing, developed at Ohio Supercomputing Center. OOD makes it easier for beginner HPC users to access the resources via a Web interface. OOD also allows for interactive, visualization and other Linux Desktop applications to be accessed on HPC systems via a convenient Web user interface.
 
 Since the end of __October 2021__, OpenOnDemand version 2 is officially in production  on Grex. 
+Since the beginning of __January 2023__, OpenOnDemand version 3 is officially in production  on Grex. 
 
-For more general OOD information, see the OpenOnDemand [paper](https://joss.theoj.org/papers/10.21105/joss.00622 "OpenOnDemand Paper")
+For more general OOD information, see the [OpenOnDemand paper](https://joss.theoj.org/papers/10.21105/joss.00622 "OpenOnDemand Paper")
 
 ## OpenOndemand on Grex 
 ---
 
-Grex's OOD instance runs on **ood.hpc.umanitoba.ca** and requires the Alliance's Duo MFA to authenticate. The OOD instance is available only from UManitoba campus IP addresses -- that is, your computer should be on the UM Campus network to connect. 
+Grex's OOD instance runs on [**ood.hpc.umanitoba.ca**](https://ood.hpc.umanitoba.ca "Grex OOD") and requires the Alliance's Duo MFA to authenticate. The OOD instance is available only from UManitoba campus IP addresses -- that is, your computer should be on the UM Campus network to connect. 
 
-To connect from outside the UM network, please install and start __UManitoba Virtual Private Network__ [VPN](https://umanitoba.ca/information-services-technology/my-security/vpn-support). Note that you'd need the VPN client installation as described there; "VPN Gateway" will likely not work.
+To connect from outside the UM network, please install and start [__UManitoba Virtual Private Network__](https://umanitoba.ca/information-services-technology/my-security/vpn-support "UofM VPN"). Note that you'd need the VPN client installation as described there; "VPN Gateway" will likely not work.
 
 OOD relies on in-browser VNC sessions; so, a modern browser with HTML5 support is required; we recommend Google Chrome or Firefox or Safari, and their derivatives.
 
 **Connect to OOD using UManitoba VPN:**
 
 > - Make sure UM Ivanti Secure VPN is connected. This may require using UManitoba MS Entra second factor authentication.
-> - Point your Web browser to [https://ood.hpc.umanitoba.ca](https://ood.hpc.umanitoba.ca) 
+> - Point your Web browser to [https://ood.hpc.umanitoba.ca](https://ood.hpc.umanitoba.ca "Grex OOD")
 > - Use your Alliance (Compute Canada) username and password to log in to Grex OOD.
 > - Provide Alliance's Duo second factor authentication when asked.
 
@@ -79,7 +80,7 @@ As for now, the following applications are supported:
 > - Linux Desktops in VNC
 > - Matlab GUI in VNC
 > - GaussView GUI in VNC
-> _ RELION GUI in VNC
+> - RELION GUI in VNC
 > - Jupyter Notebooks server
 > - RStudio server
 
@@ -88,9 +89,9 @@ As with regular SLURM jobs, it is important to specify SLURM partitions for them
 
 The following links are added to OOD:
 
-> - From the menu __Jobs__, there is a link __Grex SLURM Queues State__ that shows a summary of running and pending jobs. It runs a modified version of the script **grex-summarize-queue** that is accessible from any login node.
+> - From the menu __Jobs__, there is a link __Grex SLURM Queues State__ that shows a summary of running and pending jobs. The same information can be accessed from any login node by running the __grex-summarize-queue__ command.
 
-> - From the menu __Clusters__, there is a link __Grex SLURM Node State__ to get a summary of allocated and idle nodes by partition. The same information can be accessed from any login node by running a custom script:__slurm-nodes-state__
+> - From the menu __Clusters__, there is a link __Grex SLURM Node State__ to get a summary of allocated and idle nodes by partition. The same information can be accessed from any login node by running the __slurm-nodes-state__ command.
  
 ---
 

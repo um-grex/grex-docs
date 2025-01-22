@@ -32,7 +32,7 @@ ComputeCanada / The Alliance provides repackaged Python "wheels" to work properl
 
 Adding each and every package with pip is time-consuming. CCEnv provides "modules" for a most common combination of fixed module versions of NumPy, SciPy, Matplotlib, etc., so-called _scipy-stack_ modules.
  
-## Examples Use Sases
+## Examples Use Cases
 
 ###  Example 1: using OpenAI shape-e in CCEnv virtualenv
 

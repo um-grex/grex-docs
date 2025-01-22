@@ -74,7 +74,7 @@ Some examples of the popular file transfer clients are:
 
 Other GUI clients will work with Grex too if they provide SFTP protocol support.
 
-To use such clients, one would need to tell them that SFTP is needed, and to provide the address, which is a name of a Grex login node (**yak.hpc.umanitoba.ca** or **grex.hpc.umanitoba.ca**) and your Grex/Alliance username.
+To use such clients, one would need to tell them that SFTP is needed, use the address **grex.hpc.umanitoba.ca** (or the name of a Grex login node like **yak.hpc.umanitoba.ca** or **bison.hpc.umanitoba.ca**) and your Grex/Alliance username.
 
 Note that we advise against saving your password in the clients: first, it is less secure, and second, it is easy to store a wrong password. File transfer clients would try to auto-connect automatically, and having a wrong password stored with them will create many failed connection attempts from your client machine, which in turn might temporarily block your IP address from accessing Grex.
 
