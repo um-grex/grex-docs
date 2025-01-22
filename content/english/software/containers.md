@@ -192,7 +192,7 @@ Grex is hosting a Docker Registry proxy/cache locally to improve the download pe
 
 {{< highlight bash >}}
 module load podman
-podman pull _required_image_
+podman pull <REQUIRED_IMAGE>
 {{< /highlight >}}
 
 The command **podman pull _image_name_** would get Podman images from a container registry. 
@@ -216,7 +216,7 @@ To avoid rebuilding the same image every time the job runs, users can take advan
 
 {{< highlight bash >}}
 # after building an image locally, save it to a file
-podman save --format=oci-archive -o ${HOME}/my-local-image.tar _locally_built_image_name_
+podman save --format=oci-archive -o ${HOME}/my-local-image.tar <LOCALLY_BUILT_IMAGE>
 # when running a job that needs that image, load it
 podman load -i ${HOME}/my-local-image.tar
 {{< /highlight >}}
@@ -228,7 +228,7 @@ OCI containers may contain multilple users in the container. For example, a Jupy
 {{< highlight bash >}}
 # run a container with userID mapping for a user with id 1000
 # while binding the home directory of the "outside" user
-podman run --it --userns=keep-id:uid=1000,gid=1000 -v $HOME:$HOME docker://my_image:latest
+podman run -it --userns=keep-id:uid=1000,gid=1000 -v ${HOME}:${HOME} <REQUIRED_IMAGE>
 {{< /highlight >}}
 
 Since the user and group ID in an arbitrary containers are not known _a priori_, it is sometimes needed to use the _id_ command when running the container to get the user and group IDs first.
