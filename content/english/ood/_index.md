@@ -30,7 +30,7 @@ OOD relies on in-browser VNC sessions; so, a modern browser with HTML5 support i
 **Connect to OOD using UManitoba VPN:**
 
 > - Make sure UM Ivanti Secure VPN is connected. This may require using UManitoba MS Entra second factor authentication.
-> - Point your Web browser to [https://ood.hpc.umanitoba.ca](https://ood.hpc.umanitoba.ca "Grex OOD")
+> - Point your Web browser to [https://ood.hpc.umanitoba.ca](https://ood.hpc.umanitoba.ca)
 > - Use your Alliance (Compute Canada) username and password to log in to Grex OOD.
 > - Provide Alliance's Duo second factor authentication when asked.
 
