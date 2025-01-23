@@ -290,10 +290,14 @@ This event will help you get started with HPC and familiarize you with essential
 &lt;p>Below are the slides from the DATA 4010 seminars that were held on September 18 and 25, 2024:&lt;/p></description></item><item><title>Connect and Transfer data with OOD</title><link>https://um-grex.github.io/grex-docs/connecting/ood/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/connecting/ood/</guid><description>&lt;h2 id='osc-openondemand-on-grex'>OSC OpenOnDemand on Grex&lt;a href='#osc-openondemand-on-grex' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;p>OpenOnDemand is a Web portal appication for High-Performance Computing systems. It is used on many of the Top 500 HPC machines across the World.
-Grex&amp;rsquo;s current OOD v.3 instance runs on a dedicared login node &lt;strong>zebu.hpc.umanitoba.ca&lt;/strong> .
+Grex&amp;rsquo;s current OOD v.3 instance runs on a dedicared login node &lt;a
+ href="https://ood.hpc.umanitoba.ca"title="Grex OOD" id="grex-ood"
+ class="is-pretty-link">&lt;strong>ood.hpc.umanitoba.ca&lt;/strong>&lt;/a
+>
+.
 It is available only from UManitoba IP addresses &amp;ndash; that is, your computer should be on the UM Campus network or the UM VPN to connect.&lt;/p>
 &lt;p>To connect from outside the UM network, please install and start &lt;a
- href="https://umanitoba.ca/computing/ist/connect/virtualpn.html"
+ href="https://umanitoba.ca/information-services-technology/my-security/vpn-support"title="UofM VPN" id="uofm-vpn"
  class="is-pretty-link">UManitoba Virtual Private Network&lt;/a
 >
 . OOD relies on in-browser VNC sessions; so, a modern browser with HTML5 support is required; we recommend Google Chrome or Firefox and its derivatives (Waterfox, for example).&lt;/p></description></item><item><title>Containers for Software</title><link>https://um-grex.github.io/grex-docs/software/containers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/software/containers/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
