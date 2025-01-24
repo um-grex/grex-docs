@@ -108,7 +108,9 @@ The _fakeroot_ method appears to be easier and does not require an external acco
 ### Singularity with GPUs
 ---
 
-Use the __-\-nv__ flag to __singularity__ run/exec/shell commands. Naturally, you should be on a node that has a GPU, in an interactive job. NVIDIA provides many pre-built Docker and Singularity container images on their [GPU cloud](https://ngc.nvidia.com/), together with instructions on how to pull them and to run them. NVidia's NGC Docker images should, as a rule, work on HPC machines with Singularity without any changes.
+Add the __-\-nv__ flag to __singularity__ _run_ / _exec_ / _shell_ commands for the container to be able to access NVidia GPU hardware.
+Naturally, your job should be on a node that has a GPU to use GPUs . Check out our [Running Jobs](running-jobs/slurm-partitions) documentation to find out which partitions have the GPU hardware.
+NVIDIA provides many pre-built Docker and Singularity container images on their [GPU cloud](https://ngc.nvidia.com/), together with instructions on how to pull them and to run them. NVidia's NGC Docker images should, as a rule, work on HPC machines with Singularity without any changes.
 
 ### Singularity with OpenScienceGrid CVMFS
 ---
@@ -253,8 +255,12 @@ If you encounter such issues when using containers with __\-\-keep-id__, please 
 ### Podman with GPUs
 ---
 
-Use the __-\-device=nvidia.com/gpu=all__ flag when running a podman container. Naturally, you should be on a node that has a GPU. 
-NVIDIA provides many pre-built Docker container images on their [NGC Cloud](https://ngc.nvidia.com/), together with instructions on how to pull and run them. Podman would usually run Docker containers without changes to the command line parameters.
+Use the __-\-device=nvidia.com/gpu=all__ flag to the _podman_ command when running a podman container that needs GPU hardware. 
+Naturally, your job should be on a node that has a GPU to use GPUs . Check out our [Running Jobs](running-jobs/slurm-partitions) documentation to find out which partitions have the GPU hardware.
+NVIDIA provides many pre-built Docker container images on their [NGC Cloud](https://ngc.nvidia.com/), together with instructions on how to pull and run them. 
+Many software developers also put images to various container registries, such as DockerHub or Quay.io, or distribute the sources of containers along with Dockerfiles; all these can be used, but "your mileage may vary". 
+Podman would usually run Docker containers without changes to the command line parameters.
+It is a good idea to run a test job for a given container and use __nvidia-smi__ command on the node the job runs on to check whether the image is actually able to utilize the GPU(s).
 
 ---
 
@@ -264,7 +270,6 @@ NVIDIA provides many pre-built Docker container images on their [NGC Cloud](http
  * [Singularity/Sylabs homepage](https://sylabs.io)
  * [Apptainer homepage](https://apptainer.org/)
  * [Podman homepage](https://podman.io/)
- * [Singularity documentation on the Alliance Wiki](https://docs.alliancecan.ca/wiki/Singularity) 
  * [Apptainer documentation on the Alliance Wiki](https://docs.alliancecan.ca/wiki/Apptainer)
  * [Docker Hub](https://hub.docker.com)
  * [RedHat Quay.io Hub](https://quay.io/search)
@@ -274,5 +279,5 @@ NVIDIA provides many pre-built Docker container images on their [NGC Cloud](http
 <!-- {{< treeview display="tree" />}} -->
 
 <!-- Changes and update:
-* Last revision: Jan 16, 2024. 
+* Last revision: Jan 24, 2024. 
 -->
