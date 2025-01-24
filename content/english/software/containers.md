@@ -103,7 +103,7 @@ Singularity (SIF) images can also be built from other local images, local “san
 
 > Make sure you understand licensing and intellectual property implications before using remote build services!
 
-The _fakeroot_ method appears to be easier and does not require an external account. As of the time of writing, both Apptainer and Singularity-CE support the _fakeroot_ build method. On Grex, there ccould be differencences between running Apptainer _build_ in an interactive job and on a login node. Running builds in a job is preferred.
+The _fakeroot_ method appears to be easier and does not require an external account. As of the time of writing, both Apptainer and Singularity-CE support the _fakeroot_ build method. On Grex, there could be differencences between running Apptainer _build_ in an interactive job and on a login node. Running builds in a _salloc_ job is preferred also because login nodes do limit memory and CPU per session.
 
 ### Singularity with GPUs
 ---
