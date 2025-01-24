@@ -196,8 +196,19 @@ podman pull <REQUIRED_IMAGE>
 {{< /highlight >}}
 
 The command **podman pull _image_name_** would get Podman images from a container registry. 
+
 Images can also be built from other images, or from containerfiles (e.g. Dockerfiles) using the command **podman build _Containerfile_**. 
 A _containerfile_ is a text "recipe" that specifies the base image and commands to be run on it. Podman's recipes are compatible with Docker's _Dockerfiles_.
+Below is an example of building a container from a source tree of a package called Chemprop. The Dockerfile is provided by the authors.
+
+{{< highlight bash >}}
+# Lets try to build a local container from chemprop source directory
+module load podman
+# change the directory to the source tree where Dockerfile is located
+cd chemprop-1.7.1
+podman  build -t chemprop .
+# this creates a local container image "localhost/chemprop  latest"
+{{< /highlight >}}
 
 >Podman, as configured on Grex, by default stores all pulled and locally built images inside the Slurm TMPDIR directory that is local to the node. This means that images will be deleted when the job finishes, or get cancelled. 
 
@@ -234,6 +245,10 @@ podman run -it --userns=keep-id:uid=1000,gid=1000 -v ${HOME}:${HOME} <REQUIRED_I
 Since the user and group ID in an arbitrary containers are not known _a priori_, it is sometimes needed to use the _id_ command when running the container to get the user and group IDs first.
 
 Please refer to the Podman documentation on [User namespace options](https://docs.podman.io/en/v4.4/markdown/options/userns.container.html) for more information.
+
+Namespaces [may cause issues](https://www.redhat.com/en/blog/supplemental-groups-podman-containers) when bind-mounting folders not owned by their primary group. Unfortunately, such folders are all the folders of the sponsored users on the _/project_ filesystems, that require access to supplemental groups to be accessible.
+If you encounter such issues when using containers with __\-\-keep-id__, please add __\-\-annotation run.oci.keep_original_groups=1__ to the _podman_ command line options.
+
 
 ### Podman with GPUs
 ---
