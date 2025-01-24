@@ -45,28 +45,31 @@ The main feature of Lmod is the hierarchical module system to provide a better c
 ## How to find the software with Lmod Modules
 ---
 
-A "software stack" module should be loaded first. On Grex, there are two software stacks, called __GrexEnv__ and __CCEnv__, standing for the software built on Grex locally and the software environment from the Alliance (Compute Canada), correspondingly. __GrexEnv__ is the only module loaded by default.
+A "software stack" module should be loaded first. On Grex, there are two software stacks, called __SBEnv__ and __CCEnv__, standing for the software built on Grex locally and the software environment from the Alliance (Compute Canada), correspondingly. __SBEnv__ is the only module loaded by default.
 
-When a software stack module is loaded, the **module spider** command will find a specific software item (for example, GAMESS; note that all the module names are __lower-case__ on Grex and on Compute Canada software stacks) if it exist under that stack:
-
-{{< highlight bash >}}
-module spider gamess
-{{< /highlight >}}
-
-It might return several versions; then usually a subsequent command with the version is used to determine dependencies required for the software. In case of GAMESS on Grex:
+When a software stack module is loaded, the **module spider** command will find a specific software item (for example, GROMACS; note that all the module names are __lower-case__ on Grex and on Alliance software stacks) if it exist under that stack:
 
 {{< highlight bash >}}
-module spider gamess/Sept2019
+module spider gromacs
 {{< /highlight >}}
 
-It will advise to load the following modules: __"intel/15.0.5.223  impi/5.1.1.109"__. Then, **module load** command can be used actually to load the GAMESS environment (note that the dependencies must be loaded first:
+It might return several versions; then usually a subsequent command with the version is used to determine dependencies required for the software. 
+In case of GROMACS on Grex, at the time of writing, it returns four versions, with _gromacs/2024.1_ being the latest. Lets find its dependencies.
 
 {{< highlight bash >}}
-module load intel/15.0.5.223  impi/5.1.1.109
-module load gamess/Sept2019
+module spider gromacs/2024.1
 {{< /highlight >}}
 
-For more information about using Lmod modules, please refer to the Alliance (Compute Canada) documentation about using [Modules](https://docs.alliancecan.ca/wiki/Utiliser_des_modules/en) and Lmod user [Guide](https://lmod.readthedocs.io/en/latest/010_user.html).
+It will advise that there are two sets of dependencies, one for the CPU version and one for the GPU version. 
+For the CPU version, we'd need to load the following modules: __"  arch/avx512  gcc/13.2.0  openmpi/4.1.6"__. Note that the first module is for CPU architecture. Most CPU nodes on Grex use _arch/avx512_.
+Then, after the  dependencies are loaded  **module load** command can be used actually to load the GROMACS environment, for the CPU version. 
+
+{{< highlight bash >}}
+module load arch/avx512  gcc/13.2.0  openmpi/4.1.6
+module load gromacs/2024.1
+{{< /highlight >}}
+
+For more information about using Lmod modules, please refer to the [Modules](software/using-modules) pages on this documentation.
 
 ## How and when to install software in your HOME directory
 ---
