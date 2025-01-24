@@ -246,7 +246,7 @@ Since the user and group ID in an arbitrary containers are not known _a priori_,
 
 Please refer to the Podman documentation on [User namespace options](https://docs.podman.io/en/v4.4/markdown/options/userns.container.html) for more information.
 
-Namespaces [may cause issues](https://www.redhat.com/en/blog/supplemental-groups-podman-containers) when bind-mounting folders not owned by their primary group. Unfortunately, such folders are all the folders of the sponsored users on the _/project_ filesystems, that require access to supplemental groups to be accessible.
+Namespaces [may cause issues](https://www.redhat.com/en/blog/supplemental-groups-podman-containers) when bind-mounting folders not owned by the user's primary group. Unfortunately, such folders are all the folders of the sponsored users on the _/project_ filesystems, that require access to supplemental groups to be accessible.
 If you encounter such issues when using containers with __\-\-keep-id__, please add __\-\-annotation run.oci.keep_original_groups=1__ to the _podman_ command line options.
 
 
