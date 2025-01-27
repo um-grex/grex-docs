@@ -13,14 +13,12 @@ categories: ["Information"]
 
 In addition to the **HPC** Research Computing facility, there are other **IT** providers that might relate to research.
 
-## Resources provided by IST
+## Resources provided by UManitoba IST
 ---
 
-[IST](https://umanitoba.ca/computing/ist/index.html "Information Services and Technology") provides a number of services related to Administrative IT, Teaching, and Research Computing as well.
+["Information Services and Technology Service Catalogue"](https://umanitoba.ca/information-services-technology/research-computing) provides a number of services related to Administrative IT, Teaching, and Research Computing as well. The page refers to all Research Computing offerings includging Grex.
 
-For more information about IST, please visit __UM IST__ [Help](http://umanitoba.ca/ist/help/ "UM IST Help") website and __IST__ service [catalog](http://umanitoba.ca/ist/service_catalogue/ "IST service catalog").
-
-## Resources provided by the Libraries
+## Resources provided by UManitoba Libraries
 ---
 
 Libraries provide a variety of services related to Research Data Management, as well as a GIS service: UM [Libraries](https://libguides.lib.umanitoba.ca/researchservices) Research Services.
@@ -28,14 +26,14 @@ Libraries provide a variety of services related to Research Data Management, as 
 ## Faculties IT representatives
 ---
 
-Several Faculties/Departments have local IT representatives that maintain servers, workstation and computing labs.
+Several Faculties/Departments have local IT representatives that maintain servers, workstation and computing labs. They can be reached through general IST Helpdesk request.
 
 ---
 
 {{< alert type="warning" >}}
 For more information, please contact directly the related services:
-* [IST](https://umanitoba.ca/computing/ist/index.html "Information Services and Technology")
-* UM [Libraries](https://libguides.lib.umanitoba.ca/researchservices) Research Services.
+* [UManitoba IST](https://umanitoba.ca/information-services-technology "IST")
+* UManitoba [Libraries](https://libguides.lib.umanitoba.ca/researchservices) Research Services.
 {{< /alert >}}
 
 ---
@@ -43,5 +41,5 @@ For more information, please contact directly the related services:
 <!-- {{< treeview display="tree" />}} -->
 
 <!-- Changes and update:
-* Last revision: Aug 28, 2024. 
+* Last revision: Jan 27, 2025. 
 -->
