@@ -38,7 +38,7 @@ module load espresso/7.3.1+aocl-4.2.0
 
 {{< collapsible title="Script example for running Quantum Espresso on Grex" >}}
 {{< snippet
-    file="scripts/jobs/nwchem/run-espresso.sh"
+    file="scripts/jobs/espresso/run-espresso.sh"
     caption="run-espresso.sh"
     codelang="bash"
 />}}
