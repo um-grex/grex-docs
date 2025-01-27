@@ -98,23 +98,14 @@
 &lt;p>In research it’s often necessary to share datasets or code within a research group or with collaborating groups. This documentation explains how to share data stored on a specific HPC system, in this case, Grex. Sharing data outside the HPC system can be done through other methods, such as Globus or MS OneDrive.&lt;/p></description></item><item><title>Local IT Resources</title><link>https://um-grex.github.io/grex-docs/friends/localit/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/friends/localit/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;p>In addition to the &lt;strong>HPC&lt;/strong> Research Computing facility, there are other &lt;strong>IT&lt;/strong> providers that might relate to research.&lt;/p>
-&lt;h2 id='resources-provided-by-ist'>Resources provided by IST&lt;a href='#resources-provided-by-ist' class='anchor'>#&lt;/a>
+&lt;h2 id='resources-provided-by-umanitoba-ist'>Resources provided by UManitoba IST&lt;a href='#resources-provided-by-umanitoba-ist' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;p>&lt;a
- href="https://umanitoba.ca/computing/ist/index.html"title="Information Services and Technology" id="information-services-and-technology"
- class="is-pretty-link">IST&lt;/a
+ href="https://umanitoba.ca/information-services-technology/research-computing"
+ class="is-pretty-link">&amp;ldquo;Information Services and Technology Service Catalogue&amp;rdquo;&lt;/a
 >
- provides a number of services related to Administrative IT, Teaching, and Research Computing as well.&lt;/p>
-&lt;p>For more information about IST, please visit &lt;strong>UM IST&lt;/strong> &lt;a
- href="http://umanitoba.ca/ist/help/"title="UM IST Help" id="um-ist-help"
- class="is-pretty-link">Help&lt;/a
->
- website and &lt;strong>IST&lt;/strong> service &lt;a
- href="http://umanitoba.ca/ist/service_catalogue/"title="IST service catalog" id="ist-service-catalog"
- class="is-pretty-link">catalog&lt;/a
->
-.&lt;/p>
-&lt;h2 id='resources-provided-by-the-libraries'>Resources provided by the Libraries&lt;a href='#resources-provided-by-the-libraries' class='anchor'>#&lt;/a>
+ provides a number of services related to Administrative IT, Teaching, and Research Computing as well. The page refers to all Research Computing offerings includging Grex.&lt;/p>
+&lt;h2 id='resources-provided-by-umanitoba-libraries'>Resources provided by UManitoba Libraries&lt;a href='#resources-provided-by-umanitoba-libraries' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;p>Libraries provide a variety of services related to Research Data Management, as well as a GIS service: UM &lt;a
  href="https://libguides.lib.umanitoba.ca/researchservices"
