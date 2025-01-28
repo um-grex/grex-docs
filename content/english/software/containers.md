@@ -96,7 +96,7 @@ singularity pull docker://ubuntu:latest
 singularity build --fakeroot My_HPC_container.sif Singularity.def
 {{< /highlight >}}
 
-Singularity (SIF) images can also be built from other local images, local “sandbox” directories, and from recipes. A [Singularity recipe or definition file](https://apptainer.org/docs/user/main/definition_files.html) is a text file that specifies the base image and post-install commands to be performed on it. However, Singularity-CE requires _sudo_ (priviliged) access to build images from recipes, which is not available for users of HPC machines. There are two solutions to this problem.
+Singularity (SIF) images can also be built from other local images, local “sandbox” directories, and from recipes. A [Singularity recipe or definition file](https://apptainer.org/docs/user/main/definition_files.html) is a text file that specifies the base image and post-install commands to be performed on it. However, Singularity-CE requires _sudo_ (privileged) access to build images from recipes, which is not available for users of HPC machines. There are two solutions to this problem.
 
  * Using remote build on Sylabs cloud with _\-\-remote_ option. This requires [setting up a free account on Sylabs and getting access key](https://cloud.sylabs.io/builder). 
  * Using Singularity-CE or Apptainer (see below) with _\-\-fakeroot_ option.
@@ -212,7 +212,7 @@ podman  build -t chemprop .
 # this creates a local container image "localhost/chemprop  latest"
 {{< /highlight >}}
 
->Podman, as configured on Grex, by default stores all pulled and locally built images inside the Slurm TMPDIR directory that is local to the node. This means that images will be deleted when the job finishes, or get cancelled. 
+>Podman, as configured on Grex, by default stores all pulled and locally built images inside the Slurm TMPDIR directory that is local to the node. This means that images will be deleted when the job finishes or get cancelled. 
 
 To list the local _images_, users can take advantage of the following Podman commands:
 
@@ -236,7 +236,7 @@ podman load -i ${HOME}/my-local-image.tar
 
 ### Podman with User Namespaces
 
-OCI containers may contain multilple users in the container. For example, a Jupyter container would have the _jovian_ user, a Mambaforge container would have the user _mambauser_, etc., in addition to the _root_ user inside container. To properly run such containes with rootless Podman on HPC, an explicit switch __\-\-userns=keepid__ with corresponding userID and groupID mappings has to be provided to Podman.
+OCI containers may contain multiple users in the container. For example, a Jupyter container would have the _jovian_ user, a Mambaforge container would have the user _mambauser_, etc., in addition to the _root_ user inside container. To properly run such contains with rootless Podman on HPC, an explicit switch __\-\-userns=keepid__ with corresponding userID and groupID mappings has to be provided to Podman.
 
 {{< highlight bash >}}
 # run a container with userID mapping for a user with id 1000
@@ -244,7 +244,7 @@ OCI containers may contain multilple users in the container. For example, a Jupy
 podman run -it --userns=keep-id:uid=1000,gid=1000 -v ${HOME}:${HOME} <REQUIRED_IMAGE>
 {{< /highlight >}}
 
-Since the user and group ID in an arbitrary containers are not known _a priori_, it is sometimes needed to use the _id_ command when running the container to get the user and group IDs first.
+Since the user and group ID in arbitrary containers are not known _a priori_, it is sometimes needed to use the _id_ command when running the container to get the user and group IDs first.
 
 Please refer to the Podman documentation on [User namespace options](https://docs.podman.io/en/v4.4/markdown/options/userns.container.html) for more information.
 
@@ -260,7 +260,7 @@ Naturally, your job should be on a node that has a GPU to use GPUs . Check out o
 NVIDIA provides many pre-built Docker container images on their [NGC Cloud](https://ngc.nvidia.com/), together with instructions on how to pull and run them. 
 Many software developers also put images to various container registries, such as DockerHub or Quay.io, or distribute the sources of containers along with Dockerfiles; all these can be used, but "your mileage may vary". 
 Podman would usually run Docker containers without changes to the command line parameters.
-It is a good idea to run a test job for a given container and use __nvidia-smi__ command on the node the job runs on to check whether the image is actually able to utilize the GPU(s).
+It is a good idea to run a test job for a given container and use __nvidia-smi__ command on the node the job runs on to check whether the image is able to utilize the GPU(s).
 
 ---
 

@@ -10,7 +10,7 @@ categories: ["Software", "Scheduler"]
 ## Introduction
 ---
 
-[NWChem](https://nwchemgit.github.io/) is a Scalable, massive parallel open source solution for large scale molecular simulations. NWChem is actively developed by a consortium of developers and maintained by the EMSL located at the Pacific Northwest National Laboratory (PNNL) in Washington State. The code is distributed as open-source under the terms of the Educational Community License version 2.0 (ECL 2.0).
+[NWChem](https://nwchemgit.github.io/) is a Scalable, massive parallel and open source solution for large scale molecular simulations. NWChem is actively developed by a consortium of developers and maintained by the EMSL located at the Pacific Northwest National Laboratory (PNNL) in Washington State. The code is distributed as open source under the terms of the Educational Community License version 2.0 (ECL 2.0).
 
 ## System specific notes
 ---

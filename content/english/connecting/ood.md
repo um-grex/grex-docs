@@ -12,8 +12,8 @@ categories: []
 ## OSC OpenOnDemand on Grex
 ---
 
-OpenOnDemand is a Web portal appication for High-Performance Computing systems. It is used on many of the Top 500 HPC machines across the World.
-Grex's current OOD v.3 instance runs on a dedicared login node [**ood.hpc.umanitoba.ca**](https://ood.hpc.umanitoba.ca "Grex OOD").
+OpenOnDemand is a Web portal application for High-Performance Computing systems. It is used on many of the Top 500 HPC machines across the World.
+Grex's current OOD v.3 instance runs on a dedicated login node [**ood.hpc.umanitoba.ca**](https://ood.hpc.umanitoba.ca "Grex OOD").
 It is available only from UManitoba IP addresses -- that is, your computer should be on the UM Campus network or the UM VPN to connect. 
 
 To connect from outside the UM network, please install and start [UManitoba Virtual Private Network](https://umanitoba.ca/information-services-technology/my-security/vpn-support "UofM VPN"). OOD relies on in-browser VNC sessions; so, a modern browser with HTML5 support is required; we recommend Google Chrome or Firefox and its derivatives (Waterfox, for example).
@@ -29,13 +29,13 @@ To connect from outside the UM network, please install and start [UManitoba Virt
 > - Make sure Umanitoba Ivanti Secure VPN Client is connected. Use UManitoba second factor auth (as of 2024, Microsoft Entra) if asked.
 > - Point your Web browser to [https://ood.hpc.umanitoba.ca](https://ood.hpc.umanitoba.ca "Grex OOD")
 > - Use your Alliance CCDB username and password to log in to Grex OOD.
-> - New: use your **Alliance CCDB Duo second factor method** to continue loggin in to Grex OOD.
+> - New: use your **Alliance CCDB Duo second factor method** to continue logging in to Grex OOD.
 
 
 ### Connect via OOD
 ---
 
-First, the OOD host would present a Keycloack login page, followed by the usual Duo second factor prompt.
+First, the OOD host would present a Keycloak login page, followed by the usual Duo second factor prompt.
 
 When authenticated, you will see the following screen with the current Grex Message-of-the-day (MOTD):
 

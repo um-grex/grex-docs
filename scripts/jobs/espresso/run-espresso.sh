@@ -30,10 +30,8 @@ which pw.x
 # lets run the AuSurf example, assuming inputs in the current directory
 # adjust pw.x options such as -npool and -ndiag according to your system and number of tasks!
 
-
 echo "Starting run at: `date`"
 
 srun pw.x -input ausurf.in -npool 2 -ndiag 16 > ausurf.${SLURM.}.log
 
 echo "Program finished with exit code $? at: `date`"
-

@@ -17,7 +17,7 @@ The single point support contact for Compute Canada is [mailto:support@tech.alli
 
 The single point support contact for the Alliance is __support@tech.alliancecan.ca__
 
-Emailing to this address will create a __support ticket__ in the Alliance ticketing system (Help Desk). We support both local (Grex) and National resources through the Alliance support ticketing system. This is the main support contact for our HPC group and it is a preferred method (as compared to contacting an HPC analyst directly). If you use your UManitoba email address (email registered in CCDB) to contact the Alliance support, it will reach us faster because the system will automatically detect it and assign your user name to the generated ticket.
+Emailing to this address will create a __support ticket__ in the Alliance ticketing system (Help Desk). We support both local (Grex) and National resources through the Alliance support ticketing system. This is the main support contact for our HPC group, and it is a preferred method (as compared to contacting an HPC analyst directly). If you use your UManitoba email address (email registered in CCDB) to contact the Alliance support, it will reach us faster because the system will automatically detect it and assign your username to the generated ticket.
 
 You can also open a web interface to the ticketing system [OTRS](https://support.computecanada.ca/otrs/customer.pl "Ticketing system - customer interface"). This requires actually having an Alliance account to access it, so it can be less useful for inquiries on how to get an [account.](https://alliancecan.ca/en/services/advanced-research-computing/account-management/apply-account "Apply for an account")
 

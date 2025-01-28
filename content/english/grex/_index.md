@@ -38,7 +38,7 @@ If you are a new Grex user, proceed to the [quick start guide](start-guide) and 
 
 * The original Grex was an SGI Altix machine, with 312 compute nodes (Xeon 5560, 12 CPU cores and 48 GB of RAM per node) and QDR 40 Gb/s InfiniBand network. 
 {{< alert type="warning" >}}
-The SGI Altix machine were decommissioned on Sep 2024.
+The SGI Altix machines were decommissioned in Sep 2024.
 {{< /alert >}}
 
 * In 2017, a new Seagate **Storage Building Blocks (SBB)** based Lustre filesystem of **418 TB** of useful space was added to Grex.

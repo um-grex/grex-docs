@@ -15,14 +15,15 @@ categories: ["Software", "Scheduler"]
 ## System specific notes
 ---
 
-On the Grex's default software stack (_SBEnv_), Espresso is built using a variety of compilers and Open MPI 4.1 . 
+On the Grex's default software stack (_SBEnv_), Espresso is built using a variety of compilers and Open MPI 4.1
+
 To find out which versions are available, use **module spider espresso**. 
 
-For a version 7.3.1, at the time of writing the following modules shoud be loaded:
+For a version 7.3.1, at the time of writing the following modules should be loaded:
 
 {{< highlight bash >}}
-module load  arch/avx512  intel/2023.2  openmpi/4.1.6
-module load  espresso/7.3.1
+module load arch/avx512  intel/2023.2  openmpi/4.1.6
+module load espresso/7.3.1
 {{< /highlight >}}
 
 The above module gives access to the Espresso built with traditional Intel compilers and MKL. These would be recommended for compute nodes using Intel AVX512 CPUs.
@@ -54,11 +55,9 @@ For more information, visit the page [running jobs on Grex](running-jobs)
 
 ### Running GPU version of Espresso
 
-It is possible to build a version of Quantum Espresso using GPU hardware. Doing so requires the NVidia HPC compilers toolkit which is available on the NGC Cloud.
-However, an easier way would be to just pull a latest Espresso version from the same NGC cloud using either [Singularuty or Podman](/software/containers).
+It is possible to build a version of Quantum Espresso using GPU hardware. Doing so requires the NVidia HPC compilers toolkit which is available on the NGC Cloud. However, an easier way would be to just pull a latest Espresso version from the same NGC cloud using either [Singularity or Podman](/software/containers).
 
 [https://catalog.ngc.nvidia.com/orgs/hpc/containers/quantum_espresso](https://catalog.ngc.nvidia.com/orgs/hpc/containers/quantum_espresso)
-
 
 ## Related links
 ---

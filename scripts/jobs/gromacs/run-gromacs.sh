@@ -1,4 +1,5 @@
 #!/bin/bash
+
 #SBATCH --nodes=1                # number of nodes
 #SBATCH --ntasks-per-node=26     # request 26 MPI tasks per node
 #SBATCH --cpus-per-task=2        # 2 OpenMP threads per MPI task 
@@ -24,5 +25,3 @@ echo "Starting run at: `date`"
 srun --cpus-per-task=$OMP_NUM_THREADS gmx_mpi mdrun -deffnm md
 
 echo "Program finished with exit code $? at: `date`"
-
-

@@ -16,7 +16,7 @@ In addition to the **HPC** Research Computing facility, there are other **IT** p
 ## Resources provided by UManitoba IST
 ---
 
-["Information Services and Technology Service Catalogue"](https://umanitoba.ca/information-services-technology/research-computing) provides a number of services related to Administrative IT, Teaching, and Research Computing as well. The page refers to all Research Computing offerings includging Grex.
+["Information Services and Technology Service Catalogue"](https://umanitoba.ca/information-services-technology/research-computing) provides a few services related to Administrative IT, Teaching, and Research Computing as well. The page refers to all Research Computing offerings including Grex.
 
 ## Resources provided by UManitoba Libraries
 ---

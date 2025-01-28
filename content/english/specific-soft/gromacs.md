@@ -15,15 +15,16 @@ categories: ["Software", "Scheduler"]
 ## System specific notes
 ---
 
-On the Grex's default software stack (_SBEnv_), GROMACS is built using a variety of compilers and Open MPI 4.1 . 
+On the Grex's default software stack (_SBEnv_), GROMACS is built using a variety of compilers and OpenMPI 4.1 
+
 To find out which versions are available, use **module spider gromacs**. There could be more than one (for example, CPU and GPU)  builds available for each GROMACS version as listed by _module spider_.
 
-For a version _gromacs/2024.1_, at the time of writing the following modules shoud be loaded for the CPU version:
+For a version _gromacs/2024.1_, at the time of writing the following modules should be loaded for the CPU version:
 
 {{< highlight bash >}}
 module load SBEnv
-module load  arch/avx512  gcc/13.2.0  openmpi/4.1.6
-module load  gromacs/2024.1
+module load arch/avx512 gcc/13.2.0 openmpi/4.1.6
+module load gromacs/2024.1
 {{< /highlight >}}
 
 The above module/version gives access to the GROMACS built for compute nodes on GREX, using Intel or AMD AVX512 CPUs.
@@ -33,11 +34,11 @@ There is also a CUDA GPU version that would be able to use GPU partitions on Gre
 {{< highlight bash >}}
 module load SBEnv
 module load cuda/12.4.1  arch/avx2  gcc/13.2.0  openmpi/4.1.6
-module load  gromacs/2024.1
+module load gromacs/2024.1
 {{< /highlight >}}
 
 
-{{< collapsible title="Script example for running Quantum Espresso on Grex" >}}
+{{< collapsible title="Script example for running GROMACS on Grex" >}}
 {{< snippet
     file="scripts/jobs/gromacs/run-gromacs.sh"
     caption="run-gromacs.sh"

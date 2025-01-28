@@ -9,17 +9,34 @@ bannerContent: "__Work in progress.__"
 #tags: ["Configuration"]
 ---
 
-**Note: Lammps is not available yet under the new environment _SBEnv_.**
-
 ## Introduction
 ---
 
-[LAMMPS](https://www.lammps.org/) is a classical molecular dynamics code. The name stands for Large-scale Atomic / Molecular Massively Parallel Simulator.
+[LAMMPS](https://www.lammps.org/) is a classical molecular dynamics code. The name stands for Large-scale Atomic / Molecular Massively Parallel Simulator. LAMMPS is distributed by Sandia National Laboratories, a US Department of Energy laboratory. 
+
 
 ## Modules
 ---
 
-As fo now, there is no LAMMPS version added to the new environment. We will add them when users request a specific version. With that said, it is possible to use LAMMPS from the Alliance software stack after load _CCEnv_:
+On the Grex’s default software stack (SBEnv), LAMMPS was built using a variety of compilers and OpenMPI 4.1
+
+To find out which versions are available, use **module spider lammps**
+
+As an example:
+
+{{< highlight bash >}}
+module load arch/avx512 gcc/13.2.0 openmpi/4.1.6 
+module load lammps/2021-09-29
+{{< /highlight >}}
+
+and
+
+{{< highlight bash >}}
+module load arch/avx512 intel-one/2024.1 openmpi/4.1.6 
+module load lammps/2021-09-29
+{{< /highlight >}}
+
+It is also possible to load modules from the Alliance software stack after load _CCEnv_:
 
 {{< highlight bash >}}
 module purge
@@ -32,6 +49,18 @@ module load lammps-omp/20230802
 
 ### Serial version
 
+Script example using a module from _SBEnv_:
+
+{{< collapsible title="Script example for LAMMPS: Serial version" >}}
+{{< snippet
+    file="scripts/jobs/lammps/run-lammps-serial-sbenv.sh"
+    caption="run-lammps-serial-sbenv.sh"
+    codelang="bash"
+/>}}
+{{< /collapsible >}}
+
+Script example using a module from _CCEnv_:
+
 {{< collapsible title="Script example for LAMMPS: Serial version" >}}
 {{< snippet
     file="scripts/jobs/lammps/run-lammps-serial-cc.sh"
@@ -42,6 +71,18 @@ module load lammps-omp/20230802
 
 ### MPI version
 ---
+
+Script example using a module from _SBEnv_:
+
+{{< collapsible title="Script example for LAMMPS: MPI version" >}}
+{{< snippet
+    file="scripts/jobs/lammps/run-lammps-mpi-sbenv.sh"
+    caption="run-lammps-mpi-sbenv.sh"
+    codelang="bash"
+/>}}
+{{< /collapsible >}}
+
+Script example using a module from _CCEnv_:
 
 {{< collapsible title="Script example for LAMMPS: MPI version" >}}
 {{< snippet
