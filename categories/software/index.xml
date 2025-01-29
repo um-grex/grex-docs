@@ -1,4 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Software on Grex</title><link>https://um-grex.github.io/grex-docs/categories/software/</link><description>Recent content in Software on Grex</description><generator>Hugo</generator><language>en</language><copyright>The MIT License (MIT) Copyright © 2023 UM-Grex</copyright><atom:link href="https://um-grex.github.io/grex-docs/categories/software/index.xml" rel="self" type="application/rss+xml"/><item><title>Running Gaussian on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/gaussian/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/gaussian/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Software on Grex</title><link>https://um-grex.github.io/grex-docs/categories/software/</link><description>Recent content in Software on Grex</description><generator>Hugo</generator><language>en</language><copyright>The MIT License (MIT) Copyright © 2023 UM-Grex</copyright><atom:link href="https://um-grex.github.io/grex-docs/categories/software/index.xml" rel="self" type="application/rss+xml"/><item><title>Running Quantum Espresso on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/espresso/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/espresso/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>&lt;a
+ href="https://www.quantum-espresso.org"
+ class="is-pretty-link">Quantum ESPRESSO&lt;/a
+>
+ is an integrated suite of computer codes for electronic-structure calculations and materials modeling at the nanoscale. It is based on density-functional theory, plane waves, and pseudopotentials (both norm-conserving and ultrasoft).&lt;/p>
+&lt;h2 id='system-specific-notes'>System specific notes&lt;a href='#system-specific-notes' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>On the Grex&amp;rsquo;s default software stack (&lt;em>SBEnv&lt;/em>), Espresso is built using a variety of compilers and Open MPI 4.1&lt;/p>
+&lt;p>To find out which versions are available, use &lt;strong>module spider espresso&lt;/strong>.&lt;/p>
+&lt;p>For a version 7.3.1, at the time of writing the following modules should be loaded:&lt;/p></description></item><item><title>Running Gaussian on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/gaussian/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/gaussian/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;p>&lt;a
  href="http://gaussian.com/"title="Gaussian" id="gaussian"
@@ -12,7 +23,17 @@
 &lt;h2 id='user-responsibilities-and-access'>User Responsibilities and Access&lt;a href='#user-responsibilities-and-access' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;p>University of Manitoba has a site license for Gaussian 16 and GaussView. However, it comes with certain license limitations, so access to the code is subject to some license conditions.&lt;/p>
-&lt;p>Since, as of now, Compute Canada accounts are a superset of Grex accounts, users will want to initiate getting access by sending an email agreeing to Gaussian conditions to &lt;strong>support@tech.alliancecan.ca&lt;/strong>, confirming that you have read and agree to abide by the following conditions, and mentioning that you&amp;rsquo;d also want to access it on Grex:&lt;/p></description></item><item><title>Running Julia on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/julia/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/julia/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
+&lt;p>Since, as of now, Compute Canada accounts are a superset of Grex accounts, users will want to initiate getting access by sending an email agreeing to Gaussian conditions to &lt;strong>support@tech.alliancecan.ca&lt;/strong>, confirming that you have read and agree to abide by the following conditions, and mentioning that you&amp;rsquo;d also want to access it on Grex:&lt;/p></description></item><item><title>Running GROMACS MD package on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/gromacs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/gromacs/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>&lt;a
+ href="https://www.gromacs.org"
+ class="is-pretty-link">GROMACS&lt;/a
+>
+ (GROningen MAchine for Chemical Simulations) is a molecular dynamics package primarily designed for simulations of proteins, lipids and nucleic acids. GROMACS is one of the fastest and most popular software packages available and can run on CPUs as well as GPUs.&lt;/p>
+&lt;h2 id='system-specific-notes'>System specific notes&lt;a href='#system-specific-notes' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>On the Grex&amp;rsquo;s default software stack (&lt;em>SBEnv&lt;/em>), GROMACS is built using a variety of compilers and OpenMPI 4.1&lt;/p>
+&lt;p>To find out which versions are available, use &lt;strong>module spider gromacs&lt;/strong>. There could be more than one (for example, CPU and GPU) builds available for each GROMACS version as listed by &lt;em>module spider&lt;/em>.&lt;/p></description></item><item><title>Running Julia on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/julia/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/julia/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;p>&lt;a
  href="https://julialang.org/"
@@ -25,17 +46,21 @@
 &lt;h2 id='installing-packages'>Installing packages&lt;a href='#installing-packages' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;p>We do not maintain centralized versions of Julia packages. Users should install Julia modules in their home directory.&lt;/p>
-&lt;p>The command is (in Julia REPL):&lt;/p></description></item><item><title>Running LAMMPS on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/lammps/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/lammps/</guid><description>&lt;p>&lt;strong>Note: Lammps is not available yet under the new environment &lt;em>SBEnv&lt;/em>.&lt;/strong>&lt;/p>
-&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
+&lt;p>The command is (in Julia REPL):&lt;/p></description></item><item><title>Running LAMMPS on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/lammps/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/lammps/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;p>&lt;a
  href="https://www.lammps.org/"
  class="is-pretty-link">LAMMPS&lt;/a
 >
- is a classical molecular dynamics code. The name stands for Large-scale Atomic / Molecular Massively Parallel Simulator.&lt;/p>
+ is a classical molecular dynamics code. The name stands for Large-scale Atomic / Molecular Massively Parallel Simulator. LAMMPS is distributed by Sandia National Laboratories, a US Department of Energy laboratory.&lt;/p>
 &lt;h2 id='modules'>Modules&lt;a href='#modules' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
-&lt;p>As fo now, there is no LAMMPS version added to the new environment. We will add them when users request a specific version. With that said, it is possible to use LAMMPS from the Alliance software stack after load &lt;em>CCEnv&lt;/em>:&lt;/p></description></item><item><title>General Linux tools</title><link>https://um-grex.github.io/grex-docs/software/general-linux/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/software/general-linux/</guid><description>&lt;h2 id='linux-tools-on-grex'>Linux tools on Grex&lt;a href='#linux-tools-on-grex' class='anchor'>#&lt;/a>
+&lt;p>On the Grex’s default software stack (SBEnv), LAMMPS was built using a variety of compilers and OpenMPI 4.1&lt;/p>
+&lt;p>To find out which versions are available, use &lt;strong>module spider lammps&lt;/strong>&lt;/p>
+&lt;p>As an example:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>module load arch/avx512 gcc/13.2.0 openmpi/4.1.6 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>module load lammps/2021-09-29&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;p>and&lt;/p></description></item><item><title>General Linux tools</title><link>https://um-grex.github.io/grex-docs/software/general-linux/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/software/general-linux/</guid><description>&lt;h2 id='linux-tools-on-grex'>Linux tools on Grex&lt;a href='#linux-tools-on-grex' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;p>There are a number of general and distro-specific tools on Grex that are worth mentioning here. Such tools are: &lt;strong>text editors&lt;/strong>, &lt;strong>image viewers&lt;/strong>, &lt;strong>file managers&lt;/strong>, &amp;hellip; etc.&lt;/p>
 &lt;h2 id='command-line-text-editors'>Command line Text editors&lt;a href='#command-line-text-editors' class='anchor'>#&lt;/a>
@@ -95,10 +120,10 @@ Sometimes it is useful (for example, for copy/paste operations with mouse, betwe
  href="https://nwchemgit.github.io/"
  class="is-pretty-link">NWChem&lt;/a
 >
- is a Scalable open source solution for large scale molecular simulations. NWChem is actively developed by a consortium of developers and maintained by the EMSL located at the Pacific Northwest National Laboratory (PNNL) in Washington State. The code is distributed as open-source under the terms of the Educational Community License version 2.0 (ECL 2.0).&lt;/p>
+ is a Scalable, massive parallel and open source solution for large scale molecular simulations. NWChem is actively developed by a consortium of developers and maintained by the EMSL located at the Pacific Northwest National Laboratory (PNNL) in Washington State. The code is distributed as open source under the terms of the Educational Community License version 2.0 (ECL 2.0).&lt;/p>
 &lt;h2 id='system-specific-notes'>System specific notes&lt;a href='#system-specific-notes' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
-&lt;p>On the Grex software stack, NWChem is using OpenMPI 3.1 with Intel compilers toolchains. To find out which versions are available, use &lt;strong>module spider nwchem&lt;/strong>.&lt;/p></description></item><item><title>Running ORCA on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/orca/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/orca/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
+&lt;p>To find out which versions of NWChem are available, use &lt;strong>module spider nwchem&lt;/strong> .&lt;/p></description></item><item><title>Running ORCA on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/orca/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/orca/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;p>&lt;a
  href="http://cec.mpg.de/forum/"
@@ -215,9 +240,25 @@ The examples are a Singularity/Apptainer repository from &lt;a
  >&lt;li class="">
  &lt;div class="sc-treeview-label">&lt;p class="is-marginless">
  &lt;a
+ href="https://um-grex.github.io/grex-docs/grex-docs/specific-soft/espresso/"
+ class="is-pretty-link"
+ >Espresso&lt;/a
+ >
+ &lt;/p>
+ &lt;/div>&lt;/li>&lt;li class="">
+ &lt;div class="sc-treeview-label">&lt;p class="is-marginless">
+ &lt;a
  href="https://um-grex.github.io/grex-docs/grex-docs/specific-soft/gaussian/"
  class="is-pretty-link"
  >Gaussian&lt;/a
+ >
+ &lt;/p>
+ &lt;/div>&lt;/li>&lt;li class="">
+ &lt;div class="sc-treeview-label">&lt;p class="is-marginless">
+ &lt;a
+ href="https://um-grex.github.io/grex-docs/grex-docs/specific-soft/gromacs/"
+ class="is-pretty-link"
+ >GROMACS&lt;/a
  >
  &lt;/p>
  &lt;/div>&lt;/li>&lt;li class="">

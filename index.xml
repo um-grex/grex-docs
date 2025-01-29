@@ -17,7 +17,18 @@ It also offers some data preservation features like data recovery and data histo
 &lt;p>&lt;strong>December 10-11, 2019&lt;/strong>&lt;/p>
 &lt;h2 id='introduction--motivation'>Introduction / Motivation&lt;a href='#introduction--motivation' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
-&lt;p>&lt;strong>Grex&lt;/strong> runs an old version of CentOS 6, which gets unsupported in 2020. The 2.6.x Linux kernel that is shipped with CentOS 6 does not support containerized workloads that require recent kernel features. The Lustre parallel filesystem client had some troubles that we were unable to resolve with the CentOS 6 kernel version as well. Finally, the original Grex resource management software, Torque 2.5 and Moab7 are unable to properly schedule jobs that use newer MPI implementations (OpenMPI 2 and 3), which are increasingly common amongst HPC users. Therefore, using the power outages of October and December 2019, we have embarked on a rather ambitious project of updating the entire Grex OS and software stack and scheduling to CentOS 7 and SLURM. This document outlines the changes and how they will affect Grex users.&lt;/p></description></item><item><title>Running Gaussian on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/gaussian/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/gaussian/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
+&lt;p>&lt;strong>Grex&lt;/strong> runs an old version of CentOS 6, which gets unsupported in 2020. The 2.6.x Linux kernel that is shipped with CentOS 6 does not support containerized workloads that require recent kernel features. The Lustre parallel filesystem client had some troubles that we were unable to resolve with the CentOS 6 kernel version as well. Finally, the original Grex resource management software, Torque 2.5 and Moab7 are unable to properly schedule jobs that use newer MPI implementations (OpenMPI 2 and 3), which are increasingly common amongst HPC users. Therefore, using the power outages of October and December 2019, we have embarked on a rather ambitious project of updating the entire Grex OS and software stack and scheduling to CentOS 7 and SLURM. This document outlines the changes and how they will affect Grex users.&lt;/p></description></item><item><title>Running Quantum Espresso on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/espresso/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/espresso/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>&lt;a
+ href="https://www.quantum-espresso.org"
+ class="is-pretty-link">Quantum ESPRESSO&lt;/a
+>
+ is an integrated suite of computer codes for electronic-structure calculations and materials modeling at the nanoscale. It is based on density-functional theory, plane waves, and pseudopotentials (both norm-conserving and ultrasoft).&lt;/p>
+&lt;h2 id='system-specific-notes'>System specific notes&lt;a href='#system-specific-notes' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>On the Grex&amp;rsquo;s default software stack (&lt;em>SBEnv&lt;/em>), Espresso is built using a variety of compilers and Open MPI 4.1&lt;/p>
+&lt;p>To find out which versions are available, use &lt;strong>module spider espresso&lt;/strong>.&lt;/p>
+&lt;p>For a version 7.3.1, at the time of writing the following modules should be loaded:&lt;/p></description></item><item><title>Running Gaussian on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/gaussian/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/gaussian/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;p>&lt;a
  href="http://gaussian.com/"title="Gaussian" id="gaussian"
@@ -31,7 +42,17 @@ It also offers some data preservation features like data recovery and data histo
 &lt;h2 id='user-responsibilities-and-access'>User Responsibilities and Access&lt;a href='#user-responsibilities-and-access' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;p>University of Manitoba has a site license for Gaussian 16 and GaussView. However, it comes with certain license limitations, so access to the code is subject to some license conditions.&lt;/p>
-&lt;p>Since, as of now, Compute Canada accounts are a superset of Grex accounts, users will want to initiate getting access by sending an email agreeing to Gaussian conditions to &lt;strong>support@tech.alliancecan.ca&lt;/strong>, confirming that you have read and agree to abide by the following conditions, and mentioning that you&amp;rsquo;d also want to access it on Grex:&lt;/p></description></item><item><title>Running Julia on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/julia/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/julia/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
+&lt;p>Since, as of now, Compute Canada accounts are a superset of Grex accounts, users will want to initiate getting access by sending an email agreeing to Gaussian conditions to &lt;strong>support@tech.alliancecan.ca&lt;/strong>, confirming that you have read and agree to abide by the following conditions, and mentioning that you&amp;rsquo;d also want to access it on Grex:&lt;/p></description></item><item><title>Running GROMACS MD package on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/gromacs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/gromacs/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>&lt;a
+ href="https://www.gromacs.org"
+ class="is-pretty-link">GROMACS&lt;/a
+>
+ (GROningen MAchine for Chemical Simulations) is a molecular dynamics package primarily designed for simulations of proteins, lipids and nucleic acids. GROMACS is one of the fastest and most popular software packages available and can run on CPUs as well as GPUs.&lt;/p>
+&lt;h2 id='system-specific-notes'>System specific notes&lt;a href='#system-specific-notes' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>On the Grex&amp;rsquo;s default software stack (&lt;em>SBEnv&lt;/em>), GROMACS is built using a variety of compilers and OpenMPI 4.1&lt;/p>
+&lt;p>To find out which versions are available, use &lt;strong>module spider gromacs&lt;/strong>. There could be more than one (for example, CPU and GPU) builds available for each GROMACS version as listed by &lt;em>module spider&lt;/em>.&lt;/p></description></item><item><title>Running Julia on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/julia/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/julia/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;p>&lt;a
  href="https://julialang.org/"
@@ -44,17 +65,21 @@ It also offers some data preservation features like data recovery and data histo
 &lt;h2 id='installing-packages'>Installing packages&lt;a href='#installing-packages' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;p>We do not maintain centralized versions of Julia packages. Users should install Julia modules in their home directory.&lt;/p>
-&lt;p>The command is (in Julia REPL):&lt;/p></description></item><item><title>Running LAMMPS on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/lammps/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/lammps/</guid><description>&lt;p>&lt;strong>Note: Lammps is not available yet under the new environment &lt;em>SBEnv&lt;/em>.&lt;/strong>&lt;/p>
-&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
+&lt;p>The command is (in Julia REPL):&lt;/p></description></item><item><title>Running LAMMPS on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/lammps/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/lammps/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;p>&lt;a
  href="https://www.lammps.org/"
  class="is-pretty-link">LAMMPS&lt;/a
 >
- is a classical molecular dynamics code. The name stands for Large-scale Atomic / Molecular Massively Parallel Simulator.&lt;/p>
+ is a classical molecular dynamics code. The name stands for Large-scale Atomic / Molecular Massively Parallel Simulator. LAMMPS is distributed by Sandia National Laboratories, a US Department of Energy laboratory.&lt;/p>
 &lt;h2 id='modules'>Modules&lt;a href='#modules' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
-&lt;p>As fo now, there is no LAMMPS version added to the new environment. We will add them when users request a specific version. With that said, it is possible to use LAMMPS from the Alliance software stack after load &lt;em>CCEnv&lt;/em>:&lt;/p></description></item><item><title>General Linux tools</title><link>https://um-grex.github.io/grex-docs/software/general-linux/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/software/general-linux/</guid><description>&lt;h2 id='linux-tools-on-grex'>Linux tools on Grex&lt;a href='#linux-tools-on-grex' class='anchor'>#&lt;/a>
+&lt;p>On the Grex’s default software stack (SBEnv), LAMMPS was built using a variety of compilers and OpenMPI 4.1&lt;/p>
+&lt;p>To find out which versions are available, use &lt;strong>module spider lammps&lt;/strong>&lt;/p>
+&lt;p>As an example:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>module load arch/avx512 gcc/13.2.0 openmpi/4.1.6 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>module load lammps/2021-09-29&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;p>and&lt;/p></description></item><item><title>General Linux tools</title><link>https://um-grex.github.io/grex-docs/software/general-linux/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/software/general-linux/</guid><description>&lt;h2 id='linux-tools-on-grex'>Linux tools on Grex&lt;a href='#linux-tools-on-grex' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;p>There are a number of general and distro-specific tools on Grex that are worth mentioning here. Such tools are: &lt;strong>text editors&lt;/strong>, &lt;strong>image viewers&lt;/strong>, &lt;strong>file managers&lt;/strong>, &amp;hellip; etc.&lt;/p>
 &lt;h2 id='command-line-text-editors'>Command line Text editors&lt;a href='#command-line-text-editors' class='anchor'>#&lt;/a>
@@ -114,10 +139,10 @@ Sometimes it is useful (for example, for copy/paste operations with mouse, betwe
  href="https://nwchemgit.github.io/"
  class="is-pretty-link">NWChem&lt;/a
 >
- is a Scalable open source solution for large scale molecular simulations. NWChem is actively developed by a consortium of developers and maintained by the EMSL located at the Pacific Northwest National Laboratory (PNNL) in Washington State. The code is distributed as open-source under the terms of the Educational Community License version 2.0 (ECL 2.0).&lt;/p>
+ is a Scalable, massive parallel and open source solution for large scale molecular simulations. NWChem is actively developed by a consortium of developers and maintained by the EMSL located at the Pacific Northwest National Laboratory (PNNL) in Washington State. The code is distributed as open source under the terms of the Educational Community License version 2.0 (ECL 2.0).&lt;/p>
 &lt;h2 id='system-specific-notes'>System specific notes&lt;a href='#system-specific-notes' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
-&lt;p>On the Grex software stack, NWChem is using OpenMPI 3.1 with Intel compilers toolchains. To find out which versions are available, use &lt;strong>module spider nwchem&lt;/strong>.&lt;/p></description></item><item><title>Running ORCA on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/orca/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/orca/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
+&lt;p>To find out which versions of NWChem are available, use &lt;strong>module spider nwchem&lt;/strong> .&lt;/p></description></item><item><title>Running ORCA on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/orca/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/orca/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;p>&lt;a
  href="http://cec.mpg.de/forum/"
@@ -289,8 +314,8 @@ This event will help you get started with HPC and familiarize you with essential
 &lt;/h2>&lt;hr>
 &lt;p>Below are the slides from the DATA 4010 seminars that were held on September 18 and 25, 2024:&lt;/p></description></item><item><title>Connect and Transfer data with OOD</title><link>https://um-grex.github.io/grex-docs/connecting/ood/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/connecting/ood/</guid><description>&lt;h2 id='osc-openondemand-on-grex'>OSC OpenOnDemand on Grex&lt;a href='#osc-openondemand-on-grex' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
-&lt;p>OpenOnDemand is a Web portal appication for High-Performance Computing systems. It is used on many of the Top 500 HPC machines across the World.
-Grex&amp;rsquo;s current OOD v.3 instance runs on a dedicared login node &lt;a
+&lt;p>OpenOnDemand is a Web portal application for High-Performance Computing systems. It is used on many of the Top 500 HPC machines across the World.
+Grex&amp;rsquo;s current OOD v.3 instance runs on a dedicated login node &lt;a
  href="https://ood.hpc.umanitoba.ca"title="Grex OOD" id="grex-ood"
  class="is-pretty-link">&lt;strong>ood.hpc.umanitoba.ca&lt;/strong>&lt;/a
 >
