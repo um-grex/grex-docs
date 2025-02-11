@@ -73,7 +73,7 @@ Currently, the following partitions are available on Grex:
 | **stamps** [^1]   | **3**   | **4 - V100/16GB**          | **32**       | **187 Gb**  | AVX512 CPU, NVLink   |
 | **livi**   [^2]   | **1**   | **16 -V100/32GB**          | **48**       | **1500 Gb** | NVSwitch, AVX512 CPU |
 | **agro**   [^3]   | **2**   | **2 - A30/24GB**           | **24**       | **250 Gb**  | AMD AVX2 CPU         |
-| **mcordgpu** [^4] | **5**   | **4 - A30/24GB**           | **32**       | **512 Gb**  | AMD AVX2 CPU         |
+| **mcordgpu** [^4] | **2**   | **4 - A30/24GB**           | **32**       | **512 Gb**  | AMD AVX2 CPU         |
 
 [^1]: **stamps:** GPU nodes contributed by Prof. R. Stamps
 [^2]: **livi:**   GPU node  contributed by Prof. L. Livi 
