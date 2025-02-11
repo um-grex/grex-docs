@@ -41,8 +41,7 @@ Grex is using the Duo instance provided by the Alliance. The available additiona
 &lt;li>access to the Internet that lets SSH ports open.&lt;/li>
 &lt;li>a user account on Grex (presently, it is a Compute Canada (an Alliance) Account).&lt;/li>
 &lt;li>and an SSH client for your operating system.&lt;/li>
-&lt;/ul>
-&lt;/blockquote>
+&lt;/ul>&lt;/blockquote>
 &lt;p>If you are not sure what your account on Grex is, check &lt;a
  href="https://www.computecanada.ca/research-portal/account-management/apply-for-an-account/"
  class="is-pretty-link">Getting Access&lt;/a
@@ -63,7 +62,7 @@ Grex is using the Duo instance provided by the Alliance. The available additiona
  * tatanka.hpc.umanitoba.ca
 -->
 &lt;p>To log in to Grex in the text (or bash) mode, connect to one of the above hosts using an &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/connecting/ssh/"
+ href="https://um-grex.github.io/grex-docs/connecting/ssh/"
  class="is-pretty-link">&lt;strong>SSH&lt;/strong>&lt;/a
 >
  (Secure SHELL) client.&lt;/p></description></item><item><title>Frequently Asked Questions.</title><link>https://um-grex.github.io/grex-docs/faq/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/faq/</guid><description>&lt;h2 id='access'>Access&lt;a href='#access' class='anchor'>#&lt;/a>

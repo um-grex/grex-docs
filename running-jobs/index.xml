@@ -12,8 +12,7 @@
 &lt;li>submit and monitor jobs&lt;/li>
 &lt;li>transfer and/or download data&lt;/li>
 &lt;li>run short tests, &amp;hellip; etc.&lt;/li>
-&lt;/ul>
-&lt;/blockquote>
+&lt;/ul>&lt;/blockquote>
 &lt;p>In other terms, anything that is not CPU, nor memory intensive [for example, a test with up to 4 CPUs, less than 2 Gb per core for 30 minutes or less].&lt;/p></description></item><item><title>Running batch jobs on Grex</title><link>https://um-grex.github.io/grex-docs/running-jobs/batch-jobs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/running-jobs/batch-jobs/</guid><description>&lt;h2 id='batch-jobs'>Batch jobs&lt;a href='#batch-jobs' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;p>HPC systems usually are &lt;strong>clusters&lt;/strong> of many compute nodes, which are joined by an interconnect (like InfiniBand (IB) or Omni-PATH (OPA)), and under control of a resource management software (for example SLURM). From the users&amp;rsquo; point of view, the HPC system is a unity, a single large machine rather than a network of individual computers. Most of the time, HPC systems are used in batch mode: users would submit so-called &amp;ldquo;jobs&amp;rdquo; to a &amp;ldquo;batch queue&amp;rdquo;. A subset of the available resources of the HPC machine is allocated to each of the users&amp;rsquo; batch jobs, and they run without any need for user intervention as soon as the resources become available.&lt;/p></description></item><item><title>Scheduling policies and running jobs on Contributed nodes</title><link>https://um-grex.github.io/grex-docs/running-jobs/contributed-systems/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/running-jobs/contributed-systems/</guid><description>&lt;h2 id='scheduling-policies-for-contributed-systems'>Scheduling policies for contributed systems&lt;a href='#scheduling-policies-for-contributed-systems' class='anchor'>#&lt;/a>

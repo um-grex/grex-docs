@@ -77,8 +77,7 @@
  class="is-pretty-link">learn VIM in X minutes&lt;/a
 >
  .&lt;/li>
-&lt;/ul>
-&lt;/blockquote>
+&lt;/ul>&lt;/blockquote>
 &lt;blockquote>
 &lt;ul>
 &lt;li>Another lightweight text-mode editor is &lt;strong>nano&lt;/strong>. It provides a self-explanatory key-combination menu at the bottom of the screen. An online manual can be found &lt;a
@@ -86,8 +85,7 @@
  class="is-pretty-link">here&lt;/a
 >
 .&lt;/li>
-&lt;/ul>
-&lt;/blockquote>
+&lt;/ul>&lt;/blockquote>
 &lt;blockquote>
 &lt;ul>
 &lt;li>A more modern alternative to &amp;ldquo;nano&amp;rdquo; is &lt;strong>micro&lt;/strong> . On Grex it is available only as module (&lt;code>module load micro&lt;/code>) . &lt;strong>micro&lt;/strong> supports syntax coloring for a number of programming languages. The webpage of &lt;a
@@ -95,13 +93,11 @@
  class="is-pretty-link">micro&lt;/a
 >
  .&lt;/li>
-&lt;/ul>
-&lt;/blockquote>
+&lt;/ul>&lt;/blockquote>
 &lt;blockquote>
 &lt;ul>
 &lt;li>Midnight Commander file manager provides a text-mode editor that can be invoked stand-alone as &lt;strong>mc -e filename&lt;/strong>, or from within &lt;strong>mc&lt;/strong> by using F4 or Edit menu item on a selected file.&lt;/li>
-&lt;/ul>
-&lt;/blockquote>
+&lt;/ul>&lt;/blockquote>
 &lt;h2 id='gui-text-editors'>GUI Text editors&lt;a href='#gui-text-editors' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;!--
@@ -158,7 +154,7 @@ This makes maintenance of Python software difficult. Not only do Python and libr
 &lt;/h2>&lt;hr>
 &lt;p>Grex comes with a sizable software stack that contains most of the software development environment for typical HPC applications. This section of the documentation covers best practices for compiling and building your own software on Grex.&lt;/p>
 &lt;p>On Grex, login nodes can be used to compile software and to run short interactive and/or test runs. All other jobs must be submitted to the &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/running-jobs/batch-jobs/"
+ href="https://um-grex.github.io/grex-docs/running-jobs/batch-jobs/"
  class="is-pretty-link">batch&lt;/a
 >
  system. User sessions on the login nodes are limited by &lt;em>cgroups&lt;/em> to prevent resource congestion. Thus, it sometimes makes sense to perform some of the code development in interactive jobs, in cases such as (but not limited to):&lt;/p></description></item><item><title>Containers for Software</title><link>https://um-grex.github.io/grex-docs/software/containers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/software/containers/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
@@ -224,7 +220,7 @@ The examples are a Singularity/Apptainer repository from &lt;a
  class="is-pretty-link">SLURM&lt;/a
 >
  batch system since &lt;strong>December 2019&lt;/strong> with the &lt;strong>Linux/SLURM update&lt;/strong> &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/changes/linux-slurm-update/"
+ href="https://um-grex.github.io/grex-docs/changes/linux-slurm-update/"
  class="is-pretty-link">project&lt;/a
 >
 .&lt;/p></description></item><item><title>Software and Applications</title><link>https://um-grex.github.io/grex-docs/software/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/software/</guid><description>&lt;h2 id='software'>Software&lt;a href='#software' class='anchor'>#&lt;/a>
@@ -240,7 +236,7 @@ The examples are a Singularity/Apptainer repository from &lt;a
  >&lt;li class="">
  &lt;div class="sc-treeview-label">&lt;p class="is-marginless">
  &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/specific-soft/espresso/"
+ href="https://um-grex.github.io/grex-docs/specific-soft/espresso/"
  class="is-pretty-link"
  >Espresso&lt;/a
  >
@@ -248,7 +244,7 @@ The examples are a Singularity/Apptainer repository from &lt;a
  &lt;/div>&lt;/li>&lt;li class="">
  &lt;div class="sc-treeview-label">&lt;p class="is-marginless">
  &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/specific-soft/gaussian/"
+ href="https://um-grex.github.io/grex-docs/specific-soft/gaussian/"
  class="is-pretty-link"
  >Gaussian&lt;/a
  >
@@ -256,7 +252,7 @@ The examples are a Singularity/Apptainer repository from &lt;a
  &lt;/div>&lt;/li>&lt;li class="">
  &lt;div class="sc-treeview-label">&lt;p class="is-marginless">
  &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/specific-soft/gromacs/"
+ href="https://um-grex.github.io/grex-docs/specific-soft/gromacs/"
  class="is-pretty-link"
  >GROMACS&lt;/a
  >
@@ -264,7 +260,7 @@ The examples are a Singularity/Apptainer repository from &lt;a
  &lt;/div>&lt;/li>&lt;li class="">
  &lt;div class="sc-treeview-label">&lt;p class="is-marginless">
  &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/specific-soft/julia/"
+ href="https://um-grex.github.io/grex-docs/specific-soft/julia/"
  class="is-pretty-link"
  >Julia&lt;/a
  >
@@ -272,7 +268,7 @@ The examples are a Singularity/Apptainer repository from &lt;a
  &lt;/div>&lt;/li>&lt;li class="">
  &lt;div class="sc-treeview-label">&lt;p class="is-marginless">
  &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/specific-soft/lammps/"
+ href="https://um-grex.github.io/grex-docs/specific-soft/lammps/"
  class="is-pretty-link"
  >LAMMPS&lt;/a
  >
@@ -280,7 +276,7 @@ The examples are a Singularity/Apptainer repository from &lt;a
  &lt;/div>&lt;/li>&lt;li class="">
  &lt;div class="sc-treeview-label">&lt;p class="is-marginless">
  &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/specific-soft/matlab/"
+ href="https://um-grex.github.io/grex-docs/specific-soft/matlab/"
  class="is-pretty-link"
  >MATLAB&lt;/a
  >
@@ -288,7 +284,7 @@ The examples are a Singularity/Apptainer repository from &lt;a
  &lt;/div>&lt;/li>&lt;li class="">
  &lt;div class="sc-treeview-label">&lt;p class="is-marginless">
  &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/specific-soft/nwchem/"
+ href="https://um-grex.github.io/grex-docs/specific-soft/nwchem/"
  class="is-pretty-link"
  >NWChem&lt;/a
  >
@@ -296,7 +292,7 @@ The examples are a Singularity/Apptainer repository from &lt;a
  &lt;/div>&lt;/li>&lt;li class="">
  &lt;div class="sc-treeview-label">&lt;p class="is-marginless">
  &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/specific-soft/orca/"
+ href="https://um-grex.github.io/grex-docs/specific-soft/orca/"
  class="is-pretty-link"
  >ORCA&lt;/a
  >
@@ -304,7 +300,7 @@ The examples are a Singularity/Apptainer repository from &lt;a
  &lt;/div>&lt;/li>&lt;li class="">
  &lt;div class="sc-treeview-label">&lt;p class="is-marginless">
  &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/specific-soft/vasp/"
+ href="https://um-grex.github.io/grex-docs/specific-soft/vasp/"
  class="is-pretty-link"
  >VASP&lt;/a
  >
@@ -312,7 +308,7 @@ The examples are a Singularity/Apptainer repository from &lt;a
  &lt;/div>&lt;/li>&lt;li class="">
  &lt;div class="sc-treeview-label">&lt;p class="is-marginless">
  &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/specific-soft/python-ai/"
+ href="https://um-grex.github.io/grex-docs/specific-soft/python-ai/"
  class="is-pretty-link"
  >Python for ML&lt;/a
  >

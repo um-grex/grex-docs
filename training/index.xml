@@ -6,22 +6,21 @@
 &lt;blockquote>
 &lt;ul>
 &lt;li>&lt;strong>Start Guide for Using Grex efficiently&lt;/strong>: &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/workshops/autumn2024/Start_Guide-and_Grex-Usage-Oct2024.pdf"
+ href="https://um-grex.github.io/grex-docs/workshops/autumn2024/Start_Guide-and_Grex-Usage-Oct2024.pdf"
  class="is-pretty-link">Slides&lt;/a
 >
 &lt;/li>
 &lt;li>&lt;strong>Containers in HPC - Singularity/Apptainer&lt;/strong>: &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/workshops/autumn2024/Singularity-Apptainer.pdf"
+ href="https://um-grex.github.io/grex-docs/workshops/autumn2024/Singularity-Apptainer.pdf"
  class="is-pretty-link">Slides&lt;/a
 >
 &lt;/li>
 &lt;li>&lt;strong>Containers in HPC – Podman&lt;/strong>: &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/workshops/autumn2024/introduction_podman.pdf"
+ href="https://um-grex.github.io/grex-docs/workshops/autumn2024/introduction_podman.pdf"
  class="is-pretty-link">Slides&lt;/a
 >
 &lt;/li>
-&lt;/ul>
-&lt;/blockquote>
+&lt;/ul>&lt;/blockquote>
 &lt;!--
 ## Autumn workshop, October 2024
 ---
@@ -83,52 +82,51 @@ This event will help you get started with HPC and familiarize you with essential
 &lt;blockquote>
 &lt;ul>
 &lt;li>&lt;strong>Updates on Research Computing Resources&lt;/strong>: &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/workshops/autumn2023/01-Introduction.pdf"
+ href="https://um-grex.github.io/grex-docs/workshops/autumn2023/01-Introduction.pdf"
  class="is-pretty-link">Slides&lt;/a
 >
 &lt;/li>
 &lt;li>&lt;strong>Getting accounts, connecting, using Duo MFA&lt;/strong>: &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/workshops/autumn2023/02-Accounts-and-MFA.pdf"
+ href="https://um-grex.github.io/grex-docs/workshops/autumn2023/02-Accounts-and-MFA.pdf"
  class="is-pretty-link">Slides&lt;/a
 >
 &lt;/li>
 &lt;li>&lt;strong>Basics of Linux Shell&lt;/strong>: &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/workshops/autumn2023/03-Basics-of-Linux-Shell.pdf"
+ href="https://um-grex.github.io/grex-docs/workshops/autumn2023/03-Basics-of-Linux-Shell.pdf"
  class="is-pretty-link">Slides&lt;/a
 >
 &lt;/li>
 &lt;li>&lt;strong>Beginner running HPC jobs with SLURM&lt;/strong>: &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/workshops/autumn2023/04-Running-Jobs-On-HPC-Clusters.pdf"
+ href="https://um-grex.github.io/grex-docs/workshops/autumn2023/04-Running-Jobs-On-HPC-Clusters.pdf"
  class="is-pretty-link">Slides&lt;/a
 >
 &lt;/li>
 &lt;li>&lt;strong>Using HPC with OpenOnDemand Web portal&lt;/strong>: &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/workshops/autumn2023/05-OSC-OnDemand-on-Grex.pdf"
+ href="https://um-grex.github.io/grex-docs/workshops/autumn2023/05-OSC-OnDemand-on-Grex.pdf"
  class="is-pretty-link">Slides&lt;/a
 >
 &lt;/li>
 &lt;li>&lt;strong>Beginner HPC software overview&lt;/strong>: &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/workshops/autumn2023/06-HPC-Software-Overview.pdf"
+ href="https://um-grex.github.io/grex-docs/workshops/autumn2023/06-HPC-Software-Overview.pdf"
  class="is-pretty-link">Slides&lt;/a
 >
 &lt;/li>
 &lt;li>&lt;strong>Using containers in HPC (Apptainer, SingularityCE)&lt;/strong>: &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/workshops/autumn2023/07-SingularityApptainer.pdf"
+ href="https://um-grex.github.io/grex-docs/workshops/autumn2023/07-SingularityApptainer.pdf"
  class="is-pretty-link">Slides&lt;/a
 >
 &lt;/li>
 &lt;li>&lt;strong>Basics of using OpenStack cloud&lt;/strong>: &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/workshops/autumn2023/08-OpenStack-Cloud-Beginner.pdf"
+ href="https://um-grex.github.io/grex-docs/workshops/autumn2023/08-OpenStack-Cloud-Beginner.pdf"
  class="is-pretty-link">Slides&lt;/a
 >
 &lt;/li>
 &lt;li>&lt;strong>Getting most of HPC system&lt;/strong>: &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/workshops/autumn2023/09-Monitoring-Jobs-and-Efficiency.pdf"
+ href="https://um-grex.github.io/grex-docs/workshops/autumn2023/09-Monitoring-Jobs-and-Efficiency.pdf"
  class="is-pretty-link">Slides&lt;/a
 >
 &lt;/li>
-&lt;/ul>
-&lt;/blockquote>
+&lt;/ul>&lt;/blockquote>
 &lt;hr>
 &lt;h2 id='fall-data-4010-seminars-september-2023'>Fall DATA-4010 seminars, September 2023&lt;a href='#fall-data-4010-seminars-september-2023' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
@@ -138,59 +136,57 @@ This event will help you get started with HPC and familiarize you with essential
 &lt;blockquote>
 &lt;ul>
 &lt;li>&lt;strong>Program and updates&lt;/strong>: &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/workshops/autumn2022/Programme-And-Grex-Updates-Autumn2022.pdf"
+ href="https://um-grex.github.io/grex-docs/workshops/autumn2022/Programme-And-Grex-Updates-Autumn2022.pdf"
  class="is-pretty-link">Slides&lt;/a
 >
 &lt;/li>
 &lt;li>&lt;strong>High Performance Computing: Start Guide&lt;/strong>: &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/workshops/autumn2022/Start-Guide-HPC-Grex-Autumn2022.pdf"
+ href="https://um-grex.github.io/grex-docs/workshops/autumn2022/Start-Guide-HPC-Grex-Autumn2022.pdf"
  class="is-pretty-link">Slides&lt;/a
 >
 &lt;/li>
 &lt;li>&lt;strong>High Performance Computing: software environments&lt;/strong>: &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/workshops/autumn2022/HPC-Software-Grex-Autumn2022.pdf"
+ href="https://um-grex.github.io/grex-docs/workshops/autumn2022/HPC-Software-Grex-Autumn2022.pdf"
  class="is-pretty-link">Slides&lt;/a
 >
 &lt;/li>
 &lt;li>&lt;strong>OSC OpenOnDemand portal on Grex&lt;/strong>: &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/workshops/autumn2022/Using-OpenOndemand-On-Grex-Autumn2022.pdf"
+ href="https://um-grex.github.io/grex-docs/workshops/autumn2022/Using-OpenOndemand-On-Grex-Autumn2022.pdf"
  class="is-pretty-link">Slides&lt;/a
 >
 &lt;/li>
-&lt;/ul>
-&lt;/blockquote>
+&lt;/ul>&lt;/blockquote>
 &lt;h2 id='spring-workshop-may-2022'>Spring workshop, May 2022&lt;a href='#spring-workshop-may-2022' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;p>Below are the slides from the Grex workshop that was held on May 4-5, 2022:&lt;/p>
 &lt;blockquote>
 &lt;ul>
 &lt;li>&lt;strong>Introduction to local and National HPC at UManitoba: How to use available software and run jobs efficiently&lt;/strong>: &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/workshops/spring2022/Intro-Program-Spring2022.pdf"
+ href="https://um-grex.github.io/grex-docs/workshops/spring2022/Intro-Program-Spring2022.pdf"
  class="is-pretty-link">Slides&lt;/a
 >
 &lt;/li>
 &lt;li>&lt;strong>Introduction to High Performance Computing step by step: From getting an account to running jobs&lt;/strong>: &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/workshops/spring2022/HPC-Step-by-Step-Grex-Spring2022.pdf"
+ href="https://um-grex.github.io/grex-docs/workshops/spring2022/HPC-Step-by-Step-Grex-Spring2022.pdf"
  class="is-pretty-link">Slides&lt;/a
 >
 &lt;/li>
 &lt;li>&lt;strong>Using GP GPU compute on Grex&lt;/strong>: &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/workshops/spring2022/Using-GPU-Nodes-Grex-Spring2022.pdf"
+ href="https://um-grex.github.io/grex-docs/workshops/spring2022/Using-GPU-Nodes-Grex-Spring2022.pdf"
  class="is-pretty-link">Slides&lt;/a
 >
 &lt;/li>
 &lt;li>&lt;strong>High Performance Computing and software environments&lt;/strong>: &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/workshops/spring2022/HPC-Soft-Env-Grex-Spring2022.pdf"
+ href="https://um-grex.github.io/grex-docs/workshops/spring2022/HPC-Soft-Env-Grex-Spring2022.pdf"
  class="is-pretty-link">Slides&lt;/a
 >
 &lt;/li>
 &lt;li>&lt;strong>OSC OpenOnDemand portal on Grex&lt;/strong>: &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/workshops/spring2022/OpenOndemand-Grex-Spring2022.pdf"
+ href="https://um-grex.github.io/grex-docs/workshops/spring2022/OpenOndemand-Grex-Spring2022.pdf"
  class="is-pretty-link">Slides&lt;/a
 >
 &lt;/li>
-&lt;/ul>
-&lt;/blockquote>
+&lt;/ul>&lt;/blockquote>
 &lt;hr>
 &lt;!-- &lt;div class="sc-treeview">&lt;div class="sc-alert sc-alert-warning">No data available&lt;/div>&lt;/div>
  -->
@@ -202,27 +198,26 @@ This event will help you get started with HPC and familiarize you with essential
 &lt;blockquote>
 &lt;ul>
 &lt;li>&lt;strong>Introduction to HPC: Basics: Steps from getting an account to submitting jobs&lt;/strong>: &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/workshops/autumn2021/Intro-to-HPC-Basics-Autumn2021.pdf"
+ href="https://um-grex.github.io/grex-docs/workshops/autumn2021/Intro-to-HPC-Basics-Autumn2021.pdf"
  class="is-pretty-link">Slides&lt;/a
 >
 &lt;/li>
 &lt;li>&lt;strong>Linux (Unix) shell basics&lt;/strong>: &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/workshops/autumn2021/Linux-Shell-Basics-autumn2021-2.pdf"
+ href="https://um-grex.github.io/grex-docs/workshops/autumn2021/Linux-Shell-Basics-autumn2021-2.pdf"
  class="is-pretty-link">Slides&lt;/a
 >
 &lt;/li>
 &lt;li>&lt;strong>Software on HPC clusters&lt;/strong>: &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/workshops/autumn2021/Intro-HPC-Software-Env-Grex-autumn2021.pdf"
+ href="https://um-grex.github.io/grex-docs/workshops/autumn2021/Intro-HPC-Software-Env-Grex-autumn2021.pdf"
  class="is-pretty-link">Slides&lt;/a
 >
 &lt;/li>
 &lt;li>&lt;strong>Scheduling jobs on HPC clusters: How to optimize your jobs and get more from the resources available?&lt;/strong>: &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/workshops/autumn2021/Adv-Scheduling-Jobs-HPC-Cluster-Grex-autumn2021.pdf"
+ href="https://um-grex.github.io/grex-docs/workshops/autumn2021/Adv-Scheduling-Jobs-HPC-Cluster-Grex-autumn2021.pdf"
  class="is-pretty-link">Slides&lt;/a
 >
 &lt;/li>
-&lt;/ul>
-&lt;/blockquote>
+&lt;/ul>&lt;/blockquote>
 &lt;h2 id='spring-workshop-april-2021'>Spring workshop, April 2021&lt;a href='#spring-workshop-april-2021' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;p>Below are the slides from the Grex workshop that was held on April 21-22, 2021:&lt;/p></description></item></channel></rss>

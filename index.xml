@@ -96,8 +96,7 @@ It also offers some data preservation features like data recovery and data histo
  class="is-pretty-link">learn VIM in X minutes&lt;/a
 >
  .&lt;/li>
-&lt;/ul>
-&lt;/blockquote>
+&lt;/ul>&lt;/blockquote>
 &lt;blockquote>
 &lt;ul>
 &lt;li>Another lightweight text-mode editor is &lt;strong>nano&lt;/strong>. It provides a self-explanatory key-combination menu at the bottom of the screen. An online manual can be found &lt;a
@@ -105,8 +104,7 @@ It also offers some data preservation features like data recovery and data histo
  class="is-pretty-link">here&lt;/a
 >
 .&lt;/li>
-&lt;/ul>
-&lt;/blockquote>
+&lt;/ul>&lt;/blockquote>
 &lt;blockquote>
 &lt;ul>
 &lt;li>A more modern alternative to &amp;ldquo;nano&amp;rdquo; is &lt;strong>micro&lt;/strong> . On Grex it is available only as module (&lt;code>module load micro&lt;/code>) . &lt;strong>micro&lt;/strong> supports syntax coloring for a number of programming languages. The webpage of &lt;a
@@ -114,13 +112,11 @@ It also offers some data preservation features like data recovery and data histo
  class="is-pretty-link">micro&lt;/a
 >
  .&lt;/li>
-&lt;/ul>
-&lt;/blockquote>
+&lt;/ul>&lt;/blockquote>
 &lt;blockquote>
 &lt;ul>
 &lt;li>Midnight Commander file manager provides a text-mode editor that can be invoked stand-alone as &lt;strong>mc -e filename&lt;/strong>, or from within &lt;strong>mc&lt;/strong> by using F4 or Edit menu item on a selected file.&lt;/li>
-&lt;/ul>
-&lt;/blockquote>
+&lt;/ul>&lt;/blockquote>
 &lt;h2 id='gui-text-editors'>GUI Text editors&lt;a href='#gui-text-editors' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;!--
@@ -193,8 +189,7 @@ Grex is using the Duo instance provided by the Alliance. The available additiona
 &lt;li>access to the Internet that lets SSH ports open.&lt;/li>
 &lt;li>a user account on Grex (presently, it is a Compute Canada (an Alliance) Account).&lt;/li>
 &lt;li>and an SSH client for your operating system.&lt;/li>
-&lt;/ul>
-&lt;/blockquote>
+&lt;/ul>&lt;/blockquote>
 &lt;p>If you are not sure what your account on Grex is, check &lt;a
  href="https://www.computecanada.ca/research-portal/account-management/apply-for-an-account/"
  class="is-pretty-link">Getting Access&lt;/a
@@ -210,8 +205,7 @@ Grex is using the Duo instance provided by the Alliance. The available additiona
 &lt;li>submit and monitor jobs&lt;/li>
 &lt;li>transfer and/or download data&lt;/li>
 &lt;li>run short tests, &amp;hellip; etc.&lt;/li>
-&lt;/ul>
-&lt;/blockquote>
+&lt;/ul>&lt;/blockquote>
 &lt;p>In other terms, anything that is not CPU, nor memory intensive [for example, a test with up to 4 CPUs, less than 2 Gb per core for 30 minutes or less].&lt;/p></description></item><item><title>Modules and software stacks</title><link>https://um-grex.github.io/grex-docs/software/using-modules/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/software/using-modules/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;!--
@@ -230,7 +224,7 @@ This makes maintenance of Python software difficult. Not only do Python and libr
 &lt;/h2>&lt;hr>
 &lt;p>Grex comes with a sizable software stack that contains most of the software development environment for typical HPC applications. This section of the documentation covers best practices for compiling and building your own software on Grex.&lt;/p>
 &lt;p>On Grex, login nodes can be used to compile software and to run short interactive and/or test runs. All other jobs must be submitted to the &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/running-jobs/batch-jobs/"
+ href="https://um-grex.github.io/grex-docs/running-jobs/batch-jobs/"
  class="is-pretty-link">batch&lt;/a
 >
  system. User sessions on the login nodes are limited by &lt;em>cgroups&lt;/em> to prevent resource congestion. Thus, it sometimes makes sense to perform some of the code development in interactive jobs, in cases such as (but not limited to):&lt;/p></description></item><item><title>Workshops - 2024</title><link>https://um-grex.github.io/grex-docs/training/workshops-2024/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/training/workshops-2024/</guid><description>&lt;h2 id='autumn-workshop-october-2024'>Autumn workshop, October 2024&lt;a href='#autumn-workshop-october-2024' class='anchor'>#&lt;/a>
@@ -241,22 +235,21 @@ This makes maintenance of Python software difficult. Not only do Python and libr
 &lt;blockquote>
 &lt;ul>
 &lt;li>&lt;strong>Start Guide for Using Grex efficiently&lt;/strong>: &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/workshops/autumn2024/Start_Guide-and_Grex-Usage-Oct2024.pdf"
+ href="https://um-grex.github.io/grex-docs/workshops/autumn2024/Start_Guide-and_Grex-Usage-Oct2024.pdf"
  class="is-pretty-link">Slides&lt;/a
 >
 &lt;/li>
 &lt;li>&lt;strong>Containers in HPC - Singularity/Apptainer&lt;/strong>: &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/workshops/autumn2024/Singularity-Apptainer.pdf"
+ href="https://um-grex.github.io/grex-docs/workshops/autumn2024/Singularity-Apptainer.pdf"
  class="is-pretty-link">Slides&lt;/a
 >
 &lt;/li>
 &lt;li>&lt;strong>Containers in HPC – Podman&lt;/strong>: &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/workshops/autumn2024/introduction_podman.pdf"
+ href="https://um-grex.github.io/grex-docs/workshops/autumn2024/introduction_podman.pdf"
  class="is-pretty-link">Slides&lt;/a
 >
 &lt;/li>
-&lt;/ul>
-&lt;/blockquote>
+&lt;/ul>&lt;/blockquote>
 &lt;!--
 ## Autumn workshop, October 2024
 ---
@@ -360,52 +353,51 @@ They are &lt;a
 &lt;blockquote>
 &lt;ul>
 &lt;li>&lt;strong>Updates on Research Computing Resources&lt;/strong>: &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/workshops/autumn2023/01-Introduction.pdf"
+ href="https://um-grex.github.io/grex-docs/workshops/autumn2023/01-Introduction.pdf"
  class="is-pretty-link">Slides&lt;/a
 >
 &lt;/li>
 &lt;li>&lt;strong>Getting accounts, connecting, using Duo MFA&lt;/strong>: &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/workshops/autumn2023/02-Accounts-and-MFA.pdf"
+ href="https://um-grex.github.io/grex-docs/workshops/autumn2023/02-Accounts-and-MFA.pdf"
  class="is-pretty-link">Slides&lt;/a
 >
 &lt;/li>
 &lt;li>&lt;strong>Basics of Linux Shell&lt;/strong>: &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/workshops/autumn2023/03-Basics-of-Linux-Shell.pdf"
+ href="https://um-grex.github.io/grex-docs/workshops/autumn2023/03-Basics-of-Linux-Shell.pdf"
  class="is-pretty-link">Slides&lt;/a
 >
 &lt;/li>
 &lt;li>&lt;strong>Beginner running HPC jobs with SLURM&lt;/strong>: &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/workshops/autumn2023/04-Running-Jobs-On-HPC-Clusters.pdf"
+ href="https://um-grex.github.io/grex-docs/workshops/autumn2023/04-Running-Jobs-On-HPC-Clusters.pdf"
  class="is-pretty-link">Slides&lt;/a
 >
 &lt;/li>
 &lt;li>&lt;strong>Using HPC with OpenOnDemand Web portal&lt;/strong>: &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/workshops/autumn2023/05-OSC-OnDemand-on-Grex.pdf"
+ href="https://um-grex.github.io/grex-docs/workshops/autumn2023/05-OSC-OnDemand-on-Grex.pdf"
  class="is-pretty-link">Slides&lt;/a
 >
 &lt;/li>
 &lt;li>&lt;strong>Beginner HPC software overview&lt;/strong>: &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/workshops/autumn2023/06-HPC-Software-Overview.pdf"
+ href="https://um-grex.github.io/grex-docs/workshops/autumn2023/06-HPC-Software-Overview.pdf"
  class="is-pretty-link">Slides&lt;/a
 >
 &lt;/li>
 &lt;li>&lt;strong>Using containers in HPC (Apptainer, SingularityCE)&lt;/strong>: &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/workshops/autumn2023/07-SingularityApptainer.pdf"
+ href="https://um-grex.github.io/grex-docs/workshops/autumn2023/07-SingularityApptainer.pdf"
  class="is-pretty-link">Slides&lt;/a
 >
 &lt;/li>
 &lt;li>&lt;strong>Basics of using OpenStack cloud&lt;/strong>: &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/workshops/autumn2023/08-OpenStack-Cloud-Beginner.pdf"
+ href="https://um-grex.github.io/grex-docs/workshops/autumn2023/08-OpenStack-Cloud-Beginner.pdf"
  class="is-pretty-link">Slides&lt;/a
 >
 &lt;/li>
 &lt;li>&lt;strong>Getting most of HPC system&lt;/strong>: &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/workshops/autumn2023/09-Monitoring-Jobs-and-Efficiency.pdf"
+ href="https://um-grex.github.io/grex-docs/workshops/autumn2023/09-Monitoring-Jobs-and-Efficiency.pdf"
  class="is-pretty-link">Slides&lt;/a
 >
 &lt;/li>
-&lt;/ul>
-&lt;/blockquote>
+&lt;/ul>&lt;/blockquote>
 &lt;hr>
 &lt;h2 id='fall-data-4010-seminars-september-2023'>Fall DATA-4010 seminars, September 2023&lt;a href='#fall-data-4010-seminars-september-2023' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
@@ -430,59 +422,57 @@ For Grex and the current generation of Alliance HPC machines, this shared filesy
 &lt;blockquote>
 &lt;ul>
 &lt;li>&lt;strong>Program and updates&lt;/strong>: &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/workshops/autumn2022/Programme-And-Grex-Updates-Autumn2022.pdf"
+ href="https://um-grex.github.io/grex-docs/workshops/autumn2022/Programme-And-Grex-Updates-Autumn2022.pdf"
  class="is-pretty-link">Slides&lt;/a
 >
 &lt;/li>
 &lt;li>&lt;strong>High Performance Computing: Start Guide&lt;/strong>: &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/workshops/autumn2022/Start-Guide-HPC-Grex-Autumn2022.pdf"
+ href="https://um-grex.github.io/grex-docs/workshops/autumn2022/Start-Guide-HPC-Grex-Autumn2022.pdf"
  class="is-pretty-link">Slides&lt;/a
 >
 &lt;/li>
 &lt;li>&lt;strong>High Performance Computing: software environments&lt;/strong>: &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/workshops/autumn2022/HPC-Software-Grex-Autumn2022.pdf"
+ href="https://um-grex.github.io/grex-docs/workshops/autumn2022/HPC-Software-Grex-Autumn2022.pdf"
  class="is-pretty-link">Slides&lt;/a
 >
 &lt;/li>
 &lt;li>&lt;strong>OSC OpenOnDemand portal on Grex&lt;/strong>: &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/workshops/autumn2022/Using-OpenOndemand-On-Grex-Autumn2022.pdf"
+ href="https://um-grex.github.io/grex-docs/workshops/autumn2022/Using-OpenOndemand-On-Grex-Autumn2022.pdf"
  class="is-pretty-link">Slides&lt;/a
 >
 &lt;/li>
-&lt;/ul>
-&lt;/blockquote>
+&lt;/ul>&lt;/blockquote>
 &lt;h2 id='spring-workshop-may-2022'>Spring workshop, May 2022&lt;a href='#spring-workshop-may-2022' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;p>Below are the slides from the Grex workshop that was held on May 4-5, 2022:&lt;/p>
 &lt;blockquote>
 &lt;ul>
 &lt;li>&lt;strong>Introduction to local and National HPC at UManitoba: How to use available software and run jobs efficiently&lt;/strong>: &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/workshops/spring2022/Intro-Program-Spring2022.pdf"
+ href="https://um-grex.github.io/grex-docs/workshops/spring2022/Intro-Program-Spring2022.pdf"
  class="is-pretty-link">Slides&lt;/a
 >
 &lt;/li>
 &lt;li>&lt;strong>Introduction to High Performance Computing step by step: From getting an account to running jobs&lt;/strong>: &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/workshops/spring2022/HPC-Step-by-Step-Grex-Spring2022.pdf"
+ href="https://um-grex.github.io/grex-docs/workshops/spring2022/HPC-Step-by-Step-Grex-Spring2022.pdf"
  class="is-pretty-link">Slides&lt;/a
 >
 &lt;/li>
 &lt;li>&lt;strong>Using GP GPU compute on Grex&lt;/strong>: &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/workshops/spring2022/Using-GPU-Nodes-Grex-Spring2022.pdf"
+ href="https://um-grex.github.io/grex-docs/workshops/spring2022/Using-GPU-Nodes-Grex-Spring2022.pdf"
  class="is-pretty-link">Slides&lt;/a
 >
 &lt;/li>
 &lt;li>&lt;strong>High Performance Computing and software environments&lt;/strong>: &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/workshops/spring2022/HPC-Soft-Env-Grex-Spring2022.pdf"
+ href="https://um-grex.github.io/grex-docs/workshops/spring2022/HPC-Soft-Env-Grex-Spring2022.pdf"
  class="is-pretty-link">Slides&lt;/a
 >
 &lt;/li>
 &lt;li>&lt;strong>OSC OpenOnDemand portal on Grex&lt;/strong>: &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/workshops/spring2022/OpenOndemand-Grex-Spring2022.pdf"
+ href="https://um-grex.github.io/grex-docs/workshops/spring2022/OpenOndemand-Grex-Spring2022.pdf"
  class="is-pretty-link">Slides&lt;/a
 >
 &lt;/li>
-&lt;/ul>
-&lt;/blockquote>
+&lt;/ul>&lt;/blockquote>
 &lt;hr>
 &lt;!-- &lt;div class="sc-treeview">&lt;div class="sc-alert sc-alert-warning">No data available&lt;/div>&lt;/div>
  -->
@@ -514,27 +504,26 @@ The examples are a Singularity/Apptainer repository from &lt;a
 &lt;blockquote>
 &lt;ul>
 &lt;li>&lt;strong>Introduction to HPC: Basics: Steps from getting an account to submitting jobs&lt;/strong>: &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/workshops/autumn2021/Intro-to-HPC-Basics-Autumn2021.pdf"
+ href="https://um-grex.github.io/grex-docs/workshops/autumn2021/Intro-to-HPC-Basics-Autumn2021.pdf"
  class="is-pretty-link">Slides&lt;/a
 >
 &lt;/li>
 &lt;li>&lt;strong>Linux (Unix) shell basics&lt;/strong>: &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/workshops/autumn2021/Linux-Shell-Basics-autumn2021-2.pdf"
+ href="https://um-grex.github.io/grex-docs/workshops/autumn2021/Linux-Shell-Basics-autumn2021-2.pdf"
  class="is-pretty-link">Slides&lt;/a
 >
 &lt;/li>
 &lt;li>&lt;strong>Software on HPC clusters&lt;/strong>: &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/workshops/autumn2021/Intro-HPC-Software-Env-Grex-autumn2021.pdf"
+ href="https://um-grex.github.io/grex-docs/workshops/autumn2021/Intro-HPC-Software-Env-Grex-autumn2021.pdf"
  class="is-pretty-link">Slides&lt;/a
 >
 &lt;/li>
 &lt;li>&lt;strong>Scheduling jobs on HPC clusters: How to optimize your jobs and get more from the resources available?&lt;/strong>: &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/workshops/autumn2021/Adv-Scheduling-Jobs-HPC-Cluster-Grex-autumn2021.pdf"
+ href="https://um-grex.github.io/grex-docs/workshops/autumn2021/Adv-Scheduling-Jobs-HPC-Cluster-Grex-autumn2021.pdf"
  class="is-pretty-link">Slides&lt;/a
 >
 &lt;/li>
-&lt;/ul>
-&lt;/blockquote>
+&lt;/ul>&lt;/blockquote>
 &lt;h2 id='spring-workshop-april-2021'>Spring workshop, April 2021&lt;a href='#spring-workshop-april-2021' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;p>Below are the slides from the Grex workshop that was held on April 21-22, 2021:&lt;/p></description></item><item><title>Data sizes and quotas</title><link>https://um-grex.github.io/grex-docs/storage/data-sizes-and-quota/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/storage/data-sizes-and-quota/</guid><description>&lt;h2 id='data-size-and-quotas'>Data size and quotas&lt;a href='#data-size-and-quotas' class='anchor'>#&lt;/a>
@@ -583,11 +572,11 @@ The examples are a Singularity/Apptainer repository from &lt;a
 &lt;p>In research it’s often necessary to share datasets or code within a research group or with collaborating groups. This documentation explains how to share data stored on a specific HPC system, in this case, Grex. Sharing data outside the HPC system can be done through other methods, such as Globus or MS OneDrive.&lt;/p></description></item><item><title>Linux/SLURM update project</title><link>https://um-grex.github.io/grex-docs/changes/changes-before-2020/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/changes/changes-before-2020/</guid><description>&lt;h2 id='grex-defunded-since-april-2-2018'>Grex defunded since April 2, 2018&lt;a href='#grex-defunded-since-april-2-2018' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;p>Since being defunded by WestGrid (on April 2, 2018), Grex is now available only to the users affiliated with University of Manitoba and their collaborators. The old WestGrid documentation, hosted on the WestGrid website became irrelevant after the Grex upgrade, so please visit Grex’s New &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/"
+ href="https://um-grex.github.io/grex-docs/"
  class="is-pretty-link">Documentation&lt;/a
 >
 . Thus, if you are an experienced user in the previous “version” of Grex, you might benefit from reading this document: Description of Grex &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/changes/linux-slurm-update/"
+ href="https://um-grex.github.io/grex-docs/changes/linux-slurm-update/"
  class="is-pretty-link">changes&lt;/a
 >
 .&lt;/p></description></item></channel></rss>

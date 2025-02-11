@@ -5,7 +5,7 @@
  &lt;i class="fa-solid fa-house-chimney">&lt;/i>
  &lt;/div>&lt;p class="is-marginless">
  &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/"
+ href="https://um-grex.github.io/grex-docs/"
  class="is-pretty-link"
  >Unofficial Grex User Guide&lt;/a
  >
@@ -16,7 +16,7 @@
  &lt;i class="fa-solid fa-house-chimney">&lt;/i>
  &lt;/div>&lt;p class="is-marginless">
  &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/updates/"
+ href="https://um-grex.github.io/grex-docs/updates/"
  class="is-pretty-link"
  >Grex Updates&lt;/a
  >
@@ -26,7 +26,7 @@
  &lt;i class="fa-solid fa-user-gear">&lt;/i>
  &lt;/div>&lt;p class="is-marginless">
  &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/grex/"
+ href="https://um-grex.github.io/grex-docs/grex/"
  class="is-pretty-link"
  >Home&lt;/a
  >
@@ -36,7 +36,7 @@
  &lt;i class="fa-solid fa-house-chimney">&lt;/i>
  &lt;/div>&lt;p class="is-marginless">
  &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/start-guide/"
+ href="https://um-grex.github.io/grex-docs/start-guide/"
  class="is-pretty-link"
  >Quick Start Guide&lt;/a
  >
@@ -46,7 +46,7 @@
  &lt;i class="fa-solid fa-house-chimney">&lt;/i>
  &lt;/div>&lt;p class="is-marginless">
  &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/access/"
+ href="https://um-grex.github.io/grex-docs/access/"
  class="is-pretty-link"
  >Access and usage conditions&lt;/a
  >
@@ -56,7 +56,7 @@
  &lt;i class="fa-solid fa-house-chimney">&lt;/i>
  &lt;/div>&lt;p class="is-marginless">
  &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/connecting/"
+ href="https://um-grex.github.io/grex-docs/connecting/"
  class="is-pretty-link"
  >Connect / Transfer data&lt;/a
  >
@@ -67,7 +67,7 @@
  &lt;i class="fa-solid fa-file-lines">&lt;/i>
  &lt;/div>&lt;p class="is-marginless">
  &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/connecting/mfa/"
+ href="https://um-grex.github.io/grex-docs/connecting/mfa/"
  class="is-pretty-link"
  >Multi-Factor Authentication&lt;/a
  >
@@ -77,7 +77,7 @@
  &lt;i class="fa-solid fa-file-lines">&lt;/i>
  &lt;/div>&lt;p class="is-marginless">
  &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/connecting/ssh/"
+ href="https://um-grex.github.io/grex-docs/connecting/ssh/"
  class="is-pretty-link"
  >Connecting with SSH&lt;/a
  >
@@ -87,7 +87,7 @@
  &lt;i class="fa-solid fa-file-lines">&lt;/i>
  &lt;/div>&lt;p class="is-marginless">
  &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/connecting/ood/"
+ href="https://um-grex.github.io/grex-docs/connecting/ood/"
  class="is-pretty-link"
  >Connect with OOD&lt;/a
  >
@@ -97,7 +97,7 @@
  &lt;i class="fa-solid fa-folder-tree">&lt;/i>
  &lt;/div>&lt;p class="is-marginless">
  &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/connecting/data-transfer/"
+ href="https://um-grex.github.io/grex-docs/connecting/data-transfer/"
  class="is-pretty-link"
  >Data transfer&lt;/a
  >
@@ -108,7 +108,7 @@
  &lt;i class="fa-solid fa-file-lines">&lt;/i>
  &lt;/div>&lt;p class="is-marginless">
  &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/connecting/data-transfer/one-drive/"
+ href="https://um-grex.github.io/grex-docs/connecting/data-transfer/one-drive/"
  class="is-pretty-link"
  >Rclone and OneDrive&lt;/a
  >
@@ -118,7 +118,7 @@
  &lt;i class="fa-solid fa-house-chimney">&lt;/i>
  &lt;/div>&lt;p class="is-marginless">
  &lt;a
- href="https://um-grex.github.io/grex-docs/grex-docs/storage/"
+ href="https://um-grex.github.io/grex-docs/storage/"
  class="is-pretty-link"
  >Storage and Data&lt;/a
  >
