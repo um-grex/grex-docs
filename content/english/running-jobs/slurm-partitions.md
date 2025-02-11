@@ -46,9 +46,9 @@ Currently, the following partitions are available on Grex:
 ### General purpose GPU partitions
 ---
 
-| Partition  | Nodes   | GPU type           | CPUs/Node    | Mem/Node   | Notes       |
-| :--------: | :-----: | :----:             | :----------: | :--------: | :---------: |
-| **gpu**    |  **2**  | **4 - V100/32 GB** | **32**       | **187 Gb** | **AVX512**  |
+| Partition  | Nodes   | GPU type           | CPUs/Node    | Mem/Node   | Notes               |
+| :--------: | :-----: | :----:             | :----------: | :--------: | :---------:         |
+| **gpu**    |  **2**  | **4 - V100/32GB**  | **32**       | **187 Gb** | AVX512 CPU, NVLink  |
 
 <!--
 > - **skylake**  : the new **52-core**, CascadeLakeRefresh compute nodes, 96 Gb/node (set as the default partition). **NEW**
@@ -68,12 +68,12 @@ Currently, the following partitions are available on Grex:
 ### Contributed GPU partitions
 ---
 
-| Partition         | Nodes   | GPU type                   | CPUs/Node    | Mem/Node    | Notes           |
-| :--------:        | :-----: | :----:                     | :----------: | :--------:  | :---------:     |
-| **stamps** [^1]   | **3**   | **4 - V100/16GB**          | **32**       | **187 Gb**  | AVX512          |
-| **livi**   [^2]   | **1**   | **HGX-2 16xGPU V100/32GB** | **48**       | **1500 Gb** | NVSwitch server |
-| **agro**   [^3]   | **2**   | **AMD Zen**                | **24**       | **250 Gb**  | AMD             |
-| **mcordgpu** [^4] | **5**   | **AMD EPYC 9634**          | **168**      | **1500 Gb** | -               |
+| Partition         | Nodes   | GPU type                   | CPUs/Node    | Mem/Node    | Notes                |
+| :--------:        | :-----: | :----:                     | :----------: | :--------:  | :---------:          |
+| **stamps** [^1]   | **3**   | **4 - V100/16GB**          | **32**       | **187 Gb**  | AVX512 CPU, NVLink   |
+| **livi**   [^2]   | **1**   | **16 -V100/32GB**          | **48**       | **1500 Gb** | NVSwitch, AVX512 CPU |
+| **agro**   [^3]   | **2**   | **2 - A30/24GB**           | **24**       | **250 Gb**  | AMD AVX2 CPU         |
+| **mcordgpu** [^4] | **5**   | **4 - A30/24GB**           | **32**       | **512 Gb**  | AMD AVX2 CPU         |
 
 [^1]: **stamps:** GPU nodes contributed by Prof. R. Stamps
 [^2]: **livi:**   GPU node  contributed by Prof. L. Livi 
