@@ -28,11 +28,13 @@ Currently, the following partitions are available on Grex:
 
 | Partition    | Nodes   | CPUs/Node | CPUs     | Mem/Node | Notes              |
 | :--------:   | :-----: | :-------: | :------: | :-----:  | :----:             |
-| **skylake**  |  **42** |    **52** | **2184** |   96 Gb  | CascadeLakeRefresh |
-| **largemem** |  **12** |    **40** |  **480** |  384 Gb  | CascadeLake        |
+| **skylake**  |  **42** |    **52** | **2184** |  187 Gb  | CascadeLakeRefresh |
+| **largemem** |  **12** |    **40** |  **480** |  380 Gb  | CascadeLake        |
 | **genoa**    |  **27** |   **192** | **5184** |  750 Gb  | AMD EPYC 9654      |
 | **genlm**    |  **3**  |   **192** |  **576** | 1500 Gb  | AMD EPYC 9654      |
-| **test**     |  **1**  |    **18** |   **36** |  512 Gb  | **-**              |
+| **test**     |  **1**  |    **18** |   **36** |  512 Gb  | CascadeLake        |
+
+> All CPU partitions support a common subset of the AVX512 architecture. However, AMD EPYC CPUs have Zen4 architecture with extended set of AVX512 commands compared to CascadeLake. Thus host-optimized code compiled on __genoa__ or __genlm__ nodes may throw 'illegal instruction' error on __skylake__ and __largemem__ nodes
 
 <!--
 | **-**        | **374** |     **-** | **6536** |   **-**  | **-**              |
@@ -74,6 +76,8 @@ Currently, the following partitions are available on Grex:
 | **livi**   [^2]   | **1**   | **16 -V100/32GB**          | **48**       | **1500 Gb** | NVSwitch, AVX512 CPU |
 | **agro**   [^3]   | **2**   | **2 - A30/24GB**           | **24**       | **250 Gb**  | AMD AVX2 CPU         |
 | **mcordgpu** [^4] | **2**   | **4 - A30/24GB**           | **32**       | **512 Gb**  | AMD AVX2 CPU         |
+
+> Note that newer GPU nodes with NVidia A30 GPUs have an older CPU architecture, up to AVX2 instruction set. Host-optimized code compiled on a CascadeLake or AMD Genoa CPU which have AVX512 instruction set will throw 'illegal instruction' errors on the AVX2 GPU nodes. 
 
 [^1]: **stamps:** GPU nodes contributed by Prof. R. Stamps
 [^2]: **livi:**   GPU node  contributed by Prof. L. Livi 
