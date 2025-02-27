@@ -13,8 +13,11 @@ categories: ["Software", "Interfaces"]
 
 [OpenOnDemand](https://openondemand.org/ "OpenOnDemand") or __OOD__ for short, is an open source Web portal for High-Performance computing, developed at Ohio Supercomputing Center. OOD makes it easier for beginner HPC users to access the resources via a Web interface. OOD also allows for interactive, visualization and other Linux Desktop applications to be accessed on HPC systems via a convenient Web user interface.
 
-Since the end of __October 2021__, OpenOnDemand version 2 is officially in production  on Grex. 
-Since the beginning of __January 2023__, OpenOnDemand version 3 is officially in production  on Grex. 
+Since the end of __October 2021__, OpenOnDemand version 2 is officially in production on Grex.
+
+Since the beginning of __January 2023__, OpenOnDemand version 3 is officially in production on Grex.
+
+Since the beginning of __February 2025__, OpenOnDemand version 4 is officially in production on Grex.
 
 For more general OOD information, see the [OpenOnDemand paper](https://joss.theoj.org/papers/10.21105/joss.00622 "OpenOnDemand Paper")
 
@@ -78,11 +81,15 @@ The OOD Dashboard menu, __Interactive Apps__, shows interactive applications. Th
 As for now, the following applications are supported:
 
 > - Linux Desktops in VNC
-> - Matlab GUI in VNC
 > - GaussView GUI in VNC
+> - Matlab GUI in VNC
+> - MetashapePro GUI in VNC
 > - RELION GUI in VNC
-> - Jupyter Notebooks server
+> - Stata GUI in VNC
+> - VSCode server
+> - JupyterLab server
 > - RStudio server
+> - Riken Job Composer
 
 
 As with regular SLURM jobs, it is important to specify SLURM partitions for them to start faster. Perhaps the __test__ partition for Desktop is the best place to start interactive Desktop jobs, so it is hardcoded in the Simplified Desktop item.
@@ -90,7 +97,6 @@ As with regular SLURM jobs, it is important to specify SLURM partitions for them
 The following links are added to OOD:
 
 > - From the menu __Jobs__, there is a link __Grex SLURM Queues State__ that shows a summary of running and pending jobs. The same information can be accessed from any login node by running the __grex-summarize-queue__ command.
-
 > - From the menu __Clusters__, there is a link __Grex SLURM Node State__ to get a summary of allocated and idle nodes by partition. The same information can be accessed from any login node by running the __slurm-nodes-state__ command.
  
 ---

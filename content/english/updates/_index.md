@@ -18,29 +18,23 @@ Please review the brief summary of the Grex upgrades and changes that are done d
 # Operating System 
 ---
 
-Grex is now running a new version of Linux (__Alma Linux 8.10__). All compute and login nodes are upgraded to Alma Linux. 
+Grex is now running a new version of Linux (__AlmaLinux 8.10__). All compute and login nodes are upgraded to Alma Linux. 
 
 # Login nodes
 ---
 
-* The login node __yak__ was upgraded to __Alma Linux.__ This is the only login node that you can use for now. 
+* The login nodes __yak__ and __bison__ were upgraded to __AlmaLinux 8.10__. This is the only login node that you can use for now. 
 
-* The alias __grex__ is now redirected to __yak__.
+* The alias __grex__ is now redirecting to __yak__ or __bison__.
 
 {{< alert type="warning" >}}
-The login nodes __bison__ and __tatanka__ are offline.
+The login nodes __tatanka__ and __zebu__ have been decommissioned.
 {{< /alert >}}
 
-To connect to Grex, use one of the following:
+To connect to Grex, use:
 
 {{< highlight bash >}}
 ssh -XY username@grex.hpc.umanitoba.ca
-{{< /highlight >}}
-
-or 
-
-{{< highlight bash >}}
-ssh -XY username@yak.hpc.umanitoba.ca
 {{< /highlight >}}
 
 * OOD is down during the outage. 
@@ -75,7 +69,7 @@ The partition __testgenoa__ has been removed and the nodes assigned to the new p
 # Legacy nodes
 ---
 
-As of Aug 29, 2024, the legacy nodes (bison, tatanka and **compute** partition) are decommissioned.
+As of Aug 29, 2024, the legacy login nodes (__tatanka__ and __zebu__) and the __compute__ partition are decommissioned.
 
 # Storage
 ---
@@ -85,10 +79,9 @@ The storage servers for __/home__ and __/project__ are online. Users can have ac
 # Software Stacks
 ---
 
-Grex is now running one operating system (__Alma Linux__):
+Grex is now running one operating system (__AlmaLinux__):
 
-* __Alma Linux:__ This OS is running on the new login node __yak__ and __zebu__ (that serves as a host for OOD). All partions are running Alma Linux.
-
+* __AlmaLinux__: This OS is running on the new login node __yak__ and __bison__. All partitions are running AlmaLinux.
 * The new sotftware stack __SBEnv__ is set as default.
 
 ## SBEnv:
@@ -152,7 +145,7 @@ For users that have more than one Account (that is, working for more than one re
 
 As a summary of the changes, there is only one workflow on Grex:
 
-> * connect via __yak.hpc.umanitoba.ca__ or __grex.hpc.umanitoba.ca__
+> * connect via __grex.hpc.umanitoba.ca__
 > * Use the new environment __SBEnv__ for modules and/or compile your programs using the compilers available under this environment.
 > * Submit your jobs to __skylake__, __genoa__, __largemem__ or any other partition. For a complete list of partitions, run the command __partition-list__ from your terminal.
 > * You could also use __CCEnv__ as shown above.

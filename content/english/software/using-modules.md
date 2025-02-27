@@ -197,7 +197,7 @@ __As a summary, here are the most used commands when using modules:__
 * What is PATH? [How to view and modify it](https://www.digitalocean.com/community/tutorials/how-to-view-and-update-the-linux-path-environment-variable)
 * The Alliance documentation about [using Modules](https://docs.alliancecan.ca/wiki/Utiliser_des_modules/en)
 * [Lmod User Guide](https://lmod.readthedocs.io/en/latest/010_user.html)
-* Traditional/Origibal [TCL Modules](https://modules.readthedocs.io/en/v4.1.3/index.html) 
+* Traditional/Original [TCL Modules](https://modules.readthedocs.io/en/v4.1.3/index.html) 
 
 <!-- {{< treeview display="tree" />}} -->
 
