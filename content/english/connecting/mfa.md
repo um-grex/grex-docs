@@ -18,7 +18,7 @@ categories: ["How to"]
 ## Multi-Factor Authentication
 ---
 
-Both Digital Research Alliance of Canada and our UManitoba HPC systems, are proceeding with the ongoing implementation of a multifactor authentication (MFA) system.
+Both Digital Research Alliance of Canada and our UManitoba HPC systems are using a multifactor authentication (MFA) system.
 MFA adds an additional layer of security to the traditional password-based and SSH keys authentications by requiring a second factor, known as "something you have".
 The Cisco Duo product was chosen as the provider for this additional authentication factor.
 Grex is using the Duo instance provided by the Alliance. The available additional factors and even the MFA provider are not the same as those used by the University of Manitoba for platforms such as UM Intranet and University MS Office products.
@@ -33,9 +33,10 @@ On Grex and Alliance systems, the following factors are enabled:
 ---
 
 Enrollment into the Alliance Duo is through [CCDB](https://ccdb.alliancecan.ca), this enables the MFA requirement on every SSH login on both Grex and Alliance systems (Cedar, Graham, Beluga, Narval or Niagara).
-As of now, the enrollment is voluntary: we kindly ask you to let us know (sending an email to [support@tech.alliancecan.ca](mailto:support@tech.alliancecan.ca) if you/your group members would like to enroll, and we will then enable the MFA option under your CCDB account.
 
-After our staff enable MFA for your account, you must follow these steps to complete the enrollment:
+Enrollment is required.
+
+You must follow these steps to start using Grex and Alliance systems:
 
 - login into CCDB with your credentials
 - from the top menu choose "My Account" => "Multifactor Authentication Management"
