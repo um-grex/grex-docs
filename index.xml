@@ -178,7 +178,7 @@ Sometimes it is useful (for example, for copy/paste operations with mouse, betwe
 &lt;/ul>
 &lt;h2 id='multi-factor-authentication'>Multi-Factor Authentication&lt;a href='#multi-factor-authentication' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
-&lt;p>Both Digital Research Alliance of Canada and our UManitoba HPC systems, are proceeding with the ongoing implementation of a multifactor authentication (MFA) system.
+&lt;p>Both Digital Research Alliance of Canada and our UManitoba HPC systems are using a multifactor authentication (MFA) system.
 MFA adds an additional layer of security to the traditional password-based and SSH keys authentications by requiring a second factor, known as &amp;ldquo;something you have&amp;rdquo;.
 The Cisco Duo product was chosen as the provider for this additional authentication factor.
 Grex is using the Duo instance provided by the Alliance. The available additional factors and even the MFA provider are not the same as those used by the University of Manitoba for platforms such as UM Intranet and University MS Office products.&lt;/p></description></item><item><title>Connecting to Grex with SSH</title><link>https://um-grex.github.io/grex-docs/connecting/ssh/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/connecting/ssh/</guid><description>&lt;h2 id='ssh'>SSH&lt;a href='#ssh' class='anchor'>#&lt;/a>
