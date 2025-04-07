@@ -112,6 +112,10 @@ To use Globus, a user would need at least two endpoints, and an identity (accoun
 
 > Grex users have a choice of using either The Alliance identity that comes with CCDB account, or UManitoba identity using UMNetID. The preliminary step of linking identities is done by logging in to [www.globus.org](https://www.globus.org) by finding your _organization_ in the drop-down menu there. This can be Digital Alliance or University of Manitoba. Likely both identities would have to be linked to the Globus online account to be able to transfer data between the Alliance and Grex.
 
+Please visit our [Globus Server or Globus Personal Endpoint Documentation](/connecting/data-transfer/globus) for instructions on how to use Globus on Grex.
+
+<!--  GAS April 2025 moved to a separate page 
+
 We do not have a Server Endpoint of Globus on Grex as of the time of writing of the documentation page. However, each user can use Globus Connect Personal to transfer data between any Server Endpoint and Grex. To do so, users need first to create their personal endpoint on Grex, under their account, as follows.
 
 {{< highlight bash >}}
@@ -196,13 +200,21 @@ This feature can be used from the Web UI (Upload button), and from CLI for acces
 
 > Note that the Upload feature is not available for Personal Globus endpoints. It only can be used for Server endpoints.
 
+-->
+
+## Using MS OneDrive, NextCloud and similar cloud storage
+
+It is possible to move data between Grex's storage and several Cloud Storage providers, including MicroSoft OneDrive, NextCloud, etc. by using the powerful [Rclone](https://rclone.org) tool. Please visit this [Rclone and OneDrive](/connecting/data-transfer/one-drive/) documentation page for instructions. 
 
 ## File transfers with OOD browser GUI
 ---
 
-**NEW:** It is now possible to use [OpenOnDemand on Grex](https://ood.hpc.umanitoba.ca) Web interface to download and upload data to and from Grex. Use the __Files__ OOD dashboard menu to select a filesystem (currently __/home/$USER__ and __/project__ filesystems are listed there), and then Upload and Download buttons.
+It is now possible to use [OpenOnDemand on Grex](https://ood.hpc.umanitoba.ca) Web interface to download and upload data to and from Grex. Use the __Files__ OOD dashboard menu to select a filesystem (currently __/home/$USER__ and __/project__ filesystems are listed there), and then Upload and Download buttons.
 There is a limit of about 10GB to the file transfer sizes with OOD. The OOD interface is, as of now, open for UManitoba IP addresses only (i.e., machines from campus and on UM VPN will work). 
+
 The OOD File app allows also for transferring data to/from [MS OneDrive and NextCloud with Rclone tool](/connecting/data-transfer/one-drive)
+
+The OOD File app now "integrates" with Globus Server endpoint on Grex as well, providing a "globus" button that redirects to the Globus WebApp pointing to the "limited" Grex server endpoint.
 
 More information is available on our [OOD pages](/ood/)
 
