@@ -124,6 +124,10 @@ __8.__ Then select _username@rprox.hpc.umanitoba.ca_. This will redirect you to 
 
 Once your identity is linked, you can use Globus to initiate data transfer between Grex and any other Globus connection, like cedar for example.
 
+> Limitations of the Grex server endpoint : At the moment of writing, the "Grex HPC" server endpoint does not support browser-based "Upload" functionality. The server endpoint also does not support data sharing and data publishing. The only use case for this endpoint is data transfer between two Endpoints/Connections.
+
+[OpenOnDemand](/ood) web portal on Grex now provides integration with the "UManitoba Grex HPC" endpoint: in the OOD's File manager interface, the "Globus" button would redirect to the Globus WebApp on the endpoint, pointing to the current directory.
+
 ### How to use Globus Web App to initiate transfer between two collections?
 
 Once the identity is linked as shown in the previous section, you could launch Globus web application to initiate file transfer between what is called __Collections__. Here are the steps to follow:
@@ -134,12 +138,13 @@ __2.__ Select the two panel file manager.
 
 __3.__ Search for the collections you want to use and navigate through your directory.
 
-__4.__ Initiate the transfer.
+__4.__ Select required objects and initiate the transfer with the START button.
 
+>To search for a Collection of interest, you'd need to know is name, or organization, or keywords to enter into the Globus FileManager app Search field. 
 
-> Limitations of the Grex server endpoint : At the moment of writing, the "Grex HPC" server endpoint does not support browser-based "Upload" functionality. The server endpoint also does not support data sharing and data publishing. The only use case for this endpoint is data transfer between two Endpoints/Connections.
-
-[OpenOnDemand](/ood) web portal on Grex now provides integration with the "UManitoba Grex HPC" endpoint: in the OOD's File manager interface, the "Globus" button would redirect to the Globus WebApp on the endpoint, pointing to the current directory.
+For example, for Grex, the server Endpoint is called **UManitoba Grex HPC** and can be found by 'grex' or 'manitoba' keywords. Other collections hosted at UManitoba systems, including personal endpoints, will come up in the search for 'manitoba' as well.
+A couple of collections/endpoints useful for Canadian users would be the Alliance's National systems (such as Narval); the full list of the [Alliance HPC Systems](https://docs.alliancecan.ca/wiki/National_systems#Compute_clusters) gives an idea on what words to search for. 
+Another frequently used service that exposes data through Globus is [UseGalaxy.ca](https://starthere.usegalaxy.ca/globus_collection.html). Finally, it is possible to use Globus to connect to the Alliance's [Object Storage on the Arbutus cloud](https://docs.alliancecan.ca/wiki/Globus#Object_storage_on_Arbutus).
 
 ## How use personal endpoints and Globus CLI on Grex 
 
@@ -234,6 +239,7 @@ This feature can be used from the Web UI (Upload button), and from CLI for acces
 * Globus official [Documentation](https://docs.globus.org/guides/tutorials/manage-files/transfer-files/)
 * Globus [CLI Documemtation](https://docs.globus.org/cli/)
 * DRAC Globus [Wiki page](https://docs.alliancecan.ca/wiki/Globus/en)
+* Instructions on using [Globus for UseGalaxy Canada](https://starthere.usegalaxy.ca/globus_collection.html)
 * Check out the [ESNet](https://fasterdata.es.net/ "ESNet") website if you are curious about Globus, and why large data transfers over WAN might need specialized networks and software setups.
 
 
