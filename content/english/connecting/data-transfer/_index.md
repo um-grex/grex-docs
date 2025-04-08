@@ -63,7 +63,7 @@ Please replace __someuser__ with your username.
 ### File transfer SCP/SFTP clients with GUI
 ---
 
-There are many file transfer clients that provide convenient graphical user interface (GUI) while using and implementation of SCP or SFTP under the hood.
+There are many file transfer clients that provide a convenient graphical user interface (GUI) while using an implementation of SCP or SFTP under the hood.
 
 Some examples of the popular file transfer clients are:
 
@@ -110,7 +110,7 @@ GlobusOnline, or just [Globus](https://www.globus.org) is a specialized Data Tra
 
 To use Globus, a user would need at least two endpoints, and an identity (account) for each endpoint is needed. The identities would have to be  to be "linked" using Globus Online portal. There are "server" endpoints and "personal endpoints" in Globus. 
 
-> Grex users have a choice of using either The Alliance identity that comes with CCDB account, or UManitoba identity using UMNetID. The preliminary step of linking identities is done by logging in to [www.globus.org](https://www.globus.org) by finding your _organization_ in the drop-down menu there. This can be Digital Alliance or University of Manitoba. Likely both identities would have to be linked to the Globus online account to be able to transfer data between the Alliance and Grex.
+> Grex users have a choice of using either The Alliance identity that comes with a CCDB account, or UManitoba identity using UMNetID. The preliminary step of linking identities is done by logging in to [www.globus.org](https://www.globus.org) by finding your _organization_ in the drop-down menu there. This can be Digital Alliance or University of Manitoba. Likely both identities would have to be linked to the Globus online account to be able to transfer data between the Alliance and Grex.
 
 Please visit our [Globus Server or Globus Personal Endpoint Documentation](/connecting/data-transfer/globus) for instructions on how to use Globus on Grex.
 

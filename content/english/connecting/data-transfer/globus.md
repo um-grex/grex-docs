@@ -12,7 +12,7 @@ banner: false
 ## Introduction
 ---
 
-[Globus](https://docs.globus.org/) is a service for fast, reliable, secure file transfer. Designed specifically for researchers, Globus has an easy-to-use interface with background monitoring features that automate the management of file transfers between any two resources, whether they are on supercomputing facility, a campus cluster, lab server, desktop or laptop. Globus improves transfer performance over other file transfer tools, like rsync, scp, and sftp, by automatically tuning transfer settings, restarting interrupted transfers, and checking file integrity. 
+[Globus](https://docs.globus.org/) is a service for fast, reliable, secure file transfer. Designed specifically for researchers, Globus has an easy-to-use interface with background monitoring features that automate the management of file transfers between any two resources, whether they are on a supercomputing facility, a campus cluster, lab server, desktop or laptop. Globus improves transfer performance over other file transfer tools, like rsync, scp, and sftp, by automatically tuning transfer settings, restarting interrupted transfers, and checking file integrity. 
 
 > Globus transfers data between any two so-called “Globus endpoints” or “Data Collections”. Since the data can reside across different organizations, Globus provides a way to manage and link “identities” between these organizations to facilitate data transfers and data sharing. 
 
@@ -27,13 +27,13 @@ To use the  __UManitoba Grex HPC__ endpoint, a user will need to link its Globus
 
 To access __UManitoba Grex HPC__ endpoint, please follow these instructions:
 
-__1.__ First, open [UManitoba](http://globus.umanitoba.ca/) Globus portal in your browser. Use the menu under _Use your existing organizational login__ and select __University of Manitoba__ and click on **Continue**.
+__1.__ First, open [UManitoba](http://globus.umanitoba.ca/) Globus portal in your browser. Use the menu under __Use your existing organizational login__ and select __University of Manitoba__ and click on **Continue**.
 
 {{< collapsible title="UManitoba globus login interface: Globus Web App" >}}
 ![UManitoba globus Web App](/globus/um-globus-login.png)
 {{< /collapsible >}}
 
-__2.__ The previous step will redirect you the UM Microsoft login webpage and ask for UM Multifactor authentication. After a successful authentication, you should be able to access Globus file manager as shown in the picture below:
+__2.__ The previous step will redirect you to the UM Microsoft login webpage and ask for UM Multifactor authentication. After a successful authentication, you should be able to access Globus file manager as shown in the picture below:
 
 {{< collapsible title="Globus file manager" >}}
 ![Globus interface](/globus/globus-file-manager.png)
@@ -120,10 +120,6 @@ username@rprox.hpc.umanitoba.ca
 Link an identity from Grex HPC Login (rprox.hpc.umanitoba.ca)
 {{< /alert >}}
 
-{{< collapsible title="Log into your primary identity." >}}
-![MFA second factor](/globus/globus-id-rprox-required2.png)
-{{< /collapsible >}}
-
 __8.__ Then select _username@rprox.hpc.umanitoba.ca_. This will redirect you to a file manager where your data under your home directory on Grex is shown:
 
 {{< collapsible title="UManitoba Grex HPC." >}}
@@ -136,16 +132,16 @@ Once your identity is linked, you can use Globus to initiate data transfer betwe
 
 Once the identity is linked as shown in the previous section, you could launch Globus web application to initiate file transfer between what is called __Collections__. Here are the steps to follow:
 
-__1.__ Launch Globus web app:
+__1.__ Launch Globus web app.
 
-__2.__ Select the two pannel file manager
+__2.__ Select the two panel file manager.
 
 __3.__ Search for the collections you want to use and navigate through your directory.
 
-__4.__ Initiate the transfer
+__4.__ Initiate the transfer.
 
 
-> Limitations of the Grex server endpoint : At the moment of writing, the "Grex HPC" server endpoint does not support browser-based "Upload" functionality. The server endpoint also does not support data sharing and data publishing. The only use case for this endpont is data transfer between two Endpoints/Connections.
+> Limitations of the Grex server endpoint : At the moment of writing, the "Grex HPC" server endpoint does not support browser-based "Upload" functionality. The server endpoint also does not support data sharing and data publishing. The only use case for this endpoint is data transfer between two Endpoints/Connections.
 
 [OpenOnDemand](/ood) web portal on Grex now provides integration with the "UManitoba Grex HPC" endpoint: in the OOD's File manager interface, the "Globus" button would redirect to the Globus WebApp on the endpoint, pointing to the current directory.
 
@@ -232,7 +228,7 @@ Another, more general but older guide on how to use Globus personal endpoint on 
 ### Using Upload button and HTTP access
 
 Globus v.5 adds a new feature to server endpoints that allows for [using HTTP protocol](https://docs.globus.org/globus-connect-server/v5/https-access-collections) (instead of the traditional globus-url-copy) .
-This feature can be used from the Web UI (Upload button), and from CLI for accessing Globus using HTTPS URL someone had shared with you.
+This feature can be used from the Web UI (Upload button), and from CLI for accessing Globus using the HTTPS URL someone had shared with you.
 
 > Note that the Upload feature is not available for Personal Globus endpoints. It only can be used for properly configured Server endpoints.
  
