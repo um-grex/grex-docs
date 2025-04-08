@@ -101,10 +101,6 @@ In order to link username@rprox.hpc.umanitoba.ca to your Globus account, please 
 By selecting Continue, you agree to Globus terms of service and privacy policy. 
 {{< /alert >}}
 
-{{< collapsible title="Log into your primary identity." >}}
-![MFA second factor](/globus/login-to-primary-identity.png)
-{{< /collapsible >}}
-
 __7.__ Then, click on __Continue__ to proceed. This will dispal a messsage:
 
 {{< alert type="info" >}}
