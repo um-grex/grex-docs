@@ -91,6 +91,7 @@ Script example using a module from _SBEnv_:
 />}}
 {{< /collapsible >}}
 
+
 Script example using a module from _CCEnv_:
 
 {{< collapsible title="Script example for LAMMPS: MPI version" >}}
@@ -100,6 +101,17 @@ Script example using a module from _CCEnv_:
     codelang="bash"
 />}}
 {{< /collapsible >}}
+
+Script example using a GPU version using KOKKOS from _SBEnv_:
+
+{{< collapsible title="Script example for LAMMPS: MPI version" >}}
+{{< snippet
+    file="scripts/jobs/lammps/run-lammps-mpi-gpu.sh"
+    caption="run-lammps-mpi-sbenv.sh"
+    codelang="bash"
+/>}}
+{{< /collapsible >}}
+
 
 <!--
 
@@ -185,6 +197,7 @@ The name of the binary is called __lmp_gpu__ (see the example of script below).
 * LAMMPS [GitHub](https://www.lammps.org/)
 * LAMMPS [online](https://docs.lammps.org/Manual.html) documentation.
 * [LAMMPS](https://docs.alliancecan.ca/wiki/LAMMPS/en)
+* Tuning LAMMPS from [HPC Carpentries](https://www.hpc-carpentry.org/tuning_lammps/)
 <!-- {{< treeview display="tree" />}} -->
 
 <!-- Changes and update:

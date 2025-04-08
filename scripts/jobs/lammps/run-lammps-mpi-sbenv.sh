@@ -8,8 +8,8 @@
 
 # Load the modules:
 
-module load arch/avx512 intel-one/2024.1 openmpi/4.1.6 
-module load lammps/2021-09-29
+module load arch/avx512 gcc/13.2.0 openmpi/4.1.6 
+module load lammps/2024-08-29p1
 
 echo "Starting run at: `date`"
 
