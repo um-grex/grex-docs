@@ -22,19 +22,28 @@ On the Grex’s default software stack (SBEnv), LAMMPS was built using a variety
 
 To find out which versions are available, use **module spider lammps**
 
-As an example:
+As an example of the version 2024 Aug 29 patch 1, using GCC:
 
 {{< highlight bash >}}
 module load arch/avx512 gcc/13.2.0 openmpi/4.1.6 
-module load lammps/2021-09-29
+module load lammps/2024-08-29p1
 {{< /highlight >}}
 
-and
+or, another example of an older LAMMPS version using Intel OneAPI compilers:
 
 {{< highlight bash >}}
 module load arch/avx512 intel-one/2024.1 openmpi/4.1.6 
 module load lammps/2021-09-29
 {{< /highlight >}}
+
+There is a GPU version of LAMMPS on Grex that uses the KOKKOS library for GPU interface. It is available as follows: 
+
+{{< highlight bash >}}
+module load cuda/12.4.1 arch/avx2 gcc/13.2.0 openmpi/4.1.6 
+module load lammps/2024-08-29p1
+{{< /highlight >}}
+
+The above LAMMPS version should be used only on GPU-enabled partitions.
 
 It is also possible to load modules from the Alliance software stack after load _CCEnv_:
 
