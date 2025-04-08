@@ -37,6 +37,7 @@ module load cuda/12.4.1  arch/avx2  gcc/13.2.0  openmpi/4.1.6
 module load gromacs/2024.1
 {{< /highlight >}}
 
+> Note that depending on how GROMACS was built, the main executable may be called either __gmx__ or __gmx_mpi__ ! Plese adjust your scripts accordingly.
 
 {{< collapsible title="Script example for running GROMACS on Grex" >}}
 {{< snippet
@@ -46,13 +47,13 @@ module load gromacs/2024.1
 />}}
 {{< /collapsible >}}
 
-Assuming the script above is saved as __run-espresso.sh__, it can be submitted with:
+Assuming the script above is saved as __run-gromacs.sh__, it can be submitted with:
 
 {{< highlight bash >}}
 sbatch run-gromacs.sh
 {{< /highlight >}}
 
-For more information, visit the page [running jobs on Grex](running-jobs)
+For more information about job submission, visit the page [running jobs on Grex](running-jobs)
 
 
 ## Related links
