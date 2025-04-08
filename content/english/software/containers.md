@@ -84,7 +84,8 @@ export SINGULARITY_TMPDIR="/global/scratch/$USER/singularity/tmp"
 ### Getting and building Singularity images
 ---
 
-The commands __singularity build__ and/or __singularity pull__ would get pre-built Singularity images from DockerHub, SingularityHub, or SyLabsCloud. “pulling” images does not require elevated permissions (that is, sudo). There are several kinds of container repositories from which containers can be pulled. These repositories are distinguished by the URI string (library://, docker://, oras://, etc.)
+The commands __singularity build__ and/or __singularity pull__ would get pre-built Singularity images from DockerHub, SingularityHub, or SyLabsCloud. “pulling” images does not require elevated permissions (that is, sudo). There are several kinds of container repositories from which containers can be pulled. These repositories are distinguished by the URI string (library://, docker://, oras://, etc.).
+It is also possible to convert a local Podman image (using the oci-archive:// URI ) into a Singularity image. Refer to the Podman section of this document below.
 
 {{< highlight bash >}}
 module load singularity
@@ -94,6 +95,8 @@ singularity build ubuntu_latest0.sif library://ubuntu
 singularity pull docker://ubuntu:latest
 # or, using a local definition and --fakeroot option
 singularity build --fakeroot My_HPC_container.sif Singularity.def
+# or, using a suitable local OCI image from Podman
+singularity build busybox.sif oci-archive://busybox.tar
 {{< /highlight >}}
 
 Singularity (SIF) images can also be built from other local images, local “sandbox” directories, and from recipes. A [Singularity recipe or definition file](https://apptainer.org/docs/user/main/definition_files.html) is a text file that specifies the base image and post-install commands to be performed on it. However, Singularity-CE requires _sudo_ (privileged) access to build images from recipes, which is not available for users of HPC machines. There are two solutions to this problem.
@@ -104,6 +107,7 @@ Singularity (SIF) images can also be built from other local images, local “san
 > Make sure you understand licensing and intellectual property implications before using remote build services!
 
 The _fakeroot_ method appears to be easier and does not require an external account. As of the time of writing, both Apptainer and Singularity-CE support the _fakeroot_ build method. On Grex, there could be differencences between running Apptainer _build_ in an interactive job and on a login node. Running builds in a _salloc_ job is preferred also because login nodes do limit memory and CPU per session.
+
 
 ### Singularity with GPUs
 ---
@@ -171,7 +175,7 @@ The resulting SIF image should be compatible with either Singularity-CE or Appta
 
 [Podman](https://podman.io/) modules are now provided under the default Grex SBEnv environment. On Grex, Podman is configured as _rootless_. Podman is meant to be used by experienced users for jobs that cannot be executed as regular binaries, or through Singularity due to OCI requirements. Grex is an HPC systems, so it is expected that users would be using Podman to run compute jobs rather than persistent services (including and not limited to databases, and network services). Thus, Podman jobs and/or running Podman containers that deemed to be inappropriate for HPC may be terminated without notice.
 
-It is forbidden to run Podman on login nodes; it must be run only on compute nodes (e.g. using __sbatch__ or __salloc__).
+> It is not recommended to run Podman on login nodes; it should be run only on compute nodes (e.g. using __sbatch__ or __salloc__). 
 
 The only allowed use on login nodes is to pull images before actually starting a job.
 
@@ -233,6 +237,8 @@ podman save --format=oci-archive -o ${HOME}/my-local-image.tar <LOCALLY_BUILT_IM
 # when running a job that needs that image, load it
 podman load -i ${HOME}/my-local-image.tar
 {{< /highlight >}}
+
+Note that it is also possible to convert podman OCI archives into Singularity _.sif_ images as described above, using _oci-archive://my-local-image.tar_ syntax for the source image.
 
 ### Podman with User Namespaces
 
