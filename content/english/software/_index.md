@@ -17,11 +17,9 @@ Tools and libraries used to develop HPC software are also software, and have sev
 Fortunately, most HPC systems, and Grex is no exception, come with a pre-installed, curated software stack. This section covers how to find the installed software, how to access it, and what options you have if some of the software you need is missing.
 -->
 
-In HPC, "software" typically refers to scientific and engineering codes for computation, data processing, and visualization -— rather than common businness IT applications like web services or email clients.
-Without software to run workloads, HPC systems would be of little use! Development tools and libraries used to build HPC applications are also considered to be "software". 
+In HPC, "software" typically refers to scientific and engineering codes for computation, data processing, and visualization -— rather than common business IT applications like web services or email clients. Without software to run workloads, HPC systems would be of little use. Development tools and libraries used to build HPC applications are also considered to be "software". 
 
-Fortunately, most HPC systems—including Grex—come with a curated set of pre-installed software. This section explains how to find, access, and manage HPC software, and what to do if some software item you need is missing.
-
+Fortunately, most HPC systems, including Grex, come with a curated set of pre-installed software. This section explains how to find, access, and manage HPC software, and what to do if some software item you need is missing.
 
 ## How software is installed and distributed
 ---
@@ -46,7 +44,7 @@ Linux software is often installed system-wide using package managers (e.g., __ap
 
 While convenient on personal machines, this approach doesn’t scale well to HPC environments due to:
 
- * The need for users to have priviliged (root) access, which can compromise stability and security of shared HPC systems.
+ * The need for users to have privileged (root) access, which can compromise stability and security of shared HPC systems.
  * Package managers typically support only a single, newest version of each package at a time, which hinders reproducibility.
  * Software must be consistently installed across all compute nodes.
  * Public binary packages are usually compiled for generic CPUs, not optimized for a specific HPC systems hardware.
@@ -66,30 +64,32 @@ Grex uses [Lmod](https://lmod.readthedocs.io/en/latest), a modern, Lua-based mod
 
 Lmod would:
 
- * Hide sofware items for which their dependencies/toolchaing are not yet loaded
- * Automatically unload conflicting modules when switching toolchains
- * Reload required dependencies as needed when a module is switched
- * Supports multiple software stacks through configurable module paths
+ * Hide software items for which their dependencies/toolchains are not yet loaded.
+ * Automatically unload conflicting modules when switching toolchains.
+ * Reload required dependencies as needed when a module is switched.
+ * Supports multiple software stacks through configurable module paths.
  
 For more information about Lmod, please refer to the software stacks available on the using modules [page](software/using-modules).
 
-There are the following Grex-specific conventions on how Grex sofware environment is configured:
+There are the following Grex-specific conventions on how Grex software environment is configured:
 
- * There is a module hierarchy. No software modules is loaded by default! 
- * There is more than one  "software" stacks. A special module "environment" needs to be loaded first to switch betwen them. 
+ * There is a module hierarchy. No software modules are loaded by default! 
+ * There is more than one  "software" stacks. A special module "environment" needs to be loaded first to switch between them. 
  * CPU architecture (a module called __arch__ ) is often a root of a module hierarchy. Most commonly used __arch/avx512__ .
  * For the local software stack, __cuda__ module precees the arch module for GPU software.
 
-On Grex, there are two software stacks, called __SBEnv__ and __CCEnv__, standing for the software built on Grex locally and the software environment from the Alliance (Compute Canada), correspondingly. In practice, all the above it means that a required "software stack" module must be loaded first.
+On Grex, there are two software stacks, called __SBEnv__ and __CCEnv__, standing for the software built on Grex locally and the software environment from the Alliance (Compute Canada), correspondingly. In practice, all the above means that a required "software stack" module must be loaded first.
 
-In case of __CCEnv__, it must be followed by a __StdEnv__ module to pick the year/version of it. This would load a number of default modules like compilers and OpenMPI.
+In the case of __CCEnv__, it must be followed by a __StdEnv__ module to pick the year/version of it. This would load a number of default modules like compilers and OpenMPI.
 
-For __SBEnv__ , the local environment, is the only module loaded by default. This enables the "Core" modules that do not depend on CPU architecture. Usually these are commercial and/or binary packages.
+For __SBEnv__ , the local environment is the only module loaded by default. This enables the "Core" modules that do not depend on CPU architecture. Usually these are commercial and/or binary packages.
 
 Then, a module that picks architecture should be loaded : either __cuda__ and __arch__ (for GPU-based software) or just __arch__ (for CPU-only software). 
-> Not that order of loading __cuda__ and __arch__ modules on SBEnv matters! __cuda__ must always be loaded first.
+
+> Note that the order of loading __cuda__ and __arch__ modules on SBEnv matters! __cuda__ must always be loaded first.
 
 In case of __CCEnv__, it must be followed by loading a __StdEnv__ module to pick the year/version of it. This would load a number of default modules like compilers and OpenMPI. It still is a good practice to pick an __arch__ module correctly for __CCEnv__. 
+
 > Note that __cuda__ modules of __CCEnv__ won't load on a non-GPU hardware. Use interactive jobs on GPU nodes to build __cuda__ enabled software!
 
 ## How to find the software with Lmod Modules
@@ -97,7 +97,7 @@ In case of __CCEnv__, it must be followed by loading a __StdEnv__ module to pick
 
 First, a software stack must be selected and loaded with __module load__ command.
 
-> LMod cannnot find modules across different software stacks!
+> Lmod cannnot find modules across different software stacks!
 
 When a software stack  module is loaded, the **module spider** command will find a specific software item (for example, GROMACS; note that all the module names are __lower-case__ on Grex and on Alliance software stacks) if it exists under that stack:
 
@@ -148,7 +148,7 @@ However, if a software is really a part of the base OS (something like a graphic
 ## External links
 ---
 
-* [Lmod](https://lmod.readthedocs.io/en/latest/ "LMod, a new Lua Module system")
+* [Lmod](https://lmod.readthedocs.io/en/latest/ "Lmod, a new Lua Module system")
 * [Tcl Modules](http://modules.sourceforge.net/ "Original Tcl Modules")
 * [CMake](https://cmake.org/ "CMake")
 * [Autoconf](https://www.gnu.org/software/autoconf/ "Autoconf")
