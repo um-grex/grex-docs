@@ -97,7 +97,7 @@ In case of __CCEnv__, it must be followed by loading a __StdEnv__ module to pick
 
 First, a software stack must be selected and loaded with __module load__ command.
 
-> Lmod cannnot find modules across different software stacks!
+> Lmod can not find modules across different software stacks!
 
 When a software stack  module is loaded, the **module spider** command will find a specific software item (for example, GROMACS; note that all the module names are __lower-case__ on Grex and on Alliance software stacks) if it exists under that stack:
 
