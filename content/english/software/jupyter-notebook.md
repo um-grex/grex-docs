@@ -84,7 +84,7 @@ pip install evaluate
 pip install torch
 pip install scikit-learn
 pip install ipykernel
-pip install jupiter
+pip install jupyter
 # finally, register the virtualenv for the current user
 python -m ipykernel install --user --name=ccarrow
 #check the kernels and flush them changes just to be sure; deactivate the nevironment
