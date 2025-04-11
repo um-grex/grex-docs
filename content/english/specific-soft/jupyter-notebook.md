@@ -1,5 +1,5 @@
 ---
-weight: 2000
+weight: 1000
 linkTitle: "Jupyter notebooks"
 title: "How to use Jupyter notebooks on Grex?"
 description: "Everything you need to know for using Jupyter notebooks."

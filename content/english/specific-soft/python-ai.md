@@ -91,7 +91,7 @@ If the above commands had passed without the errors, we should be able to use th
 python shap-e-test.py
 {{< /highlight >}}
 
-It also is possible to start a [Jupyter Notebook](/software/jupyter-notebook) server while being in the same environment and use the model interactively, with example Notebooks provided under _shap-e/examples_.
+It also is possible to start a [Jupyter Notebook](/specific-soft/jupyter-notebook) server while being in the same environment and use the model interactively, with example Notebooks provided under _shap-e/examples_.
 
 The above scenario is done using interactive _salloc_ job on a GPU node. Interactive sessions are very useful for initializing Python environments and troubleshooting.
 
