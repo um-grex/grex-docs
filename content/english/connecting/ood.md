@@ -39,7 +39,7 @@ First, the OOD host would present a Keycloak login page, followed by the usual D
 
 When authenticated, you will see the following screen with the current Grex Message-of-the-day (MOTD):
 
-{{< collapsible title="Landing / MOTD page,  OpenOndemand web portal on Grex" >}}
+{{< collapsible title="Landing / MOTD page, OpenOndemand web portal on Grex" >}}
 ![OpenOnDemand Front Page](/ood/frontpage.png)
 {{< /collapsible >}}
 
