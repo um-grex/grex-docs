@@ -72,7 +72,7 @@ It could happen that the `main` branch becomes ahead of `develop`. To fix this, 
 
 https://learnxinyminutes.com/docs/markdown/ 
 
-Conventions for writing the documentation pages we know of.
+Conventions for writing the documentation pages we know of:
 
  * command line commands should be on a separate line, and quoted with ```triple backticks```
  * code, job scripts and such should use highlight shortcode for the appropriate language (like, bash)
