@@ -57,10 +57,7 @@
 &lt;/h2>&lt;hr>
 &lt;p>On the Grex’s default software stack (SBEnv), LAMMPS was built using a variety of compilers and OpenMPI 4.1&lt;/p>
 &lt;p>To find out which versions are available, use &lt;strong>module spider lammps&lt;/strong>&lt;/p>
-&lt;p>As an example:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>module load arch/avx512 gcc/13.2.0 openmpi/4.1.6 
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>module load lammps/2021-09-29&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
-&lt;p>and&lt;/p></description></item><item><title>Running MATLAB on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/matlab/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/matlab/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
+&lt;p>As an example of the version 2024 Aug 29 patch 1, using GCC:&lt;/p></description></item><item><title>Running MATLAB on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/matlab/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/matlab/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;p>&lt;a
  href="http://www.mathworks.com/"
@@ -179,6 +176,14 @@ For Grex and the current generation of Alliance HPC machines, this shared filesy
  &lt;/div>&lt;/li>&lt;li class="">
  &lt;div class="sc-treeview-label">&lt;p class="is-marginless">
  &lt;a
+ href="https://um-grex.github.io/grex-docs/specific-soft/jupyter-notebook/"
+ class="is-pretty-link"
+ >Jupyter notebooks&lt;/a
+ >
+ &lt;/p>
+ &lt;/div>&lt;/li>&lt;li class="">
+ &lt;div class="sc-treeview-label">&lt;p class="is-marginless">
+ &lt;a
  href="https://um-grex.github.io/grex-docs/specific-soft/lammps/"
  class="is-pretty-link"
  >LAMMPS&lt;/a
@@ -242,5 +247,5 @@ For Grex and the current generation of Alliance HPC machines, this shared filesy
 &lt;/ul>
 &lt;hr>
 &lt;!-- Changes and update:
-* Last revision: Aug 28, 2024. 
+* Last revision: Apr 11, 2025. 
 --></description></item></channel></rss>

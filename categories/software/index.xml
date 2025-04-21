@@ -46,7 +46,14 @@
 &lt;h2 id='installing-packages'>Installing packages&lt;a href='#installing-packages' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;p>We do not maintain centralized versions of Julia packages. Users should install Julia modules in their home directory.&lt;/p>
-&lt;p>The command is (in Julia REPL):&lt;/p></description></item><item><title>Running LAMMPS on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/lammps/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/lammps/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
+&lt;p>The command is (in Julia REPL):&lt;/p></description></item><item><title>How to use Jupyter notebooks on Grex?</title><link>https://um-grex.github.io/grex-docs/specific-soft/jupyter-notebook/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/jupyter-notebook/</guid><description>&lt;h1 id='jupyter-on-grex'>Jupyter on Grex&lt;a href='#jupyter-on-grex' class='anchor'>#&lt;/a>
+&lt;/h1>&lt;hr>
+&lt;p>&lt;a
+ href="https://jupyter.org/"
+ class="is-pretty-link">Jupyter&lt;/a
+>
+ is a Web-interface aimed to support interactive data science and scientific computing. Jupyter supports several dynamic languages, most notably Python, R and Julia. Jupyter offers a metaphor of &amp;ldquo;computational document&amp;rdquo; that combines code, data and visualizations, and can be published or shared with collaborators.&lt;/p>
+&lt;p>Jupyter can be used either as a simple, individual notebook or as a multi-user Web server/Interactive Development Environment (IDE), such as JupyterHub/JupyterLab. The JupyterHub servers can use a variety of computational back-end configurations: from free-for-all shared workstation to job spawning interfaces to HPC schedulers like SLURM or container workflow systems like Kubernetes.&lt;/p></description></item><item><title>Running LAMMPS on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/lammps/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/lammps/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;p>&lt;a
  href="https://www.lammps.org/"
@@ -57,10 +64,7 @@
 &lt;/h2>&lt;hr>
 &lt;p>On the Grex’s default software stack (SBEnv), LAMMPS was built using a variety of compilers and OpenMPI 4.1&lt;/p>
 &lt;p>To find out which versions are available, use &lt;strong>module spider lammps&lt;/strong>&lt;/p>
-&lt;p>As an example:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>module load arch/avx512 gcc/13.2.0 openmpi/4.1.6 
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>module load lammps/2021-09-29&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
-&lt;p>and&lt;/p></description></item><item><title>General Linux tools</title><link>https://um-grex.github.io/grex-docs/software/general-linux/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/software/general-linux/</guid><description>&lt;h2 id='linux-tools-on-grex'>Linux tools on Grex&lt;a href='#linux-tools-on-grex' class='anchor'>#&lt;/a>
+&lt;p>As an example of the version 2024 Aug 29 patch 1, using GCC:&lt;/p></description></item><item><title>General Linux tools</title><link>https://um-grex.github.io/grex-docs/software/general-linux/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/software/general-linux/</guid><description>&lt;h2 id='linux-tools-on-grex'>Linux tools on Grex&lt;a href='#linux-tools-on-grex' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;p>There are a number of general and distro-specific tools on Grex that are worth mentioning here. Such tools are: &lt;strong>text editors&lt;/strong>, &lt;strong>image viewers&lt;/strong>, &lt;strong>file managers&lt;/strong>, &amp;hellip; etc.&lt;/p>
 &lt;h2 id='command-line-text-editors'>Command line Text editors&lt;a href='#command-line-text-editors' class='anchor'>#&lt;/a>
@@ -206,14 +210,16 @@ The examples are a Singularity/Apptainer repository from &lt;a
  href="https://computationalgenomics.ca/"
  class="is-pretty-link">C3G&lt;/a
 >
-. Note that we can only &amp;ldquo;pull&amp;rdquo; the software from these repositories. To actually add or change software, datasets, etc., or receive support, the respective organizations controlling these CVMFS repositories should be contacted directly.&lt;/p></description></item><item><title>How to use Jupyter notebooks on Grex?</title><link>https://um-grex.github.io/grex-docs/software/jupyter-notebook/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/software/jupyter-notebook/</guid><description>&lt;h1 id='jupyter-on-grex'>Jupyter on Grex&lt;a href='#jupyter-on-grex' class='anchor'>#&lt;/a>
-&lt;/h1>&lt;hr>
-&lt;p>&lt;a
- href="https://jupyter.org/"
- class="is-pretty-link">Jupyter&lt;/a
+. Note that we can only &amp;ldquo;pull&amp;rdquo; the software from these repositories. To actually add or change software, datasets, etc., or receive support, the respective organizations controlling these CVMFS repositories should be contacted directly.&lt;/p></description></item><item><title>List of Software in SBEnv environment</title><link>https://um-grex.github.io/grex-docs/software/software-list/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/software/software-list/</guid><description>&lt;h2 id='software-available-on-the-ccenv-software-stack-on-grex'>Software available on the CCEnv software stack on Grex.&lt;a href='#software-available-on-the-ccenv-software-stack-on-grex' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;p>Grex receives the ComputeCanada/Alliance software environment via CVMFS. Full autogenerated list of software is available at the &lt;a
+ href="https://docs.alliancecan.ca/wiki/Available_software"
+ class="is-pretty-link">Available Software page&lt;/a
 >
- is a Web-interface aimed to support interactive data science and scientific computing. Jupyter supports several dynamic languages, most notably Python, R and Julia. Jupyter offers a metaphor of &amp;ldquo;computational document&amp;rdquo; that combines code, data and visualizations, and can be published or shared with collaborators.&lt;/p>
-&lt;p>Jupyter can be used either as a simple, individual notebook or as a multi-user Web server/Interactive Development Environment (IDE), such as JupyterHub/JupyterLab. The JupyterHub servers can use a variety of computational back-end configurations: from free-for-all shared workstation to job spawning interfaces to HPC schedulers like SLURM or container workflow systems like Kubernetes.&lt;/p></description></item><item><title>Running jobs on Grex</title><link>https://um-grex.github.io/grex-docs/running-jobs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/running-jobs/</guid><description>&lt;h2 id='why-running-jobs-in-batch-mode'>Why running jobs in batch mode?&lt;a href='#why-running-jobs-in-batch-mode' class='anchor'>#&lt;/a>
+ on the Allince Documentation Wiki.&lt;/p>
+&lt;blockquote>
+&lt;p>Note that Grex does not install local, commercial software licensed only to the National/Alliance systems. The software listed under &amp;ldquo;List of globally-installed modules&amp;rdquo; is available.&lt;/p>&lt;/blockquote>
+&lt;h2 id='software-available-on-the-sbenv-software-stack-on-grex'>Software available on the SBEnv software stack on Grex.&lt;a href='#software-available-on-the-sbenv-software-stack-on-grex' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;p>Below is the auto-generated list of software modules available on Grex&amp;rsquo;s local SBEnv software stack.&lt;/p></description></item><item><title>Running jobs on Grex</title><link>https://um-grex.github.io/grex-docs/running-jobs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/running-jobs/</guid><description>&lt;h2 id='why-running-jobs-in-batch-mode'>Why running jobs in batch mode?&lt;a href='#why-running-jobs-in-batch-mode' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;p>There are many reasons for adopting a batch mode for running jobs on a cluster. From providing user&amp;rsquo;s computations with fairness, traffic control to prevent resource congestion and wasting, enforcing organizational priorities, to better understanding the workload, utilization and resource needs for future capacity planning; the scheduler provides it all. After being long-time PBS/Moab users, we have switched to the &lt;a
  href="https://slurm.schedmd.com/documentation.html"
@@ -267,6 +273,14 @@ Fortunately, most HPC systems, and Grex is no exception, come with a pre-install
  href="https://um-grex.github.io/grex-docs/specific-soft/julia/"
  class="is-pretty-link"
  >Julia&lt;/a
+ >
+ &lt;/p>
+ &lt;/div>&lt;/li>&lt;li class="">
+ &lt;div class="sc-treeview-label">&lt;p class="is-marginless">
+ &lt;a
+ href="https://um-grex.github.io/grex-docs/specific-soft/jupyter-notebook/"
+ class="is-pretty-link"
+ >Jupyter notebooks&lt;/a
  >
  &lt;/p>
  &lt;/div>&lt;/li>&lt;li class="">
@@ -335,7 +349,7 @@ Fortunately, most HPC systems, and Grex is no exception, come with a pre-install
 &lt;/ul>
 &lt;hr>
 &lt;!-- Changes and update:
-* Last revision: Aug 28, 2024. 
+* Last revision: Apr 11, 2025. 
 --></description></item><item><title>OpenOnDemand, HPC Portal</title><link>https://um-grex.github.io/grex-docs/ood/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/ood/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;p>&lt;a
@@ -343,4 +357,14 @@ Fortunately, most HPC systems, and Grex is no exception, come with a pre-install
  class="is-pretty-link">OpenOnDemand&lt;/a
 >
  or &lt;strong>OOD&lt;/strong> for short, is an open source Web portal for High-Performance computing, developed at Ohio Supercomputing Center. OOD makes it easier for beginner HPC users to access the resources via a Web interface. OOD also allows for interactive, visualization and other Linux Desktop applications to be accessed on HPC systems via a convenient Web user interface.&lt;/p>
-&lt;p>Since the end of &lt;strong>October 2021&lt;/strong>, OpenOnDemand version 2 is officially in production on Grex.&lt;/p></description></item></channel></rss>
+&lt;blockquote>
+&lt;ul>
+&lt;li>Since the end of &lt;strong>October 2021&lt;/strong>, OpenOnDemand version 2 is officially in production on Grex.&lt;/li>
+&lt;li>Since the beginning of &lt;strong>January 2023&lt;/strong>, OpenOnDemand version 3 is officially in production on Grex.&lt;/li>
+&lt;li>Since the beginning of &lt;strong>February 2025&lt;/strong>, OpenOnDemand version 4 is officially in production on Grex.&lt;/li>
+&lt;/ul>&lt;/blockquote>
+&lt;p>For more general OOD information, see the &lt;a
+ href="https://joss.theoj.org/papers/10.21105/joss.00622"title="OpenOnDemand Paper" id="openondemand-paper"
+ class="is-pretty-link">OpenOnDemand paper&lt;/a
+>
+&lt;/p></description></item></channel></rss>

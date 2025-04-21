@@ -46,7 +46,14 @@
 &lt;h2 id='installing-packages'>Installing packages&lt;a href='#installing-packages' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;p>We do not maintain centralized versions of Julia packages. Users should install Julia modules in their home directory.&lt;/p>
-&lt;p>The command is (in Julia REPL):&lt;/p></description></item><item><title>Running LAMMPS on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/lammps/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/lammps/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
+&lt;p>The command is (in Julia REPL):&lt;/p></description></item><item><title>How to use Jupyter notebooks on Grex?</title><link>https://um-grex.github.io/grex-docs/specific-soft/jupyter-notebook/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/jupyter-notebook/</guid><description>&lt;h1 id='jupyter-on-grex'>Jupyter on Grex&lt;a href='#jupyter-on-grex' class='anchor'>#&lt;/a>
+&lt;/h1>&lt;hr>
+&lt;p>&lt;a
+ href="https://jupyter.org/"
+ class="is-pretty-link">Jupyter&lt;/a
+>
+ is a Web-interface aimed to support interactive data science and scientific computing. Jupyter supports several dynamic languages, most notably Python, R and Julia. Jupyter offers a metaphor of &amp;ldquo;computational document&amp;rdquo; that combines code, data and visualizations, and can be published or shared with collaborators.&lt;/p>
+&lt;p>Jupyter can be used either as a simple, individual notebook or as a multi-user Web server/Interactive Development Environment (IDE), such as JupyterHub/JupyterLab. The JupyterHub servers can use a variety of computational back-end configurations: from free-for-all shared workstation to job spawning interfaces to HPC schedulers like SLURM or container workflow systems like Kubernetes.&lt;/p></description></item><item><title>Running LAMMPS on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/lammps/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/lammps/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;p>&lt;a
  href="https://www.lammps.org/"
@@ -57,10 +64,7 @@
 &lt;/h2>&lt;hr>
 &lt;p>On the Grex’s default software stack (SBEnv), LAMMPS was built using a variety of compilers and OpenMPI 4.1&lt;/p>
 &lt;p>To find out which versions are available, use &lt;strong>module spider lammps&lt;/strong>&lt;/p>
-&lt;p>As an example:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>module load arch/avx512 gcc/13.2.0 openmpi/4.1.6 
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>module load lammps/2021-09-29&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
-&lt;p>and&lt;/p></description></item><item><title>Running MATLAB on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/matlab/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/matlab/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
+&lt;p>As an example of the version 2024 Aug 29 patch 1, using GCC:&lt;/p></description></item><item><title>Running MATLAB on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/matlab/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/matlab/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;p>&lt;a
  href="http://www.mathworks.com/"

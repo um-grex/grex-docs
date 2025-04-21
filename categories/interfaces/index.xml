@@ -5,4 +5,14 @@
  class="is-pretty-link">OpenOnDemand&lt;/a
 >
  or &lt;strong>OOD&lt;/strong> for short, is an open source Web portal for High-Performance computing, developed at Ohio Supercomputing Center. OOD makes it easier for beginner HPC users to access the resources via a Web interface. OOD also allows for interactive, visualization and other Linux Desktop applications to be accessed on HPC systems via a convenient Web user interface.&lt;/p>
-&lt;p>Since the end of &lt;strong>October 2021&lt;/strong>, OpenOnDemand version 2 is officially in production on Grex.&lt;/p></description></item></channel></rss>
+&lt;blockquote>
+&lt;ul>
+&lt;li>Since the end of &lt;strong>October 2021&lt;/strong>, OpenOnDemand version 2 is officially in production on Grex.&lt;/li>
+&lt;li>Since the beginning of &lt;strong>January 2023&lt;/strong>, OpenOnDemand version 3 is officially in production on Grex.&lt;/li>
+&lt;li>Since the beginning of &lt;strong>February 2025&lt;/strong>, OpenOnDemand version 4 is officially in production on Grex.&lt;/li>
+&lt;/ul>&lt;/blockquote>
+&lt;p>For more general OOD information, see the &lt;a
+ href="https://joss.theoj.org/papers/10.21105/joss.00622"title="OpenOnDemand Paper" id="openondemand-paper"
+ class="is-pretty-link">OpenOnDemand paper&lt;/a
+>
+&lt;/p></description></item></channel></rss>
