@@ -16,11 +16,11 @@ Join us for the spring 2025 high-performance computing (HPC) and cloud workshop,
 
 __What to expect:__ The workshop will feature a mix of talks and hands-on sessions, covering topics such as:
 
-> - __1.__ Introduction to BASH and Linux shell scripting.
-> - __2.__ Beginner’s tutorial on using the SLURM scheduler and Lmod for software modules.
-> - __3.__ Interactive computing with Open OnDemand and Jupyter Notebooks.
-> - __4.__ Introduction to the Globus file transfer service.
-> - __5.__ Getting started with the community OpenStack cloud.
+> - Introduction to BASH and Linux shell scripting.
+> - Beginner’s tutorial on using the SLURM scheduler and Lmod for software modules.
+> - Interactive computing with Open OnDemand and Jupyter Notebooks.
+> - Introduction to the Globus file transfer service.
+> - Getting started with the community OpenStack cloud.
 
 * __Dates:__ May 21–23, 2025
 
