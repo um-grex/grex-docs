@@ -128,15 +128,18 @@ salloc --partition=compute --nodes=1 --ntasks-per-node=2 --time=0-3:00:00
 
 It should give you a command prompt on a compute node. You may change some parameters like __partition__, __time__, ... etc to fit your needs. Then, make sure that a Python module is loaded and jupyter is installed, either in the Python or in a virtualenv, let's start a notebook server, using an arbitrary port 8765. If the port is already in use, pick another number.
 
+> Note that a desired Python module must be loaded, and corresponding virtialenv must be activated as per above to access the jupyter-notebook command!
+
 {{< highlight bash >}}
 jupyter-notebook --ip 0.0.0.0 --no-browser --port 8765
 {{< /highlight >}}
 
-If successful, there should be:
+If successful, there should be at least two lines close to the end of the console output:
 
- _http://g333:8675/?token=ae348acfa68edec1001bcef58c9abb402e5c7dd2d8c0a0c9_ 
+ * _http://g333:8765/?token=ae348acfa68edec1001bcef58c9abb402e5c7dd2d8c0a0c9_ 
+ * _http://127.0.0.1:8765/?token=ae348acfa68edec1001bcef58c9abb402e5c7dd2d8c0a0c9_
 
-or similar, where g333 refers to a compute node it runs, 8675 is a local TCP port and token is an access token. 
+or similar, where g333 refers to a compute node it runs, 8765 is a local TCP port and the token (the long hash code) is an access token. 
 
 Now we have a jupyter notebook server running on the compute node, but how do we access it from our own browser? To that end, we will need an SSH tunnel.
 
@@ -146,15 +149,16 @@ Assuming a command line SSH client (OpenSSH or MobaXterm command line window), i
 ssh -fNL 8765:g333:8765  youruser@bison.hpc.umanitoba.ca
 {{< /highlight >}}
   
-Agan, g333, port 8765 and your user name in the example above should be changed to reflect the actual node and user.
+Agan, g333, port 8765 and your user name in the example above should be changed to reflect the actual node, port and user.
 
 When successful, the SSH command above returns nothing. Keep the terminal window open for as long as you need the tunnel.
-Now, the final step is to point your browser (Firefox is the best as Chrome might refuse to do plain http://) to the
-specified port on _localhost_ or 127.0.0.1, as in _http://localhost:8765_ or _http://127.0.0.1:8765_ . Use the token as per above to authenticate into the jupyter notebook session, either copying it into the prompt or providing it in the browser address line.
 
-The notebook session will be usable for as long as the interactive (__salloc__) job is valid and both salloc session and the SSH tunnel connections stay alive. This usually is a limitation on how long jupyter notebook calculations can be, in practice.
+> Note that only one _port_ can be used per server! If there is another jupyter notebook or another SSH tunnel already running on the same port you are trying, simply change to another random port (for example, 8711 instead of 8765 and try again.
 
-The above-mentioned method will work not only on Grex, but on Compute Canada systems as well.
+The final step is to point your browser (Firefox is the best as Chrome might refuse to do plain http://) to the
+specified port on _localhost_ or 127.0.0.1, as in _http://localhost:8765_ or _http://127.0.0.1:8765_ . Use the token as per above to authenticate into the jupyter notebook session, either copying it into the prompt or providing it in the browser address line. Simply copying and pasting the Jupyter URL starting from _http://127.0.0.1:8765/?token=your-token-goes-here_ should work. 
+
+The notebook session will be usable for as long as the interactive (__salloc__) job is valid and both salloc session and the SSH tunnel connections stay alive. This usually is a limitation on how long jupyter notebook calculations can be, in practice. The above-mentioned method will work not only on Grex, but on Compute Canada systems as well.
 
 
 ## Not using Jupyter notebooks in SLURM jobs
