@@ -156,7 +156,9 @@ When successful, the SSH command above returns nothing. Keep the terminal window
 > Note that only one _port_ can be used per server! If there is another jupyter notebook or another SSH tunnel already running on the same port you are trying, simply change to another random port (for example, 8711 instead of 8765 and try again.
 
 The final step is to point your browser (Firefox is the best as Chrome might refuse to do plain http://) to the
-specified port on _localhost_ or 127.0.0.1, as in _http://localhost:8765_ or _http://127.0.0.1:8765_ . Use the token as per above to authenticate into the jupyter notebook session, either copying it into the prompt or providing it in the browser address line. Simply copying and pasting the Jupyter URL starting from _http://127.0.0.1:8765/?token=your-token-goes-here_ should work. 
+specified port on _localhost_ or 127.0.0.1, as in _http://localhost:8765_ or _http://127.0.0.1:8765_ . Use the token as per above to authenticate into the jupyter notebook session, either copying it into the prompt or providing it in the browser address line. 
+
+> Simply copying and pasting the Jupyter URL starting from _http://127.0.0.1:8765/?token=your-token-goes-here_ should work! However, the URL starting with the node name (g333 in our example) should not be used.
 
 The notebook session will be usable for as long as the interactive (__salloc__) job is valid and both salloc session and the SSH tunnel connections stay alive. This usually is a limitation on how long jupyter notebook calculations can be, in practice. The above-mentioned method will work not only on Grex, but on Compute Canada systems as well.
 
