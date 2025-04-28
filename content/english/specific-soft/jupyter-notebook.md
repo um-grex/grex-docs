@@ -14,7 +14,7 @@ categories: ["Software"]
 
 Jupyter can be used either as a simple, individual notebook or as a multi-user Web server/Interactive Development Environment (IDE), such as JupyterHub/JupyterLab. The JupyterHub servers can use a variety of computational back-end configurations: from free-for-all shared workstation to job spawning interfaces to HPC schedulers like SLURM or container workflow systems like Kubernetes.
 
-This page lists examples of several ways of accessing jupyter.
+This page lists examples of several ways of accessing Jupyter notebooks.
 
 ## Using notebooks via Grex OOD Web Portal
 ---
@@ -23,21 +23,27 @@ Grex provides Jupyter Notebooks and/or JupyterLab as an [OpenOnDemand](ood) dash
 This is much more convenient than handling SSH tunnels for Jupyter manually. 
 The servers will run as a batch job on Grex compute nodes, so as usual, a choice of SLURM partition will be needed. 
 
-There is more than one versions of the OOD app, one for the local Grex software environment with a GCC toolchain,
-and another for the Alliance/ComputeCanada environment with the StdEnv/2023 environment. The later is less polished for Grex. In particular, Rstudio and Desktop Launcher links there will not work. 
-It is better to use OOD's standalone Rstudio and Desktop Apps instead of launching them from JupyterLab. 
+Grex provides access to Jupyter Notebooks and JupyterLab through an [OpenOnDemand](/ood) server Application. This method is much more convenient than manually handling SSH tunnels for Jupyter.
 
+Notebooks under OOD would run as batch jobs on Grex compute nodes, and thus have access to any available hardware such as GPUs, as needed. You will need to select a SLURM partition, as well as other resource requests (CPU, GPU, time) when launching a OOD Jupyter session.
+
+There are multiple versions of the OOD Jupyter application, that correspond to either local Grex software environment (SBEnv) or the Alliance/ComputeCanada environment (CCEnv, using the current StdEnv version). 
+
+<!-- GAS commented out the old pic 
 {{< collapsible title="OpenOndemand applications: jupyter" >}}
 ![](/ood/applications.png)
 {{< /collapsible >}}
 
-Find out more on how to use OOD on the [Grex OOD pages](ood)
+-->
+You can find more information on using OOD in the [Grex OOD documentation pages](/ood) .
 
 ## Installing additional Jupyter Kernels
 
-To use R, Julia, and different instances or versions of Python from Jupyter, a corresponding Jupyter notebook kernel has to be installed for each of the languages, by each user in their HOME directories. 
-Note that the language kernels must match the software environments they will be used from (i.e., to be installed using a local Grex software stack and then used from OOD Jupyter App off the same software stack).
-Python's _virtualenv_ can be helful in isolating the various environements and their dependencies.
+To run, a Jupyter notebook require a connection to a language "kernel". Generally, Jupyter would start only with a Python kernel that came with the jupyter-notebook server. However, there are many more kernels that are available! 
+
+To use R, Julia, or different instances or versions of Python from Jupyter, you must install a corresponding Jupyter Notebook kernel for each language. Each user must install these kernels individually, within their $HOME directories.
+
+> Note that language kernels must match the software environments they will be used with. For example, install kernels using the local Grex software stack if you plan to use them from the Grex OOD Jupyter App. Python's _virtualenv_ can be helful in isolating the various environements and their dependencies.
 
 The kernels are installed under a hidden directory _$HOME/.local/share/jupyter/kernels_. 
 
@@ -116,9 +122,7 @@ Check out the corresponding Compute Canada documentation [here](https://docs.all
 ## Using notebooks via SSH tunnel and interactive jobs
 ---
 
-Any Python installation that has jupyter notebooks installed can be used for the simple notebook interface. 
-Most often, activity on login nodes of HPC systems is limited, so first an interactive batch job should be started.
-Then, in the interactive job, users would start a jupyter notebook server and use an SSH tunnel to connect to it from a local Web browser.
+Any Python installation with Jupyter Notebooks installed can be used to launch the simple notebook interface. Since activity on HPC login nodes is usually restricted, you should first start an interactive batch job. Within the interactive session, you will start a Jupyter Notebook server and use an SSH tunnel to connect to it from your local web browser.
 
 After logging on to Grex as usual, issue the following __salloc__ command to start an [interactive job](running-jobs/interactive-jobs):
 
@@ -126,9 +130,10 @@ After logging on to Grex as usual, issue the following __salloc__ command to sta
 salloc --partition=skylake --nodes=1 --ntasks-per-node=2 --time=0-3:00:00
 {{< /highlight >}}
 
-The above should give you a command prompt on a compute node. You may change some parameters like __partition__, __time__, ... etc to fit your needs. Then, make sure that a Python module is loaded and jupyter is installed, either in the Python or in a virtualenv, let's start a notebook server, using an arbitrary port 8765. If the port is already in use, pick another number.
+This should give you a command prompt on a compute node. You may adjust parameters like partition, time limit, etc., to fit your needs.
+Next, ensure that a Python module is loaded and that Jupyter is installed, either within the Python environment or a virtual environment. Then start a notebook server, choosing an arbitrary port number, such as 8765. (If the port is already in use, simply pick another.)
 
-> Note that a desired Python module must be loaded, and corresponding virtualenv must be activated as per above to access the jupyter-notebook command!
+> Note that a desired Python module must be loaded, and corresponding virtualenv must be activated as before accessing the jupyter-notebook command!
 
 {{< highlight bash >}}
 jupyter-notebook --ip 0.0.0.0 --no-browser --port 8765
@@ -139,28 +144,34 @@ If successful, there should be at least two lines close to the end of the consol
  * _http://g333:8765/?token=ae348acfa68edec1001bcef58c9abb402e5c7dd2d8c0a0c9_ 
  * _http://127.0.0.1:8765/?token=ae348acfa68edec1001bcef58c9abb402e5c7dd2d8c0a0c9_
 
-or similar, where g333 refers to a compute node it runs, 8765 is a local TCP port and the token (the long hash code) is an access token. 
+or similar, where g333 refers to a compute node it runs, 8765 is a local TCP port and the token (the long hash code) is an access/authentication browser token. 
 
-Now we have a jupyter notebook server running on the compute node, but how do we access it from our own browser? To that end, we will need an SSH tunnel.
+At this point, you have a Jupyter Notebook server running on the compute node — but it is not yet accessible from your local browser. To access it, you will need to create an SSH tunnel.
 
-Assuming a command line SSH client (OpenSSH or MobaXterm command line window), in a new tab or terminal issue the following:
+Assumingi you are using a command-line SSH client (OpenSSH or MobaXterm terminal window), opeen a new tab or  terminal and run the following command:
 
 {{< highlight bash >}}
 ssh -fNL 8765:g333:8765 yourusername@bison.hpc.umanitoba.ca
 {{< /highlight >}}
-  
-Again, g333, port 8765 and your user name in the example above should be changed to reflect the actual node, port and user name.
+ 
+Replace _g333_, _8765_, and _yourusername_ with the correct node name, port, and username.
 
-When successful, the SSH command above returns nothing. Keep the terminal window open for as long as you need the tunnel.
+If successful, the SSH command above returns nothing. Keep the terminal window open for as long as you need the SSH tunnel (that is, for the duration of your Jupyter session).
 
-> Note that only one _port_ can be used per server! If there is another jupyter notebook or another SSH tunnel already running on the same port you are trying, simply change to another random port (for example, 8711 instead of 8765 and try again.
+> Note that only one _port_ can be used per server at a time! If the _port_ you selected is already in use  (due to another Jupyter Notebook session or an existing SSH tunnel), simply pick a different random port (e.g., 8711) and repeat the procedure.
 
-The final step is to point your browser (Firefox is the best as Chrome might refuse to do plain http://) to the
-specified port on _localhost_ or 127.0.0.1, as in _http://localhost:8765_ or _http://127.0.0.1:8765_ . Use the token as per above to authenticate into the jupyter notebook session, either copying it into the prompt or providing it in the browser address line. 
+The final step is to open a browser on your client computer (Firefox is the best as Chrome might refuse to do plain http://) and navigate it to the tunnelded _port_ on _localhost_ or **127.0.0.1**, as in _http://localhost:8765_ or _http://127.0.0.1:8765_ . Use the _token_ as per above to authenticate into the jupyter notebook session, either copying it into the prompt or providing it in the browser address line. 
 
-> Simply copying and pasting the Jupyter URL starting from _http://127.0.0.1:8765/?token=your-token-goes-here_ should work! However, the URL starting with the node name (g333 in our example) should not be used.
+> Simply copying and pasting the Jupyter URL starting from _http://127.0.0.1:8765/?token=your-token-goes-here_ should work! Do not use the URL that starts with the node name (e.g., g333) — it will not work from your local machine.
 
-The notebook session will be usable for as long as the interactive (__salloc__) job is valid and both salloc session and the SSH tunnel connections stay alive. This usually is a limitation on how long jupyter notebook calculations can be, in practice. The above-mentioned method will work not only on Grex, but on Compute Canada systems as well.
+After this, you should be able to use a Jupyter Notebook, on the compute node, through your local browser. 
+
+The notebook session will remain active as long as:
+ * the interactive job (salloc) session is alive,
+ * the Jupyter Notebook server is running, and
+ * the SSH tunnel remains open.
+
+This method works not only on Grex, but also on the Alliance and most other HPC systems.
 
 
 ## Not using Jupyter notebooks in SLURM jobs
@@ -196,7 +207,7 @@ python  my_notebook.py
 
 There is a SyZyGy instance [umanitoba.syzygy.ca](https://umanitoba.syzygy.ca) that gives a free-for-all shared SyZyGy JupyterHub for UManitoba users.
 
-Most of the Alliance's (Compute Canada) HPC machines deployed [JupyterHub](https://docs.alliancecan.ca/wiki/JupyterHub/en) interfaces: Cedar, Beluga, Narval and Niagara.
+Most of the Alliance's  HPC machines deployed [JupyterHub](https://docs.alliancecan.ca/wiki/JupyterHub/en) interfaces: Cedar, Beluga, Narval and Niagara.
 These instances submit Jupyter notebooks as SLURM jobs directly from the JupyterHub interface. 
 
 <!-- {{< treeview display="tree" />}} -->
