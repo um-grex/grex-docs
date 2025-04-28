@@ -111,19 +111,30 @@ The OOD Dashboard menu, __Interactive Apps__, shows interactive applications. Th
 ![](/ood/applications.png)
 {{< /collapsible >}}
 
+There are numerous supported "applications" in OnDemand on Grex. These applications fall into two broad categories: Virtual Desktop apps (the ones delivering a Linux Desktop with some GUI software via NoVNC) and Servers that are delivered through a Web Proxy. A prominent example of a Server app is Jupyter Notebook or Jupyter Lab. Some Apps such as Matlab or Rstudio exists both as a Linux Desktop GUI and a Server version.
+
+>We keep actively developing the OOD Web Portal, and the list below may change as we add more popular applications or remove less used ones!
+
 As for now, the following applications are supported:
 
-> - Linux Desktops in VNC
-> - GaussView GUI in VNC
-> - Matlab GUI in VNC
-> - MetashapePro GUI in VNC
-> - RELION GUI in VNC
-> - Stata GUI in VNC
-> - VSCode server
-> - JupyterLab server
-> - RStudio server
-> - Riken Job Composer
+| App | Type | Availability | Notes|
+|-----|------|-----|----|
+| Linux Desktop | NoVNC Desktop | Generally available |  |
+| GaussView  | NoVNC Desktop | Licensed users only |  |
+| Matlab |  NoVNC Desktop | Generally available |
+| Matlab | Server  | Generally available | 
+| JupyterLab | Server | Generally available | Comes for SBEnv and CCEnv |
+| Rstudio-Server| Server | Generally available |  Comes for SBEnv and CCEnv |
+| Visual Studio Code Server| Server | Generally Available | |
+| MetaSHapePro | NoVNC Desktop | Licensed users only | |
+| RELION | NoVNC Desktop | Generally Available | |
+| STATA | NoVNC Desktop | Licensed users only | |
+| Feko | NoVNC Desktop | Licensed uses only | |
+| Ovito | NoVNC Desktop | Generally available | | 
 
+
+
+> Note that only Apps available (licensed) to your research group will be visible in your group members' OOD interface.
 
 As with regular SLURM jobs, it is important to specify SLURM partitions for them to start faster. Perhaps the __test__ partition for Desktop is the best place to start interactive Desktop jobs, so it is hardcoded in the Simplified Desktop item.
 
