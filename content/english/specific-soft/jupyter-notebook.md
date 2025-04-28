@@ -123,12 +123,12 @@ Then, in the interactive job, users would start a jupyter notebook server and us
 After logging on to Grex as usual, issue the following __salloc__ command to start an [interactive job](running-jobs/interactive-jobs):
 
 {{< highlight bash >}}
-salloc --partition=compute --nodes=1 --ntasks-per-node=2 --time=0-3:00:00
+salloc --partition=skylake --nodes=1 --ntasks-per-node=2 --time=0-3:00:00
 {{< /highlight >}}
 
-It should give you a command prompt on a compute node. You may change some parameters like __partition__, __time__, ... etc to fit your needs. Then, make sure that a Python module is loaded and jupyter is installed, either in the Python or in a virtualenv, let's start a notebook server, using an arbitrary port 8765. If the port is already in use, pick another number.
+The above should give you a command prompt on a compute node. You may change some parameters like __partition__, __time__, ... etc to fit your needs. Then, make sure that a Python module is loaded and jupyter is installed, either in the Python or in a virtualenv, let's start a notebook server, using an arbitrary port 8765. If the port is already in use, pick another number.
 
-> Note that a desired Python module must be loaded, and corresponding virtialenv must be activated as per above to access the jupyter-notebook command!
+> Note that a desired Python module must be loaded, and corresponding virtualenv must be activated as per above to access the jupyter-notebook command!
 
 {{< highlight bash >}}
 jupyter-notebook --ip 0.0.0.0 --no-browser --port 8765
@@ -146,10 +146,10 @@ Now we have a jupyter notebook server running on the compute node, but how do we
 Assuming a command line SSH client (OpenSSH or MobaXterm command line window), in a new tab or terminal issue the following:
 
 {{< highlight bash >}}
-ssh -fNL 8765:g333:8765  youruser@bison.hpc.umanitoba.ca
+ssh -fNL 8765:g333:8765 yourusername@bison.hpc.umanitoba.ca
 {{< /highlight >}}
   
-Agan, g333, port 8765 and your user name in the example above should be changed to reflect the actual node, port and user.
+Again, g333, port 8765 and your user name in the example above should be changed to reflect the actual node, port and user name.
 
 When successful, the SSH command above returns nothing. Keep the terminal window open for as long as you need the tunnel.
 
