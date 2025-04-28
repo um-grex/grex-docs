@@ -125,9 +125,9 @@ As for now, the following applications are supported:
 | Matlab | Server  | Generally available | - |
 | JupyterLab | Server | Generally available | Comes for SBEnv and CCEnv | - | 
 | Rstudio-Server| Server | Generally available |  Comes for SBEnv and CCEnv | - |
-| Visual Studio Code Server| Server | Generally Available | - |
+| Visual Studio Code Server| Server | Generally available | - |
 | MetaSHapePro | NoVNC Desktop | Licensed users only | - |
-| RELION | NoVNC Desktop | Generally Available | - |
+| RELION | NoVNC Desktop | Generally available | - |
 | STATA | NoVNC Desktop | Licensed users only | - |
 | Feko | NoVNC Desktop | Licensed users only | | - | 
 | Ovito | NoVNC Desktop | Generally available | - | 
