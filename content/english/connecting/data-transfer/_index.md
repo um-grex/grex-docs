@@ -68,9 +68,10 @@ There are many file transfer clients that provide a convenient graphical user in
 Some examples of the popular file transfer clients are:
 
 * [WinSCP](https://winscp.net/eng/index.php "WinSCP") for Windows.
+* [CyberDuck](https://cyberduck.io/) for MacOS X and Windows, has a good MFA support.
 * [MobaXterm](https://mobaxterm.mobatek.net/ "MobaXterm") for Windows has an SFTP app. 
 * Cross platform [FileZilla Client](https://filezilla-project.org "FileZilla Client")
-* [CyberDuck](https://cyberduck.io/) for MacOS X
+
 
 Other GUI clients will work with Grex too if they provide SFTP protocol support.
 

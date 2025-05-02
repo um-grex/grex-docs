@@ -83,7 +83,16 @@ If problems persist, try a combination of the following:
 
 1. Upgrade to version 6.1.1 or more recent
 2. Use a keypair instead of password
-3. Test the connection
+3. Use the SFTP app insead of SSH browser app.
+4. Test the connection
+
+### CyberDuck
+---
+
+CyberDuck supports MFA for SFTP out of the box. 
+
+1. Upgrade to version 9 or newer.
+2. Optionally, provide SSH private key instead of password
 
 ### PyCharm
 ---
