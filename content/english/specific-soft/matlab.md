@@ -45,10 +45,11 @@ For running a MATLAB script in text mode, or a batch script, the following optio
 
 {{< highlight bash >}}
 module load matlab
-matlab -nodisplay -nojvm -nodesktop -nosplash -r your_matlab_script.m
+# to run a script your_matlab_script.m in batch mode, use -batch with the name only, no extension:
+matlab -nodisplay -nojvm -nodesktop -nosplash -batch your_matlab_script
 {{< /highlight >}}
 
-However, each instance, GUI or command line, will consume a license unit. By submitting sufficiently many MATLAB jobs concurrently, there is a possibility to exhaust the entire University's license pool. Thus, in most cases, it might make sense to use compiled, standalone MATLAB code runners (MCRs) instead (please refer to the next section).
+However, each instance, GUI or command line, will consume a license unit. By submitting sufficiently many MATLAB jobs concurrently, there is a possibility to exhaust the entire University's license pool. Thus, in most cases, it might make sense to use compiled, standalone MATLAB code runners (MCRs) instead (please refer to the MCR section below).
 
 ### Using different BLAS/LAPACK in Matlab
 ---
@@ -129,5 +130,5 @@ For using MATLAB on the Alliance's clusters, please visit the corresponding MATL
 <!-- {{< treeview display="tree" />}} -->
 
 <!-- Changes and update:
-* Last revision: Aug 28, 2024. 
+* Last revision: May 14 28, 2025. 
 -->
