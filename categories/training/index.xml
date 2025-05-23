@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Training on Grex</title><link>https://um-grex.github.io/grex-docs/categories/training/</link><description>Recent content in Training on Grex</description><generator>Hugo</generator><language>en</language><copyright>The MIT License (MIT) Copyright © 2023 UM-Grex</copyright><atom:link href="https://um-grex.github.io/grex-docs/categories/training/index.xml" rel="self" type="application/rss+xml"/><item><title>Workshops - 2025</title><link>https://um-grex.github.io/grex-docs/training/workshops-2025/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/training/workshops-2025/</guid><description>&lt;h2 id='high-performance-computing-workshop---may-21-23-2025'>High Performance Computing Workshop - May 21-23, 2025&lt;a href='#high-performance-computing-workshop---may-21-23-2025' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
-&lt;p>Join us for the spring 2025 high-performance computing (HPC) and cloud workshop, open to all researchers from Manitoba institutions. The workshop will be in-person and take place at the University of Manitoba (Fort Garry campus). This is a great opportunity to learn about local (Grex) and national (The Alliance) research computing infrastructure in Canada, and to enhance your skills and efficiency using HPC and OpenStack cloud systems.&lt;/p></description></item><item><title>Workshops - 2024</title><link>https://um-grex.github.io/grex-docs/training/workshops-2024/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/training/workshops-2024/</guid><description>&lt;h2 id='autumn-workshop-october-2024'>Autumn workshop, October 2024&lt;a href='#autumn-workshop-october-2024' class='anchor'>#&lt;/a>
+&lt;p>Join us for the spring 2025 high-performance computing (HPC) and cloud workshop, open to all researchers from Manitoba institutions. The workshop will be in-person and take place at the University of Manitoba (Fort Garry campus). This is a great opportunity to learn about local (Grex) and national (The Alliance) research computing infrastructure in Canada, and to enhance your skills and efficiency using HPC and OpenStack cloud systems.&lt;/p></description></item><item><title>LoRa walkthrough</title><link>https://um-grex.github.io/grex-docs/training/workshops-2025/lora-huggingface/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/training/workshops-2025/lora-huggingface/</guid><description>&lt;h2 id='high-performance-computing-workshop---may-21-23-2025'>High Performance Computing Workshop - May 21-23, 2025&lt;a href='#high-performance-computing-workshop---may-21-23-2025' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>This is an example of training LoRa in a batch job.
+The example uses a script from &lt;a
+ href="https://huggingface.co"
+ class="is-pretty-link">Huggingface&lt;/a
+>
+ diffusers package.&lt;/p>
+&lt;h3 id='pull-huggingface-diffusers-copy-data'>Pull Huggingface diffusers, copy data&lt;a href='#pull-huggingface-diffusers-copy-data' class='anchor'>#&lt;/a>
+&lt;/h3>&lt;hr>
+&lt;p>We will downolad Huggingface source code from their Github using Git.
+This is needed to use their Python example training script rather than developing ours from scrath.
+We will also copy the datasets for training from &lt;strong>pythonai&lt;/strong> subdirectory of our Workshop materials.&lt;/p></description></item><item><title>Workshops - 2024</title><link>https://um-grex.github.io/grex-docs/training/workshops-2024/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/training/workshops-2024/</guid><description>&lt;h2 id='autumn-workshop-october-2024'>Autumn workshop, October 2024&lt;a href='#autumn-workshop-october-2024' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;div class="sc-alert sc-alert-warning">This workshop has been created for a group of users from Bannatyne campus to explain the usage of contributed nodes. However, most of the material from the following slides (slurm, software, singularity, podman, &amp;hellip;) is still valid for general use.&lt;/div>
 
@@ -225,8 +237,8 @@ This event will help you get started with HPC and familiarize you with essential
 &lt;p>Below are the slides from the Grex workshop that was held on April 21-22, 2021:&lt;/p></description></item><item><title>Workshops and Training Material</title><link>https://um-grex.github.io/grex-docs/training/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/training/</guid><description>&lt;h2 id='local-workshops'>Local workshops&lt;a href='#local-workshops' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;div class="sc-treeview">&lt;ul
- class='sc-treeview-tree'>&lt;li class="">
- &lt;div class="sc-treeview-label">&lt;div class="sc-treeview-icon">
+ class='sc-treeview-tree'>&lt;li class=" sc-treeview-coll">
+ &lt;div class="sc-treeview-label">&lt;div class="sc-treeview-icon sc-treeview-coll-trigger">
  &lt;i class="fa-solid fa-cubes">&lt;/i>
  &lt;/div>&lt;p class="is-marginless">
  &lt;a
@@ -235,7 +247,18 @@ This event will help you get started with HPC and familiarize you with essential
  >2025&lt;/a
  >
  &lt;/p>
- &lt;/div>&lt;/li>&lt;li class="">
+ &lt;/div>&lt;ul
+ class='sc-treeview-tree'>&lt;li class="">
+ &lt;div class="sc-treeview-label">&lt;div class="sc-treeview-icon">
+ &lt;i class="fa-solid fa-cubes">&lt;/i>
+ &lt;/div>&lt;p class="is-marginless">
+ &lt;a
+ href="https://um-grex.github.io/grex-docs/training/workshops-2025/lora-huggingface/"
+ class="is-pretty-link"
+ >LoRa walkthrough&lt;/a
+ >
+ &lt;/p>
+ &lt;/div>&lt;/li>&lt;/ul>&lt;/li>&lt;li class="">
  &lt;div class="sc-treeview-label">&lt;div class="sc-treeview-icon">
  &lt;i class="fa-solid fa-cubes">&lt;/i>
  &lt;/div>&lt;p class="is-marginless">

@@ -237,9 +237,19 @@ This makes maintenance of Python software difficult. Not only do Python and libr
  href="https://um-grex.github.io/grex-docs/running-jobs/batch-jobs/"
  class="is-pretty-link">batch&lt;/a
 >
- system. User sessions on the login nodes are limited by &lt;em>cgroups&lt;/em> to prevent resource congestion. Thus, it sometimes makes sense to perform some of the code development in interactive jobs, in cases such as (but not limited to):&lt;/p></description></item><item><title>Workshops - 2025</title><link>https://um-grex.github.io/grex-docs/training/workshops-2025/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/training/workshops-2025/</guid><description>&lt;h2 id='high-performance-computing-workshop---may-21-23-2025'>High Performance Computing Workshop - May 21-23, 2025&lt;a href='#high-performance-computing-workshop---may-21-23-2025' class='anchor'>#&lt;/a>
+ system. User sessions on the login nodes are limited by &lt;em>cgroups&lt;/em> to prevent resource congestion. Thus, it sometimes makes sense to perform some of the code development in interactive jobs, in cases such as (but not limited to):&lt;/p></description></item><item><title>LoRa walkthrough</title><link>https://um-grex.github.io/grex-docs/training/workshops-2025/lora-huggingface/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/training/workshops-2025/lora-huggingface/</guid><description>&lt;h2 id='high-performance-computing-workshop---may-21-23-2025'>High Performance Computing Workshop - May 21-23, 2025&lt;a href='#high-performance-computing-workshop---may-21-23-2025' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
-&lt;p>Join us for the spring 2025 high-performance computing (HPC) and cloud workshop, open to all researchers from Manitoba institutions. The workshop will be in-person and take place at the University of Manitoba (Fort Garry campus). This is a great opportunity to learn about local (Grex) and national (The Alliance) research computing infrastructure in Canada, and to enhance your skills and efficiency using HPC and OpenStack cloud systems.&lt;/p></description></item><item><title>Workshops - 2024</title><link>https://um-grex.github.io/grex-docs/training/workshops-2024/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/training/workshops-2024/</guid><description>&lt;h2 id='autumn-workshop-october-2024'>Autumn workshop, October 2024&lt;a href='#autumn-workshop-october-2024' class='anchor'>#&lt;/a>
+&lt;p>This is an example of training LoRa in a batch job.
+The example uses a script from &lt;a
+ href="https://huggingface.co"
+ class="is-pretty-link">Huggingface&lt;/a
+>
+ diffusers package.&lt;/p>
+&lt;h3 id='pull-huggingface-diffusers-copy-data'>Pull Huggingface diffusers, copy data&lt;a href='#pull-huggingface-diffusers-copy-data' class='anchor'>#&lt;/a>
+&lt;/h3>&lt;hr>
+&lt;p>We will downolad Huggingface source code from their Github using Git.
+This is needed to use their Python example training script rather than developing ours from scrath.
+We will also copy the datasets for training from &lt;strong>pythonai&lt;/strong> subdirectory of our Workshop materials.&lt;/p></description></item><item><title>Workshops - 2024</title><link>https://um-grex.github.io/grex-docs/training/workshops-2024/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/training/workshops-2024/</guid><description>&lt;h2 id='autumn-workshop-october-2024'>Autumn workshop, October 2024&lt;a href='#autumn-workshop-october-2024' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;div class="sc-alert sc-alert-warning">This workshop has been created for a group of users from Bannatyne campus to explain the usage of contributed nodes. However, most of the material from the following slides (slurm, software, singularity, podman, &amp;hellip;) is still valid for general use.&lt;/div>
 
