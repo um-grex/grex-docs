@@ -14,6 +14,7 @@ categories: ["Training"]
 
 This is an example of training LoRa in a batch job. 
 The example uses a script from [Huggingface](https://huggingface.co) diffusers package.
+We assume the partiticipant already tried simple text to image generation with SD 1-5 as per _02-text-to-image-ipynb_ notebook.
 
 ### Pull Huggingface diffusers, copy data
 ---
@@ -64,8 +65,7 @@ We will use workshop reservation __ws_gpu__ and (any of) reserved GPU partitions
 Please add _--account=_ if you have more than one active.
 
 {{< highlight bash >}}
-
-salloc --time=0-2:00 --partition=agro-b,mcordgpu-b,stamps-b --gpus=1 --cpus-per-gpu=6 --mem=60gb 
+salloc --time=0-2:00 --partition=agro-b,mcordgpu-b,stamps-b --gpus=1 --cpus-per-gpu=6 --mem=60gb  --reservation=ws_gpu
 {{< /highlight >}}
 
 We should see a GPU information from _nvidia-smi_ there. Will get either a V100 or A30.
@@ -129,7 +129,7 @@ ls
 python ./train_text_to_image_lora.py  --pretrained_model_name_or_path runwayml/stable-diffusion-v1-5   --train_data_dir ../../../dataset1/train   --output_dir ../../../lora-sd-output   --resolution 256   --train_batch_size 1   --max_train_steps 200
 {{< /highlight >}}
 
-Note that we use resolution 512 on the dataset1.
+Note that we use resolution 256  on the dataset1.
 
 Debug , try to make it run and deliver the new Weight file under the output directory.
 
@@ -185,4 +185,5 @@ echo "Program finished with exit code ${?} at: `date`"
 
 Start a Jupyter job on Grex OOD or Magic Castle.
 
-In the _notebooks_ folder, open a _03-something.ipynb_ , correct path to the updated LoRa weight and run the inference again.
+In the _notebooks_ folder, open a _03-text-to-image-lora.ipynb_ , correct path to the updated LoRa weights and run the inference again.
+Try also merging the two LoRa weights trained from dataset1 and dataset2.

@@ -12,7 +12,7 @@ categories: ["Training"]
 # High Performance Computing Workshop - May 21-23, 2025
 ---
 
-Below are the slides from the workshop that was held on May 2025:
+Below are the slides and some materials from the in-person workshop that was held on May 2025:
 
 ## May 21, 2025
 
@@ -31,7 +31,10 @@ Below are the slides from the workshop that was held on May 2025:
 ## May 23, 2025
 
 > - **Python and Jupyter for GPU/AI/ML on HPC**: [Slides](/workshops/spring2025/Python-for-AI-ML-Spring-2025.pdf)
-> - **Containers in HPC: Singularity/Apptainer and Podman**: __Slides:__ [Singularity](/workshops/spring2025/Containers-for-HPC.pdf); [Podman](/workshops/spring2025/introduction_podman.pdf)
+>	* Additional materials: [notebooks and data](/workshops/spring2025/pythonai.tar.gz) , [LoRa Batch job walktgroough](./lora-huggingface)
+> - **Containers in HPC: Singularity/Apptainer and Podman**: __Slides:__ 
+>	* [Singularity](/workshops/spring2025/Containers-for-HPC.pdf)
+>	* [Podman](/workshops/spring2025/introduction_podman.pdf)
 
 <!--
 Join us for the spring 2025 high-performance computing (HPC) and cloud workshop, open to all researchers from Manitoba institutions. The workshop will be in-person and take place at the University of Manitoba (Fort Garry campus). This is a great opportunity to learn about local (Grex) and national (The Alliance) research computing infrastructure in Canada, and to enhance your skills and efficiency using HPC and OpenStack cloud systems.
@@ -50,7 +53,7 @@ __What to expect:__ The workshop will feature a mix of talks and hands-on sessio
 > - May 22, 10 AM - 3 PM
 > - May 23, 10 AM - 12 PM
 
-* __Location:__ Room 207, Robson Hall, University of Manitoba (Fort Garry campus).
+* __Location:__ Room 204, Robson Hall, University of Manitoba (Fort Garry campus).
 
 * __Registration:__ The Workshop is free, but RSVP via [EventBrite](https://eventscalendar.umanitoba.ca/site/science/event/high-performance-computing-workshop-6/) is required.
 
