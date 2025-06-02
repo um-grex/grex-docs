@@ -49,6 +49,21 @@ module load matlab
 matlab -nodisplay -nojvm -nodesktop -nosplash -batch your_matlab_script
 {{< /highlight >}}
 
+Here is an example of a script to submit a job that uses MATLAB in batch mode:
+
+{{< collapsible title="Script example for running MATLAB in batch mode" >}}
+{{< snippet
+    file="scripts/jobs/matlab/run-matlab-job.sh"
+    caption="run-matlab-job.sh"
+    codelang="bash"
+/>}}
+{{< /collapsible >}}
+
+{{< alert type="warning" >}}
+Remove the option __-singleCompThread__ if your program is parallel.
+{{< /alert >}}
+
+ 
 However, each instance, GUI or command line, will consume a license unit. By submitting sufficiently many MATLAB jobs concurrently, there is a possibility to exhaust the entire University's license pool. Thus, in most cases, it might make sense to use compiled, standalone MATLAB code runners (MCRs) instead (please refer to the MCR section below).
 
 ### Using different BLAS/LAPACK in Matlab
