@@ -124,11 +124,11 @@ As for now, the following applications are supported:
 | Linux Desktop | NoVNC Desktop | Generally available | - |
 | GaussView  | NoVNC Desktop | Licensed users only | - |
 | Matlab |  NoVNC Desktop | Generally available | - | 
-| Matlab | Server  | Generally available | - |
-| JupyterLab | Server | Generally available | Comes for SBEnv and CCEnv | - | 
-| Rstudio-Server| Server | Generally available |  Comes for SBEnv and CCEnv | - |
-| Visual Studio Code Server| Server | Generally available | - |
-| MetaSHapePro | NoVNC Desktop | Licensed users only | - |
+| Matlab Server | Server  | Generally available | - |
+| JupyterLab Server | Server | Generally available | Comes for SBEnv and CCEnv | - | 
+| RStudio Server| Server | Generally available |  Comes for SBEnv and CCEnv | - |
+| CodeServer| Server | Generally available | - |
+| MetaShape Pro | NoVNC Desktop | Licensed users only | - |
 | RELION | NoVNC Desktop | Generally available | - |
 | STATA | NoVNC Desktop | Licensed users only | - |
 | Feko | NoVNC Desktop | Licensed users only | | - | 
