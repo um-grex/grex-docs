@@ -1,13 +1,136 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Training on Grex</title><link>https://um-grex.github.io/grex-docs/categories/training/</link><description>Recent content in Training on Grex</description><generator>Hugo</generator><language>en</language><copyright>The MIT License (MIT) Copyright © 2023 UM-Grex</copyright><atom:link href="https://um-grex.github.io/grex-docs/categories/training/index.xml" rel="self" type="application/rss+xml"/><item><title>Workshops - 2025</title><link>https://um-grex.github.io/grex-docs/training/workshops-2025/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/training/workshops-2025/</guid><description>&lt;h2 id='high-performance-computing-workshop---may-21-23-2025'>High Performance Computing Workshop - May 21-23, 2025&lt;a href='#high-performance-computing-workshop---may-21-23-2025' class='anchor'>#&lt;/a>
-&lt;/h2>&lt;hr>
-&lt;p>Join us for the spring 2025 high-performance computing (HPC) and cloud workshop, open to all researchers from Manitoba institutions. The workshop will be in-person and take place at the University of Manitoba (Fort Garry campus). This is a great opportunity to learn about local (Grex) and national (The Alliance) research computing infrastructure in Canada, and to enhance your skills and efficiency using HPC and OpenStack cloud systems.&lt;/p></description></item><item><title>LoRa walkthrough</title><link>https://um-grex.github.io/grex-docs/training/workshops-2025/lora-huggingface/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/training/workshops-2025/lora-huggingface/</guid><description>&lt;h2 id='high-performance-computing-workshop---may-21-23-2025'>High Performance Computing Workshop - May 21-23, 2025&lt;a href='#high-performance-computing-workshop---may-21-23-2025' class='anchor'>#&lt;/a>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Training on Grex</title><link>https://um-grex.github.io/grex-docs/categories/training/</link><description>Recent content in Training on Grex</description><generator>Hugo</generator><language>en</language><copyright>The MIT License (MIT) Copyright © 2023 UM-Grex</copyright><atom:link href="https://um-grex.github.io/grex-docs/categories/training/index.xml" rel="self" type="application/rss+xml"/><item><title>Workshops - 2025</title><link>https://um-grex.github.io/grex-docs/training/workshops-2025/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/training/workshops-2025/</guid><description>&lt;h1 id='high-performance-computing-workshop---may-21-23-2025'>High Performance Computing Workshop - May 21-23, 2025&lt;a href='#high-performance-computing-workshop---may-21-23-2025' class='anchor'>#&lt;/a>
+&lt;/h1>&lt;hr>
+&lt;p>Below are the slides and some materials from the in-person workshop that was held on May 2025:&lt;/p>
+&lt;h2 id='may-21-2025'>May 21, 2025&lt;a href='#may-21-2025' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;blockquote>
+&lt;ul>
+&lt;li>&lt;strong>Introduction to Alliance and Manitoba ARC resources&lt;/strong>: &lt;a
+ href="https://um-grex.github.io/grex-docs/workshops/spring2025/Intro-and-Program-Spring-2025.pdf"
+ class="is-pretty-link">Slides&lt;/a
+>
+&lt;/li>
+&lt;li>&lt;strong>Introduction to Linux / BASH&lt;/strong>: &lt;a
+ href="https://um-grex.github.io/grex-docs/workshops/spring2025/linux_shell_basics.pdf"
+ class="is-pretty-link">Slides&lt;/a
+>
+&lt;/li>
+&lt;li>&lt;strong>Data transfer with SSH and Globus&lt;/strong>: &lt;a
+ href="https://um-grex.github.io/grex-docs/workshops/spring2025/data_transfer_in_hpc.pdf"
+ class="is-pretty-link">Slides&lt;/a
+>
+&lt;/li>
+&lt;li>&lt;strong>Intro to HPC software, Lmod&lt;/strong>: &lt;a
+ href="https://um-grex.github.io/grex-docs/workshops/spring2025/Introduction-to-HPC-Software.pdf"
+ class="is-pretty-link">Slides&lt;/a
+>
+&lt;/li>
+&lt;/ul>&lt;/blockquote>
+&lt;h2 id='may-22-2025'>May 22, 2025&lt;a href='#may-22-2025' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;blockquote>
+&lt;ul>
+&lt;li>&lt;strong>OpenOnDemand: Connect, File Transfer, Jobs, Apps&lt;/strong>: &lt;a
+ href="https://um-grex.github.io/grex-docs/workshops/spring2025/introduction_openondemand.pdf"
+ class="is-pretty-link">Slides&lt;/a
+>
+&lt;/li>
+&lt;li>&lt;strong>Running jobs with SLURM scheduler&lt;/strong>: &lt;a
+ href="https://um-grex.github.io/grex-docs/workshops/spring2025/Running-Jobs-with-SLURM.pdf"
+ class="is-pretty-link">Slides&lt;/a
+>
+&lt;/li>
+&lt;li>&lt;strong>Advanced SLURM topics&lt;/strong>: &lt;a
+ href="https://um-grex.github.io/grex-docs/workshops/spring2025/Running-Jobs-Advanced-Scheduling.pdf"
+ class="is-pretty-link">Slides&lt;/a
+>
+&lt;/li>
+&lt;li>&lt;strong>Intro to OpenStack&lt;/strong>: &lt;a
+ href="https://um-grex.github.io/grex-docs/workshops/spring2025/openstack_community_cloud_beginner.pdf"
+ class="is-pretty-link">Slides&lt;/a
+>
+&lt;/li>
+&lt;/ul>&lt;/blockquote>
+&lt;h2 id='may-23-2025'>May 23, 2025&lt;a href='#may-23-2025' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;blockquote>
+&lt;ul>
+&lt;li>&lt;strong>Python and Jupyter for GPU/AI/ML on HPC&lt;/strong>: &lt;a
+ href="https://um-grex.github.io/grex-docs/workshops/spring2025/Python-for-AI-ML-Spring-2025.pdf"
+ class="is-pretty-link">Slides&lt;/a
+>
+
+&lt;ul>
+&lt;li>Additional materials: &lt;a
+ href="https://um-grex.github.io/grex-docs/workshops/spring2025/pythonai.tar.gz"
+ class="is-pretty-link">notebooks and data&lt;/a
+>
+ , &lt;a
+ href="https://um-grex.github.io/grex-docs/training/workshops-2025/lora-huggingface/"
+ class="is-pretty-link">LoRa Batch job walktgroough&lt;/a
+>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>Containers in HPC: Singularity/Apptainer and Podman&lt;/strong>: &lt;strong>Slides:&lt;/strong>
+&lt;ul>
+&lt;li>&lt;a
+ href="https://um-grex.github.io/grex-docs/workshops/spring2025/Containers-for-HPC.pdf"
+ class="is-pretty-link">Singularity&lt;/a
+>
+&lt;/li>
+&lt;li>&lt;a
+ href="https://um-grex.github.io/grex-docs/workshops/spring2025/introduction_podman.pdf"
+ class="is-pretty-link">Podman&lt;/a
+>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>&lt;/blockquote>
+&lt;!--
+Join us for the spring 2025 high-performance computing (HPC) and cloud workshop, open to all researchers from Manitoba institutions. The workshop will be in-person and take place at the University of Manitoba (Fort Garry campus). This is a great opportunity to learn about local (Grex) and national (The Alliance) research computing infrastructure in Canada, and to enhance your skills and efficiency using HPC and OpenStack cloud systems.
+
+__What to expect:__ The workshop will feature a mix of talks and hands-on sessions, covering topics such as:
+
+> - Introduction to BASH and Linux shell scripting.
+> - Beginner’s tutorial on using the SLURM scheduler and Lmod for software modules.
+> - Interactive computing with Open OnDemand and Jupyter Notebooks.
+> - Introduction to the Globus file transfer service.
+> - Getting started with the community OpenStack cloud.
+
+* __Dates:__ May 21–23, 2025
+
+> - May 21, 10 AM - 3 PM
+> - May 22, 10 AM - 3 PM
+> - May 23, 10 AM - 12 PM
+
+* __Location:__ Room 204, Robson Hall, University of Manitoba (Fort Garry campus).
+
+* __Registration:__ The Workshop is free, but RSVP via [EventBrite](https://eventscalendar.umanitoba.ca/site/science/event/high-performance-computing-workshop-6/) is required.
+
+* __Optional:__ If you do not have already a CCDB account, registering at ccdb.alliancecan.ca few days prior to the workshop.
+
+&lt;div class="sc-alert sc-alert-info">The exact program schedule will be emailed to all registered participants one week before the event.&lt;/div>
+
+
+-->
+&lt;h2 id='various-materials'>Various materials&lt;a href='#various-materials' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;div class="sc-treeview">&lt;ul
+ class='sc-treeview-tree'>&lt;li class="">
+ &lt;div class="sc-treeview-label">&lt;div class="sc-treeview-icon">
+ &lt;i class="fa-solid fa-cubes">&lt;/i>
+ &lt;/div>&lt;p class="is-marginless">
+ &lt;a
+ href="https://um-grex.github.io/grex-docs/training/workshops-2025/lora-huggingface/"
+ class="is-pretty-link"
+ >LoRa walkthrough&lt;/a
+ >
+ &lt;/p></description></item><item><title>LoRa walkthrough</title><link>https://um-grex.github.io/grex-docs/training/workshops-2025/lora-huggingface/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/training/workshops-2025/lora-huggingface/</guid><description>&lt;h2 id='high-performance-computing-workshop---may-21-23-2025'>High Performance Computing Workshop - May 21-23, 2025&lt;a href='#high-performance-computing-workshop---may-21-23-2025' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;p>This is an example of training LoRa in a batch job.
 The example uses a script from &lt;a
  href="https://huggingface.co"
  class="is-pretty-link">Huggingface&lt;/a
 >
- diffusers package.&lt;/p>
+ diffusers package.
+We assume the partiticipant already tried simple text to image generation with SD 1-5 as per &lt;em>02-text-to-image-ipynb&lt;/em> notebook.&lt;/p>
 &lt;h3 id='pull-huggingface-diffusers-copy-data'>Pull Huggingface diffusers, copy data&lt;a href='#pull-huggingface-diffusers-copy-data' class='anchor'>#&lt;/a>
 &lt;/h3>&lt;hr>
 &lt;p>We will downolad Huggingface source code from their Github using Git.

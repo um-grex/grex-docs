@@ -5,7 +5,8 @@ The example uses a script from &lt;a
  href="https://huggingface.co"
  class="is-pretty-link">Huggingface&lt;/a
 >
- diffusers package.&lt;/p>
+ diffusers package.
+We assume the partiticipant already tried simple text to image generation with SD 1-5 as per &lt;em>02-text-to-image-ipynb&lt;/em> notebook.&lt;/p>
 &lt;h3 id='pull-huggingface-diffusers-copy-data'>Pull Huggingface diffusers, copy data&lt;a href='#pull-huggingface-diffusers-copy-data' class='anchor'>#&lt;/a>
 &lt;/h3>&lt;hr>
 &lt;p>We will downolad Huggingface source code from their Github using Git.
