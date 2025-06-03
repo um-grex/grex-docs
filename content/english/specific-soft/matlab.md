@@ -29,7 +29,7 @@ module spider matlab
 ## Available Toolboxes
 ---
 
-To see a list of the MATLAB toolboxes available with MATLAB license on Grex, you can use the following command: 
+To see a list of the MATLAB toolboxes available with MATLAB license on Grex, for a given MATLAB version, use the following command: 
 
 {{< highlight bash >}}
 module load matlab
@@ -39,9 +39,13 @@ matlab -nodisplay -nojvm -batch "ver"
 ## Running Matlab
 ---
 
-It is possible to run MATLAB GUI interactively, for best performance in [OOD](ood) session and a terminal. There is no **Applications** menu shortcut for MATLAB, because it is only in the PATH after the module is loaded from the command line. After loading the module, the command **matlab** will be in the PATH. [OOD](ood) also provides a Matlab App.
+It is possible to run MATLAB GUI interactively, for best performance in a [remote OOD Desktop](ood) session.
+There is no menu shortcuts for Desktops for MATLAB, so a Terminal window has to be open and the matlab _module_ loaded in it. 
+After loading the module, the command **matlab** will be in the PATH. 
 
-For running a MATLAB script in text mode, or a batch script, the following options can be used:
+[OOD](ood) also provides two versions of Matlab-specifc Interactive Applications: MatlabDesktop and MatlabServer. These apps would start a Matlab user interface directly.
+
+The interactive / GUI access is very useful for debugging your Matlab code and for using Matlab to visualize your data. However, for production calculations that may take long time, or significant resources, or a large number of short Matlab tasks, we recommend using Matlab in batch mode. For running a MATLAB script in text mode, and/or a batch script, the following options can be used:
 
 {{< highlight bash >}}
 module load matlab
@@ -49,7 +53,7 @@ module load matlab
 matlab -nodisplay -nojvm -nodesktop -nosplash -batch your_matlab_script
 {{< /highlight >}}
 
-Here is an example of a script to submit a job that uses MATLAB in batch mode:
+Here is an example of a SLURM job script to submit a job that uses MATLAB in batch mode:
 
 {{< collapsible title="Script example for running MATLAB in batch mode" >}}
 {{< snippet
@@ -60,11 +64,11 @@ Here is an example of a script to submit a job that uses MATLAB in batch mode:
 {{< /collapsible >}}
 
 {{< alert type="warning" >}}
-Remove the option __-singleCompThread__ if your program is parallel.
+Remove the option __-singleCompThread__ , and adjust the _\-\-cpus-per-task parameter_ if your program is parallel!
 {{< /alert >}}
 
  
-However, each instance, GUI or command line, will consume a license unit. By submitting sufficiently many MATLAB jobs concurrently, there is a possibility to exhaust the entire University's license pool. Thus, in most cases, it might make sense to use compiled, standalone MATLAB code runners (MCRs) instead (please refer to the MCR section below).
+However, when running __matlab__ executable directly, each instance, GUI or command line, will consume a license unit. By submitting sufficiently many MATLAB jobs concurrently, there is a possibility to exhaust the entire University's license pool. Thus, in many cases, it makes sense to use compiled, standalone MATLAB code runners (MCRs) instead (please refer to the MCR section below).
 
 ### Using different BLAS/LAPACK in Matlab
 ---
