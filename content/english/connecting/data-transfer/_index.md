@@ -190,7 +190,7 @@ Once an endpoint had been created, there is (usually) no need to repeat the abov
 [~]$ tmux new-session -d -s globus 'globusconnectpersonal -start'
 {{< /highlight >}}
 
-Another, more general but older guide on how to use Globus personal endpoint on a Linux system, can be found on the [Frontenac "Data Transfers" page](https://info.cac.queensu.ca/wiki/index.php/UploadingFiles:Frontenac#Using_Globus_through_a_command-line_interface).
+A more general guide on how to use Globus personal endpoint on a Linux system, can be found on the [Frontenac "Data Transfers" page](https://info.cac.queensu.ca/en/how-to/upload-files). This guide does not require a _globus_ module installed on the system.
 
 Check the [ESNet](https://fasterdata.es.net/ "ESNet") website if you are curious about Globus, and why large data transfers over WAN might need specialized networks and software setups.
 
