@@ -50,15 +50,9 @@ Currently, the following partitions are available on Grex:
 
 | Partition  | Nodes   | GPU type           | CPUs/Node    | Mem/Node   | Notes               |
 | :--------: | :-----: | :----:             | :----------: | :--------: | :---------:         |
-| **gpu**    |  **2**  | **4 - V100/32GB**  | **32**       | **187 Gb** | AVX512 CPU, NVLink  |
+| **gpu**    |  **2**  | **4 - V100/32GB**  | **32**       | **187 Gb** | Intel AVX512 CPU, NVLink  |
+| **lgpu**    |  **1**  | **2 - L40s/48GB**  | **64**       | **380 Gb** | AMD AVX512 CPU  |
 
-<!--
-> - **skylake**  : the new **52-core**, CascadeLakeRefresh compute nodes, 96 Gb/node (set as the default partition). **NEW**
-> - **largemem** : the new **40-core**, CascadeLake compute nodes, 384 Gb/node.  **NEW**
-> - **compute**  : the original SSE4.2 **12-core** Grex nodes, RAM 48 Gb/node (no longer set as the default partition for jobs over 30 minutes).
-> - **gpu**      : two GPU **V100/32 GB** AVX512 nodes, RAM 192 GB/node. **NEW**
-> - **test**     : a **24-core** Skylake CPU Dell large memory (512 GB), NVMe workstation for interactive work and visualizations. **NEW**
--->
 
 ### Contributed CPU partitions
 ---
@@ -66,6 +60,8 @@ Currently, the following partitions are available on Grex:
 | Partition         | Nodes   | CPU type                   | CPUs/Node    | Mem/Node    | Notes           |
 | :--------:        | :-----: | :----:                     | :----------: | :--------:  | :---------:     |
 | **mcordcpu** [^5] | **5**   | **AMD EPYC 9634 84-Core**  | **168**      | **1500 Gb** | -               |
+| **chrim**  | **4**   | **AMD EPYC 9654 96-Core**  | **192**      | **750 Gb** | -               |
+| **chrimlm**  | **1**   | **AMD EPYC 9654 96-Core**  | **192**      | **1500 Gb** | -               |
 
 ### Contributed GPU partitions
 ---
@@ -81,15 +77,10 @@ Currently, the following partitions are available on Grex:
 
 [^1]: **stamps:** GPU nodes contributed by Prof. R. Stamps
 [^2]: **livi:**   GPU node  contributed by Prof. L. Livi 
-[^3]: **agro:**   GPU node  contributed by Faculty of Agriculture
-[^4]: **mcordgpu** GPU nodes contributed by Prof. Marcos Cordeiro (Department of Agriculture). 
-[^5]: **mcordcpu** CPU nodes contributed by Prof. Marcos Cordeiro (Department of Agriculture). 
+[^3]: **agro:**   GPU node  contributed by the Faculty of Agriculture
+[^4]: **mcordgpu** GPU nodes contributed by Prof. Marcos Cunha Cordeiro 
+[^5]: **mcordcpu** CPU nodes contributed by Prof. Marcos Cunha Cordeiro 
 
-<!--
-- **stamps**   : three **4 x GPU v100/16GB** AVX512 nodes contributed by Prof. R. Stamps (Department of Physics and Astronomy).
-- **livi**     : a **HGX-2 16xGPU V100/32GB**, NVSwitch server contributed by Prof. L. Livi (Department of Computer Science).
-- **agro**     : two **24-core** AMD Zen, RAM 256 GB/node, two NVIDIA A30 GPUs per node, contributed by Faculty of Agriculture.
--->
 
 ### Preemptible partitions
 ---
@@ -101,10 +92,10 @@ The following **preemptible partition** are set for general use of the contribut
 | **stamps-b**    | Prof. R. Stamps        |
 | **livi-b**      | Prof. L. Livi          |
 | **agro-b**      | Faculty of Agriculture |
-| **mcordcpu-b**  | Prof M. Cunha Cordeiro |
-| **mcordgpu-b**  | Prof M. Conha Cordeiro |
+| **genoacpu-b**  | Spans all contributed AMD CPU nodes from Prof M. Cunha Cordeiro and CHRIM |
+| **mcordgpu-b**  | Prof M. Cunha Cordeiro |
 
-The former following partitions (**skylake**, **largemem**, **test** and **gpu**) are generally accessible. The other partitions (**stamps**, **livi**,  **agro**, **mcordcpu** and **mcordgpu**) are open only to the contributor's groups.
+The following partitions (**skylake**, **largemem**, **test**, **gpu**, **lgpu**) are generally accessible. The other partitions (**stamps**, **livi**,  **agro**, **mcordcpu** and **mcordgpu**, **chrim** and **chrimlm** ) are open only to the contributor's groups.
 
 On the contributed partitions, the owners' group has preferential access. However, users belonging to other groups can submit jobs to one of the preemptible partitions (ending with **\-b**) to run on the contributed hardware as long as it is unused, on the condition that their jobs can be preempted (that is, killed) should owners' jobs need the hardware. There is a minimum runtime guaranteed to preemptible jobs, which is as of now 1 hour. The maximum wall time for the preemptible partition is set per partition (and can be seen in the output of the __sinfo__ command). To have a global overview of all partitions on Grex, run the custom script _**partition-list**_ from your terminal. 
 
@@ -112,5 +103,5 @@ On the contributed partitions, the owners' group has preferential access. Howeve
 
 
 <!-- Changes and update:
-* Last revision: Sep 10, 2024. 
+* Last revision: Jun 11, 2025. 
 -->
