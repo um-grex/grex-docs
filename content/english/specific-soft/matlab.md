@@ -53,9 +53,9 @@ module load matlab
 matlab -nodisplay -nojvm -nodesktop -nosplash -batch your_matlab_script
 {{< /highlight >}}
 
-Here is an example of a SLURM job script to submit a job that uses MATLAB in batch mode:
+Here is an example of a SLURM job script to submit a job that uses serial MATLAB in batch mode:
 
-{{< collapsible title="Script example for running MATLAB in batch mode" >}}
+{{< collapsible title="Script example for running serial MATLAB in batch mode" >}}
 {{< snippet
     file="scripts/jobs/matlab/run-matlab-job.sh"
     caption="run-matlab-job.sh"
@@ -63,11 +63,20 @@ Here is an example of a SLURM job script to submit a job that uses MATLAB in bat
 />}}
 {{< /collapsible >}}
 
+Here is an example of a SLURM job script to submit a job that uses parallel (threaded) MATLAB in batch mode:
+
+{{< collapsible title="Script example for running parallel (threaded) MATLAB in batch mode" >}}
+{{< snippet
+    file="scripts/jobs/matlab/run-matlab-job.sh"
+    caption="run-matlab-job-parallel.sh"
+    codelang="bash"
+/>}}
+{{< /collapsible >}}
+
 {{< alert type="warning" >}}
-Remove the option __-singleCompThread__ , and adjust the _\-\-cpus-per-task parameter_ if your program is parallel!
+The option __-singleCompThread__ is used for parallel (threaded) MATLAB. Please remove it if your code is serial. Use it only for parallel MATLAB and adjust the _\-\-cpus-per-task parameter_ as needed.
 {{< /alert >}}
 
- 
 However, when running __matlab__ executable directly, each instance, GUI or command line, will consume a license unit. By submitting sufficiently many MATLAB jobs concurrently, there is a possibility to exhaust the entire University's license pool. Thus, in many cases, it makes sense to use compiled, standalone MATLAB code runners (MCRs) instead (please refer to the MCR section below).
 
 ### Using different BLAS/LAPACK in Matlab
