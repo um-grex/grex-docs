@@ -67,7 +67,7 @@ Here is an example of a SLURM job script to submit a job that uses parallel (thr
 
 {{< collapsible title="Script example for running parallel (threaded) MATLAB in batch mode" >}}
 {{< snippet
-    file="scripts/jobs/matlab/run-matlab-job.sh"
+    file="scripts/jobs/matlab/run-matlab-job-parallel.sh"
     caption="run-matlab-job-parallel.sh"
     codelang="bash"
 />}}
