@@ -1,7 +1,7 @@
 ---
 weight: 2000
 title: "Grex: High Performance Computing Cluster at University of Manitoba"
-linkTitle: "Home"
+linkTitle: "Grex"
 description: "All you need to know about Grex and how to use it for running jobs"
 titleIcon: "fa-solid fa-user-gear"
 categories: ["Information"]
@@ -9,6 +9,8 @@ banner: false
 bannerContent: "__SCRATCH - OS and LUSTRE UPDATES__"
 #tags: ["Content management"]
 ---
+
+![HPCC](/hpcc/grex-room-2025.png)
 
 ## Introduction
 ---

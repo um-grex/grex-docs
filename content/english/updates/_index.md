@@ -11,6 +11,9 @@ banner: true
 bannerContent: "**Grex upgrade: SISF2023 - Aug 26 -Sep 6, 2024.**"
 #categories: ["Functionalities"]
 #tags: ["Content management"]
+_build:
+ list: false
+ render: false
 ---
 
 Please review the brief summary of the Grex upgrades and changes that are done during the outage of **Aug 26 - Sep 6, 2024.**
