@@ -157,7 +157,22 @@ Sometimes it is useful (for example, for copy/paste operations with mouse, betwe
  is a flexible, efficient and easy-to-use general purpose tool for quantum chemistry with specific emphasis on spectroscopic properties of open-shell molecules. It features a wide variety of standard quantum chemical methods ranging from semi-empirical methods to DFT to single - and multi-reference correlated ab initio methods. It can also treat environmental and relativistic effects.&lt;/p>
 &lt;h2 id='user-responsibilities-and-access'>User Responsibilities and Access&lt;a href='#user-responsibilities-and-access' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
-&lt;p>ORCA is a proprietary software, even if it is free it still requires you to agree to the ORCA license conditions. We have installed ORCA on Grex, but to access the binaries, each of the ORCA users has to confirm they have accepted the license terms.&lt;/p></description></item><item><title>Slurm partitions</title><link>https://um-grex.github.io/grex-docs/running-jobs/slurm-partitions/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/running-jobs/slurm-partitions/</guid><description>&lt;h2 id='partitions'>Partitions&lt;a href='#partitions' class='anchor'>#&lt;/a>
+&lt;p>ORCA is a proprietary software, even if it is free it still requires you to agree to the ORCA license conditions. We have installed ORCA on Grex, but to access the binaries, each of the ORCA users has to confirm they have accepted the license terms.&lt;/p></description></item><item><title>Running R on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/r-program/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/r-program/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>&lt;a
+ href="https://www.r-project.org/"
+ class="is-pretty-link">R&lt;/a
+>
+ is a system for statistical computation and graphics. It consists of a language plus a runtime environment with graphics, a debugger, access to certain system functions, and the ability to run programs stored in script files.&lt;/p>
+&lt;h2 id='available-r-versions'>Available R versions&lt;a href='#available-r-versions' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>Multiple versions of R are available. Use &lt;code>module spider r&lt;/code> to find out the different versions of R:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">[&lt;/span>~@ ~&lt;span style="color:#f92672">]&lt;/span>$ module spider r
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> r/4.4.1+aocl-4.2.0
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> r/4.4.1+mkl-2019.5
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> r/4.4.1+mkl-2024.1
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> r/4.5.0+mkl-2024.1&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;p>At the time of updating this page, the version &lt;strong>r/4.5.0+mkl-2024.1&lt;/strong> is available and can be loaded using:&lt;/p></description></item><item><title>Slurm partitions</title><link>https://um-grex.github.io/grex-docs/running-jobs/slurm-partitions/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/running-jobs/slurm-partitions/</guid><description>&lt;h2 id='partitions'>Partitions&lt;a href='#partitions' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;p>The current Grex system that has contributed nodes, large memory nodes and contributed GPU nodes is (and getting more and more) heterogeneous. With SLURM, as a scheduler, this requires partitioning: a &amp;ldquo;partition&amp;rdquo; is a set of compute nodes, grouped by a characteristic, usually by the kind of hardware the nodes have, and sometimes by who &amp;ldquo;owns&amp;rdquo; the hardware as well.&lt;/p>
 &lt;p>There is no fully automatic selection of partitions, other than the default &lt;strong>skylake&lt;/strong> for most of the users for the short jobs. For the contributors&amp;rsquo; group members, the default partition will be their contributed nodes. &lt;strong>Thus, in many cases users have to specify the partition manually when submitting their jobs!&lt;/strong>&lt;/p></description></item><item><title>Running VASP on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/vasp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/vasp/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
@@ -370,7 +385,83 @@ They are &lt;a
  href="https://apptainer.org/docs/user/latest/docker_and_oci.html#differences-and-limitations-vs-docker"
  class="is-pretty-link">not completely OCI-compatible&lt;/a
 >
-, so there exists Docker images that would not work properly.&lt;/p></description></item><item><title>Workshops - 2023</title><link>https://um-grex.github.io/grex-docs/training/workshops-2023/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/training/workshops-2023/</guid><description>&lt;h2 id='autumn-workshop-november-2023'>Autumn workshop, November 2023&lt;a href='#autumn-workshop-november-2023' class='anchor'>#&lt;/a>
+, so there exists Docker images that would not work properly.&lt;/p></description></item><item><title>Desktops</title><link>https://um-grex.github.io/grex-docs/ood/desktops/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/ood/desktops/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>From the menu &lt;strong>Interactive Apps&lt;/strong>, it is possible to start a given application and use it for interactive work. Some applications have already predefined settings, like the partition and allow only to adjust the wall time. As an example, the _Grex Desktop Simplified _ thar uses by default the test partition.&lt;/p>
+&lt;p>To start an application, click on the name of the application, then fill the required parameters for slurm (accounting group, partition name, number of cpus, wall time, &amp;hellip;).&lt;/p></description></item><item><title>Interactive Apps</title><link>https://um-grex.github.io/grex-docs/ood/interactive-apps/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/ood/interactive-apps/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;!--
+
+From the menu __Interactive Apps__, it is possible to start a given application and use it for interactive work. Some applications have already predefined settings, like the partition and allow only to adjust the wall time. As an example, the _Grex Desktop Simplified _ thar uses by default the test partition.
+
+To start an application, click on the name of the application, then fill the required parameters for slurm (accounting group, partition name, number of cpus, wall time, ...).
+
+Most of the applications require to set up one of the following parameters:
+
+> * Slurm accounting group: if you have access to one accounting group (def-professor), the scheduler will pick it by default. If you have more than one accounting group, you need to specify the accounting group to use.
+
+> * Wall time: crrently, there is a limit of 6 hours for most of the applications.
+
+### Grex Desktop Simplified
+
+This is a very simplified instance of a Desktop. It requires only to setup the accounting group (def-professor), the wall time and if needed add the email notifications. The following snapshot shows an example of settings:
+
+&lt;div class="sc-collapsible-container">
+ &lt;div class="sc-collapsible-header">Grex Desktop Simplified setup&lt;/div>
+ &lt;div class="sc-collapsible-content">&lt;img
+ src="https://um-grex.github.io/grex-docs/ood/simplified-desktop-setup.png"
+ alt="Grex Desktop Simplified setup"
+ class="Grex Desktop Simplified setup"/>&lt;/div>
+&lt;/div>
+
+
+Once all the fields are filled, you can lauch the application using the _Launch_ button. This will submit a job to compute node (in this case, it will run on the test partition). First, it goes to the queue and start when the resources are available:
+
+&lt;div class="sc-collapsible-container">
+ &lt;div class="sc-collapsible-header">Grex Desktop Simplified Queued&lt;/div>
+ &lt;div class="sc-collapsible-content">&lt;img
+ src="https://um-grex.github.io/grex-docs/ood/simplified-desktop-queued.png"
+ alt="Grex Desktop Simplified Queued"
+ class="Grex Desktop Simplified Queued"/>&lt;/div>
+&lt;/div>
+
+
+And once the resources are available, the interactive app will show up as running:
+
+&lt;div class="sc-collapsible-container">
+ &lt;div class="sc-collapsible-header">Grex Desktop Simplified Running&lt;/div>
+ &lt;div class="sc-collapsible-content">&lt;img
+ src="https://um-grex.github.io/grex-docs/ood/simplified-desktop-running.png"
+ alt="Grex Desktop Simplified Queued"
+ class="Grex Desktop Simplified Queued"/>&lt;/div>
+&lt;/div>
+
+
+At this point, you may want to decrease the compression and image quality for not having a slow application. 
+
+Then, click on the buttom _Launch Grex Desktop Simplified_ to start the application. After starting the Desktop, you will have access to your files and a terminal. In the following snapshot, it shows a terminal where we loaded matlab module and started matlab interface. Note that there is a dedicated application for matlab that you can use. We are loading matlab here to show how the desktop looks like. The Desktop can be used to start any other program that uses GUI.
+
+&lt;div class="sc-collapsible-container">
+ &lt;div class="sc-collapsible-header">Grex Desktop Simplified Demonstration&lt;/div>
+ &lt;div class="sc-collapsible-content">&lt;img
+ src="https://um-grex.github.io/grex-docs/ood/simplified-desktop-demo.png"
+ alt="Grex Desktop Simplified Demonstration"
+ class="Grex Desktop Simplified Demonstration"/>&lt;/div>
+&lt;/div>
+
+ 
+-->
+&lt;!-- &lt;div class="sc-treeview">&lt;div class="sc-alert sc-alert-warning">No data available&lt;/div>&lt;/div>
+ -->
+&lt;!-- Changes and update:
+* Last reviewed on: Jul 04, 2025.
+--></description></item><item><title>Job Composer</title><link>https://um-grex.github.io/grex-docs/ood/job-composer/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/ood/job-composer/</guid><description>&lt;h2 id='openondemand-desktops'>OpenOnDemand Desktops&lt;a href='#openondemand-desktops' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;!-- &lt;div class="sc-treeview">&lt;div class="sc-alert sc-alert-warning">No data available&lt;/div>&lt;/div>
+ -->
+&lt;!-- Changes and update:
+* Last reviewed on: Jul 04, 2025.
+--></description></item><item><title>Workshops - 2023</title><link>https://um-grex.github.io/grex-docs/training/workshops-2023/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/training/workshops-2023/</guid><description>&lt;h2 id='autumn-workshop-november-2023'>Autumn workshop, November 2023&lt;a href='#autumn-workshop-november-2023' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;p>Below are the slides from the Grex workshop that was held on November 6-8, 2023:&lt;/p>
 &lt;blockquote>

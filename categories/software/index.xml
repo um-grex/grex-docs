@@ -132,7 +132,22 @@ Sometimes it is useful (for example, for copy/paste operations with mouse, betwe
  is a flexible, efficient and easy-to-use general purpose tool for quantum chemistry with specific emphasis on spectroscopic properties of open-shell molecules. It features a wide variety of standard quantum chemical methods ranging from semi-empirical methods to DFT to single - and multi-reference correlated ab initio methods. It can also treat environmental and relativistic effects.&lt;/p>
 &lt;h2 id='user-responsibilities-and-access'>User Responsibilities and Access&lt;a href='#user-responsibilities-and-access' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
-&lt;p>ORCA is a proprietary software, even if it is free it still requires you to agree to the ORCA license conditions. We have installed ORCA on Grex, but to access the binaries, each of the ORCA users has to confirm they have accepted the license terms.&lt;/p></description></item><item><title>Running VASP on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/vasp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/vasp/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
+&lt;p>ORCA is a proprietary software, even if it is free it still requires you to agree to the ORCA license conditions. We have installed ORCA on Grex, but to access the binaries, each of the ORCA users has to confirm they have accepted the license terms.&lt;/p></description></item><item><title>Running R on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/r-program/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/r-program/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>&lt;a
+ href="https://www.r-project.org/"
+ class="is-pretty-link">R&lt;/a
+>
+ is a system for statistical computation and graphics. It consists of a language plus a runtime environment with graphics, a debugger, access to certain system functions, and the ability to run programs stored in script files.&lt;/p>
+&lt;h2 id='available-r-versions'>Available R versions&lt;a href='#available-r-versions' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>Multiple versions of R are available. Use &lt;code>module spider r&lt;/code> to find out the different versions of R:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#f92672">[&lt;/span>~@ ~&lt;span style="color:#f92672">]&lt;/span>$ module spider r
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> r/4.4.1+aocl-4.2.0
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> r/4.4.1+mkl-2019.5
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> r/4.4.1+mkl-2024.1
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> r/4.5.0+mkl-2024.1&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>
+&lt;p>At the time of updating this page, the version &lt;strong>r/4.5.0+mkl-2024.1&lt;/strong> is available and can be loaded using:&lt;/p></description></item><item><title>Running VASP on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/vasp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/vasp/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;p>&lt;a
  href="https://www.vasp.at/wiki/index.php/The_VASP_Manual"
@@ -313,6 +328,14 @@ Fortunately, most HPC systems, and Grex is no exception, come with a pre-install
  href="https://um-grex.github.io/grex-docs/specific-soft/orca/"
  class="is-pretty-link"
  >ORCA&lt;/a
+ >
+ &lt;/p>
+ &lt;/div>&lt;/li>&lt;li class="">
+ &lt;div class="sc-treeview-label">&lt;p class="is-marginless">
+ &lt;a
+ href="https://um-grex.github.io/grex-docs/specific-soft/r-program/"
+ class="is-pretty-link"
+ >R&lt;/a
  >
  &lt;/p>
  &lt;/div>&lt;/li>&lt;li class="">

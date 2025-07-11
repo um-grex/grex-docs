@@ -359,6 +359,7 @@ This event will help you get started with HPC and familiarize you with essential
 &lt;/h2>&lt;hr>
 &lt;p>Below are the slides from the Grex workshop that was held on April 21-22, 2021:&lt;/p></description></item><item><title>Workshops and Training Material</title><link>https://um-grex.github.io/grex-docs/training/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/training/</guid><description>&lt;h2 id='local-workshops'>Local workshops&lt;a href='#local-workshops' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
+&lt;!--
 &lt;div class="sc-treeview">&lt;ul
  class='sc-treeview-tree'>&lt;li class=" sc-treeview-coll">
  &lt;div class="sc-treeview-label">&lt;div class="sc-treeview-icon sc-treeview-coll-trigger">
@@ -423,94 +424,63 @@ This event will help you get started with HPC and familiarize you with essential
  &lt;/p>
  &lt;/div>&lt;/li>&lt;/ul>&lt;/div>
 
+-->
+&lt;div class="sc-treeview">&lt;ul
+ >&lt;li class=" sc-treeview-coll">
+ &lt;div class="sc-treeview-label">&lt;p class="is-marginless">
+ &lt;a
+ href="https://um-grex.github.io/grex-docs/training/workshops-2025/"
+ class="is-pretty-link"
+ >2025&lt;/a
+ >
+ &lt;/p>
+ &lt;/div>&lt;ul
+ >&lt;li class="">
+ &lt;div class="sc-treeview-label">&lt;p class="is-marginless">
+ &lt;a
+ href="https://um-grex.github.io/grex-docs/training/workshops-2025/lora-huggingface/"
+ class="is-pretty-link"
+ >LoRa walkthrough&lt;/a
+ >
+ &lt;/p>
+ &lt;/div>&lt;/li>&lt;/ul>&lt;/li>&lt;li class="">
+ &lt;div class="sc-treeview-label">&lt;p class="is-marginless">
+ &lt;a
+ href="https://um-grex.github.io/grex-docs/training/workshops-2024/"
+ class="is-pretty-link"
+ >2024&lt;/a
+ >
+ &lt;/p>
+ &lt;/div>&lt;/li>&lt;li class="">
+ &lt;div class="sc-treeview-label">&lt;p class="is-marginless">
+ &lt;a
+ href="https://um-grex.github.io/grex-docs/training/workshops-2023/"
+ class="is-pretty-link"
+ >2023&lt;/a
+ >
+ &lt;/p>
+ &lt;/div>&lt;/li>&lt;li class="">
+ &lt;div class="sc-treeview-label">&lt;p class="is-marginless">
+ &lt;a
+ href="https://um-grex.github.io/grex-docs/training/workshops-2022/"
+ class="is-pretty-link"
+ >2022&lt;/a
+ >
+ &lt;/p>
+ &lt;/div>&lt;/li>&lt;li class="">
+ &lt;div class="sc-treeview-label">&lt;p class="is-marginless">
+ &lt;a
+ href="https://um-grex.github.io/grex-docs/training/workshops-2021/"
+ class="is-pretty-link"
+ >2021&lt;/a
+ >
+ &lt;/p>
+ &lt;/div>&lt;/li>&lt;/ul>&lt;/div>
+
 &lt;h2 id='westdri-training-material'>WestDRI training material&lt;a href='#westdri-training-material' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;p>The training material from WestDRI (BC DRI and Prairies DRI groups, formerly known as WestGrid) webinars are available &lt;a
  href="https://training.westdri.ca/"
  class="is-pretty-link">online&lt;/a
 >
- and classified into different categories:&lt;/p>
-&lt;ul>
-&lt;li>Getting started: &lt;a
- href="https://training.westdri.ca/getting-started/"
- class="is-pretty-link">Link&lt;/a
->
-&lt;/li>
-&lt;li>Programming: &lt;a
- href="https://training.westdri.ca/programming/"
- class="is-pretty-link">Link&lt;/a
->
-&lt;/li>
-&lt;li>Tools: &lt;a
- href="https://training.westdri.ca/tools/"
- class="is-pretty-link">Link&lt;/a
->
-&lt;/li>
-&lt;li>Courses: &lt;a
- href="https://training.westdri.ca/courses/"
- class="is-pretty-link">Link&lt;/a
->
-&lt;/li>
-&lt;li>Events: &lt;a
- href="https://training.westdri.ca/blog/"
- class="is-pretty-link">Link&lt;/a
->
-&lt;/li>
-&lt;/ul>
-&lt;h2 id='training-material-from-the-alliance-and-its-regional-partners'>Training material from the Alliance and its regional partners&lt;a href='#training-material-from-the-alliance-and-its-regional-partners' class='anchor'>#&lt;/a>
-&lt;/h2>&lt;hr>
-&lt;ul>
-&lt;li>&lt;a
- href="https://alliancecan.ca/en/training"
- class="is-pretty-link">DRAC&lt;/a
->
-&lt;/li>
-&lt;li>&lt;a
- href="https://www.ace-net.ca/training.html"
- class="is-pretty-link">ACENET&lt;/a
->
-&lt;/li>
-&lt;li>&lt;a
- href="https://cac.queensu.ca/about_us/events-training/"
- class="is-pretty-link">CAC&lt;/a
->
-&lt;/li>
-&lt;li>&lt;a
- href="https://www.calculquebec.ca/en/academic-research-services/procedures/"
- class="is-pretty-link">Calcul Quebec&lt;/a
->
-&lt;/li>
-&lt;li>&lt;a
- href="https://www.computeontario.ca/calendar-and-events"
- class="is-pretty-link">Compute Ontario&lt;/a
->
-&lt;/li>
-&lt;li>&lt;a
- href="https://support.scinet.utoronto.ca/education/browse.php"
- class="is-pretty-link">SciNET&lt;/a
->
-, &lt;a
- href="https://education.scinet.utoronto.ca/course/index.php"
- class="is-pretty-link">new link&lt;/a
->
-&lt;/li>
-&lt;li>&lt;a
- href="https://training.sharcnet.ca/courses/"
- class="is-pretty-link">SharcNET&lt;/a
->
-&lt;/li>
-&lt;li>&lt;a
- href="https://training.westdri.ca/"
- class="is-pretty-link">WestDRI&lt;/a
->
-&lt;/li>
-&lt;li>National Training &lt;a
- href="https://alliancecan.ca/en/services/advanced-research-computing/technical-support/training-calendar"
- class="is-pretty-link">calendar&lt;/a
->
-&lt;/li>
-&lt;/ul>
-&lt;hr>
-&lt;!-- Changes and update:
-* Last revision: Aug 28, 2024.
---></description></item></channel></rss>
+ and classified into different categories:&lt;/p></description></item></channel></rss>

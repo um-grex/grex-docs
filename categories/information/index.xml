@@ -56,7 +56,12 @@
  &lt;/tr>
  &lt;/tbody>
 &lt;/table>
-&lt;p>To figure out where your current usage stands with the limit, POSIX &lt;strong>quota&lt;/strong> or Lustre&amp;rsquo;s analog, &lt;strong>lfs quota&lt;/strong>, commands can be used. A convenient command, &lt;strong>diskusage_report&lt;/strong> summarizes usage and quota across all the available filesystems.&lt;/p></description></item><item><title>Grex: High Performance Computing Cluster at University of Manitoba</title><link>https://um-grex.github.io/grex-docs/grex/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/grex/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
+&lt;p>To figure out where your current usage stands with the limit, POSIX &lt;strong>quota&lt;/strong> or Lustre&amp;rsquo;s analog, &lt;strong>lfs quota&lt;/strong>, commands can be used. A convenient command, &lt;strong>diskusage_report&lt;/strong> summarizes usage and quota across all the available filesystems.&lt;/p></description></item><item><title>Grex: High Performance Computing Cluster at University of Manitoba</title><link>https://um-grex.github.io/grex-docs/grex/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/grex/</guid><description>&lt;p>&lt;img
+ src="https://um-grex.github.io/grex-docs/hpcc/grex-room-2025.png"
+ alt="HPCC"
+ class="HPCC"/>
+&lt;/p>
+&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;p>&lt;strong>Grex&lt;/strong> is a UManitoba High Performance Computing (HPC) system, first put in production in early &lt;strong>2011&lt;/strong> as part of WestGrid consortium. &amp;ldquo;Grex&amp;rdquo; is a &lt;em>Latin&lt;/em> name for &amp;ldquo;herd&amp;rdquo; (or maybe &amp;ldquo;flock&amp;rdquo;?). The names of the Grex login nodes (&lt;a
  href="https://en.wikipedia.org/wiki/Bison"title="Bison" id="bison"
@@ -67,10 +72,13 @@
  class="is-pretty-link">yak&lt;/a
 >
 ) also refer to various kinds of bovine animals.&lt;/p>
-&lt;div class="sc-alert sc-alert-warning">&lt;p>Please note that older login nodes &lt;em>tatanka&lt;/em> and &lt;em>zebu&lt;/em> are decommissioned during and after the outage of August - September 2024. These login nodes are no longer available.&lt;/p></description></item><item><title>Access and Usage Conditions</title><link>https://um-grex.github.io/grex-docs/access/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/access/</guid><description>&lt;h1 id='access-conditions'>Access Conditions&lt;a href='#access-conditions' class='anchor'>#&lt;/a>
+&lt;div class="sc-alert sc-alert-warning">Please note that older login nodes &lt;em>tatanka&lt;/em> and &lt;em>zebu&lt;/em> are decommissioned during and after the outage of August - September 2024. These login nodes are no longer available.&lt;/div>
+
+&lt;!-- For more information, visit the updates [page](updates) -->
+&lt;p>Since being defunded by WestGrid (on April 2, 2018), Grex is now available only to the users affiliated with University of Manitoba and their collaborators.&lt;/p></description></item><item><title>Access and Usage Conditions</title><link>https://um-grex.github.io/grex-docs/access/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/access/</guid><description>&lt;h1 id='access-conditions'>Access Conditions&lt;a href='#access-conditions' class='anchor'>#&lt;/a>
 &lt;/h1>&lt;hr>
 &lt;p>Grex is open to all researchers at University of Manitoba and their collaborators. The main purpose of the Grex system is Research; it might be used for grad studies courses with a strong research component, for their course-based research.&lt;/p>
-&lt;p>Access to the system, and resource allocaions are &lt;em>by research group&lt;/em>; that is, the Principal Investigator (PI) receives resources for his group, and approves access for his group members.&lt;/p></description></item><item><title>Data Backup</title><link>https://um-grex.github.io/grex-docs/storage/data-backup/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/storage/data-backup/</guid><description>&lt;h2 id='backup-policies'>Backup policies&lt;a href='#backup-policies' class='anchor'>#&lt;/a>
+&lt;p>Access to the system, and resource allocations are &lt;em>by research group&lt;/em>; that is, the Principal Investigator (PI) receives resources for his group, and approves access for his group members.&lt;/p></description></item><item><title>Data Backup</title><link>https://um-grex.github.io/grex-docs/storage/data-backup/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/storage/data-backup/</guid><description>&lt;h2 id='backup-policies'>Backup policies&lt;a href='#backup-policies' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;p>Since late 2023, there has been a tape backup for user data stored on main Grex filesystems, &lt;strong>/home&lt;/strong> and &lt;strong>/project&lt;/strong>. Our limited resources and large amounts of data do put some limitations on what and how fast can be backed up and restored. All backup is done to tape in the same HPCC data centre.&lt;/p>
 &lt;p>The &lt;strong>/home&lt;/strong> filesystem is backed up daily using incremental backup. A new full backup is done quarterly.&lt;/p></description></item><item><title>Connecting to Grex and Transferring data</title><link>https://um-grex.github.io/grex-docs/connecting/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/connecting/</guid><description>&lt;h2 id='connecting-to-grex'>Connecting to Grex&lt;a href='#connecting-to-grex' class='anchor'>#&lt;/a>
@@ -81,8 +89,9 @@
 >
 . The following hosts (login nodes) are available:&lt;/p>
 &lt;ul>
-&lt;li>&lt;strong>yak.hpc.umanitoba.ca&lt;/strong>&lt;/li>
 &lt;li>&lt;strong>grex.hpc.umanitoba.ca&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>yak.hpc.umanitoba.ca&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>bison.hpc.umanitoba.ca&lt;/strong>&lt;/li>
 &lt;/ul>
 &lt;!--
  * bison.hpc.umanitoba.ca
@@ -142,17 +151,7 @@ The single point support contact for Compute Canada is [mailto:support@tech.alli
 
 &lt;!-- Changes and update:
 * Last revision: Aug 28, 2024.
---></description></item><item><title>Frequently Asked Questions.</title><link>https://um-grex.github.io/grex-docs/faq/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/faq/</guid><description>&lt;h2 id='access'>Access&lt;a href='#access' class='anchor'>#&lt;/a>
-&lt;/h2>&lt;hr>
-&lt;h3 id='getting-an-account'>Getting an account&lt;a href='#getting-an-account' class='anchor'>#&lt;/a>
-&lt;/h3>&lt;hr>
-&lt;h3 id='forgot-andor-reset-password'>Forgot and/or reset password&lt;a href='#forgot-andor-reset-password' class='anchor'>#&lt;/a>
-&lt;/h3>&lt;hr>
-&lt;p>If you forgot and/or would like to reset your password for Grex and/or any Alliance (former Compute Canada) national cluster, visit &lt;a
- href="https://ccdb.computecanada.ca/security/forgot"
- class="is-pretty-link">CCDB&lt;/a
->
-. Please note that you will not be able to reset your password before your first role gets approved by an Alliance (Compute Canada) administrator. Once updated, please wait for at least an hour before connecting to any cluster.&lt;/p></description></item><item><title>Linux/SLURM update project</title><link>https://um-grex.github.io/grex-docs/changes/changes-before-2020/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/changes/changes-before-2020/</guid><description>&lt;h2 id='grex-defunded-since-april-2-2018'>Grex defunded since April 2, 2018&lt;a href='#grex-defunded-since-april-2-2018' class='anchor'>#&lt;/a>
+--></description></item><item><title>Linux/SLURM update project</title><link>https://um-grex.github.io/grex-docs/changes/changes-before-2020/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/changes/changes-before-2020/</guid><description>&lt;h2 id='grex-defunded-since-april-2-2018'>Grex defunded since April 2, 2018&lt;a href='#grex-defunded-since-april-2-2018' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;p>Since being defunded by WestGrid (on April 2, 2018), Grex is now available only to the users affiliated with University of Manitoba and their collaborators. The old WestGrid documentation, hosted on the WestGrid website became irrelevant after the Grex upgrade, so please visit Grex’s New &lt;a
  href="https://um-grex.github.io/grex-docs/"
@@ -241,6 +240,7 @@ The single point support contact for Compute Canada is [mailto:support@tech.alli
 &lt;/ul>
 &lt;h2 id='p'>P&lt;a href='#p' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;ul>
+&lt;li>&lt;strong>PAICE&lt;/strong> :: Pan-Canadian AI Compute Environment&lt;/li>
 &lt;li>&lt;strong>PI&lt;/strong> :: Principal Investigator&lt;/li>
 &lt;/ul>
 &lt;h2 id='q'>Q&lt;a href='#q' class='anchor'>#&lt;/a>

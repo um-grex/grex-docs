@@ -2,7 +2,7 @@
 &lt;div class="sc-treeview">&lt;ul
  class='sc-treeview-tree'>&lt;li class=" sc-treeview-coll">
  &lt;div class="sc-treeview-label">&lt;div class="sc-treeview-icon sc-treeview-coll-trigger">
- &lt;i class="fa-solid fa-house-chimney">&lt;/i>
+ &lt;i class="fa-solid fa-user-gear">&lt;/i>
  &lt;/div>&lt;p class="is-marginless">
  &lt;a
  href="https://um-grex.github.io/grex-docs/"
@@ -13,22 +13,12 @@
  &lt;/div>&lt;ul
  class='sc-treeview-tree'>&lt;li class="">
  &lt;div class="sc-treeview-label">&lt;div class="sc-treeview-icon">
- &lt;i class="fa-solid fa-house-chimney">&lt;/i>
- &lt;/div>&lt;p class="is-marginless">
- &lt;a
- href="https://um-grex.github.io/grex-docs/updates/"
- class="is-pretty-link"
- >Grex Updates&lt;/a
- >
- &lt;/p>
- &lt;/div>&lt;/li>&lt;li class="">
- &lt;div class="sc-treeview-label">&lt;div class="sc-treeview-icon">
  &lt;i class="fa-solid fa-user-gear">&lt;/i>
  &lt;/div>&lt;p class="is-marginless">
  &lt;a
  href="https://um-grex.github.io/grex-docs/grex/"
  class="is-pretty-link"
- >Home&lt;/a
+ >Grex&lt;/a
  >
  &lt;/p>
  &lt;/div>&lt;/li>&lt;li class="">
