@@ -32,17 +32,19 @@ On Grex and Alliance systems, the following factors are enabled:
 ## Enrollment
 ---
 
-Enrollment into the Alliance Duo is through [CCDB](https://ccdb.alliancecan.ca), this enables the MFA requirement on every SSH login on both Grex and Alliance systems (Cedar, Graham, Beluga, Narval or Niagara).
+Enrollment into the Alliance Duo is through [CCDB](https://ccdb.alliancecan.ca), this enables the MFA requirement on every SSH login on both Grex and Alliance [systems](friends/alliancecan#alliances-clusters-and-services).
 
-Enrollment is required.
+{{< alert type="warning" >}}
+Enrollment in MFA is __required__ to access the clusters.
+{{< /alert >}}
 
 You must follow these steps to start using Grex and Alliance systems:
 
-- login into CCDB with your credentials
-- from the top menu choose "My Account" => "Multifactor Authentication Management"
-- register a new device
-- *OPTIONAL BUT RECOMMENDED* at the bottom of the same page, use the "Generate 10 codes" button to generate 10 rescue codes (you must print/save these codes in a safe location and never disclose them to anyone)
-- additional information on the [Alliance official wiki](https://docs.alliancecan.ca/wiki/Multifactor_authentication)
+ - login into CCDB with your credentials
+ - from the top menu choose "My Account" => "Multifactor Authentication Management"
+ - register a new device
+ - *OPTIONAL BUT RECOMMENDED* at the bottom of the same page, use the "Generate 10 codes" button to generate 10 rescue codes (you must print/save these codes in a safe location and never disclose them to anyone)
+ - additional information on the [Alliance official wiki](https://docs.alliancecan.ca/wiki/Multifactor_authentication)
 
 The following images should better explain the previous steps.
 
@@ -70,35 +72,35 @@ The following images should better explain the previous steps.
 ### MobaXTerm
 ---
 
-1. Upgrade to version 23.1 or more recent
-2. Test the connection
+ 1. Upgrade to version 23.1 or more recent
+ 2. Test the connection
 
 If problems persist, try a combination of the following:
 
-- Use a keypair instead of password
-- Use "SCP (normal speed)" instead of "SFTP" (under "Advanced SSH settings")
+ - Use a keypair instead of password
+ - Use "SCP (normal speed)" instead of "SFTP" (under "Advanced SSH settings")
 
 ### WinSCP
 ---
 
-1. Upgrade to version 6.1.1 or more recent
-2. Use a keypair instead of password
-3. Use the SFTP app insead of SSH browser app.
-4. Test the connection
+ 1. Upgrade to version 6.1.1 or more recent
+ 2. Use a keypair instead of password
+ 3. Use the SFTP app insead of SSH browser app.
+ 4. Test the connection
 
 ### CyberDuck
 ---
 
 CyberDuck supports MFA for SFTP out of the box. 
 
-1. Upgrade to version 9 or newer.
-2. Optionally, provide SSH private key instead of password
+ 1. Upgrade to version 9 or newer.
+ 2. Optionally, provide SSH private key instead of password
 
 ### PyCharm
 ---
 
-1. Use a keypair instead of password
-2. Test the connection
+ 1. Use a keypair instead of password
+ 2. Test the connection
 
 ### FileZilla
 ---
@@ -128,6 +130,7 @@ Nautilus uses GVFS to allow browsing remote locations through ssh, but it doesn'
 As a workaround, you can use ssh connection multiplexing, with a (not) well-known location for the control socket:
 
 - For GVFS versions 1.47 and later:
+
 ```bash
 $ ssh -fNMS "$XDG_RUNTIME_DIR/gvfsd-sftp/%C" ccdb_username@grex_login_hostname
 $ gio mount sftp://ccdb_username@grex_login_hostname
@@ -135,6 +138,7 @@ $ gio mount sftp://ccdb_username@grex_login_hostname
 ````
 
 - For GVFS before version 1.47 (The “echo” command must be execute only once):
+
 ```bash
 $ echo -e 'Host *\n\tControlPath ~/.ssh/S.%r@%h:%p' >> ~/.ssh/config
 $ ssh -fNM ccdb_username@grex_login_hostname
@@ -159,7 +163,6 @@ Host yak.hpc.umanitoba.ca
 ```
 
 The example above uses the Yak login node of Grex; replace it with other hostnames as required, or add sections for more than one host if needed.
-
 
 <!-- {{< treeview display="tree" />}} -->
 
