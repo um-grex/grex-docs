@@ -19,9 +19,9 @@ __Grex__ is a UManitoba High Performance Computing (HPC) system, first put in pr
 
 {{< alert type="warning" >}}
 Please note that older login nodes  _tatanka_ and _zebu_ are decommissioned during and after the outage of August - September 2024. These login nodes are no longer available.
-
-For more information, visit the updates [page](updates)
 {{< /alert >}}
+
+<!-- For more information, visit the updates [page](updates) -->
 
 Since being defunded by WestGrid (on April 2, 2018), Grex is now available only to the users affiliated with University of Manitoba and their collaborators. 
 
@@ -44,10 +44,19 @@ The SGI Altix machines were decommissioned in Sep 2024.
 {{< /alert >}}
 
 * In 2017, a new Seagate **Storage Building Blocks (SBB)** based Lustre filesystem of **418 TB** of useful space was added to Grex.
-* In 2020 and 2021, the University added 57 Intel CascadeLake CPU nodes, a few GPU nodes, a new NVME storage for home directories, and EDR InfiniBand interconnect. 
+{{< alert type="warning" >}}
+The SBB that serves as _/scratch_ is not available.
+{{< /alert >}}
+
+* In 2020 and 2021, the University added 57 Intel CascadeLake CPU nodes, a few GPU nodes, a new NVME storage for home directories, and EDR InfiniBand interconnect.
+
 * On March 2023, a new storage of **1 PB** was added to Grex. It is called **/project** filesystem.
+
 * On January 2024, the **/project** was extended by another **1 PB**.
-* On Sep 2024, new AMD Genoa nodes have been added (30 nodes).
+
+* On Sep 2024, new AMD Genoa nodes have been added (30 nodes with a total of 5760 cores).
+
+* On April 2025, a new GPU node L40S with 2 GPUs was added to Grex.
 
 The current computing hardware available for general use is as follow:
 
@@ -74,18 +83,21 @@ To login to Grex in the text (bash) mode, connect to __grex.hpc.umanitoba.ca__  
 ### CPU nodes
 ---
 
+<!--
 In addition to the original nodes, new skylake and AMD nodes have been added to Grex:
+-->
+
+The current CPU nodes available on Grex are listed in the following table:
 
 | Hardware            | Number of nodes | CPUs/Node | Mem/Node | Network |
 | :-------:           | :-------------: | :-------: | :------: | :-----: |
 | Intel CPU           | 12              | **40**    | 384 GB   | EDR 100GB/s IB interconnect |
-| Intel 6230R         | 42              | **52**    | 188 GB   | EDR 100GB/s IB interconnect |
+| Intel 6230R         | 43              | **52**    | 188 GB   | EDR 100GB/s IB interconnect |
 | AMD EPYC 9654[^1]   | 31              | **192**   | 750 GB   | HDR 200GB/s IB interconnect |
 | AMD EPYC 9654[^1]   |  4              | **192**   | 1500 GB  | HDR 200GB/s IB interconnect |
 | AMD EPYC 9634[^2]   |  5              | **168**   | 1500 GB  | HDR 100GB/s IB interconnect |
 
 <!--
-
 | Hardware            | Number of nodes | CPUs/Node | Mem/Node | Network |
 | :-------:           | :-------------: | :-------: | :------: | :-----: |
 | Intel CPU           | 12              | **40**    | 384 GB   | EDR 100GB/s IB interconnect |
@@ -93,16 +105,12 @@ In addition to the original nodes, new skylake and AMD nodes have been added to 
 | AMD EPYC 9654       | 27              | **192**   | 750 GB   | HDR 200GB/s IB interconnect |
 | AMD EPYC 9654       |  3              | **192**   | 1500 GB  | HDR 200GB/s IB interconnect |
 | AMD EPYC 9634[^2]   |  5              | **168**   | 1500 GB  | HDR 100GB/s IB interconnect |
-
-
 | Intel Xeon 5560[^1] | 312             | **12**    |  48 GB   | QDR 40GB/s IB interconnect  |
 [^1]: Original Grex nodes: **slated for decommission in the near furure**
 -->
 
 [^1]: Of these nodes, five are contributed by a group of CHRIM researchers.
 [^2]: CPU nodes contributed by Prof. Marcos Cordeiro (Department of Agriculture).
-
-
 
 ### GPU nodes
 ---
@@ -111,18 +119,20 @@ There are also several researcher-contributed nodes (CPU and GPU) to Grex which 
 
 | Hardware             | Number of nodes | GPUs/Node | CPUs/node |Mem/Node |
 | :-------:            | :-------------: | :-------: | :-------: |:------: |
-| GPU                  | 2               | 4         | 32        | 192 GB  |
+| GPU[^8]              | 2               | 4         | 32        | 192 GB  |
 | 4 [V100-32 GB][^3]   | 2               | 4         | 32        | 187 GB  |
 | 4 [V100-16 GB][^4]   | 3               | 4         | 32        | 187 GB  |
 | 16 [V100-32 GB][^5]  | 1               | 16        | 48        | 1500 GB |
 | AMD [A30][^6]        | 2               | 2         | 18        | 500 GB  |
 | NVIDIA AMD [A30][^7] | 2               | 4         | 32        | 500 GB  |
+| L40S[^8]             | 1               | 2         | 64        | 370 GB  |
 
 [^3]: GPU nodes available for all users (general purpose).
 [^4]: GPU nodes contributed by Prof. R. Stamps (Department of Physics and Astronomy).
 [^5]: NVSwitch server contributed by Prof. L. Livi (Department of Computer Science).
 [^6]: GPU nodes contributed by Faculty of Agriculture.
 [^7]: GPU nodes contributed by Prof. Marcos Cordeiro (Department of Agriculture).
+[^8]: GPU nodes for general purpose.  
 
 ## Storage
 ---
