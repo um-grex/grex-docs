@@ -32,7 +32,7 @@ Mac OS X has a built-in OpenSSH command line client. It also has a full-fledged 
 ssh -XY username@grex.hpc.umanitoba.ca
 {{< /highlight >}}
 
-Please remember to change **username** in the above command with your Compute Canada (or Alliance) user name.
+Please remember to change **username** in the above command with your Alliance ( CCDB ) user name.
 
 ### Linux 
 ---
@@ -43,12 +43,16 @@ Linux provides the command line SSH package, OpenSSH, which is installed by defa
 ssh -XY username@grex.hpc.umanitoba.ca
 {{< /highlight >}}
 
-Similarly to the above, please remember to change **username** in the above command with your Compute Canada (or Alliance) user name.
+Similarly to the above, please remember to change **username** in the above command with your  Alliance ( CCDB ) user name.
 
 ### SSH keys
 ---
 
-You can manage your SSH keys (adding key pairs, editing known_hosts etc.) in the __$HOME/.ssh__ directory. The Alliance (Compute Canada) user documentation has several pages on managing [SSH keys](https://docs.alliancecan.ca/wiki/Using_SSH_keys_in_Linux) and creating [SSH tunnels](https://docs.alliancecan.ca/wiki/SSH_tunnelling). Note that if ssh keys are set on CCDB, they should work on the Alliance clusters but not on Grex. This feature is not implemented yet on Grex. Instead of CCDB, on Grex one can install ssh keys [locally](https://docs.alliancecan.ca/wiki/Using_SSH_keys_in_Linux#Installing_locally) 
+To avoid entering passwords and to increase the security of your SSH connections, you can use SSH key-based authentication on Grex and the Alliance systems. In key-based authentication, a pair of cryptographic keys (a private key and a public key) is used. The public key can be shared with anyone, but the private key is secret and should be kept securely, only on your client machine.
+
+To connect to an HPC machine, the system must have your public key. The preferred method for providing this is to deposit your public key (or keys) in the Alliance's CCDB. The Alliance (Compute Canada) user documentation has several pages on [managing SSH keys](https://docs.alliancecan.ca/wiki/Using_SSH_keys_in_Linux) .
+
+You can also manage your SSH keys (adding key pairs, editing known_hosts, etc.) locally on an HPC system in the __$HOME/.ssh__ directory. However, centralized key management via CCDB is the recommended approach. Additionally, for using robot nodes for automation workloads, SSH keys via CCDB are required, as password authentication and local SSH keys will not work.
 
 
 ### Windows
@@ -85,17 +89,17 @@ There is a way to use Linux command shell tools under Windows. [Cygwin](https://
 ssh -Y username@grex.hpc.umanitoba.ca
 {{< /highlight >}}
 
-#### Windows 10, WSL subsystem
+#### Windows 10+, WSL subsystem
 ---
 
-There is a Linux Subsystem for Windows which allows you to run a containerized instance of Linux (Ubuntu, for example) from under Windows 10. Refer to [MS documentation on enabling WSL](https://docs.microsoft.com/en-us/windows/wsl/install-win10). Then, you will have the same OpenSSH under Linux. 
+There is a Linux Subsystem for Windows which allows you to run a containerized instance of Linux (Ubuntu, for example) from under Windows ver. 10 and later. Refer to [MS documentation on enabling WSL](https://learn.microsoft.com/en-us/windows/wsl/install). Then, you will have the same OpenSSH under Linux. 
 
 It is actually possible to run X11 applications from WSL as well; you would need to get VCXSrv running, on the Windows side, and DISPLAY variable set on the WSL Linux side.
 
-#### Windows 10, native OpenSSH package
+#### Windows 10+, native OpenSSH package
 ---
 
-Actually, some of the Windows 10 versions have OpenSSH as a standalone package. Refer to corresponding  [MS documentation on enabling OpenSSH](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse). If it works with your version of Windows 10, you should have the OpenSSH command line tools like **ssh**, **scp** and **sftp** in the Windows command line, as if you were under Linux.
+Actually, some of the Windows 10 and later versions have OpenSSH as a standalone package. Refer to corresponding  [MS documentation on enabling OpenSSH](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse). If it works with your version of Windows 10, you should have the OpenSSH command line tools like **ssh**, **scp** and **sftp** in the Windows command line, as if you were under Linux.
 
 #### The original SSH Secure Shell client
 ---
