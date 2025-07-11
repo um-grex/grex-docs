@@ -19,7 +19,6 @@ categories: ["Software", "Interfaces"]
 
 For more general OOD information, see the [OpenOnDemand paper](https://joss.theoj.org/papers/10.21105/joss.00622 "OpenOnDemand Paper")
 
-
 ## OpenOndemand on Grex 
 ---
 
@@ -77,13 +76,15 @@ Once connected, you will see the following screen with the current Grex Message-
 ![OpenOnDemand Front Page](/ood/frontpage.png)
 {{< /collapsible >}}
 
+If you scroll dow, links to some applications will show up. They correspond to pinned applications and featured subset of all available applications. 
+
 ## Navigating OOD Web portal interface
 
 There are several areas of interest on the OOD main webpage: the Dashboard bar on the top of the screen, various menu items (such as Files, Clusters, Jobs, Interactive Apps and Sessions). 
 
 > * __OpenOnDemand:__ main Open OnDemand dashboard.
 > * __Apps:__ link to the available applications.
-> * __Files:__ file browser.
+> * __Files:__ file browser and related operations (copy, download, delete, ...).
 > * __Jobs:__ links to active jobs and Grex job composer.
 > * __Clusters:__ Grex status and partition status.
 > * __Interactive Apps:__ list of interactive applicqations.
@@ -94,7 +95,7 @@ There are several areas of interest on the OOD main webpage: the Dashboard bar o
 
 The use of the different menus is described in the following sections:
 
-### OpenOnDemand main dashboard
+### OOD main dashboard
 
 The OpenOnDemand main dashboard menu shows the message of the day which is similar to the message you see when connecting to Grex via ssh. It shows the url for the documentation and support email to contact in case you need help. Some other information are also added to the message of the day.
 
@@ -129,20 +130,20 @@ across all Grex filesystems: __/home__ and __/project__.
 
 The main features accessible vile the menu __Files_ are:
 
-> Access to storage: home, project directories.
-> Create new directories and files via the sub-menus _New File_ and _New Directory_
-> View and edit text files
-> Upload or download files via _Upload_ and _Download_ sub-menus.
-> Delete data: files or directories.
-> Copy or move data (files and directories).
-> Access to a path to a file or directory using the sub-menu _Copy Path_.
-> Open a terminal to a selected directory.
-> While working with the directories, you could view the content of the folder, rename the folder, delete the folder. It is also possible to download the folder as zip file.
-> While working with files, you can edit and change the text file, rename and delet files.
-> A link to globus: this sub-menu start globus web interface. For more information about globus, please have a look to the dedicated [page](connecting/data-transfer/globus).
+* Access to storage: home and project directories.
+* Create new directories and files via the sub-menus _New File_ and _New Directory_
+* View and edit text files
+* Upload or download files via _Upload_ and _Download_ sub-menus.
+* Delete data: files or directories.
+* Copy or move data (files and directories).
+* Access to a path to a file or directory using the sub-menu _Copy Path_.
+* Open a terminal to a selected directory.
+* While working with the directories, you could view the content of the folder, rename the folder, delete the folder. It is also possible to download the folder as zip file.
+* While working with files, you can edit and change the text file, rename and delet files.
+* A link to globus: this sub-menu start globus web interface. For more information about globus, please have a look to the dedicated [page](connecting/data-transfer/globus).
 
 {{< alert type="warning" >}}
-You can also upload your data to Grex using this Web interface. However, there are limits on the size of th uploads on the Web server and there can be practical limits on download sizes as well due to internet connection speed and stability. OOD on Grex has a 10Gb limit for maximal size of files to be uploaded through the File menu. For larger amount of data, please use globus.
+You can also upload your data to Grex using this Web interface. However, there are limits on the size of the uploads on the Web server and there can be practical limits on download sizes as well due to internet connection speed and stability. OOD on Grex has a 10Gb limit for maximal size of files to be uploaded through the File menu. For larger amount of data, please use globus.
 {{< /alert >}}
 
 ### Jobs
@@ -156,7 +157,7 @@ This menu gives access to Active Jobs; Jobs Metrics and Grex Job Composer:
 
 **Active Jobs:**
 
-From this menu, you can access the list of current jobs on the queue. In other terms, anything you could get from running squeue from the command line.
+From this menu, you can access the list of current jobs on the queue. In other terms, anything you could get from running squeue from the command line. There is a field with the name __Filter__ where you can type _Queued_ or _Running_ if you want to filter the queued or running jobs. 
 
 {{< collapsible title="Active Jobs view on OpenOndemand web portal on Grex" >}}
 ![](/ood/active-jobs.png)
@@ -174,7 +175,7 @@ From this menu, you can access the fairshare of your group and other metrics abo
 
 From this menu. it is possible to access a form with predefined or generic slurm templates to generate slurm scripts. It offers the options to customize, save and submit jobs. 
 
-{{< collapsible title="Jobs Metrics view on OpenOndemand web portal on Grex" >}}
+{{< collapsible title="Job Composer view on OpenOndemand web portal on Grex" >}}
 ![](/ood/job-composer.png)
 {{< /collapsible >}}
 
@@ -217,23 +218,23 @@ A lisf of ineractive applications is accessible from the top menu __Interactive 
 {{< /collapsible >}}
 
 {{< alert type="warning" >}}
-Some applications, like Stata and Gaussview may show up on the snapshots dispayed on this page but not under your session. These application are configured to show up only if you have access to a particular POSIX group that restricts access to the software.
+Some applications, like Stata and Gaussview may show up on the snapshots displayed on this page but not under your session. These applications are configured to show up only if you have access to a particular POSIX group that restricts access to the software.
 {{< /alert >}}
 
 ## Customized OOD apps on Grex
 ---
 
-The OOD Dashboard menu, __Interactive Apps__, shows interactive applications. This is the main feature of OOD, it allows interactive work and visualizations, all in the browser. These applications will run as SLURM Jobs on Grex compute nodes. Users can specify required SLURM resources such as time, number of cores and partitions.
+The OOD Dashboard menu, __Interactive Apps__, shows interactive applications. This is the main feature of OOD, it allows interactive work and visualizations, all in the browser. These applications will run as SLURM Jobs on Grex compute nodes. Users can specify required SLURM resources such as time, number of cores, wall time, partition name, ... etc.
 
 {{< collapsible title="OpenOndemand applications on Grex" >}}
 ![](/ood/interactive-app.png)
 {{< /collapsible >}}
 
-After the Apps jobs are submitted, the corresponding jobs appear in the __Interactive Sessions__ tab. There they can be monitored, connected to, and terminated.
+After filling all the requirements and launching the Apps, the Apps jobs are submitted via a button __Launch__. The corresponding jobs appear in the __Interactive Sessions__ tab. They can be used, monitored, connected to, and terminated as needed.
 
-There are numerous supported "applications" in OnDemand on Grex. These applications fall into two broad categories: Virtual Desktop apps (the ones delivering a Linux Desktop with some GUI software via NoVNC) and Servers that are delivered through a Web Proxy. A prominent example of a Server app is Jupyter Notebook or Jupyter Lab. Some Apps such as Matlab or Rstudio exists both as a Linux Desktop GUI and a Server version.
+There are numerous supported _applications_ in OpenOnDemand on Grex. These applications fall into two broad categories: Virtual Desktop apps (the ones delivering a Linux Desktop with some GUI software via NoVNC) and Servers that are delivered through a Web Proxy. A prominent example of a Server app is Jupyter Notebook or Jupyter Lab. Some Apps such as Matlab or Rstudio exists both as a Linux Desktop GUI and a Server version.
 
-> We keep actively developing the OOD Web Portal, and the list below may change as we add more popular applications or remove less used ones!
+> We keep actively developing the OOD Web Portal, and the list below may change over time as we add more popular applications or remove less used ones!
 
 As for now, the following applications are supported:
 
@@ -245,7 +246,9 @@ As for now, the following applications are supported:
 | Matlab Server | Server  | Generally available | - |
 | JupyterLab Server | Server | Generally available | Comes for SBEnv and CCEnv | - | 
 | RStudio Server| Server | Generally available |  Comes for SBEnv and CCEnv | - |
-| CodeServer| Server | Generally available | - |
+| CodeServer | Server | Generally available | - |
+| Gnuplot |  NoVNC Desktop | Generally available | - |
+| Grace |  NoVNC Desktop | Generally available | - |
 | MetaShape Pro | NoVNC Desktop | Licensed users only | - |
 | RELION | NoVNC Desktop | Generally available | - |
 | STATA | NoVNC Desktop | Licensed users only | - |
@@ -256,14 +259,16 @@ As for now, the following applications are supported:
 
 As with regular SLURM jobs, it is important to specify SLURM partitions for them to start faster. Perhaps the __test__ partition for Desktop is the best place to start interactive Desktop jobs, so it is hardcoded in the __Simplified Desktop__ item.
 
+<!--
 The following links are added to OOD:
 
 > - From the menu __Jobs__, there is a link __Grex SLURM Queues State__ that shows a summary of running and pending jobs. The same information can be accessed from any login node by running the __grex-summarize-queue__ command.
 > - From the menu __Clusters__, there is a link __Grex SLURM Node State__ to get a summary of allocated and idle nodes by partition. The same information can be accessed from any login node by running the __slurm-nodes-state__ command.
- 
+-->
+
 ---
 
-<!-- {{< treeview display="tree" />}} -->
+{{< treeview />}}
 
 <!-- Changes and update:
 
