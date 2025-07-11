@@ -12,9 +12,11 @@ categories: ["How-To", "Information"]
 ---
 
 In order to use almost any HPC system, you would need to be able to somehow connect and log in to it. Also, it would be necessary to be able to transfer data to and from the system. The standard means for these tasks are provided by the [SSH protocol](https://en.wikipedia.org/wiki/Secure_Shell "Secure Shell"). The following hosts (login nodes) are available:
- 
+
+ * **grex.hpc.umanitoba.ca** 
  * **yak.hpc.umanitoba.ca**
- * **grex.hpc.umanitoba.ca**
+ * **bison.hpc.umanitoba.ca**
+
 <!--
  * bison.hpc.umanitoba.ca
  * tatanka.hpc.umanitoba.ca
@@ -22,11 +24,15 @@ In order to use almost any HPC system, you would need to be able to somehow conn
 
 To log in to Grex in the text (or bash) mode, connect to one of the above hosts using an [**SSH**](./ssh/) (Secure SHELL) client. 
 
-The DNS name **grex.hpc.umanitoba.ca** serves as an alias for **yak.hpc.umanitoba.ca**
+{{< alert type="info" >}}
+The DNS name **grex.hpc.umanitoba.ca** serves as an alias for **yak.hpc.umanitoba.ca** and **bison.hpc.umanitoba.ca**. 
+{{< /alert >}}
 
 <!--
 The DNS name **grex.hpc.umanitoba.ca** serves as an alias for two login nodes: **bison.hpc.umanitoba.ca** and **tatanka.hpc.umanitoba.ca** . These two login nodes are the original login nodes, and can be used for accessing the system as well as building software that has to run on older compute nodes (Intel SSE4.2 instructions or earlier).
 -->
+
+Before trying to connect to Grex, please make sure that you have already set [MFA](connecting/mfa).
 
 To connect to Grex, use:
 
@@ -65,7 +71,7 @@ Since Dec. 2015, support has been provided for the graphical mode connection to 
 ## OpenOnDemand (OOD) Web Interface
 ---
 
-Since October 2021, there is an OpenOnDemand (OOD) Web interface to Grex, currently available at [https://zebu.hpc.umanitoba.ca](https://zebu.hpc.umanitoba.ca "OpenOnDemand OOD Web interface on Grex") from UManitoba IP addresses. OOD provides a way to connect both in text and graphical mode right in the browser, to transfer data between Grex local machines, and to run jobs.
+Since October 2021, there is an OpenOnDemand (OOD) Web interface to Grex, currently available at [https://ood.hpc.umanitoba.ca](https://zebu.hpc.umanitoba.ca "OpenOnDemand OOD Web interface on Grex") from UManitoba IP addresses. OOD provides a way to connect both in text and graphical mode right in the browser, to transfer data between Grex local machines, and to run jobs.
 
 See the documentation for more details on how to connect from various clients of operating systems: [SSH](connecting/ssh), [OOD](connecting/ood).
 
