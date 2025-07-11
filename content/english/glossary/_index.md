@@ -84,6 +84,7 @@ categories: ["Information"]
 
 ## P
 
+* __PAICE__ :: Pan-Canadian AI Compute Environment
 * __PI__ :: Principal Investigator
 
 ## Q
