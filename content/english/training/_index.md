@@ -11,9 +11,13 @@ categories: ["Training"]
 ## Local workshops
 ---
 
+<!--
 {{< treeview 
     display="tree"
 />}}
+-->
+
+{{< treeview />}}
 
 ## WestDRI training material
 ---
@@ -29,7 +33,7 @@ The training material from WestDRI (BC DRI and Prairies DRI groups, formerly kno
 ## Training material from the Alliance and its regional partners
 ---
 
-* [DRAC](https://alliancecan.ca/en/training)
+* [DRAC](https://alliancecan.ca/en/training) - Now provided via [Explora](https://explora.alliancecan.ca/)
 * [ACENET](https://www.ace-net.ca/training.html)
 * [CAC](https://cac.queensu.ca/about_us/events-training/)
 * [Calcul Quebec](https://www.calculquebec.ca/en/academic-research-services/procedures/)
@@ -37,7 +41,9 @@ The training material from WestDRI (BC DRI and Prairies DRI groups, formerly kno
 * [SciNET](https://support.scinet.utoronto.ca/education/browse.php), [new link](https://education.scinet.utoronto.ca/course/index.php)
 * [SharcNET](https://training.sharcnet.ca/courses/)
 * [WestDRI](https://training.westdri.ca/)
+<!--
 * National Training [calendar](https://alliancecan.ca/en/services/advanced-research-computing/technical-support/training-calendar)
+-->
 ---
 
 <!-- Changes and update:
