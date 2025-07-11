@@ -38,20 +38,45 @@ Since we have switched Grex to CCDB credentials in late **2019**, the CCDB accou
 
 {{< alert type="warning" >}}
 * WestGrid accounts are no longer needed, nor working on Grex. Please use CCDB accounts for both Grex and DRAC systems!
-* WestGrid network addresses in the westgrid.ca domain are no longer nor used on Grex. Please use hpc.umanitoba.ca domain!
+* WestGrid network addresses in the westgrid.ca domain are no longer nor used on Grex. Please use __hpc.umanitoba.ca__ domain!
 {{< /alert >}}
 
 ## Alliance's clusters and services
 ---
 
-* [Beluga](https://docs.alliancecan.ca/wiki/B%C3%A9luga/en)
-* [Cedar](https://docs.alliancecan.ca/wiki/Cedar/en)
-* [Graham](https://docs.alliancecan.ca/wiki/Graham/en)
+### General purpose clusters:
+
+* [Beluga](https://docs.alliancecan.ca/wiki/B%C3%A9luga/en) (to be decommisionned soon and replaced by Rorqual) 
+* [Rorqual](https://docs.alliancecan.ca/wiki/Rorqual/en)
+* [Cedar](https://docs.alliancecan.ca/wiki/Cedar/en) (to be decommisionned soon and replaced by Fir)
+* [Fir](https://docs.alliancecan.ca/wiki/Fir/en)
+* [Graham](https://docs.alliancecan.ca/wiki/Graham/en) (to be decommisionned soon and replaced by Nibi)
+* [Nibi](https://docs.alliancecan.ca/wiki/Nibi/en)
 * [Narval](https://docs.alliancecan.ca/wiki/Narval/en)
-* [Niagara](https://docs.alliancecan.ca/wiki/Niagara/en)
+
+### Large parallel clusters:
+
+* [Niagara](https://docs.alliancecan.ca/wiki/Niagara/en) (to be decommisionned soon and replaced by Trillium)
+* [Trillium](https://docs.alliancecan.ca/wiki/Trillium/en)
+
+### Cloud:
+
 * [Cloud](https://docs.alliancecan.ca/wiki/Cloud/en)
+
+### PAICE clusters:
+
+* [Killarney](https://docs.alliancecan.ca/wiki/Killarney/en)
+* [TamIA](https://docs.alliancecan.ca/wiki/TamIA/en)
+* [Vulcan](https://docs.alliancecan.ca/wiki/Vulcan/en)
+
+### Other services:
+
 * [NextCloud](https://docs.alliancecan.ca/wiki/Nextcloud)
 * [Globus](https://docs.alliancecan.ca/wiki/Globus)
+
+{{< alert type="warning" >}}
+The following clusters {Cedar, Graham, Beluga and Niagara} will be decommissoned as soon as the new clusters {Fir, Nibi, Rorqual and Trillium} are fully operational. Gor more information, visit the page: [Infrastructure renewal](https://docs.alliancecan.ca/wiki/Infrastructure_renewal)
+{{< /alert >}}
 
 ## Regional Partners
 ---
