@@ -48,7 +48,7 @@ Similarly to the above, please remember to change **username** in the above comm
 ### SSH keys
 ---
 
-You can manage your SSH keys (adding key pairs, editing known_hosts etc.) in the __$HOME/.ssh__ directory. The Alliance (Compute Canada) user documentation has several pages on managing [SSH keys](https://docs.alliancecan.ca/wiki/Using_SSH_keys_in_Linux) and [creating SSH tunnels](https://docs.alliancecan.ca/wiki/SSH_tunnelling). Note that if ssh keys are set on CCDB, they should work on the Alliance clusters but not on Grex. This feature is not implemented yet on Grex. Instead of CCDB, on Grex one can install ssh keys [locally](https://docs.alliancecan.ca/wiki/Using_SSH_keys_in_Linux#Installing_locally) 
+You can manage your SSH keys (adding key pairs, editing known_hosts etc.) in the __$HOME/.ssh__ directory. The Alliance (Compute Canada) user documentation has several pages on managing [SSH keys](https://docs.alliancecan.ca/wiki/Using_SSH_keys_in_Linux) and creating [SSH tunnels](https://docs.alliancecan.ca/wiki/SSH_tunnelling). Note that if ssh keys are set on CCDB, they should work on the Alliance clusters but not on Grex. This feature is not implemented yet on Grex. Instead of CCDB, on Grex one can install ssh keys [locally](https://docs.alliancecan.ca/wiki/Using_SSH_keys_in_Linux#Installing_locally) 
 
 
 ### Windows
