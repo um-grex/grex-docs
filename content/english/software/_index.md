@@ -39,8 +39,7 @@ The Modules package would manipulate the PATH (and other systems environment var
 The two most popular Modules are the original [Tcl Modules](http://modules.sourceforge.net/) and its [Lmod](https://lmod.readthedocs.io/en/latest/) rewrite in Lua at [TACC](https://www.tacc.utexas.edu/research-development/tacc-projects/lmod). On the new Grex, **Lmod** is used.
 -->
 
-Linux software is often installed system-wide using package managers (e.g., __apt__ on Debian and Ubuntu, __yum__ or __dnf__ on RedHat and its derivatives). These tools install binaries into standard locations like __/usr/bin__, making them immediately available via the system _PATH_. 
-(_PATH_ is a variable specifying where the operating systems would look for executable code). 
+Linux software is often installed system-wide using package managers (e.g., __apt__ on Debian and Ubuntu, __yum__ or __dnf__ on RedHat and its derivatives). These tools install binaries into standard locations like __/usr/bin__, making them immediately available via the system _PATH_ (_PATH_ is a variable specifying where the operating systems would look for executable code). 
 
 While convenient on personal machines, this approach doesn’t scale well to HPC environments due to:
 
@@ -60,23 +59,24 @@ Modules allow users to dynamically modify their environment (e.g., _PATH_, _LD_L
 The main feature of Lmod is the hierarchical module system to provide a better control of software dependencies. Modules for software items that depend on a particular core module (toolchains: a compiler suite, a MPI library) are only accessible after the core modules are loaded. This prevents situations where conflicts appear when software items built with different toolchains are loaded simultaneously. Lmod will also automatically unload conflicting modules and reload their dependencies should toolchain change. Finally, by manipulating module root paths, it is possible to provide more than one software stack per HPC system. For more information, please refer to the software stacks available on Grex and using modules [page](software/using-modules).
 -->
 
-Grex uses [Lmod](https://lmod.readthedocs.io/en/latest), a modern, Lua-based module system developed at Texas Advanced Computing Center. Lmod supports hierarchical modules, which organize software based on dependencies like CPU architecture, compilers, and MPI implementations. Using module hierarchies helps to avoid conflicts between incompatible software toolchains.
+Grex uses [Lmod](https://lmod.readthedocs.io/en/latest), a modern, Lua-based module system developed at Texas Advanced Computing Center (TACC). Lmod supports hierarchical modules, which organize software based on dependencies like CPU architecture, compilers, and MPI implementations. Using module hierarchies helps to avoid conflicts between incompatible software toolchains.
 
-Lmod would:
+__Lmod would:__
 
  * Hide software items for which their dependencies/toolchains are not yet loaded.
  * Automatically unload conflicting modules when switching toolchains.
  * Reload required dependencies as needed when a module is switched.
  * Supports multiple software stacks through configurable module paths.
  
-For more information about Lmod, please refer to the software stacks available on the using modules [page](software/using-modules).
+For more information about Lmod, please refer to the software stacks available on the [using modules](software/using-modules) page.
 
-There are the following Grex-specific conventions on how Grex software environment is configured:
+The following shows Grex-specific conventions on how Grex software environment is configured:
 
- * There is a module hierarchy. No software modules are loaded by default! 
- * There is more than one  "software" stacks. A special module "environment" needs to be loaded first to switch between them. 
- * CPU architecture (a module called __arch__ ) is often a root of a module hierarchy. Most commonly used __arch/avx512__ .
- * For the local software stack, __cuda__ module precees the arch module for GPU software.
+> * There is a module hierarchy. 
+> * No software modules are loaded by default! 
+> * There is more than one  "software" stacks. A special module "environment" needs to be loaded first to switch between them. 
+> * CPU architecture (a module called __arch__ ) is often a root of a module hierarchy. Most commonly used __arch/avx512__ .
+> * For the local software stack, __cuda__ module precees the arch module for GPU software.
 
 On Grex, there are two software stacks, called __SBEnv__ and __CCEnv__, standing for the software built on Grex locally and the software environment from the Alliance (Compute Canada), correspondingly. In practice, all the above means that a required "software stack" module must be loaded first.
 
@@ -131,12 +131,15 @@ Linux (Unlike some Desktop operating systems) has a concept of user permissions 
 
 You can almost always install software without **super-user** access into your __/home/$USER__ directory. Moreover, you can manage the software with Lmod: Lmod automatically searches for module files under __$HOME/modulefiles__ and adds the modules it discovers there into the modules tree so they can be found by __module spider__, loaded by __module load__, etc.
 
-Most Linux software can be installed from sources using either [Autoconf](https://www.gnu.org/software/autoconf/) or [CMake](https://cmake.org/) configuration tools. These will accept __-\-prefix=/home/$USER/my-software/version__ or __-DCMAKE_INSTALL_PREFIX=/home/$USER/my-software/version__ as arguments. These paths are used for the installation directories where the user has full access.
+Most Linux software can be installed from sources using either [Autoconf](https://www.gnu.org/software/autoconf/) or [CMake](https://cmake.org/) configuration tools. These will accept __-\-prefix=/home/$USER/my-software/version__ or __-DCMAKE_INSTALL_PREFIX=/home/$USER/my-software/version__ as arguments. These paths are used as installation directories where the user has full access.
 
 Software that comes as a binary archive to be unpacked can be simply unpacked into your home directory location. Then, the paths should be set for the software to be found: either by including the environment variable in __$HOME/.bashrc__ or in __$HOME/.bash_profile__ or by creating a specific module in __$HOME/modulefiles/my-software/version__ following Lmod instructions for [writing Modules](https://lmod.readthedocs.io/en/latest/015_writing_modules.html).
 
 There exist binary software environments like _conda_ that manage their own tree of binary-everything. These can be used from your home directory as well, with some caution, because automatically pulling every software from a conda channel might conflict with the same software existing in the HPC environment (Python package paths, MPI libraries, etc.).
-> Note that as of 2024, Anaconda owners have changed their licensing policy. We do not provide any system-wide _conda_ installations on Grex. In case users want to continue using _conda_, they must be sure that they have a proper Anaconda license to do so. Note also that the same applies for _mamba_ which would use the same conda software channels.
+
+{{< alert type="warning" >}}
+Note that as of 2024, Anaconda owners have changed their licensing policy. We do not provide any system-wide _conda_ installations on Grex. In case users want to continue using _conda_, they must be sure that they have a proper Anaconda license to do so. Note also that the same applies for _mamba_ which would use the same conda software channels.
+{{< /alert >}}
 
 However, if a software is really a part of the base OS (something like a graphics Desktop software, etc.), it can be hard to rebuild from sources due to many dependencies. If needed, it may be better if installed centrally or used in a container, see Containers [documentation](software/containers).
 
