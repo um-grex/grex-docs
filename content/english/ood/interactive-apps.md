@@ -9,6 +9,8 @@ categories: []
 ## Introduction
 ---
 
+<!--
+
 From the menu __Interactive Apps__, it is possible to start a given application and use it for interactive work. Some applications have already predefined settings, like the partition and allow only to adjust the wall time. As an example, the _Grex Desktop Simplified _ thar uses by default the test partition.
 
 To start an application, click on the name of the application, then fill the required parameters for slurm (accounting group, partition name, number of cpus, wall time, ...).
@@ -47,8 +49,7 @@ Then, click on the buttom _Launch Grex Desktop Simplified_ to start the applicat
 ![Grex Desktop Simplified Demonstration](/ood/simplified-desktop-demo.png)
 {{< /collapsible >}}
  
-
-
+-->
 
 <!-- {{< treeview display="tree" />}} -->
 
