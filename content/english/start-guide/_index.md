@@ -33,7 +33,7 @@ Grex is an UManitoba High Performance Computing (HPC) system, first put in produ
 />}}
 {{< /collapsible >}}
 
-**6.** Submit the script using sbatch command, to the __skylake__ partition using:
+**6.** Submit the script using __sbatch__ command, to the __skylake__ partition using:
 
 {{< highlight bash >}}
 sbatch --partition=skylake sleep-job.sh
