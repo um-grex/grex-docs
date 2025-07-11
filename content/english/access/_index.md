@@ -13,7 +13,7 @@ categories: ["Information"]
 
 Grex is open to all researchers at University of Manitoba and their collaborators. The main purpose of the Grex system is Research; it might be used for grad studies courses with a strong research component, for their course-based research.
 
-Access to the system, and resource allocaions are _by research group_; that is, the Principal Investigator (PI) receives resources for his group, and approves access for his group members. 
+Access to the system, and resource allocations are _by research group_; that is, the Principal Investigator (PI) receives resources for his group, and approves access for his group members. 
 
 Grex's resources (CPU and GPU time, disk space, software licenses) are automatically managed by a batch scheduler, [SLURM](running-jobs), according to the University's priorities. There is a process of resource allocation competition (RAC) to get an increased share of Grex resources; however, a "Default" share of these resources is available immediately and free of charge by getting an account.
 
@@ -31,7 +31,8 @@ Grex is using the Compute Canada (now the Alliance) account management database 
 >  - An active [CCDB](https://ccdb.computecanada.ca "CCDB") account. 
 >  - An active CCDB "role" affiliated with UManitoba (University of Manitoba).
 
-Any eligible Canadian Faculty member can get an Alliance [account](https://alliancecan.ca/en/services/advanced-research-computing/account-management/apply-account) in the CCDB system, in his own right. Researchers and tecnhical staff members in other roles (undergraduate students, doctoral student, postdoctoral fellow, research assistant, or a non-research staff member, external collaborator) will need to be sponsored in CCDB by a Faculty member. The PI registers in the CCDB first, and then he/she can sponsor his group members under his/her account. 
+Any eligible Canadian Faculty member can get an Alliance [account](https://alliancecan.ca/en/services/advanced-research-computing/account-management/apply-account) in the CCDB system, in their own right. Researchers and tecnhical staff members in other roles (undergraduate students, doctoral student, postdoctoral fellow, research assistant, or a non-research staff member, external collaborator) will need to be sponsored in CCDB by a Faculty member. The PI registers in the CCDB first, and then he/she can sponsor his/her group members under his/her account. 
+
 Once an Alliance account for a user has been approved and made active in CCDB, the user can start using Grex's computing and data storage facilities.
 
 
