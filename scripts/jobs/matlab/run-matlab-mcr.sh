@@ -7,7 +7,7 @@
 #SBATCH --partition=skylake
 
 
-# If running on Grex, uncomment the following line to set MCR_CACHE_ROOT:
+
 # the mcr version must correspond to Matlab version the code was compiled with!
 
 module load mcr/R2023b
