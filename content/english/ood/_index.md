@@ -38,6 +38,8 @@ Also, OOD creates a state directory under users' ``/home`` (__/home/$USER/ondema
 It is better to leave the __/home/$USER/ondemand__ directory alone!
 {{< /alert >}}
 
+## Connect to OpenOndemand
+
 **Connect to OOD on campus:**
 
 > __1.__ Point your Web browser to [https://ood.hpc.umanitoba.ca](https://ood.hpc.umanitoba.ca) . This will redirect you to our Keycloack IDP screen.

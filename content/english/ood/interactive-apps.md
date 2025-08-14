@@ -1,7 +1,7 @@
 ---
-weight: 1600
-linkTitle: "Interactive Apps"
-title: "Interactive Apps"
+weight: 1800
+linkTitle: "Custom Apps"
+title: "Custom Interactive Apps"
 description: "Everything you need to know about Interactive Apps."
 categories: []
 ---
@@ -9,47 +9,56 @@ categories: []
 ## Introduction
 ---
 
-<!--
+For the common applications used on Grex, we have addedd separate [interactive applications](ood/#interactive-apps) to make it easier for users. Some of these applications are: Gaussview, Matlab, Mathematica, Relio, Paraview, OVITO, ... etc. Some of the applications may not show up in your dashboard as they are protected with a POSIX group. For example, if you do not have access to [Gaussian](specific-soft/gaussian), __Gaussview__ will not show up in your dashboard. Some applications like stata, metashape are commercial. Therefore, they are set only for the groups who purchased the license. 
 
-From the menu __Interactive Apps__, it is possible to start a given application and use it for interactive work. Some applications have already predefined settings, like the partition and allow only to adjust the wall time. As an example, the _Grex Desktop Simplified _ thar uses by default the test partition.
+When launching these applications, they start automaticall the corresponding program, like for matlab interface, Gaussview interface. They are all configured to work like __Grex Desktop__ with two exceptions:
 
-To start an application, click on the name of the application, then fill the required parameters for slurm (accounting group, partition name, number of cpus, wall time, ...).
+* They start automatically the interface without having to start a terminal, then load a module and start the interface. Everything is pre-configured to start automaticaly top open the interface.
+* For some of the applications, there is also a possibility to choose which module to use. It is another step in the form where other resources are set. 
 
-Most of the applications require to set up one of the following parameters:
+Here are some snapshots for Gaussview, Matlab, Paraview:
 
-> * Slurm accounting group: if you have access to one accounting group (def-professor), the scheduler will pick it by default. If you have more than one accounting group, you need to specify the accounting group to use.
+* A snapshot for Gaussview application:
 
-> * Wall time: crrently, there is a limit of 6 hours for most of the applications.
-
-### Grex Desktop Simplified
-
-This is a very simplified instance of a Desktop. It requires only to setup the accounting group (def-professor), the wall time and if needed add the email notifications. The following snapshot shows an example of settings:
-
-{{< collapsible title="Grex Desktop Simplified setup" >}}
-![Grex Desktop Simplified setup](/ood/simplified-desktop-setup.png)
+{{< collapsible title="Gaussview Application: snapshot" >}}
+![Gaussview Application](/ood/gaussview-snap.png)
 {{< /collapsible >}}
 
-Once all the fields are filled, you can lauch the application using the _Launch_ button. This will submit a job to compute node (in this case, it will run on the test partition). First, it goes to the queue and start when the resources are available:
+* A snapshot for Gnuplot application:
 
-{{< collapsible title="Grex Desktop Simplified Queued" >}}
-![Grex Desktop Simplified Queued](/ood/simplified-desktop-queued.png)
+{{< collapsible title="Gnuplot Application: snapshot" >}}
+![Gnuplot Application](/ood/gnuplot-snap.png)
 {{< /collapsible >}}
 
-And once the resources are available, the interactive app will show up as running:
+* A snapshot for Grace (XmGrace) application:
 
-{{< collapsible title="Grex Desktop Simplified Running" >}}
-![Grex Desktop Simplified Queued](/ood/simplified-desktop-running.png)
+{{< collapsible title="Grace Application: snapshot" >}}
+![Grace Application](/ood/grace-snap.png)
 {{< /collapsible >}}
 
-At this point, you may want to decrease the compression and image quality for not having a slow application. 
+* A snapshot for Mathematica application:
 
-Then, click on the buttom _Launch Grex Desktop Simplified_ to start the application. After starting the Desktop, you will have access to your files and a terminal. In the following snapshot, it shows a terminal where we loaded matlab module and started matlab interface. Note that there is a dedicated application for matlab that you can use. We are loading matlab here to show how the desktop looks like. The Desktop can be used to start any other program that uses GUI.
-
-{{< collapsible title="Grex Desktop Simplified Demonstration" >}}
-![Grex Desktop Simplified Demonstration](/ood/simplified-desktop-demo.png)
+{{< collapsible title="Grace Application: snapshot" >}}
+![Mathematica Application](/ood/mathematica-snap.png)
 {{< /collapsible >}}
- 
--->
+
+* A snapshot for Matlab application:
+
+{{< collapsible title="Matlab Application: snapshot" >}}
+![Matlab Application](/ood/matlab-snap.png)
+{{< /collapsible >}}
+
+* A snapshot for OVITO application:
+
+{{< collapsible title="OVITO Application: snapshot" >}}
+![OVITO Application](/ood/ovito-snap.png)
+{{< /collapsible >}}
+
+* A snapshot for Paraview application:
+
+{{< collapsible title="Paraview Application: snapshot" >}}
+![Paraview Application](/ood/paraview-snap.png)
+{{< /collapsible >}}
 
 <!-- {{< treeview display="tree" />}} -->
 
