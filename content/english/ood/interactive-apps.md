@@ -1,5 +1,5 @@
 ---
-weight: 1800
+weight: 1700
 linkTitle: "Custom Apps"
 title: "Custom Interactive Apps"
 description: "Everything you need to know about Interactive Apps."

@@ -1,5 +1,5 @@
 ---
-weight: 1600
+weight: 1900
 linkTitle: "Job Composer"
 title: "Job Composer"
 description: "Everything you need to know about Job Composer."
