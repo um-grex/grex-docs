@@ -3,7 +3,7 @@ weight: 2000
 title: "Grex: High Performance Computing Cluster at University of Manitoba"
 linkTitle: "Grex"
 description: "All you need to know about Grex and how to use it for running jobs"
-titleIcon: "fa-solid fa-user-gear"
+titleIcon: "fa-solid fa-tachograph-digital"
 categories: ["Information"]
 banner: false
 bannerContent: "__SCRATCH - OS and LUSTRE UPDATES__"
@@ -63,7 +63,7 @@ The current computing hardware available for general use is as follow:
 ### Login nodes
 ---
 
-As of Sep 14, 2022, Grex is using UManitoba network. We have decommissioned the old WG and BCNET network that was used for about 11 years. Now, the DNS names use **hpc.umanitoba.ca** instead of the previous name **westgrid.ca**
+As of Sep 14, 2022, Grex is using UManitoba network. We have decommissioned the old WG and BCNET network that was used for about 11 years. Now, the DNS names use **hpc.umanitoba.ca** instead of the previous name **westgrid.ca**.
 
 On Grex, there are multiple login nodes:
 
@@ -72,30 +72,47 @@ On Grex, there are multiple login nodes:
 * __Tatanka__: tatanka.hpc.umanitoba.ca
 * __Grex__: grex.hpc.umanitoba.ca
 -->
-* __Yak__: yak.hpc.umanitoba.ca (please note that the architecture for this node is avx512).
+* __Yak__: yak.hpc.umanitoba.ca (please note that the architecture for this node is avx512)
 * __Bison__: bison.hpc.umanitoba.ca (a second login nodes similar to Yak)
 * __Grex__: grex.hpc.umanitoba.ca is a DNS alias to the above Yak and Bison login nodes
-* __OOD__: https://ood.hpc.umanitoba.ca (only used for [OpenOnDemand Web interface](/ood) and requires VPN if used outside campus network).
+* __OOD__: ood.hpc.umanitoba.ca (only used for [OpenOnDemand Web interface](/ood) and requires VPN if used outside campus network)
 
 To login to Grex in the text (bash) mode, connect to __grex.hpc.umanitoba.ca__  using a secure shell client, [SSH](connecting/#ssh). 
 
 
-### CPU nodes
+### Compute nodes
 ---
 
 <!--
 In addition to the original nodes, new skylake and AMD nodes have been added to Grex:
 -->
 
-The current CPU nodes available on Grex are listed in the following table:
+There are several researcher-contributed nodes (CPU and GPU) to Grex which make it a "community cluster".
+The researcher-contributed nodes are available for others on opportunistic basis; the owner groups will preempt the others' workloads.
 
-| Hardware            | Number of nodes | CPUs/Node | Mem/Node | Network |
-| :-------:           | :-------------: | :-------: | :------: | :-----: |
-| Intel CPU           | 12              | **40**    | 384 GB   | EDR 100GB/s IB interconnect |
-| Intel 6230R         | 43              | **52**    | 188 GB   | EDR 100GB/s IB interconnect |
-| AMD EPYC 9654[^1]   | 31              | **192**   | 750 GB   | HDR 200GB/s IB interconnect |
-| AMD EPYC 9654[^1]   |  4              | **192**   | 1500 GB  | HDR 200GB/s IB interconnect |
-| AMD EPYC 9634[^2]   |  5              | **168**   | 1500 GB  | HDR 100GB/s IB interconnect |
+The current compute nodes available on Grex are listed in the following table:
+
+| CPU                      | Nodes | CPUs/Node | Mem/Node | GPU               | GPUs/Node | VMem/GPU | Network<br/>(InfiniBand) |
+| :----------------------: | :---: | :-------: | :------: | :---------------: | :-------: | :------: | :----------------------: |
+| Intel<br/>Xeon 6248      | 12    | **40**    | 384 GB   | N/A               | N/A       | N/A      | EDR 100GB/s              |
+| Intel<br/>Xeon 6230R     | 43    | **52**    | 188 GB   | N/A               | N/A       | N/A      | EDR 100GB/s              |
+| AMD<br/>EPYC 9654[^1]    | 31    | **192**   | 750 GB   | N/A               | N/A       | N/A      | HDR 200GB/s              |
+| AMD<br/>EPYC 9654[^1]    |  4    | **192**   | 1500 GB  | N/A               | N/A       | N/A      | HDR 200GB/s              |
+| AMD<br/>EPYC 9634[^2]    |  5    | **168**   | 1500 GB  | N/A               | N/A       | N/A      | HDR 100GB/s              |
+| Intel<br/>Xeon 5218[^3]  |  2    | **32**    | 180 GB   | nVidia Tesla V100 | **4**     | 32 GB    | FDR 56GB/s               |
+| Intel<br/>Xeon 5218[^4]  |  3    | **32**    | 180 GB   | nVidia Tesla V100 | **4**     | 16 GB    | FDR 56GB/s               |
+| Intel<br/>Xeon 6248R[^5] |  1    | **48**    | 1500 GB  | nVidia Tesla V100 | **16**    | 32 GB    | EDR 100GB/s              |
+| AMD<br/>EPYC 7402P[^6]   |  2    | **24**    | 240 GB   | nVidia A30        | **2**     | 24 GB    | EDR 100GB/s              |
+| AMD<br/>EPYC 7543P[^7]   |  2    | **32**    | 480 GB   | nVidia A30        | **2**     | 24 GB    | EDR 100GB/s              |
+| AMD<br/>EPYC 9334[^3]    |  1    | **64**    | 370 GB   | nVidia L40S       | **2**     | 48 GB    | HDR 200GB/s              |
+
+[^1]: CPU nodes available for all users (of these, five are contributed by a group of CHRIM researchers).
+[^2]: CPU nodes contributed by Prof. M. Cordeiro (Department of Agriculture).
+[^3]: GPU nodes available for all users.
+[^4]: GPU nodes contributed by Prof. R. Stamps (Department of Physics and Astronomy).
+[^5]: GPU nodes contributed by Prof. L. Livi (Department of Computer Science).
+[^6]: GPU nodes contributed by Faculty of Agriculture.
+[^7]: GPU nodes contributed by Prof. M. Cordeiro (Department of Agriculture).
 
 <!--
 | Hardware            | Number of nodes | CPUs/Node | Mem/Node | Network |
@@ -109,9 +126,7 @@ The current CPU nodes available on Grex are listed in the following table:
 [^1]: Original Grex nodes: **slated for decommission in the near furure**
 -->
 
-[^1]: Of these nodes, five are contributed by a group of CHRIM researchers.
-[^2]: CPU nodes contributed by Prof. Marcos Cordeiro (Department of Agriculture).
-
+<!--
 ### GPU nodes
 ---
 
@@ -131,9 +146,9 @@ There are also several researcher-contributed nodes (CPU and GPU) to Grex which 
 [^4]: GPU nodes contributed by Prof. R. Stamps (Department of Physics and Astronomy).
 [^5]: NVSwitch server contributed by Prof. L. Livi (Department of Computer Science).
 [^6]: GPU nodes contributed by Faculty of Agriculture.
-[^7]: GPU nodes contributed by Prof. Marcos Cordeiro (Department of Agriculture).
+[^7]: GPU nodes contributed by Prof. M. Cordeiro (Department of Agriculture).
 [^8]: GPU nodes for general purpose.  
-
+-->
 ## Storage
 ---
 
@@ -144,10 +159,10 @@ Grex's compute nodes have access to three filesystems:
 - __/global/scratch__ filesystem, Lustre, **418 TB** total usable, 4 TB / user quota.
 -->
 
-| File system         | Type        | Total space  | Quota per user   |
-| :-----------:       | :----:      | :----------: | :--------------: |
-| __/home__           | NFSv4/RDMA  | **15 TB**    | 100 GB           |
-| __/project__        | Lustre      | **2 PB**     | Allocated per group. |
+| File system  | Type       | Total space | Quota per user | Quota per group |
+| :----------: | :--------: | :---------: | :------------: | :-------------: |
+| __/home__    | NFSv4/RDMA | **15 TB**   | 100 GB         | N/A             |
+| __/project__ | Lustre     | **2 PB**    | N/A            | 5 TB            |
 
 <!--
 | __/global/scratch__ | Lustre      | **418 TB**   | 4 TB             |
@@ -169,7 +184,7 @@ Grex is a traditional HPC machine, running Linux and SLURM resource management s
 
 In addition to the traditional bash mode (connecting via ssh), users have access to:
 
-* __OpenOnDemand:__ on Grex, it is possible to use OpenOnDemand (OOD for short) to login to Grex and run batch or GUI applications (VNC Desktops, Matlab, Gaussview, Jupyter, ...). For more information, please refer to the page: [OpenOnDemand](/ood)
+* [OpenOnDemand](/ood): on Grex, it is possible to use OpenOnDemand (OOD for short) to login to Grex and run batch or GUI applications (VNC Desktops, Matlab, Gaussview, Jupyter, ...)
 
 <!--
 * __X2Go:__ for more information, visit the page, connect to Grex via [X2Go](connecting/#x2go)
@@ -178,11 +193,10 @@ In addition to the traditional bash mode (connecting via ssh), users have access
 ## Useful links
 ---
 
-* [Digital Research Alliance of Canada](https://alliancecan.ca/) (the Alliance), formerly known as Compute Canada.
-* the Alliance [documentation](https://docs.alliancecan.ca/wiki/Main_Page)
-* Grex Status [page](https://grex-status.netlify.app)
-* Grex [documentation](/)
+* [Digital Research Alliance of Canada](https://alliancecan.ca/) (Alliance), formerly known as Compute Canada
+* [Alliance documentation](https://docs.alliancecan.ca/wiki/Main_Page)
 * [Local Resources at UManitoba](localit)
+* [Grex status page](https://grex-status.netlify.app)
 
 ---
 
