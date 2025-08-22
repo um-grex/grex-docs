@@ -3,7 +3,7 @@ weight: 100
 linkTitle: "2025"
 Title: "Workshops - 2025"
 description: "Workshops and Training Material - 2025"
-titleIcon: "fa-solid fa-cubes"
+#titleIcon: "fa-solid fa-cubes"
 categories: ["Training"]
 #tags: ["Content management"]
 #draft: true

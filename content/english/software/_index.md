@@ -3,7 +3,7 @@ weight: 6000
 linkTitle: "Software / Applications"
 title: "Software and Applications"
 description: "All you need to know about software on Grex."
-titleIcon: "fa-solid fa-house-chimney"
+titleIcon: "fa-solid fa-terminal"
 categories: ["Software"]
 #tags: ["Content management"]
 ---

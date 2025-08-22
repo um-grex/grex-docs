@@ -3,7 +3,7 @@ weight: 8000
 title: "Local IT Resources"
 linktitle: "UManitoba IT resources"
 description: "Local IT Resources."
-titleIcon: "fa-solid fa-house-chimney"
+#titleIcon: "fa-solid fa-house-chimney"
 categories: ["Information"]
 #tags: ["Content management"]
 ---

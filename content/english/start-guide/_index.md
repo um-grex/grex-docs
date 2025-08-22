@@ -2,7 +2,7 @@
 weight: 3000
 title: "Quick Start Guide"
 description: "Getting started."
-titleIcon: "fa-solid fa-house-chimney"
+titleIcon: "fa-solid fa-bolt-lightning"
 #categories: ["Functionalities"]
 #tags: ["Content management"]
 ---

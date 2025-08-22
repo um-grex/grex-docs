@@ -3,7 +3,7 @@ weight: 8700
 linkTitle: "Workshops"
 title: "Workshops and Training Material"
 description: "Workshops and Training Material"
-titleIcon: "fa-solid fa-house-chimney"
+titleIcon: "fa-solid fa-chalkboard-user"
 categories: ["Training"]
 #tags: ["Content management"]
 ---

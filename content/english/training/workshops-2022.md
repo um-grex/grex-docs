@@ -3,7 +3,7 @@ weight: 1800
 linkTitle: "2022"
 Title: "Workshops - 2022"
 description: "Workshops and Training Material - 2022"
-titleIcon: "fa-solid fa-cubes"
+#titleIcon: "fa-solid fa-cubes"
 categories: ["Training"]
 #tags: ["Content management"]
 ---

@@ -3,7 +3,7 @@ weight: 600
 linkTitle: "DRAC (Alliance)"
 title: "Digital Research Alliance of Canada"
 description: "Digital Research Alliance of Canada."
-titleIcon: "fa-solid fa-house-chimney"
+#titleIcon: "fa-solid fa-house-chimney"
 categories: ["Information"]
 #tags: ["Content management"]
 ---

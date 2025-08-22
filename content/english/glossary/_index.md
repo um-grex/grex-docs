@@ -3,7 +3,7 @@ weight: 9500
 title: "Glossary"
 linktitle: "Glossary"
 description: "Glossary"
-titleIcon: "fa-solid fa-sitemap"
+titleIcon: "fa-solid fa-book-atlas"
 categories: ["Information"]
 #tags: ["Important"]
 ---

@@ -3,7 +3,7 @@ weight: 5000
 title: "Running jobs on Grex"
 linktitle: "Running jobs"
 description: "Everything you need to know about running jobs on Grex."
-titleIcon: "fa-solid fa-house-chimney"
+titleIcon: "fa-solid fa-person-running"
 categories: ["Software", "Scheduler"]
 #tags: ["Content management"]
 ---

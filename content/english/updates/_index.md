@@ -5,7 +5,7 @@ linkTitle: "Grex Updates"
 #description: "List of major changes on Grex: software and hardware updates."
 title: "Grex upgrade: SISF2023 - Aug 26 -Sep 6, 2024"
 description: "List of major changes on Grex: Hardware, cooling and power upgrades."
-titleIcon: "fa-solid fa-house-chimney"
+titleIcon: "fa-solid fa-wrench"
 banner: true
 #bannerContent: "**OS and Lustre Updates - May 2024**"
 bannerContent: "**Grex upgrade: SISF2023 - Aug 26 -Sep 6, 2024.**"

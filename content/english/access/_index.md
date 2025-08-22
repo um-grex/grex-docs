@@ -3,7 +3,7 @@ weight: 3500
 linkTitle: "Access and usage conditions"
 title: "Access and Usage Conditions"
 description: "All you need to know for accessing and using Grex."
-titleIcon: "fa-solid fa-house-chimney"
+titleIcon: "fa-solid fa-id-card"
 categories: ["Information"]
 #tags: ["Content management"]
 ---

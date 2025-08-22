@@ -3,7 +3,7 @@ weight: 8900
 linkTitle: "FAQ"
 title: "Frequently Asked Questions."
 description: "Frequently Asked Questions."
-titleIcon: "fa-solid fa-circle-question"
+titleIcon: "fa-solid fa-clipboard-question"
 categories: ["How-To", "Information"]
 banner: true
 bannerContent: "__Work in progress.__"

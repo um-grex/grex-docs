@@ -3,7 +3,7 @@ weight: 1500
 linkTitle: "LoRa walkthrough"
 Title: "LoRa walkthrough"
 description: "Workshops and Training Material - 2025 AI LoRA example"
-titleIcon: "fa-solid fa-cubes"
+#titleIcon: "fa-solid fa-cubes"
 categories: ["Training"]
 #tags: ["Content management"]
 #draft: true

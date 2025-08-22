@@ -3,7 +3,7 @@ weight: 4000
 linkTitle: "Connect / Transfer data"
 title: "Connecting to Grex and Transferring data"
 description: "All you need to know to start using Grex: connect an transfer data."
-titleIcon: "fa-solid fa-house-chimney"
+titleIcon: "fa-solid fa-rocket"
 categories: ["How-To", "Information"]
 #tags: ["Content management"]
 ---

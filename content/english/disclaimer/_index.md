@@ -3,14 +3,14 @@ weight: 9250
 title: "Disclaimer"
 linktitle: "Disclaimer"
 description: "Disclaimer."
-#titleIcon: "fa-solid fa-house-chimney"
+titleIcon: "fa-solid fa-triangle-exclamation"
 categories: ["Information"]
 #tags: ["Important"]
 ---
 
 ---
 
-> This website is a place for __technical information__ related to certain Research Computing resources, maintained for the benefit of the researchers at the University of Manitoba, [UofM](https://umanitoba.ca/ "University of Manitoba") and their external collaborators. The information, which is technical in nature, represents advice on best practices for using the Research Computing resources (HPC). Parts of the website are preliminary/draft texts released provisionally, in order to speed up the documentation process, and may contain inaccuracies and errors.
+> This website is a place for __technical information__ related to certain Research Computing resources, maintained for the benefit of the researchers at the [University of Manitoba](https://umanitoba.ca/) and their external collaborators. The information, which is technical in nature, represents advice on best practices for using the Research Computing resources (HPC). Parts of the website are preliminary/draft texts released provisionally, in order to speed up the documentation process, and may contain inaccuracies and errors.
 
 ---
 
@@ -18,7 +18,7 @@ categories: ["Information"]
 
 ---
 
-> This website does not represent official views, policies, or standards of University of Manitoba, [UofM](https://umanitoba.ca/governance/governing-documents), BC DRI group, Prairies DRI group or the __Digital Research Alliance of Canada__, [DRAC](https://alliancecan.ca/) (**the Alliance**), formerly known as Compute Canada. Please refer to the official sites of the above-mentioned institutions and organizations for more information.
+> This website does not represent official views, policies, or standards of [University of Manitoba](https://umanitoba.ca/governance/governing-documents "UofM Governance"), BC DRI group, Prairies DRI group or the [Digital Research Alliance of Canada](https://alliancecan.ca/) (formerly known as Compute Canada). Please refer to the official sites of the above-mentioned institutions and organizations for more information.
 
 ---
 
@@ -31,7 +31,7 @@ __WestGrid__ ceased operations on April 1st, 2022. The former WestGrid instituti
 {{< /alert >}}
 
 {{< alert type="warning" >}}
-__Compute Canada__ ceased operations on April 1st, 2022. The __Digital Research Alliance of Canada__, [the Alliance](https://alliancecan.ca/), is coordinating the national advanced research computing [ARC](https://alliancecan.ca/en/services/advanced-research-computing) services.
+__Compute Canada__ ceased operations on April 1st, 2022. The [Digital Research Alliance of Canada](https://alliancecan.ca/), is coordinating the national advanced research computing [ARC](https://alliancecan.ca/en/services/advanced-research-computing) services.
 {{< /alert >}}
 
 ---

@@ -3,7 +3,7 @@ weight: 1600
 linkTitle: "2024"
 Title: "Workshops - 2024"
 description: "Workshops and Training Material - 2024"
-titleIcon: "fa-solid fa-cubes"
+#titleIcon: "fa-solid fa-cubes"
 categories: ["Training"]
 #tags: ["Content management"]
 #draft: true

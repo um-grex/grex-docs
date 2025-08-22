@@ -1,9 +1,9 @@
 ---
-weight: 8500
+weight: 9000
 title: "Getting Help"
 linktitle: "Getting Help"
-description: Getting help and support."
-titleIcon: "fa-solid fa-house-chimney"
+description: "Getting help and support."
+titleIcon: "fa-solid fa-circle-info"
 categories: ["Information"]
 #tags: ["Content management"]
 ---

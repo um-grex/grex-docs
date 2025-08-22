@@ -3,7 +3,7 @@ weight: 6600
 linkTitle: "Software Specific Notes"
 title: "Software Specific Notes"
 description: "Documntation on how to run specific packages like VASP, ORCA, ... etc."
-titleIcon: "fa-solid fa-house-chimney"
+titleIcon: "fa-solid fa-glasses"
 categories: ["Software", "Scheduler"]
 #tags: ["Content management"]
 ---

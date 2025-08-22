@@ -3,7 +3,7 @@ weight: 4500
 linkTitle: "Storage and Data"
 title: "Storage and Data"
 description: "All you need to know about storage on Grex."
-titleIcon: "fa-solid fa-house-chimney"
+titleIcon: "fa-solid fa-database"
 #categories: ["How-To", "Information"]
 #tags: ["Content management"]
 ---
