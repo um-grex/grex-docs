@@ -42,6 +42,8 @@ publishDir             = 'public'
 #================================================================================
 # Specific configuration
 #================================================================================
+[outputs]
+  home = ['html', 'json']
 
 [params]
   logo               = 'logo/um_logo_email_signature.png'
