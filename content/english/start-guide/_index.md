@@ -25,13 +25,11 @@ Grex is an UManitoba High Performance Computing (HPC) system, first put in produ
 
 **5.** Make a sample job script, call it, for example, __sleep-job.sh__ . The job script is a text file that has a special syntax to be recognized by SLURM. You can use the editor __nano__ , or any other right on the Grex SSH prompt (vim, emacs, pico, ... etc); you can also create the script file on your machine and upload to Grex using your SFTP client or scp.
 
-{{< collapsible title="Script example for a test job" >}}
 {{< snippet
     file="scripts/jobs/templates/sleep-job.sh"
     caption="sleep-job.sh"
     codelang="bash"
 />}}
-{{< /collapsible >}}
 
 **6.** Submit the script using __sbatch__ command, to the __skylake__ partition using:
 
