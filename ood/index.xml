@@ -1,74 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>OpenOnDemand, HPC Portal on Grex</title><link>https://um-grex.github.io/grex-docs/ood/</link><description>Recent content in OpenOnDemand, HPC Portal on Grex</description><generator>Hugo</generator><language>en</language><copyright>The MIT License (MIT) Copyright © 2023 UM-Grex</copyright><atom:link href="https://um-grex.github.io/grex-docs/ood/index.xml" rel="self" type="application/rss+xml"/><item><title>Desktops</title><link>https://um-grex.github.io/grex-docs/ood/desktops/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/ood/desktops/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
-&lt;p>From the menu &lt;strong>Interactive Apps&lt;/strong>, it is possible to start a given application and use it for interactive work. Some applications have already predefined settings, like the partition and allow only to adjust the wall time. As an example, the _Grex Desktop Simplified _ thar uses by default the test partition.&lt;/p>
-&lt;p>To start an application, click on the name of the application, then fill the required parameters for slurm (accounting group, partition name, number of cpus, wall time, &amp;hellip;).&lt;/p></description></item><item><title>Interactive Apps</title><link>https://um-grex.github.io/grex-docs/ood/interactive-apps/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/ood/interactive-apps/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
+&lt;p>From the menu &lt;strong>Interactive Apps&lt;/strong>, it is possible to start a given application and use it for interactive work. Some applications have already predefined settings, like the slurm partition and allow only to adjust the wall time. As an example, the &lt;em>Grex Desktop Simplified&lt;/em> that uses by default the &lt;strong>test&lt;/strong> partition.&lt;/p>
+&lt;p>To start an application, click on the name of the application, then fill the required parameters for slurm (accounting group, partition name, number of cpus, wall time, email notifications, &amp;hellip;etc).&lt;/p></description></item><item><title>Custom Interactive Apps</title><link>https://um-grex.github.io/grex-docs/ood/interactive-apps/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/ood/interactive-apps/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
-&lt;!--
-
-From the menu __Interactive Apps__, it is possible to start a given application and use it for interactive work. Some applications have already predefined settings, like the partition and allow only to adjust the wall time. As an example, the _Grex Desktop Simplified _ thar uses by default the test partition.
-
-To start an application, click on the name of the application, then fill the required parameters for slurm (accounting group, partition name, number of cpus, wall time, ...).
-
-Most of the applications require to set up one of the following parameters:
-
-> * Slurm accounting group: if you have access to one accounting group (def-professor), the scheduler will pick it by default. If you have more than one accounting group, you need to specify the accounting group to use.
-
-> * Wall time: crrently, there is a limit of 6 hours for most of the applications.
-
-### Grex Desktop Simplified
-
-This is a very simplified instance of a Desktop. It requires only to setup the accounting group (def-professor), the wall time and if needed add the email notifications. The following snapshot shows an example of settings:
-
-&lt;div class="sc-collapsible-container">
- &lt;div class="sc-collapsible-header">Grex Desktop Simplified setup&lt;/div>
- &lt;div class="sc-collapsible-content">&lt;img
- src="https://um-grex.github.io/grex-docs/ood/simplified-desktop-setup.png"
- alt="Grex Desktop Simplified setup"
- class="Grex Desktop Simplified setup"/>&lt;/div>
-&lt;/div>
-
-
-Once all the fields are filled, you can lauch the application using the _Launch_ button. This will submit a job to compute node (in this case, it will run on the test partition). First, it goes to the queue and start when the resources are available:
-
-&lt;div class="sc-collapsible-container">
- &lt;div class="sc-collapsible-header">Grex Desktop Simplified Queued&lt;/div>
- &lt;div class="sc-collapsible-content">&lt;img
- src="https://um-grex.github.io/grex-docs/ood/simplified-desktop-queued.png"
- alt="Grex Desktop Simplified Queued"
- class="Grex Desktop Simplified Queued"/>&lt;/div>
-&lt;/div>
-
-
-And once the resources are available, the interactive app will show up as running:
-
-&lt;div class="sc-collapsible-container">
- &lt;div class="sc-collapsible-header">Grex Desktop Simplified Running&lt;/div>
- &lt;div class="sc-collapsible-content">&lt;img
- src="https://um-grex.github.io/grex-docs/ood/simplified-desktop-running.png"
- alt="Grex Desktop Simplified Queued"
- class="Grex Desktop Simplified Queued"/>&lt;/div>
-&lt;/div>
-
-
-At this point, you may want to decrease the compression and image quality for not having a slow application. 
-
-Then, click on the buttom _Launch Grex Desktop Simplified_ to start the application. After starting the Desktop, you will have access to your files and a terminal. In the following snapshot, it shows a terminal where we loaded matlab module and started matlab interface. Note that there is a dedicated application for matlab that you can use. We are loading matlab here to show how the desktop looks like. The Desktop can be used to start any other program that uses GUI.
-
-&lt;div class="sc-collapsible-container">
- &lt;div class="sc-collapsible-header">Grex Desktop Simplified Demonstration&lt;/div>
- &lt;div class="sc-collapsible-content">&lt;img
- src="https://um-grex.github.io/grex-docs/ood/simplified-desktop-demo.png"
- alt="Grex Desktop Simplified Demonstration"
- class="Grex Desktop Simplified Demonstration"/>&lt;/div>
-&lt;/div>
-
- 
--->
-&lt;!-- &lt;div class="sc-treeview">&lt;div class="sc-alert sc-alert-warning">No data available&lt;/div>&lt;/div>
- -->
-&lt;!-- Changes and update:
-* Last reviewed on: Jul 04, 2025.
---></description></item><item><title>Job Composer</title><link>https://um-grex.github.io/grex-docs/ood/job-composer/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/ood/job-composer/</guid><description>&lt;h2 id='openondemand-desktops'>OpenOnDemand Desktops&lt;a href='#openondemand-desktops' class='anchor'>#&lt;/a>
+&lt;p>For the common applications used on Grex, we have addedd separate &lt;a
+ href="https://um-grex.github.io/grex-docs/ood/#interactive-apps"
+ class="is-pretty-link">interactive applications&lt;/a
+>
+ to make it easier for users. Some of these applications are: Gaussview, Matlab, Mathematica, Relio, Paraview, OVITO, &amp;hellip; etc. Some of the applications may not show up in your dashboard as they are protected with a POSIX group. For example, if you do not have access to &lt;a
+ href="https://um-grex.github.io/grex-docs/specific-soft/gaussian/"
+ class="is-pretty-link">Gaussian&lt;/a
+>
+, &lt;strong>Gaussview&lt;/strong> will not show up in your dashboard. Some applications like stata, metashape are commercial. Therefore, they are set only for the groups who purchased the license.&lt;/p></description></item><item><title>Servers</title><link>https://um-grex.github.io/grex-docs/ood/servers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/ood/servers/</guid><description>&lt;h2 id='openondemand-servers'>OpenOnDemand Servers&lt;a href='#openondemand-servers' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>Using OOD, users can use RStudio, Jupyter, Code server &amp;hellip; etc.&lt;/p>
+&lt;p>All these applications work in the same way as for &lt;a
+ href="https://um-grex.github.io/grex-docs/ood/desktops/"
+ class="is-pretty-link">Desktops&lt;/a
+>
+ in the previous section. In other terms, before launching these application, a user has to set some parameters or resources to use (like the accounting group, slurm partition, number of cpus, &amp;hellip;etc.) before launching the application. Once the job is granted, click on the link with name _&lt;em>Connect to &amp;hellip;&lt;/em> to start the server. At the time of writing this documentation, Code server, Matlab Server, RStudio Server and JupeyterLab server are available.&lt;/p></description></item><item><title>Job Composer</title><link>https://um-grex.github.io/grex-docs/ood/job-composer/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/ood/job-composer/</guid><description>&lt;h2 id='openondemand-desktops'>OpenOnDemand Desktops&lt;a href='#openondemand-desktops' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;!-- &lt;div class="sc-treeview">&lt;div class="sc-alert sc-alert-warning">No data available&lt;/div>&lt;/div>
  -->

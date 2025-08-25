@@ -32,17 +32,86 @@ Grex is using the Duo instance provided by the Alliance. The available additiona
  href="https://www.computecanada.ca/research-portal/account-management/apply-for-an-account/"
  class="is-pretty-link">Getting Access&lt;/a
 >
-. You will also need the DNS name of Grex Which is &lt;strong>grex.hpc.umanitoba.ca&lt;/strong>&lt;/p></description></item><item><title>Connect and Transfer data with OOD</title><link>https://um-grex.github.io/grex-docs/connecting/ood/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/connecting/ood/</guid><description>&lt;h2 id='osc-openondemand-on-grex'>OSC OpenOnDemand on Grex&lt;a href='#osc-openondemand-on-grex' class='anchor'>#&lt;/a>
+. You will also need the DNS name of Grex Which is &lt;strong>grex.hpc.umanitoba.ca&lt;/strong>&lt;/p></description></item><item><title>Connect and Transfer data with OOD</title><link>https://um-grex.github.io/grex-docs/connecting/ood/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/connecting/ood/</guid><description>&lt;p>OpenOnDemand (OOD) is a Web portal application for High-Performance Computing systems. It is available on Grex and it can be used to connect to grex and run applications. For more information about how to connect and use OOD, please refer to the main page: &lt;a
+ href="https://um-grex.github.io/grex-docs/ood/"
+ class="is-pretty-link">OOD&lt;/a
+>
+&lt;/p>
+&lt;!--
+
+## OSC OpenOnDemand on Grex
+---
+
+OpenOnDemand is a Web portal application for High-Performance Computing systems. It is used on many of the Top 500 HPC machines across the World.
+Grex's current OOD v.4.0.6 instance runs on a dedicated login node [**ood.hpc.umanitoba.ca**](https://ood.hpc.umanitoba.ca "Grex OOD").
+It is available only from UManitoba IP addresses -- that is, your computer should be on the UM Campus network or the UM VPN to connect. 
+
+To connect from outside the UM network, please install and start [UManitoba Virtual Private Network](https://umanitoba.ca/information-services-technology/my-security/vpn-support "UofM VPN"). OOD relies on in-browser VNC sessions; so, a modern browser with HTML5 support is required; we recommend Google Chrome or Firefox and its derivatives (Waterfox, for example).
+
+**Connect to OOD when on campus network:**
+
+> - Point your Web browser to [https://ood.hpc.umanitoba.ca](https://ood.hpc.umanitoba.ca "Grex OOD")
+> - Use your Alliance CCDB username and password to log in to Grex OOD.
+> - __New:__ use your **Alliance CCDB Duo second factor method** to continue logging in to Grex OOD.
+
+**Connect to OOD using [UManitoba VPN](https://umanitoba.ca/information-services-technology/my-security/vpn-support "UofM VPN"):**
+
+> - Make sure Umanitoba Ivanti Secure VPN Client is connected. Use UManitoba second factor auth (as of 2024, Microsoft Entra) if asked.
+> - Point your Web browser to [https://ood.hpc.umanitoba.ca](https://ood.hpc.umanitoba.ca "Grex OOD")
+> - Use your Alliance CCDB username and password to log in to Grex OOD.
+> - __New:__ use your **Alliance CCDB Duo second factor method** to continue logging in to Grex OOD.
+
+
+### Connect via OOD
+---
+
+First, the OOD host would present a Keycloak login page, followed by the usual Duo second factor prompt.
+
+When authenticated, you will see the following screen with the current Grex Message-of-the-day (MOTD):
+
+&lt;div class="sc-collapsible-container">
+ &lt;div class="sc-collapsible-header">Landing / MOTD page, OpenOndemand web portal on Grex&lt;/div>
+ &lt;div class="sc-collapsible-content">&lt;img
+ src="https://um-grex.github.io/grex-docs/ood/frontpage.png"
+ alt="OpenOnDemand Front Page"
+ class="OpenOnDemand Front Page"/>&lt;/div>
+&lt;/div>
+
+
+OOD expects user accounts and directories on Grex to be already created. Thus, new users who want to work with OOD should first connect to Grex normally, via SSH shell at least once, to make the creation of account, directories, and quota complete. Also, OOD creates a state directory under users' ``/home`` (__/home/$USER/ondemand__) where it keeps information about running and completed OOD jobs, shells, desktop sessions and such. Deleting the __ondemand__ directory while a job or session is running would likely cause the job or session to fail.
+
+&lt;div class="sc-alert sc-alert-warning">It is better to leave the &lt;strong>/home/$USER/ondemand&lt;/strong> directory alone!&lt;/div>
+
+
+### Transfer data
+---
+
+The _Files_ dropdown menu in the OOD Dashboard bar provides a File browser for each of the filesystems available to the user. 
+The _Files_ interface allows for uploading, downloading and editing of the files on the HPC cluster.
+
+&lt;div class="sc-collapsible-container">
+ &lt;div class="sc-collapsible-header">File view on OpenOndemand web portal on Grex&lt;/div>
+ &lt;div class="sc-collapsible-content">&lt;img
+ src="https://um-grex.github.io/grex-docs/ood/files.png"
+ alt=""
+ class=""/>&lt;/div>
+&lt;/div>
+
+
+-->
+&lt;h2 id='internal-links'>Internal links&lt;a href='#internal-links' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
-&lt;p>OpenOnDemand is a Web portal application for High-Performance Computing systems. It is used on many of the Top 500 HPC machines across the World.
-Grex&amp;rsquo;s current OOD v.3 instance runs on a dedicated login node &lt;a
- href="https://ood.hpc.umanitoba.ca"title="Grex OOD" id="grex-ood"
- class="is-pretty-link">&lt;strong>ood.hpc.umanitoba.ca&lt;/strong>&lt;/a
+&lt;ul>
+&lt;li>Run applications with &lt;a
+ href="https://um-grex.github.io/grex-docs/ood/"
+ class="is-pretty-link">OOD&lt;/a
 >
-.
-It is available only from UManitoba IP addresses &amp;ndash; that is, your computer should be on the UM Campus network or the UM VPN to connect.&lt;/p>
-&lt;p>To connect from outside the UM network, please install and start &lt;a
- href="https://umanitoba.ca/information-services-technology/my-security/vpn-support"title="UofM VPN" id="uofm-vpn"
- class="is-pretty-link">UManitoba Virtual Private Network&lt;/a
+&lt;/li>
+&lt;/ul>
+&lt;h2 id='external-links'>External links&lt;a href='#external-links' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>&lt;a
+ href="https://openondemand.org/"
+ class="is-pretty-link">Homepage of the OnDemand project&lt;/a
 >
-. OOD relies on in-browser VNC sessions; so, a modern browser with HTML5 support is required; we recommend Google Chrome or Firefox and its derivatives (Waterfox, for example).&lt;/p></description></item></channel></rss>
+&lt;/p></description></item></channel></rss>

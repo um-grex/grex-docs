@@ -120,16 +120,10 @@
  href="https://libguides.lib.umanitoba.ca/researchservices"
  class="is-pretty-link">Libraries&lt;/a
 >
- Research Services.&lt;/p></description></item><item><title>Getting Help</title><link>https://um-grex.github.io/grex-docs/support/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/support/</guid><description>&lt;h2 id='the-alliance-support'>The Alliance support&lt;a href='#the-alliance-support' class='anchor'>#&lt;/a>
-&lt;/h2>&lt;hr>
-&lt;!--
-The single point support contact for Compute Canada is [mailto:support@tech.alliancecan.ca](mailto:support@tech.alliancecan.ca "mailto:support@tech.alliancecan.ca")
--->
-&lt;p>The single point support contact for the Alliance is &lt;strong>support@tech.alliancecan.ca&lt;/strong>&lt;/p>
-&lt;p>Emailing to this address will create a &lt;strong>support ticket&lt;/strong> in the Alliance ticketing system (Help Desk). We support both local (Grex) and National resources through the Alliance support ticketing system. This is the main support contact for our HPC group, and it is a preferred method (as compared to contacting an HPC analyst directly). If you use your UManitoba email address (email registered in CCDB) to contact the Alliance support, it will reach us faster because the system will automatically detect it and assign your username to the generated ticket.&lt;/p></description></item><item><title>Friendly Organizations</title><link>https://um-grex.github.io/grex-docs/friends/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/friends/</guid><description>&lt;div class="sc-treeview">&lt;ul
+ Research Services.&lt;/p></description></item><item><title>Friendly Organizations</title><link>https://um-grex.github.io/grex-docs/friends/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/friends/</guid><description>&lt;div class="sc-treeview">&lt;ul
  class='sc-treeview-tree'>&lt;li class="">
  &lt;div class="sc-treeview-label">&lt;div class="sc-treeview-icon">
- &lt;i class="fa-solid fa-house-chimney">&lt;/i>
+ &lt;i class="fa-solid fa-folder-tree">&lt;/i>
  &lt;/div>&lt;p class="is-marginless">
  &lt;a
  href="https://um-grex.github.io/grex-docs/friends/alliancecan/"
@@ -139,7 +133,7 @@ The single point support contact for Compute Canada is [mailto:support@tech.alli
  &lt;/p>
  &lt;/div>&lt;/li>&lt;li class="">
  &lt;div class="sc-treeview-label">&lt;div class="sc-treeview-icon">
- &lt;i class="fa-solid fa-house-chimney">&lt;/i>
+ &lt;i class="fa-solid fa-folder-tree">&lt;/i>
  &lt;/div>&lt;p class="is-marginless">
  &lt;a
  href="https://um-grex.github.io/grex-docs/friends/localit/"
@@ -161,11 +155,17 @@ The single point support contact for Compute Canada is [mailto:support@tech.alli
  href="https://um-grex.github.io/grex-docs/changes/linux-slurm-update/"
  class="is-pretty-link">changes&lt;/a
 >
-.&lt;/p></description></item><item><title>Disclaimer</title><link>https://um-grex.github.io/grex-docs/disclaimer/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/disclaimer/</guid><description>&lt;hr>
+.&lt;/p></description></item><item><title>Getting Help</title><link>https://um-grex.github.io/grex-docs/support/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/support/</guid><description>&lt;h2 id='the-alliance-support'>The Alliance support&lt;a href='#the-alliance-support' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;!--
+The single point support contact for Compute Canada is [mailto:support@tech.alliancecan.ca](mailto:support@tech.alliancecan.ca "mailto:support@tech.alliancecan.ca")
+-->
+&lt;p>The single point support contact for the Alliance is &lt;strong>support@tech.alliancecan.ca&lt;/strong>&lt;/p>
+&lt;p>Emailing to this address will create a &lt;strong>support ticket&lt;/strong> in the Alliance ticketing system (Help Desk). We support both local (Grex) and National resources through the Alliance support ticketing system. This is the main support contact for our HPC group, and it is a preferred method (as compared to contacting an HPC analyst directly). If you use your UManitoba email address (email registered in CCDB) to contact the Alliance support, it will reach us faster because the system will automatically detect it and assign your username to the generated ticket.&lt;/p></description></item><item><title>Disclaimer</title><link>https://um-grex.github.io/grex-docs/disclaimer/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/disclaimer/</guid><description>&lt;hr>
 &lt;blockquote>
-&lt;p>This website is a place for &lt;strong>technical information&lt;/strong> related to certain Research Computing resources, maintained for the benefit of the researchers at the University of Manitoba, &lt;a
- href="https://umanitoba.ca/"title="University of Manitoba" id="university-of-manitoba"
- class="is-pretty-link">UofM&lt;/a
+&lt;p>This website is a place for &lt;strong>technical information&lt;/strong> related to certain Research Computing resources, maintained for the benefit of the researchers at the &lt;a
+ href="https://umanitoba.ca/"
+ class="is-pretty-link">University of Manitoba&lt;/a
 >
  and their external collaborators. The information, which is technical in nature, represents advice on best practices for using the Research Computing resources (HPC). Parts of the website are preliminary/draft texts released provisionally, in order to speed up the documentation process, and may contain inaccuracies and errors.&lt;/p></description></item><item><title>Glossary</title><link>https://um-grex.github.io/grex-docs/glossary/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/glossary/</guid><description>&lt;h2 id='a'>A&lt;a href='#a' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;ul>
