@@ -169,9 +169,11 @@ The single point support contact for Compute Canada is [mailto:support@tech.alli
 >
  and their external collaborators. The information, which is technical in nature, represents advice on best practices for using the Research Computing resources (HPC). Parts of the website are preliminary/draft texts released provisionally, in order to speed up the documentation process, and may contain inaccuracies and errors.&lt;/p></description></item><item><title>Glossary</title><link>https://um-grex.github.io/grex-docs/glossary/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/glossary/</guid><description>&lt;h2 id='a'>A&lt;a href='#a' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;ul>
+&lt;li>&lt;strong>ACL&lt;/strong> :: Access Control List&lt;/li>
 &lt;li>&lt;strong>AI&lt;/strong> :: Artificial Intelligence&lt;/li>
+&lt;li>&lt;strong>AOCC&lt;/strong> :: AMD Compilers Collection&lt;/li>
 &lt;li>&lt;strong>ARC&lt;/strong> :: Advanced Research Computing&lt;/li>
-&lt;li>&lt;strong>AVX&lt;/strong> :: Advanced Vector eXtensions&lt;/li>
+&lt;li>&lt;strong>AVX&lt;/strong> :: Advanced Vector eXtensions on x86_64 CPUs&lt;/li>
 &lt;/ul>
 &lt;h2 id='b'>B&lt;a href='#b' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;ul>
@@ -179,11 +181,12 @@ The single point support contact for Compute Canada is [mailto:support@tech.alli
 &lt;/ul>
 &lt;h2 id='c'>C&lt;a href='#c' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;ul>
-&lt;li>&lt;strong>CPU&lt;/strong> :: Central Processing Unit&lt;/li>
+&lt;li>&lt;strong>CPU&lt;/strong> :: Central Processing Unit, a computer&amp;rsquo;s processor&lt;/li>
 &lt;li>&lt;strong>CC&lt;/strong> :: Compute Canada, a former organization replaced by DRAC&lt;/li>
 &lt;li>&lt;strong>CCDB&lt;/strong> :: CC User Database, a user accounts portal maintained by DRAC&lt;/li>
 &lt;li>&lt;strong>CVMFS&lt;/strong> :: Cern Virtual Machines File System&lt;/li>
-&lt;li>&lt;strong>CY&lt;/strong>:: Core Year, a unit of CPU and GPU resources used by CCDB and RAC&lt;/li>
+&lt;li>&lt;strong>CUDA&lt;/strong> :: Compute Unified Device Architecture, an NVidia library for GPU calculations&lt;/li>
+&lt;li>&lt;strong>CY&lt;/strong>:: Core Year, the unit of CPU and GPU resources used by CCDB and RAC&lt;/li>
 &lt;/ul>
 &lt;h2 id='d'>D&lt;a href='#d' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;ul>
@@ -199,6 +202,7 @@ The single point support contact for Compute Canada is [mailto:support@tech.alli
 &lt;/h2>&lt;ul>
 &lt;li>&lt;strong>GCC&lt;/strong> :: GNU Compiler Collection&lt;/li>
 &lt;li>&lt;strong>GPU&lt;/strong> :: Graphics Processing Unit&lt;/li>
+&lt;li>&lt;strong>GROMACS&lt;/strong> :: GROningen MAchine for Chemical Simulations&lt;/li>
 &lt;li>&lt;strong>GUI&lt;/strong> :: Graphical User Interface&lt;/li>
 &lt;/ul>
 &lt;h2 id='h'>H&lt;a href='#h' class='anchor'>#&lt;/a>
@@ -215,10 +219,18 @@ The single point support contact for Compute Canada is [mailto:support@tech.alli
 &lt;li>&lt;strong>IST&lt;/strong> :: Information Services and Technologies at UM&lt;/li>
 &lt;/ul>
 &lt;h2 id='j'>J&lt;a href='#j' class='anchor'>#&lt;/a>
-&lt;/h2>&lt;h2 id='k'>K&lt;a href='#k' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;ul>
+&lt;li>&lt;strong>JuPyteR&lt;/strong> :: an interactive debugging and visualization tool for Python, Julia, R and other programming languages.&lt;/li>
+&lt;/ul>
+&lt;h2 id='k'>K&lt;a href='#k' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;h2 id='l'>L&lt;a href='#l' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;ul>
+&lt;li>&lt;strong>LAMMPS&lt;/strong> :: Large-scale Atomic/Molecular Massively Parallel Simulator&lt;/li>
 &lt;li>&lt;strong>LAPACK&lt;/strong> :: Linear Algebra PACKage, used together with BLAS&lt;/li>
+&lt;li>&lt;strong>LDAP&lt;/strong> :: Lightweight Directory Access Protocol, an user authenticaton service&lt;/li>
+&lt;li>&lt;strong>LLM&lt;/strong> :: Large Language Model, a flavour of ML&lt;/li>
+&lt;li>&lt;strong>LMod&lt;/strong> :: a software environment module system written in Lua at TACC&lt;/li>
+&lt;li>&lt;strong>Lustre&lt;/strong> :: a parallel filesystem for HPC&lt;/li>
 &lt;/ul>
 &lt;h2 id='m'>M&lt;a href='#m' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;ul>
@@ -229,12 +241,15 @@ The single point support contact for Compute Canada is [mailto:support@tech.alli
 &lt;/ul>
 &lt;h2 id='n'>N&lt;a href='#n' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;ul>
-&lt;li>&lt;strong>NVMe&lt;/strong> :: Non-Volatile Memory express&lt;/li>
+&lt;li>&lt;strong>NetCDF&lt;/strong> :: Network Common Data Form, a set of machine independed data formats&lt;/li>
+&lt;li>&lt;strong>NFS&lt;/strong> :: Network File System for Linux&lt;/li>
+&lt;li>&lt;strong>NVMe&lt;/strong> :: Non-Volatile Memory express, a form of SSD disk&lt;/li>
 &lt;/ul>
 &lt;h2 id='o'>O&lt;a href='#o' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;ul>
-&lt;li>&lt;strong>OMP&lt;/strong> :: Open Multi-Processing&lt;/li>
-&lt;li>&lt;strong>OOD&lt;/strong> :: Open OnDemand&lt;/li>
+&lt;li>&lt;strong>OCI&lt;/strong> :: Open Containers Initiative, a container image format specification&lt;/li>
+&lt;li>&lt;strong>OMP&lt;/strong> , &lt;strong>OpenMP&lt;/strong> :: Open Multi-Processing is a program interface for shared-memory multi-processing&lt;/li>
+&lt;li>&lt;strong>OOD&lt;/strong> :: Open OnDemand , a web portal for HPC&lt;/li>
 &lt;li>&lt;strong>OSS&lt;/strong> :: Object Storage Server&lt;/li>
 &lt;li>&lt;strong>OST&lt;/strong> :: Object Storage Target&lt;/li>
 &lt;/ul>
@@ -242,17 +257,21 @@ The single point support contact for Compute Canada is [mailto:support@tech.alli
 &lt;/h2>&lt;ul>
 &lt;li>&lt;strong>PAICE&lt;/strong> :: Pan-Canadian AI Compute Environment&lt;/li>
 &lt;li>&lt;strong>PI&lt;/strong> :: Principal Investigator&lt;/li>
+&lt;li>&lt;strong>PMIx&lt;/strong> :: Process Management Interface for Exascale, a process kickstart system for MPI and SLURM&lt;/li>
 &lt;/ul>
 &lt;h2 id='q'>Q&lt;a href='#q' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;h2 id='r'>R&lt;a href='#r' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;ul>
 &lt;li>&lt;strong>RAC&lt;/strong> :: Resource Allocation Competition&lt;/li>
+&lt;li>&lt;strong>RAM&lt;/strong> :: Random Access Memory&lt;/li>
+&lt;li>&lt;strong>RAS&lt;/strong> :: Rapid Access Service&lt;/li>
 &lt;li>&lt;strong>RDM&lt;/strong> :: Research Data Management&lt;/li>
 &lt;/ul>
 &lt;h2 id='s'>S&lt;a href='#s' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;ul>
 &lt;li>&lt;strong>SLURM&lt;/strong> :: Simple Linux Utility for Resource Management&lt;/li>
 &lt;li>&lt;strong>SSH&lt;/strong> :: Secure SHell&lt;/li>
+&lt;li>&lt;strong>SSD&lt;/strong> :: Solid State Disk&lt;/li>
 &lt;li>&lt;strong>SSL&lt;/strong> :: Secure Socket Layers, same as TLS&lt;/li>
 &lt;/ul>
 &lt;h2 id='t'>T&lt;a href='#t' class='anchor'>#&lt;/a>
@@ -265,6 +284,7 @@ The single point support contact for Compute Canada is [mailto:support@tech.alli
 &lt;/ul>
 &lt;h2 id='v'>V&lt;a href='#v' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;ul>
+&lt;li>&lt;strong>VASP&lt;/strong> :: Vienna Ab initio Simulation Package&lt;/li>
 &lt;li>&lt;strong>VM&lt;/strong> :: Virtual Machine&lt;/li>
 &lt;/ul>
 &lt;h2 id='w'>W&lt;a href='#w' class='anchor'>#&lt;/a>
@@ -272,7 +292,10 @@ The single point support contact for Compute Canada is [mailto:support@tech.alli
 &lt;li>&lt;strong>WAN&lt;/strong> :: A Wide Area Network (WAN) is a network that spans several geographically distributed locations.&lt;/li>
 &lt;/ul>
 &lt;h2 id='x'>X&lt;a href='#x' class='anchor'>#&lt;/a>
-&lt;/h2>&lt;h2 id='y'>Y&lt;a href='#y' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;ul>
+&lt;li>&lt;strong>X11&lt;/strong> :: A GUI for UNIX and Linux based systems&lt;/li>
+&lt;/ul>
+&lt;h2 id='y'>Y&lt;a href='#y' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;h2 id='z'>Z&lt;a href='#z' class='anchor'>#&lt;/a>
 &lt;/h2>&lt;hr>
 &lt;!-- Changes and update:

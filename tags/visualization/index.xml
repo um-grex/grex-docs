@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Visualization on Grex</title><link>https://um-grex.github.io/grex-docs/tags/visualization/</link><description>Recent content in Visualization on Grex</description><generator>Hugo</generator><language>en</language><copyright>The MIT License (MIT) Copyright © 2023 UM-Grex</copyright><atom:link href="https://um-grex.github.io/grex-docs/tags/visualization/index.xml" rel="self" type="application/rss+xml"/><item><title>Desktops</title><link>https://um-grex.github.io/grex-docs/ood/desktops/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/ood/desktops/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>From the menu &lt;strong>Interactive Apps&lt;/strong>, it is possible to start a given application and use it for interactive work. Some applications have already predefined settings, like the slurm partition and allow only to adjust the wall time. As an example, the &lt;em>Grex Desktop Simplified&lt;/em> that uses by default the &lt;strong>test&lt;/strong> partition.&lt;/p>
+&lt;p>To start an application, click on the name of the application, then fill the required parameters for slurm (accounting group, partition name, number of cpus, wall time, email notifications, &amp;hellip;etc).&lt;/p></description></item><item><title>Custom Interactive Apps</title><link>https://um-grex.github.io/grex-docs/ood/interactive-apps/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/ood/interactive-apps/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>For the common applications used on Grex, we have addedd separate &lt;a
+ href="https://um-grex.github.io/grex-docs/ood/#interactive-apps"
+ class="is-pretty-link">interactive applications&lt;/a
+>
+ to make it easier for users. Some of these applications are: Gaussview, Matlab, Mathematica, Relio, Paraview, OVITO, &amp;hellip; etc. Some of the applications may not show up in your dashboard as they are protected with a POSIX group. For example, if you do not have access to &lt;a
+ href="https://um-grex.github.io/grex-docs/specific-soft/gaussian/"
+ class="is-pretty-link">Gaussian&lt;/a
+>
+, &lt;strong>Gaussview&lt;/strong> will not show up in your dashboard. Some applications like stata, metashape are commercial. Therefore, they are set only for the groups who purchased the license.&lt;/p></description></item><item><title>Servers</title><link>https://um-grex.github.io/grex-docs/ood/servers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/ood/servers/</guid><description>&lt;h2 id='openondemand-servers'>OpenOnDemand Servers&lt;a href='#openondemand-servers' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>Using OOD, users can use RStudio, Jupyter, Code server &amp;hellip; etc.&lt;/p>
+&lt;p>All these applications work in the same way as for &lt;a
+ href="https://um-grex.github.io/grex-docs/ood/desktops/"
+ class="is-pretty-link">Desktops&lt;/a
+>
+ in the previous section. In other terms, before launching these application, a user has to set some parameters or resources to use (like the accounting group, slurm partition, number of cpus, &amp;hellip;etc.) before launching the application. Once the job is granted, click on the link with name _&lt;em>Connect to &amp;hellip;&lt;/em> to start the server. At the time of writing this documentation, Code server, Matlab Server, RStudio Server and JupeyterLab server are available.&lt;/p></description></item><item><title>OpenOnDemand, HPC Portal</title><link>https://um-grex.github.io/grex-docs/ood/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/ood/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>&lt;a
+ href="https://openondemand.org/"title="OpenOnDemand" id="openondemand"
+ class="is-pretty-link">OpenOnDemand&lt;/a
+>
+ or &lt;strong>OOD&lt;/strong> for short, is an open source Web portal for High-Performance computing, developed at Ohio Supercomputing Center. OOD makes it easier for beginner HPC users to access the resources via a Web interface. OOD also allows for interactive, visualization and other Linux Desktop applications to be accessed on HPC systems via a convenient Web user interface.&lt;/p>
+&lt;blockquote>
+&lt;ul>
+&lt;li>Since the end of &lt;strong>October 2021&lt;/strong>, OpenOnDemand version 2 is officially in production on Grex.&lt;/li>
+&lt;li>Since the beginning of &lt;strong>January 2023&lt;/strong>, OpenOnDemand version 3 is officially in production on Grex.&lt;/li>
+&lt;li>Since the beginning of &lt;strong>February 2025&lt;/strong>, OpenOnDemand version 4 is officially in production on Grex.&lt;/li>
+&lt;/ul>&lt;/blockquote>
+&lt;p>For more general OOD information, see the &lt;a
+ href="https://joss.theoj.org/papers/10.21105/joss.00622"title="OpenOnDemand Paper" id="openondemand-paper"
+ class="is-pretty-link">OpenOnDemand paper&lt;/a
+>
+&lt;/p></description></item></channel></rss>

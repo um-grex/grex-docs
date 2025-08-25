@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Containers on Grex</title><link>https://um-grex.github.io/grex-docs/tags/containers/</link><description>Recent content in Containers on Grex</description><generator>Hugo</generator><language>en</language><copyright>The MIT License (MIT) Copyright © 2023 UM-Grex</copyright><atom:link href="https://um-grex.github.io/grex-docs/tags/containers/index.xml" rel="self" type="application/rss+xml"/><item><title>Containers for Software</title><link>https://um-grex.github.io/grex-docs/software/containers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/software/containers/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>Linux Containers are means to isolate software dependencies from the base Linux operating system. Several different Linux container engines exist, most notably &lt;a
+ href="https://www.docker.com"
+ class="is-pretty-link">Docker&lt;/a
+>
+ which was first to emerge as the most popular tool in the DevOps community.&lt;/p>
+&lt;p>Since then, a lot of work had been done by major Linux players like Google, RedHat and others to develop an open standard for container runtimes, which developed based on Docker, &lt;a
+ href="https://opencontainers.org/"
+ class="is-pretty-link">OCI&lt;/a
+>
+.&lt;/p>
+&lt;p>There are HPC-specific container engines/runtimes that offer similar or equivalent functionality but allow for easier integration with shared Linux HPC systems. At the time of writing, the most widely used of them is the &lt;a
+ href="https://sylabs.io/guides/3.11/user-guide/"
+ class="is-pretty-link">Singularity&lt;/a
+>
+ container system, developed by a company called SyLabs, and its fork, a Linux Foundation project called &lt;a
+ href="https://apptainer.org/"
+ class="is-pretty-link">Apptainer&lt;/a
+>
+.
+They are &lt;a
+ href="https://apptainer.org/docs/user/latest/singularity_compatibility.html"
+ class="is-pretty-link">compatible&lt;/a
+>
+ with each other. Singularity/Apptainer provides functionality for running most Docker images by converting them to the Singularity Image format (SIF). However, Singularity/Apptainer own format is &lt;a
+ href="https://apptainer.org/docs/user/latest/docker_and_oci.html#differences-and-limitations-vs-docker"
+ class="is-pretty-link">not completely OCI-compatible&lt;/a
+>
+, so there exists Docker images that would not work properly.&lt;/p></description></item><item><title>CVMFS and the Alliance software stack</title><link>https://um-grex.github.io/grex-docs/software/cern-vmfs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/software/cern-vmfs/</guid><description>&lt;h2 id='cc-cernvmfs-on-grex'>CC CernVMFS on Grex&lt;a href='#cc-cernvmfs-on-grex' class='anchor'>#&lt;/a>
+&lt;/h2>&lt;hr>
+&lt;p>&lt;a
+ href="https://cernvm.cern.ch/portal/filesystem"
+ class="is-pretty-link">CVMFS or CernVM FS&lt;/a
+>
+ stands for CernVM File System. It provides a scalable, reliable and low-maintenance software distribution service. CVMFS was originally developed to assist High Energy Physics (HEP) collaborations to deploy software on the worldwide-distributed computing infrastructure used to run data processing applications. Since then it has been used as a a generic way of distributing software.
+Presently, we use CernVMFS (CVMFS) to provide the Alliance&amp;rsquo;s (or Compute Canada&amp;rsquo;s) software stack. Through the Alliance CVMVS servers, several other publically available CVMFS software repositories are available as well.
+The examples are a Singularity/Apptainer repository from &lt;a
+ href="https://opensciencegrid.org/"title="OpenScienceGrid" id="opensciencegrid"
+ class="is-pretty-link">OpenScienceGrid&lt;/a
+>
+, Extreme-Scale Scientific Software Stack &lt;a
+ href="https://e4s-project.github.io/"
+ class="is-pretty-link">E4S&lt;/a
+>
+, and a Genomics software colection (GenPipes/MUGQIC) from &lt;a
+ href="https://computationalgenomics.ca/"
+ class="is-pretty-link">C3G&lt;/a
+>
+. Note that we can only &amp;ldquo;pull&amp;rdquo; the software from these repositories. To actually add or change software, datasets, etc., or receive support, the respective organizations controlling these CVMFS repositories should be contacted directly.&lt;/p></description></item></channel></rss>
