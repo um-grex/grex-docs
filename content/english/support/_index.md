@@ -69,6 +69,13 @@ Monday - Friday
 We also provide small-group workshops on Research Computing topics when there is enough demand. Contact us if you are interested  in having a workshop on a particular topic.
 {{< /alert >}}
 
+
+## Help with this Website
+---
+
+The documentation is [hosted on Github](https://github.com/um-grex/grex-docs) and is open-source.
+If you see errors, inconsistencies or have other feedback, or want to add to this documentation, please do not hesitate to open an [issue](https://github.com/um-grex/grex-docs/issues) or create a pull request at the Github repository!
+
 ## Internal links
 ---
 
@@ -79,7 +86,7 @@ We also provide small-group workshops on Research Computing topics when there is
 
 * the Alliance [support](https://docs.alliancecan.ca/wiki/Technical_support)
 * [IST Help Desk](http://umanitoba.ca/ist/help/ "IST Help Desk")
-* WestDRI Training [Material](https://training.westdri.ca/)
+* WestDRI/Simon Fraser University Training [Material](https://training.westdri.ca/)
 * the Alliance National Training Calendar: [Explora](https://explora.alliancecan.ca/)
 
 ---
