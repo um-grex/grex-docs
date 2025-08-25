@@ -10,9 +10,11 @@ categories: ["Information"]
 
 ## A
 
+* __ACL__ :: Access Control List
 * __AI__ :: Artificial Intelligence
+* __AOCC__ :: AMD Compilers Collection
 * __ARC__ :: Advanced Research Computing
-* __AVX__ :: Advanced Vector eXtensions
+* __AVX__ :: Advanced Vector eXtensions on x86_64 CPUs
 
 ## B
 
@@ -20,11 +22,12 @@ categories: ["Information"]
 
 ## C
 
-* __CPU__ :: Central Processing Unit
+* __CPU__ :: Central Processing Unit, a computer's processor
 * __CC__ :: Compute Canada, a former organization replaced by DRAC
 * __CCDB__ :: CC User Database, a user accounts portal maintained by DRAC
 * __CVMFS__ :: Cern Virtual Machines File System
-* __CY__:: Core Year, a unit of CPU and GPU resources used by CCDB and RAC
+* __CUDA__ :: Compute Unified Device Architecture, an NVidia library for GPU calculations
+* __CY__:: Core Year, the unit of CPU and GPU resources used by CCDB and RAC
 
 ## D
 
@@ -41,6 +44,7 @@ categories: ["Information"]
 
 * __GCC__ :: GNU Compiler Collection
 * __GPU__ :: Graphics Processing Unit
+* __GROMACS__ :: GROningen MAchine for Chemical Simulations
 * __GUI__ :: Graphical User Interface
 
 ## H
@@ -58,11 +62,18 @@ categories: ["Information"]
 
 ## J
 
+* __JuPyteR__ :: an interactive debugging and visualization tool for Python, Julia, R and other programming languages. 
+
 ## K
 
 ## L
 
+* __LAMMPS__ :: Large-scale Atomic/Molecular Massively Parallel Simulator
 * __LAPACK__ :: Linear Algebra PACKage, used together with BLAS
+* __LDAP__ :: Lightweight Directory Access Protocol, an user authenticaton service
+* __LLM__ :: Large Language Model, a flavour of ML
+* __LMod__ :: a software environment module system written in Lua at TACC
+* __Lustre__ :: a parallel filesystem for HPC 
 
 ## M
 
@@ -73,12 +84,15 @@ categories: ["Information"]
 
 ## N
 
-* __NVMe__ :: Non-Volatile Memory express
+* __NetCDF__ :: Network Common Data Form, a set of machine independed data formats
+* __NFS__ :: Network File System for Linux
+* __NVMe__ :: Non-Volatile Memory express, a form of SSD disk
 
 ## O
 
-* __OMP__ :: Open Multi-Processing
-* __OOD__ :: Open OnDemand
+* __OCI__ :: Open Containers Initiative, a container image format specification
+* __OMP__ , __OpenMP__ :: Open Multi-Processing is a program interface for shared-memory multi-processing
+* __OOD__ :: Open OnDemand , a web portal for HPC
 * __OSS__ :: Object Storage Server
 * __OST__ :: Object Storage Target
 
@@ -86,18 +100,22 @@ categories: ["Information"]
 
 * __PAICE__ :: Pan-Canadian AI Compute Environment
 * __PI__ :: Principal Investigator
+* __PMIx__ :: Process Management Interface for Exascale, a process kickstart system for MPI and SLURM
 
 ## Q
 
 ## R
 
 * __RAC__ :: Resource Allocation Competition 
+* __RAM__ :: Random Access Memory
+* __RAS__ :: Rapid Access Service 
 * __RDM__ :: Research Data Management
 
 ## S
 
 * __SLURM__ :: Simple Linux Utility for Resource Management
 * __SSH__ :: Secure SHell
+* __SSD__ :: Solid State Disk
 * __SSL__ :: Secure Socket Layers, same as TLS
 
 ## T
@@ -110,6 +128,7 @@ categories: ["Information"]
 
 ## V
 
+* __VASP__ :: Vienna Ab initio Simulation Package
 * __VM__ :: Virtual Machine
 
 ## W
@@ -117,6 +136,8 @@ categories: ["Information"]
 * __WAN__ :: A Wide Area Network (WAN) is a network that spans several geographically distributed locations.
 
 ## X
+
+* __X11__ :: A GUI for UNIX and Linux based systems
 
 ## Y
 
