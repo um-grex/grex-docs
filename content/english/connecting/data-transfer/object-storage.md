@@ -1,6 +1,6 @@
 ---
 weight: 100
-linkTitle: "Using OpenStack Object Storage"
+linkTitle: "Object Storage on OpenStack"
 title: "Data transfers for OpenStack Object Storage"
 description: "How to move data between OpenStack Object Storage and Grex"
 categories: ["How to"]
@@ -27,23 +27,25 @@ Once approved, you can create one or more “buckets” within your Object Stora
 Please refer to UM Data Security Classification to determine what types of data are appropriate for storage on this service. Note that Arbutus Object Storage is provided by the Alliance and the University of Victoria, and is not hosted by the University of Manitoba’s IT services.
 {{< /alert >}}
 
-Also note that there is a single namespace across the entire system, meaning bucket names must be unique globally. Once a bucket is created, and if configured as “public” in its settings, it can be [accessed](https://docs.alliancecan.ca/wiki/Accessing_object_storage_with_s3cmd) via a __URL__: http://object-arbutus.cloud.computecanada.ca/BUCKET_NAME where BUCKET_NAME is the name of the bucket. Alternatively, buckets can be kept private, in which case a pair of access and secret keys will be required to authenticate, as described below.
+Also note that there is a single namespace across the entire system, meaning bucket names must be unique globally. Once a bucket is created, and if configured as “public” in its settings, it can be accessed via a __URL__: **http://object-arbutus.cloud.computecanada.ca/BUCKET_NAME** where BUCKET_NAME is the name of the bucket. Alternatively, buckets can be kept private, in which case a pair of access and secret keys will be required to authenticate, as described below.
 
-## Authentication into ObjectStorage
+## Authentication into the OpenStack Objects Storage
 
-Authentication is done using a Bash shell environment and the [OpenStack client Python](https://docs.openstack.org/python-openstackclient/pike/) package. The easiest way to do this is from a Linux command-line environment on a trusted machine, where your credentials won’t be exposed to other users. One suitable environment is Grex.
+Authentication is done using a Bash shell environment and the [OpenStack Python client](https://docs.openstack.org/python-openstackclient/pike/) package. The easiest way to do this is from a Linux command-line environment on a trusted machine, where your credentials won’t be exposed to other users. One suitable environment is Grex.
 
 Two components are required for authentication:
 
   * An OpenStack RC file, which can be downloaded from your Arbutus Horizon Dashboard.
   * The OpenStack client Python package.
 
-  **TBD screenshot.**
+Open the Arbutus cloud dasboard at [Arbutus Cloud Link](https://arbutus.cloud.computecanada.ca). You can navigate it to your project's Object Storage at screenshot below, and, when your Resource Allocation Allows, create buckets there, change their permissions etc..
 
-Download the RC file and move it to Grex, or alternatively, copy and paste its contents into a text editor on Grex and save it.
+![Arbutus Dashboard for Object Storage tab](/globus/arbutus-objecstore.png)
+
+Navigate to the top right corner of the OpenStack Dashboard, click on your account name ( __username__ on the screenshot above) and use the item in the dropdown menue to Download the RC file. The RC file is a shell script; you can then copy it to Grex, or, alternatively, copy and paste its contents into a text editor on Grex and save it.
 
 {{< alert type="info" >}}
-__Important note:__ If your user account belongs to multiple projects, each project will have its own RC file, even though your dashboard login remains the same. Be sure to select the appropriate project before downloading the RC file.
+__Note:__ If your user account belongs to multiple projects, each project will have its own RC file, even though your dashboard login remains the same. Be sure to select the appropriate project (__project-name__ on the screenshot above) before downloading the RC file.
 {{< /alert >}}
 
 First, load a suitable Python module (if required on your system), and create a virtual environment:
@@ -56,7 +58,12 @@ pip install python-openstackclient
 export PATH=$PATH:`pwd`/OS/bin
 {{< /highlight >}}
 
-Once the client is installed, source the RC file to load your credentials into the environment. It will ask for your password. 
+{{< alert type="info" >}}
+On Grex, __openstack-client__ is provided as a module. So the above Python/venv steps can be replaced with convenient <code> module load openstack-client/8.2.0 </code> .
+On other HPC systems, installation of the openstack-python in a _virtual environment_ is necessary, if the openstack command is not available from the system. 
+{{< /alert >}}
+
+Once the module is loaded or the client is installed, source the OpenStack RC file to load your credentials into the environment. It will ask for your password. 
 Then, generate EC2-compatible credentials using the following __openstack__ command:
 
 {{< highlight bash >}}
@@ -73,15 +80,48 @@ The output will contain a set of long alphanumeric strings:
  * The "Access" key (labeled access) is your access identifier.
  * The "Secret" key (labeled secret) is your authentication password.
 
-This access/secret key pair is used to authenticate with OpenStack Object Storage using any compatible client software, such as WinSCP, Rclone, or Globus Online, among others. 
+This access/secret key pair is used to authenticate with OpenStack Object Storage using any compatible client software, such as WinSCP, Rclone, or Globus, among others. 
 
 {{< alert type="warning" >}}
 Note that the access/secret pair has to be treated as user's password! Keep them in a secure place and do not share.
 {{< /alert >}}
 
-### Moving data to and from ObjectStorage using Rclone
+## Accessing Arbutus OpenStorage using Globus
+---
 
-[__Rclone__](https://rclone.org) is a versatile command-line tool for uploading and downloading data to and from a wide variety of cloud storage systems. It is especially useful for transferring data between a Linux HPC system (such as Grex) and Object Storage.
+ObjectStorage is universal and can be accessed, in general, by many tools like s3cmd or rclone or WinSCP, or by using a Python library like _requests_. 
+[Globus](connecting/data-transfer/globus) provides a fast and convenient service to organize large data transfers over WAN, and that includes Object Storage endpoints. However, this requires the storage endpoint to purchase and install a "Globus connector" and be registered in the Globus Federation. 
+
+Fortunately, Arbutus provides such a Globus endpoint, which can be accessed using your CCDB (Alliance) credentials. The official documentation is available [here](https://docs.alliancecan.ca/wiki/Globus#Object_storage_on_Arbutus).
+
+To access Object Storage buckets via Globus Online, you will need:
+
+ * A Globus account that is linked to your CCDB account (Grex and Alliance users typically already meet this requirement).
+ * Access credentials for a specific Object Storage bucket on Arbutus, created as per above.
+
+The following steps can be followed to set it up:
+
+ * Log in to Grex and ensure you have your OpenStack RC file ready.
+ * Follow the earlier steps to create your access/secret key pair using __sourcing OpenStack RC file__  and running __openstack ec2 credential creation__.
+
+Then, 
+
+ * Log in to the Globus Online portal using your CCDB  credentials (Arbutus access is via CCDB).
+ * Search for the collection named "Arbutus S3 buckets".
+ * When prompted, consent to link your accounts and allow Globus to access metadata. Globus will request this consent once for each new endpoint or collection.
+ * When prompted, enter your Access Key and Secret Key. This links your bucket credentials to the Arbutus endpoint.
+
+After successful authentication into Arbutus Endpoint and the buckets, your Object Storage buckets should appear in the Globus File Manager interface. You can now transfer files using Globus , between Arbutus buckets and HPC machines , be that National Alliance systems or Grex, as you would with any other storage collection.
+
+<!--
+### Using multiple buckets or multiple projects with Globus
+TBD
+-->
+
+
+###  Accessing ObjectStorage using Rclone
+
+[__Rclone__](https://rclone.org) is a versatile command-line tool for uploading and downloading data to and from a wide variety of cloud storage systems. It is especially useful for transferring data between a Linux HPC system (such as Grex) and Object Storage. Any S3-compatible storage endpoint would work.
 
 Before you can use rclone, a one-time configuration step is required to provide it with your Object Storage credentials. This can be done entirely from the command line—no web browser access is needed. You may also configure it manually by editing rclone's configuration file.
 
@@ -160,36 +200,6 @@ Please refer to rclone [documentation](https://rclone.org/docs/) for more inform
 
 On Grex, [OpenOnDemand](/ood) supports Rclone connections automatically within the Files app. After completing the rclone config setup as described above, the ObjectStorageMy folder will appear as a mounted remote in the OOD interface for the user. The Rclone folder ObjectStorageMy will appear for the user after he performs the above __rclone config__ step. 
 
-## Using Globus to access Arbutus OpenStorage
----
-
-While rclone is a universal tool that works with any S3-compatible object storage, [Globus](connecting/data-transfer/globus) requires a storage endpoint that is registered in the Globus Federation. This means the object storage instance must explicitly support Globus access.
-
-Fortunately, Arbutus provides such a Globus endpoint, which can be accessed using your CCDB (Alliance) credentials. The official documentation is available [here](https://docs.alliancecan.ca/wiki/Globus#Object_storage_on_Arbutus).
-
-To access Object Storage buckets via Globus Online, you will need:
-
- * A Globus account that is linked to your CCDB account (Grex and Alliance users typically already meet this requirement).
- * Access credentials for a specific Object Storage bucket on Arbutus, created as per above.
-
-The following steps can be followed to set it up:
-
- * Log in to Grex and ensure you have your OpenStack RC file ready.
- * Follow the earlier steps to create your access/secret key pair using __sourcing OpenStack RC file__  and running __openstack ec2 credential creation__.
-
-Then, 
-
- * Log in to the Globus Online portal using your CCDB or (possibly) UManitoba credentials.
- * Search for the collection named “Arbutus S3 buckets”.
- * When prompted, consent to link your accounts and allow Globus to access metadata. Globus will request this consent once for each new endpoint or collection.
- * When prompted, enter your Access Key and Secret Key. This links your bucket credentials to the Arbutus endpoint.
-
-After successful authentication into Arbutus Endpoint and the buckets, your Object Storage buckets should appear in the Globus File Manager interface. You can now transfer files using Globus , between Arbutus buckets and HPC machines , be that National Alliance systems or Grex, as you would with any other storage collection.
-
-### Using multiple buckets or multiple projects with Globus
-
-
-TBD
 
 ## Example: Uploading PointCloud data from Grex to Arbutus 
 
@@ -203,5 +213,5 @@ TBD
 * [Rclone](https://rclone.org/docs/)
 
 <!-- Changes and update:
-* Last reviewed on: July 29, 2025.
+* Last reviewed on: Aug 25, 2025.
 -->
