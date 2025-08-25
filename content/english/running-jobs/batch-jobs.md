@@ -5,6 +5,7 @@ title: "Running batch jobs on Grex"
 description: "Everything you need to know for running batch jobs on Grex."
 categories: ["Scheduler"]
 #tags: ["Configuration"]
+tags: ["SLURM"]
 ---
 
 ## Batch jobs 

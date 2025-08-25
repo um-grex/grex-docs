@@ -5,6 +5,7 @@ title: "Data transfers for OpenStack Object Storage"
 description: "How to move data between OpenStack Object Storage and Grex"
 categories: ["How to"]
 banner: false
+tags: ["Configuration", "Storage"]
 ---
 
 ## What is Object Storage

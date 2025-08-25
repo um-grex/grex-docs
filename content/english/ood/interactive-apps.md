@@ -4,6 +4,7 @@ linkTitle: "Custom Apps"
 title: "Custom Interactive Apps"
 description: "Everything you need to know about Interactive Apps."
 categories: []
+tags: ["Interactive", "Visualization"]
 ---
 
 ## Introduction

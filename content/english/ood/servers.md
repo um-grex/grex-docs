@@ -4,6 +4,7 @@ linkTitle: "Servers"
 title: "Servers"
 description: "Everything you need to know about Servers: Jupyter, RStudio."
 categories: []
+tags: ["Interactive", "Visualization"]
 ---
 
 ## OpenOnDemand Servers

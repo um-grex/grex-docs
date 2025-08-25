@@ -4,8 +4,8 @@ linkTitle: "Connect with OOD"
 title: "Connect and Transfer data with OOD"
 description: "Everything you need to know about connecting and transferring data with OOD."
 categories: []
-#banner: true
-#bannerContent: "The new Zebu OOD server works with the Duo MFA on Grex"
+banner: true
+bannerContent: "The OOD pages are work in progress. Stay tuned!"
 #tags: ["Configuration"]
 ---
 

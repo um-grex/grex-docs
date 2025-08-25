@@ -4,7 +4,7 @@ linkTitle: "Containers"
 title: "Containers for Software"
 description: "Everything you need to know before to use Singularity containers"
 categories: ["Software", "Applications"]
-#tags: ["Configuration"]
+tags: ["Containers", "Singularity", "Docker", "Podman"]
 ---
 
 ## Introduction

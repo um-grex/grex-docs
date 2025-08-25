@@ -5,6 +5,7 @@ title: "How to run interactive jobs on Grex?"
 description: "Everything you need to know for running interactive jobs on Grex."
 categories: ["Scheduler"]
 #tags: ["Configuration"]
+tags: ["Interactive", "SLURM"]
 ---
 
 ## Interactive work

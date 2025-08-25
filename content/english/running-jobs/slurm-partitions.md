@@ -3,7 +3,7 @@ weight: 1000
 title: "Slurm partitions"
 description: "Everything you need to know about slurm partitions on Grex."
 categories: ["Scheduler"]
-#tags: ["Content management"]
+tags: ["SLURM"]
 ---
 
 ## Partitions

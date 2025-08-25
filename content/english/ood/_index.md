@@ -5,7 +5,7 @@ title: "OpenOnDemand, HPC Portal"
 description: "All you need to know to start using OpenOnDemand Portal on Grex."
 titleIcon: "fa-solid fa-cloud"
 categories: ["Software", "Interfaces"]
-#tags: ["Content management"]
+tags: ["Interactive", "Visualization"]
 ---
 
 ## Introduction

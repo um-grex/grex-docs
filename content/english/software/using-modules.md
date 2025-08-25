@@ -6,7 +6,7 @@ description: "Everything you need to know about using modules on Grex."
 categories: ["Software", "Applications"]
 banner: true
 bannerContent: "__Work in progress.__"
-#tags: ["Configuration"]
+tags: ["LMod", "Modules"]
 ---
 
 ## Introduction

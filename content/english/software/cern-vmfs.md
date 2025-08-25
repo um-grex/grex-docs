@@ -4,7 +4,7 @@ linkTitle: "CVMFS"
 title: "CVMFS and the Alliance software stack"
 description: "Everything you need to know before using the theme."
 categories: ["Software"]
-#tags: ["Configuration"]
+tags: ["CernVMFS", "Containers"]
 ---
 
 ## CC CernVMFS on Grex

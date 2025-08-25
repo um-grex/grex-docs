@@ -7,6 +7,7 @@ categories: ["How to"]
 banner: false
 #bannerContent: "X2Go clients may not work currently on Grex because their lack the Duo MFA support"
 #tags: ["Configuration"]
+tags: ["Configuration", "Storage"]
 ---
 
 ## UM OneDrive

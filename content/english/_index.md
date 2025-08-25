@@ -1,7 +1,7 @@
 ---
 weight: 1
-title: "Unofficial Grex User Guide"
-linktitle: "Unofficial Grex User Guide"
+title: "Grex HPC User Guide"
+linktitle: "Grex HPC User Guide"
 description: "Documentation for Grex"
 #categories: []
 titleIcon: "fa-solid fa-user-gear"

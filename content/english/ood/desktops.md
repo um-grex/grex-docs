@@ -4,6 +4,7 @@ linkTitle: "Desktops"
 title: "Desktops"
 description: "Everything you need to know about Interactive Apps."
 categories: []
+tags: ["Interactive", "Visualization"]
 ---
 
 ## Introduction
