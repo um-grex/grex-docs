@@ -85,11 +85,11 @@ If you scroll dow, links to some applications will show up. They correspond to p
 There are several areas of interest on the OOD main webpage: the Dashboard bar on the top of the screen, various menu items (such as Files, Clusters, Jobs, Interactive Apps and Sessions). 
 
 > * __OpenOnDemand:__ main Open OnDemand dashboard.
-> * __Apps:__ link to the available applications.
+> * __Apps:__ link to the available OOD applications.
 > * __Files:__ file browser and related operations (copy, download, delete, ...).
-> * __Jobs:__ links to active jobs and Grex job composer.
-> * __Clusters:__ Grex status and partition status.
-> * __Interactive Apps:__ list of interactive applicqations.
+> * __Jobs:__ Status of queues, and a JobComposer interface to submit batch scripts.
+> * __Clusters:__ Status of Grex system and its SLURM partitions.
+> * __Interactive Apps:__ list of interactive applications.
 
 {{< collapsible title="OpenOndemand main menus" >}}
 ![OpenOnDemand Front Page](/ood/ood-menus.png)
@@ -101,11 +101,11 @@ The use of the different menus is described in the following sections:
 
 The OpenOnDemand main dashboard menu shows the message of the day which is similar to the message you see when connecting to Grex via ssh. It shows the url for the documentation and support email to contact in case you need help. Some other information are also added to the message of the day.
 
-If you scroll down from the front page, some icons with links to pinned applications and featured subset of all available applications:
+If you scroll down from the front page, some icons with links to pinned applications and the subset of all available applications you have used recently:
 
 {{< collapsible title="Links to pinned interactive applications" >}}
 ![Links to OpenOnDemand Interactive Apps](/ood/interactive-apps1.png)
-{{< /collapsible >}}
+{{< /collapsible >}} 
 
 {{< alert type="warning" >}}
 Please note that the list of applications may change over time. The snapshots shown on this page are taken from the current list of the available applications on the OpenOnDemand portal while updating this page.
