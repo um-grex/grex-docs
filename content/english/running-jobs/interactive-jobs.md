@@ -83,7 +83,7 @@ What to do if your interactive job involves a GUI based program? You can SSH to 
 salloc --ntasks=1 --x11 --mem=4000M
 {{< /highlight >}}
 
-To make it work you'd want the SSH session login node is also supporting graphics: either through the -Y flag of ssh (or X11 enabled in PuTTy). If you are using Mac OS, you will have to install [XQuartz](https://www.xquartz.org/) to enable X11 forwarding.
+To make it work you'd want the SSH session login node is also supporting graphics: either through the _-Y_ flag of _ssh_ (or X11 enabled in PuTTy). If you are using Mac OS, you will have to install [XQuartz](https://www.xquartz.org/) to enable X11 forwarding.
 
 You may also try to use [OpenOnDemand](/ood) portal on Grex.
 

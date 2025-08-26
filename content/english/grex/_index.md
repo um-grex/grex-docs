@@ -182,7 +182,7 @@ Grex is a traditional HPC machine, running Linux and SLURM resource management s
 ## Web portals and GUI
 ---
 
-In addition to the traditional bash mode (connecting via ssh), users have access to:
+In addition to the traditional bash mode (connecting via SSH), users have access to:
 
 * [OpenOnDemand](/ood): on Grex, it is possible to use OpenOnDemand (OOD for short) to login to Grex and run batch or GUI applications (VNC Desktops, Matlab, Gaussview, Jupyter, ...)
 

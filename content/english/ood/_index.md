@@ -99,7 +99,7 @@ The use of the different menus is described in the following sections:
 
 ### OOD main dashboard
 
-The OpenOnDemand main dashboard menu shows the message of the day which is similar to the message you see when connecting to Grex via ssh. It shows the url for the documentation and support email to contact in case you need help. Some other information are also added to the message of the day.
+The OpenOnDemand main dashboard menu shows the message of the day which is similar to the message you see when connecting to Grex via SSH. It shows the url for the documentation and support email to contact in case you need help. Some other information are also added to the message of the day.
 
 If you scroll down from the front page, some icons with links to pinned applications and the subset of all available applications you have used recently:
 
@@ -130,7 +130,7 @@ across all Grex filesystems: __/home__ and __/project__.
 ![](/ood/files.png)
 {{< /collapsible >}}
 
-The main features accessible vile the menu __Files_ are:
+The main features accessible vile the menu __Files__ are:
 
 * Access to storage: home and project directories.
 * Create new directories and files via the sub-menus _New File_ and _New Directory_
@@ -142,10 +142,10 @@ The main features accessible vile the menu __Files_ are:
 * Open a terminal to a selected directory.
 * While working with the directories, you could view the content of the folder, rename the folder, delete the folder. It is also possible to download the folder as zip file.
 * While working with files, you can edit and change the text file, rename and delet files.
-* A link to globus: this sub-menu start globus web interface. For more information about globus, please have a look to the dedicated [page](connecting/data-transfer/globus).
+* A link to [Globus](/connecting/data-transfer/globus/): this sub-menu start the Globus web interface in the current directory in __Files__ tab. For more information about globus, please have a look to the dedicated [page](connecting/data-transfer/globus).
 
 {{< alert type="warning" >}}
-You can also upload your data to Grex using this Web interface. However, there are limits on the size of the uploads on the Web server and there can be practical limits on download sizes as well due to internet connection speed and stability. OOD on Grex has a 10Gb limit for maximal size of files to be uploaded through the File menu. For larger amount of data, please use globus.
+You can conveniently upload your data to Grex using this Web interface. However, there are limits on the size of the uploads on the Web server and there can be practical limits on download sizes as well due to internet connection speed and stability. OOD on Grex has a 10Gb limit for maximal size of files to be uploaded through the File menu. For larger amount of data, please use Globus or SSH/SCP/SFTP clients.
 {{< /alert >}}
 
 ### Jobs
