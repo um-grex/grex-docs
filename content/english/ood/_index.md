@@ -142,7 +142,12 @@ The main features accessible vile the menu __Files__ are:
 * Open a terminal to a selected directory.
 * While working with the directories, you could view the content of the folder, rename the folder, delete the folder. It is also possible to download the folder as zip file.
 * While working with files, you can edit and change the text file, rename and delet files.
-* A link to [Globus](/connecting/data-transfer/globus/): this sub-menu start the Globus web interface in the current directory in __Files__ tab. For more information about globus, please have a look to the dedicated [page](connecting/data-transfer/globus).
+
+The __Files__ interface also allows interaction with remote storage locations:
+
+* A link to [Globus](/data-transfer/globus/): this sub-menu start the Globus web interface in the current directory in __Files__ tab. For more information about globus, please have a look to the dedicated [page](/data-transfer/globus).
+* If you have configured any __rclone__ remotes, such as [MS OneDrive](/data-transfer/one-drive/) , NextCloud or an [Object Storage](/data-transfer/object-storage/) they will appear in Files menu along with your local Home and Project directories.
+
 
 {{< alert type="warning" >}}
 You can conveniently upload your data to Grex using this Web interface. However, there are limits on the size of the uploads on the Web server and there can be practical limits on download sizes as well due to internet connection speed and stability. OOD on Grex has a 10Gb limit for maximal size of files to be uploaded through the File menu. For larger amount of data, please use Globus or SSH/SCP/SFTP clients.

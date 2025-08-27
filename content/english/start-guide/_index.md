@@ -44,7 +44,7 @@ sbatch --partition=skylake sleep-job.sh
 **9.** Congratulations, you have just run your first HPC-style batch job. This is the general workflow, more or less; you'd just want to substitute the __sleep__ command to something useful, like __./your-code.x your-input.dat__ .
 
 <!--
-Check out [Getting an ccount](./access), [Moving Data](./connecting/data-transfer/) and [Running jobs](./running) for general information. [Software pages](./software) might have information specific to running particular [software items](./software/specific). [OpenOndemand](./ood) pages explain how to use the new Grex's Web portal.
+Check out [Getting an ccount](./access), [Moving Data](./data-transfer/) and [Running jobs](./running) for general information. [Software pages](./software) might have information specific to running particular [software items](./software/specific). [OpenOndemand](./ood) pages explain how to use the new Grex's Web portal.
 -->
 
 <!-- {{< treeview display="tree" />}} -->
