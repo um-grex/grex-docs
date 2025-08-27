@@ -4,7 +4,7 @@
 
 baseURL                = 'https://um-grex.github.io/grex-docs/'
 title                  = 'Unofficial Grex User Guide'
-copyright              = 'The MIT License (MIT) Copyright © 2023 UM-Grex'
+copyright              = 'The MIT License (MIT) Copyright © 2025 UM-Grex'
 theme                  = 'shadocs'
 languageCode           = 'en-us'
 defaultContentLanguage = 'en'
