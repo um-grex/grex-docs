@@ -13,6 +13,8 @@ titleIcon: "fa-solid fa-arrow-right-arrow-left"
 ## Introduction
 ---
 
+The recommended clients are OpenSSH (providing **ssh** and **scp**, **sftp** command line tools on Linux and Mac OS X) and PuTTY/WinSCP/X-Ming or MobaXterm under Windows. For large amount of data, Globus is a better option. 
+
 ## OpenSSH tools: SCP, SFTP
 ---
 
@@ -220,7 +222,10 @@ The OOD File app now "integrates" with Globus Server endpoint on Grex as well, p
 
 More information is available on our [OOD pages](/ood/)
 
-<!-- {{< treeview display="tree" />}} -->
+## Internal links
+--- 
+
+{{< treeview />}}
 
 <!-- Changes and update:
 * Last reviewed on: Nov 26 , 2024.

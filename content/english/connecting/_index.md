@@ -57,7 +57,11 @@ Please remember to replace __someuser__ with your Alliance user name.
 ## Transferring Data
 ---
 
-Uploading and downloading your data can be done using an **SCP/SFTP** capable file transfer client. The recommended clients are OpenSSH (providing **ssh** and **scp**, **sftp** command line tools on Linux and Mac OS X) and PuTTY/WinSCP/X-Ming or MobaXterm under Windows. Note that since June 1, 2014, the original "SSH Secure Shell" Windows SSH/SFTP client is not supported anymore.
+Uploading and downloading your data can be done using an **SCP/SFTP** capable file transfer client. For more details and options, please refer to the dedicated page about [Transferring Data](data-transfer).
+
+<!--
+ The recommended clients are OpenSSH (providing **ssh** and **scp**, **sftp** command line tools on Linux and Mac OS X) and PuTTY/WinSCP/X-Ming or MobaXterm under Windows. Note that since June 1, 2014, the original "SSH Secure Shell" Windows SSH/SFTP client is not supported anymore.
+-->
 
 <!--
 ## X2Go
