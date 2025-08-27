@@ -1,10 +1,11 @@
 ---
 weight: 4010
-linkTitle: "Data transfer"
+linkTitle: "Transferring Data"
 title: "Transferring data"
 description: "Everything you need to know about transferring data."
 banner: true
 bannerContent: "GUI clients may need to be updated to the latest versions to work with the Duo MFA on Grex"
+titleIcon: "fa-solid fa-arrow-right-arrow-left"
 #categories: []
 #tags: ["Configuration"]
 ---

@@ -1,9 +1,9 @@
 ---
 weight: 4000
-linkTitle: "Connect / Transfer data"
-title: "Connecting to Grex and Transferring data"
-description: "All you need to know to start using Grex: connect an transfer data."
-titleIcon: "fa-solid fa-rocket"
+linkTitle: "Connecting to Grex"
+title: "Connecting to Grex"
+description: "All you need to know to connect to Grex."
+titleIcon: "fa-solid fa-plug"
 categories: ["How-To", "Information"]
 #tags: ["Content management"]
 ---
