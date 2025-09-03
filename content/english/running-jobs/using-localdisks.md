@@ -19,29 +19,28 @@ However, there are situations where parallel filesystems like Lustre can experie
 
 In some extreme cases, it may be beneficial to avoid using the shared parallel filesystem and instead utilize local disk storage. Local disks, particularly SSDs, are directly attached to the node and do not strain the Metadata Servers of the shared filesystem. This approach may improve the performance of jobs that involve large numbers of small files.
 
-However, there are the following limitations:
+However, there are some limitations:
 
 > * The node-local storage is temporary and will be deleted at the end of the SLURM job.
 > * The node-local storage is limited by what is available at the node (usually about 100-200GB). Large datasets would still have to use the __/project__ filesystem.
-> * The node-local storage is local to the node, and is not available for milti-node, parallel computing jobs. Generally it is not worth the trouble to try using local disks manually, across several nodes.
+> * The node-local storage is local to the node, and is not available for multi-node parallel computing jobs. Generally, it is not worth the trouble to try using local disks manually, across several nodes.
 
 ### Using temporarily directory for SLURM jobs
 
-SLURM automatically creates a local temporary directory for each job. On Grex, the path to this directory is accessible to the job via the TMPDIR environment variable.
+SLURM automatically creates a local temporary directory for each job. On Grex, the path to this directory is accessible to the job via the __TMPDIR__ environment variable.
 
-On Alliance/Compute Canada systems, another environment variable, SLURM_TMPDIR, is set. Certain scripts within the CCEnv environment may expect this variable to be defined. If needed, it can be set as follows:
+On Alliance/Compute Canada systems, another environment variable, __SLURM_TMPDIR__, is set. Certain scripts within the CCEnv environment may expect this variable to be defined. If needed, it can be set as follows:
 
 ```export SLURM_TMPDIR=$TMPDIR ```
 
-To use local storage for job data, you should stage the data into the local storage at the start of the SLURM job and stage it out at the end. Assuming the data is stored in a subdirectory relative to the submission path, here’s an example workflow:
+To use local storage for job's data, you should stage the data into the local storage at the start of the SLURM job and stage it out at the end. Assuming the data is stored in a subdirectory relative to the submission path, here’s an example workflow:
 
 {{< highlight bash >}}
-
-# Copy data to the local temporary directory
+# Copy data to the local temporary directory:
 cp -r ./my-data-directory $TMPDIR
 pushd $TMPDIR
 
-# Run software that uses the data
+# Run software that uses the data:
 # ...
 
 popd
@@ -51,8 +50,9 @@ cp -rf $TMPDIR/my-data-directory .
 
 {{< /highlight >}}
 
-
-> __Note:__ If possible, for a given software, it is advisable to direct output and checkpoint files to the parallel filesystem (e.g., /project). In case of job interruption (due to hardware failure or walltime expiration), data on the local disk will be lost.
+{{< alert type="warning" >}}
+__Note:__ If possible, for a given software, it is advisable to direct output and checkpoint files to the parallel filesystem (e.g., /project). In case of job interruption (due to hardware failure or walltime expiration), data on the local disk will be lost.
+{{< /alert >}}
 
 ## Using local scratch for particular software
 
