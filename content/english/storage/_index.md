@@ -33,7 +33,11 @@ There is no backup and it is allocated per group.
 | __/home__           | NFSv4/RDMA | **15 TB**   | 100 GB     | 500 K           |
 | __/project__        | Lustre     | **2 PB**    | -          | -               |
 
-- The [local node storage](running-jobs/using-localdisks) as defined by the environment variable __$TMPDIR__ is recommended for temporary job data that is not needed after job completes. Grex nodes have SATA local disks of various capacities, leaving 150 Gb, 400 Gb, 800 Gb and 1700 Gb usable space per node, depending on the kind of local disk it has.
+- The [local node storage](running-jobs/using-localdisks) as defined by the environment variable __$TMPDIR__ is recommended for temporary job data that is not needed after job completes. Grex nodes have SATA local disks of various capacities, leaving 323 Gb, 770 Gb, ... of usable space per node, depending on the kind of local disk it has.
+
+<!--
+leaving 150 Gb, 400 Gb, 800 Gb and 1700 Gb usable space per node, depending on the kind of local disk it has.
+-->
 
 Most users would want to use **/home/USERNAME** for code development, source code, scripts, visualization, processed data, ... etc., that do not take much space and benefits for small files I/O. For production data processing, that is, massive I/O tasks from many compute or interactive jobs, the __/project__ FS should be used. It is often beneficial to place temporary files on the local disk space of the compute nodes, if space permits, so that the jobs do not load Lustre or NFS servers extensively.
 
