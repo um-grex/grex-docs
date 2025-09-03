@@ -207,8 +207,7 @@ python  my_notebook.py
 
 There is a SyZyGy instance [umanitoba.syzygy.ca](https://umanitoba.syzygy.ca) that gives a free-for-all shared SyZyGy JupyterHub for UManitoba users.
 
-Most of the Alliance's  HPC machines deployed [JupyterHub](https://docs.alliancecan.ca/wiki/JupyterHub/en) interfaces: Cedar, Beluga, Narval and Niagara.
-These instances submit Jupyter notebooks as SLURM jobs directly from the JupyterHub interface. 
+Most of the Alliance's  HPC machines deployed [JupyterHub](https://docs.alliancecan.ca/wiki/JupyterHub/en) interfaces, like Narval and Rorqual. These instances submit Jupyter notebooks as SLURM jobs directly from the JupyterHub interface. 
 
 <!-- {{< treeview display="tree" />}} -->
 
