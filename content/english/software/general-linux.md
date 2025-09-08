@@ -37,7 +37,11 @@ Vi has a GUI counterpart which is accessible as __evim__ command. There are also
 ## Image viewers
 ---
 
+There are the following commands that can be used for viewing images: __xfe-xfi__. A simple PDF viewer for X11, ghostscript__ is also available.
+
+<!--
 There are the following commands that can be used for viewing images: __xfe-xfi__ and __nemacs__. A simple PDF viewer for X11, __xpdf__ and __ghostscript__ are also available.
+-->
 
 <!-- {{< treeview display="tree" />}} -->
 
