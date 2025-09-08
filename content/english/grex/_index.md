@@ -3,7 +3,7 @@ weight: 2000
 title: "Grex: High Performance Computing Cluster at University of Manitoba"
 linkTitle: "Grex"
 description: "All you need to know about Grex and how to use it for running jobs"
-titleIcon: "fa-solid fa-tachograph-digital"
+titleIcon: "fa-solid fa-microchip"
 categories: ["Information"]
 banner: false
 bannerContent: "__SCRATCH - OS and LUSTRE UPDATES__"
