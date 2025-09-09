@@ -28,9 +28,9 @@ To connect from outside the UM network, please install and start __UManitoba Vir
 
 OOD relies on in-browser VNC sessions; so, a modern browser with HTML5 support is required; we recommend Google Chrome or Firefox or Safari, and their derivatives.
 
-{{< alert type="warning" >}}
+<!--
 OOD expects user accounts and directories on Grex to be already created. Thus, new users who want to work with OOD should first connect to Grex normally, via [SSH](connecting/ssh) shell at least once, to make the creation of account, directories, and quota complete. 
-{{< /alert >}}
+-->
 
 Also, OOD creates a state directory under users' ``/home`` (__/home/$USER/ondemand__) where it keeps information about running and completed OOD jobs, shells, desktop sessions and such. Deleting the __ondemand__ directory while a job or session is running would likely cause the job or session to fail.
 
