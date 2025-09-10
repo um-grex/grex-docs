@@ -10,18 +10,20 @@ tags: ["Containers", "Singularity", "Docker", "Podman"]
 ## Introduction
 ---
 
-Linux Containers are means to isolate software dependencies from the base Linux operating system.  Several different Linux container engines exist, most notably [Docker](https://www.docker.com) which was first to emerge as the most popular tool in the DevOps community. 
+Linux Containers are means to isolate software dependencies from the base Linux operating system (OS). Several different Linux container engines exist, most notably [Docker](https://www.docker.com) which was first to emerge as the most popular tool in the DevOps community. 
 
 Since then, a lot of work had been done by major Linux players like Google, RedHat and others to develop an open standard for container runtimes, which developed based on Docker, [OCI](https://opencontainers.org/).
 
-There are HPC-specific container engines/runtimes that offer similar or equivalent functionality but allow for easier integration with shared Linux HPC systems. At the time of writing, the most widely used of them is the  [Singularity](https://sylabs.io/guides/3.11/user-guide/) container system, developed by a company called SyLabs, and its fork, a Linux Foundation project called [Apptainer](https://apptainer.org/). 
+There are HPC-specific container engines/runtimes that offer similar or equivalent functionality but allow for easier integration with shared Linux HPC systems. At the time of writing, the most widely used is the [Singularity](https://sylabs.io/guides/3.11/user-guide/) container system, developed by a company called SyLabs, and its fork, a Linux Foundation project called [Apptainer](https://apptainer.org/). 
 They are [compatible](https://apptainer.org/docs/user/latest/singularity_compatibility.html) with each other. Singularity/Apptainer provides functionality for running most Docker images by converting them to the Singularity Image format (SIF). However, Singularity/Apptainer own format is [not completely OCI-compatible](https://apptainer.org/docs/user/latest/docker_and_oci.html#differences-and-limitations-vs-docker), so there exists Docker images that would not work properly. 
 
 Finally, recent developments in Linux Kernel namespaces allowed to happen such projects as "rootless Docker" and "rootless [Podman](https://podman.io)" which are more suitable for HPC systems than the original Docker implementation which requires privileged access to the Linux system.
 
 On Grex, Sylabs Singularity-CE is supported on local SBEnv software stack, while Apptainer is supported as part of the ComputeCanada/Alliance CCEnv stack. At the time of writing, these engines can be used largely interchangeably.
 
-> New: There is also support for rootless Podman on Grex, for the use cases that require full OCI-compatibility. 
+{{< alert type="info" >}}
+ __New:__ There is also support for rootless Podman on Grex, for the use cases that require full OCI-compatibility. 
+{{< /alert >}}
 
 ## Using Singularity from SBEnv on Grex
 ---
@@ -80,6 +82,9 @@ export SINGULARITY_CACHEDIR="/global/scratch/$USER/singularity/cache"
 export SINGULARITY_TMPDIR="/global/scratch/$USER/singularity/tmp"
 {{< /highlight >}}
 
+{{< alert type="warning" >}}
+In the above example, the directory refers to __/global/scratch__ which is not available on grex for now. Therefore, we recommend to replace the path __/global/scratch/$USER/singularity__ by a location under your project directory __/home/$USER/projects/def-professor/$USER/singularity__ where _professor_ refers to the user name of your sponsor.
+{{< /alert >}}
 
 ### Getting and building Singularity images
 ---
