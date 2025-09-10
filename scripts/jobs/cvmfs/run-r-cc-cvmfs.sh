@@ -4,12 +4,16 @@
 #SBATCH --mem-per-cpu=4000M
 #SBATCH --time=0-72:00:00
 #SBATCH --job-name="R-gdal-jags-bench"
+#SBATCH --partition=genoa
 
 # Load the modules:
 
 module load CCEnv
-module load nixpkgs/16.09 gcc/5.4.0
-module load r/3.5.2 jags/4.3.0 geos/3.6.1 gdal/2.2.1
+module load arch/avx512
+module load StdEnv/2023
+
+
+module load gcc/12.3 r/4.5.0 jags/4.3.2 geos/3.12.0 gdal/3.9.1
 
 export MKL_NUM_THREADS=1
 
