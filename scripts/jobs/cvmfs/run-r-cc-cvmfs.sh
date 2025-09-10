@@ -11,8 +11,6 @@
 module load CCEnv
 module load arch/avx512
 module load StdEnv/2023
-
-
 module load gcc/12.3 r/4.5.0 jags/4.3.2 geos/3.12.0 gdal/3.9.1
 
 export MKL_NUM_THREADS=1
