@@ -65,10 +65,12 @@ This filesystem has a similar [hierarchical directory structure](https://docs.al
 Where the Project-GID is a __number (or identifier)__ of the PI's default RAPI group in CCDB, and user1..3 are the users on Grex, including the PI. 
 
 {{< alert type="warning" >}}
-
-Note that the directories get created, and the quota is set, on a first login of a user to the Grex system. Before the first login of any user, no /home and /project directories exist and no quota is set for them on Grex. Thus, certain operations that need them ( running jobs through [OOD](/ood), and using automated workflows) would fail. Please log in to Grex via a normal SSH through a regular login node first!
-
+Note that the directories get created, and the quota is set, on a first login of a user to the Grex system. Before the first login of any user, no /home and /project directories exist and no quota is set for them on Grex. To have your directories created, please log in to Grex either via a normal SSH through a regular login node or via [OOD](/ood).
 {{< /alert >}}
+
+<!--
+Note that the directories get created, and the quota is set, on a first login of a user to the Grex system. Before the first login of any user, no /home and /project directories exist and no quota is set for them on Grex. Thus, certain operations that need them ( running jobs through [OOD](/ood), and using automated workflows) would fail. Please log in to Grex via a normal SSH through a regular login node first!
+-->
 
 It is inconvenient to go by using numerical values of the Project-GID in the paths, so there are symbolic links present in each user's _/home/$USER/projects_ directory that point to his _/project_ directories.  A user can belong to more than one research group and thus can have more than one project link. Also, on the filesystem there is a system of symbolic links in the form of _/project/Faculty/def-PIname/_ . 
 
@@ -81,7 +83,15 @@ Disk quotas for prj 123456 (pid 123456):
 
 {{< /highlight >}}
 
-In addition to the directory quota, each user has her own quota, presently for inodes (the number of files and directories on the entire filesystem. 
+In addition to the directory quota, each user has her own quota, presently for inodes (the number of files and directories on the entire filesystem. To see the space and inode usage per user, run the following command:
+
+{{< highlight bash >}}
+[someuser@yak ~]$ lfs quota -h -u $USER /project
+Disk quotas for usr kerrache (uid 123456):
+     Filesystem    used   quota   limit   grace   files   quota   limit   grace
+       /project  150.6G      0k      0k       -  175394  1000000 1100000       -
+{{< /highlight >}}
+
 <!--
 #### /global/scratch/  (old)
 
@@ -107,9 +117,9 @@ If you are over quota on Lustre __/global/scratch__ filesystem, just like for NF
 ## A wrapper for quota
 ---
 
-To make it easier, we have set a custom script with the same name as for the Alliance (Compute Canada) clusters, __diskusage_report__, that gives both __/home__ and __/global/scratch__ quotas (space and number of files: usage/quota or limits), as in the following example:
-
+To make it easier, we have set a custom script with the same name as for the Alliance (Compute Canada) clusters, __diskusage_report__, that gives both __/home__ and __/project__ quotas (space and number of files: usage/quota or limits), as in the following example:
 {{< highlight bash >}}
+
 [someuser@bison ~]$  diskusage_report 
 ------------------------------------------------------------------------
               Description (FS)          Space (U/Q)     # of files (U/Q)
