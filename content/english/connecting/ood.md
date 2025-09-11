@@ -4,12 +4,13 @@ linkTitle: "Connect with OOD"
 title: "Connect and Transfer data with OOD"
 description: "Everything you need to know about connecting and transferring data with OOD."
 categories: []
-banner: true
-bannerContent: "The OOD pages are work in progress. Stay tuned!"
+banner: false
+#bannerContent: "The OOD pages are work in progress. Stay tuned!"
 #tags: ["Configuration"]
 ---
 
-OpenOnDemand (OOD) is a Web portal application for High-Performance Computing systems. It is available on Grex and it can be used to connect to grex and run applications. For more information about how to connect and use OOD, please refer to the main page: [OOD](../ood)
+OpenOnDemand (OOD) is a Web portal application for High-Performance Computing systems. 
+An OOD portal is available on Grex at [https://ood.hpc.umanitoba.ca](https://ood.hpc.umanitoba.ca) ; it can be used to connect to Grex, Transfer data and and run both interactive and batch Applications. For more information about how to connect and use OOD, please refer to the main  [OOD](../ood) page.
 
 <!--
 
@@ -68,6 +69,7 @@ The _Files_ interface allows for uploading, downloading and editing of the files
 ## Internal links
 ---
 
+* Use OOD Files app to move data: [OOD Files](https://um-grex.github.io/grex-docs/ood/#files)
 * Run applications with [OOD](../ood)
 
 ## External links
