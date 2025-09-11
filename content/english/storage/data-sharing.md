@@ -14,7 +14,7 @@ tags: ["Configuration", "Storage"]
 
 By default, data on Grex are owned by the user and are not accessible to other Grex users or to external parties.
 
-In research it’s often necessary to share datasets or code within a research group or with collaborating groups. This documentation explains how to share data stored on a specific HPC system, in this case, Grex. Sharing data outside the HPC system can be done through other methods, such as Globus or MS OneDrive.
+In research, it’s often necessary to share datasets or code within a research group or with collaborating groups. This documentation explains how to share data stored on a specific HPC system, in this case, Grex. Sharing data outside the HPC system can be done through other methods, such as Globus or MS OneDrive.
 
 {{< alert type="warning" >}}
 * __How to not share data:__ Sharing account credentials is strictly forbidden. Similarly, making data "world-accessible" (open to all users) is discouraged.
