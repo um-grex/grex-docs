@@ -32,11 +32,20 @@ Grex is using the Duo instance provided by the Alliance. The available additiona
  href="https://www.computecanada.ca/research-portal/account-management/apply-for-an-account/"
  class="is-pretty-link"&gt;Getting Access&lt;/a
 &gt;
-. You will also need the DNS name of Grex Which is &lt;strong&gt;grex.hpc.umanitoba.ca&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>Connect and Transfer data with OOD</title><link>https://um-grex.github.io/grex-docs/connecting/ood/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/connecting/ood/</guid><description>&lt;p&gt;OpenOnDemand (OOD) is a Web portal application for High-Performance Computing systems. It is available on Grex and it can be used to connect to grex and run applications. For more information about how to connect and use OOD, please refer to the main page: &lt;a
+. You will also need the DNS name of Grex Which is &lt;strong&gt;grex.hpc.umanitoba.ca&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>Connect and Transfer data with OOD</title><link>https://um-grex.github.io/grex-docs/connecting/ood/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/connecting/ood/</guid><description>&lt;p&gt;OpenOnDemand (OOD) is a Web portal application for High-Performance Computing systems.
+An OOD portal is available on Grex at &lt;a
+ href="https://ood.hpc.umanitoba.ca"
+ class="is-pretty-link"&gt;https://ood.hpc.umanitoba.ca&lt;/a
+&gt;
+ ; it can be used to &lt;a
+ href="http://localhost:1313/grex-docs/ood/#connect-to-openondemand"
+ class="is-pretty-link"&gt;Connect&lt;/a
+&gt;
+ to Grex, Transfer data and and run both interactive and batch Applications. For more information about how to connect and use OOD, please refer to the main &lt;a
  href="https://um-grex.github.io/grex-docs/ood/"
  class="is-pretty-link"&gt;OOD&lt;/a
 &gt;
-&lt;/p&gt;
+ page.&lt;/p&gt;
 &lt;!--
 
 ## OSC OpenOnDemand on Grex
@@ -102,6 +111,11 @@ The _Files_ interface allows for uploading, downloading and editing of the files
 &lt;h2 id='internal-links'&gt;Internal links&lt;a href='#internal-links' class='anchor'&gt;#&lt;/a&gt;
 &lt;/h2&gt;&lt;hr&gt;
 &lt;ul&gt;
+&lt;li&gt;Use OOD Files app to move data: &lt;a
+ href="https://um-grex.github.io/grex-docs/ood/#files"
+ class="is-pretty-link"&gt;OOD Files&lt;/a
+&gt;
+&lt;/li&gt;
 &lt;li&gt;Run applications with &lt;a
  href="https://um-grex.github.io/grex-docs/ood/"
  class="is-pretty-link"&gt;OOD&lt;/a
