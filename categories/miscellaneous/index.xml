@@ -1,115 +1,125 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Miscellaneous on Grex</title><link>https://um-grex.github.io/grex-docs/categories/miscellaneous/</link><description>Recent content in Miscellaneous on Grex</description><generator>Hugo</generator><language>en</language><copyright>The MIT License (MIT) Copyright © 2023 UM-Grex</copyright><atom:link href="https://um-grex.github.io/grex-docs/categories/miscellaneous/index.xml" rel="self" type="application/rss+xml"/><item><title>Grex Documentation - Sitemap</title><link>https://um-grex.github.io/grex-docs/sitemap/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/sitemap/</guid><description>&lt;hr>
-&lt;div class="sc-treeview">&lt;ul
- class='sc-treeview-tree'>&lt;li class=" sc-treeview-coll">
- &lt;div class="sc-treeview-label">&lt;div class="sc-treeview-icon sc-treeview-coll-trigger">
- &lt;i class="fa-solid fa-user-gear">&lt;/i>
- &lt;/div>&lt;p class="is-marginless">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Miscellaneous on Grex</title><link>https://um-grex.github.io/grex-docs/categories/miscellaneous/</link><description>Recent content in Miscellaneous on Grex</description><generator>Hugo</generator><language>en</language><copyright>The MIT License (MIT) Copyright © 2025 UM-Grex</copyright><atom:link href="https://um-grex.github.io/grex-docs/categories/miscellaneous/index.xml" rel="self" type="application/rss+xml"/><item><title>Grex Documentation - Sitemap</title><link>https://um-grex.github.io/grex-docs/sitemap/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/sitemap/</guid><description>&lt;hr&gt;
+&lt;div class="sc-treeview"&gt;&lt;ul
+ class='sc-treeview-tree'&gt;&lt;li class=" sc-treeview-coll"&gt;
+ &lt;div class="sc-treeview-label"&gt;&lt;div class="sc-treeview-icon sc-treeview-coll-trigger"&gt;
+ &lt;i class="fa-solid fa-user-gear"&gt;&lt;/i&gt;
+ &lt;/div&gt;&lt;p class="is-marginless"&gt;
  &lt;a
  href="https://um-grex.github.io/grex-docs/"
  class="is-pretty-link"
- >Grex HPC User Guide&lt;/a
- >
- &lt;/p>
- &lt;/div>&lt;ul
- class='sc-treeview-tree'>&lt;li class="">
- &lt;div class="sc-treeview-label">&lt;div class="sc-treeview-icon">
- &lt;i class="fa-solid fa-tachograph-digital">&lt;/i>
- &lt;/div>&lt;p class="is-marginless">
+ &gt;Grex HPC User Guide&lt;/a
+ &gt;
+ &lt;/p&gt;
+ &lt;/div&gt;&lt;ul
+ class='sc-treeview-tree'&gt;&lt;li class=""&gt;
+ &lt;div class="sc-treeview-label"&gt;&lt;div class="sc-treeview-icon"&gt;
+ &lt;i class="fa-solid fa-microchip"&gt;&lt;/i&gt;
+ &lt;/div&gt;&lt;p class="is-marginless"&gt;
  &lt;a
  href="https://um-grex.github.io/grex-docs/grex/"
  class="is-pretty-link"
- >Grex&lt;/a
- >
- &lt;/p>
- &lt;/div>&lt;/li>&lt;li class="">
- &lt;div class="sc-treeview-label">&lt;div class="sc-treeview-icon">
- &lt;i class="fa-solid fa-bolt-lightning">&lt;/i>
- &lt;/div>&lt;p class="is-marginless">
+ &gt;Grex&lt;/a
+ &gt;
+ &lt;/p&gt;
+ &lt;/div&gt;&lt;/li&gt;&lt;li class=""&gt;
+ &lt;div class="sc-treeview-label"&gt;&lt;div class="sc-treeview-icon"&gt;
+ &lt;i class="fa-solid fa-bolt-lightning"&gt;&lt;/i&gt;
+ &lt;/div&gt;&lt;p class="is-marginless"&gt;
  &lt;a
  href="https://um-grex.github.io/grex-docs/start-guide/"
  class="is-pretty-link"
- >Quick Start Guide&lt;/a
- >
- &lt;/p>
- &lt;/div>&lt;/li>&lt;li class="">
- &lt;div class="sc-treeview-label">&lt;div class="sc-treeview-icon">
- &lt;i class="fa-solid fa-id-card">&lt;/i>
- &lt;/div>&lt;p class="is-marginless">
+ &gt;Quick Start Guide&lt;/a
+ &gt;
+ &lt;/p&gt;
+ &lt;/div&gt;&lt;/li&gt;&lt;li class=""&gt;
+ &lt;div class="sc-treeview-label"&gt;&lt;div class="sc-treeview-icon"&gt;
+ &lt;i class="fa-solid fa-id-card"&gt;&lt;/i&gt;
+ &lt;/div&gt;&lt;p class="is-marginless"&gt;
  &lt;a
  href="https://um-grex.github.io/grex-docs/access/"
  class="is-pretty-link"
- >Access and usage conditions&lt;/a
- >
- &lt;/p>
- &lt;/div>&lt;/li>&lt;li class=" sc-treeview-coll">
- &lt;div class="sc-treeview-label">&lt;div class="sc-treeview-icon sc-treeview-coll-trigger">
- &lt;i class="fa-solid fa-rocket">&lt;/i>
- &lt;/div>&lt;p class="is-marginless">
+ &gt;Access and usage conditions&lt;/a
+ &gt;
+ &lt;/p&gt;
+ &lt;/div&gt;&lt;/li&gt;&lt;li class=" sc-treeview-coll"&gt;
+ &lt;div class="sc-treeview-label"&gt;&lt;div class="sc-treeview-icon sc-treeview-coll-trigger"&gt;
+ &lt;i class="fa-solid fa-plug"&gt;&lt;/i&gt;
+ &lt;/div&gt;&lt;p class="is-marginless"&gt;
  &lt;a
  href="https://um-grex.github.io/grex-docs/connecting/"
  class="is-pretty-link"
- >Connect / Transfer data&lt;/a
- >
- &lt;/p>
- &lt;/div>&lt;ul
- class='sc-treeview-tree'>&lt;li class="">
- &lt;div class="sc-treeview-label">&lt;div class="sc-treeview-icon">
- &lt;i class="fa-solid fa-file-lines">&lt;/i>
- &lt;/div>&lt;p class="is-marginless">
+ &gt;Connecting to Grex&lt;/a
+ &gt;
+ &lt;/p&gt;
+ &lt;/div&gt;&lt;ul
+ class='sc-treeview-tree'&gt;&lt;li class=""&gt;
+ &lt;div class="sc-treeview-label"&gt;&lt;div class="sc-treeview-icon"&gt;
+ &lt;i class="fa-solid fa-file-lines"&gt;&lt;/i&gt;
+ &lt;/div&gt;&lt;p class="is-marginless"&gt;
  &lt;a
  href="https://um-grex.github.io/grex-docs/connecting/mfa/"
  class="is-pretty-link"
- >Multi-Factor Authentication&lt;/a
- >
- &lt;/p>
- &lt;/div>&lt;/li>&lt;li class="">
- &lt;div class="sc-treeview-label">&lt;div class="sc-treeview-icon">
- &lt;i class="fa-solid fa-file-lines">&lt;/i>
- &lt;/div>&lt;p class="is-marginless">
+ &gt;Multi-Factor Authentication&lt;/a
+ &gt;
+ &lt;/p&gt;
+ &lt;/div&gt;&lt;/li&gt;&lt;li class=""&gt;
+ &lt;div class="sc-treeview-label"&gt;&lt;div class="sc-treeview-icon"&gt;
+ &lt;i class="fa-solid fa-file-lines"&gt;&lt;/i&gt;
+ &lt;/div&gt;&lt;p class="is-marginless"&gt;
  &lt;a
  href="https://um-grex.github.io/grex-docs/connecting/ssh/"
  class="is-pretty-link"
- >Connecting with SSH&lt;/a
- >
- &lt;/p>
- &lt;/div>&lt;/li>&lt;li class="">
- &lt;div class="sc-treeview-label">&lt;div class="sc-treeview-icon">
- &lt;i class="fa-solid fa-file-lines">&lt;/i>
- &lt;/div>&lt;p class="is-marginless">
+ &gt;Connecting with SSH&lt;/a
+ &gt;
+ &lt;/p&gt;
+ &lt;/div&gt;&lt;/li&gt;&lt;li class=""&gt;
+ &lt;div class="sc-treeview-label"&gt;&lt;div class="sc-treeview-icon"&gt;
+ &lt;i class="fa-solid fa-file-lines"&gt;&lt;/i&gt;
+ &lt;/div&gt;&lt;p class="is-marginless"&gt;
  &lt;a
  href="https://um-grex.github.io/grex-docs/connecting/ood/"
  class="is-pretty-link"
- >Connect with OOD&lt;/a
- >
- &lt;/p>
- &lt;/div>&lt;/li>&lt;li class=" sc-treeview-coll">
- &lt;div class="sc-treeview-label">&lt;div class="sc-treeview-icon sc-treeview-coll-trigger">
- &lt;i class="fa-solid fa-folder-tree">&lt;/i>
- &lt;/div>&lt;p class="is-marginless">
+ &gt;Connect with OOD&lt;/a
+ &gt;
+ &lt;/p&gt;
+ &lt;/div&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li class=" sc-treeview-coll"&gt;
+ &lt;div class="sc-treeview-label"&gt;&lt;div class="sc-treeview-icon sc-treeview-coll-trigger"&gt;
+ &lt;i class="fa-solid fa-arrow-right-arrow-left"&gt;&lt;/i&gt;
+ &lt;/div&gt;&lt;p class="is-marginless"&gt;
  &lt;a
- href="https://um-grex.github.io/grex-docs/connecting/data-transfer/"
+ href="https://um-grex.github.io/grex-docs/data-transfer/"
  class="is-pretty-link"
- >Data transfer&lt;/a
- >
- &lt;/p>
- &lt;/div>&lt;ul
- class='sc-treeview-tree'>&lt;li class="">
- &lt;div class="sc-treeview-label">&lt;div class="sc-treeview-icon">
- &lt;i class="fa-solid fa-file-lines">&lt;/i>
- &lt;/div>&lt;p class="is-marginless">
+ &gt;Transferring Data&lt;/a
+ &gt;
+ &lt;/p&gt;
+ &lt;/div&gt;&lt;ul
+ class='sc-treeview-tree'&gt;&lt;li class=""&gt;
+ &lt;div class="sc-treeview-label"&gt;&lt;div class="sc-treeview-icon"&gt;
+ &lt;i class="fa-solid fa-file-lines"&gt;&lt;/i&gt;
+ &lt;/div&gt;&lt;p class="is-marginless"&gt;
  &lt;a
- href="https://um-grex.github.io/grex-docs/connecting/data-transfer/globus/"
+ href="https://um-grex.github.io/grex-docs/data-transfer/globus/"
  class="is-pretty-link"
- >Globus on Grex &lt;/a
- >
- &lt;/p>
- &lt;/div>&lt;/li>&lt;li class="">
- &lt;div class="sc-treeview-label">&lt;div class="sc-treeview-icon">
- &lt;i class="fa-solid fa-file-lines">&lt;/i>
- &lt;/div>&lt;p class="is-marginless">
+ &gt;Globus on Grex &lt;/a
+ &gt;
+ &lt;/p&gt;
+ &lt;/div&gt;&lt;/li&gt;&lt;li class=""&gt;
+ &lt;div class="sc-treeview-label"&gt;&lt;div class="sc-treeview-icon"&gt;
+ &lt;i class="fa-solid fa-file-lines"&gt;&lt;/i&gt;
+ &lt;/div&gt;&lt;p class="is-marginless"&gt;
  &lt;a
- href="https://um-grex.github.io/grex-docs/connecting/data-transfer/object-storage/"
+ href="https://um-grex.github.io/grex-docs/data-transfer/one-drive/"
  class="is-pretty-link"
- >Object Storage on OpenStack&lt;/a
- >
- &lt;/p></description></item></channel></rss>
+ &gt;Rclone and OneDrive&lt;/a
+ &gt;
+ &lt;/p&gt;
+ &lt;/div&gt;&lt;/li&gt;&lt;li class=""&gt;
+ &lt;div class="sc-treeview-label"&gt;&lt;div class="sc-treeview-icon"&gt;
+ &lt;i class="fa-solid fa-file-lines"&gt;&lt;/i&gt;
+ &lt;/div&gt;&lt;p class="is-marginless"&gt;
+ &lt;a
+ href="https://um-grex.github.io/grex-docs/data-transfer/object-storage/"
+ class="is-pretty-link"
+ &gt;Object Storage on OpenStack&lt;/a
+ &gt;
+ &lt;/p&gt;</description></item></channel></rss>

@@ -1,30 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Docker on Grex</title><link>https://um-grex.github.io/grex-docs/tags/docker/</link><description>Recent content in Docker on Grex</description><generator>Hugo</generator><language>en</language><copyright>The MIT License (MIT) Copyright © 2023 UM-Grex</copyright><atom:link href="https://um-grex.github.io/grex-docs/tags/docker/index.xml" rel="self" type="application/rss+xml"/><item><title>Containers for Software</title><link>https://um-grex.github.io/grex-docs/software/containers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/software/containers/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
-&lt;/h2>&lt;hr>
-&lt;p>Linux Containers are means to isolate software dependencies from the base Linux operating system. Several different Linux container engines exist, most notably &lt;a
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Docker on Grex</title><link>https://um-grex.github.io/grex-docs/tags/docker/</link><description>Recent content in Docker on Grex</description><generator>Hugo</generator><language>en</language><copyright>The MIT License (MIT) Copyright © 2025 UM-Grex</copyright><atom:link href="https://um-grex.github.io/grex-docs/tags/docker/index.xml" rel="self" type="application/rss+xml"/><item><title>Containers for Software</title><link>https://um-grex.github.io/grex-docs/software/containers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/software/containers/</guid><description>&lt;h2 id='introduction'&gt;Introduction&lt;a href='#introduction' class='anchor'&gt;#&lt;/a&gt;
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;Linux Containers are means to isolate software dependencies from the base Linux operating system (OS). Several different Linux container engines exist, most notably &lt;a
  href="https://www.docker.com"
- class="is-pretty-link">Docker&lt;/a
->
- which was first to emerge as the most popular tool in the DevOps community.&lt;/p>
-&lt;p>Since then, a lot of work had been done by major Linux players like Google, RedHat and others to develop an open standard for container runtimes, which developed based on Docker, &lt;a
+ class="is-pretty-link"&gt;Docker&lt;/a
+&gt;
+ which was first to emerge as the most popular tool in the DevOps community.&lt;/p&gt;
+&lt;p&gt;Since then, a lot of work had been done by major Linux players like Google, RedHat and others to develop an open standard for container runtimes, which developed based on Docker, &lt;a
  href="https://opencontainers.org/"
- class="is-pretty-link">OCI&lt;/a
->
-.&lt;/p>
-&lt;p>There are HPC-specific container engines/runtimes that offer similar or equivalent functionality but allow for easier integration with shared Linux HPC systems. At the time of writing, the most widely used of them is the &lt;a
- href="https://sylabs.io/guides/3.11/user-guide/"
- class="is-pretty-link">Singularity&lt;/a
->
- container system, developed by a company called SyLabs, and its fork, a Linux Foundation project called &lt;a
- href="https://apptainer.org/"
- class="is-pretty-link">Apptainer&lt;/a
->
-.
-They are &lt;a
- href="https://apptainer.org/docs/user/latest/singularity_compatibility.html"
- class="is-pretty-link">compatible&lt;/a
->
- with each other. Singularity/Apptainer provides functionality for running most Docker images by converting them to the Singularity Image format (SIF). However, Singularity/Apptainer own format is &lt;a
- href="https://apptainer.org/docs/user/latest/docker_and_oci.html#differences-and-limitations-vs-docker"
- class="is-pretty-link">not completely OCI-compatible&lt;/a
->
-, so there exists Docker images that would not work properly.&lt;/p></description></item></channel></rss>
+ class="is-pretty-link"&gt;OCI&lt;/a
+&gt;
+.&lt;/p&gt;</description></item></channel></rss>

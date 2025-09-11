@@ -1,27 +1,27 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>OpenOnDemand, HPC Portal on Grex</title><link>https://um-grex.github.io/grex-docs/ood/</link><description>Recent content in OpenOnDemand, HPC Portal on Grex</description><generator>Hugo</generator><language>en</language><copyright>The MIT License (MIT) Copyright © 2023 UM-Grex</copyright><atom:link href="https://um-grex.github.io/grex-docs/ood/index.xml" rel="self" type="application/rss+xml"/><item><title>Desktops</title><link>https://um-grex.github.io/grex-docs/ood/desktops/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/ood/desktops/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
-&lt;/h2>&lt;hr>
-&lt;p>From the menu &lt;strong>Interactive Apps&lt;/strong>, it is possible to start a given application and use it for interactive work. Some applications have already predefined settings, like the slurm partition and allow only to adjust the wall time. As an example, the &lt;em>Grex Desktop Simplified&lt;/em> that uses by default the &lt;strong>test&lt;/strong> partition.&lt;/p>
-&lt;p>To start an application, click on the name of the application, then fill the required parameters for slurm (accounting group, partition name, number of cpus, wall time, email notifications, &amp;hellip;etc).&lt;/p></description></item><item><title>Custom Interactive Apps</title><link>https://um-grex.github.io/grex-docs/ood/interactive-apps/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/ood/interactive-apps/</guid><description>&lt;h2 id='introduction'>Introduction&lt;a href='#introduction' class='anchor'>#&lt;/a>
-&lt;/h2>&lt;hr>
-&lt;p>For the common applications used on Grex, we have addedd separate &lt;a
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>OpenOnDemand, HPC Portal on Grex</title><link>https://um-grex.github.io/grex-docs/ood/</link><description>Recent content in OpenOnDemand, HPC Portal on Grex</description><generator>Hugo</generator><language>en</language><copyright>The MIT License (MIT) Copyright © 2025 UM-Grex</copyright><atom:link href="https://um-grex.github.io/grex-docs/ood/index.xml" rel="self" type="application/rss+xml"/><item><title>Desktops</title><link>https://um-grex.github.io/grex-docs/ood/desktops/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/ood/desktops/</guid><description>&lt;h2 id='introduction'&gt;Introduction&lt;a href='#introduction' class='anchor'&gt;#&lt;/a&gt;
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;From the menu &lt;strong&gt;Interactive Apps&lt;/strong&gt;, it is possible to start a given application and use it for interactive work. Some applications have already predefined settings, like the slurm partition and allow only to adjust the wall time. As an example, the &lt;em&gt;Grex Desktop Simplified&lt;/em&gt; that uses by default the &lt;strong&gt;test&lt;/strong&gt; partition.&lt;/p&gt;
+&lt;p&gt;To start an application, click on the name of the application, then fill the required parameters for slurm (accounting group, partition name, number of cpus, wall time, email notifications, &amp;hellip;etc).&lt;/p&gt;</description></item><item><title>Custom Interactive Apps</title><link>https://um-grex.github.io/grex-docs/ood/interactive-apps/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/ood/interactive-apps/</guid><description>&lt;h2 id='introduction'&gt;Introduction&lt;a href='#introduction' class='anchor'&gt;#&lt;/a&gt;
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;For the common applications used on Grex, we have addedd separate &lt;a
  href="https://um-grex.github.io/grex-docs/ood/#interactive-apps"
- class="is-pretty-link">interactive applications&lt;/a
->
+ class="is-pretty-link"&gt;interactive applications&lt;/a
+&gt;
  to make it easier for users. Some of these applications are: Gaussview, Matlab, Mathematica, Relio, Paraview, OVITO, &amp;hellip; etc. Some of the applications may not show up in your dashboard as they are protected with a POSIX group. For example, if you do not have access to &lt;a
  href="https://um-grex.github.io/grex-docs/specific-soft/gaussian/"
- class="is-pretty-link">Gaussian&lt;/a
->
-, &lt;strong>Gaussview&lt;/strong> will not show up in your dashboard. Some applications like stata, metashape are commercial. Therefore, they are set only for the groups who purchased the license.&lt;/p></description></item><item><title>Servers</title><link>https://um-grex.github.io/grex-docs/ood/servers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/ood/servers/</guid><description>&lt;h2 id='openondemand-servers'>OpenOnDemand Servers&lt;a href='#openondemand-servers' class='anchor'>#&lt;/a>
-&lt;/h2>&lt;hr>
-&lt;p>Using OOD, users can use RStudio, Jupyter, Code server &amp;hellip; etc.&lt;/p>
-&lt;p>All these applications work in the same way as for &lt;a
+ class="is-pretty-link"&gt;Gaussian&lt;/a
+&gt;
+, &lt;strong&gt;Gaussview&lt;/strong&gt; will not show up in your dashboard. Some applications like stata, metashape are commercial. Therefore, they are set only for the groups who purchased the license.&lt;/p&gt;</description></item><item><title>Servers</title><link>https://um-grex.github.io/grex-docs/ood/servers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/ood/servers/</guid><description>&lt;h2 id='openondemand-servers'&gt;OpenOnDemand Servers&lt;a href='#openondemand-servers' class='anchor'&gt;#&lt;/a&gt;
+&lt;/h2&gt;&lt;hr&gt;
+&lt;p&gt;Using OOD, users can use RStudio, Jupyter, Code server &amp;hellip; etc.&lt;/p&gt;
+&lt;p&gt;All these applications work in the same way as for &lt;a
  href="https://um-grex.github.io/grex-docs/ood/desktops/"
- class="is-pretty-link">Desktops&lt;/a
->
- in the previous section. In other terms, before launching these application, a user has to set some parameters or resources to use (like the accounting group, slurm partition, number of cpus, &amp;hellip;etc.) before launching the application. Once the job is granted, click on the link with name _&lt;em>Connect to &amp;hellip;&lt;/em> to start the server. At the time of writing this documentation, Code server, Matlab Server, RStudio Server and JupeyterLab server are available.&lt;/p></description></item><item><title>Job Composer</title><link>https://um-grex.github.io/grex-docs/ood/job-composer/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/ood/job-composer/</guid><description>&lt;h2 id='openondemand-desktops'>OpenOnDemand Desktops&lt;a href='#openondemand-desktops' class='anchor'>#&lt;/a>
-&lt;/h2>&lt;hr>
-&lt;!-- &lt;div class="sc-treeview">&lt;div class="sc-alert sc-alert-warning">No data available&lt;/div>&lt;/div>
- -->
+ class="is-pretty-link"&gt;Desktops&lt;/a
+&gt;
+ in the previous section. In other terms, before launching these application, a user has to set some parameters or resources to use (like the accounting group, slurm partition, number of cpus, &amp;hellip;etc.) before launching the application. Once the job is granted, click on the link with name _&lt;em&gt;Connect to &amp;hellip;&lt;/em&gt; to start the server. At the time of writing this documentation, Code server, Matlab Server, RStudio Server and JupeyterLab server are available.&lt;/p&gt;</description></item><item><title>Job Composer</title><link>https://um-grex.github.io/grex-docs/ood/job-composer/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/ood/job-composer/</guid><description>&lt;h2 id='openondemand-desktops'&gt;OpenOnDemand Desktops&lt;a href='#openondemand-desktops' class='anchor'&gt;#&lt;/a&gt;
+&lt;/h2&gt;&lt;hr&gt;
+&lt;!-- &lt;div class="sc-treeview"&gt;&lt;div class="sc-alert sc-alert-warning"&gt;No data available&lt;/div&gt;&lt;/div&gt;
+ --&gt;
 &lt;!-- Changes and update:
 * Last reviewed on: Jul 04, 2025.
---></description></item></channel></rss>
+--&gt;</description></item></channel></rss>
