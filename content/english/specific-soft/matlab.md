@@ -144,7 +144,7 @@ An important part of the above script is the location of the MATLAB Compiler Run
 ## MATLAB on the Alliance's clusters
 ---
 
-For using MATLAB on the Alliance's clusters, please visit the corresponding MATLAB [page](https://docs.alliancecan.ca/wiki/MATLAB). While there is a wide MATLAB license accessible for all users on [cedar](https://docs.alliancecan.ca/wiki/Cedar), [beluga](https://docs.alliancecan.ca/wiki/B%C3%A9luga/en) and [narval](https://docs.alliancecan.ca/wiki/Narval/en), using MATLAB on graham requires access to an external [license](https://docs.alliancecan.ca/wiki/MATLAB#Using_an_external_license). UManitoba users could use MATLAB on [graham](https://docs.alliancecan.ca/wiki/Graham) without additional settings.   
+For using MATLAB on the Alliance's clusters, please visit the corresponding MATLAB [page](https://docs.alliancecan.ca/wiki/MATLAB). While there is a wide MATLAB license accessible for all users on [Fir](https://docs.alliancecan.ca/wiki/Fir), [Rorqual](https://docs.alliancecan.ca/wiki/Rorqual/en) and [narval](https://docs.alliancecan.ca/wiki/Narval/en), using MATLAB on graham requires access to an external [license](https://docs.alliancecan.ca/wiki/MATLAB#Using_an_external_license). UManitoba users could use MATLAB on [Nibi](https://docs.alliancecan.ca/wiki/Nibi) without additional settings.   
 
 ## Related links
 ---
