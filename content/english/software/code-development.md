@@ -28,7 +28,7 @@ It is almost always better to use communication libraries (MPI) provided on Grex
 
 The base operating system on Grex is a RedHat type of Linux. For many years it used to be a CentOS Linux. Since 2024, we have switched to [**Alma Linux**](https://almalinux.org/) which is a  community owned and governed, RedHat-style distribution. The current OS is Alma Linux 8.
 
-Alma Linux OS comes with its set of development tools, and RedHat environment does provide various _developer toolsets_ and software channels. However, due to the philosophy of RedHat being stable, server-focused distribution, the tools are usually rather old. For example, __cmake__ and __git__ and _gcc_ and _python_ are always a couple of years behind the current versions. Therefore, even for these basic tools you more likely than non would want to load a module with newest versions of these tools:
+Alma Linux OS comes with its set of development tools, and RedHat environment does provide various _developer toolsets_ and software channels. However, due to the philosophy of RedHat being stable, server-focused distribution, the tools are usually rather old. For example, __cmake__ and __git__ and _gcc_ and _python_ are always a couple of years behind the current versions. Therefore, even for these basic tools you more likely would want to load a module with newest versions of these tools:
 
 {{< highlight bash >}}
 module load git
@@ -45,16 +45,16 @@ We do install AlmaLinux packages with OS that are:
  * graphical libraries that have many dependencies
  * never change versions that are not critical for performance and/or security. 
 
-> * Here are some examples: FLTK, libjpeg, PCRE, Qt and Gtk. Login nodes of Grex have many ''-devel'' packages installed, while compute nodes do not because we want them lean and quickly re-installable. Therefore, compiling codes that requires ''-devel'' base OS packages might fail on compute nodes. Contact us if something like that happens when compiling or running your applications.
+> __Here are some examples:__ FLTK, libjpeg, PCRE, Qt and Gtk. Login nodes of Grex have many ''-devel'' packages installed, while compute nodes do not because we want them lean and quickly re-installable. Therefore, compiling codes that requires ''-devel'' base OS packages might fail on compute nodes. Contact us if something like that happens when compiling or running your applications.
 
 Finally, because HPC machines are shared systems and users do not have _sudo_ access, following some instructions from a Web page that asks for _apt-get install this_ or _yum install that_ will fail. Rather, __module spider__ should be used to see if the package you want is already installed and available as a module. If not, you can always contact [support](support) and ask for help to install the program either under your account or as a module when possible. 
 
 ## Compilers and Toolchains
 ---
 
-Due to the hierarchical nature of our **Lmod** modules system, compilers and certain core libraries (MPI and CUDA) form toolchains. Normally, you would need to choose a compiler suite (GCC or Intel or AOCC) and, in case of parallel applications, a MPI library (OpenMPI or IntelMPI). These come in different versions. Also, you'd want to know if you want CUDA should your applications be able to utilize GPUs. A combination of compiler/version, MPI/version and possibly CUDA makes a toolchain. Toolchains are mutually exclusive; you cannot mix software items compiled with different toolchains!
+Due to the hierarchical nature of our **Lmod** modules system, compilers and certain core libraries (MPI and CUDA) form toolchains. Normally, you would need to choose a compiler suite (GCC or Intel or AOCC) and, in case of parallel applications, a MPI library (OpenMPI or IntelMPI). These come in different versions. Also, you'd want to know if your program support CUDA to be able to utilize GPUs. A combination of compiler/version, MPI/version and possibly CUDA makes a toolchain. Toolchains are mutually exclusive; you cannot mix software items compiled with different toolchains!
 
-See Using Modules page for more information.
+See [Using Modules](software/using-modules) page for more information.
 
 __There is no module loaded by default__! There will be only the system's GCC-8 and no MPI whatsoever. To get started, load an Architecture module, then a compiler/version. Then, if necessary, an MPI (openmpi or intelmpi). If GPUs are required, a CUDA module would be needed to load first because it forms a root of GPU-enabled toolchains. 
 
