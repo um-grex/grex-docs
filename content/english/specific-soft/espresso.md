@@ -15,11 +15,11 @@ categories: ["Software", "Scheduler"]
 ## System specific notes
 ---
 
-On the Grex's default software stack (_SBEnv_), Espresso is built using a variety of compilers and Open MPI 4.1
+On the Grex's default software stack (_SBEnv_), Espresso is built using a variety of compilers and Open MPI 
 
 To find out which versions are available, use **module spider espresso**. 
 
-For a version 7.3.1, at the time of writing the following modules should be loaded:
+For a version 7.3.1, the following modules should be loaded:
 
 {{< highlight bash >}}
 module load arch/avx512  intel/2023.2  openmpi/4.1.6
@@ -29,13 +29,13 @@ module load espresso/7.3.1
 The above module gives access to the Espresso built with traditional Intel compilers and MKL. These would be recommended for compute nodes using Intel AVX512 CPUs.
 
 For better efficiency on AMD CPUs (partitions _genoa_, _genlm_) a better performance may be achieved by using GCC compilers and AOCL linear algebra packages:
+
 Note that the module _version_ has _+aocl-4.2.0_ ; this notation shows that it had been built with AOCL.
 
 {{< highlight bash >}}
-module load arch/avx512  gcc/13.2.0  openmpi/4.1.6
+module load arch/avx512 gcc/13.2.0  openmpi/4.1.6
 module load espresso/7.3.1+aocl-4.2.0
 {{< /highlight >}}
-
 
 {{< collapsible title="Script example for running Quantum Espresso on Grex" >}}
 {{< snippet
