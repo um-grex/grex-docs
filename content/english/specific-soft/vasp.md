@@ -10,7 +10,7 @@ categories: ["Software", "Scheduler"]
 ## Introduction
 ---
 
-[VASP](https://www.vasp.at/wiki/index.php/The_VASP_Manual) is a massively parallel plane-wave solid state DFT code. On Grex it is available only for the research groups that hold VASP licenses. To get access, PIs would need to send us a confirmation email from the VASP vendor, detailing the status of their license and a list of users allowed to use it. 
+[VASP](https://www.vasp.at/wiki/index.php/The_VASP_Manual) is a massively parallel plane-wave solid state DFT code. On Grex, it is available only for the research groups that hold VASP licenses. To get access, PIs would need to send us a confirmation email from the VASP vendor, detailing the status of their license and a list of users allowed to use it. 
 
 ## System specific notes
 ---
