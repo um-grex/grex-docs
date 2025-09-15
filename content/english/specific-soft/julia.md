@@ -15,7 +15,7 @@ categories: ["Software", "Scheduler"]
 ## Available Julia versions
 ---
 
-Presently, binary Julia version **julia/1.10.3** is available. Use ```module spider julia``` to find out other versions.
+Presently, binary Julia version **julia/1.11.3** is available. Use ```module spider julia``` to find out other versions.
 
 ## Installing packages
 ---
