@@ -10,7 +10,7 @@ categories: ["Software", "Scheduler"]
 ## Introduction
 ---
 
-[Gaussian 16](http://gaussian.com/ "Gaussian") is a comprehensive suite for electronic structure modeling using __ab initio__, DFT and semi-empirical methods. A list of Gaussian 16 features can be found [here](http://gaussian.com/g16glance/ "Gaussian Features").
+[Gaussian 16](http://gaussian.com/ "Gaussian") is a comprehensive suite for electronic structure modeling using __ab-initio__, DFT and semi-empirical methods. A list of Gaussian 16 features can be found [here](http://gaussian.com/g16glance/ "Gaussian Features").
 
 ## User Responsibilities and Access
 ---
@@ -42,7 +42,13 @@ module load gaussian/g16.c01
 
 To load the module and access the binaries, you will first get access as per above. Also, our Gaussian license span is less than Compute Canada's support contract, so there are fewer versions available. Use ```module spider gaussian``` to see what is available on Grex.
 
-After a Gaussian module is loaded, the GaussView software also becomes available (provided you have connected with X11 support, perhaps using X2Go) as follows:
+After a Gaussian module is loaded, the GaussView software also becomes available. GaussView can be used via [OOD](ood). There is already an application that will show up if you have access to Gaussian. Here is a snapshot of Gaussview using OOD application:
+
+{{< collapsible title="Gaussview Application: snapshot" >}}
+![Gaussview Application](/ood/gaussview-snap.png)
+{{< /collapsible >}}
+
+The binary is called _gv_:
 
 {{< highlight bash >}}
 gv
