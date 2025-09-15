@@ -8,6 +8,9 @@ banner: true
 bannerContent: "__Work in progress.__"
 draft: true
 #tags: ["Configuration"]
+_build:
+ list: false
+ render: false
 ---
 
 **Note: Priroda in not available yet on the new environment. This documentation was written for the old environment.**
