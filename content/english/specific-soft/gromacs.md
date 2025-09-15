@@ -15,9 +15,9 @@ categories: ["Software", "Scheduler"]
 ## System specific notes
 ---
 
-On the Grex's default software stack (_SBEnv_), GROMACS is built using a variety of compilers and OpenMPI 4.1 
+On the Grex's default software stack (_SBEnv_), GROMACS is built using a variety of compilers and OpenMPI (4.1 or 5.0 for example). 
 
-To find out which versions are available, use **module spider gromacs**. There could be more than one (for example, CPU and GPU)  builds available for each GROMACS version as listed by _module spider_.
+To find out which versions are available, use **module spider gromacs**. There could be more than one (for example, CPU and GPU) builds available for each GROMACS version as listed by _module spider_.
 
 For a version _gromacs/2024.1_, at the time of writing the following modules should be loaded for the CPU version:
 
