@@ -18,17 +18,20 @@ categories: ["Software", "Scheduler"]
 Multiple versions of R are available. Use ```module spider r``` to find out the different versions of R:
 
 {{< highlight bash >}}
-[~@ ~]$ module spider r
-        r/4.4.1+aocl-4.2.0
-        r/4.4.1+mkl-2019.5
-        r/4.4.1+mkl-2024.1
-        r/4.5.0+mkl-2024.1
+[~@yak ~]$ module spider r
+  r/4.4.1+aocl-4.2.0
+  r/4.4.1+mkl-2019.5
+  r/4.4.1+mkl-2024.1
+  r/4.5.0+mkl-2024.1
+  r/4.5.0+openblas-0.3.28
 {{< /highlight >}}
+
+To see how to load a particular version, run the command ```module spider r/<version>```.
 
 At the time of updating this page, the version __r/4.5.0+mkl-2024.1__ is available and can be loaded using:
 
 {{< highlight bash >}}
-module load arch/avx512  gcc/13.2.0 r/4.5.0+mkl-2024.1
+module load arch/avx512 gcc/13.2.0 r/4.5.0+mkl-2024.1
 {{< /highlight >}}
 
 {{< alert type="warning" >}}
@@ -65,6 +68,8 @@ Type 'q()' to quit R.
 > 
 {{< /highlight >}}
 
+To see the packages installed, use the command ```installed.packages()```
+
 To run R code __my-program.R__ interactively, use:
 
 {{< highlight bash >}}
@@ -82,17 +87,19 @@ The following shows an example of scripts to run R code on Grex using a batch jo
 />}}
 {{< /collapsible >}}
 
-## Installing packages
+## Installing R packages
 ---
 
 As mentioned above, the base modules have already some packages. However, users may have to install additional packages depending on what their program uses. Here is a quick example of installing a package called __tidyverse__ unsing the R module __r/4.5.0+mkl-2024.1__.
 
 {{< highlight bash >}}
-[~@yak ~]$ module load arch/avx512  gcc/13.2.0 r/4.5.0+mkl-2024.1
+[~@yak ~]$ module load arch/avx512 gcc/13.2.0 r/4.5.0+mkl-2024.1
 [~@yak ~]$ R
 [~@yak ~]$ > Sys.setenv("DISPLAY"=":0.0")
 [~@yak ~]$ > install.packages("tidyverse")
 {{< /highlight >}}
+
+The command ```Sys.setenv("DISPLAY"=":0.0")``` is not required but it helps for not opening the GUI interface that might be slow over ssh.
 
 For the first installation, there are two warning messages that ask questions about the personal library where R packages will be installed:
 
@@ -101,20 +108,21 @@ Warning in install.packages("tidyverse") :
   'lib = "/home/software/alma8/sb/opt/arch-avx512-gcc-13.2.0/r/4.5.0+mkl-2024.1/lib64/R/library"' is not writable
 Would you like to use a personal library instead? (yes/No/cancel) yes
 Would you like to create a personal library
-‘/home/kerrache/R/x86_64-pc-linux-gnu-library/4.5’
+‘/home/$USER/R/x86_64-pc-linux-gnu-library/4.5’
 to install packages into? (yes/No/cancel) yes
 {{< /highlight >}}
 
-The message refers to a path where the base module is installed. As a user, you do not have write access to this directory. Therefore, the answers to the above questions should be __yes__ and the packages will be installed under a directory __/home/$USER/R__ under your account where you have read and write access. You can add all your packages as described above and they will be stored under the directory __/home/$USER/R__. Please keep this directory as it is if you want to keep your packages. If deleted, you will have to re-install again your packages.
+The message refers to a path where the base module is installed. As a user, you do not have write access to this directory. Therefore, the answers to the above questions should be __yes__ and the packages will be installed under a directory __/home/$USER/R__ under your account where you have read and write access. You can add all your packages as described above and they will be stored under the directory __/home/$USER/R__. Please keep this directory as it is if you want to keep your packages. If deleted, you will have to re-install again all your packages. It is recommended to keep track on the installation process (like list of modules and packages) in case you need to reproduce the installation another time.
 
 {{< alert type="info" >}}
 Under the directory __/home/$USER/R/x86_64-pc-linux-gnu-library__, a sub directory named with the major version of R is created. For example, _4.5_ for all R versions _4.5.x_.
 {{< /alert >}}
 
-In the example of installing the package _tidyverse_, no additional library or module was required. However, on many cases, the installation of R packages requires additional modules. The list is, but not limited to, gsl, netcdf, hdf5, udunits, geos, proj, gdal, tbb, ... etc. Usually, the error message gives a hint to the misssing library. The dependencies used to install any R package are also required to be loaded when running the job. As an example, to install the package _rjags_, one need to load jags module in addition to R:
+In the example of installing the package _tidyverse_, no additional library or module was required. However, on many cases, the installation of R packages requires additional modules. The list is, but not limited to, gsl, netcdf, hdf5, udunits, geos, proj, gdal, tbb, ... etc. Usually, the error message gives a hint to the misssing library. The dependencies used to install any R package are also required to be loaded when running the job. 
 
+As an example, to install the package _rjags_, one need to load jags module in addition to R:
 {{< highlight bash >}}
-[~@yak ~]$ module load arch/avx512  gcc/13.2.0 r/4.5.0+mkl-2024.1
+[~@yak ~]$ module load arch/avx512 gcc/13.2.0 r/4.5.0+mkl-2024.1
 [~@yak ~]$ module load jags
 [~@yak ~]$ R
 [~@yak ~]$ > Sys.setenv("DISPLAY"=":0.0")
@@ -123,9 +131,63 @@ In the example of installing the package _tidyverse_, no additional library or m
 
 ### Packages from CRAN mirrors
 
+After loading r module and all the required dependencies, the installation of R package from CRAN is invoked by the command __install.packages("name of the package")__ like in the following example for installing _rjags_. This package requires an additional external module called _jags_:
+
+{{< highlight bash >}}
+[~@yak ~]$ module load arch/avx512 gcc/13.2.0 r/4.5.0+mkl-2024.1
+[~@yak ~]$ module load jags
+[~@yak ~]$ R
+[~@yak ~]$ > Sys.setenv("DISPLAY"=":0.0")
+[~@yak ~]$ > install.packages("rjags")
+{{< /highlight >}}
+
+It is possible to bundle more than one package in the same command line using:
+
+{{< highlight bash >}}
+install.packages(c("packae1", "package2", "package3"))
+{{< /highlight >}}
+
+<!--
 ### Packages from GitHub repositories
 
+There are R packages hosted on GitHub and their installation require to first install ```devtools``` or ```remotes`. First, one need to add the package ```devtools``` or ```remotes` if not installed already and make them available in the R prompt before using them to install other packages.
+
+Here is an example used to install [flipPlots](https://github.com/Displayr/flipPlots) with ```devtools```:
+
+<!--
+{{< highlight bash >}}
+[~@yak ~]$ module load arch/avx512 gcc/13.2.0 r/4.5.0+mkl-2024.1
+[~@yak ~]$ R
+[~@yak ~]$ > Sys.setenv("DISPLAY"=":0.0")
+[~@yak ~]$ > install.packages("devtools")
+[~@yak ~]$ > library("devtools")
+[~@yak ~]$ > install_github("Displayr/flipPlots") 
+{{< /highlight >}}
+
+Similar procedure could be used to install a package with ```remotes`:
+
+{{< highlight bash >}}
+[~@yak ~]$ module load arch/avx512 gcc/13.2.0 r/4.5.0+mkl-2024.1
+[~@yak ~]$ R
+[~@yak ~]$ > Sys.setenv("DISPLAY"=":0.0")
+[~@yak ~]$ > install.packages("devtools")
+[~@yak ~]$ > library("remotes")
+[~@yak ~]$ > remotes::install_github("Displayr/flipPlots")
+{{< /highlight >}}
+
+{{< alert type="warning" >}}
+During the installation, you may get questions about updating packages.
+{{< /alert >}}
+
+install.packages("remotes")
+remotes::install_github("rstudio/shiny")
+
+
 ### Bioconductor packages
+-->
+
+## External Links
+---
 
 <!-- {{< treeview display="tree" />}} -->
 
