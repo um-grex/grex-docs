@@ -9,6 +9,11 @@ categories: ["Training"]
 #draft: true
 ---
 
+<!--
+## Autumn workshop, October 2025
+---
+-->
+
 # High Performance Computing Workshop - May 21-23, 2025
 ---
 
