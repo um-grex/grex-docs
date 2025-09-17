@@ -147,47 +147,54 @@ It is possible to bundle more than one package in the same command line using:
 install.packages(c("packae1", "package2", "package3"))
 {{< /highlight >}}
 
-<!--
 ### Packages from GitHub repositories
 
-There are R packages hosted on GitHub and their installation require to first install ```devtools``` or ```remotes`. First, one need to add the package ```devtools``` or ```remotes` if not installed already and make them available in the R prompt before using them to install other packages.
+There are R packages hosted on GitHub and their installation require to first install [devtools](https://r-lib.r-universe.dev/devtools/doc/manual.html) or [remotes](https://r-lib.r-universe.dev/remotes/doc/manual.html). First, one need to add the package ```devtools``` or ```remotes``` if not installed already and make them available in the R prompt before using them to install other packages.
 
-Here is an example used to install [flipPlots](https://github.com/Displayr/flipPlots) with ```devtools```:
+Here is an example used to install [stampr](https://github.com/jedalong/stampr) with ```devtools```:
 
-<!--
 {{< highlight bash >}}
-[~@yak ~]$ module load arch/avx512 gcc/13.2.0 r/4.5.0+mkl-2024.1
+[~@yak ~]$ module load arch/avx512 gcc/13.2.0 r/4.5.0+mkl-2024.1 gdal
 [~@yak ~]$ R
 [~@yak ~]$ > Sys.setenv("DISPLAY"=":0.0")
 [~@yak ~]$ > install.packages("devtools")
 [~@yak ~]$ > library("devtools")
-[~@yak ~]$ > install_github("Displayr/flipPlots") 
+[~@yak ~]$ > devtools::install_github("jedalong/stampr") 
 {{< /highlight >}}
 
+{{< alert type="warning" >}}
+During the installation, you may get questions about updating packages and choose which packages to update. 
+{{< /alert >}}
+
 Similar procedure could be used to install a package with ```remotes`:
+
+{{< highlight bash >}}
+[~@yak ~]$ module load arch/avx512 gcc/13.2.0 r/4.5.0+mkl-2024.1 gdal geos
+[~@yak ~]$ R
+[~@yak ~]$ > Sys.setenv("DISPLAY"=":0.0")
+[~@yak ~]$ > install.packages("remotes")
+[~@yak ~]$ > library("remotes")
+[~@yak ~]$ > remotes::install_github("jedalong/stampr")
+{{< /highlight >}}
+
+### Bioconductor packages
+
+The following example shows how to install the packages "edgeR", "qvalue", "GenomicAlignments", "GenomicFeatures" using ```BiocManager``` :
 
 {{< highlight bash >}}
 [~@yak ~]$ module load arch/avx512 gcc/13.2.0 r/4.5.0+mkl-2024.1
 [~@yak ~]$ R
 [~@yak ~]$ > Sys.setenv("DISPLAY"=":0.0")
-[~@yak ~]$ > install.packages("devtools")
-[~@yak ~]$ > library("remotes")
-[~@yak ~]$ > remotes::install_github("Displayr/flipPlots")
+[~@yak ~]$ > if (!require("BiocManager", quietly = TRUE))
+[~@yak ~]$ + install.packages("BiocManager")
+
+[~@yak ~]$ > BiocManager::install(c("edgeR", "qvalue", "GenomicAlignments", "GenomicFeatures"))
 {{< /highlight >}}
-
-{{< alert type="warning" >}}
-During the installation, you may get questions about updating packages.
-{{< /alert >}}
-
-install.packages("remotes")
-remotes::install_github("rstudio/shiny")
-
-
-### Bioconductor packages
--->
 
 ## External Links
 ---
+
+* R [documentation](https://www.r-project.org/other-docs.html)
 
 <!-- {{< treeview display="tree" />}} -->
 
