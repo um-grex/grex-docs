@@ -9,10 +9,33 @@ categories: ["Training"]
 #draft: true
 ---
 
-<!--
+
 ## Autumn workshop, October 2025
 ---
--->
+
+**UManitoba Autumn 2025 HPC and Cloud computing workshop**
+
+Join us for our free Fall 2025 workshop, open to all researchers from Manitoba institutions! Held October 14–17, 2025 at the University of Manitoba, this in-person event will introduce participants to Linux shell, batch computing with SLURM HPC scheduler, interactive computing with OpenOnDemand, Globus file transfer service, and using Canadian OpenStack community Cloud and Object Storage.
+
+**Requirements:**
+
+* A laptop is required for hands-on exercises.
+* An active CCDB account is optional (but highly recommended).
+
+**Audience:**
+
+The workshop is designed for beginner and intermediate users. Content is spread across four afternoons. The room space is limited! Please RSVP through [Eventbrite](https://www.eventbrite.ca/e/umanitoba-autumn-2025-hpc-and-cloud-computing-workshop-tickets-1716678885759?aff=oddtdtcreator). Participants may register for and attend individual sessions.
+
+**Programme:** 
+
+* Day 1 (October 14): Introduction to HPC resources, using Linux, data transfer.
+* Day 2 (October 15): Software in HPC, containers in HPC.
+* Day 3 (October 16): Running batch and interactive HPC jobs.
+* Day 4 (October 17): Using OpenStack cloud and Object Storage
+
+**Registration:**
+
+Use the following [link](https://www.eventbrite.ca/e/umanitoba-autumn-2025-hpc-and-cloud-computing-workshop-tickets-1716678885759?aff=oddtdtcreator) to register for the workshop. 
 
 # High Performance Computing Workshop - May 21-23, 2025
 ---
