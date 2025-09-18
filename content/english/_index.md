@@ -4,7 +4,7 @@ title: "Grex HPC User Guide"
 linktitle: "Grex HPC User Guide"
 description: "Documentation for Grex"
 #categories: []
-titleIcon: "fa-solid fa-user-gear"
+titleIcon: "fa-solid fa-house"
 banner: false
 ---
 
@@ -13,11 +13,11 @@ banner: false
 [Hardware and software](grex) --- [Access and Usage Conditions](access) --- [Quick Start Guide](start-guide) --- [Storage](storage) --- [Connect and Transfer data](connecting) --- [Software and Applications](software) --- [Software notes](specific-soft) --- [Running jobs](running-jobs) --- [Workshops and Training](training) --- [OpenOnDemand](ood) --- [How to get help"](support)
 
 ## Traditional Territories Acknowledgement
----   
+---
 
-The University of Manitoba campuses are located on original lands of Anishinaabeg, Ininiwak, Anisininewuk, Dakota Oyate and Dene, and on the National Homeland of the Red River Métis.
+The University of Manitoba campuses and research spaces are located on original lands of Anishinaabeg, Ininiwak, Anisininewuk, Dakota Oyate, Dene and Inuit, and on the National Homeland of the Red River Métis.
 We respect the Treaties that were made on these territories, we acknowledge the harms and mistakes of the past, and we dedicate ourselves to move forward in partnership with Indigenous communities in a spirit of Reconciliation and collaboration.
-      
+
 For more information, please visit the [University of Manitoba Traditional Territories Acknowledgement page](https://umanitoba.ca/indigenous/traditional-territories-acknowledgements).
 
 {{< intro
