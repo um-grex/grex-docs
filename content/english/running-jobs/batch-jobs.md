@@ -29,9 +29,9 @@ There are certain scheduling policies in place to prevent the cluster from being
 The following policies are implemented on Grex:
 
 > - The default wall time is 3 hours (equivalent to: __-\-time=3:00:00__ or __-\-time=0-3:00:00__).
-> - The default amount of memory per processor (__-\-mem-per-cpu=__) is 256 mb. Memory limits are enforced, so an accurate estimate of memory resource (either in the form of __-\-mem=__ or __-\-mem-per-cpu=__) should be provided.
-> - The maximum wall time is 21 days on **genoa** and **skylake** partitions, 14 days on **largemem** and **genlm** partition. 
-> - The maximum wall time is 3 days on the **gpu** partition.
+> - The default amount of memory per processor (__-\-mem-per-cpu=__) is 2500M. Memory limits are enforced, so an accurate estimate of memory resource (either in the form of __-\-mem=__ or __-\-mem-per-cpu=__) should be provided.
+> - The maximum wall time is 21 days on **genoa**, **skylake** partitions, on **largemem** and **genlm** partition. 
+> - The maximum wall time is 7 days on the **gpu** partition.
 > - The maximum wall time is 7 days on the **preempted** partitions: **stamps-b**, **livi-b** and **agro-b**.
 > - The maximum number of processor-minutes for all currently running jobs of a group without a RAC is 4 M.
 > - The maximum number of jobs that a user may have queued to run is 4000. The maximum size of an array job is 2000.
