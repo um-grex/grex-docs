@@ -37,7 +37,7 @@ Note that manual SSH connections to the compute nodes without having active runn
 
 To request an interactive job, the **salloc** command should be used. These jobs are not limited to a single node jobs; any nodes/tasks/gpus layout can be requested by salloc in the same way as for sbatch directives. However, to minimize queuing time, usually a minimal set of required resources should be used when submitting interactive jobs (less than 3 hours of wall time, less than 4 GB memory per core, ... etc). Because there is no batch file for interactive jobs, all the resource requests should be added as command line options of the **salloc** command. The same logic of __-\-nodes=__,  __-\-ntasks-per-node=__ , __-\-mem=__ and __-\-cpus-per-task=__ resources as per batch jobs applies here as well.
 
-For a threaded SMP code asking for half a node for two hours:
+For a threaded SMP code asking for 6 cores for two hours:
 
 {{< highlight bash >}}
 salloc --nodes=1 --ntasks=1 --cpus-per-task=6 --mem=12000M --partition=skylake --time=0-2:00:00
@@ -46,11 +46,12 @@ salloc --nodes=1 --ntasks=1 --cpus-per-task=6 --mem=12000M --partition=skylake -
 For an MPI jobs asking for 48 tasks, irrespectively of the nodes layout: 
 
 {{< highlight bash >}}
-salloc  --ntasks=48 --mem-per-task=2000M --partition=skylake --time=0-2:00:00
+salloc  --ntasks=48 --mem-per-cpu=2000M --partition=skylake --time=0-2:00:00
 {{< /highlight >}}
 
-Similar to [batch jobs](running-jobs), specifying a partition with __-\-partition=__ is required. Otherwise, the default partition will be used (as for now, **skylake** is set as default partition for CPU jobs).
+Similar to [batch jobs](running-jobs), specifying a partition with __-\-partition=__ is required. For more information, see the [page](running-jobs/slurm-partitions/). 
 
+<!-- AK: Otherwise, the default partition will be used (as for now, **skylake** is set as default partition for CPU jobs). -->
 <!-- AK: the default partition for interactive CPU jobs is compute. -->
 
 ## Interactive GPU jobs
