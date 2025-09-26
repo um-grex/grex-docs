@@ -118,6 +118,15 @@ Note the option __-singleCompThread__ has been included to limit the executable 
 
 In the deploy directory, an executable __mycode__ will be created along with a script __run_mycode.sh__. These two files should be copied to the target machine where the code is going to be run as a batch job.
 
+Note that for every MATLAB module, there is a corresponding MCR version. The correspondance between the version is shown on the following table:
+
+| MATLAB module    | MCR module     |
+| :--------------: | :------------: |
+| matlab/R2020B2   | mcr/R2020b     |         
+| matlab/R2022A    | mcr/R2022a     |
+| matlab/R2023B    | mcr/R2023b     |
+| matlab/R2024A    | mcr/R2024a     |
+
 ### Example of SLURM script: MCR
 ---
 
