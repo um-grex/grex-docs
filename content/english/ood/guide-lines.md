@@ -26,7 +26,7 @@ Via OOD interface, one can use and have access to the following:
 
  * __File browser:__ navigate through the directories and files under home and project directories. Many operations related to files and directories are accessible from the file browser (copy, delete, edit, move, upload, download, ...). It gives also access to GLOBUS link.
 
- * __Jobs:__ Status of queues, and a JobComposer interface to submit batch scripts.
+ * __Jobs:__ Status of queues, Rinning Jobs and a JobComposer interface to submit batch scripts.
 
  * __Clusters:__ Status of Grex system and its SLURM partitions.
 
@@ -54,10 +54,35 @@ If the user has only one accounting group, it will be picked automatically by sl
 
 #### Wall time:
 
+Use this field to set the wall time you need to use OOD application. As of now, the maximum wall time is 6 hours.
+
 #### E-mail notifications
+
+Similar to sbatch, one can add E-mail notifications to receive emails from the scheduler for your OOD session. It requires to provide a valid email in the field __Email__ that will show up when you select at least one of the following options:
+
+* I would like to receive an email when the session starts
+* I would like to receive an email when the session terminates
 
 #### Slurm partitions
 
+We have interactive applications where the partition is predeined, like Grex Desktop Simplified, Gnuplot and Grace. However, for other application, a field with the name _SLURM partition_ will show in the form as in the following screenshot:
+
+{{< collapsible title="Slurm Partitions" >}}
+![OOD Slurm Partitions](/ood/ood-slurm-partitions.png)
+{{< /collapsible >}}
+
+You can use this field to select the partition where you want to run your OOD application:
+
+{{< collapsible title="Select Slurm Partitions" >}}
+![Select OOD Slurm Partitions](/ood/ood-select-partitions.png)
+{{< /collapsible >}}
+
+There is a summary of all the partitions and their characteristics {name of the partition, number of CPUs per node, memory per node, memory per core}.
+
+{{< alert type="warning" >}}
+__Partition type:__ please make sure to select the right partition for your application (cpu or gpu). If your application does not use or support GPU, selct the CPU partition to run it. 
+{{< /alert >}}
+ 
 #### Number of Cores
 
 #### Memory
