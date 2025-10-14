@@ -2,7 +2,7 @@
 &lt;div class="sc-treeview"&gt;&lt;ul
  class='sc-treeview-tree'&gt;&lt;li class=" sc-treeview-coll"&gt;
  &lt;div class="sc-treeview-label"&gt;&lt;div class="sc-treeview-icon sc-treeview-coll-trigger"&gt;
- &lt;i class="fa-solid fa-user-gear"&gt;&lt;/i&gt;
+ &lt;i class="fa-solid fa-house"&gt;&lt;/i&gt;
  &lt;/div&gt;&lt;p class="is-marginless"&gt;
  &lt;a
  href="https://um-grex.github.io/grex-docs/"

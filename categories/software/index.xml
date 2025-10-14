@@ -7,15 +7,15 @@
  is an integrated suite of computer codes for electronic-structure calculations and materials modeling at the nanoscale. It is based on density-functional theory, plane waves, and pseudopotentials (both norm-conserving and ultrasoft).&lt;/p&gt;
 &lt;h2 id='system-specific-notes'&gt;System specific notes&lt;a href='#system-specific-notes' class='anchor'&gt;#&lt;/a&gt;
 &lt;/h2&gt;&lt;hr&gt;
-&lt;p&gt;On the Grex&amp;rsquo;s default software stack (&lt;em&gt;SBEnv&lt;/em&gt;), Espresso is built using a variety of compilers and Open MPI 4.1&lt;/p&gt;
+&lt;p&gt;On the Grex&amp;rsquo;s default software stack (&lt;em&gt;SBEnv&lt;/em&gt;), Espresso is built using a variety of compilers and Open MPI&lt;/p&gt;
 &lt;p&gt;To find out which versions are available, use &lt;strong&gt;module spider espresso&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;For a version 7.3.1, at the time of writing the following modules should be loaded:&lt;/p&gt;</description></item><item><title>Running Gaussian on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/gaussian/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/gaussian/</guid><description>&lt;h2 id='introduction'&gt;Introduction&lt;a href='#introduction' class='anchor'&gt;#&lt;/a&gt;
+&lt;p&gt;For a version 7.3.1, the following modules should be loaded:&lt;/p&gt;</description></item><item><title>Running Gaussian on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/gaussian/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/gaussian/</guid><description>&lt;h2 id='introduction'&gt;Introduction&lt;a href='#introduction' class='anchor'&gt;#&lt;/a&gt;
 &lt;/h2&gt;&lt;hr&gt;
 &lt;p&gt;&lt;a
  href="http://gaussian.com/"title="Gaussian" id="gaussian"
  class="is-pretty-link"&gt;Gaussian 16&lt;/a
 &gt;
- is a comprehensive suite for electronic structure modeling using &lt;strong&gt;ab initio&lt;/strong&gt;, DFT and semi-empirical methods. A list of Gaussian 16 features can be found &lt;a
+ is a comprehensive suite for electronic structure modeling using &lt;strong&gt;ab-initio&lt;/strong&gt;, DFT and semi-empirical methods. A list of Gaussian 16 features can be found &lt;a
  href="http://gaussian.com/g16glance/"title="Gaussian Features" id="gaussian-features"
  class="is-pretty-link"&gt;here&lt;/a
 &gt;
@@ -32,8 +32,7 @@
  (GROningen MAchine for Chemical Simulations) is a molecular dynamics package primarily designed for simulations of proteins, lipids and nucleic acids. GROMACS is one of the fastest and most popular software packages available and can run on CPUs as well as GPUs.&lt;/p&gt;
 &lt;h2 id='system-specific-notes'&gt;System specific notes&lt;a href='#system-specific-notes' class='anchor'&gt;#&lt;/a&gt;
 &lt;/h2&gt;&lt;hr&gt;
-&lt;p&gt;On the Grex&amp;rsquo;s default software stack (&lt;em&gt;SBEnv&lt;/em&gt;), GROMACS is built using a variety of compilers and OpenMPI 4.1&lt;/p&gt;
-&lt;p&gt;To find out which versions are available, use &lt;strong&gt;module spider gromacs&lt;/strong&gt;. There could be more than one (for example, CPU and GPU) builds available for each GROMACS version as listed by &lt;em&gt;module spider&lt;/em&gt;.&lt;/p&gt;</description></item><item><title>Running Julia on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/julia/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/julia/</guid><description>&lt;h2 id='introduction'&gt;Introduction&lt;a href='#introduction' class='anchor'&gt;#&lt;/a&gt;
+&lt;p&gt;On the Grex&amp;rsquo;s default software stack (&lt;em&gt;SBEnv&lt;/em&gt;), GROMACS is built using a variety of compilers and OpenMPI (4.1 or 5.0 for example).&lt;/p&gt;</description></item><item><title>Running Julia on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/julia/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/julia/</guid><description>&lt;h2 id='introduction'&gt;Introduction&lt;a href='#introduction' class='anchor'&gt;#&lt;/a&gt;
 &lt;/h2&gt;&lt;hr&gt;
 &lt;p&gt;&lt;a
  href="https://julialang.org/"
@@ -42,7 +41,7 @@
  is a programming language that was designed for performance, ease of use and portability. It is available as a module on Grex.&lt;/p&gt;
 &lt;h2 id='available-julia-versions'&gt;Available Julia versions&lt;a href='#available-julia-versions' class='anchor'&gt;#&lt;/a&gt;
 &lt;/h2&gt;&lt;hr&gt;
-&lt;p&gt;Presently, binary Julia version &lt;strong&gt;julia/1.10.3&lt;/strong&gt; is available. Use &lt;code&gt;module spider julia&lt;/code&gt; to find out other versions.&lt;/p&gt;
+&lt;p&gt;Presently, binary Julia version &lt;strong&gt;julia/1.11.3&lt;/strong&gt; is available. Use &lt;code&gt;module spider julia&lt;/code&gt; to find out other versions.&lt;/p&gt;
 &lt;h2 id='installing-packages'&gt;Installing packages&lt;a href='#installing-packages' class='anchor'&gt;#&lt;/a&gt;
 &lt;/h2&gt;&lt;hr&gt;
 &lt;p&gt;We do not maintain centralized versions of Julia packages. Users should install Julia modules in their home directory.&lt;/p&gt;
@@ -142,18 +141,19 @@ Sometimes it is useful (for example, for copy/paste operations with mouse, betwe
 &lt;h2 id='available-r-versions'&gt;Available R versions&lt;a href='#available-r-versions' class='anchor'&gt;#&lt;/a&gt;
 &lt;/h2&gt;&lt;hr&gt;
 &lt;p&gt;Multiple versions of R are available. Use &lt;code&gt;module spider r&lt;/code&gt; to find out the different versions of R:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;[&lt;/span&gt;~@ ~&lt;span style="color:#f92672"&gt;]&lt;/span&gt;$ module spider r
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;[&lt;/span&gt;~@yak ~&lt;span style="color:#f92672"&gt;]&lt;/span&gt;$ module spider r
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; r/4.4.1+aocl-4.2.0
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; r/4.4.1+mkl-2019.5
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; r/4.4.1+mkl-2024.1
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; r/4.5.0+mkl-2024.1&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;At the time of updating this page, the version &lt;strong&gt;r/4.5.0+mkl-2024.1&lt;/strong&gt; is available and can be loaded using:&lt;/p&gt;</description></item><item><title>Running VASP on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/vasp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/vasp/</guid><description>&lt;h2 id='introduction'&gt;Introduction&lt;a href='#introduction' class='anchor'&gt;#&lt;/a&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; r/4.5.0+mkl-2024.1
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; r/4.5.0+openblas-0.3.28&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;To see how to load a particular version, run the command &lt;code&gt;module spider r/&amp;lt;version&amp;gt;&lt;/code&gt;.&lt;/p&gt;</description></item><item><title>Running VASP on Grex</title><link>https://um-grex.github.io/grex-docs/specific-soft/vasp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/specific-soft/vasp/</guid><description>&lt;h2 id='introduction'&gt;Introduction&lt;a href='#introduction' class='anchor'&gt;#&lt;/a&gt;
 &lt;/h2&gt;&lt;hr&gt;
 &lt;p&gt;&lt;a
  href="https://www.vasp.at/wiki/index.php/The_VASP_Manual"
  class="is-pretty-link"&gt;VASP&lt;/a
 &gt;
- is a massively parallel plane-wave solid state DFT code. On Grex it is available only for the research groups that hold VASP licenses. To get access, PIs would need to send us a confirmation email from the VASP vendor, detailing the status of their license and a list of users allowed to use it.&lt;/p&gt;
+ is a massively parallel plane-wave solid state DFT code. On Grex, it is available only for the research groups that hold VASP licenses. To get access, PIs would need to send us a confirmation email from the VASP vendor, detailing the status of their license and a list of users allowed to use it.&lt;/p&gt;
 &lt;h2 id='system-specific-notes'&gt;System specific notes&lt;a href='#system-specific-notes' class='anchor'&gt;#&lt;/a&gt;
 &lt;/h2&gt;&lt;hr&gt;
 &lt;!--On the Grex local software stack, we have VASP 5 and VASP 6 using Intel compiler and OpenMPI 3.1.--&gt; 
