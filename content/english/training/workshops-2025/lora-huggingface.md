@@ -9,7 +9,7 @@ categories: ["Training"]
 #draft: true
 ---
 
-## High Performance Computing Workshop - May 21-23, 2025
+## High Performance Computing Workshop - Oct 14-17, 2025
 ---
 
 This is an example of training LoRa in a batch job. 
