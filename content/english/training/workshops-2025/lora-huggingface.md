@@ -28,13 +28,18 @@ We will also copy the datasets for training from __pythonai__ subdirectory of ou
 {{< highlight bash >}}
 pwd
 # on Grex. lets work from Project filesystem rather than Home!
+#
+# do: cd $HOME/projects/def-your-pi/your-user
+#
 # assuming the current directory is under your project as per above
-cp -r /global/software/ws-may2025/pythonai .
+cp -r /global/software/ws-oct2025/pythonai .
 cd ./pythonai
 pwd && ls 
 # should see /home/user/pythonai ; dataset1 dataset2 notebooks
 
 {{< /highlight >}}
+
+>> Magic Castle has no GPUs as of October 2025! So please ignode the MC instructions below!
 
 {{< highlight bash >}}
 
@@ -65,7 +70,7 @@ We will use workshop reservation __ws_gpu__ and (any of) reserved GPU partitions
 Please add _--account=_ if you have more than one active.
 
 {{< highlight bash >}}
-salloc --time=0-2:00 --partition=agro-b,mcordgpu-b,stamps-b --gpus=1 --cpus-per-gpu=6 --mem=60gb  --reservation=ws_gpu
+salloc --time=0-2:00 --partition=agro-b,mcordgpu-b --gpus=1 --cpus-per-gpu=6 --mem=50gb  --reservation=ws_gpu
 {{< /highlight >}}
 
 We should see a GPU information from _nvidia-smi_ there. Will get either a V100 or A30.
@@ -89,6 +94,8 @@ python --version
 
 {{< highlight bash >}}
 
+>> Magic Castle has no GPUs as of October 2025! So please ignode the MC instructions below!
+
 # on MC
 module load StdEnv/2023 arch/avx2 cuda python/3.12 
 python --version
@@ -101,9 +108,8 @@ Now that modules are loaded, we can create a new virtualenv here and call it _hf
 
 virtualenv hf
 source hf/bin/activate
-#installing packages
-pip install torch arrow transformers datasets peft accelerate
-pip install torchvision
+#installing packages . This can be flakey! use line by line and see if no previous step failed
+pip install torch==2.8.0 arrow transformers datasets peft accelerate torchvision==0.23.0
 pip install git+https://github.com/huggingface/diffusers
 python -c "import torch"
 deactivate
@@ -127,6 +133,13 @@ ls
 #must have train_text_to_image_lora.py amongst the files there
 # this is what we are goung to use! Note the path to dataset1 ../../../dataset1/train
 python ./train_text_to_image_lora.py  --pretrained_model_name_or_path runwayml/stable-diffusion-v1-5   --train_data_dir ../../../dataset1/train   --output_dir ../../../lora-sd-output   --resolution 256   --train_batch_size 1   --max_train_steps 200
+# go to the results directory and see if there are new weights
+cd  ../../../lora-sd-output
+pwd
+ls
+# should show something like     pytorch_lora_weights.safetensors
+# now exit from the salloc job!
+exit
 {{< /highlight >}}
 
 Note that we use resolution 256  on the dataset1.
@@ -146,7 +159,7 @@ If needed  change directory to the project filesystem on Grex.
 {{< highlight bash >}}
 # must be in /home/your_user/projects/def-your_project/your_user/pythonai
 sbatch trainingjob.sh
-
+# the above may need --account= if you have more than one PI
 {{< /highlight >}}
 
 The trainingjob.sh script looks as follows:
