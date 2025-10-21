@@ -9,7 +9,7 @@ categories: ["Training"]
 #draft: true
 ---
 
-
+<!--
 ## Autumn workshop, October 2025
 ---
 
@@ -37,6 +37,38 @@ The workshop is designed for beginner and intermediate users. Content is spread 
 
 Use the following [link](https://www.eventbrite.ca/e/umanitoba-autumn-2025-hpc-and-cloud-computing-workshop-tickets-1716678885759?aff=oddtdtcreator) to register for the workshop. 
 
+-->
+
+# High Performance Computing Workshop - Oct 14-17, 2025
+---
+
+Below are the slides and some materials from the in-person workshop that was held on Oct 2025:
+
+## Oct 14, 2025
+
+> - **Updates and overview of the Digital Alliance of Canada and UManitoba computing resources**: [Slides](/workshops/autumn2025/Intro-and-Program-Autumn-2025.pdf)
+> - **Basics of Linux Shell**: [Slides](/workshops/autumn2025/linux_shell_basics.pdf)
+> - **Data transfer with SSH and with Globus**: [Slides](/workshops/autumn2025/data_transfer_in_hpc.pdf)
+> - **OpenOnDemand HPC Web portal: File Transfer, Remote Desktop and interactive GUI applications**: [Slides](/workshops/autumn2025/introduction_openondemand.pdf)
+
+## Oct 15, 2025
+
+> - **Intro to HPC software and Lmod modules tool**: [Slides](/workshops/autumn2025/Introduction-to-HPC-software.pdf)
+> - **Using Jupyter notebooks on HPC Systems: OpenOnDemand and JH Session**: [Slides](/workshops/autumn2025/JupyterHub-on-HPC-Autumn-2025.pdf)
+> - **Containers in HPC: using Docker/Podman containers**: [Slides](/workshops/autumn2025/introduction_podman.pdf)
+> - **Containers in HPC: using Pyxis**: [Podman Slides](/workshops/autumn2025/introduction_pyxis.pdf)
+
+## Oct 16, 2025
+
+> - **Running HPC jobs with SLURM scheduler / SLURM topics: optimizing your job throughput on HPC machines**: [Slides](/workshops/autumn2025/Running-Jobs-on-HPC-Cluster.pdf)
+> - **Running HPC Batch jobs with OpenOnDemand portal**: [Slides](/workshops/autumn2025/Running-Jobs-via-OOD.pdf)
+> - **Running Python and Jupyter AI / Machine Learning workloads on HPC**: [Slides](/workshops/autumn2025/Python-for-AI-ML-Autumn-2025.pdf)
+
+## Oct 17, 2025
+
+> - **Cloud computing with OpenStack Cloud: IaaS VMs / provisioning a service on the cloud**: [Slides](/workshops/autumn2025/openstack_community_cloud_beginner.pdf)
+> - **Using S3 Object Storage on OpenStack Cloud**: [Slides](/workshops/autumn2025/openstack_community_cloud_object_storage.pdf)
+ 
 # High Performance Computing Workshop - May 21-23, 2025
 ---
 
