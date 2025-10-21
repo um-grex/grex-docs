@@ -9,7 +9,8 @@
 &lt;li&gt;submit and monitor jobs&lt;/li&gt;
 &lt;li&gt;transfer and/or download data&lt;/li&gt;
 &lt;li&gt;run short tests, &amp;hellip; etc.&lt;/li&gt;
-&lt;/ul&gt;&lt;/blockquote&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;In other terms, anything that is not CPU, nor memory intensive [for example, a test with up to 4 CPUs, less than 2 Gb per core for 30 minutes or less].&lt;/p&gt;</description></item><item><title>Desktops</title><link>https://um-grex.github.io/grex-docs/ood/desktops/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/ood/desktops/</guid><description>&lt;h2 id='introduction'&gt;Introduction&lt;a href='#introduction' class='anchor'&gt;#&lt;/a&gt;
 &lt;/h2&gt;&lt;hr&gt;
 &lt;p&gt;From the menu &lt;strong&gt;Interactive Apps&lt;/strong&gt;, it is possible to start a given application and use it for interactive work. Some applications have already predefined settings, like the slurm partition and allow only to adjust the wall time. As an example, the &lt;em&gt;Grex Desktop Simplified&lt;/em&gt; that uses by default the &lt;strong&gt;test&lt;/strong&gt; partition.&lt;/p&gt;
@@ -63,7 +64,8 @@
 &lt;li&gt;Since the end of &lt;strong&gt;October 2021&lt;/strong&gt;, OpenOnDemand version 2 is officially in production on Grex.&lt;/li&gt;
 &lt;li&gt;Since the beginning of &lt;strong&gt;January 2023&lt;/strong&gt;, OpenOnDemand version 3 is officially in production on Grex.&lt;/li&gt;
 &lt;li&gt;Since the beginning of &lt;strong&gt;February 2025&lt;/strong&gt;, OpenOnDemand version 4 is officially in production on Grex.&lt;/li&gt;
-&lt;/ul&gt;&lt;/blockquote&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;For more general OOD information, see the &lt;a
  href="https://joss.theoj.org/papers/10.21105/joss.00622"title="OpenOnDemand Paper" id="openondemand-paper"
  class="is-pretty-link"&gt;OpenOnDemand paper&lt;/a

@@ -15,7 +15,8 @@
  class="is-pretty-link"&gt;learn VIM in X minutes&lt;/a
 &gt;
  .&lt;/li&gt;
-&lt;/ul&gt;&lt;/blockquote&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
 &lt;blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;Another lightweight text-mode editor is &lt;strong&gt;nano&lt;/strong&gt;. It provides a self-explanatory key-combination menu at the bottom of the screen. An online manual can be found &lt;a
@@ -23,7 +24,8 @@
  class="is-pretty-link"&gt;here&lt;/a
 &gt;
 .&lt;/li&gt;
-&lt;/ul&gt;&lt;/blockquote&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
 &lt;blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;A more modern alternative to &amp;ldquo;nano&amp;rdquo; is &lt;strong&gt;micro&lt;/strong&gt; . On Grex it is available only as module (&lt;code&gt;module load micro&lt;/code&gt;) . &lt;strong&gt;micro&lt;/strong&gt; supports syntax coloring for a number of programming languages. The webpage of &lt;a
@@ -31,11 +33,13 @@
  class="is-pretty-link"&gt;micro&lt;/a
 &gt;
  .&lt;/li&gt;
-&lt;/ul&gt;&lt;/blockquote&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
 &lt;blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;Midnight Commander file manager provides a text-mode editor that can be invoked stand-alone as &lt;strong&gt;mc -e filename&lt;/strong&gt;, or from within &lt;strong&gt;mc&lt;/strong&gt; by using F4 or Edit menu item on a selected file.&lt;/li&gt;
-&lt;/ul&gt;&lt;/blockquote&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
 &lt;h2 id='gui-text-editors'&gt;GUI Text editors&lt;a href='#gui-text-editors' class='anchor'&gt;#&lt;/a&gt;
 &lt;/h2&gt;&lt;hr&gt;
 &lt;!--
@@ -78,6 +82,7 @@ This makes maintenance of Python software difficult. Not only do Python and libr
 &gt;
  on the Allince Documentation Wiki.&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Note that Grex does not install local, commercial software licensed only to the National/Alliance systems. The software listed under &amp;ldquo;List of globally-installed modules&amp;rdquo; is available.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Note that Grex does not install local, commercial software licensed only to the National/Alliance systems. The software listed under &amp;ldquo;List of globally-installed modules&amp;rdquo; is available.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h2 id='software-available-on-the-sbenv-software-stack-on-grex'&gt;Software available on the SBEnv software stack on Grex.&lt;a href='#software-available-on-the-sbenv-software-stack-on-grex' class='anchor'&gt;#&lt;/a&gt;
 &lt;/h2&gt;&lt;p&gt;Below is the auto-generated list of software modules available on Grex&amp;rsquo;s local SBEnv software stack.&lt;/p&gt;</description></item></channel></rss>

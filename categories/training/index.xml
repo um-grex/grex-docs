@@ -1,8 +1,35 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Training on Grex</title><link>https://um-grex.github.io/grex-docs/categories/training/</link><description>Recent content in Training on Grex</description><generator>Hugo</generator><language>en</language><copyright>The MIT License (MIT) Copyright © 2025 UM-Grex</copyright><atom:link href="https://um-grex.github.io/grex-docs/categories/training/index.xml" rel="self" type="application/rss+xml"/><item><title>Workshops - 2025</title><link>https://um-grex.github.io/grex-docs/training/workshops-2025/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/training/workshops-2025/</guid><description>&lt;h2 id='autumn-workshop-october-2025'&gt;Autumn workshop, October 2025&lt;a href='#autumn-workshop-october-2025' class='anchor'&gt;#&lt;/a&gt;
-&lt;/h2&gt;&lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;UManitoba Autumn 2025 HPC and Cloud computing workshop&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Join us for our free Fall 2025 workshop, open to all researchers from Manitoba institutions! Held October 14–17, 2025 at the University of Manitoba, this in-person event will introduce participants to Linux shell, batch computing with SLURM HPC scheduler, interactive computing with OpenOnDemand, Globus file transfer service, and using Canadian OpenStack community Cloud and Object Storage.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Requirements:&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>LoRa walkthrough</title><link>https://um-grex.github.io/grex-docs/training/workshops-2025/lora-huggingface/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/training/workshops-2025/lora-huggingface/</guid><description>&lt;h2 id='high-performance-computing-workshop---oct-14-17-2025'&gt;High Performance Computing Workshop - Oct 14-17, 2025&lt;a href='#high-performance-computing-workshop---oct-14-17-2025' class='anchor'&gt;#&lt;/a&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Training on Grex</title><link>https://um-grex.github.io/grex-docs/categories/training/</link><description>Recent content in Training on Grex</description><generator>Hugo</generator><language>en</language><copyright>The MIT License (MIT) Copyright © 2025 UM-Grex</copyright><atom:link href="https://um-grex.github.io/grex-docs/categories/training/index.xml" rel="self" type="application/rss+xml"/><item><title>Workshops - 2025</title><link>https://um-grex.github.io/grex-docs/training/workshops-2025/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/training/workshops-2025/</guid><description>&lt;!--
+## Autumn workshop, October 2025
+---
+
+**UManitoba Autumn 2025 HPC and Cloud computing workshop**
+
+Join us for our free Fall 2025 workshop, open to all researchers from Manitoba institutions! Held October 14–17, 2025 at the University of Manitoba, this in-person event will introduce participants to Linux shell, batch computing with SLURM HPC scheduler, interactive computing with OpenOnDemand, Globus file transfer service, and using Canadian OpenStack community Cloud and Object Storage.
+
+**Requirements:**
+
+* A laptop is required for hands-on exercises.
+* An active CCDB account is optional (but highly recommended).
+
+**Audience:**
+
+The workshop is designed for beginner and intermediate users. Content is spread across four afternoons. The room space is limited! Please RSVP through [Eventbrite](https://www.eventbrite.ca/e/umanitoba-autumn-2025-hpc-and-cloud-computing-workshop-tickets-1716678885759?aff=oddtdtcreator). Participants may register for and attend individual sessions.
+
+**Programme:** 
+
+* Day 1 (October 14): Introduction to HPC resources, using Linux, data transfer.
+* Day 2 (October 15): Software in HPC, containers in HPC.
+* Day 3 (October 16): Running batch and interactive HPC jobs.
+* Day 4 (October 17): Using OpenStack cloud and Object Storage
+
+**Registration:**
+
+Use the following [link](https://www.eventbrite.ca/e/umanitoba-autumn-2025-hpc-and-cloud-computing-workshop-tickets-1716678885759?aff=oddtdtcreator) to register for the workshop. 
+
+--&gt;
+&lt;h1 id='high-performance-computing-workshop---oct-14-17-2025'&gt;High Performance Computing Workshop - Oct 14-17, 2025&lt;a href='#high-performance-computing-workshop---oct-14-17-2025' class='anchor'&gt;#&lt;/a&gt;
+&lt;/h1&gt;&lt;hr&gt;
+&lt;p&gt;Below are the slides and some materials from the in-person workshop that was held on Oct 2025:&lt;/p&gt;</description></item><item><title>LoRa walkthrough</title><link>https://um-grex.github.io/grex-docs/training/workshops-2025/lora-huggingface/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/training/workshops-2025/lora-huggingface/</guid><description>&lt;h2 id='high-performance-computing-workshop---oct-14-17-2025'&gt;High Performance Computing Workshop - Oct 14-17, 2025&lt;a href='#high-performance-computing-workshop---oct-14-17-2025' class='anchor'&gt;#&lt;/a&gt;
 &lt;/h2&gt;&lt;hr&gt;
 &lt;p&gt;This is an example of training LoRa in a batch job.
 The example uses a script from &lt;a
@@ -37,7 +64,8 @@ We will also copy the datasets for training from &lt;strong&gt;pythonai&lt;/stro
  class="is-pretty-link"&gt;Slides&lt;/a
 &gt;
 &lt;/li&gt;
-&lt;/ul&gt;&lt;/blockquote&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
 &lt;!--
 ## Autumn workshop, October 2024
 ---
@@ -143,7 +171,8 @@ This event will help you get started with HPC and familiarize you with essential
  class="is-pretty-link"&gt;Slides&lt;/a
 &gt;
 &lt;/li&gt;
-&lt;/ul&gt;&lt;/blockquote&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
 &lt;hr&gt;
 &lt;h2 id='fall-data-4010-seminars-september-2023'&gt;Fall DATA-4010 seminars, September 2023&lt;a href='#fall-data-4010-seminars-september-2023' class='anchor'&gt;#&lt;/a&gt;
 &lt;/h2&gt;&lt;hr&gt;
@@ -172,7 +201,8 @@ This event will help you get started with HPC and familiarize you with essential
  class="is-pretty-link"&gt;Slides&lt;/a
 &gt;
 &lt;/li&gt;
-&lt;/ul&gt;&lt;/blockquote&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
 &lt;h2 id='spring-workshop-may-2022'&gt;Spring workshop, May 2022&lt;a href='#spring-workshop-may-2022' class='anchor'&gt;#&lt;/a&gt;
 &lt;/h2&gt;&lt;hr&gt;
 &lt;p&gt;Below are the slides from the Grex workshop that was held on May 4-5, 2022:&lt;/p&gt;
@@ -203,7 +233,8 @@ This event will help you get started with HPC and familiarize you with essential
  class="is-pretty-link"&gt;Slides&lt;/a
 &gt;
 &lt;/li&gt;
-&lt;/ul&gt;&lt;/blockquote&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
 &lt;hr&gt;
 &lt;!-- &lt;div class="sc-treeview"&gt;&lt;div class="sc-alert sc-alert-warning"&gt;No data available&lt;/div&gt;&lt;/div&gt;
  --&gt;
@@ -234,7 +265,8 @@ This event will help you get started with HPC and familiarize you with essential
  class="is-pretty-link"&gt;Slides&lt;/a
 &gt;
 &lt;/li&gt;
-&lt;/ul&gt;&lt;/blockquote&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
 &lt;h2 id='spring-workshop-april-2021'&gt;Spring workshop, April 2021&lt;a href='#spring-workshop-april-2021' class='anchor'&gt;#&lt;/a&gt;
 &lt;/h2&gt;&lt;hr&gt;
 &lt;p&gt;Below are the slides from the Grex workshop that was held on April 21-22, 2021:&lt;/p&gt;</description></item><item><title>Workshops and Training Material</title><link>https://um-grex.github.io/grex-docs/training/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/training/</guid><description>&lt;h2 id='local-workshops'&gt;Local workshops&lt;a href='#local-workshops' class='anchor'&gt;#&lt;/a&gt;

@@ -27,7 +27,8 @@ Grex is using the Duo instance provided by the Alliance. The available additiona
 &lt;li&gt;access to the Internet that lets SSH ports open.&lt;/li&gt;
 &lt;li&gt;a user account on Grex (presently, it is a Compute Canada (an Alliance) Account).&lt;/li&gt;
 &lt;li&gt;and an SSH client for your operating system.&lt;/li&gt;
-&lt;/ul&gt;&lt;/blockquote&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;If you are not sure what your account on Grex is, check &lt;a
  href="https://www.computecanada.ca/research-portal/account-management/apply-for-an-account/"
  class="is-pretty-link"&gt;Getting Access&lt;/a
