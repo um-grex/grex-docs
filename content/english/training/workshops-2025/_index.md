@@ -58,7 +58,7 @@ Below are the slides and some materials from the in-person workshop that was hel
 > - **Intro to HPC software and Lmod modules tool**: [Slides](/workshops/autumn2025/Introduction-to-HPC-software.pdf)
 > - **Using Jupyter notebooks on HPC Systems: OpenOnDemand and JH Session**: [Slides](/workshops/autumn2025/JupyterHub-on-HPC-Autumn-2025.pdf)
 > - **Containers in HPC: using Docker/Podman containers**: [Slides](/workshops/autumn2025/introduction_podman.pdf)
-> - **Containers in HPC: using Pyxis**: [Podman Slides](/workshops/autumn2025/introduction_pyxis.pdf)
+> - **Containers in HPC: using Pyxis**: [Slides](/workshops/autumn2025/introduction_pyxis.pdf)
 
 ## Oct 16, 2025
 
