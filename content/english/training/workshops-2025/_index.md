@@ -44,6 +44,8 @@ Use the following [link](https://www.eventbrite.ca/e/umanitoba-autumn-2025-hpc-a
 
 Below are the slides and some materials from the in-person workshop that was held on Oct 2025:
 
+* Additional materials: [hands on](/workshops/autumn2025/ws-oct2025.tar.gz)
+
 ## Oct 14, 2025
 
 > - **Updates and overview of the Digital Alliance of Canada and UManitoba computing resources**: [Slides](/workshops/autumn2025/Intro-and-Program-Autumn-2025.pdf)
