@@ -199,7 +199,7 @@ The list is updated periodically. The most authoritative method to check for ava
 | ramalama | 0.12.0 | {{<collapsible title="Expand ramalama description">}}RamaLama tool facilitates local management and serving of AI Models{{</collapsible>}} [https://github.com/containers/ramalama](https://github.com/containers/ramalama) |  |
 | ratarmount | 1.2.0 | {{<collapsible title="Expand ratarmount description">}}Random Access To Archived Resources (Ratarmount) ; Ratarmount collects all file positions inside a TAR so that it can easily jump to and read from any file without extracting it. ; It, then, mounts the TAR using fusepy for read access just like archivemount. ; In contrast to libarchive, on which archivemount is based, random access and true seeking is supported. ; And in contrast to tarindexer, which also collects file positions for random access, ratarmount offers easy access via FUSE and support for compressed TARs{{</collapsible>}} [https://github.com/mxmlnkn/ratarmount](https://github.com/mxmlnkn/ratarmount) |  |
 | raxml-ng | 1.2.1 | {{<collapsible title="Expand raxml-ng description">}}Description: RAxML-NG is a phylogenetic tree inference tool which uses maximum-likelihood (ML) optimality criterion{{</collapsible>}} [https://github.com/amkozlov/raxml-ng](https://github.com/amkozlov/raxml-ng) | (arch/avx512 gcc/13.2.0 openmpi/5.0.6), (arch/avx512 intel-one/2024.1 openmpi/5.0.6) |
-| rclone | 1.70.3, 1.71.0 | {{<collapsible title="Expand rclone description">}}Rclone: sync files/directories to and from a variety of online storage services, Rclone: sync files/directories to and from a variety of online storage services{{</collapsible>}} [https://rclone.org/](https://rclone.org/) |  |
+| rclone | 1.70.3, 1.71.0 | {{<collapsible title="Expand rclone description">}}Rclone: sync files/directories to and from a variety of online storage services. ;  Rclone: sync files/directories to and from a variety of online storage services{{</collapsible>}} [https://rclone.org/,](https://rclone.org/,) |  |
 | relion | 4.0.2, 5.0.0 | {{<collapsible title="Expand relion description">}}Description: RELION (for REgularised LIkelihood OptimisatioN) is a stand-alone computer program for Maximum. A Posteriori refinement of (multiple) 3D reconstructions or 2D class averages in cryo-electron microscopy{{</collapsible>}} | (arch/avx512 gcc/13.2.0 openmpi/4.1.6), (arch/avx512 intel-one/2024.1 openmpi/5.0.6), (cuda/12.4.1 arch/avx2 gcc/13.2.0 openmpi/5.0.6) |
 | root | 6.32.08, 6.34.02 | {{<collapsible title="Expand root description">}}Description: The ROOT system provides a set of OO frameworks with all the functionality needed to handle and analyze large amounts of data in a very efficient way{{</collapsible>}} [https://root.cern.ch/drupal/](https://root.cern.ch/drupal/) | (arch/avx512 gcc/13.2.0) |
 | rs-server | 2025.09.0-387, 2025.09.1-401 | {{<collapsible title="Expand rs-server description">}}RStudio server for use with Ondemand or Jupyter{{</collapsible>}} |  |
@@ -254,6 +254,6 @@ The list is updated periodically. The most authoritative method to check for ava
 
 
 <!-- Changes and update:
-* Last reviewed on: 2025-11-06 03:00:05
+* Last reviewed on: 2025-11-07 03:00:04
 -->
 
