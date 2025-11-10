@@ -126,6 +126,7 @@ Note that for every MATLAB module, there is a corresponding MCR version. The cor
 | matlab/R2022A    | mcr/R2022a     |
 | matlab/R2023B    | mcr/R2023b     |
 | matlab/R2024A    | mcr/R2024a     |
+| matlab/R2025A    | mcr/R2025a     |
 
 ### Example of SLURM script: MCR
 ---
