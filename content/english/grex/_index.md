@@ -56,7 +56,7 @@ The SBB that serves as _/scratch_ is not available.
 
 * On Sep 2024, new AMD Genoa nodes have been added (30 nodes with a total of 5760 cores).
 
-* On April 2025, a new GPU node L40S with 2 GPUs was added to Grex.
+* Suring 2025, two new GPU nodes  with 2 L40S GPUs were added to Grex.
 
 The current computing hardware available for general use is as follow:
 
@@ -140,7 +140,7 @@ There are also several researcher-contributed nodes (CPU and GPU) to Grex which 
 | 16 [V100-32 GB][^5]  | 1               | 16        | 48        | 1500 GB |
 | AMD [A30][^6]        | 2               | 2         | 18        | 500 GB  |
 | NVIDIA AMD [A30][^7] | 2               | 4         | 32        | 500 GB  |
-| L40S[^8]             | 1               | 2         | 64        | 370 GB  |
+| L40S[^8]             | 2               | 2         | 64        | 370 GB  |
 
 [^3]: GPU nodes available for all users (general purpose).
 [^4]: GPU nodes contributed by Prof. R. Stamps (Department of Physics and Astronomy).

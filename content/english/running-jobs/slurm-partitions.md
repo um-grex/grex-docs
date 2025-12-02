@@ -51,7 +51,7 @@ Currently, the following partitions are available on Grex:
 | Partition  | Nodes   | GPU type           | CPUs/Node    | Mem/Node   | Notes               |
 | :--------: | :-----: | :----:             | :----------: | :--------: | :---------:         |
 | **gpu**    |  **2**  | **4 - V100/32GB**  | **32**       | **187 Gb** | Intel AVX512 CPU, NVLink  |
-| **lgpu**    |  **1**  | **2 - L40s/48GB**  | **64**       | **380 Gb** | AMD AVX512 CPU  |
+| **lgpu**    |  **2**  | **2 - L40s/48GB**  | **64**       | **380 Gb** | AMD AVX512 CPU  |
 
 
 ### Contributed CPU partitions
