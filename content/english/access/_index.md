@@ -5,6 +5,8 @@ title: "Access and Usage Conditions"
 description: "All you need to know for accessing and using Grex."
 titleIcon: "fa-solid fa-id-card"
 categories: ["Information"]
+banner: true
+bannerContent: "Call for applications/renewing Grex HPC resource allocations for __2026__: an email has been sent to all Faculty members with active CCDB account and the deadline is __Dec 12, 2025__."
 #tags: ["Content management"]
 ---
 
