@@ -63,10 +63,12 @@ Sharing any account information (login/password or SSH private keys) leads to im
 
 * Grex's local RAC calls are issued once a year. They are reviewed by a local Advanced Research Computing Committee and may be scaled according to the availability of resources. The instructions and conditions of this year's RAC are provided on the RAC template document (sent via email when the RAC is announced).
 
+* The 2026 Call for applications/renewing Grex HPC resource allocations is open! An email has been sent to all Faculty members with active CCDB account and ADRs of all interested Faculties. The applications deadline is __Dec 12, 2025__."
+
 ---
 
 <!-- {{< treeview display="tree" />}} -->
 
 <!-- Changes and update:
-* Last revision: Aug 28, 2024.
+* Last revision: Dec 2, 2025.
 -->
