@@ -340,6 +340,40 @@ sbatch [+some options] run-gromacs-pyxis.sh
 
 For more information about running jobs, please refer to this [page](running-jobs/)
 
+<!--
+### Running LAMMPS using Pyxis
+---
+
+For this example, we are going to use Pyxis/Enroot to run a LAMMPS image **nvcr.io/hpc/lammps:patch_15Jun2023** from the [nVidia NGC Catalog](https://catalog.ngc.nvidia.com/orgs/hpc/containers/lammps/tags?version=patch_15Jun2023)
+
+As an input file, we will use __input-lj-lammps.in__ with the following content:
+
+{{< highlight bash >}}
+# 3d Lennard-Jones melt
+
+units		lj
+atom_style	atomic
+
+lattice		fcc 0.8442
+region		box block 0 200 0 200 0 200
+create_box	1 box
+create_atoms	1 box
+mass		1 1.0
+
+velocity	all create 1.44 87287 loop geom
+
+pair_style	lj/cut 2.5
+pair_coeff	1 1 1.0 1.0 2.5
+
+neighbor	0.3 bin
+neigh_modify    delay 5 every 1
+
+fix		1 all nve
+
+run		1000000
+{{< /highlight >}}
+-->
+
 ## External links
 ---
 
