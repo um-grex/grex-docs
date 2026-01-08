@@ -262,7 +262,6 @@ Please refer to the Podman documentation on [User namespace options](https://doc
 Namespaces [may cause issues](https://www.redhat.com/en/blog/supplemental-groups-podman-containers) when bind-mounting folders not owned by the user's primary group. Unfortunately, such folders are all the folders of the sponsored users on the _/project_ filesystems, that require access to supplemental groups to be accessible.
 If you encounter such issues when using containers with __\-\-keep-id__, please add __\-\-annotation run.oci.keep_original_groups=1__ to the _podman_ command line options.
 
-
 ### Podman with GPUs
 ---
 
@@ -273,7 +272,73 @@ Many software developers also put images to various container registries, such a
 Podman would usually run Docker containers without changes to the command line parameters.
 It is a good idea to run a test job for a given container and use __nvidia-smi__ command on the node the job runs on to check whether the image is able to utilize the GPU(s).
 
+## Using Pyxis on Grex
 ---
+
+In addition to Singularity and Podman, it is possible to use Pyxis to run containers on Grex.
+
+[Pyxis](https://github.com/NVIDIA/pyxis) is a [SPANK](https://slurm.schedmd.com/spank.html) plugin for the Slurm Workload Manager. It allows unprivileged cluster users to run containerized tasks.
+
+Pyxis provide the following benefits:
+
+> * Seamlessly execute Slurm jobs in unprivileged containers.
+> * Simple command-line interface.
+> * Support for OCI image registries.
+> * Support for layers caching and layers sharing across nodes.
+> * Supports multi-node MPI jobs through PMI2 or PMIx.
+> * Allows users to install packages inside the container.
+
+The main options used with Pyxis are:
+
+> * __-\-container-image=IMAGE[:TAG]__ refers to the container image to use.
+> * __-\-container-mounts=SRC:DST[:OPTS][,SRC:DST]__ used to bind mount(s) directories inside the container to allow access to data located on the file system.
+
+> * __-\-container-workdir=PATH__ refers to the working directory inside the container.
+> * __-\-container-remap-root__ Asks to be remapped to root inside the container. This does not grant elevated system permissions, despite appearances.
+> * __-\-container-entrypoint__ Execute the entrypoint from the container image.
+> * __-\-container-env=NAME[,NAME]__ Names of environment variables to override with the host environment and set at the entrypoint.
+
+To see other options, run the command __salloc -\-help__ 
+
+### Running GROMACS using Pyxis
+---
+
+For this example, we are going to use Pyxis/Enroot to run a GROMACS image **gromacs:2023.2** from the [nVidia NGC Catalog](https://catalog.ngc.nvidia.com/orgs/hpc/containers/gromacs?version=2023.2)
+
+First, let's download the data needed to run this benchmark. The input files are located under the directory __stmv__ that we need to copy to our working directory, for example: /PATH/TO/USERNAME/Pyxis/GROMACS/STMV. 
+
+{{< alert type="warning" >}}
+Please replace __/PATH/TO/USERNAME/Pyxis/GROMACS/STMV__ by an appropriate and correct PATH under your project directory.
+{{< /alert >}}
+
+{{< highlight bash >}}
+wget https://zenodo.org/record/3893789/files/GROMACS_heterogeneous_parallelization_benchmark_info_and_systems_JCP.tar.gz 
+tar -xvf GROMACS_heterogeneous_parallelization_benchmark_info_and_systems_JCP.tar.gz 
+cd GROMACS_heterogeneous_parallelization_benchmark_info_and_systems_JCP
+cp -r stmv /PATH/TO/PROJECT/USERNAME/Pyxis/GROMACS/STMV
+{{< /highlight >}}
+
+In the job script, the option __-\-container-mounts__ should be set to the correct path under project where the input data are located:
+
+{{< highlight bash >}}
+#SBATCH --container-mounts=/PATH/TO/PROJECT/USERNAME/Pyxis/GROMACS/STMV
+{{< /highlight >}}
+
+{{< collapsible title="Script example for running GROMACS using Pyxis on Grex" >}}
+{{< snippet
+    file="scripts/jobs/pyxis/run-gromacs-pyxis.sh"
+    caption="run-gromacs-pyxis.sh"
+    codelang="bash"
+/>}}
+{{< /collapsible >}}
+
+Once the job script __run-gromacs-pyxis.sh__ shown above is adjusted, the job can be submitted using:
+
+{{< highlight bash >}}
+sbatch [+some options] run-gromacs-pyxis.sh
+{{< /highlight >}}
+
+For more information about running jobs, please refer to this [page](running-jobs/)
 
 ## External links
 ---
