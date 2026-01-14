@@ -268,6 +268,7 @@ If you encounter such issues when using containers with __\-\-keep-id__, please 
 Use the __-\-device=nvidia.com/gpu=all__ flag to the _podman_ command when running a podman container that needs GPU hardware. 
 Naturally, your job should be on a node that has a GPU to use GPUs . Check out our [Running Jobs](running-jobs/slurm-partitions) documentation to find out which partitions have the GPU hardware.
 NVIDIA provides many pre-built Docker container images on their [NGC Cloud](https://ngc.nvidia.com/), together with instructions on how to pull and run them. 
+
 Many software developers also put images to various container registries, such as DockerHub or Quay.io, or distribute the sources of containers along with Dockerfiles; all these can be used, but "your mileage may vary". 
 Podman would usually run Docker containers without changes to the command line parameters.
 It is a good idea to run a test job for a given container and use __nvidia-smi__ command on the node the job runs on to check whether the image is able to utilize the GPU(s).
@@ -277,18 +278,18 @@ It is a good idea to run a test job for a given container and use __nvidia-smi__
 
 In addition to Singularity and Podman, it is possible to use Pyxis, a container engine developed by NVidia, to run containers on Grex.
 
-[Pyxis](https://github.com/NVIDIA/pyxis) is a [SPANK](https://slurm.schedmd.com/spank.html) plugin for the Slurm Workload Manager. It allows unprivileged cluster users to run containerized tasks. Being a Slurm plugin, Pyxis extends the Slurm command with container-specific options, as described below, allowing you to execute container images seamlessly in both batch and interactive jobs.
+[Pyxis](https://github.com/NVIDIA/pyxis) is a [SPANK](https://slurm.schedmd.com/spank.html) plugin for the Slurm Workload Manager. It allows unprivileged cluster users to run containerized tasks. Being a Slurm plugin, Pyxis extends the Slurm commands with container specific options, as described below, allowing you to execute container images seamlessly in both batch and interactive jobs.
 
 Pyxis provides the following benefits:
 
 > * Seamlessly execute Slurm jobs in unprivileged containers.
-> * Simple command-line interface.
+> * Simple command line interface.
 > * Support for OCI image registries.
 > * Support for layers caching and layers sharing across nodes.
 > * Supports multi-node MPI jobs through PMI2 or PMIx.
 > * Allows users to install packages inside the container.
 
-The main Slurm commands' (__sbatch__ and __salloc__ ) options used with Pyxis are:
+The main Slurm commands (__sbatch__ and __salloc__ ) options used with Pyxis are:
 
 > * __-\-container-image=IMAGE[:TAG]__ refers to the container image to use.
 > * __-\-container-mounts=SRC:DST[:OPTS][,SRC:DST]__ used to bind mount(s) directories inside the container to allow access to data located on the file system.
@@ -307,7 +308,7 @@ While Pyxis (and the Enroot container engine it uses under the hood) is a generi
 
 For this example, we are going to use Pyxis/Enroot to run a GROMACS image **gromacs:2023.2** from the [NVidia NGC Catalog](https://catalog.ngc.nvidia.com/orgs/hpc/containers/gromacs?version=2023.2)
 
-First, let's download the data needed to run this benchmark. The input files are located under the directory __stmv__ that we need to copy to our working directory, for example: /PATH/TO/USERNAME/Pyxis/GROMACS/STMV. 
+First, let's download the data needed to run this benchmark. The input files are located under the directory __stmv__ that we need to copy to the working directory, for example: /PATH/TO/USERNAME/Pyxis/GROMACS/STMV. 
 
 {{< alert type="warning" >}}
 Please replace __/PATH/TO/USERNAME/Pyxis/GROMACS/STMV__ by an appropriate and correct PATH under your project directory.
