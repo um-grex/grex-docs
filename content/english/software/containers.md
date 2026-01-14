@@ -275,11 +275,11 @@ It is a good idea to run a test job for a given container and use __nvidia-smi__
 ## Using Pyxis on Grex
 ---
 
-In addition to Singularity and Podman, it is possible to use Pyxis to run containers on Grex.
+In addition to Singularity and Podman, it is possible to use Pyxis, a container engine developed by NVidia, to run containers on Grex.
 
-[Pyxis](https://github.com/NVIDIA/pyxis) is a [SPANK](https://slurm.schedmd.com/spank.html) plugin for the Slurm Workload Manager. It allows unprivileged cluster users to run containerized tasks.
+[Pyxis](https://github.com/NVIDIA/pyxis) is a [SPANK](https://slurm.schedmd.com/spank.html) plugin for the Slurm Workload Manager. It allows unprivileged cluster users to run containerized tasks. Being a Slurm plugin, Pyxis extends the Slurm command with container-specific options, as described below, allowing you to execute container images seamlessly in both batch and interactive jobs.
 
-Pyxis provide the following benefits:
+Pyxis provides the following benefits:
 
 > * Seamlessly execute Slurm jobs in unprivileged containers.
 > * Simple command-line interface.
@@ -288,7 +288,7 @@ Pyxis provide the following benefits:
 > * Supports multi-node MPI jobs through PMI2 or PMIx.
 > * Allows users to install packages inside the container.
 
-The main options used with Pyxis are:
+The main Slurm commands' (__sbatch__ and __salloc__ ) options used with Pyxis are:
 
 > * __-\-container-image=IMAGE[:TAG]__ refers to the container image to use.
 > * __-\-container-mounts=SRC:DST[:OPTS][,SRC:DST]__ used to bind mount(s) directories inside the container to allow access to data located on the file system.
@@ -298,12 +298,14 @@ The main options used with Pyxis are:
 > * __-\-container-entrypoint__ Execute the entrypoint from the container image.
 > * __-\-container-env=NAME[,NAME]__ Names of environment variables to override with the host environment and set at the entrypoint.
 
-To see other options, run the command __salloc -\-help__ 
+To see other options, run the command __salloc -\-help__ . 
+
+While Pyxis (and the Enroot container engine it uses under the hood) is a generic containerization engine, potentially able to load any OCI-compliant image from any OCI registry, the easiest way to get started with it is to use NVIDIA-made containers from the NGC registry.
 
 ### Running GROMACS using Pyxis
 ---
 
-For this example, we are going to use Pyxis/Enroot to run a GROMACS image **gromacs:2023.2** from the [nVidia NGC Catalog](https://catalog.ngc.nvidia.com/orgs/hpc/containers/gromacs?version=2023.2)
+For this example, we are going to use Pyxis/Enroot to run a GROMACS image **gromacs:2023.2** from the [NVidia NGC Catalog](https://catalog.ngc.nvidia.com/orgs/hpc/containers/gromacs?version=2023.2)
 
 First, let's download the data needed to run this benchmark. The input files are located under the directory __stmv__ that we need to copy to our working directory, for example: /PATH/TO/USERNAME/Pyxis/GROMACS/STMV. 
 
