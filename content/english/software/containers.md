@@ -19,7 +19,7 @@ They are [compatible](https://apptainer.org/docs/user/latest/singularity_compati
 
 Finally, recent developments in Linux Kernel namespaces allowed to happen such projects as "rootless Docker" and "rootless [Podman](https://podman.io)" which are more suitable for HPC systems than the original Docker implementation which requires privileged access to the Linux system.
 
-On Grex, Sylabs Singularity-CE is supported on local SBEnv software stack, while Apptainer is supported as part of the ComputeCanada/Alliance CCEnv stack. At the time of writing, these engines can be used largely interchangeably.
+On Grex, Sylabs Singularity-CE is supported on local SBEnv software stack, while Apptainer is supported as part of the ComputeCanada/Alliance CCEnv stack. At the time of writing, these engines can be used largely interchangeably, with both __singularity__ and __apptainer__ commands and/or symlinks available in either engine.
 
 {{< alert type="info" >}}
  __New:__ There is also support for rootless Podman on Grex, for the use cases that require full OCI-compatibility. 
@@ -136,7 +136,7 @@ It looks like the list of what is present on the OSG CVMFS is on GitHub: [OSG Gi
 ## Using Apptainer from CCEnv on Grex
 ---
 
-The Alliance's (formerly ComputeCanada) software stack now provides Apptainer modules in the two latest Standard Environments, _StdEnv/2020_ and _StdEnv/2023_. Most recent Apptainer versions (1.2.4 and older) do not require "suexec" and thus can be used off the CVMFS as usual. The only caveat would be to first unload any "singularity" or "apptainer" modules from other software stacks by _module purge_. Apptainer on the CCEnv stack is installed in suid-less mode.
+The Alliance's (formerly ComputeCanada) CCEnv software stack now provides Apptainer modules in the current Standard Environment, _StdEnv/2023_. Apptainer on the CCEnv stack is installed in suid-less mode, and thus can be used off the CVMFS CCEnv stack directly. We recommend always using the most recent Apptainer module available. The only caveat would be to first unload any "singularity" or "apptainer" modules from other software stacks by _module purge_. 
 
 The following commands show how to run the image from the previous example _/R-INLA.sif_:
 
