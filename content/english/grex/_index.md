@@ -87,8 +87,7 @@ To login to Grex in the text (bash) mode, connect to __grex.hpc.umanitoba.ca__  
 In addition to the original nodes, new skylake and AMD nodes have been added to Grex:
 -->
 
-There are several researcher-contributed nodes (CPU and GPU) to Grex which make it a "community cluster".
-The researcher-contributed nodes are available for others on opportunistic basis; the owner groups will preempt the others' workloads.
+There are several researcher-contributed nodes (CPU and GPU) to Grex which make it a "community cluster". The researcher-contributed nodes are available for others on opportunistic basis; the owner groups will preempt the others' workloads.
 
 The current compute nodes available on Grex are listed in the following table:
 
@@ -148,6 +147,7 @@ There are also several researcher-contributed nodes (CPU and GPU) to Grex which 
 [^6]: GPU nodes contributed by Faculty of Agriculture.
 [^7]: GPU nodes contributed by Prof. M. Cordeiro (Department of Agriculture).
 [^8]: GPU nodes for general purpose.  
+
 -->
 ## Storage
 ---

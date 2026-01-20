@@ -29,6 +29,7 @@ On Grex, the "preemptor" partition is named after the name of the owner PI, and 
 ## Contributed Nodes
 ---
 
+<!--
 As of now, the preemptible partitions are:
 
 | Partition           | Nodes   | GPUs/Node    | CPUs/Node    | Mem/Node    | Notes                       |
@@ -45,6 +46,20 @@ As of now, the preemptible partitions are:
 [^3]: **agro-b:**   GPU [**AMD Zen**] node contributed by Faculty of Agriculture
 [^4]: **mcordcpu-b** GPU nodes contributed by Prof. Marcos Cordeiro (Department of Agriculture).
 [^5]: **mcordgpu-b** CPU nodes contributed by Prof. Marcos Cordeiro (Department of Agriculture).
+
+-->
+
+For more information about the contributed nodes, please have a look to the page dedicated to the [hardware](grex/#hardware). 
+
+All backfill partitions have a suffix __-b__. To see the corresponding partitions, please use the command:
+
+{{< highlight bash >}}
+partition-list | egrep "*-b"
+{{< /highlight >}}
+
+{{< alert type="warning" >}}
+__Note:__ If you are a member of the group who contributed with the hardware, please use the corresponding partition without __-b__. Otherwise, use the partitions with __-b__. 
+{{< /alert >}}
 
 <!--
 For more information, please refer to [Contributed Nodes](contributed-gpu-partitions) section.
