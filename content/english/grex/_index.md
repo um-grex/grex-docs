@@ -56,7 +56,7 @@ The SBB that serves as _/scratch_ is not available.
 
 * On Sep 2024, new AMD Genoa nodes have been added (30 nodes with a total of 5760 cores).
 
-* Suring 2025, two new GPU nodes  with 2 L40S GPUs were added to Grex.
+* During 2025, two new GPU nodes with 2 L40S GPUs were added to Grex.
 
 The current computing hardware available for general use is as follow:
 
