@@ -15,7 +15,8 @@ tags: ["Interactive", "Visualization"]
 
 > * Since the end of __October 2021__, OpenOnDemand version 2 is officially in production on Grex.
 > * Since the beginning of __January 2023__, OpenOnDemand version 3 is officially in production on Grex.
-> * Since the beginning of __February 2025__, OpenOnDemand version 4 is officially in production on Grex.
+> * Since the beginning of __February 2025__, OpenOnDemand version 4.0 is officially in production on Grex.
+> * Since the beginning of __February 2026__, OpenOnDemand version 4.1 is officially in production on Grex.
 
 For more general OOD information, see the [OpenOnDemand paper](https://joss.theoj.org/papers/10.21105/joss.00622 "OpenOnDemand Paper")
 
