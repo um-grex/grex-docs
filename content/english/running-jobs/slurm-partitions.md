@@ -62,6 +62,8 @@ Currently, the following partitions are available on Grex:
 | **mcordcpu** [^5] | **5**   | **AMD EPYC 9634 84-Core**  | **168**      | **1500 Gb** | -               |
 | **chrim**  | **4**   | **AMD EPYC 9654 96-Core**  | **192**      | **750 Gb** | -               |
 | **chrimlm**  | **1**   | **AMD EPYC 9654 96-Core**  | **192**      | **1500 Gb** | -               |
+| **hsc**[^6]  | **1**   | **AMD EPYC 9654 96-Core**  | **192**      | **1500 Gb** | -               |
+| **pgs**[^7]  | **1**   | **AMD EPYC 9655 96-Core**  | **192**      | **750 Gb** | -               |
 
 ### Contributed GPU partitions
 ---
@@ -75,12 +77,13 @@ Currently, the following partitions are available on Grex:
 
 > Note that newer GPU nodes with NVidia A30 GPUs have an older CPU architecture, up to AVX2 instruction set. Host-optimized code compiled on a CascadeLake or AMD Genoa CPU which have AVX512 instruction set will throw 'illegal instruction' errors on the AVX2 GPU nodes. 
 
-[^1]: **stamps:** GPU nodes contributed by Prof. R. Stamps
-[^2]: **livi:**   GPU node  contributed by Prof. L. Livi 
-[^3]: **agro:**   GPU node  contributed by the Faculty of Agriculture
-[^4]: **mcordgpu** GPU nodes contributed by Prof. Marcos Cunha Cordeiro 
-[^5]: **mcordcpu** CPU nodes contributed by Prof. Marcos Cunha Cordeiro 
-
+[^1]: **stamps:** GPU nodes contributed by Prof. R. Stamps.
+[^2]: **livi:**   GPU node  contributed by Prof. L. Livi. 
+[^3]: **agro:**   GPU node  contributed by the Faculty of Agriculture.
+[^4]: **mcordgpu** GPU nodes contributed by Prof. Marcos Cunha Cordeiro. 
+[^5]: **mcordcpu** CPU nodes contributed by Prof. Marcos Cunha Cordeiro. 
+[^6]: **hsc** GPU node  contributed by Prof. Harmeet Singh Chawla. 
+[^7]: **pgs** GPU node  contributed by Dr. Britt Drogemoller and Prof. Galen Wright.
 
 ### Preemptible partitions
 ---
