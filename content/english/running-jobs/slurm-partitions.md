@@ -9,17 +9,20 @@ tags: ["SLURM"]
 ## Partitions
 ---
 
-The current Grex system that has contributed nodes, large memory nodes and contributed GPU nodes is (and getting more and more) heterogeneous. With SLURM, as a scheduler, this requires partitioning: a "partition" is a set of compute nodes, grouped by a characteristic, usually by the kind of hardware the nodes have, and sometimes by who "owns" the hardware as well. 
+The current Grex system spans more than one kind of computer hardware: Intel Cascade lake and AMD Genoa CPUs, regular and large (double) memory per node, and several kinds of GPUs (NVidia V100, A30 and L40s).
+A large fraction of the system is also made of researcher-contributed nodes. This makes Grex a very heterogeneous HPC system. With SLURM, as a scheduler, this requires partitioning: a "partition" is a set of compute nodes, grouped by a characteristic, usually by the kind of hardware the nodes have, and sometimes by who "owns" the hardware as well. The following SLURM settings are important to know:
 
-There is no fully automatic selection of partitions, other than the default __skylake__ for most of the users for the short jobs. For the contributors' group members, the default partition will be their contributed nodes. **Thus, in many cases users have to specify the partition manually when submitting their jobs!**
+ * There is no fully automatic selection of partitions, other than the default __skylake__ for most of the users for the short jobs. For the contributors' group members, the default partition will be their contributed nodes. **Thus, in many cases users have to specify the partition manually when submitting their jobs!**
 
-On the special partition **test**, oversubscription is enabled in SLURM, to facilitate better turnaround of interactive jobs.
+ * Jobs cannot run on several partitions at the same time; but it is possible to specify more than one partition, like in __-\-partition=skylake,largemem__, so that the job will be directed by the scheduler to the first partition available.
 
-Jobs cannot run on several partitions at the same time; but it is possible to specify more than one partition, like in __-\-partition=skylake,largemem__, so that the job will be directed by the scheduler to the first partition available.
+ * Jobs will be rejected by the SLURM scheduler if partition's hardware and requested resources do not match (that is, asking for GPUs on compute, largemem or skylake partitions is not possible). So, in some cases, explicitly adding __-\-partition=__ flag to SLURM job submission is needed.
 
-Jobs will be rejected by the SLURM scheduler if partition's hardware and requested resources do not match (that is, asking for GPUs on compute, largemem or skylake partitions is not possible). So, in some cases, explicitly adding __-\-partition=__ flag to SLURM job submission is needed.
+ * Jobs that request GPU-containing partitions (like __agro-b__ or __lgpu__ ), have to use GPUs (with a corresponding TRES flag like __\-\-gpus=__), otherwise they will be rejected; this is to prevent bogging up the expensive GPU nodes with CPU-only jobs!
 
-Jobs that require __stamps-b__ or __gpu__ or other GPU-containing partitions, have to use GPUs (with a corresponding TRES flag like _\-\-gpus=_), otherwise they will be rejected; this is to prevent bogging up the expensive GPU nodes with CPU-only jobs!
+ * Memory per node is as a rule different between partitions of different hardware. For the special case of __\-\-mem=0__ SLURM would set a specific amount of memory per partition, based on the lowest available memory in that partition.
+
+ * On the special partition **test**, oversubscription is enabled in SLURM, to facilitate better turnaround of interactive [OOD](/ood) jobs.
 
 Currently, the following partitions are available on Grex:
 
@@ -95,16 +98,16 @@ The following **preemptible partition** are set for general use of the contribut
 | **stamps-b**    | Prof. R. Stamps        |
 | **livi-b**      | Prof. L. Livi          |
 | **agro-b**      | Faculty of Agriculture |
-| **genoacpu-b**  | Spans all contributed AMD CPU nodes from Prof M. Cunha Cordeiro and CHRIM |
+| **genoacpu-b**  | Spans all contributed AMD Genoa CPU nodes |
 | **mcordgpu-b**  | Prof M. Cunha Cordeiro |
 
 The following partitions (**skylake**, **largemem**, **test**, **gpu**, **lgpu**) are generally accessible. The other partitions (**stamps**, **livi**,  **agro**, **mcordcpu** and **mcordgpu**, **chrim** and **chrimlm** ) are open only to the contributor's groups.
 
-On the contributed partitions, the owners' group has preferential access. However, users belonging to other groups can submit jobs to one of the preemptible partitions (ending with **\-b**) to run on the contributed hardware as long as it is unused, on the condition that their jobs can be preempted (that is, killed) should owners' jobs need the hardware. There is a minimum runtime guaranteed to preemptible jobs, which is as of now 1 hour. The maximum wall time for the preemptible partition is set per partition (and can be seen in the output of the __sinfo__ command). To have a global overview of all partitions on Grex, run the custom script _**partition-list**_ from your terminal. 
+On the [contributed resources](running-jobs/contributed-systems), the owners' group has preferential access. However, users belonging to other groups can submit jobs to one of the preemptible partitions (ending with **\-b**) to run on the contributed hardware as long as it is unused, on the condition that their jobs can be preempted (that is, killed) should owners' jobs need the hardware. There is a minimum runtime guaranteed to preemptible jobs, which is as of now 1 hour. The maximum wall time for the preemptible partition is set per partition (and can be seen in the output of the __sinfo__ command). To have a global overview of all partitions on Grex, run the custom script _**partition-list**_ from your terminal. 
 
 > Note that the owners' and corresponding preeemptible partitions do overlap! This means, that owners' group should not submit their jobs to both of the contributed and the corresponding preemptible partitions, otherwise their jobs may preeempt their other jobs!
 
 
 <!-- Changes and update:
-* Last revision: Jun 11, 2025. 
+* Last revision: April 6, 2026. 
 -->
