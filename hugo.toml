@@ -6,7 +6,7 @@ baseURL                = 'https://um-grex.github.io/grex-docs/'
 title                  = 'Unofficial Grex User Guide'
 copyright              = 'The MIT License (MIT) Copyright © 2025 UM-Grex'
 theme                  = 'shadocs'
-languageCode           = 'en-us'
+locale                 = 'en-us'
 defaultContentLanguage = 'en'
 enableEmoji            = false
 publishDir             = 'public'
@@ -23,12 +23,12 @@ publishDir             = 'public'
     contentDir   = 'content/english'
     title        = 'Grex'
     weight       = 1
-    languageName = 'English'
+    label        = 'English'
 #  [Languages.fr]
 #    contentDir   = 'content/french'
 #    title        = 'Grex'
 #    weight       = 2
-#    languageName = 'Français'
+#    label        = 'Français'
 
 #================================================================================
 # Miscellaneous sidebar parameters
