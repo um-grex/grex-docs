@@ -8,7 +8,7 @@ categories: ["How-To", "Information"]
 banner: true
 bannerContent: "__Work in progress.__"
 #tags: ["Content management"]
-_build:
+build:
  list: false
  render: false
 ---

@@ -11,7 +11,7 @@ banner: true
 bannerContent: "**Grex upgrade: SISF2023 - Aug 26 -Sep 6, 2024.**"
 #categories: ["Functionalities"]
 #tags: ["Content management"]
-_build:
+build:
  list: false
  render: false
 ---

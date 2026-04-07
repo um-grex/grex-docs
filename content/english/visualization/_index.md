@@ -9,7 +9,7 @@ banner: true
 bannerContent: "Work in progress."
 draft: true
 #tags: ["Content management"]
-_build:
+build:
  list: false
  render: false
 ---
