@@ -1,14 +1,14 @@
 import {
-  widescreenSize,
   desktopSize,
-  tabletSize,
-  sizeTriggerWidescreen,
-  sizeTriggerDesktop,
-  sizeTriggerTouch,
-  sizeTriggerMobile,
   mediaTriggerHover,
   mediaTriggerNoHover,
   resizeFunctionsList,
+  sizeTriggerDesktop,
+  sizeTriggerMobile,
+  sizeTriggerTouch,
+  sizeTriggerWidescreen,
+  tabletSize,
+  widescreenSize,
 } from './const.min.js';
 
 // VARS //
@@ -21,18 +21,18 @@ export function closeModals(e) {
   if (e) {
     closeModal(e);
   } else {
-    let modals = document.getElementsByClassName('modal-container');
-    for (const modal of modals) {
-      closeModal(modal);
+    let modalBackgrounds = document.getElementsByClassName('modal-background');
+    for (const modalBackground of modalBackgrounds) {
+      closeModal(modalBackground);
     }
   }
 }
 // Function that close a single modal
-function closeModal(modal) {
-  if (modal.id === 'modalContainer') {
-    document.getElementById('modal').innerHTML = '';
+function closeModal(modalBackground) {
+  if (modalBackground.parentElement.id === 'modalContainer') {
+    document.getElementById('modalWrapper').innerHTML = '';
   }
-  modal.classList.toggle('is-hidden', true);
+  modalBackground.parentElement.classList.toggle('is-active', false);
 }
 // Decode Base64 to original data from Hugo (safeJS | base64Encode)
 export function atou(b64) {
@@ -76,14 +76,12 @@ export function getTriggers() {
 }
 // Add element to modal
 export function addElementToModal(el) {
-  let mc = document.getElementById('modal');
+  let mc = document.getElementById('modalWrapper');
   mc.appendChild(el);
 }
 // Display modal container
 export function displayModal() {
-  document
-    .getElementById('modalContainer')
-    .classList.toggle('is-hidden', false);
+  document.getElementById('modalContainer').classList.toggle('is-active', true);
 }
 // Check if an element is in the viewport
 export function isInViewport(e) {
@@ -343,63 +341,70 @@ export function toggleSidebarEntries(force) {
 }
 // Function that manage the navbar menu
 export function manageNavbarMenu() {
-  const navbarExtendWidth = document.getElementById('navbarExtend').offsetWidth;
-  const navbarLogoWidth = document.getElementById(
-    'globalLogoContainer'
-  ).offsetWidth;
-  const searchWidth = document.getElementById('searchContainer').offsetWidth;
-  const maxLength = document.body.clientWidth - navbarLogoWidth - searchWidth;
-  const navbarItems = document.getElementById('navbarItemsEnd').children;
-  const navbarExtendItems = document.getElementById(
-    'navbarExtendItemsWrapper'
+  const extend = document.getElementById('navbarExtend');
+  const extendWidth = getVisibleWidth(extend);
+  const logoWidth = document.getElementById('globalLogoContainer').offsetWidth;
+  const itemsStartWidth =
+    document.getElementById('navbarItemsStart').offsetWidth;
+  const maxLength = document.body.clientWidth - logoWidth - itemsStartWidth;
+  const items = document.getElementById('navbarItemsEnd').children;
+  const extendItems = document.getElementById(
+    'navbarExtendItemsWrapper',
   ).children;
-  let tempLength = navbarExtendWidth;
-  for (let i = 0; i < navbarItems.length - 1; i++) {
-    tempLength =
-      tempLength +
-      (navbarItems[i].offsetWidth
-        ? navbarItems[i].offsetWidth
-        : navbarExtendItems[i].offsetWidth);
-    if (tempLength > maxLength) {
-      navbarItems[i].classList.toggle('is-hidden', true);
-      navbarExtendItems[i].classList.toggle('is-hidden', false);
+  let usedWidth = extendWidth;
+  for (let i = 0; i < items.length - 1; i++) {
+    usedWidth += items[i].offsetWidth
+      ? items[i].offsetWidth
+      : extendItems[i].offsetWidth;
+    if (usedWidth > maxLength) {
+      items[i].classList.toggle('is-hidden', true);
+      extendItems[i].classList.toggle('is-hidden', false);
     } else {
-      navbarItems[i].classList.toggle('is-hidden', false);
-      navbarExtendItems[i].classList.toggle('is-hidden', true);
+      items[i].classList.toggle('is-hidden', false);
+      extendItems[i].classList.toggle('is-hidden', true);
     }
   }
-  document
-    .getElementById('navbarExtend')
-    .classList.toggle('is-hidden', maxLength >= tempLength);
+  extend.classList.toggle('is-hidden', maxLength >= usedWidth);
   document
     .getElementById('navbarItemsEnd')
     .classList.toggle('is-invisible', false);
 }
-// Function returning a loading helper
-export function getLoadingHelper(wrapperClass, wrapperId) {
+// Function returning the width of element as if it was not hidden
+export function getVisibleWidth(el) {
+  const isHidden = el.classList.contains('is-hidden');
+  if (isHidden) {
+    el.classList.toggle('is-hidden', false);
+    el.style.visibility = 'hidden';
+    el.style.position = 'absolute';
+  }
+  const width = el.offsetWidth;
+  if (isHidden) {
+    el.classList.toggle('is-hidden', true);
+    el.removeAttribute('style');
+  }
+  return width;
+}
+// Function returning a loader
+export function getLoader(wrapperClass, wrapperId) {
   let fragment = document.createDocumentFragment();
   const container = document.createElement('div');
-  const loading = document.createElement('div');
+  const loader = document.createElement('div');
   const title = document.createElement('span');
   const spinner = document.createElement('div');
   const dots = document.createElement('div');
   const dot = document.createElement('div');
   container.id = wrapperId;
-  container.classList.add(
-    'helper-loading-container',
-    'is-loading',
-    wrapperClass
-  );
-  loading.classList.add('helper-loading');
-  title.classList.add('helper-loading-title');
-  title.innerHTML = helperLoadingLabel;
-  spinner.classList.add('helper-loading-spinner');
-  dots.classList.add('helper-loading-dots');
-  dot.classList.add('helper-loading-dot');
+  container.classList.add('loader-container', 'is-loading', wrapperClass);
+  loader.classList.add('loader-wrapper');
+  title.classList.add('loader-title');
+  title.innerHTML = loaderLabel;
+  spinner.classList.add('loader-spinner');
+  dots.classList.add('loader-dots');
+  dot.classList.add('loader-dot');
   fragment.appendChild(container);
-  container.appendChild(loading);
-  loading.appendChild(title);
-  loading.appendChild(spinner);
+  container.appendChild(loader);
+  loader.appendChild(title);
+  loader.appendChild(spinner);
   spinner.appendChild(dots);
   for (let i = 0; i < 6; i++) {
     dots.appendChild(dot.cloneNode());
@@ -437,4 +442,13 @@ export function toggleToc(force) {
   document
     .getElementById('contentContainer')
     .classList.toggle('is-toc-uncollapsed', force);
+}
+// Function to toggle the light/dark mode
+// - force (true is dark, false is light, because you only know light when you know darkness...)
+export function toggleColorMode(force) {
+  document.documentElement.classList.toggle('theme-dark', force);
+  document.documentElement.classList.toggle(
+    'theme-light',
+    typeof force === 'undefined' ? force : !force,
+  );
 }

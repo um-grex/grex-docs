@@ -5,6 +5,7 @@ import {
   displayModal,
   getFirstAncestorByClass,
   isPreCopyToEnable,
+  toggleColorMode,
 } from './modules/helpers.min.js';
 
 // VARS //
@@ -34,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 new Intl.Collator([], {
                   usage: 'search',
                   sensitivity: 'base',
-                }).compare(k, keyBuffer[i]) === 0
+                }).compare(k, keyBuffer[i]) === 0,
             )
           ) {
             if (
@@ -51,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
   // Manage modals closing
   document.addEventListener('click', function (e) {
-    if (e.target.classList.contains('modal-container')) {
+    if (e.target.classList.contains('modal-background')) {
       closeModals(e.target);
     }
   });
@@ -61,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (isPreCopyToEnable(p[i])) {
       let tdiv = document.createElement('div');
       let ti = document.createElement('i');
-      tdiv.setAttribute('class', 'copy-code is-action-button');
+      tdiv.setAttribute('class', 'copy-code is-action-button is-pre-copy-code');
       ti.setAttribute('class', 'fa-solid fa-copy');
       if (
         typeof codeCopyBefore !== 'undefined' &&
@@ -70,7 +71,8 @@ document.addEventListener('DOMContentLoaded', function () {
         tdiv.setAttribute('title', codeCopyBefore);
         tdiv.setAttribute('title-after', codeCopyAfter);
       }
-      if (!getFirstAncestorByClass(p[i], 'highlight')) {
+      let wrapper = getFirstAncestorByClass(p[i], 'highlight');
+      if (!wrapper) {
         let elem = p[i];
         let wrapper = document.createElement('div');
         wrapper.classList.add('highlight');
@@ -121,17 +123,13 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }
+  // Manage light/dark mode
+  document.getElementById('colorModeToggle').addEventListener('click', () => {
+    toggleColorMode();
+  });
 });
-// Function to hide search lists on resize
-let scrollResize = false;
-window.addEventListener('resize', function () {
-  if (!scrollResize) {
-    window.requestAnimationFrame(function () {
-      for (let i = 0; i < resizeFunctionsList.length; i++) {
-        resizeFunctionsList[i]();
-      }
-      scrollResize = false;
-    });
-    scrollResize = true;
-  }
-});
+// Code to hide search lists on resize
+const windowResizeObserver = new ResizeObserver(() =>
+  resizeFunctionsList.forEach((fn) => fn()),
+);
+windowResizeObserver.observe(document.documentElement);

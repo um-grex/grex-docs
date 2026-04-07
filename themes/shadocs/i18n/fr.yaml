@@ -8,7 +8,8 @@
   translation: 'Réduire le menu latéral'
 - id: banner_default_content
   translation: |
-    Vous consultez la version ***{{- .Site.Params.currentversion -}}*** de ce site.  
+    Vous consultez la version ***{{- .Site.Params.currentversion -}}*** de ce site.
+
     Pour une version à jour de la documentation, merci de se référer à la [dernière version]({{- .Site.Params.latestversionurl -}}).
 - id: toc_title
   translation: 'Sur cette page:'
@@ -74,6 +75,10 @@
   translation: 'Echap'
 - id: 11_closemodals_wording
   translation: 'Fermer les fenêtres modales'
+- id: 12_togglecolormode_keys_wording
+  translation: 'Shift,d'
+- id: 12_togglecolormode_wording
+  translation: 'Basculer en mode Clair/Sombre'
 - id: shortcode_collapsible
   translation: 'Développer/Réduire'
 - id: no_data
@@ -82,7 +87,7 @@
   translation: 'Aucune description disponible'
 - id: read_more
   translation: 'Lire plus'
-- id: helper_loading
+- id: loading
   translation: 'Chargement'
 - id: code_copy_before
   translation: 'Copier dans le presse-papiers'
@@ -112,3 +117,9 @@
   translation: 'Non disponible'
 - id: highcharts_error
   translation: 'Rendu du Highcharts non disponible'
+- id: jsoneditor_download_json
+  translation: 'Télécharger le JSON'
+- id: jsoneditor_copy_json
+  translation: 'Copier le JSON dans le presse-papiers'
+- id: jsoneditor_validate_error
+  translation: 'Erreur de formulaire'

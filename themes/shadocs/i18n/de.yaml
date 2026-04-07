@@ -8,7 +8,8 @@
   translation: 'Seitenleiste einklappen'
 - id: banner_default_content
   translation: |
-    Sie betrachten gerade Version ***{{- .Site.Params.currentversion -}}*** dieser Webseite.  
+    Sie betrachten gerade Version ***{{- .Site.Params.currentversion -}}*** dieser Webseite.
+
     Nutzen Sie die [neueste Version]({{- .Site.Params.latestversionurl -}}) um den aktuellen Stand der Webseite anzuzeigen.
 - id: toc_title
   translation: 'Auf dieser Seite:'
@@ -74,6 +75,10 @@
   translation: 'Escape'
 - id: 11_closemodals_wording
   translation: 'Übergeordnete Fenster schließen'
+- id: 12_togglecolormode_keys_wording
+  translation: 'Shift,d'
+- id: 12_togglecolormode_wording
+  translation: 'Hell-/Dunkelmodus umschalten'
 - id: shortcode_collapsible
   translation: 'Ein-/ausklappen'
 - id: no_data
@@ -82,7 +87,7 @@
   translation: 'Keine Beschreibung verfügbar'
 - id: read_more
   translation: 'Mehr lesen'
-- id: helper_loading
+- id: loading
   translation: 'Lädt …'
 - id: code_copy_before
   translation: 'In die Zwischenablage kopieren'
@@ -112,3 +117,9 @@
   translation: 'Nicht verfügbar'
 - id: highcharts_error
   translation: 'Service für Anzeige des Highcharts-Diagramms nicht verfügbar'
+- id: jsoneditor_download_json
+  translation: 'Laden Sie JSON herunter'
+- id: jsoneditor_copy_json
+  translation: 'JSON in die Zwischenablage kopieren'
+- id: jsoneditor_validate_error
+  translation: 'Formularfehler'

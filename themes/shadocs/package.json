@@ -1,0 +1,34 @@
+{
+  "name": "shadocs",
+  "version": "0.0.0",
+  "description": "Shadocs Hugo theme",
+  "scripts": {
+    "format:check": "prettier --check .",
+    "format:write": "prettier --write .",
+    "serve": "hugo --source exampleSite serve --renderToMemory --disableLiveReload --baseURL http://localhost:1313 --port 1313",
+    "cy:open": "start-server-and-test serve http://localhost:1313 cypress:open",
+    "cy:run": "start-server-and-test serve http://localhost:1313 cypress:run",
+    "cy:run:chrome": "start-server-and-test serve http://localhost:1313 \"cypress run --browser chrome\"",
+    "cy:run:firefox": "start-server-and-test serve http://localhost:1313 \"cypress run --browser firefox\"",
+    "cy:run:edge": "start-server-and-test serve http://localhost:1313 \"cypress run --browser edge\"",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jgazeau/shadocs.git"
+  },
+  "author": "jgazeau",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jgazeau/shadocs/issues"
+  },
+  "homepage": "https://github.com/jgazeau/shadocs",
+  "devDependencies": {
+    "bmyc": "^0.5.8",
+    "cypress": "^15.10.0",
+    "prettier": "^3.8.1",
+    "prettier-plugin-go-template": "^0.0.15",
+    "start-server-and-test": "^2.1.3"
+  }
+}

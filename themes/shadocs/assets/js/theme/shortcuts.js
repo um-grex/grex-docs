@@ -1,4 +1,8 @@
-import { closeModals, isFocusable } from './modules/helpers.min.js';
+import {
+  closeModals,
+  isFocusable,
+  toggleColorMode,
+} from './modules/helpers.min.js';
 
 // VARS //
 // MAIN //
@@ -6,7 +10,7 @@ import { closeModals, isFocusable } from './modules/helpers.min.js';
 window.scShowInfo = scShowInfo;
 function scShowInfo() {
   closeModals();
-  document.getElementById('navbarInfo').classList.toggle('is-hidden', false);
+  document.getElementById('navbarInfo').classList.toggle('is-active', true);
   document.getElementById('search').blur();
 }
 // Function to display shortcuts modal
@@ -15,7 +19,7 @@ function scShowShortcuts() {
   closeModals();
   document
     .getElementById('navbarShortcuts')
-    .classList.toggle('is-hidden', false);
+    .classList.toggle('is-active', true);
   document.getElementById('search').blur();
 }
 // Function to go to homepage
@@ -74,4 +78,9 @@ function scQrCode() {
 window.scCloseModals = scCloseModals;
 function scCloseModals() {
   closeModals();
+}
+// Function to toggle color mode
+window.scToggleColorMode = scToggleColorMode;
+function scToggleColorMode() {
+  toggleColorMode();
 }

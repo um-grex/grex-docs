@@ -1,17 +1,16 @@
 <script type='text/javascript'>
-  const baseUrl = '{{- .Site.BaseURL -}}{{- .Site.LanguagePrefix -}}';
+  const baseUrl = new URL('{{- .Site.LanguagePrefix -}}', '{{- .Site.BaseURL -}}').href;
   const codeCopyBefore = '{{- i18n "code_copy_before" -}}';
   const codeCopyAfter = '{{- i18n "code_copy_after" -}}';
   const svgDownloadLabel = '{{- i18n "download_as_svg" -}}';
-  const helperLoadingLabel = '{{- i18n "helper_loading" -}}';
+  const loaderLabel = '{{- i18n "loading" -}}';
   const searchNoResults = '{{- i18n "search_no_results" -}}';
   const introNextLabel = '{{- i18n "intro_nextlabel" -}}';
   const introPrevLabel = '{{- i18n "intro_prevlabel" -}}';
   const introSkipLabel = '{{- i18n "intro_skiplabel" -}}';
   const introDoneLabel = '{{- i18n "intro_donelabel" -}}';
-  const printLabel = '{{- i18n "9_print_wording" -}}';
-  const qrCodeLabel = '{{- i18n "10_qrcode_wording" -}}';
   const naCommonLabel = '{{- i18n "na_common" -}}';
+  const jsoneditorValidateError = '{{- i18n "jsoneditor_validate_error" -}}';
 </script>
 <!-- JS Modules includes -->
 {{- $jsModulesFiles := slice -}}

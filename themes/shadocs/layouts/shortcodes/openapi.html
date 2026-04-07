@@ -1,4 +1,4 @@
-<div class="sc-openapi-wrapper is-loading helper-loading-container">
+<div class="sc-openapi-wrapper is-loading loader-container">
   {{- .Page.Scratch.Add "openapiUid" 1 -}}
   {{- with (.Get "id") -}}
     {{- $.Scratch.Set "openapiId" (replace . "'" "") -}}
@@ -8,7 +8,7 @@
   <div
     class="sc-openapi-container"
     id="{{- $.Scratch.Get "openapiId" -}}"
-    openapi-url="{{- .Get "source" -}}"
+    openapi-url="{{- .Get "source" | relURL -}}"
   ></div>
-  {{- partial "theme/loading.html" -}}
+  {{- partial "theme/loader.html" -}}
 </div>
