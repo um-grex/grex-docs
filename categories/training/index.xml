@@ -27,9 +27,9 @@ The workshop is designed for beginner and intermediate users. Content is spread 
 Use the following [link](https://www.eventbrite.ca/e/umanitoba-autumn-2025-hpc-and-cloud-computing-workshop-tickets-1716678885759?aff=oddtdtcreator) to register for the workshop. 
 
 --&gt;
-&lt;h1 id='high-performance-computing-workshop---oct-14-17-2025'&gt;High Performance Computing Workshop - Oct 14-17, 2025&lt;a href='#high-performance-computing-workshop---oct-14-17-2025' class='anchor'&gt;#&lt;/a&gt;
+&lt;h1 id='high-performance-computing-workshop---oct-14-17-2025' class="title is-flex is-align-items-center mt-4 is-1"&gt;High Performance Computing Workshop - Oct 14-17, 2025&lt;a href='#high-performance-computing-workshop---oct-14-17-2025' class='anchor'&gt;#&lt;/a&gt;
 &lt;/h1&gt;&lt;hr&gt;
-&lt;p&gt;Below are the slides and some materials from the in-person workshop that was held on Oct 2025:&lt;/p&gt;</description></item><item><title>LoRa walkthrough</title><link>https://um-grex.github.io/grex-docs/training/workshops-2025/lora-huggingface/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/training/workshops-2025/lora-huggingface/</guid><description>&lt;h2 id='high-performance-computing-workshop---oct-14-17-2025'&gt;High Performance Computing Workshop - Oct 14-17, 2025&lt;a href='#high-performance-computing-workshop---oct-14-17-2025' class='anchor'&gt;#&lt;/a&gt;
+&lt;p&gt;Below are the slides and some materials from the in-person workshop that was held on Oct 2025:&lt;/p&gt;</description></item><item><title>LoRa walkthrough</title><link>https://um-grex.github.io/grex-docs/training/workshops-2025/lora-huggingface/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/training/workshops-2025/lora-huggingface/</guid><description>&lt;h2 id='high-performance-computing-workshop---oct-14-17-2025' class="title is-flex is-align-items-center mt-4 is-2"&gt;High Performance Computing Workshop - Oct 14-17, 2025&lt;a href='#high-performance-computing-workshop---oct-14-17-2025' class='anchor'&gt;#&lt;/a&gt;
 &lt;/h2&gt;&lt;hr&gt;
 &lt;p&gt;This is an example of training LoRa in a batch job.
 The example uses a script from &lt;a
@@ -38,13 +38,13 @@ The example uses a script from &lt;a
 &gt;
  diffusers package.
 We assume the partiticipant already tried simple text to image generation with SD 1-5 as per &lt;em&gt;02-text-to-image-ipynb&lt;/em&gt; notebook.&lt;/p&gt;
-&lt;h3 id='pull-huggingface-diffusers-copy-data'&gt;Pull Huggingface diffusers, copy data&lt;a href='#pull-huggingface-diffusers-copy-data' class='anchor'&gt;#&lt;/a&gt;
+&lt;h3 id='pull-huggingface-diffusers-copy-data' class="title is-flex is-align-items-center mt-4 is-3"&gt;Pull Huggingface diffusers, copy data&lt;a href='#pull-huggingface-diffusers-copy-data' class='anchor'&gt;#&lt;/a&gt;
 &lt;/h3&gt;&lt;hr&gt;
 &lt;p&gt;We will downolad Huggingface source code from their Github using Git.
 This is needed to use their Python example training script rather than developing ours from scrath.
-We will also copy the datasets for training from &lt;strong&gt;pythonai&lt;/strong&gt; subdirectory of our Workshop materials.&lt;/p&gt;</description></item><item><title>Workshops - 2024</title><link>https://um-grex.github.io/grex-docs/training/workshops-2024/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/training/workshops-2024/</guid><description>&lt;h2 id='autumn-workshop-october-2024'&gt;Autumn workshop, October 2024&lt;a href='#autumn-workshop-october-2024' class='anchor'&gt;#&lt;/a&gt;
+We will also copy the datasets for training from &lt;strong&gt;pythonai&lt;/strong&gt; subdirectory of our Workshop materials.&lt;/p&gt;</description></item><item><title>Workshops - 2024</title><link>https://um-grex.github.io/grex-docs/training/workshops-2024/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/training/workshops-2024/</guid><description>&lt;h2 id='autumn-workshop-october-2024' class="title is-flex is-align-items-center mt-4 is-2"&gt;Autumn workshop, October 2024&lt;a href='#autumn-workshop-october-2024' class='anchor'&gt;#&lt;/a&gt;
 &lt;/h2&gt;&lt;hr&gt;
-&lt;div class="sc-alert sc-alert-warning"&gt;This workshop has been created for a group of users from Bannatyne campus to explain the usage of contributed nodes. However, most of the material from the following slides (slurm, software, singularity, podman, &amp;hellip;) is still valid for general use.&lt;/div&gt;
+&lt;div class="notification is-warning"&gt;This workshop has been created for a group of users from Bannatyne campus to explain the usage of contributed nodes. However, most of the material from the following slides (slurm, software, singularity, podman, &amp;hellip;) is still valid for general use.&lt;/div&gt;
 
 &lt;p&gt;Below are the slides from the workshop that was held on October 31 and November 1, 2024:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -119,9 +119,9 @@ This event will help you get started with HPC and familiarize you with essential
 * Basics of using OpenStack cloud (Up to starting and connecting to VM) (1h).
 --&gt;
 &lt;hr&gt;
-&lt;h2 id='fall-data-4010-seminars-september-2024'&gt;Fall DATA-4010 seminars, September 2024&lt;a href='#fall-data-4010-seminars-september-2024' class='anchor'&gt;#&lt;/a&gt;
+&lt;h2 id='fall-data-4010-seminars-september-2024' class="title is-flex is-align-items-center mt-4 is-2"&gt;Fall DATA-4010 seminars, September 2024&lt;a href='#fall-data-4010-seminars-september-2024' class='anchor'&gt;#&lt;/a&gt;
 &lt;/h2&gt;&lt;hr&gt;
-&lt;p&gt;Below are the slides from the DATA 4010 seminars that were held on September 18 and 25, 2024:&lt;/p&gt;</description></item><item><title>Workshops - 2023</title><link>https://um-grex.github.io/grex-docs/training/workshops-2023/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/training/workshops-2023/</guid><description>&lt;h2 id='autumn-workshop-november-2023'&gt;Autumn workshop, November 2023&lt;a href='#autumn-workshop-november-2023' class='anchor'&gt;#&lt;/a&gt;
+&lt;p&gt;Below are the slides from the DATA 4010 seminars that were held on September 18 and 25, 2024:&lt;/p&gt;</description></item><item><title>Workshops - 2023</title><link>https://um-grex.github.io/grex-docs/training/workshops-2023/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/training/workshops-2023/</guid><description>&lt;h2 id='autumn-workshop-november-2023' class="title is-flex is-align-items-center mt-4 is-2"&gt;Autumn workshop, November 2023&lt;a href='#autumn-workshop-november-2023' class='anchor'&gt;#&lt;/a&gt;
 &lt;/h2&gt;&lt;hr&gt;
 &lt;p&gt;Below are the slides from the Grex workshop that was held on November 6-8, 2023:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -174,9 +174,9 @@ This event will help you get started with HPC and familiarize you with essential
 &lt;/ul&gt;
 &lt;/blockquote&gt;
 &lt;hr&gt;
-&lt;h2 id='fall-data-4010-seminars-september-2023'&gt;Fall DATA-4010 seminars, September 2023&lt;a href='#fall-data-4010-seminars-september-2023' class='anchor'&gt;#&lt;/a&gt;
+&lt;h2 id='fall-data-4010-seminars-september-2023' class="title is-flex is-align-items-center mt-4 is-2"&gt;Fall DATA-4010 seminars, September 2023&lt;a href='#fall-data-4010-seminars-september-2023' class='anchor'&gt;#&lt;/a&gt;
 &lt;/h2&gt;&lt;hr&gt;
-&lt;p&gt;Below are the slides from the DATA 4010 seminars that were held on September 18 and 25, 2023:&lt;/p&gt;</description></item><item><title>Workshops - 2022</title><link>https://um-grex.github.io/grex-docs/training/workshops-2022/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/training/workshops-2022/</guid><description>&lt;h2 id='autumn-workshop-october-2022'&gt;Autumn workshop, October 2022&lt;a href='#autumn-workshop-october-2022' class='anchor'&gt;#&lt;/a&gt;
+&lt;p&gt;Below are the slides from the DATA 4010 seminars that were held on September 18 and 25, 2023:&lt;/p&gt;</description></item><item><title>Workshops - 2022</title><link>https://um-grex.github.io/grex-docs/training/workshops-2022/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/training/workshops-2022/</guid><description>&lt;h2 id='autumn-workshop-october-2022' class="title is-flex is-align-items-center mt-4 is-2"&gt;Autumn workshop, October 2022&lt;a href='#autumn-workshop-october-2022' class='anchor'&gt;#&lt;/a&gt;
 &lt;/h2&gt;&lt;hr&gt;
 &lt;p&gt;Below are the slides from the Grex workshop that was held on October 26-27, 2022:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -203,7 +203,7 @@ This event will help you get started with HPC and familiarize you with essential
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
-&lt;h2 id='spring-workshop-may-2022'&gt;Spring workshop, May 2022&lt;a href='#spring-workshop-may-2022' class='anchor'&gt;#&lt;/a&gt;
+&lt;h2 id='spring-workshop-may-2022' class="title is-flex is-align-items-center mt-4 is-2"&gt;Spring workshop, May 2022&lt;a href='#spring-workshop-may-2022' class='anchor'&gt;#&lt;/a&gt;
 &lt;/h2&gt;&lt;hr&gt;
 &lt;p&gt;Below are the slides from the Grex workshop that was held on May 4-5, 2022:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -236,11 +236,11 @@ This event will help you get started with HPC and familiarize you with essential
 &lt;/ul&gt;
 &lt;/blockquote&gt;
 &lt;hr&gt;
-&lt;!-- &lt;div class="sc-treeview"&gt;&lt;div class="sc-alert sc-alert-warning"&gt;No data available&lt;/div&gt;&lt;/div&gt;
+&lt;!-- &lt;div class="sc-treeview is-overflow-x"&gt;&lt;div class="notification is-warning"&gt;No data available&lt;/div&gt;&lt;/div&gt;
  --&gt;
 &lt;!-- Changes and update:
 * Last revision: Aug 28, 2024. 
---&gt;</description></item><item><title>Workshops - 2021</title><link>https://um-grex.github.io/grex-docs/training/workshops-2021/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/training/workshops-2021/</guid><description>&lt;h2 id='autumn-workshop-november-2021'&gt;Autumn workshop, November 2021&lt;a href='#autumn-workshop-november-2021' class='anchor'&gt;#&lt;/a&gt;
+--&gt;</description></item><item><title>Workshops - 2021</title><link>https://um-grex.github.io/grex-docs/training/workshops-2021/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/training/workshops-2021/</guid><description>&lt;h2 id='autumn-workshop-november-2021' class="title is-flex is-align-items-center mt-4 is-2"&gt;Autumn workshop, November 2021&lt;a href='#autumn-workshop-november-2021' class='anchor'&gt;#&lt;/a&gt;
 &lt;/h2&gt;&lt;hr&gt;
 &lt;p&gt;Below are the slides from the Grex workshop that was held on November 01-02, 2021:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -267,16 +267,16 @@ This event will help you get started with HPC and familiarize you with essential
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
-&lt;h2 id='spring-workshop-april-2021'&gt;Spring workshop, April 2021&lt;a href='#spring-workshop-april-2021' class='anchor'&gt;#&lt;/a&gt;
+&lt;h2 id='spring-workshop-april-2021' class="title is-flex is-align-items-center mt-4 is-2"&gt;Spring workshop, April 2021&lt;a href='#spring-workshop-april-2021' class='anchor'&gt;#&lt;/a&gt;
 &lt;/h2&gt;&lt;hr&gt;
-&lt;p&gt;Below are the slides from the Grex workshop that was held on April 21-22, 2021:&lt;/p&gt;</description></item><item><title>Workshops and Training Material</title><link>https://um-grex.github.io/grex-docs/training/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/training/</guid><description>&lt;h2 id='local-workshops'&gt;Local workshops&lt;a href='#local-workshops' class='anchor'&gt;#&lt;/a&gt;
+&lt;p&gt;Below are the slides from the Grex workshop that was held on April 21-22, 2021:&lt;/p&gt;</description></item><item><title>Workshops and Training Material</title><link>https://um-grex.github.io/grex-docs/training/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://um-grex.github.io/grex-docs/training/</guid><description>&lt;h2 id='local-workshops' class="title is-flex is-align-items-center mt-4 is-2"&gt;Local workshops&lt;a href='#local-workshops' class='anchor'&gt;#&lt;/a&gt;
 &lt;/h2&gt;&lt;hr&gt;
 &lt;!--
-&lt;div class="sc-treeview"&gt;&lt;ul
- class='sc-treeview-tree'&gt;&lt;li class=" sc-treeview-coll"&gt;
- &lt;div class="sc-treeview-label"&gt;&lt;div class="sc-treeview-icon sc-treeview-coll-trigger"&gt;
- &lt;i class="fa-solid fa-folder-tree"&gt;&lt;/i&gt;
- &lt;/div&gt;&lt;p class="is-marginless"&gt;
+&lt;div class="sc-treeview is-overflow-x"&gt;&lt;ul
+ class='sc-treeview-tree marginless'&gt;&lt;li class=" sc-treeview-coll"&gt;
+ &lt;div class="sc-treeview-label is-flex is-align-items-center"&gt;&lt;div class="sc-treeview-icon is-flex is-align-items-center is-justify-content-center sc-treeview-coll-trigger"&gt;
+ &lt;i class="fa-solid fa-folder-tree fa-fw"&gt;&lt;/i&gt;
+ &lt;/div&gt;&lt;p&gt;
  &lt;a
  href="https://um-grex.github.io/grex-docs/training/workshops-2025/"
  class="is-pretty-link"
@@ -284,10 +284,10 @@ This event will help you get started with HPC and familiarize you with essential
  &gt;
  &lt;/p&gt;
  &lt;/div&gt;&lt;ul
- class='sc-treeview-tree'&gt;&lt;li class=""&gt;
- &lt;div class="sc-treeview-label"&gt;&lt;div class="sc-treeview-icon"&gt;
- &lt;i class="fa-solid fa-file-lines"&gt;&lt;/i&gt;
- &lt;/div&gt;&lt;p class="is-marginless"&gt;
+ class='sc-treeview-tree marginless'&gt;&lt;li class=""&gt;
+ &lt;div class="sc-treeview-label is-flex is-align-items-center"&gt;&lt;div class="sc-treeview-icon is-flex is-align-items-center is-justify-content-center"&gt;
+ &lt;i class="fa-solid fa-file-lines fa-fw"&gt;&lt;/i&gt;
+ &lt;/div&gt;&lt;p&gt;
  &lt;a
  href="https://um-grex.github.io/grex-docs/training/workshops-2025/lora-huggingface/"
  class="is-pretty-link"
@@ -295,9 +295,9 @@ This event will help you get started with HPC and familiarize you with essential
  &gt;
  &lt;/p&gt;
  &lt;/div&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li class=""&gt;
- &lt;div class="sc-treeview-label"&gt;&lt;div class="sc-treeview-icon"&gt;
- &lt;i class="fa-solid fa-file-lines"&gt;&lt;/i&gt;
- &lt;/div&gt;&lt;p class="is-marginless"&gt;
+ &lt;div class="sc-treeview-label is-flex is-align-items-center"&gt;&lt;div class="sc-treeview-icon is-flex is-align-items-center is-justify-content-center"&gt;
+ &lt;i class="fa-solid fa-file-lines fa-fw"&gt;&lt;/i&gt;
+ &lt;/div&gt;&lt;p&gt;
  &lt;a
  href="https://um-grex.github.io/grex-docs/training/workshops-2024/"
  class="is-pretty-link"
@@ -305,9 +305,9 @@ This event will help you get started with HPC and familiarize you with essential
  &gt;
  &lt;/p&gt;
  &lt;/div&gt;&lt;/li&gt;&lt;li class=""&gt;
- &lt;div class="sc-treeview-label"&gt;&lt;div class="sc-treeview-icon"&gt;
- &lt;i class="fa-solid fa-file-lines"&gt;&lt;/i&gt;
- &lt;/div&gt;&lt;p class="is-marginless"&gt;
+ &lt;div class="sc-treeview-label is-flex is-align-items-center"&gt;&lt;div class="sc-treeview-icon is-flex is-align-items-center is-justify-content-center"&gt;
+ &lt;i class="fa-solid fa-file-lines fa-fw"&gt;&lt;/i&gt;
+ &lt;/div&gt;&lt;p&gt;
  &lt;a
  href="https://um-grex.github.io/grex-docs/training/workshops-2023/"
  class="is-pretty-link"
@@ -315,9 +315,9 @@ This event will help you get started with HPC and familiarize you with essential
  &gt;
  &lt;/p&gt;
  &lt;/div&gt;&lt;/li&gt;&lt;li class=""&gt;
- &lt;div class="sc-treeview-label"&gt;&lt;div class="sc-treeview-icon"&gt;
- &lt;i class="fa-solid fa-file-lines"&gt;&lt;/i&gt;
- &lt;/div&gt;&lt;p class="is-marginless"&gt;
+ &lt;div class="sc-treeview-label is-flex is-align-items-center"&gt;&lt;div class="sc-treeview-icon is-flex is-align-items-center is-justify-content-center"&gt;
+ &lt;i class="fa-solid fa-file-lines fa-fw"&gt;&lt;/i&gt;
+ &lt;/div&gt;&lt;p&gt;
  &lt;a
  href="https://um-grex.github.io/grex-docs/training/workshops-2022/"
  class="is-pretty-link"
@@ -325,74 +325,12 @@ This event will help you get started with HPC and familiarize you with essential
  &gt;
  &lt;/p&gt;
  &lt;/div&gt;&lt;/li&gt;&lt;li class=""&gt;
- &lt;div class="sc-treeview-label"&gt;&lt;div class="sc-treeview-icon"&gt;
- &lt;i class="fa-solid fa-file-lines"&gt;&lt;/i&gt;
- &lt;/div&gt;&lt;p class="is-marginless"&gt;
+ &lt;div class="sc-treeview-label is-flex is-align-items-center"&gt;&lt;div class="sc-treeview-icon is-flex is-align-items-center is-justify-content-center"&gt;
+ &lt;i class="fa-solid fa-file-lines fa-fw"&gt;&lt;/i&gt;
+ &lt;/div&gt;&lt;p&gt;
  &lt;a
  href="https://um-grex.github.io/grex-docs/training/workshops-2021/"
  class="is-pretty-link"
  &gt;2021&lt;/a
  &gt;
- &lt;/p&gt;
- &lt;/div&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;
-
---&gt;
-&lt;div class="sc-treeview"&gt;&lt;ul
- &gt;&lt;li class=" sc-treeview-coll"&gt;
- &lt;div class="sc-treeview-label"&gt;&lt;p class="is-marginless"&gt;
- &lt;a
- href="https://um-grex.github.io/grex-docs/training/workshops-2025/"
- class="is-pretty-link"
- &gt;2025&lt;/a
- &gt;
- &lt;/p&gt;
- &lt;/div&gt;&lt;ul
- &gt;&lt;li class=""&gt;
- &lt;div class="sc-treeview-label"&gt;&lt;p class="is-marginless"&gt;
- &lt;a
- href="https://um-grex.github.io/grex-docs/training/workshops-2025/lora-huggingface/"
- class="is-pretty-link"
- &gt;LoRa walkthrough&lt;/a
- &gt;
- &lt;/p&gt;
- &lt;/div&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li class=""&gt;
- &lt;div class="sc-treeview-label"&gt;&lt;p class="is-marginless"&gt;
- &lt;a
- href="https://um-grex.github.io/grex-docs/training/workshops-2024/"
- class="is-pretty-link"
- &gt;2024&lt;/a
- &gt;
- &lt;/p&gt;
- &lt;/div&gt;&lt;/li&gt;&lt;li class=""&gt;
- &lt;div class="sc-treeview-label"&gt;&lt;p class="is-marginless"&gt;
- &lt;a
- href="https://um-grex.github.io/grex-docs/training/workshops-2023/"
- class="is-pretty-link"
- &gt;2023&lt;/a
- &gt;
- &lt;/p&gt;
- &lt;/div&gt;&lt;/li&gt;&lt;li class=""&gt;
- &lt;div class="sc-treeview-label"&gt;&lt;p class="is-marginless"&gt;
- &lt;a
- href="https://um-grex.github.io/grex-docs/training/workshops-2022/"
- class="is-pretty-link"
- &gt;2022&lt;/a
- &gt;
- &lt;/p&gt;
- &lt;/div&gt;&lt;/li&gt;&lt;li class=""&gt;
- &lt;div class="sc-treeview-label"&gt;&lt;p class="is-marginless"&gt;
- &lt;a
- href="https://um-grex.github.io/grex-docs/training/workshops-2021/"
- class="is-pretty-link"
- &gt;2021&lt;/a
- &gt;
- &lt;/p&gt;
- &lt;/div&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;
-
-&lt;h2 id='westdri-training-material'&gt;WestDRI training material&lt;a href='#westdri-training-material' class='anchor'&gt;#&lt;/a&gt;
-&lt;/h2&gt;&lt;hr&gt;
-&lt;p&gt;The training material from WestDRI (BC DRI and Prairies DRI groups, formerly known as WestGrid) webinars are available &lt;a
- href="https://training.westdri.ca/"
- class="is-pretty-link"&gt;online&lt;/a
-&gt;
- and classified into different categories:&lt;/p&gt;</description></item></channel></rss>
+ &lt;/p&gt;</description></item></channel></rss>
