@@ -33,6 +33,10 @@ Similar to [OOD](ood) and all other services on Grex, accessing Nextcloud requir
 
 > Note that this Nextcloud instance is using the same storage as Grex's main storage, and therefore has same levels of security and privacy compliance. Grex storage is not certified for higher-security data such as non-anonymized data involving Health information, research including human participants, etc. . Please refer to UManitoba's Data Classification and your Research Ethics Board in case you have questions. Generally, do not put data to the Grex's Nextcloud that you would not put on Grex via SSH or OOD.
 
+{{< alert type="warning" >}}
+Do not put sensitive data into Grex Nextcloud! 
+{{< /alert >}}
+
 
 ## Connect to Nextcloud 
 
@@ -123,9 +127,7 @@ To do that, click on the Nextcloud dashboard icon, click on the dropdown arrow, 
 
 > Make sure that you share only what information you want to share. Never share the entire home directory, for example. Follow UManitoba's Data Security Classification and IT Security policies when sharing data. 
 
-{{< alert type="warning" >}}
 The above steps are an example to be used on Mac OS. For other operating systems, please download the client and use instructions for the corresponding version of the Desktop client (Linux or Windows). Please refer to Nextcloud [user manual](https://docs.nextcloud.com/server/33/Nextcloud_User_Manual.pdf) and [online](https://docs.nextcloud.com/) documentation.
-{{< /alert >}}
 
 
 ## External links
