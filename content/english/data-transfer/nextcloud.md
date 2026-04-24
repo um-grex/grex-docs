@@ -61,7 +61,7 @@ Note that the same  connection/authentication sequence would be needed for setti
 
 ### How to use Nextcloud Web interface?
 
-To open the web interface, log in to [Grex Nextcloud](https://nextcloud.hpc.umanitoba.ca) from a web browser using your Grex (the Alliance) username and password as described above. Once connected to Nextcloud interface, use the menu __+New__ and its sub-memus can be to upload file or folders:
+To open the web interface, log in to [Grex Nextcloud](https://nextcloud.hpc.umanitoba.ca) from a web browser using your Grex (the Alliance) username and password as described above. Once connected to Nextcloud interface, use the menu __+New__ and its sub-menus can be to upload file or folders:
 
 {{< collapsible title="Upload files or folders to Nextcloud." >}}
 ![MFA second factor](/nextcloud/nextcloud-upload.png)
@@ -98,18 +98,19 @@ The following steps are to setup a Desktop client on MacOS:
 {{< collapsible title="Desktop client." >}}
 ![MFA second factor](/nextcloud/nextcloud-desktop-login.png)
 {{< /collapsible >}}
- 1. The above will open a page in your browser and asks you to connect to your account as shown in the following screenshot:
+ 1. The above will open a page in your browser and asks you to log in/ connect to your account as shown in the following screenshot:
 {{< collapsible title="Link the Desktop client to your Nextcloud account." >}}
 ![MFA second factor](/nextcloud/nextcloud-link-account.png)
 {{< /collapsible >}}
 
-Afer granting access, your account will be linked to your Nextcloud account on Grex. A location for Nextcloud will be added to your Mac. It should be visible from the Finder's menu bar. It can be used to access your Nextcloud account.
+Afer granting access, your account will be linked to your Nextcloud account on Grex. A location for Nextcloud will be added to your Mac. It should be visible from the Finder's menu bar. It can be used to access your Nextcloud account, and will be able to be automatically synchronized.
 
 {{< collapsible title="Access Nextcloud from Desktop client." >}}
 ![MFA second factor](/nextcloud/nextcloud-access-menu.png)
 {{< /collapsible >}}
    
-From this menu, you can access Nextcloud interface (or dashboard), Files and Activity. This later traces the latest operations, like uploading or downloading data, deleting data, ... etc.
+From this menu, you can access Nextcloud settings by clicking on the "down" arrow, and see your data synchronization status. 
+The "Files", "Dashboard" and "Activity" items there actually open the Web interface; but the Folder-looking icon there, opens local folder in the MacOS Finder.
 
 If you use your MacOS Finder and go to the Nextcloud folder on your Mac, you can work on that directory and the changes will be synced automatically to your Nextcloud folder on Grex. 
 
@@ -120,7 +121,7 @@ To do that, click on the Nextcloud dashboard icon, click on the dropdown arrow, 
 
  * It also is possible to share more than one folder, or use more than one Nextcloud provider. The latter case would be when you want to access, for example, both Grex and ComputeCanada/Alliance Nextcloud instances. To do that, click on the Nextcloud dashboard icon, click on the dropdown arrow, and access "Settings" menu. In the dialog window, pick the Nextcloud instance (such as "_User / hpc.umanitoba.ca_" ) and _Add Folder Sync Connection_ ). Point to a folder that you'd like shared via this particular Nextcloud service and user.
 
-> Make sure that you share only what you want to share. Never share the entire home directory, for example. Follow UManitoba's Data Security Classification and IT Security policies when sharing data. 
+> Make sure that you share only what information you want to share. Never share the entire home directory, for example. Follow UManitoba's Data Security Classification and IT Security policies when sharing data. 
 
 {{< alert type="warning" >}}
 The above steps are an example to be used on Mac OS. For other operating systems, please download the client and use instructions for the corresponding version of the Desktop client (Linux or Windows). Please refer to Nextcloud [user manual](https://docs.nextcloud.com/server/33/Nextcloud_User_Manual.pdf) and [online](https://docs.nextcloud.com/) documentation.
@@ -133,6 +134,7 @@ The above steps are an example to be used on Mac OS. For other operating systems
 * [Nextcloud official website](https://docs.nextcloud.com)
 * [Nextcloud online documentation](https://docs.nextcloud.com/server/latest/user_manual/en/)
 * [University of Manitoba Data Security Classification](https://umanitoba.ca/information-services-technology/sites/information-services-technology/files/2022-05/data-security-classification.pdf)
+* [University of Manitoba Information Security Policies](https://umanitoba.ca/information-services-technology/information-security-and-compliance)
 
 <!-- {{< treeview display="tree" />}} -->
 
