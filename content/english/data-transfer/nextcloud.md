@@ -12,39 +12,39 @@ bannerContent: "__Nextcloud pilot project on Grex__"
 ## Introduction
 ---
 
-We are pleased to provide a "pilot", starting Apr 2026, for [Nextcloud Files](https://nextcloud.com/files/), an Open Source, Dropbox-like storage service, for all Grex users. You can use your Grex ( CCDB ) username and password to log in to the [__https://nextcloud.hpc.umanitoba.ca__](https://nextcloud.hpc.umanitoba.ca) server. 
+We are pleased to provide a "pilot", starting Apr 2026, for [Nextcloud Files](https://nextcloud.com/files/), an Open Source, Dropbox-like storage service, for all Grex users. You can use your Grex ( CCDB ) username and password to log in to the [https://nextcloud.hpc.umanitoba.ca](https://nextcloud.hpc.umanitoba.ca) server. 
 
-Nextcloud files allow for accessing your data from a Web Interface, command line tools like __rclone__, and a Desktop client on MacOS or Windows. 
+Nextcloud files allow for accessing your data from a Web Interface, command line tools like RClone, and a Desktop client on MacOS or Windows. 
 
 * __Server URL:__ https://nextcloud.hpc.umanitoba.ca
 * __Server Location:__ High Performance Computing Centre (HPCC), University of Manitoba.
 * __Fixed Quota:__ 100 GB per user.
 * __Backup Policy:__ Weekly on-site tape backup.
-* __Access Methods:__ Web interface, Nextcloud Desktop Sync Client, Nextcloud mobile apps, __rclone__, WebDAV clients.
+* __Access Methods:__ Web interface, Nextcloud Desktop Sync Client, Nextcloud mobile apps, RClone, WebDAV clients.
 * __Documentation:__ [PDF](https://docs.nextcloud.com/server/33/Nextcloud_User_Manual.pdf) and [online](https://docs.nextcloud.com/)
 
 {{< alert type="warning" >}}
 As of now, for the Pilot stage of the Service, the quota is __100 GB__ per user. The quota per user may change depending on the demand, available space and the Nextcloud's performance.
 {{< /alert >}}
 
-### Security and complince
+### Security and compliance
 
-Similar to [OOD](ood) and all other services on Grex, accessing Nextcloud requires authentication with [MFA](connecting/mfa). The Nextcloud is using Grex's storage, and thus all the data are hostedin the HPCC datacentre at UManitoba. All data transfers between local devices and Grex's Nextcloud instance are encrypted with SSL/TLS. 
+Similar to [OOD](ood) and all other services on Grex, accessing Nextcloud requires authentication with [MFA](connecting/mfa). The Nextcloud is using Grex's storage, and thus all the data is hosted in the HPCC datacentre at UManitoba. All data transfers between local devices and Grex's Nextcloud instance are encrypted with SSL/TLS. 
 
-> Note that this Nextcloud instance is using the same storage as Grex's main storage, and therefore has same levels of security and privacy compliance. Grex storage is not certified for higher-security data such as non-anonymized data involving Health information, research including human participants, etc. . Please refer to UManitoba's Data Classification and your Research Ethics Board in case you have questions. Generally, do not put data to the Grex's Nextcloud that you would not put on the Grex proper via SSH or OOD.
+> Note that this Nextcloud instance is using the same storage as Grex's main storage, and therefore has same levels of security and privacy compliance. Grex storage is not certified for higher-security data such as non-anonymized data involving Health information, research including human participants, etc. . Please refer to UManitoba's Data Classification and your Research Ethics Board in case you have questions. Generally, do not put data to the Grex's Nextcloud that you would not put on Grex via SSH or OOD.
 
 
 ## Connect to Nextcloud 
 
-The Nextcloud service can be connected to in several ways. 
+The Nextcloud service can be connected to in several ways: 
 
  * Files can be uploaded, downloaded, shared and published via URL, uisng the Web Interface
  * Desktop clients allow for a convenient, automatic synchronization of directories, Dropbox-style
- * Data transfer clients that support WebDAV protocol (like __rclone__ and Cyberduck.io) would be able to access Nextcloud Files
+ * Data transfer clients that support WebDAV protocol (like RClone and Cyberduck.io) would be able to access Nextcloud Files
 
 When using Nextcloud for the first time, we generally recommend users to access it through the Web interface as follows.
 
- 1. Point your Web browser to [__nextcloud.hpc.umanitoba.ca__](https://nextcloud.hpc.umanitoba.ca). This will redirect you to our Keycloack IDP screen.
+ 1. Point your Web browser to [nextcloud.hpc.umanitoba.ca](https://nextcloud.hpc.umanitoba.ca). This will redirect you to our Keycloack IDP screen.
  2. Use your Grex (Alliance/CCDB) username and password to log in to Grex Nextcloud.
 {{< collapsible title="Use your Alliance username and password to log in to Grex Nextcloud." >}}
 ![MFA second factor](/globus/grex-keycloak.png)
@@ -118,7 +118,7 @@ The Nextcloud mobile clients were not addressed here. If needed, please refer to
  * Note that it may take some time to synchronize all the data. In general, to avoid frequent data transfers and associated delays, it is possible to temporarily disable the "sync" for Desktop clients for the periods of frequent changes (i.e., when doing computations locally that amount to frequent updates of the shared/synchronized files.
 To do that, click on the Nextcloud dashboard icon, click on the dropdown arrow, and use on the _Pause syncs for all_ and then _Resume syncs for all_ menu item.
 
- * It also is possible to share more than one folder, or use more than one Nextcloud provider. The later case would be when you want to access, for example, both Grex and ComputeCanada/Alliance Nextcloud instances. To do that, click on the Nextcloud dashboard icon, click on the dropdown arrow, and access "Settings" menu. In the dialog window, pick the Nextcloud instance (such as "_User / hpc.umanitoba.ca_" ) and _Add Folder Sync Connection_ ). Point to a folder that you'd like shared via this particular Nextcloud service and user.
+ * It also is possible to share more than one folder, or use more than one Nextcloud provider. The latter case would be when you want to access, for example, both Grex and ComputeCanada/Alliance Nextcloud instances. To do that, click on the Nextcloud dashboard icon, click on the dropdown arrow, and access "Settings" menu. In the dialog window, pick the Nextcloud instance (such as "_User / hpc.umanitoba.ca_" ) and _Add Folder Sync Connection_ ). Point to a folder that you'd like shared via this particular Nextcloud service and user.
 
 > Make sure that you share only what you want to share. Never share the entire home directory, for example. Follow UManitoba's Data Security Classification and IT Security policies when sharing data. 
 
@@ -130,8 +130,8 @@ The above steps are an example to be used on Mac OS. For other operating systems
 ## External links
 ---
 
-* Nextcloud official website: [__Nextcloud__](https://docs.nextcloud.com)
-* [__Online__](https://docs.nextcloud.com/server/latest/user_manual/en/) documentation.
+* [Nextcloud official website](https://docs.nextcloud.com)
+* [Nextcloud online documentation](https://docs.nextcloud.com/server/latest/user_manual/en/)
 * [University of Manitoba Data Security Classification](https://umanitoba.ca/information-services-technology/sites/information-services-technology/files/2022-05/data-security-classification.pdf)
 
 <!-- {{< treeview display="tree" />}} -->
