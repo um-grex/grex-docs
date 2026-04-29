@@ -115,7 +115,7 @@ Afer granting access, your account will be linked to your Nextcloud account on G
 {{< collapsible title="Access Nextcloud from Desktop client." >}}
 ![MFA second factor](/nextcloud/nextcloud-access-menu.png)
 {{< /collapsible >}}
- 
+
 Note that the icon next to the nextcloud account name is only visible when you add at least one folder from your local machine to synchronize with your nextcloud account.
  
 From this menu, you can access Nextcloud settings by clicking on the "down" arrow, and see your data synchronization status. 
