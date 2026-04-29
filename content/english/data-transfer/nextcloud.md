@@ -1,8 +1,8 @@
 ---
 weight: 4130
-linkTitle: "NextCloud on Grex"
-title: "Using NextCloud on Grex"
-description: "How to use NextCloud service on Grex"
+linkTitle: "Nextcloud on Grex"
+title: "Using Nextcloud on Grex"
+description: "How to use Nextcloud service on Grex"
 categories: ["How to"]
 banner: True
 bannerContent: "__Nextcloud pilot project on Grex__"
@@ -115,7 +115,9 @@ Afer granting access, your account will be linked to your Nextcloud account on G
 {{< collapsible title="Access Nextcloud from Desktop client." >}}
 ![MFA second factor](/nextcloud/nextcloud-access-menu.png)
 {{< /collapsible >}}
-   
+ 
+Note that the icon next to the nextcloud account name is only visible when you add at least one folder from your local machine to synchronize with your nextcloud account.
+ 
 From this menu, you can access Nextcloud settings by clicking on the "down" arrow, and see your data synchronization status. 
 The "Files", "Dashboard" and "Activity" items there actually open the Web interface; but the Folder-looking icon there, opens local folder in the MacOS Finder.
 
