@@ -44,7 +44,7 @@ The list is updated periodically. The most authoritative method to check for ava
 | bamtools | 2.5.2 | {{<collapsible title="Expand bamtools description">}}Description: BamTools provides both a programmer's API and an end-user's toolkit for handling BAM files{{</collapsible>}} [https://github.com/pezmaster31/bamtools](https://github.com/pezmaster31/bamtools) |  |
 | beagle | 5.4-20241029 | {{<collapsible title="Expand beagle description">}}Description: Beagle is a software package for phasing genotypes and for imputing ungenotyped markers{{</collapsible>}} [https://faculty.washington.edu/browning/beagle/beagle.html](https://faculty.washington.edu/browning/beagle/beagle.html) |  |
 | bedtools | 2.31.1 | {{<collapsible title="Expand bedtools description">}}Description: a swiss-army knife of tools for a wide-range of genomics analysis tasks{{</collapsible>}} [https://github.com/arq5x/bedtools2](https://github.com/arq5x/bedtools2) | (arch/avx512) |
-| binutils | 2.42 | {{<collapsible title="Expand binutils description">}}{{</collapsible>}} | (arch/avx512) |
+| binutils | 2.42, 2.46.1 | {{<collapsible title="Expand binutils description">}}{{</collapsible>}} | ((arch/avx512)arch/avx512), (arch/avx512) |
 | birch | 3.90, 4.0 | {{<collapsible title="Expand birch description">}}BIRCH comes with hundreds of commonly-used tools, and allows you to customize your BIRCH site by adding new ones. ; BIRCH is a powerful framework for organizing  and using bioinformatics. ;  comes with hundreds of commonly-used tools, and allows you to customize your BIRCH site by adding new ones. ; BIRCH is a powerful framework for organizing  and using bioinformatics{{</collapsible>}} [https://home.cc.umanitoba.ca/~psgendb/index.htmlBIRCH](https://home.cc.umanitoba.ca/~psgendb/index.htmlBIRCH) |  |
 | blastplus | 2.16.0, 2.17.0 | {{<collapsible title="Expand blastplus description">}}Description: Basic Local Alignment Search Tool, or BLAST, is an algorithm for comparing primary biological sequence information, such as the amino-acid sequences of different proteins or the nucleotides of DNA sequences. ;  Basic Local Alignment Search Tool, or BLAST, is an algorithm for comparing primary biological sequence information, such as the amino-acid sequences of different proteins or the nucleotides of DNA sequences{{</collapsible>}} [https://blast.ncbi.nlm.nih.gov/Description:](https://blast.ncbi.nlm.nih.gov/Description:) | ((arch/avx512 gcc/13.2.0)arch/avx512 gcc/13.2.0), (arch/avx512 gcc/13.2.0) |
 | blat | 3.7 | {{<collapsible title="Expand blat description">}}Description: BLAT on DNA is designed to quickly find sequences of 95% and greater similarity of length 25 bases or more{{</collapsible>}} [https://genome.ucsc.edu/goldenPath/help/blatSpec.html](https://genome.ucsc.edu/goldenPath/help/blatSpec.html) | (arch/avx512 gcc/13.2.0) |
@@ -279,6 +279,6 @@ The list is updated periodically. The most authoritative method to check for ava
 
 
 <!-- Changes and update:
-* Last reviewed on: 2026-06-30 03:00:05
+* Last reviewed on: 2026-07-01 03:00:05
 -->
 
