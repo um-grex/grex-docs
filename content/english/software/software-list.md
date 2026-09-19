@@ -240,6 +240,7 @@ The list is updated periodically. The most authoritative method to check for ava
 | sparsehash | 2.0.4 | {{<collapsible title="Expand sparsehash description">}}Description: An extremely memory-efficient hash_map implementation. 2 bits/entry overhead! The SparseHash library contains several hash-map implementations, including implementations that optimize for space or speed{{</collapsible>}} [https://github.com/sparsehash/sparsehash](https://github.com/sparsehash/sparsehash) |  |
 | sqlite | 3.35.5 | {{<collapsible title="Expand sqlite description">}}Description: SQLite3 is an SQL database engine in a C library{{</collapsible>}} [https://www.sqlite.org](https://www.sqlite.org) |  |
 | sra-toolkit | 3.3.0 | {{<collapsible title="Expand sra-toolkit description">}}Description: The SRA Toolkit, and the source-code SRA System Development Kit (SDK), will allow you to programmatically access data housed within SRA and convert it from the SRA format{{</collapsible>}} [https://github.com/ncbi/sra-tools](https://github.com/ncbi/sra-tools) | (arch/avx512 gcc/13.2.0) |
+| starccm | 21.04.007-R8 | {{<collapsible title="Expand starccm description">}}; STAR-CCM+ is an all-in-one solution that delivers accurate and efficient multidisciplinary technologies in a single integrated user interface. This version uses double precision{{</collapsible>}} [http://mdx.plm.automation.siemens.com/star-ccm-plus](http://mdx.plm.automation.siemens.com/star-ccm-plus) |  |
 | stata | 15.0-fagfs, 18.0-ffin | {{<collapsible title="Expand stata description">}}Description: Stata 18.0 - Statistics / Data Analysis. ;  Stata 18.0 - Statistics / Data Analysis{{</collapsible>}} [http://www.stata.comDescription:](http://www.stata.comDescription:) |  |
 | stringtie | 3.0.0 | {{<collapsible title="Expand stringtie description">}}Description: StringTie is a fast and highly efficient assembler of RNA-Seq alignments into potential transcripts{{</collapsible>}} [https://ccb.jhu.edu/software/stringtie/](https://ccb.jhu.edu/software/stringtie/) | (arch/avx512 gcc/13.2.0) |
 | structure | 2.3.4 | {{<collapsible title="Expand structure description">}}Description: The program structure is a free software package for using multi-locus genotype data to investigate population structure. ;  The program structure is a free software package for using multi-locus genotype data to investigate population structure. Its uses include inferring the presence of distinct populations, assigning individuals to populations, studying hybrid zones, identifying migrants and admixed individuals, and estimating population allele frequencies in situations where many individuals are migrants or admixed{{</collapsible>}} [http://web.stanford.edu/group/pritchardlab/software/Description:](http://web.stanford.edu/group/pritchardlab/software/Description:) | (arch/avx512 gcc/13.2.0) |
@@ -280,6 +281,6 @@ The list is updated periodically. The most authoritative method to check for ava
 
 
 <!-- Changes and update:
-* Last reviewed on: 2026-09-18 03:00:06
+* Last reviewed on: 2026-09-19 03:00:06
 -->
 
